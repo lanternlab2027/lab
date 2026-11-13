@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC Small-Building Watch</title>
+<meta name="description" content="Daily plain-English alerts about new NYC violations, complaints, hearings and filing deadlines for small buildings and storefronts.">
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1c1d1f;--muted:#5e6166;--line:#e3e1da;--accent:#1f5f8b;--accent-ink:#fff;--warn:#9a5b00;--warn-bg:#fff4e0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141518;--card:#1d1f23;--ink:#ecebe7;--muted:#a3a6ad;--line:#2e3036;--accent:#6fb0e0;--accent-ink:#0d1b26;--warn:#f3b45a;--warn-bg:#352a17}}
+:root[data-theme="dark"]{--bg:#141518;--card:#1d1f23;--ink:#ecebe7;--muted:#a3a6ad;--line:#2e3036;--accent:#6fb0e0;--accent-ink:#0d1b26;--warn:#f3b45a;--warn-bg:#352a17}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:820px;margin:0 auto;padding:28px 16px 64px}
+a{color:var(--accent)}
+.brand{font-weight:700}
+h1{font-size:2.1rem;line-height:1.15;margin:28px 0 10px;letter-spacing:-.01em}
+h2{font-size:1.3rem;margin:40px 0 12px}
+.lede{font-size:1.15rem;color:var(--muted);margin:0 0 22px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);margin-left:8px}
+.banner{background:var(--warn-bg);border-left:4px solid var(--warn);padding:12px 14px;border-radius:8px;margin:22px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:680px){.grid{grid-template-columns:1fr}h1{font-size:1.7rem}.btn.ghost{margin:8px 0 0}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h3{margin:0 0 6px;font-size:1.02rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.sample{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:.95rem}
+.sample .tag{font-size:.75rem;font-weight:700;color:#b42318;background:#fdecea;padding:2px 8px;border-radius:99px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.95rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.85rem;color:var(--muted);font-weight:600}
+tr.us td{font-weight:600}
+.small{font-size:.82rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding-top:14px}
+</style>
+</head>
+<body>
+<main>
+<div class="brand">NYC Small-Building Watch</div>
+
+<h1>Know about a new violation the day it's posted, not the day the penalty notice shows up.</h1>
+<p class="lede">Daily plain-English alerts for owners of NYC buildings with 1-20 units and storefronts: new HPD and DOB violations, complaints, ECB/OATH summonses, hearing dates and filing deadlines.</p>
+<a class="btn" href="lookup.html">Look up your building free</a><a class="btn ghost" href="lookup.html#signup">Start alerts: first building free for 3 months</a>
+
+<div class="banner"><b>December reminder:</b> buildings with 3 or more apartments must file HPD's annual bedbug report between <b>December 1 and December 31</b>, even if there were no bedbugs. We'll remind you, with the steps.</div>
+
+<h2>The problem</h2>
+<div class="grid">
+  <div class="card"><h3>Nobody pings you</h3><p>DOB and HPD post new violations and complaints to their public databases. DOB's free email updates cover construction job status, not new violations or complaints. Paper notices go to the address on file, and that mail gets missed.</p></div>
+  <div class="card"><h3>Missed hearings cost more</h3><p>An ECB/OATH summons has a hearing date. If no one responds, OATH can decide the case by default, which can mean a higher penalty than if you had answered.</p></div>
+  <div class="card"><h3>Deadlines hide in the fine print</h3><p>HPD violations carry correct-by and certify-by dates. Annual filings like the bedbug report and property registration recur every year.</p></div>
+</div>
+
+<h2>What an alert looks like</h2>
+<div class="sample">
+  <span class="tag">HIGH</span> <b>New DOB/ECB summons: Class 1 (immediately hazardous)</b><br>
+  <b>What it is:</b> Electrical work without a permit, observed in an apartment bathroom. Penalty amount listed: $2,500 (not final while the case is pending).<br>
+  <b>Hearing:</b> OATH hearing Wed Jan 13, 2027<br>
+  <b>Next step:</b> Respond by the hearing date: admit and pay, or contest online, by phone or in person. Paying doesn't close the DOB violation by itself; DOB generally also needs proof of correction.<br>
+  <span class="small">[link to the official DOB record]</span>
+</div>
+<p class="small">Taken from a real summons in NYC Open Data, shortened.</p>
+
+<h2>What we watch</h2>
+<div class="grid">
+  <div class="card"><h3>HPD</h3><p>Housing code violations (Class A/B/C), tenant complaints, property registration status.</p></div>
+  <div class="card"><h3>DOB &amp; ECB</h3><p>DOB violations, DOB complaints, ECB summonses with severity class and hearing date.</p></div>
+  <div class="card"><h3>OATH &amp; 311</h3><p>Hearing dates and case status (including defaults) for summonses at your tax lot, and relevant 311 requests.</p></div>
+</div>
+
+<h2>Pricing</h2>
+<table>
+  <tr><th>Service</th><th>Price</th><th>Built for</th></tr>
+  <tr class="us"><td>NYC Small-Building Watch</td><td>$6 per building / month, or $59 / year. First building free for 3 months.</td><td>Small landlords and storefront owners</td></tr>
+  <tr><td>PBS Alert</td><td>Free for 3 months, then $9 per building / month</td><td>Building owners and managers</td></tr>
+  <tr><td>SiteCompli</td><td>Per-unit pricing with a monthly minimum (about $250/month in a 2019 report)</td><td>Larger portfolios and management companies</td></tr>
+</table>
+<p class="small">Competitor prices are approximate and may have changed; check their sites.</p>
+
+<p style="margin-top:28px"><a class="btn" href="lookup.html">Look up your building</a></p>
+
+<footer class="small">Informational only, not legal advice. Alerts are built from NYC Open Data, which can lag the agencies' own systems; always confirm on the official agency site. Not affiliated with the City of New York.</footer>
+</main>
+</body>
+</html>

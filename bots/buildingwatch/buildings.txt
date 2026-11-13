@@ -1,0 +1,6 @@
+# one building per line: BBL or "address, borough"   (optional "| label")
+289 Garfield Pl, Brooklyn | 5-unit walk-up
+514 Hudson St, Manhattan | mixed-use with storefronts
+2070 Vyse Ave, Bronx
+110-28 Corona Ave, Queens | storefront + apartments
+1020250013 | 4-unit Harlem row house

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Look Up Your Building</title>
+<meta name="description" content="Free lookup of open HPD, DOB and ECB violations and upcoming OATH hearings for any NYC building.">
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1c1d1f;--muted:#5e6166;--line:#e3e1da;--accent:#1f5f8b;--accent-ink:#fff;
+  --hi:#b42318;--hi-bg:#fdecea;--md:#9a5b00;--md-bg:#fff4e0;--lo:#2f6b3a;--lo-bg:#e9f5ec}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141518;--card:#1d1f23;--ink:#ecebe7;--muted:#a3a6ad;--line:#2e3036;--accent:#6fb0e0;--accent-ink:#0d1b26;
+  --hi:#ff8a80;--hi-bg:#3a1d1b;--md:#f3b45a;--md-bg:#352a17;--lo:#8fd19e;--lo-bg:#1b2e20}}
+:root[data-theme="dark"]{--bg:#141518;--card:#1d1f23;--ink:#ecebe7;--muted:#a3a6ad;--line:#2e3036;--accent:#6fb0e0;--accent-ink:#0d1b26;
+  --hi:#ff8a80;--hi-bg:#3a1d1b;--md:#f3b45a;--md-bg:#352a17;--lo:#8fd19e;--lo-bg:#1b2e20}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--accent)}
+header a{text-decoration:none;font-weight:600;color:var(--ink)}
+h1{font-size:1.7rem;line-height:1.2;margin:18px 0 6px}
+.sub{color:var(--muted);margin:0 0 20px}
+form.search{display:grid;grid-template-columns:1fr 160px auto;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+input,select,button{font:inherit;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-width:0}
+button{background:var(--accent);color:var(--accent-ink);border:0;font-weight:600;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+.hint{font-size:.85rem;color:var(--muted);margin:6px 2px 0}
+@media (max-width:600px){form.search{grid-template-columns:1fr}}
+#status{margin:16px 0;color:var(--muted)}
+.bldg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+.bldg h2{margin:0 0 4px;font-size:1.25rem}
+.meta{color:var(--muted);font-size:.9rem}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+@media (max-width:600px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{border:1px solid var(--line);border-radius:10px;padding:10px}
+.tile b{display:block;font-size:1.5rem;line-height:1.1}
+.tile span{font-size:.82rem;color:var(--muted)}
+section.list{margin:20px 0}
+section.list h3{font-size:1.05rem;margin:0 0 8px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0}
+.item .top{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.pill{font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.hi{color:var(--hi);background:var(--hi-bg)}.md{color:var(--md);background:var(--md-bg)}.lo{color:var(--lo);background:var(--lo-bg)}
+.item .desc{margin:6px 0 0;font-size:.92rem;overflow-wrap:anywhere}
+.item .when{font-size:.85rem;color:var(--muted)}
+.more{font-size:.88rem;color:var(--muted)}
+.notice{border-left:4px solid var(--md);background:var(--md-bg);padding:10px 12px;border-radius:6px;margin:12px 0;font-size:.95rem}
+.cta{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:16px;margin:24px 0}
+.cta h3{margin:0 0 4px}
+.cta form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.cta input{flex:1 1 220px}
+.disc{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:28px}
+</style>
+</head>
+<body>
+<main>
+<header><a href="index.html">NYC Small-Building Watch</a></header>
+<h1>Look up your building</h1>
+<p class="sub">Open HPD, DOB and ECB violations and upcoming OATH hearings, straight from NYC Open Data. Free, no sign-up.</p>
+
+<form class="search" id="f">
+  <input id="addr" placeholder="e.g. 289 Garfield Pl  or  BBL 3010730066" autocomplete="street-address" required>
+  <select id="boro" aria-label="Borough">
+    <option value="">Borough...</option><option value="1">Manhattan</option><option value="2">Bronx</option>
+    <option value="3">Brooklyn</option><option value="4">Queens</option><option value="5">Staten Island</option>
+  </select>
+  <button id="go">Look up</button>
+</form>
+<p class="hint">Enter house number and street, then pick the borough. A 10-digit BBL works without a borough.</p>
+
+<div id="status" role="status" aria-live="polite"></div>
+<div id="out"></div>
+
+<div class="cta" id="signup">
+  <h3>Get daily alerts for this building</h3>
+  <div>We email you when something new is filed: violations, complaints, summonses, hearing dates and filing deadlines, in plain English. <b>Free while we're in beta</b> (your first 3 months). After that it's $6/building/month or $59/year, and you can cancel any time.</div>
+  <form id="signup-form">
+    <input type="email" name="email" id="signup-email" placeholder="you@example.com" required>
+    <input type="hidden" name="bbl" id="signup-bbl">
+    <button type="submit">Get daily alerts</button>
+  </form>
+  <div id="signup-msg" class="disc"></div>
+</div>
+
+<p class="disc">Informational only, not legal advice. Data comes from NYC Open Data (HPD, DOB, OATH) and can lag the agencies' own systems; confirm on the official agency sites before acting. OATH summonses are matched by tax lot, so some may belong to a tenant or business at the address rather than the owner.</p>
+</main>
+
+<script>
+const API = "https://data.cityofnewyork.us/resource/";
+const BORO = {1:"MANHATTAN",2:"BRONX",3:"BROOKLYN",4:"QUEENS",5:"STATEN ISLAND"};
+const PLUTO_BORO = {1:"MN",2:"BX",3:"BK",4:"QN",5:"SI"};
+const SUFFIX = {ST:"STREET",STR:"STREET",AVE:"AVENUE",AV:"AVENUE",PL:"PLACE",RD:"ROAD",BLVD:"BOULEVARD",DR:"DRIVE",
+  LN:"LANE",PKWY:"PARKWAY",TER:"TERRACE",CT:"COURT",SQ:"SQUARE",HWY:"HIGHWAY",EXPY:"EXPRESSWAY",TPKE:"TURNPIKE"};
+const DIRS = {W:"WEST",E:"EAST",N:"NORTH",S:"SOUTH"};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const q = s => "'" + String(s).replace(/'/g, "''") + "'";
+const clean = s => String(s ?? "").replace(/\s+/g, " ").trim();
+
+async function soda(id, params) {
+  const u = API + id + ".json?" + new URLSearchParams(params);
+  for (let i = 0; ; i++) {  // retry throttling / transient 5xx with backoff
+    let r;
+    try { r = await fetch(u); } catch (e) { if (i >= 3) throw new Error("Couldn't reach NYC Open Data. Please try again."); }
+    if (r && r.ok) return r.json();
+    if (r && !(r.status === 429 || r.status >= 500)) throw new Error("NYC Open Data returned " + r.status);
+    if (i >= 3) throw new Error("NYC Open Data is busy (" + (r ? r.status : "network") + "). Please try again in a minute.");
+    await new Promise(res => setTimeout(res, 1500 * 2 ** i));
+  }
+}
+function normStreet(s) {
+  const t = s.toUpperCase().replace(/[.,#]/g, " ").split(/\s+/).filter(Boolean);
+  return t.map((w, i) => {
+    w = w.replace(/^(\d+)(ST|ND|RD|TH)$/, "$1");
+    if (i === 0 && DIRS[w] && t.length > 1) return DIRS[w];
+    if (i === t.length - 1 && SUFFIX[w]) return SUFFIX[w];
+    return w;
+  }).join(" ");
+}
+function parseDate(v) {
+  if (!v) return null; v = String(v);
+  let m;
+  if ((m = v.match(/^(\d{4})-(\d{2})-(\d{2})/))) return new Date(+m[1], m[2]-1, +m[3]);
+  if ((m = v.match(/^(\d{4})(\d{2})(\d{2})$/))) return new Date(+m[1], m[2]-1, +m[3]);
+  if ((m = v.match(/^(\d{2})\/(\d{2})\/(\d{4})$/))) return new Date(+m[3], m[1]-1, +m[2]);
+  return null;
+}
+const fmt = d => d ? d.toLocaleDateString("en-US", {weekday:"short", month:"short", day:"numeric", year:"numeric"}) : "n/a";
+
+async function resolveBBL(text, boro) {
+  const t = text.trim().replace(/^bbl\s*/i, "");
+  if (/^\d{10}$/.test(t)) return t;
+  const m = t.toUpperCase().match(/^\s*([0-9]+(?:-[0-9]+)?[A-Z]?)\s+(.+)$/);
+  if (!m) throw new Error("Please start with the house number, e.g. 289 Garfield Pl.");
+  if (!boro) throw new Error("Please pick a borough.");
+  const house = m[1], street = normStreet(m[2].split(",")[0]);
+  let rows = await soda("64uk-42ks", {$select: "bbl", $where: `address=${q(house + " " + street)} AND borough=${q(PLUTO_BORO[boro])}`, $limit: 5});
+  if (rows.length) return String(Math.trunc(parseFloat(rows[0].bbl)));
+  rows = await soda("tesw-yqqr", {$select: "boroid,block,lot", $limit: 5,
+    $where: `boroid=${q(boro)} AND streetname=${q(street)} AND (housenumber=${q(house)} OR (lowhousenumber<=${q(house)} AND highhousenumber>=${q(house)}))`});
+  if (rows.length) return rows[0].boroid + String(rows[0].block).padStart(5, "0") + String(rows[0].lot).padStart(4, "0");
+  throw new Error(`Couldn't find "${house} ${street}" in ${BORO[boro].toLowerCase()}. Try spelling out the street (e.g. "West 139 Street") or enter the BBL.`);
+}
+
+function item(sev, title, when, desc, link) {
+  const cls = {high:"hi", medium:"md", low:"lo"}[sev] || "md";
+  return `<div class="item"><div class="top"><span class="pill ${cls}">${esc(sev.toUpperCase())}</span><b>${esc(title)}</b></div>
+    ${when ? `<div class="when">${esc(when)}</div>` : ""}<p class="desc">${esc(desc)}</p>
+    ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">Official record</a>` : ""}</div>`;
+}
+function listSection(title, items, emptyText, cap = 25) {
+  const shown = items.slice(0, cap).join("");
+  const more = items.length > cap ? `<p class="more">+ ${items.length - cap} more not shown.</p>` : "";
+  return `<section class="list"><h3>${esc(title)} (${items.length})</h3>${items.length ? shown + more : `<p class="more">${esc(emptyText)}</p>`}</section>`;
+}
+
+async function lookup(text, boro) {
+  const st = $("#status"), out = $("#out");
+  out.innerHTML = ""; st.textContent = "Finding the tax lot...";
+  const bbl = await resolveBBL(text, boro);
+  const b = bbl[0], block = bbl.slice(1, 6), lot = bbl.slice(6);
+  st.textContent = "Loading records from NYC Open Data...";
+  const [pl, fp, reg] = await Promise.all([
+    soda("64uk-42ks", {$select: "address,unitsres,unitstotal,bldgclass,zipcode", $where: `bbl=${q(bbl)}`, $limit: 1}),
+    soda("5zhs-2jue", {$select: "bin", $where: `base_bbl=${q(bbl)} OR mappluto_bbl=${q(bbl)}`, $limit: 50}),
+    soda("tesw-yqqr", {$select: "bin,registrationenddate", $where: `boroid=${q(b)} AND block=${q(+block)} AND lot=${q(+lot)}`, $order: "registrationenddate DESC", $limit: 5}),
+  ]);
+  const p = pl[0] || {};
+  const bins = [...new Set([...fp, ...reg].map(r => r.bin).filter(x => x && !/000000$/.test(x)))];
+  const binList = bins.map(q).join(",");
+  const today = new Date(); today.setHours(0,0,0,0);
+  const todayIso = today.toISOString().slice(0, 10);
+  const oathWhere = `violation_location_borough=${q(BORO[b])} AND violation_location_block_no=${q(block)} AND violation_location_lot_no=${q(lot)}`;
+  const none = Promise.resolve([]);
+  const [hpd, dob, ecb, oath] = await Promise.all([
+    soda("wvxf-dwi5", {$where: `bbl=${q(bbl)} AND violationstatus='Open'`, $order: "novissueddate DESC", $limit: 500}),
+    bins.length ? soda("3h2n-5cm9", {$where: `bin in (${binList}) AND violation_category like '%ACTIVE%'`, $order: "issue_date DESC", $limit: 200}) : none,
+    bins.length ? soda("6bgk-3dad", {$where: `bin in (${binList}) AND ecb_violation_status='ACTIVE'`, $order: "issue_date DESC", $limit: 200}) : none,
+    soda("jz4z-kudi", {$where: `${oathWhere} AND hearing_date >= ${q(todayIso)}`, $order: "hearing_date", $limit: 100}),
+  ]);
+  $("#signup-bbl").value = bbl;
+
+  const units = Math.trunc(parseFloat(p.unitsres || 0));
+  const hpdSev = {C:"high", B:"medium", A:"low", I:"medium"};
+  const hpdName = {C:"Class C - immediately hazardous", B:"Class B - hazardous", A:"Class A - non-hazardous", I:"Class I - order / information"};
+  const rank = {C:0, B:1, I:2, A:3};
+  hpd.sort((x, y) => (rank[x.class] ?? 4) - (rank[y.class] ?? 4));
+  const hpdItems = hpd.map(r => {
+    const due = parseDate(r.newcertifybydate || r.originalcertifybydate);
+    return item(hpdSev[r.class] || "medium", `HPD ${hpdName[r.class] || "Class " + r.class}${r.apartment ? " - apt " + r.apartment : ""}`,
+      `Issued ${fmt(parseDate(r.novissueddate || r.inspectiondate))}${due && due.getFullYear() < 2100 ? " | certify correction by " + fmt(due) : ""} | ${clean(r.currentstatus)}`,
+      clean(r.novdescription).slice(0, 400), "https://www.nyc.gov/hpdonline");
+  });
+  const ecbSev = {"CLASS - 1":"high", "CLASS - 2":"medium", "CLASS - 3":"low"};
+  const ecbItems = ecb.map(r => {
+    const hd = parseDate(r.hearing_date);
+    return item(ecbSev[r.severity] || "medium", `ECB #${r.ecb_violation_number} - ${clean(r.violation_type) || "DOB"} (${clean(r.severity) || "class n/a"})`,
+      `Issued ${fmt(parseDate(r.issue_date))} | hearing status: ${clean(r.hearing_status) || "n/a"}${hd && hd >= today ? " | hearing " + fmt(hd) : ""} | balance due $${r.balance_due ?? "n/a"}`,
+      clean(r.section_law_description1 || r.violation_description).slice(0, 300),
+      `https://a810-bisweb.nyc.gov/bisweb/ECBQueryByNumberServlet?ecbin=${encodeURIComponent(r.ecb_violation_number)}`);
+  });
+  const dobItems = dob.map(r => item("medium", `DOB violation ${clean(r.number)}`,
+      `Issued ${fmt(parseDate(r.issue_date))} | ${clean(r.violation_type)}`,
+      clean(r.description) || clean(r.violation_category),
+      `https://a810-bisweb.nyc.gov/bisweb/PropertyProfileOverviewServlet?bin=${encodeURIComponent(r.bin)}`));
+  const oathItems = oath.map(r => {
+    const hd = parseDate(r.hearing_date), days = hd ? Math.round((hd - today) / 864e5) : null;
+    return item(days !== null && days <= 7 ? "high" : "medium", `Hearing ${fmt(hd)}${r.hearing_time ? " at " + r.hearing_time.slice(0,5) : ""} - summons #${r.ticket_number}`,
+      `${clean(r.issuing_agency) || "City agency"} | status: ${clean(r.hearing_status) || "n/a"}${r.total_violation_amount ? " | penalty listed $" + r.total_violation_amount : ""}`,
+      (clean(r.charge_1_code_description) || "Charge n/a") + ". If no one responds by the hearing date, OATH can decide the case by default with a higher penalty. The respondent may be a tenant or business here rather than the owner.",
+      "https://www.nyc.gov/site/oath/hearings/hearings-and-defaults.page");
+  });
+
+  const regEnd = parseDate(reg[0] && reg[0].registrationenddate);
+  let notices = "";
+  if (units >= 3) {
+    notices += `<div class="notice"><b>Bedbug report:</b> buildings with 3+ apartments must file HPD's annual bedbug report between <b>December 1 and December 31</b> (covering Nov 1 - Oct 31). <a href="https://www.nyc.gov/site/hpd/services-and-information/bedbugs.page" target="_blank" rel="noopener">How to file</a></div>`;
+    if (!regEnd) notices += `<div class="notice"><b>HPD registration:</b> no registration record found in open data for this lot. 3+ unit buildings must register yearly; confirm on HPD Online.</div>`;
+    else if (regEnd < today) notices += `<div class="notice"><b>HPD registration:</b> open data shows the registration ended ${esc(fmt(regEnd))}. Confirm on HPD Online and renew if needed.</div>`;
+  }
+
+  out.innerHTML = `<div class="bldg"><h2>${esc(p.address || "BBL " + bbl)}, ${esc(BORO[b][0] + BORO[b].slice(1).toLowerCase())}</h2>
+    <div class="meta">BBL ${esc(bbl)} | BIN ${esc(bins.join(", ") || "n/a")} | ${units} residential / ${esc(Math.trunc(parseFloat(p.unitstotal || 0)))} total units | class ${esc(p.bldgclass || "n/a")}</div>
+    <div class="tiles">
+      <div class="tile"><b>${hpd.length}</b><span>open HPD violations</span></div>
+      <div class="tile"><b>${dob.length}</b><span>active DOB violations</span></div>
+      <div class="tile"><b>${ecb.length}</b><span>active ECB violations</span></div>
+      <div class="tile"><b>${oath.length}</b><span>upcoming OATH hearings</span></div>
+    </div></div>
+    ${notices}
+    ${listSection("Upcoming OATH hearings", oathItems, "No upcoming hearings found for this tax lot.")}
+    ${listSection("Active ECB violations (DOB summonses)", ecbItems, "None found.")}
+    ${listSection("Open HPD violations", hpdItems, "None found.")}
+    ${listSection("Active DOB violations", dobItems, "None found.")}`;
+  st.textContent = `Data from NYC Open Data, fetched ${new Date().toLocaleString()}.`;
+}
+
+$("#f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const btn = $("#go"); btn.disabled = true;
+  try {
+    await lookup($("#addr").value, $("#boro").value);
+    try { localStorage.setItem("bw-last", JSON.stringify({a: $("#addr").value, b: $("#boro").value})); } catch (_) {}
+  } catch (err) {
+    $("#status").textContent = err.message || String(err);
+  } finally { btn.disabled = false; }
+});
+try { const l = JSON.parse(localStorage.getItem("bw-last") || "null"); if (l) { $("#addr").value = l.a; $("#boro").value = l.b; } } catch (_) {}
+const qp = new URLSearchParams(location.search);
+if (qp.get("bbl")) { $("#addr").value = qp.get("bbl"); $("#f").requestSubmit(); }
+</script>
+
+<script>
+(function(){
+  const KIT_KEY = "9OgTfHEbtX6FB0NWVjkgyg"; const TAG = 25837871;
+  const f = document.getElementById('signup-form');
+  const msg = document.getElementById('signup-msg');
+  f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('signup-email').value.trim();
+    const bbl = document.getElementById('signup-bbl').value || '';
+    const inp = document.querySelector('#f input');
+    const addr = inp ? inp.value : '';
+    const btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Signing up...';
+    try {
+      const r = await fetch('https://api.convertkit.com/v3/tags/' + TAG + '/subscribe', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({api_key: KIT_KEY, email: email, fields: {bbl: bbl, building_address: addr}})
+      });
+      if (!r.ok) throw new Error('status ' + r.status);
+      f.innerHTML = "<b>You're in.</b> We'll email you the first alert digest for this building within a day.";
+      msg.textContent = '';
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Get daily alerts';
+      msg.textContent = "Sorry, that didn't go through. Please try again in a moment.";
+    }
+  });
+})();
+</script>
+</body>
+</html>

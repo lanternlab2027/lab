@@ -1,0 +1,60 @@
+# Draft GitHub Actions workflow -> save as .github/workflows/watch.yml in the repo.
+# Runs watch.py once a day, emails the digest (stub), and commits state.json back so
+# the next run only reports new items.
+name: building-watch
+
+on:
+  schedule:
+    - cron: "17 11 * * *"   # 11:17 UTC = 6:17 AM EST / 7:17 AM EDT (off the hour to avoid queue delays)
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Optional YYYY-MM-DD backfill (ignores stored last-seen; state not saved)"
+        required: false
+
+permissions:
+  contents: write   # needed to commit state.json
+
+concurrency:
+  group: building-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run watcher
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}   # optional, raises NYC Open Data rate limits
+          EMAIL_API_KEY: ${{ secrets.EMAIL_API_KEY }}           # email provider key (send_email is a stub for now)
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+        run: |
+          if [ -n "${{ github.event.inputs.since }}" ]; then
+            python watch.py --buildings buildings.txt --since "${{ github.event.inputs.since }}" --no-save --email "$ALERT_EMAIL"
+          else
+            python watch.py --buildings buildings.txt --state state.json --email "$ALERT_EMAIL"
+          fi
+
+      - name: Keep today's digest as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: alerts-${{ github.run_id }}
+          path: |
+            alerts.md
+            alerts.json
+          retention-days: 30
+
+      - name: Commit updated state
+        run: |
+          git config user.name  "building-watch-bot"
+          git config user.email "building-watch-bot@users.noreply.github.com"
+          git add state.json
+          git diff --cached --quiet || git commit -m "watch: update state $(date -u +%F)"
+          git push
