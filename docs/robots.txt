@@ -1,0 +1,7 @@
+# Note: crawlers only read robots.txt at a host's root (https://lanternlab2027.github.io/robots.txt).
+# This file is served at /lab/robots.txt, so it only takes effect once the site moves to a
+# user site (lanternlab2027.github.io repo) or a custom domain. See bots/SEO_NOTES.md.
+User-agent: *
+Allow: /
+
+Sitemap: https://lanternlab2027.github.io/lab/sitemap.xml
