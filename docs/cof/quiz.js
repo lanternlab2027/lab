@@ -192,7 +192,7 @@
     var msg = $('gateMsg');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.className = 'msg err'; msg.textContent = 'Please enter a valid email address.'; return; }
     $('gateBtn').disabled = true; msg.className = 'msg'; msg.textContent = 'Unlocking…';
-    var notConfigured = KIT_KEY === 'KIT_' + 'PUBLIC_KEY' || KIT_URL.indexOf('/25838722/') > -1;
+    var notConfigured = KIT_KEY === 'KIT_' + 'PUBLIC_KEY' || false;
     fetch(KIT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

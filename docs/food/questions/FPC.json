@@ -1,0 +1,2501 @@
+{
+ "exam": "FPC",
+ "title": "NYC Food Protection Certificate Exam",
+ "real_exam_questions": 50,
+ "real_exam_pass": 35,
+ "real_exam_minutes": 60,
+ "mock_questions": 50,
+ "mock_minutes": 60,
+ "page_numbering": "PDF page index (1 = first page of the PDF file); null for HTML pages",
+ "questions": [
+  {
+   "id": "FPC-001",
+   "topic": "Course & certificate",
+   "question": "What does the NYC Health Code require of a food service establishment while it is operating?",
+   "options": [
+    "A licensed exterminator on site",
+    "At least one supervisor certified in food protection on site",
+    "A DOHMH inspector present",
+    "All staff to hold a Food Protection Certificate"
+   ],
+   "answer": 1,
+   "explanation": "At least one certified supervisor must be on site whenever the establishment operates.",
+   "source": {
+    "url": "https://www.nyc.gov/site/doh/business/health-academy/food-protection-online-free.page",
+    "title": "DOHMH: Food Protection Online Course",
+    "page": null,
+    "quote": "there be at least one supervisor certified in food protection on site any time a food service establishment and non-retail food processing establishment is operating."
+   }
+  },
+  {
+   "id": "FPC-002",
+   "topic": "Course & certificate",
+   "question": "How many lessons are in DOHMH's free online Food Protection Course?",
+   "options": [
+    "10",
+    "5",
+    "20",
+    "15"
+   ],
+   "answer": 3,
+   "explanation": "The self-paced course has 15 lessons, each followed by a quiz you must pass.",
+   "source": {
+    "url": "https://www.nyc.gov/site/doh/business/health-academy/food-protection-online-free.page",
+    "title": "DOHMH: Food Protection Online Course",
+    "page": null,
+    "quote": "The course is self-paced and consists of 15 lessons."
+   }
+  },
+  {
+   "id": "FPC-003",
+   "topic": "Course & certificate",
+   "question": "What is the base price of the in-person final exam after the free online course?",
+   "options": [
+    "$50",
+    "$114",
+    "Free",
+    "$24"
+   ],
+   "answer": 3,
+   "explanation": "The online course is free; the in-person exam base price is $24.",
+   "source": {
+    "url": "https://www.nyc.gov/site/doh/business/health-academy/food-protection-online-free.page",
+    "title": "DOHMH: Food Protection Online Course",
+    "page": null,
+    "quote": "The base price of the exam is $24."
+   }
+  },
+  {
+   "id": "FPC-004",
+   "topic": "Course & certificate",
+   "question": "How long is a Food Protection Certificate valid?",
+   "options": [
+    "It never expires",
+    "3 years",
+    "5 years",
+    "1 year"
+   ],
+   "answer": 0,
+   "explanation": "The certificate never expires, though DOHMH may require a retake in special circumstances.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/hany/food-protection-course-faq.pdf",
+    "title": "DOHMH Food Protection Course - Online FAQ (PDF)",
+    "page": 1,
+    "quote": "The certificate never expires. There is no need to repeat the course."
+   }
+  },
+  {
+   "id": "FPC-005",
+   "topic": "Course & certificate",
+   "question": "If you fail an online lesson quiz, what must you do before retaking it?",
+   "options": [
+    "Restart the entire course",
+    "Wait 24 hours",
+    "Pay a $10 fee",
+    "Spend at least 15 consecutive active minutes on the lesson"
+   ],
+   "answer": 3,
+   "explanation": "You must reopen the lesson and spend at least 15 consecutive active minutes on it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/hany/food-protection-course-faq.pdf",
+    "title": "DOHMH Food Protection Course - Online FAQ (PDF)",
+    "page": 1,
+    "quote": "spend at least 15 consecutive active minutes on the lesson before you can take the quiz again."
+   }
+  },
+  {
+   "id": "FPC-006",
+   "topic": "Course & certificate",
+   "question": "How long is the classroom Food Protection Course?",
+   "options": [
+    "3 hours",
+    "40 hours over two weeks",
+    "8 hours in one day",
+    "15 hours over five days"
+   ],
+   "answer": 3,
+   "explanation": "The classroom course is 15 hours, usually Monday to Friday in 3-hour sessions.",
+   "source": {
+    "url": "https://www.nyc.gov/site/doh/business/health-academy/food-protection-classroom.page",
+    "title": "DOHMH: Food Protection: Classroom",
+    "page": null,
+    "quote": "The course is 15 hours long and is given over five days and each daily session is three hours long."
+   }
+  },
+  {
+   "id": "FPC-007",
+   "topic": "Course & certificate",
+   "question": "Which division of the Health Department includes the Health Academy, which provides the Food Protection Course?",
+   "options": [
+    "The Division of Disease Control",
+    "The Division of Environmental Health",
+    "The Bureau of Vital Statistics",
+    "The Office of the Inspector General"
+   ],
+   "answer": 1,
+   "explanation": "The Health Academy is an office within the Division of Environmental Health.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 1,
+    "quote": "The Health Academy is an office within the Division of Environmental Health."
+   }
+  },
+  {
+   "id": "FPC-008",
+   "topic": "Course & certificate",
+   "question": "Is it legal to offer a Health Department sanitarian a gratuity?",
+   "options": [
+    "No; offering any bribe, gratuity or reward for official misconduct is a crime",
+    "Yes, if declared on a form",
+    "Yes, if under $25",
+    "Yes, after the inspection"
+   ],
+   "answer": 0,
+   "explanation": "It is illegal to offer a sanitarian any bribe, gratuity or reward for official misconduct.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 1,
+    "quote": "It is illegal to offer a Sanitarian any bribe, gratuity or reward for official misconduct"
+   }
+  },
+  {
+   "id": "FPC-009",
+   "topic": "Permits & inspection",
+   "question": "Who issues the permit every NYC food service establishment must hold?",
+   "options": [
+    "The NYC Department of Buildings",
+    "NYS Department of Agriculture",
+    "The FDNY",
+    "The New York City Health Department"
+   ],
+   "answer": 3,
+   "explanation": "All food service establishments need a current, valid permit from the NYC Health Department.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "All food service establishments must have a current and valid permit issued by the New York City Health Department."
+   }
+  },
+  {
+   "id": "FPC-010",
+   "topic": "Permits & inspection",
+   "question": "When do health inspectors have the right to inspect a food service establishment?",
+   "options": [
+    "Only after a complaint",
+    "Only with 24 hours' notice",
+    "Only during business hours with the owner present",
+    "Any time it is operating, with access to all areas"
+   ],
+   "answer": 3,
+   "explanation": "Inspectors may inspect any operating establishment and must be given access to all areas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "Health inspectors have the right to inspect any operating food service or food processing establishment."
+   }
+  },
+  {
+   "id": "FPC-011",
+   "topic": "Permits & inspection",
+   "question": "Under the NYC Health Code, who in a food service establishment must hold a Food Protection Certificate?",
+   "options": [
+    "Supervisors",
+    "Only the owner",
+    "Every employee",
+    "Only cooks"
+   ],
+   "answer": 0,
+   "explanation": "Supervisors of all food service establishments must have the certificate.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "supervisors of all food service establishments must have a Food Protection Certificate."
+   }
+  },
+  {
+   "id": "FPC-012",
+   "topic": "Permits & inspection",
+   "question": "Which Health Code article regulates the operation of food establishments?",
+   "options": [
+    "Article 11",
+    "Article 151",
+    "Article 81",
+    "Article 47"
+   ],
+   "answer": 2,
+   "explanation": "Article 81 regulates food establishments to prevent public health hazards.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 1,
+    "quote": "Article 81 which regulates the oper- ations of food establishments"
+   }
+  },
+  {
+   "id": "FPC-013",
+   "topic": "Definitions",
+   "question": "How does the course define 'food'?",
+   "options": [
+    "Only potentially hazardous items",
+    "Only cooked items sold to customers",
+    "Any edible substance, ice, beverage or ingredient used or sold for human consumption",
+    "Anything except beverages and ice"
+   ],
+   "answer": 2,
+   "explanation": "Ice and beverages count as food.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "Food is any edible substance, ice, beverage or ingredient used or sold for human consumption."
+   }
+  },
+  {
+   "id": "FPC-014",
+   "topic": "Definitions",
+   "question": "What are Potentially Hazardous Foods (PHFs)?",
+   "options": [
+    "Foods that cause allergies",
+    "Foods which support rapid growth of microorganisms",
+    "Foods past their sell-by date",
+    "Foods containing bones"
+   ],
+   "answer": 1,
+   "explanation": "PHFs support rapid microbial growth.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "Potentially Hazardous Foods (PHFs) are foods which support rapid growth of microorganisms."
+   }
+  },
+  {
+   "id": "FPC-015",
+   "topic": "Definitions",
+   "question": "Which of these is listed as a Potentially Hazardous Food?",
+   "options": [
+    "Cooked rice",
+    "Uncooked dry pasta",
+    "Granulated sugar",
+    "Sealed canned soup"
+   ],
+   "answer": 0,
+   "explanation": "PHF examples include cooked rice, pasta, beans, potatoes, tofu and garlic in oil.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "products, fish, shellfish, tofu, cooked rice, pasta, beans, potatoes and garlic in oil."
+   }
+  },
+  {
+   "id": "FPC-016",
+   "topic": "Definitions",
+   "question": "What is ready-to-eat food?",
+   "options": [
+    "Any frozen food",
+    "Food in modified atmosphere packaging",
+    "Food that has been cooked once",
+    "Food that needs no additional heat treatment or washing"
+   ],
+   "answer": 3,
+   "explanation": "Ready-to-eat food needs no further heating or washing, so extra care is needed.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 3,
+    "quote": "Any food product that does not need additional heat treatment or washing is called ready-to-eat food."
+   }
+  },
+  {
+   "id": "FPC-017",
+   "topic": "Definitions",
+   "question": "From whom must all foods be purchased?",
+   "options": [
+    "Approved sources",
+    "Any licensed restaurant",
+    "The cheapest supplier",
+    "Local farms only"
+   ],
+   "answer": 0,
+   "explanation": "All foods must come from approved sources that comply with production rules.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 3,
+    "quote": "All foods must be purchased from approved sources."
+   }
+  },
+  {
+   "id": "FPC-018",
+   "topic": "Temperature",
+   "question": "What is the Temperature Danger Zone?",
+   "options": [
+    "Between 0°F and 41°F",
+    "Between 41°F and 140°F",
+    "Between 32°F and 100°F",
+    "Between 50°F and 165°F"
+   ],
+   "answer": 1,
+   "explanation": "Most harmful microorganisms reproduce rapidly between 41°F and 140°F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "The Temperature Danger Zone is between 41°F and 140°F."
+   }
+  },
+  {
+   "id": "FPC-019",
+   "topic": "Temperature",
+   "question": "At or below what temperature must cold foods be held (other than smoked fish)?",
+   "options": [
+    "41°F",
+    "32°F",
+    "45°F",
+    "38°F"
+   ],
+   "answer": 0,
+   "explanation": "Cold foods are held at or below 41°F; smoked fish at or below 38°F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "All cold foods must be held at or below 41°F (except smoked fish, which must be held at or below 38°F) at all times."
+   }
+  },
+  {
+   "id": "FPC-020",
+   "topic": "Temperature",
+   "question": "Smoked fish must be held at or below what temperature?",
+   "options": [
+    "38°F",
+    "45°F",
+    "0°F",
+    "41°F"
+   ],
+   "answer": 0,
+   "explanation": "Smoked fish is held at or below 38°F to prevent growth of Clostridium botulinum.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "Smoked fish must be held at or below 38°F to prevent the growth of the bacteria Clostridium botulinum."
+   }
+  },
+  {
+   "id": "FPC-021",
+   "topic": "Temperature",
+   "question": "At what temperature must frozen foods be kept?",
+   "options": [
+    "32°F or lower",
+    "20°F or lower",
+    "0°F or lower",
+    "41°F or lower"
+   ],
+   "answer": 2,
+   "explanation": "Frozen foods must be kept frozen at 0°F or lower.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 85,
+    "quote": "Keep frozen foods frozen at 0° F or lower."
+   }
+  },
+  {
+   "id": "FPC-022",
+   "topic": "Temperature",
+   "question": "At what temperature must hot foods in a hot holding unit be held?",
+   "options": [
+    "120°F or higher",
+    "140°F or higher",
+    "100°F or higher",
+    "165°F or higher"
+   ],
+   "answer": 1,
+   "explanation": "Hot holding requires 140°F or higher.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "All hot foods stored in a hot holding unit must be held at 140°F or higher."
+   }
+  },
+  {
+   "id": "FPC-023",
+   "topic": "Temperature",
+   "question": "If potentially hazardous foods are left in the Temperature Danger Zone for more than how long, must they be discarded?",
+   "options": [
+    "2 hours",
+    "6 hours",
+    "4 hours",
+    "30 minutes"
+   ],
+   "answer": 0,
+   "explanation": "After more than 2 hours in the danger zone, the food is no longer safe.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "If potentially hazardous foods are left in the Temperature Danger Zone for more than 2 hours, then the food is no longer safe"
+   }
+  },
+  {
+   "id": "FPC-024",
+   "topic": "Temperature",
+   "question": "Where should a refrigeration thermometer be placed?",
+   "options": [
+    "On the outside of the door",
+    "Inside the freezer compartment",
+    "In the warmest spot in the unit",
+    "In the coldest spot in the unit"
+   ],
+   "answer": 2,
+   "explanation": "Place it in the warmest spot to measure the unit's ambient air temperature.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 85,
+    "quote": "Place a refrigeration thermometer in the warmest spot in the unit to measure ambient air temperature of the unit"
+   }
+  },
+  {
+   "id": "FPC-025",
+   "topic": "Thermometers",
+   "question": "Which type of thermometer is prohibited in a food service establishment?",
+   "options": [
+    "Glass thermometers",
+    "Thermistors",
+    "Bimetallic stem thermometers",
+    "Thermocouples"
+   ],
+   "answer": 0,
+   "explanation": "Glass thermometers are prohibited by law.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "The use of glass thermometers in a food service establishment is prohibited by law."
+   }
+  },
+  {
+   "id": "FPC-026",
+   "topic": "Thermometers",
+   "question": "What is the temperature range of a bimetallic stem thermometer?",
+   "options": [
+    "50°F to 500°F",
+    "0°F to 220°F",
+    "32°F to 212°F",
+    "-40°F to 100°F"
+   ],
+   "answer": 1,
+   "explanation": "Bimetallic stem thermometers range from 0°F to 220°F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "bimetallic stem (range from 0°F to 220°F), thermocouple and thermistor (digital)."
+   }
+  },
+  {
+   "id": "FPC-027",
+   "topic": "Thermometers",
+   "question": "A thermistor thermometer is commonly called what?",
+   "options": [
+    "A glass thermometer",
+    "A dial thermometer",
+    "An infrared gun",
+    "A digital thermometer"
+   ],
+   "answer": 3,
+   "explanation": "The thermistor has a digital readout and is commonly called a digital thermometer.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 3,
+    "quote": "there is a thermometer called thermistor, which has a digital read out and is commonly called \"digital thermometer.\""
+   }
+  },
+  {
+   "id": "FPC-028",
+   "topic": "Thermometers",
+   "question": "How accurate is a bimetallic stem thermometer, per the Training Manual?",
+   "options": [
+    "Plus or minus 2°F",
+    "Plus or minus 10°F",
+    "Plus or minus 5°F",
+    "Plus or minus 0.1°F"
+   ],
+   "answer": 0,
+   "explanation": "The bi-metallic stem is accurate to within 2°F and easy to re-calibrate.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 3,
+    "quote": "accurate to + or – 2°F and easy to re-calibrate."
+   }
+  },
+  {
+   "id": "FPC-029",
+   "topic": "Thermometers",
+   "question": "In the ice-point calibration method, what temperature should a thermometer read in a 50/50 ice-water slush?",
+   "options": [
+    "41°F",
+    "212°F",
+    "32°F",
+    "0°F"
+   ],
+   "answer": 2,
+   "explanation": "A 50/50 ice water slush is always 32°F at sea level; adjust the hex nut if the reading is off.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 4,
+    "quote": "If the temperature is 32°F, do nothing, the thermometer is accurate."
+   }
+  },
+  {
+   "id": "FPC-030",
+   "topic": "Thermometers",
+   "question": "Where should the thermometer probe be inserted to measure a food's internal temperature?",
+   "options": [
+    "The liquid around the food",
+    "The edge of the pan",
+    "The surface of the food",
+    "The thickest part or the center of the product"
+   ],
+   "answer": 3,
+   "explanation": "Insert into the thickest part or the center, ideally at several points.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 4,
+    "quote": "Measure the internal product temperature by inserting the probe into the thickest part or the center of the product."
+   }
+  },
+  {
+   "id": "FPC-031",
+   "topic": "Receiving",
+   "question": "Meat inspected by the USDA must bear what?",
+   "options": [
+    "A sell-by date of 9 days",
+    "A shellfish tag",
+    "A country-of-origin sticker only",
+    "A USDA inspection stamp"
+   ],
+   "answer": 3,
+   "explanation": "USDA-inspected meat must have a USDA inspection stamp.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "must have a USDA inspection stamp."
+   }
+  },
+  {
+   "id": "FPC-032",
+   "topic": "Receiving",
+   "question": "How long must shellfish tags be kept on file?",
+   "options": [
+    "Until the next inspection",
+    "At least 90 days after the product is used",
+    "1 year",
+    "30 days after delivery"
+   ],
+   "answer": 1,
+   "explanation": "Shellfish tags are kept at least 90 days after the product is used.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "These tags must be kept on file for at least 90 days after the product is used."
+   }
+  },
+  {
+   "id": "FPC-033",
+   "topic": "Receiving",
+   "question": "What sell-by dating applies to pasteurized milk?",
+   "options": [
+    "45 days",
+    "3 days",
+    "30 days",
+    "9 days"
+   ],
+   "answer": 3,
+   "explanation": "Pasteurized milk has a 9-day sell-by; ultra-pasteurized has 45 days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "Milk and milk products must either be pasteurized, with sell-by dates of 9 days, or ultra-pasteurized, with sell-by dates of 45 days."
+   }
+  },
+  {
+   "id": "FPC-034",
+   "topic": "Receiving",
+   "question": "What sell-by dating applies to ultra-pasteurized milk products?",
+   "options": [
+    "90 days",
+    "45 days",
+    "14 days",
+    "9 days"
+   ],
+   "answer": 1,
+   "explanation": "Ultra-pasteurized products carry 45-day sell-by dates.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "ultra-pasteurized, with sell-by dates of 45 days."
+   }
+  },
+  {
+   "id": "FPC-035",
+   "topic": "Receiving",
+   "question": "When receiving, which canned goods should you look out for and reject?",
+   "options": [
+    "Cans larger than one gallon",
+    "Cans with paper labels",
+    "Dented, leaking, rusted or swollen cans",
+    "Cans from out of state"
+   ],
+   "answer": 2,
+   "explanation": "Reject dented, leaking, rusted or swollen cans.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 84,
+    "quote": "Look out for any dented, leaking, rusted or swollen cans."
+   }
+  },
+  {
+   "id": "FPC-036",
+   "topic": "Receiving",
+   "question": "What color should fresh beef be when received?",
+   "options": [
+    "Bright to dark red",
+    "Brown to gray",
+    "Pink with green edges",
+    "Purple to black"
+   ],
+   "answer": 0,
+   "explanation": "Beef should be bright to dark red with no objectionable odor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 4,
+    "quote": "Beef should be bright to dark red in color with no objection- able odor."
+   }
+  },
+  {
+   "id": "FPC-037",
+   "topic": "Receiving",
+   "question": "What must be done with all fruits and vegetables that will be served raw?",
+   "options": [
+    "Freeze them first",
+    "Soak them in bleach",
+    "Cook them to 140°F",
+    "Thoroughly wash them before serving"
+   ],
+   "answer": 3,
+   "explanation": "Raw-served produce must be thoroughly washed.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 1,
+    "quote": "All fruits and vegetables served raw must be thoroughly washed before being served."
+   }
+  },
+  {
+   "id": "FPC-038",
+   "topic": "Receiving",
+   "question": "Is vacuum packaging food allowed in a retail food establishment?",
+   "options": [
+    "Yes, for any food",
+    "No, unless special authorization is obtained from the Health Department",
+    "Yes, for meat only",
+    "Yes, if labeled with a date"
+   ],
+   "answer": 1,
+   "explanation": "Vacuum packaging is prohibited unless the Health Department specially authorizes it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "Vacuum packaging of any food product in a retail food establishment is prohibited by law unless special authorization is obtained"
+   }
+  },
+  {
+   "id": "FPC-039",
+   "topic": "Receiving",
+   "question": "How must commercial foods in modified atmosphere packaging be used?",
+   "options": [
+    "Within 24 hours of opening regardless of label",
+    "Per the manufacturer's specifications",
+    "Only after freezing",
+    "Only for hot dishes"
+   ],
+   "answer": 1,
+   "explanation": "Modified atmosphere packaged foods must be used per manufacturer's specifications.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "All commercial foods in modified atmosphere packaging must be used per manufacturer’s specifications."
+   }
+  },
+  {
+   "id": "FPC-040",
+   "topic": "Storage",
+   "question": "What does FIFO stand for?",
+   "options": [
+    "Food Inspection For Operators",
+    "Freeze It, Fry It Once",
+    "First In, First Out",
+    "First Inspected, First Opened"
+   ],
+   "answer": 2,
+   "explanation": "FIFO means First In First Out; the first step is dating the products.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "FIFO means First In First Out."
+   }
+  },
+  {
+   "id": "FPC-041",
+   "topic": "Storage",
+   "question": "What is the first step in implementing the FIFO method?",
+   "options": [
+    "Date the products",
+    "Freeze all products",
+    "Discard old stock",
+    "Label allergens"
+   ],
+   "answer": 0,
+   "explanation": "Dating products is the first step of FIFO.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "The first step in implementing the FIFO method is to date the products."
+   }
+  },
+  {
+   "id": "FPC-042",
+   "topic": "Storage",
+   "question": "How high off the floor must food items be stored?",
+   "options": [
+    "At least 12 inches",
+    "At least 2 inches",
+    "At least 18 inches",
+    "At least 6 inches"
+   ],
+   "answer": 3,
+   "explanation": "The Health Code requires all food to be stored at least 6 inches off the floor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "The New York City Health Code requires that all food items be stored at least 6 inches off the floor."
+   }
+  },
+  {
+   "id": "FPC-043",
+   "topic": "Storage",
+   "question": "In a refrigerator, where must raw foods be stored relative to cooked foods?",
+   "options": [
+    "On the same shelf, side by side",
+    "In the door",
+    "Above cooked foods",
+    "Below cooked foods"
+   ],
+   "answer": 3,
+   "explanation": "Storing raw below cooked prevents cross-contamination.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "In order to prevent cross-contamination, raw foods in a refrigerator must be stored below cooked foods."
+   }
+  },
+  {
+   "id": "FPC-044",
+   "topic": "Storage",
+   "question": "Storing raw meats from bottom to top, which goes on the bottom shelf?",
+   "options": [
+    "Ground meats",
+    "Beef steaks",
+    "Poultry",
+    "Pork"
+   ],
+   "answer": 2,
+   "explanation": "Bottom to top: poultry, ground meats, pork, then all other meats.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 89,
+    "quote": "Store raw meats in the following order from bottom to top: i. Poultry ii. Ground meats iii. Pork iv. All other meats"
+   }
+  },
+  {
+   "id": "FPC-045",
+   "topic": "Storage",
+   "question": "What dry storage conditions does the manual strongly recommend?",
+   "options": [
+    "Humidity of 10% and 90°F",
+    "Humidity of 50% and a temperature of 70°F",
+    "Humidity of 90% and 41°F",
+    "Any conditions if sealed"
+   ],
+   "answer": 1,
+   "explanation": "Dry storage: 50% humidity and 70°F are strongly recommended.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 85,
+    "quote": "Humidity of 50% and a temperature of 70° F are strongly recommended."
+   }
+  },
+  {
+   "id": "FPC-046",
+   "topic": "Storage",
+   "question": "Where must food never be stored?",
+   "options": [
+    "In walk-in refrigerators",
+    "On shelves 6 inches off the floor",
+    "Under wastewater lines",
+    "In vermin-proof containers"
+   ],
+   "answer": 2,
+   "explanation": "Never store foods under wastewater lines.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "Never store foods under wastewater lines."
+   }
+  },
+  {
+   "id": "FPC-047",
+   "topic": "Storage",
+   "question": "Can ice intended for human consumption be used to chill cans and bottles?",
+   "options": [
+    "Yes, if the cans are washed",
+    "No",
+    "Yes, if it is changed daily",
+    "Yes, for beverages only"
+   ],
+   "answer": 1,
+   "explanation": "Ice for consumption cannot be used to store cans, bottles or other food products.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "Ice intended for human consumption cannot be used for storing cans, bottles or other food products."
+   }
+  },
+  {
+   "id": "FPC-048",
+   "topic": "Storage",
+   "question": "When food is stored directly in ice, what must happen to the meltwater?",
+   "options": [
+    "It must be refrozen",
+    "It must be salted",
+    "It must be drained constantly",
+    "It can stay until the end of the shift"
+   ],
+   "answer": 2,
+   "explanation": "Water from the ice must be drained constantly.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "When foods are stored directly in ice, the water from that ice must be drained constantly."
+   }
+  },
+  {
+   "id": "FPC-049",
+   "topic": "Storage",
+   "question": "How must stored food be kept?",
+   "options": [
+    "Uncovered for air circulation",
+    "In cardboard boxes",
+    "Covered and in vermin-proof containers",
+    "In plastic bags on the floor"
+   ],
+   "answer": 2,
+   "explanation": "Stored food must be covered and kept in vermin-proof containers.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "Stored food must be kept covered and stored in vermin-proof containers."
+   }
+  },
+  {
+   "id": "FPC-050",
+   "topic": "Required signs",
+   "question": "Where must the 'First Aid Choking' poster be posted?",
+   "options": [
+    "Only in the kitchen",
+    "Only in the employee bathroom",
+    "Outside the front door",
+    "In a conspicuous place in each designated eating area"
+   ],
+   "answer": 3,
+   "explanation": "It must be posted visibly in each designated eating area.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "The \"First Aid Choking\" poster must be posted in a visible (conspicuous) place in each designated eating area."
+   }
+  },
+  {
+   "id": "FPC-051",
+   "topic": "Required signs",
+   "question": "Which establishments must display the 'Alcohol and Pregnancy Warning' sign?",
+   "options": [
+    "Those that serve alcoholic beverages",
+    "All food service establishments",
+    "Only establishments with 20+ seats",
+    "Only bakeries"
+   ],
+   "answer": 0,
+   "explanation": "Establishments serving alcohol must display the sign.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "Food service establishments which serve alcoholic beverages are required to display the \"Alcohol and Pregnancy Warning\" sign."
+   }
+  },
+  {
+   "id": "FPC-052",
+   "topic": "Required signs",
+   "question": "Where must a 'Wash Hands' sign be displayed?",
+   "options": [
+    "At all hand washing sinks",
+    "At the front entrance",
+    "Only in customer bathrooms",
+    "Only on the walk-in door"
+   ],
+   "answer": 0,
+   "explanation": "A 'Wash Hands' sign is required at every hand washing sink.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 2,
+    "quote": "A \"Wash Hands\" sign must be displayed at all hand washing sinks."
+   }
+  },
+  {
+   "id": "FPC-053",
+   "topic": "Hazards & microbes",
+   "question": "What are the three main hazards to health in food?",
+   "options": [
+    "Raw, cooked and ready-to-eat",
+    "Allergic, viral and fungal",
+    "Physical, chemical and biological",
+    "Hot, cold and frozen"
+   ],
+   "answer": 2,
+   "explanation": "Hazards are physical, chemical and biological.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "There are three main hazards to our health: physical, chemical and biological."
+   }
+  },
+  {
+   "id": "FPC-054",
+   "topic": "Hazards & microbes",
+   "question": "Glass fragments found in food are which type of hazard?",
+   "options": [
+    "Allergenic",
+    "Chemical",
+    "Physical",
+    "Biological"
+   ],
+   "answer": 2,
+   "explanation": "Foreign objects such as glass or metal are physical hazards.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "The presence of a foreign object (e.g., glass fragments, pieces of metal) in a food is considered a physical hazard."
+   }
+  },
+  {
+   "id": "FPC-055",
+   "topic": "Hazards & microbes",
+   "question": "Cleaning agents in food are which type of hazard?",
+   "options": [
+    "Physical",
+    "Chemical",
+    "Natural",
+    "Biological"
+   ],
+   "answer": 1,
+   "explanation": "Pesticides, cleaning agents and medicine in food are chemical hazards.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "The presence of harmful chemicals (e.g., pesticide, cleaning agents, prescription medicine) in a food is called a chemical hazard."
+   }
+  },
+  {
+   "id": "FPC-056",
+   "topic": "Hazards & microbes",
+   "question": "Bacteria, viruses, parasites and fungi in food are which type of hazard?",
+   "options": [
+    "Biological",
+    "Physical",
+    "Environmental",
+    "Chemical"
+   ],
+   "answer": 0,
+   "explanation": "Microorganisms in food are biological hazards.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "The presence of microorganisms (bacteria, viruses, parasites and fungi) in a food is called a biological hazard."
+   }
+  },
+  {
+   "id": "FPC-057",
+   "topic": "Hazards & microbes",
+   "question": "Can you tell by sight, taste or smell whether food is contaminated with pathogenic bacteria?",
+   "options": [
+    "Yes, it always smells sour",
+    "No; contaminated food often looks, tastes and smells normal",
+    "Yes, it changes color",
+    "Yes, it tastes bitter"
+   ],
+   "answer": 1,
+   "explanation": "Food contaminated with pathogens often shows no change in appearance, taste or smell.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "there is no change in appearance, taste or smell."
+   }
+  },
+  {
+   "id": "FPC-058",
+   "topic": "Hazards & microbes",
+   "question": "Under favorable conditions, how often can the number of bacteria in food double?",
+   "options": [
+    "Every 2 to 3 hours",
+    "Every 24 hours",
+    "Every 20 to 30 minutes",
+    "Every 5 seconds"
+   ],
+   "answer": 2,
+   "explanation": "Bacteria can double every 20 to 30 minutes.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "Under favorable conditions the number of bacteria in a food can double every 20 to 30 minutes."
+   }
+  },
+  {
+   "id": "FPC-059",
+   "topic": "Hazards & microbes",
+   "question": "In which phase of bacterial growth does the most rapid growth occur?",
+   "options": [
+    "Lag phase",
+    "Log phase",
+    "Stationary phase",
+    "Death phase"
+   ],
+   "answer": 1,
+   "explanation": "The four phases are lag, log, stationary and death; growth is fastest in the log phase.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "The most rapid growth of bacteria takes place in the log phase."
+   }
+  },
+  {
+   "id": "FPC-060",
+   "topic": "Hazards & microbes",
+   "question": "What does the acronym FATTOM stand for?",
+   "options": [
+    "Food, Acidity, Temperature, Time, Oxygen, Moisture",
+    "Fat, Acid, Toxin, Temperature, Odor, Mold",
+    "Food, Air, Taste, Texture, Odor, Mass",
+    "Freezing, Aging, Thawing, Tasting, Opening, Mixing"
+   ],
+   "answer": 0,
+   "explanation": "FATTOM lists the six factors affecting bacterial growth.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "Six factors affect the growth of bacteria: Food, Acidity, Temperature, Time, Oxygen and Moisture (FATTOM)."
+   }
+  },
+  {
+   "id": "FPC-061",
+   "topic": "Hazards & microbes",
+   "question": "Can viruses reproduce in food?",
+   "options": [
+    "Only in acidic foods",
+    "Yes, only in the danger zone",
+    "No, but they can be transmitted to people through food",
+    "Yes, faster than bacteria"
+   ],
+   "answer": 2,
+   "explanation": "Viruses cannot reproduce in food but can be transmitted through it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "Viruses cannot reproduce in food. However, viruses can be transmitted to people if they get into food."
+   }
+  },
+  {
+   "id": "FPC-062",
+   "topic": "Hazards & microbes",
+   "question": "Which two common food-borne viruses are spread by food or water contaminated with an infected person's feces?",
+   "options": [
+    "Influenza and measles",
+    "HIV and hepatitis C",
+    "Rabies and West Nile",
+    "Hepatitis A and norovirus"
+   ],
+   "answer": 3,
+   "explanation": "Proper handwashing after using the toilet prevents transmission.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "Hepatitis A and norovirus are two common food-borne viruses."
+   }
+  },
+  {
+   "id": "FPC-063",
+   "topic": "Hazards & microbes",
+   "question": "Trichinella spiralis, which causes trichinosis, is typically found in which food?",
+   "options": [
+    "Unwashed lettuce",
+    "Under-cooked pork",
+    "Raw shell eggs",
+    "Smoked fish"
+   ],
+   "answer": 1,
+   "explanation": "Trichinella is a parasite in under-cooked pork; cook pork to 150°F for 15 seconds.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "Trichinella spiralis, which causes trichinosis, is a food-borne parasite typically found in under-cooked pork."
+   }
+  },
+  {
+   "id": "FPC-064",
+   "topic": "Hazards & microbes",
+   "question": "Anisakis simplex is a parasite typically found in what?",
+   "options": [
+    "Pork",
+    "Poultry",
+    "Rice",
+    "Marine fish"
+   ],
+   "answer": 3,
+   "explanation": "Anisakis simplex is a food-borne parasite of marine fish.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "Anisakis simplex is a food-borne parasite typically found in marine fish."
+   }
+  },
+  {
+   "id": "FPC-065",
+   "topic": "Hazards & microbes",
+   "question": "Salmonella enteritidis is commonly found in which foods?",
+   "options": [
+    "Raw poultry and raw shell eggs",
+    "Smoked fish",
+    "Cooked rice",
+    "Canned vegetables"
+   ],
+   "answer": 0,
+   "explanation": "Salmonella enteritidis is common in raw poultry and raw shell eggs.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "Salmonella enteritidis is a bacterium commonly found in raw poultry and raw shell eggs."
+   }
+  },
+  {
+   "id": "FPC-066",
+   "topic": "Hazards & microbes",
+   "question": "How can the growth of Clostridium perfringens be controlled?",
+   "options": [
+    "Rapid cooling, rapid reheating and avoiding preparing foods in advance",
+    "Freezing and slow thawing",
+    "Storing food at room temperature",
+    "Adding salt"
+   ],
+   "answer": 0,
+   "explanation": "C. perfringens is controlled by rapid cooling and reheating and not preparing food far in advance.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 3,
+    "quote": "Clostridium perfringens by rapid cooling, rapid reheating and by avoiding preparation of foods in advance."
+   }
+  },
+  {
+   "id": "FPC-067",
+   "topic": "Hazards & microbes",
+   "question": "Which bacterium is commonly carried by healthy people?",
+   "options": [
+    "Clostridium botulinum",
+    "E. coli 0157:H7",
+    "Staphylococcus aureus",
+    "Trichinella spiralis"
+   ],
+   "answer": 2,
+   "explanation": "Staphylococcus aureus is commonly carried by healthy human beings.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "Staphylococcus aureus is a bacterium that is commonly carried by healthy human beings."
+   }
+  },
+  {
+   "id": "FPC-068",
+   "topic": "Hazards & microbes",
+   "question": "How can staphylococcal food intoxication be prevented?",
+   "options": [
+    "Storing food at room temperature",
+    "Using glass thermometers",
+    "Cooking all food to 212°F",
+    "Good personal hygiene and avoiding bare-hand contact with ready-to-eat foods"
+   ],
+   "answer": 3,
+   "explanation": "Good hygiene and no bare-hand contact with RTE foods prevent it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "which can be prevented by good personal hygiene and avoiding bare hand contact with ready-to-eat foods."
+   }
+  },
+  {
+   "id": "FPC-069",
+   "topic": "Hazards & microbes",
+   "question": "Ground meat must be cooked to what minimum temperature to eliminate E. coli 0157:H7?",
+   "options": [
+    "140°F",
+    "145°F",
+    "158°F",
+    "165°F"
+   ],
+   "answer": 2,
+   "explanation": "Ground meat must reach at least 158°F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "Ground meat (e.g., hamburgers) must be cooked to a minimum temperature of 158°F to eliminate E. coli 0157:H7."
+   }
+  },
+  {
+   "id": "FPC-070",
+   "topic": "Hazards & microbes",
+   "question": "Clostridium botulinum, the cause of botulism, is associated with which foods?",
+   "options": [
+    "Raw poultry and eggs",
+    "Under-cooked pork",
+    "Home-canned foods, smoked fish and garlic in oil",
+    "Fresh salad greens"
+   ],
+   "answer": 2,
+   "explanation": "C. botulinum is associated with home-canned foods, smoked fish, garlic in oil and anaerobic environments.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "It is associated with home-canned foods, smoked fish, garlic in oil and any food in an anaerobic"
+   }
+  },
+  {
+   "id": "FPC-071",
+   "topic": "Hazards & microbes",
+   "question": "Scombroid poisoning comes from eating which fish after time and temperature abuse?",
+   "options": [
+    "Smoked salmon",
+    "Fish with high histamine levels such as tuna and mackerel",
+    "Farm-raised tilapia",
+    "Shellfish such as clams"
+   ],
+   "answer": 1,
+   "explanation": "Scombroid poisoning involves fish like tuna, mackerel, bonito, mahi mahi and bluefish.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "Scombroid poisoning occurs from eating certain fish with high levels of histamines (e.g., tuna, mackerel, bonito, mahi mahi, bluefish)"
+   }
+  },
+  {
+   "id": "FPC-072",
+   "topic": "Personal hygiene",
+   "question": "Should a food worker with an illness transmissible through food come to work?",
+   "options": [
+    "No, not until fully recovered",
+    "Yes, after taking medicine",
+    "Yes, if wearing gloves",
+    "Yes, if only working the register"
+   ],
+   "answer": 0,
+   "explanation": "Workers with transmissible illnesses should not work until fully recovered.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "Food workers with an illness that can be transmitted by contact with food or through food should not work until fully recovered."
+   }
+  },
+  {
+   "id": "FPC-073",
+   "topic": "Personal hygiene",
+   "question": "Within what distance of food preparation areas must hand washing sinks be readily accessible?",
+   "options": [
+    "25 feet",
+    "10 feet",
+    "100 feet",
+    "50 feet"
+   ],
+   "answer": 0,
+   "explanation": "Sinks must be within 25 feet of food prep areas and in or near all toilets.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "hand washing sinks to be readily accessible within 25 feet of all food preparation areas and in or near all toilets."
+   }
+  },
+  {
+   "id": "FPC-074",
+   "topic": "Personal hygiene",
+   "question": "What must a hand washing sink be provided with?",
+   "options": [
+    "A sanitizing bucket",
+    "Soap, hot and cold running water, disposable towels or a hand dryer, and a 'Wash Hands' sign",
+    "Only cold water and soap",
+    "Bleach and a cloth towel"
+   ],
+   "answer": 1,
+   "explanation": "All four items are required.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "The hand washing sinks must be provided with soap, hot and cold running water, disposable towels or a hand dryer and a \"Wash Hands\" sign."
+   }
+  },
+  {
+   "id": "FPC-075",
+   "topic": "Personal hygiene",
+   "question": "What jewelry may food workers wear on their arms and hands?",
+   "options": [
+    "Only wedding bands and medical bracelets",
+    "No restrictions",
+    "Watches and rings",
+    "Any jewelry under gloves"
+   ],
+   "answer": 0,
+   "explanation": "No jewelry on arms and hands except wedding bands and medical bracelets.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "not wear any jewelry on their arms and hands (except for wedding bands and medical bracelets)."
+   }
+  },
+  {
+   "id": "FPC-076",
+   "topic": "Personal hygiene",
+   "question": "Is a common sink allowed for both food preparation and hand washing?",
+   "options": [
+    "Yes, in small establishments",
+    "No",
+    "Yes, with a sign",
+    "Yes, if cleaned between uses"
+   ],
+   "answer": 1,
+   "explanation": "Using a common sink for food prep or equipment washing as well as hand washing is not permitted.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 48,
+    "quote": "The use of a common sink for food preparation or for washing equipment and/or utensils as well for hand washing is not permitted."
+   }
+  },
+  {
+   "id": "FPC-077",
+   "topic": "Personal hygiene",
+   "question": "Do gloves replace hand washing?",
+   "options": [
+    "Yes, if changed hourly",
+    "Yes, for ready-to-eat foods",
+    "No, gloves are never a replacement for good hand washing",
+    "Yes, if they are fabric gloves"
+   ],
+   "answer": 2,
+   "explanation": "Gloves never replace hand washing; wash before putting them on.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 90,
+    "quote": "The use of gloves is never a replacement for good hand washing practices!"
+   }
+  },
+  {
+   "id": "FPC-078",
+   "topic": "Personal hygiene",
+   "question": "Which gloves may NOT be used with ready-to-eat food?",
+   "options": [
+    "Single-use plastic gloves",
+    "Fabric or re-usable gloves",
+    "Disposable gloves",
+    "Vinyl gloves"
+   ],
+   "answer": 1,
+   "explanation": "Fabric or reusable gloves may not be used with ready-to-eat food.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 90,
+    "quote": "Fabric or re-usable gloves may not be used with ready-to-eat (RTE) food."
+   }
+  },
+  {
+   "id": "FPC-079",
+   "topic": "Personal hygiene",
+   "question": "What should you do with gloves if food preparation is interrupted?",
+   "options": [
+    "Wipe them with a cloth",
+    "Keep them on",
+    "Remove and discard them, then wash hands before using clean gloves",
+    "Rinse them under water"
+   ],
+   "answer": 2,
+   "explanation": "Remove and discard gloves on interruption; wash hands and use clean gloves when resuming.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 90,
+    "quote": "If an interruption occurs during food preparation, remove gloves and discard."
+   }
+  },
+  {
+   "id": "FPC-080",
+   "topic": "Cooking & cooling",
+   "question": "Which is an acceptable way to thaw frozen food?",
+   "options": [
+    "In a hot holding unit",
+    "Under cold running water",
+    "On the counter at room temperature",
+    "In a sink of hot water"
+   ],
+   "answer": 1,
+   "explanation": "Acceptable methods include refrigeration, cold running water, and microwave followed by continuous cooking. Never thaw at room temperature.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "refrigerating them, placing them under cold running water, or defrosting them in a microwave oven with continuous cooking afterwards."
+   }
+  },
+  {
+   "id": "FPC-081",
+   "topic": "Cooking & cooling",
+   "question": "Should frozen food ever be thawed at room temperature?",
+   "options": [
+    "No, never",
+    "Yes, for small items",
+    "Yes, if covered",
+    "Yes, for less than 4 hours"
+   ],
+   "answer": 0,
+   "explanation": "Never thaw frozen food at room temperature, and never re-freeze thawed food.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 88,
+    "quote": "Never thaw frozen food at room temperature."
+   }
+  },
+  {
+   "id": "FPC-082",
+   "topic": "Cooking & cooling",
+   "question": "What is cross contamination?",
+   "options": [
+    "Cooking two foods in one pan",
+    "Mixing two sauces",
+    "Storing food above 41°F",
+    "When bacteria from a raw food get into a cooked or ready-to-eat food"
+   ],
+   "answer": 3,
+   "explanation": "Cross contamination is transfer from raw to cooked or ready-to-eat food.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Cross contamination occurs when bacteria from a raw food get into a cooked or ready-to-eat food."
+   }
+  },
+  {
+   "id": "FPC-083",
+   "topic": "Cooking & cooling",
+   "question": "To what internal temperature must poultry, stuffed meat and stuffing be cooked?",
+   "options": [
+    "158°F",
+    "150°F",
+    "165°F",
+    "140°F"
+   ],
+   "answer": 2,
+   "explanation": "Poultry, stuffed meat and stuffing must reach 165°F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Poultry, stuffed meat and stuffing must be cooked to an internal temperature of 165°F."
+   }
+  },
+  {
+   "id": "FPC-084",
+   "topic": "Cooking & cooling",
+   "question": "To what internal temperature must pork be cooked?",
+   "options": [
+    "158°F",
+    "165°F",
+    "150°F",
+    "140°F"
+   ],
+   "answer": 2,
+   "explanation": "Pork must reach 150°F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Pork must be cooked to an internal temperature of 150°F."
+   }
+  },
+  {
+   "id": "FPC-085",
+   "topic": "Cooking & cooling",
+   "question": "To what minimum temperature must raw shell eggs be cooked?",
+   "options": [
+    "145°F",
+    "140°F",
+    "165°F",
+    "158°F"
+   ],
+   "answer": 0,
+   "explanation": "Raw shell eggs must be cooked to at least 145°F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Raw shell eggs must be cooked to a minimum temperature of 145°F."
+   }
+  },
+  {
+   "id": "FPC-086",
+   "topic": "Cooking & cooling",
+   "question": "To what minimum temperature must fish, shellfish, beef and lamb be cooked?",
+   "options": [
+    "158°F",
+    "145°F",
+    "165°F",
+    "140°F"
+   ],
+   "answer": 3,
+   "explanation": "Fish, shellfish, beef, lamb and all other meats: 140°F minimum.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Fish, shellfish, beef, lamb and all other meats must be cooked to a minimum temperature of 140°F."
+   }
+  },
+  {
+   "id": "FPC-087",
+   "topic": "Cooking & cooling",
+   "question": "To what temperature must previously cooked, refrigerated foods be reheated for hot holding?",
+   "options": [
+    "120°F in a microwave",
+    "158°F on a steam table",
+    "140°F in the hot holding unit",
+    "165°F, rapidly, using a stove or oven"
+   ],
+   "answer": 3,
+   "explanation": "Reheat rapidly to 165°F on a stove or in an oven; never reheat in a hot holding unit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "must be rapidly reheated to 165°F using a stove or an oven."
+   }
+  },
+  {
+   "id": "FPC-088",
+   "topic": "Cooking & cooling",
+   "question": "Can a hot holding unit be used to reheat foods?",
+   "options": [
+    "Yes, if set to 165°F",
+    "No, never",
+    "Yes, for up to 2 hours",
+    "Yes, for soups only"
+   ],
+   "answer": 1,
+   "explanation": "Never use a hot holding unit to reheat foods.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Never use a hot holding unit to reheat foods."
+   }
+  },
+  {
+   "id": "FPC-089",
+   "topic": "Cooking & cooling",
+   "question": "Within what time must previously cooked foods be reheated to 165°F, per the Training Manual?",
+   "options": [
+    "Within two hours",
+    "Within four hours",
+    "Within 30 minutes",
+    "Within six hours"
+   ],
+   "answer": 0,
+   "explanation": "Inadequate reheating means not reaching 165°F within two hours using a stove or oven.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 35,
+    "quote": "previously cooked foods not reheated to 165°F within two hours using a stove or an oven."
+   }
+  },
+  {
+   "id": "FPC-090",
+   "topic": "Cooking & cooling",
+   "question": "In two-step cooling, within what time must food cool from 140°F to 70°F?",
+   "options": [
+    "Two hours",
+    "30 minutes",
+    "Six hours",
+    "Four hours"
+   ],
+   "answer": 0,
+   "explanation": "Step 1: 140°F to 70°F within two hours.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 87,
+    "quote": "Step 1: Cool foods from 140°F to 70°F within two hours."
+   }
+  },
+  {
+   "id": "FPC-091",
+   "topic": "Cooking & cooling",
+   "question": "In two-step cooling, within how many additional hours must food cool from 70°F to 41°F?",
+   "options": [
+    "Six additional hours",
+    "Two additional hours",
+    "Four additional hours",
+    "One additional hour"
+   ],
+   "answer": 2,
+   "explanation": "Step 2: 70°F to 41°F within four additional hours.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 87,
+    "quote": "Step 2: Cool foods from 70°F to 41°F within four additional hours."
+   }
+  },
+  {
+   "id": "FPC-092",
+   "topic": "Cooking & cooling",
+   "question": "When cooling liquid foods in shallow pans, what is the maximum product depth?",
+   "options": [
+    "6 inches in an 8-inch pan",
+    "Up to the rim of any pan",
+    "12 inches in a stockpot",
+    "1 to 2 inches in a 4-inch deep pan"
+   ],
+   "answer": 3,
+   "explanation": "Pour food 1 to 2 inches deep into 4-inch deep cooling pans.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "pouring food 1 to 2 inches deep into 4-inch deep cooling pans"
+   }
+  },
+  {
+   "id": "FPC-093",
+   "topic": "Cooking & cooling",
+   "question": "To cool solid foods rapidly, into what size pieces should they be cut?",
+   "options": [
+    "1 lb. or less",
+    "10 lbs. or less",
+    "20 lbs. or less",
+    "6 lbs. or less"
+   ],
+   "answer": 3,
+   "explanation": "Cut solid foods into pieces of 6 lbs. or less.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "cutting solid foods into smaller pieces (pieces of 6 lbs. or less)."
+   }
+  },
+  {
+   "id": "FPC-094",
+   "topic": "Cooking & cooling",
+   "question": "When should hot foods cooling in a refrigerator be covered?",
+   "options": [
+    "Never",
+    "Only after they have completely cooled to 41°F or below",
+    "After 30 minutes",
+    "Immediately"
+   ],
+   "answer": 1,
+   "explanation": "Cover only after cooling to 41°F or below; leaving them uncovered speeds cooling.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Hot foods placed in a refrigerator for cooling must be covered only after they have completely cooled to 41°F or below."
+   }
+  },
+  {
+   "id": "FPC-095",
+   "topic": "Cooking & cooling",
+   "question": "What is the 'ice as an ingredient' cooling method?",
+   "options": [
+    "Store the pot on a bed of ice overnight",
+    "Prepare with half the water and add the other half as ice during cooling",
+    "Serve the food over ice",
+    "Freeze the food in ice cube trays"
+   ],
+   "answer": 1,
+   "explanation": "Use half the recipe's water as ice added during cooling.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 87,
+    "quote": "Prepare food with half the amount of water the recipe requires and use the other half in the form of ice"
+   }
+  },
+  {
+   "id": "FPC-096",
+   "topic": "Cooking & cooling",
+   "question": "When making cold salads such as tuna, what is the best practice?",
+   "options": [
+    "Pre-chill the ingredients",
+    "Heat the mayonnaise first",
+    "Freeze the finished salad",
+    "Mix ingredients at room temperature"
+   ],
+   "answer": 0,
+   "explanation": "Pre-chilling ingredients is best practice for cold salads.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "Whenever making cold salads, such as tuna, the best practice is to pre-chill the ingredients."
+   }
+  },
+  {
+   "id": "FPC-097",
+   "topic": "Cooking & cooling",
+   "question": "What should never be used with ready-to-eat foods?",
+   "options": [
+    "Deli paper",
+    "Tongs",
+    "Bare hands",
+    "A serving spoon"
+   ],
+   "answer": 2,
+   "explanation": "Never use bare hands with RTE foods; use gloves, tongs, a spatula, deli paper or a spoon.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Never use bare hands when working with ready-to-eat foods."
+   }
+  },
+  {
+   "id": "FPC-098",
+   "topic": "Facilities",
+   "question": "What must be provided in all culinary and pot/dish washing sinks?",
+   "options": [
+    "Hot water above 200°F",
+    "Air breaks",
+    "Grease traps only",
+    "Foot pedals"
+   ],
+   "answer": 1,
+   "explanation": "Air breaks are required in culinary and pot/dish washing sinks.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "Air breaks must be provided in all culinary (food-related) and pot/dish washing sinks."
+   }
+  },
+  {
+   "id": "FPC-099",
+   "topic": "Facilities",
+   "question": "Which equipment must have an Atmospheric Vacuum Breaker (AVB)?",
+   "options": [
+    "Only walk-in refrigerators",
+    "Any equipment directly connected to a potable water supply, such as ice machines",
+    "Only gas stoves",
+    "Only exhaust hoods"
+   ],
+   "answer": 1,
+   "explanation": "AVBs go on equipment with a direct potable water connection, e.g. ice machines, coffee machines and dishwashers.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 6,
+    "quote": "Atmospheric Vacuum Breakers (AVB) must be installed in any equipment that has a direct connection with a potable water supply."
+   }
+  },
+  {
+   "id": "FPC-100",
+   "topic": "Facilities",
+   "question": "What device can prevent a cross-connection at a hose?",
+   "options": [
+    "A check-in thermometer",
+    "A grease interceptor",
+    "A hose bib vacuum breaker",
+    "An air curtain"
+   ],
+   "answer": 2,
+   "explanation": "Cross-connection can be prevented by installing a hose bib vacuum breaker.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 6,
+    "quote": "Cross-connection can be prevented by installing a hose bib vacuum breaker."
+   }
+  },
+  {
+   "id": "FPC-101",
+   "topic": "Facilities",
+   "question": "Who must install gas-fired hot water heaters?",
+   "options": [
+    "A licensed plumber",
+    "A licensed exterminator",
+    "Any employee",
+    "The landlord"
+   ],
+   "answer": 0,
+   "explanation": "Gas-fired hot water heaters must be installed by a licensed plumber and monitored for back draft.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 6,
+    "quote": "All gas-fired hot water heaters must be installed by a licensed plumber and must be monitored for back draft."
+   }
+  },
+  {
+   "id": "FPC-102",
+   "topic": "Facilities",
+   "question": "Where is it illegal to dump grease?",
+   "options": [
+    "In any sink without a proper grease interceptor",
+    "In a licensed rendering bin",
+    "In the trash after cooling",
+    "In a sealed container"
+   ],
+   "answer": 0,
+   "explanation": "NYC law prohibits dumping grease in any sink lacking a proper grease interceptor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 6,
+    "quote": "New York City laws make it illegal to dump grease in any sink that does not have a proper grease interceptor."
+   }
+  },
+  {
+   "id": "FPC-103",
+   "topic": "Facilities",
+   "question": "When must patron bathrooms be provided?",
+   "options": [
+    "When there are 20 seats or more in the dining area",
+    "Only when alcohol is served",
+    "Always, at any size",
+    "Only with 50 or more seats"
+   ],
+   "answer": 0,
+   "explanation": "Patron bathrooms are required with 20 or more dining seats.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "Bathrooms for patrons must be provided when there are 20 seats or more in the dining area of a food establishment."
+   }
+  },
+  {
+   "id": "FPC-104",
+   "topic": "Cleaning & sanitizing",
+   "question": "What is the proper sequence for washing dishes by hand?",
+   "options": [
+    "Sanitize, wash, rinse, towel-dry",
+    "Wash, rinse, sanitize, air-dry",
+    "Wash, sanitize, rinse, towel-dry",
+    "Rinse, wash, dry, sanitize"
+   ],
+   "answer": 1,
+   "explanation": "The order is wash, rinse, sanitize, then air-dry.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "The proper sequence to wash dishes by hand is wash, rinse, sanitize and air-dry."
+   }
+  },
+  {
+   "id": "FPC-105",
+   "topic": "Cleaning & sanitizing",
+   "question": "Manual dishwashing is allowed only in what kind of sink?",
+   "options": [
+    "A single-compartment sink",
+    "A hand washing sink",
+    "A three-compartment sink",
+    "A mop sink"
+   ],
+   "answer": 2,
+   "explanation": "Wash in the first compartment, rinse in the second, sanitize in the third, then air dry.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 92,
+    "quote": "Manual dishwashing is allowed only in a three-compartment sink"
+   }
+  },
+  {
+   "id": "FPC-106",
+   "topic": "Cleaning & sanitizing",
+   "question": "What must be done to cutting boards between each use?",
+   "options": [
+    "Wash, rinse and sanitize",
+    "Rinse with cold water",
+    "Wipe with a dry towel",
+    "Flip to the other side"
+   ],
+   "answer": 0,
+   "explanation": "Cutting boards are washed, rinsed and sanitized between uses.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "Between each use, cutting boards must be washed, rinsed and sanitized."
+   }
+  },
+  {
+   "id": "FPC-107",
+   "topic": "Cleaning & sanitizing",
+   "question": "How do you hot-water sanitize utensils?",
+   "options": [
+    "Immerse in 170°F water for at least 30 seconds",
+    "Rinse in 120°F water",
+    "Boil for 10 minutes",
+    "Immerse in 140°F water for 10 seconds"
+   ],
+   "answer": 0,
+   "explanation": "Hot-water sanitizing is at least 30 seconds in 170°F water.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "To hot-water sanitize, immerse utensils in 170°F water for at least 30 seconds."
+   }
+  },
+  {
+   "id": "FPC-108",
+   "topic": "Cleaning & sanitizing",
+   "question": "How do you make a 50 PPM chlorine sanitizing solution?",
+   "options": [
+    "Add 1 ounce of bleach to 5 gallons of water",
+    "Add 1 cup of bleach to 1 gallon of water",
+    "Add 1 teaspoon of bleach to 1 quart of water",
+    "Add ½ ounce of bleach to 1 gallon of water"
+   ],
+   "answer": 3,
+   "explanation": "50 PPM: ½ ounce of bleach per gallon.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "To prepare a 50 PPM chlorine-based sanitizing solution, add ½ ounce of bleach to 1 gallon of water."
+   }
+  },
+  {
+   "id": "FPC-109",
+   "topic": "Cleaning & sanitizing",
+   "question": "How long must utensils be immersed in a 50 PPM sanitizing solution?",
+   "options": [
+    "At least 30 minutes",
+    "At least 1 minute",
+    "At least 10 seconds",
+    "At least 10 minutes"
+   ],
+   "answer": 1,
+   "explanation": "50 PPM solution is used to immerse utensils for at least 1 minute.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "50 PPM sanitizing solution is used for immersing utensils for at least 1 minute."
+   }
+  },
+  {
+   "id": "FPC-110",
+   "topic": "Cleaning & sanitizing",
+   "question": "How do you make a 100 PPM chlorine sanitizing solution?",
+   "options": [
+    "Add 1 ounce of bleach to 10 gallons of water",
+    "Add one ounce of bleach to 1 gallon of water",
+    "Add 2 cups of bleach to 1 gallon of water",
+    "Add ½ ounce of bleach to 1 gallon of water"
+   ],
+   "answer": 1,
+   "explanation": "100 PPM: one ounce of bleach per gallon.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "To prepare a 100 PPM chlorine-based sanitizing solution, add one ounce of bleach to 1 gallon of water."
+   }
+  },
+  {
+   "id": "FPC-111",
+   "topic": "Cleaning & sanitizing",
+   "question": "What is a 100 PPM sanitizing solution typically used for?",
+   "options": [
+    "Storing wiping cloths",
+    "Wiping, spraying or pouring",
+    "Immersing glassware for 1 minute",
+    "Washing produce"
+   ],
+   "answer": 1,
+   "explanation": "100 PPM is typically used for wiping, spraying or pouring.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "100 PPM sanitizing solution is typically used for wiping, spraying or pouring."
+   }
+  },
+  {
+   "id": "FPC-112",
+   "topic": "Cleaning & sanitizing",
+   "question": "In what must wiping cloths be stored?",
+   "options": [
+    "A 50 PPM sanitizing solution",
+    "A 100 PPM sanitizing solution",
+    "A dry bin",
+    "Hot soapy water"
+   ],
+   "answer": 0,
+   "explanation": "Wiping cloths are stored in 50 PPM sanitizing solution.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "Wiping cloths must be stored in a 50 PPM sanitizing solution."
+   }
+  },
+  {
+   "id": "FPC-113",
+   "topic": "Cleaning & sanitizing",
+   "question": "How should the strength of a chemical sanitizing solution be checked?",
+   "options": [
+    "By smell",
+    "By color",
+    "With a thermometer",
+    "With a test kit"
+   ],
+   "answer": 3,
+   "explanation": "During chemical sanitization, the solution must be checked with a test kit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "During chemical sanitization, the chemical solution must be checked with a test kit."
+   }
+  },
+  {
+   "id": "FPC-114",
+   "topic": "Cleaning & sanitizing",
+   "question": "What is the minimum final rinse temperature for a high-temperature mechanical dishwasher?",
+   "options": [
+    "212°F",
+    "140°F",
+    "180°F",
+    "165°F"
+   ],
+   "answer": 2,
+   "explanation": "High-temperature dishwashers need a final rinse of at least 180°F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 92,
+    "quote": "Final rinse temperature of mechanical high-temperature dishwasher must be at least 180° F or higher."
+   }
+  },
+  {
+   "id": "FPC-115",
+   "topic": "Pest control",
+   "question": "What are the three key strategies of Integrated Pest Management?",
+   "options": [
+    "Starve them, build them out and destroy them",
+    "Inspect, report and close",
+    "Trap, poison and fumigate",
+    "Seal, spray and sweep"
+   ],
+   "answer": 0,
+   "explanation": "IPM's three strategies are starve, build out and destroy.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "The three key strategies of Integrated Pest Management are: starve them, build them out and destroy them."
+   }
+  },
+  {
+   "id": "FPC-116",
+   "topic": "Pest control",
+   "question": "What do mice do when food becomes unavailable in an infested restaurant?",
+   "options": [
+    "They hibernate",
+    "They move out",
+    "They eat paper and stay",
+    "They become more aggressive"
+   ],
+   "answer": 1,
+   "explanation": "When food is unavailable to mice, they will move out.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "When food is unavailable to mice that have infested a restaurant, they will move out."
+   }
+  },
+  {
+   "id": "FPC-117",
+   "topic": "Pest control",
+   "question": "Fresh rat droppings in a food establishment are what kind of violation?",
+   "options": [
+    "Not a violation",
+    "A warning only",
+    "A general violation",
+    "A critical violation"
+   ],
+   "answer": 3,
+   "explanation": "Fresh rat droppings are a critical violation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "The presence of fresh rat droppings in a food establishment is a critical violation."
+   }
+  },
+  {
+   "id": "FPC-118",
+   "topic": "Pest control",
+   "question": "Who may apply insecticides and rodenticides in a restaurant?",
+   "options": [
+    "A health inspector",
+    "Any trained employee",
+    "Only a licensed pest control officer",
+    "The manager"
+   ],
+   "answer": 2,
+   "explanation": "Only a licensed pest control officer may apply them.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "Insecticides and rodenticides can only be applied in a restaurant by a licensed pest control officer."
+   }
+  },
+  {
+   "id": "FPC-119",
+   "topic": "Pest control",
+   "question": "What is the best method for eliminating flies and roaches?",
+   "options": [
+    "Daily spraying by staff",
+    "Bug zappers over food",
+    "Proper cleaning and sanitizing",
+    "Leaving doors open for airflow"
+   ],
+   "answer": 2,
+   "explanation": "Proper cleaning and sanitizing is the best method.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 7,
+    "quote": "The best method for eliminating flies and roaches from an establishment is through proper cleaning and sanitizing."
+   }
+  },
+  {
+   "id": "FPC-120",
+   "topic": "Pest control",
+   "question": "In what kind of containers should garbage be placed?",
+   "options": [
+    "Metal containers with tight-fitting lids",
+    "Uncovered bins",
+    "Cardboard boxes",
+    "Open plastic bags"
+   ],
+   "answer": 0,
+   "explanation": "Garbage goes in metal containers with tight-fitted lids.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 93,
+    "quote": "Place the garbage in metal containers with tight fitted lids."
+   }
+  },
+  {
+   "id": "FPC-121",
+   "topic": "HACCP",
+   "question": "What does HACCP stand for?",
+   "options": [
+    "Hygiene and Contamination Control Program",
+    "Hazard Analysis and Critical Control Point",
+    "Health and Cleaning Compliance Plan",
+    "Hazard Assessment and Cooking Control Procedure"
+   ],
+   "answer": 1,
+   "explanation": "HACCP is a food safety system to control harmful microorganisms.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "HACCP stands for Hazard Analysis and Critical Control Point."
+   }
+  },
+  {
+   "id": "FPC-122",
+   "topic": "HACCP",
+   "question": "How many principles does HACCP have?",
+   "options": [
+    "Five",
+    "Ten",
+    "Seven",
+    "Three"
+   ],
+   "answer": 2,
+   "explanation": "Identify hazards, determine CCPs, set critical limits, monitor, take corrective actions, verify, keep records.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "The seven principles of HACCP are: identify hazards, determine Critical Control Points (CCP), set up critical limits, monitor CCP"
+   }
+  },
+  {
+   "id": "FPC-123",
+   "topic": "HACCP",
+   "question": "What is a Critical Control Point (CCP)?",
+   "options": [
+    "Any refrigerator",
+    "The point of sale",
+    "Any point in the food flow where action must be taken to eliminate the hazard",
+    "The receiving dock"
+   ],
+   "answer": 2,
+   "explanation": "A CCP is where action must be taken to eliminate a hazard.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "A CCP is any point in the food flow where action must be taken to eliminate the hazard."
+   }
+  },
+  {
+   "id": "FPC-124",
+   "topic": "HACCP",
+   "question": "Which HACCP principle comes first?",
+   "options": [
+    "Monitor CCPs",
+    "Identify hazards",
+    "Keep records",
+    "Take corrective actions"
+   ],
+   "answer": 1,
+   "explanation": "The first principle is to identify hazards; keeping records is last.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "The seven principles of HACCP are: identify hazards"
+   }
+  },
+  {
+   "id": "FPC-125",
+   "topic": "HACCP",
+   "question": "Which company pioneered the HACCP system in the 1960s?",
+   "options": [
+    "Kraft",
+    "Nabisco",
+    "Pillsbury",
+    "General Mills"
+   ],
+   "answer": 2,
+   "explanation": "Pillsbury pioneered HACCP to supply safe food for astronauts.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 35,
+    "quote": "The Hazard Analysis Critical Control Point system was pio- neered by the Pillsbury Company in the 1960’s."
+   }
+  },
+  {
+   "id": "FPC-126",
+   "topic": "HACCP",
+   "question": "HACCP was developed to meet whose need for safe food?",
+   "options": [
+    "School lunch programs",
+    "Soldiers in World War II",
+    "Astronauts in the space program",
+    "Airline passengers"
+   ],
+   "answer": 2,
+   "explanation": "The escalating space program needed a supply of safe food for astronauts.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 35,
+    "quote": "there was a great need to provide a supply of safe food for the astronauts."
+   }
+  },
+  {
+   "id": "FPC-127",
+   "topic": "Health & safety",
+   "question": "What does artificial trans fat increase?",
+   "options": [
+    "Blood sugar only",
+    "HDL, the 'good' cholesterol",
+    "Vitamin D",
+    "LDL, the 'bad' cholesterol"
+   ],
+   "answer": 3,
+   "explanation": "Artificial trans fat increases LDL, leading to heart disease.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "Artificial trans fat increases LDL (the \"bad\" cholesterol), leading to heart disease."
+   }
+  },
+  {
+   "id": "FPC-128",
+   "topic": "Health & safety",
+   "question": "What is the rule on artificial trans fat in NYC restaurant foods?",
+   "options": [
+    "It is allowed up to 2 grams per serving",
+    "It is allowed in fried foods only",
+    "It must be labeled only",
+    "It is banned from all restaurant foods"
+   ],
+   "answer": 3,
+   "explanation": "Artificial trans fat is banned from all restaurant foods.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "Artificial trans fat is banned from all restaurant foods."
+   }
+  },
+  {
+   "id": "FPC-129",
+   "topic": "Health & safety",
+   "question": "What footwear must food workers wear to avoid slips, trips and falls?",
+   "options": [
+    "Slip-resistant shoes",
+    "Open-toed sandals",
+    "Any closed shoes",
+    "Steel-toe boots"
+   ],
+   "answer": 0,
+   "explanation": "Slip-resistant shoes must be worn.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "To avoid slips, trips and falls, slip-resistant shoes must be worn by food workers."
+   }
+  },
+  {
+   "id": "FPC-130",
+   "topic": "Health & safety",
+   "question": "What should be routinely conducted to improve food safety, security and work practice?",
+   "options": [
+    "A menu redesign",
+    "A self-assessment of food operations",
+    "A customer survey",
+    "An annual staff party"
+   ],
+   "answer": 1,
+   "explanation": "Routinely conduct a self-assessment of food operations.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 8,
+    "quote": "To improve food safety, security and general work practice, routinely conduct a self-assessment of food operations."
+   }
+  },
+  {
+   "id": "FPC-131",
+   "topic": "Health & safety",
+   "question": "For food defense, where should customers be restricted?",
+   "options": [
+    "To any area with staff present",
+    "Nowhere; access is unrestricted",
+    "To public areas only",
+    "To the kitchen and dining room"
+   ],
+   "answer": 2,
+   "explanation": "Restrict customers to public areas and limit facility access to employees and contractors.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 60,
+    "quote": "Restrict customers to public areas only."
+   }
+  }
+ ]
+}

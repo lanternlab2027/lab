@@ -1,0 +1,3185 @@
+{
+ "exam": "GUIDE",
+ "title": "NYC Sightseeing Guide License Exam",
+ "real_exam_questions": 150,
+ "real_exam_pass": 97,
+ "real_exam_minutes": null,
+ "mock_questions": 50,
+ "mock_minutes": null,
+ "page_numbering": "PDF page index (1 = first page of the PDF file); null for HTML pages",
+ "questions": [
+  {
+   "id": "GUIDE-001",
+   "topic": "Exam scope",
+   "question": "According to DCWP's Study Reference, which borough do the Sightseeing Guide exam questions predominantly focus on?",
+   "options": [
+    "Brooklyn",
+    "Manhattan",
+    "Queens",
+    "Staten Island"
+   ],
+   "answer": 1,
+   "explanation": "The exam focuses on general NYC knowledge, predominantly Manhattan, but includes questions about all five boroughs.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 1,
+    "quote": "focus on overall general New York City knowledge—predominantly Manhattan—but the test will include questions about all five boroughs."
+   }
+  },
+  {
+   "id": "GUIDE-002",
+   "topic": "Exam scope",
+   "question": "Which of these authors is on the Study Reference's list of New York writers that the exam may ask about?",
+   "options": [
+    "Mark Twain",
+    "John Steinbeck",
+    "Ernest Hemingway",
+    "Langston Hughes"
+   ],
+   "answer": 3,
+   "explanation": "The literature list is limited to E. B. White, Langston Hughes, Edith Wharton, Washington Irving, Paule Marshall, Jack Finney, Walt Whitman, O. Henry and F. Scott Fitzgerald.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 1,
+    "quote": "E. B. White, Langston Hughes, Edith Wharton, Washington Irving, Paule Marshall, Jack Finney, Walt Whitman, O. Henry"
+   }
+  },
+  {
+   "id": "GUIDE-003",
+   "topic": "Exam scope",
+   "question": "Which author on this list is NOT one of the nine writers named in the Study Reference's literature topic?",
+   "options": [
+    "Edith Wharton",
+    "Jack Finney",
+    "Paule Marshall",
+    "Herman Melville"
+   ],
+   "answer": 3,
+   "explanation": "Melville is not on the list. The nine are White, Hughes, Wharton, Irving, Marshall, Finney, Whitman, O. Henry and Fitzgerald.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 1,
+    "quote": "the list will be limited to the following: E. B. White, Langston Hughes, Edith Wharton, Washington Irving, Paule Marshall"
+   }
+  },
+  {
+   "id": "GUIDE-004",
+   "topic": "Exam scope",
+   "question": "Which two garden cemeteries does the Study Reference specifically name under 'Parks and Parkways'?",
+   "options": [
+    "Cypress Hills and Evergreens",
+    "Trinity and Calvary",
+    "Moravian and Flushing",
+    "Greenwood and Woodlawn"
+   ],
+   "answer": 3,
+   "explanation": "Topic 12 covers parks and parkways plus Greenwood and Woodlawn Cemeteries.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 1,
+    "quote": "Parks and Parkways, plus Greenwood and Woodlawn Cemeteries"
+   }
+  },
+  {
+   "id": "GUIDE-005",
+   "topic": "Exam scope",
+   "question": "Which 'Walk of Fame' does the Study Reference associate with Brooklyn Botanic Garden?",
+   "options": [
+    "The Yiddish Theatre Walk",
+    "The Fashion Walk",
+    "The Celebrity Walk",
+    "The Film Star Walk"
+   ],
+   "answer": 2,
+   "explanation": "The Study Reference lists the Brooklyn Botanic Garden's 'Celebrity Walk' among the walks of fame.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 2,
+    "quote": "Brooklyn Botanic Garden’s “Celebrity Walk,”"
+   }
+  },
+  {
+   "id": "GUIDE-006",
+   "topic": "Exam scope",
+   "question": "Where is the 'Fashion Walk' that the Study Reference lists among the city's walks of fame?",
+   "options": [
+    "Madison Avenue",
+    "Fifth Avenue",
+    "Broadway in SoHo",
+    "Seventh Avenue"
+   ],
+   "answer": 3,
+   "explanation": "The Study Reference names Seventh Avenue's 'Fashion Walk'.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 2,
+    "quote": "“Walks of Fame” include Seventh Avenue’s “Fashion Walk,”"
+   }
+  },
+  {
+   "id": "GUIDE-007",
+   "topic": "Exam scope",
+   "question": "Which walk of fame does the Study Reference associate with the Second Avenue Deli?",
+   "options": [
+    "The Jazz Walk",
+    "The Fashion Walk",
+    "The Celebrity Walk",
+    "The Yiddish Theatre Walk"
+   ],
+   "answer": 3,
+   "explanation": "The Second Avenue Deli's 'Yiddish Theatre Walk' is listed.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 2,
+    "quote": "Second Avenue Deli’s “Yiddish Theatre Walk,”"
+   }
+  },
+  {
+   "id": "GUIDE-008",
+   "topic": "Exam scope",
+   "question": "Which practicum topic does the Study Reference flag as 'very important'?",
+   "options": [
+    "Tour pricing and tips",
+    "Legal routings and pick-up/drop-off locations for tour buses",
+    "Ethnic food identification",
+    "Microphone technique"
+   ],
+   "answer": 1,
+   "explanation": "Topic 16 (legal tour bus routings, pick-up/drop-off locations and the Midtown Thru Streets program) is marked 'This is very important!'",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 2,
+    "quote": "Legal routings and passenger pick-up/drop-off locations for tour buses; the Midtown Thru Streets Program. This is very important!"
+   }
+  },
+  {
+   "id": "GUIDE-009",
+   "topic": "Exam scope",
+   "question": "Which agency's bus regulations does the Study Reference say guides are legally obligated to follow when directing bus drivers?",
+   "options": [
+    "NYS Department of Motor Vehicles",
+    "NYC Department of Transportation",
+    "NYC Department of Sanitation",
+    "Port Authority of NY & NJ"
+   ],
+   "answer": 1,
+   "explanation": "Guides must strictly adhere to NYC DOT bus regulations when directing bus drivers.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 2,
+    "quote": "Please pay special attention to the New York City Department of Transportation (DOT) bus regulations."
+   }
+  },
+  {
+   "id": "GUIDE-010",
+   "topic": "Exam scope",
+   "question": "Under which topic does the Study Reference include the Arts for Transit program?",
+   "options": [
+    "Public Sculptures",
+    "'Getting There' (subways, buses, Staten Island Ferry)",
+    "Ethnic Foods",
+    "Religion"
+   ],
+   "answer": 1,
+   "explanation": "Topic 1, 'Getting There', points to mta.info for general information and the Arts for Transit program.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 1,
+    "quote": "check mta.info for general information, and for information about the Arts for Transit Program."
+   }
+  },
+  {
+   "id": "GUIDE-011",
+   "topic": "Exam scope",
+   "question": "Which planning concept does the Study Reference's architecture topic say candidates should comprehend?",
+   "options": [
+    "The 'grid plan' and its impacts",
+    "Inclusionary zoning",
+    "Transit-oriented development",
+    "Congestion pricing"
+   ],
+   "answer": 0,
+   "explanation": "Topic 11 asks for comprehension of the 'grid plan' and its impacts.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 1,
+    "quote": "Comprehension of “grid plan” and its impacts."
+   }
+  },
+  {
+   "id": "GUIDE-012",
+   "topic": "Exam scope",
+   "question": "The history topic in the Study Reference runs from which group to the present day?",
+   "options": [
+    "The Algonquin Indians",
+    "The Dutch West India Company",
+    "The British occupation",
+    "The 1898 consolidation"
+   ],
+   "answer": 0,
+   "explanation": "Topic 3 covers rudimentary history 'from the Algonquin Indians to the present day'.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 1,
+    "quote": "New York City History – Rudimentary history from the Algonquin Indians to the present day"
+   }
+  },
+  {
+   "id": "GUIDE-013",
+   "topic": "Exam scope",
+   "question": "What does the Study Reference say about failing the exam on your first attempt?",
+   "options": [
+    "You must pay the license fee again",
+    "You must take a classroom course",
+    "You must wait one year to retest",
+    "There is no penalty for failing on the first attempt"
+   ],
+   "answer": 3,
+   "explanation": "There is no penalty for a first-attempt fail. After two fails, the exam fee must be paid again.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 2,
+    "quote": "There is no penalty for failing the Professional Licensing Examination for New York City Sightseeing Guides on your first attempt."
+   }
+  },
+  {
+   "id": "GUIDE-014",
+   "topic": "Exam scope",
+   "question": "Which organization's website does the Study Reference cite for an excellent range of tours?",
+   "options": [
+    "The Port Authority",
+    "NYC Parks",
+    "The Guides Association of New York City (GANYC)",
+    "The New York Public Library"
+   ],
+   "answer": 2,
+   "explanation": "The Study Reference points to GANYC's website for a range of tours.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Sightseeing-Guide-Study-Reference.pdf",
+    "title": "DCWP Sightseeing Guide Study Reference (PDF)",
+    "page": 2,
+    "quote": "An excellent range of tours is listed on the Web site for the Guides Association of New York City"
+   }
+  },
+  {
+   "id": "GUIDE-015",
+   "topic": "Licensing",
+   "question": "How old must a Sightseeing Guide licence applicant be?",
+   "options": [
+    "At least 21",
+    "At least 16",
+    "At least 25",
+    "At least 18"
+   ],
+   "answer": 3,
+   "explanation": "DCWP requires Sightseeing Guide applicants to be at least 18 years old.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-sightseeing-guide.page",
+    "title": "DCWP Sightseeing Guide License Application Checklist",
+    "page": null,
+    "quote": "Sightseeing Guide applicants must be at least 18 years old."
+   }
+  },
+  {
+   "id": "GUIDE-016",
+   "topic": "Licensing",
+   "question": "How many questions are on the Sightseeing Guide exam?",
+   "options": [
+    "100",
+    "50",
+    "97",
+    "150"
+   ],
+   "answer": 3,
+   "explanation": "The exam has 150 questions.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-sightseeing-guide.page",
+    "title": "DCWP Sightseeing Guide License Application Checklist",
+    "page": null,
+    "quote": "The exam consists of 150 questions."
+   }
+  },
+  {
+   "id": "GUIDE-017",
+   "topic": "Licensing",
+   "question": "How many correct answers are needed to pass the Sightseeing Guide exam?",
+   "options": [
+    "At least 97",
+    "At least 120",
+    "At least 75",
+    "At least 105"
+   ],
+   "answer": 0,
+   "explanation": "You must answer at least 97 of the 150 questions correctly.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-sightseeing-guide.page",
+    "title": "DCWP Sightseeing Guide License Application Checklist",
+    "page": null,
+    "quote": "You must answer a minimum of 97 questions correctly to pass."
+   }
+  },
+  {
+   "id": "GUIDE-018",
+   "topic": "Licensing",
+   "question": "What is the Sightseeing Guide exam fee?",
+   "options": [
+    "There is no exam fee",
+    "$50, nonrefundable and separate from the license fee",
+    "$100, including the license",
+    "$25, refundable"
+   ],
+   "answer": 1,
+   "explanation": "The $50 exam fee is separate from the license fee and is nonrefundable.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-sightseeing-guide.page",
+    "title": "DCWP Sightseeing Guide License Application Checklist",
+    "page": null,
+    "quote": "The $50 exam fee is separate from the license fee and is nonrefundable."
+   }
+  },
+  {
+   "id": "GUIDE-019",
+   "topic": "Licensing",
+   "question": "After DCWP's exam vendor has your information, how long do you have to take and pass the exam?",
+   "options": [
+    "10 days",
+    "1 year",
+    "60 days",
+    "30 days"
+   ],
+   "answer": 2,
+   "explanation": "You have 60 days from when your information appears in ExamBuilder's system.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-sightseeing-guide.page",
+    "title": "DCWP Sightseeing Guide License Application Checklist",
+    "page": null,
+    "quote": "You have 60 days to take and pass the exam from the time your information appears in ExamBuilder’s system."
+   }
+  },
+  {
+   "id": "GUIDE-020",
+   "topic": "Licensing",
+   "question": "What is the license period for a Sightseeing Guide license?",
+   "options": [
+    "2 years",
+    "3 years",
+    "5 years",
+    "1 year"
+   ],
+   "answer": 0,
+   "explanation": "The license period is 2 years, expiring March 31 in even years.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-sightseeing-guide.page",
+    "title": "DCWP Sightseeing Guide License Application Checklist",
+    "page": null,
+    "quote": "License Period: 2 years Expiration Date: March 31 in Even Years"
+   }
+  },
+  {
+   "id": "GUIDE-021",
+   "topic": "Licensing",
+   "question": "Sightseeing Guide licenses expire on which date?",
+   "options": [
+    "December 31 every year",
+    "March 31 in even years",
+    "June 30 in odd years",
+    "On the holder's birthday"
+   ],
+   "answer": 1,
+   "explanation": "Guide licenses expire March 31 in even years.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-sightseeing-guide.page",
+    "title": "DCWP Sightseeing Guide License Application Checklist",
+    "page": null,
+    "quote": "Expiration Date: March 31 in Even Years"
+   }
+  },
+  {
+   "id": "GUIDE-022",
+   "topic": "Licensing",
+   "question": "If you fail the Sightseeing Guide exam twice, what must you do to retake it?",
+   "options": [
+    "Take a DCWP classroom course",
+    "Reapply for a new license and be fingerprinted",
+    "Wait two years",
+    "Pay the $50 exam fee again"
+   ],
+   "answer": 3,
+   "explanation": "After a second failure, guide applicants must pay the $50 exam fee again.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Licensing FAQs: Exams (PDF)",
+    "page": 3,
+    "quote": "You must pay the $50 exam fee again in order to retake the exam."
+   }
+  },
+  {
+   "id": "GUIDE-023",
+   "topic": "Licensing",
+   "question": "After a first failed attempt, how long must you wait before scheduling a second attempt (per DCWP's exam FAQ)?",
+   "options": [
+    "24 hours",
+    "6 months",
+    "30 days",
+    "10 days"
+   ],
+   "answer": 0,
+   "explanation": "The FAQ says to wait 24 hours from the failed attempt before scheduling the second attempt.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Licensing FAQs: Exams (PDF)",
+    "page": 3,
+    "quote": "You must wait 24 hours from your failed attempt before scheduling the exam for a second attempt."
+   }
+  },
+  {
+   "id": "GUIDE-024",
+   "topic": "Licensing",
+   "question": "What happens if you miss a scheduled exam without rescheduling in advance?",
+   "options": [
+    "You get a free make-up exam",
+    "Your exam fee is refunded",
+    "Your license is issued provisionally",
+    "You automatically fail"
+   ],
+   "answer": 3,
+   "explanation": "Missing a scheduled exam without rescheduling counts as an automatic fail.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Licensing FAQs: Exams (PDF)",
+    "page": 2,
+    "quote": "If you miss a scheduled exam without rescheduling in advance, you will automatically fail"
+   }
+  },
+  {
+   "id": "GUIDE-025",
+   "topic": "Licensing",
+   "question": "By when must you request a new exam date if you need to reschedule?",
+   "options": [
+    "Any time within 60 days after",
+    "One week before",
+    "5:00 p.m. the day before the original exam date",
+    "The morning of the exam"
+   ],
+   "answer": 2,
+   "explanation": "Requests must be made by 5:00 p.m. the day before the originally scheduled exam.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Licensing FAQs: Exams (PDF)",
+    "page": 2,
+    "quote": "you must request a new exam date by 5:00 p.m. the day before the originally scheduled exam date"
+   }
+  },
+  {
+   "id": "GUIDE-026",
+   "topic": "Licensing",
+   "question": "Who administers DCWP's licensing exams, including the Sightseeing Guide exam?",
+   "options": [
+    "The NYC Department of Education",
+    "The MTA",
+    "ExamBuilder",
+    "NYC & Company"
+   ],
+   "answer": 2,
+   "explanation": "ExamBuilder administers all DCWP licensing exams.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Licensing FAQs: Exams (PDF)",
+    "page": 1,
+    "quote": "ExamBuilder administers all DCWP licensing exams."
+   }
+  },
+  {
+   "id": "GUIDE-027",
+   "topic": "Licensing",
+   "question": "Which applicants must take the Sightseeing Guide exam?",
+   "options": [
+    "Both new and renewing applicants",
+    "Renewing applicants only",
+    "New applicants only",
+    "Only applicants over 65"
+   ],
+   "answer": 2,
+   "explanation": "The Sightseeing Guide exam is required of new applicants only.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Licensing FAQs: Exams (PDF)",
+    "page": 1,
+    "quote": "Sightseeing Guide (NEW applicants only)"
+   }
+  },
+  {
+   "id": "GUIDE-028",
+   "topic": "Licensing",
+   "question": "Under DCWP's definition, a sightseeing bus carries at least how many passengers?",
+   "options": [
+    "Fifteen or more",
+    "Eight or more",
+    "Twenty-five or more",
+    "Four or more"
+   ],
+   "answer": 1,
+   "explanation": "A sightseeing bus operates for hire taking eight or more passengers to places of interest from a point in NYC.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/SightseeingBus.pdf",
+    "title": "DCWP Inspection Checklist: Sightseeing Bus (PDF)",
+    "page": 1,
+    "quote": "A sightseeing bus is a bus that operates for hire either to take eight or more passengers from a fixed point in New York City"
+   }
+  },
+  {
+   "id": "GUIDE-029",
+   "topic": "Licensing",
+   "question": "On a DCWP-licensed sightseeing bus, what must the departure-time signs say?",
+   "options": [
+    "\"Departure subject to traffic.\"",
+    "\"No refunds after boarding.\"",
+    "\"Departs when full.\"",
+    "\"This bus leaves (time) sharp or money refunded upon request.\""
+   ],
+   "answer": 3,
+   "explanation": "Every sightseeing bus must have two departure signs with this wording, removed once the bus departs.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/SightseeingBus.pdf",
+    "title": "DCWP Inspection Checklist: Sightseeing Bus (PDF)",
+    "page": 2,
+    "quote": "“This bus leaves (specifying time) sharp or money refunded upon request.”"
+   }
+  },
+  {
+   "id": "GUIDE-030",
+   "topic": "Licensing",
+   "question": "What is an 'open-air sightseeing bus' under DCWP's checklist?",
+   "options": [
+    "A bus that only tours parks",
+    "A sightseeing bus with seating that is partially or entirely unenclosed",
+    "Any bus without air conditioning",
+    "A bus with removable windows"
+   ],
+   "answer": 1,
+   "explanation": "DCWP defines it by partially or entirely unenclosed seating.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/SightseeingBus.pdf",
+    "title": "DCWP Inspection Checklist: Sightseeing Bus (PDF)",
+    "page": 1,
+    "quote": "An open-air sightseeing bus is a sightseeing bus that has seating that is partially or entirely unenclosed."
+   }
+  },
+  {
+   "id": "GUIDE-031",
+   "topic": "Tour bus rules",
+   "question": "Under the NYC Traffic Rules, what must a tour or charter bus operator carry at all times?",
+   "options": [
+    "A list of passengers' home addresses",
+    "A printed copy of the subway map",
+    "A route slip listing origin, destination and streets in between",
+    "A DCWP guide license for each passenger"
+   ],
+   "answer": 2,
+   "explanation": "Bus operators must prepare a detailed route slip in advance and keep it in their possession.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "The route slip must include the points of origin and destination of the trip and the streets that they plan to take in between."
+   }
+  },
+  {
+   "id": "GUIDE-032",
+   "topic": "Tour bus rules",
+   "question": "Which streets must tour bus drivers generally travel on in NYC?",
+   "options": [
+    "Any street with two or more lanes",
+    "Only highways and parkways",
+    "Only avenues, never cross streets",
+    "Designated truck routes, except when needed to reach a destination"
+   ],
+   "answer": 3,
+   "explanation": "Bus drivers must use truck routes, leaving them only to reach destinations.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Bus drivers must travel along New York City truck routes except when local bus routes or other roads are needed to reach their destinations."
+   }
+  },
+  {
+   "id": "GUIDE-033",
+   "topic": "Tour bus rules",
+   "question": "When a bus leaves a truck route to reach a destination, where must it leave the route?",
+   "options": [
+    "At the first left turn",
+    "Only at a bridge or tunnel",
+    "At any exit it chooses",
+    "At the nearest intersection to the destination"
+   ],
+   "answer": 3,
+   "explanation": "Drivers leave truck routes at the nearest intersection to the destination and return at the nearest possible location.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Drivers must leave the truck routes at the nearest intersection to their destination and return at the nearest possible location."
+   }
+  },
+  {
+   "id": "GUIDE-034",
+   "topic": "Tour bus rules",
+   "question": "What does a bus need to use parkways or the FDR Drive?",
+   "options": [
+    "A Highway Travel Permit",
+    "Nothing; buses may always use parkways",
+    "A DCWP guide license",
+    "An E-ZPass only"
+   ],
+   "answer": 0,
+   "explanation": "Buses may not use parkways or the FDR Drive without a Highway Travel Permit.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Buses are not permitted to use parkways or FDR Drive without a Highway Travel Permit."
+   }
+  },
+  {
+   "id": "GUIDE-035",
+   "topic": "Tour bus rules",
+   "question": "What is the per-trip fee charter buses must pay in NYC, per NYC DOT?",
+   "options": [
+    "$5 per trip",
+    "$1.50 per trip",
+    "$20 per hour",
+    "$15 per trip"
+   ],
+   "answer": 1,
+   "explanation": "Charter buses pay $1.50 per trip; stickers come in books of ten for $15.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Charter Buses must pay fee of $1.50 per trip."
+   }
+  },
+  {
+   "id": "GUIDE-036",
+   "topic": "Tour bus rules",
+   "question": "What is the general bus parking meter rate in Manhattan?",
+   "options": [
+    "$5 per hour",
+    "$50 per hour",
+    "$20 per hour",
+    "$10 per hour"
+   ],
+   "answer": 2,
+   "explanation": "The general meter rate for buses is $20 per hour.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "The general meter rate for buses is $20 per hour, payable at parking meters"
+   }
+  },
+  {
+   "id": "GUIDE-037",
+   "topic": "Tour bus rules",
+   "question": "What is the time limit at bus parking meters?",
+   "options": [
+    "Three hours",
+    "Six hours",
+    "No limit",
+    "One hour"
+   ],
+   "answer": 0,
+   "explanation": "Bus meters have a three-hour time limit.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Meters have a three-hour time limit"
+   }
+  },
+  {
+   "id": "GUIDE-038",
+   "topic": "Tour bus rules",
+   "question": "When are bus parking meters in effect?",
+   "options": [
+    "24 hours a day, every day",
+    "Weekdays 9 am to 5 pm only",
+    "Only during the holiday season",
+    "Daily 7 am to 7 pm, except Sundays"
+   ],
+   "answer": 3,
+   "explanation": "Bus meters run daily 7 am to 7 pm, except Sundays.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Bus parking meters are in effect daily from 7 am to 7 pm, except Sundays"
+   }
+  },
+  {
+   "id": "GUIDE-039",
+   "topic": "Tour bus rules",
+   "question": "At passenger drop-off zones, when is bus idling strictly prohibited?",
+   "options": [
+    "When the temperature is above 40°F",
+    "When the temperature is below 32°F",
+    "Never; idling is unlimited",
+    "Only at night"
+   ],
+   "answer": 0,
+   "explanation": "Idling is strictly prohibited above 40°F, and allowed up to three minutes at 40°F or below.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Idling is strictly prohibited when the temperature is above 40 degrees (Fahrenheit)"
+   }
+  },
+  {
+   "id": "GUIDE-040",
+   "topic": "Tour bus rules",
+   "question": "Can a bus park in a passenger drop-off and pick-up zone?",
+   "options": [
+    "Yes, if the driver stays aboard",
+    "Yes, for up to one hour",
+    "Yes, on Sundays",
+    "No, these zones are for expeditious drop-off and pick-up only"
+   ],
+   "answer": 3,
+   "explanation": "Buses may not park in drop-off/pick-up zones for any amount of time.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Buses may not park in these zones for any amount of time"
+   }
+  },
+  {
+   "id": "GUIDE-041",
+   "topic": "Tour bus rules",
+   "question": "Where may a bus operator NOT pick up or drop off passengers?",
+   "options": [
+    "At the curb in a legal loading area",
+    "In a vehicle travel lane or a 'No Stopping Anytime' zone",
+    "At a designated drop-off zone",
+    "In an off-street lot"
+   ],
+   "answer": 1,
+   "explanation": "Pick-ups and drop-offs are banned in travel lanes and No Stopping Anytime zones.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Bus operators may not pick up or drop off passengers in a vehicle travel lane or in any zone where \"No Stopping Anytime\" is posted"
+   }
+  },
+  {
+   "id": "GUIDE-042",
+   "topic": "Tour bus rules",
+   "question": "What must a bus operator do while passengers are loading or unloading?",
+   "options": [
+    "Turn on hazard lights and leave",
+    "Move to the nearest layover",
+    "Stay with the vehicle",
+    "Escort the group to the attraction"
+   ],
+   "answer": 2,
+   "explanation": "Operators must stay with their vehicle during loading and unloading.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Bus operators must stay with their vehicle while passengers are loading or unloading"
+   }
+  },
+  {
+   "id": "GUIDE-043",
+   "topic": "Tour bus rules",
+   "question": "Is double-parking a bus ever permitted in Manhattan?",
+   "options": [
+    "No, not at any time",
+    "Yes, for up to 10 minutes",
+    "Yes, with hazard lights on",
+    "Yes, on weekends"
+   ],
+   "answer": 0,
+   "explanation": "Double-parking is not permitted at any time.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Double-parking is not permitted at any time"
+   }
+  },
+  {
+   "id": "GUIDE-044",
+   "topic": "Tour bus rules",
+   "question": "How long can buses park in Lower Manhattan?",
+   "options": [
+    "Overnight only",
+    "No more than three hours",
+    "Up to eight hours",
+    "All day with a permit"
+   ],
+   "answer": 1,
+   "explanation": "Buses cannot park in Lower Manhattan for more than three hours; operators may use private off-street lots.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Buses cannot park in Lower Manhattan for more than three hours."
+   }
+  },
+  {
+   "id": "GUIDE-045",
+   "topic": "Tour bus rules",
+   "question": "Bus parking near the World Trade Center is available only to which buses?",
+   "options": [
+    "Buses with out-of-state plates",
+    "Only MTA buses",
+    "Buses with permits transporting groups registered with the 9/11 Memorial & Museum",
+    "Any bus that pays the meter"
+   ],
+   "answer": 2,
+   "explanation": "For security reasons, WTC-area bus parking is permit-only for registered 9/11 Memorial & Museum groups.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "bus parking located near the World Trade Center is available only to buses with permits that are transporting groups registered to visit"
+   }
+  },
+  {
+   "id": "GUIDE-046",
+   "topic": "Tour bus rules",
+   "question": "How does NYC DOT encourage tour groups to visit the 9/11 Memorial & Museum?",
+   "options": [
+    "By private car",
+    "By pedicab",
+    "By charter bus parked on Church Street",
+    "By mass transit instead of charter buses"
+   ],
+   "answer": 3,
+   "explanation": "DOT strongly encourages mass transit because bus parking is very limited.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "NYC DOT strongly encourages tour groups planning trips to the 9/11 Memorial & Museum use mass transit instead of charter buses."
+   }
+  },
+  {
+   "id": "GUIDE-047",
+   "topic": "Tour bus rules",
+   "question": "Where can tour buses coming from New Jersey park all day for a fee and use ferry or PATH service to Lower Manhattan?",
+   "options": [
+    "Battery Park City",
+    "Hoboken Terminal",
+    "Pier 76",
+    "Liberty State Park"
+   ],
+   "answer": 3,
+   "explanation": "Buses can park at Liberty State Park (NJ Turnpike Exit 14B) and take a ferry or PATH.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Tour buses coming from New Jersey can park all day at Liberty State Park for a fee"
+   }
+  },
+  {
+   "id": "GUIDE-048",
+   "topic": "Tour bus rules",
+   "question": "Which agencies strictly enforce NYC's tour and charter bus rules, per NYC DOT?",
+   "options": [
+    "FDNY and NYC Parks",
+    "NYPD and the Department of Environmental Protection",
+    "DCWP and the MTA",
+    "Port Authority Police only"
+   ],
+   "answer": 1,
+   "explanation": "The rules are subject to strict enforcement by NYPD and DEP.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "subject to strict enforcement by the New York City Police Department and the New York City Department of Environmental Protection."
+   }
+  },
+  {
+   "id": "GUIDE-049",
+   "topic": "Tour bus rules",
+   "question": "In NYC DOT's holiday-season motor coach rules, which East River crossing is NOT permitted for buses?",
+   "options": [
+    "Brooklyn Bridge",
+    "Ed Koch Queensboro Bridge",
+    "Manhattan Bridge",
+    "Williamsburg Bridge"
+   ],
+   "answer": 0,
+   "explanation": "Permitted river crossings are all crossings except the Brooklyn Bridge.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Permitted River Crossings All river crossings except Brooklyn Bridge"
+   }
+  },
+  {
+   "id": "GUIDE-050",
+   "topic": "Tour bus rules",
+   "question": "In NYC DOT's holiday-season motor coach rules, where are bus pick-ups and drop-offs prohibited?",
+   "options": [
+    "Fifth Avenue between 32nd and 59th Streets",
+    "12th Avenue between 30th and 33rd Streets",
+    "The Javits Center service road",
+    "West 33rd Street west of 11th Avenue"
+   ],
+   "answer": 0,
+   "explanation": "Fifth Avenue between 32nd and 59th Streets is a prohibited pick-up and drop-off area in the holiday rules.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+    "title": "NYC DOT: Charter & Tour Buses",
+    "page": null,
+    "quote": "Prohibited Pick-Up & Drop-Off Areas Fifth Avenue between 32nd and 59th Streets"
+   }
+  },
+  {
+   "id": "GUIDE-051",
+   "topic": "Tour bus rules",
+   "question": "What document must truck drivers have on hand showing origin and destination, per DOT truck routing rules?",
+   "options": [
+    "A DCWP license",
+    "A toll receipt",
+    "A bill of lading or similar document",
+    "A route map signed by NYPD"
+   ],
+   "answer": 2,
+   "explanation": "Truck drivers must carry a bill of lading or similar document. Bus operators carry a route slip for the same purpose.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/motorist/truckrouting.shtml",
+    "title": "NYC DOT: Truck Routing",
+    "page": null,
+    "quote": "Truck drivers must always have on hand a bill of lading, or similar document, showing the points of origin and destination of the trip."
+   }
+  },
+  {
+   "id": "GUIDE-052",
+   "topic": "Tour bus rules",
+   "question": "Which truck route network must be used by trucks with neither an origin nor a destination within the borough?",
+   "options": [
+    "The Local Truck Route Network",
+    "The Parkway Network",
+    "The Bus Lane Network",
+    "The Through Truck Route Network"
+   ],
+   "answer": 3,
+   "explanation": "Through routes are for trips passing through a borough; local routes are for trips that start or end in it.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/motorist/truckrouting.shtml",
+    "title": "NYC DOT: Truck Routing",
+    "page": null,
+    "quote": "must be used by trucks that have neither an origin or destination within the borough."
+   }
+  },
+  {
+   "id": "GUIDE-053",
+   "topic": "Getting there",
+   "question": "How long has the City operated the Staten Island Ferry?",
+   "options": [
+    "Since 1825",
+    "Since 1898",
+    "Since 1905",
+    "Since 1964"
+   ],
+   "answer": 2,
+   "explanation": "The City has run the ferry since 1905.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "The City has operated the Staten Island Ferry since 1905."
+   }
+  },
+  {
+   "id": "GUIDE-054",
+   "topic": "Getting there",
+   "question": "How long is the Staten Island Ferry run between St. George and Whitehall?",
+   "options": [
+    "5.2 miles",
+    "2.5 miles",
+    "8 miles",
+    "12 miles"
+   ],
+   "answer": 0,
+   "explanation": "The ferry makes a 5.2-mile run between St. George Terminal and Whitehall Terminal.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "5.2-mile run between the St. George Terminal in Staten Island and the Whitehall Terminal in Lower Manhattan."
+   }
+  },
+  {
+   "id": "GUIDE-055",
+   "topic": "Getting there",
+   "question": "What is the Manhattan terminal of the Staten Island Ferry called?",
+   "options": [
+    "St. George Terminal",
+    "Battery Maritime Terminal",
+    "Pier 11",
+    "Whitehall Terminal"
+   ],
+   "answer": 3,
+   "explanation": "The Manhattan end is Whitehall Terminal; the Staten Island end is St. George.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "between the St. George Terminal in Staten Island and the Whitehall Terminal in Lower Manhattan."
+   }
+  },
+  {
+   "id": "GUIDE-056",
+   "topic": "Getting there",
+   "question": "When does the Staten Island Ferry run?",
+   "options": [
+    "24 hours a day, 365 days a year",
+    "6 am to midnight daily",
+    "Daytime only in winter",
+    "Weekdays only"
+   ],
+   "answer": 0,
+   "explanation": "The ferry runs around the clock all year.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "The Ferry runs 24 hours a day, 365 days a year."
+   }
+  },
+  {
+   "id": "GUIDE-057",
+   "topic": "Getting there",
+   "question": "How much does it cost to ride the Staten Island Ferry?",
+   "options": [
+    "It is free",
+    "$5",
+    "$2.90, the subway fare",
+    "$1.50"
+   ],
+   "answer": 0,
+   "explanation": "NYC DOT provides free service between Staten Island and Lower Manhattan.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml",
+    "title": "NYC DOT: Staten Island Ferry",
+    "page": null,
+    "quote": "providing free service between Staten Island and Lower Manhattan every day of the week, year-round."
+   }
+  },
+  {
+   "id": "GUIDE-058",
+   "topic": "Getting there",
+   "question": "Roughly how many passengers does the Staten Island Ferry carry each year?",
+   "options": [
+    "About 50 million",
+    "About 2 million",
+    "About 500,000",
+    "Over 16 million"
+   ],
+   "answer": 3,
+   "explanation": "The ferry carries over 16 million passengers annually.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "The Ferry carries over 16 million passengers annually"
+   }
+  },
+  {
+   "id": "GUIDE-059",
+   "topic": "Getting there",
+   "question": "During rush hours, how often does the Staten Island Ferry depart?",
+   "options": [
+    "Every 15 minutes",
+    "Every 5 minutes",
+    "Every 30 minutes",
+    "Every hour"
+   ],
+   "answer": 0,
+   "explanation": "Rush hours use a four-boat schedule with 15 minutes between departures.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "During rush hours, the ferry runs on a four-boat schedule, with 15 minutes between departures."
+   }
+  },
+  {
+   "id": "GUIDE-060",
+   "topic": "Getting there",
+   "question": "Which Staten Island Ferry boat is the first named to honor the history of Black New Yorkers on Staten Island?",
+   "options": [
+    "Dorothy Day",
+    "Sandy Ground",
+    "Spirit of America",
+    "John A. Noble"
+   ],
+   "answer": 1,
+   "explanation": "Sandy Ground honors a free Black community dating back to 1828.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "Sandy Ground is the first Staten Island Ferry boat named to honor the rich history of Black New Yorkers living on Staten Island."
+   }
+  },
+  {
+   "id": "GUIDE-061",
+   "topic": "Getting there",
+   "question": "Dorothy Day, namesake of a Staten Island ferry, led which movement?",
+   "options": [
+    "The settlement house movement",
+    "The Catholic Worker movement",
+    "The women's suffrage movement",
+    "The labor union movement"
+   ],
+   "answer": 1,
+   "explanation": "Dorothy Day was a convert to Catholicism who led the Catholic Worker movement.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "Day was a convert to Catholicism who led the Catholic Worker movement."
+   }
+  },
+  {
+   "id": "GUIDE-062",
+   "topic": "Getting there",
+   "question": "Which is the largest-capacity Staten Island ferry, carrying 5,200 passengers?",
+   "options": [
+    "Sandy Ground",
+    "Alice Austen",
+    "Samuel I. Newhouse",
+    "Guy V. Molinari"
+   ],
+   "answer": 2,
+   "explanation": "The Barberi Class Samuel I. Newhouse carries 5,200 passengers.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+    "title": "NYC DOT: Staten Island Ferry Facts",
+    "page": null,
+    "quote": "The Newhouse entered service in 1982. The boat carries 5,200 passengers"
+   }
+  },
+  {
+   "id": "GUIDE-063",
+   "topic": "Bridges",
+   "question": "Who designed the Brooklyn Bridge?",
+   "options": [
+    "John A. Roebling",
+    "Leon Moisseiff",
+    "Othmar Ammann",
+    "Gustav Lindenthal"
+   ],
+   "answer": 0,
+   "explanation": "John A. Roebling designed it; construction ran 1869-1883.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+    "title": "NYC DOT: Brooklyn Bridge",
+    "page": null,
+    "quote": "The Brooklyn Bridge was designed by John A. Roebling."
+   }
+  },
+  {
+   "id": "GUIDE-064",
+   "topic": "Bridges",
+   "question": "When was the Brooklyn Bridge completed?",
+   "options": [
+    "1883",
+    "1869",
+    "1903",
+    "1909"
+   ],
+   "answer": 0,
+   "explanation": "Construction began in 1869 and was completed in 1883.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+    "title": "NYC DOT: Brooklyn Bridge",
+    "page": null,
+    "quote": "Construction began in 1869 and was completed in 1883."
+   }
+  },
+  {
+   "id": "GUIDE-065",
+   "topic": "Bridges",
+   "question": "At its completion, the Brooklyn Bridge held what record?",
+   "options": [
+    "First steel cantilever bridge",
+    "Tallest building in the city",
+    "Longest suspension bridge in the world",
+    "Longest tunnel in the world"
+   ],
+   "answer": 2,
+   "explanation": "It was the world's longest suspension bridge at the time.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+    "title": "NYC DOT: Brooklyn Bridge",
+    "page": null,
+    "quote": "At the time, it was the longest suspension bridge in the world."
+   }
+  },
+  {
+   "id": "GUIDE-066",
+   "topic": "Bridges",
+   "question": "Which two neighborhoods does the Brooklyn Bridge connect?",
+   "options": [
+    "Lower Manhattan and Brooklyn Heights",
+    "Midtown and Long Island City",
+    "The Lower East Side and Williamsburg",
+    "Chinatown and Downtown Brooklyn"
+   ],
+   "answer": 0,
+   "explanation": "The Brooklyn Bridge connects Lower Manhattan and Brooklyn Heights.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+    "title": "NYC DOT: Brooklyn Bridge",
+    "page": null,
+    "quote": "The iconic Brooklyn Bridge connects Lower Manhattan and Brooklyn Heights."
+   }
+  },
+  {
+   "id": "GUIDE-067",
+   "topic": "Bridges",
+   "question": "When was the Brooklyn Bridge designated a National Historic Landmark?",
+   "options": [
+    "2001",
+    "1972",
+    "1883",
+    "1964"
+   ],
+   "answer": 3,
+   "explanation": "National Historic Landmark in 1964; National Historic Civil Engineering Landmark in 1972; NYC Landmark in 1967.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+    "title": "NYC DOT: Brooklyn Bridge",
+    "page": null,
+    "quote": "The Brooklyn Bridge was designated a National Historic Landmark in 1964"
+   }
+  },
+  {
+   "id": "GUIDE-068",
+   "topic": "Bridges",
+   "question": "What opened on the Brooklyn Bridge in September 2021?",
+   "options": [
+    "A subway line",
+    "A toll plaza",
+    "A two-way protected bike lane",
+    "A second pedestrian deck"
+   ],
+   "answer": 2,
+   "explanation": "A two-way protected bike lane opened, replacing one vehicle lane.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+    "title": "NYC DOT: Brooklyn Bridge",
+    "page": null,
+    "quote": "In September 2021, a two-way protected bike lane opened along the Brooklyn Bridge"
+   }
+  },
+  {
+   "id": "GUIDE-069",
+   "topic": "Bridges",
+   "question": "Which neighborhoods does the Manhattan Bridge connect?",
+   "options": [
+    "Lower Manhattan and Brooklyn Heights",
+    "Lower East Side and Williamsburg",
+    "Chinatown and Downtown Brooklyn",
+    "Yorkville and Astoria"
+   ],
+   "answer": 2,
+   "explanation": "The Manhattan Bridge connects Chinatown and Downtown Brooklyn.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/manhattan-bridge.shtml",
+    "title": "NYC DOT: Manhattan Bridge",
+    "page": null,
+    "quote": "The Manhattan Bridge connects Chinatown in Lower Manhattan and Downtown Brooklyn."
+   }
+  },
+  {
+   "id": "GUIDE-070",
+   "topic": "Bridges",
+   "question": "Which is the youngest of NYC DOT's three East River suspension bridges, completed in 1909?",
+   "options": [
+    "Ed Koch Queensboro Bridge",
+    "Williamsburg Bridge",
+    "Brooklyn Bridge",
+    "Manhattan Bridge"
+   ],
+   "answer": 3,
+   "explanation": "The Manhattan Bridge (1909) is the youngest of the three suspension bridges.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/manhattan-bridge.shtml",
+    "title": "NYC DOT: Manhattan Bridge",
+    "page": null,
+    "quote": "The Manhattan Bridge was completed in 1909 and it is the youngest of the three NYC DOT East River suspension bridges."
+   }
+  },
+  {
+   "id": "GUIDE-071",
+   "topic": "Bridges",
+   "question": "Which architectural firm designed the Manhattan Bridge's stone portal and plaza (and also the main New York Public Library)?",
+   "options": [
+    "Cass Gilbert",
+    "McKim, Mead & White",
+    "Warren & Wetmore",
+    "Carrère and Hastings"
+   ],
+   "answer": 3,
+   "explanation": "Carrère and Hastings designed the portal and plaza.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/manhattan-bridge.shtml",
+    "title": "NYC DOT: Manhattan Bridge",
+    "page": null,
+    "quote": "designed by the architectural team of Carrère and Hastings, which also designed the main branch of the New York Public Library."
+   }
+  },
+  {
+   "id": "GUIDE-072",
+   "topic": "Bridges",
+   "question": "The Manhattan Bridge was the first bridge built using which engineering theory?",
+   "options": [
+    "Cable-stay theory",
+    "Deflection theory",
+    "Cantilever theory",
+    "Arch thrust theory"
+   ],
+   "answer": 1,
+   "explanation": "It was the first built on deflection theory, so it lacks massive stiffening trusses.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/manhattan-bridge.shtml",
+    "title": "NYC DOT: Manhattan Bridge",
+    "page": null,
+    "quote": "The bridge was the first to be built based on deflection theory"
+   }
+  },
+  {
+   "id": "GUIDE-073",
+   "topic": "Bridges",
+   "question": "What type of bridge is the Ed Koch Queensboro (59th Street) Bridge?",
+   "options": [
+    "Swing bridge",
+    "Suspension bridge",
+    "Vertical-lift bridge",
+    "Cantilever truss bridge"
+   ],
+   "answer": 3,
+   "explanation": "It is the only one of the four great East River bridges that is not a suspension bridge.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/queensboro-bridge.shtml",
+    "title": "NYC DOT: Ed Koch Queensboro Bridge",
+    "page": null,
+    "quote": "is the only one of the four great East River Bridges that is not a suspension bridge."
+   }
+  },
+  {
+   "id": "GUIDE-074",
+   "topic": "Bridges",
+   "question": "The Ed Koch Queensboro Bridge is also known as what?",
+   "options": [
+    "The Hell Gate Bridge",
+    "The Third Avenue Bridge",
+    "The Triborough Bridge",
+    "The 59th Street Bridge"
+   ],
+   "answer": 3,
+   "explanation": "It is also known as the 59th Street Bridge.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/queensboro-bridge.shtml",
+    "title": "NYC DOT: Ed Koch Queensboro Bridge",
+    "page": null,
+    "quote": "The Ed Koch Queensboro Bridge, also known as the 59th Street Bridge, is a cantilever truss bridge over the East River."
+   }
+  },
+  {
+   "id": "GUIDE-075",
+   "topic": "Bridges",
+   "question": "Which island provides footing for the piers of the Ed Koch Queensboro Bridge?",
+   "options": [
+    "Randalls Island",
+    "Governors Island",
+    "Wards Island",
+    "Roosevelt Island"
+   ],
+   "answer": 3,
+   "explanation": "The bridge passes over Roosevelt Island, which supports its piers.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/queensboro-bridge.shtml",
+    "title": "NYC DOT: Ed Koch Queensboro Bridge",
+    "page": null,
+    "quote": "The bridge is conveniently located over Roosevelt Island, which provides the perfect footing for the piers."
+   }
+  },
+  {
+   "id": "GUIDE-076",
+   "topic": "Bridges",
+   "question": "Which bridge engineer designed the Ed Koch Queensboro Bridge?",
+   "options": [
+    "Gustav Lindenthal",
+    "Washington Roebling",
+    "John A. Roebling",
+    "Leon Moisseiff"
+   ],
+   "answer": 0,
+   "explanation": "Gustav Lindenthal designed it with architect Henry Hornbostel (spelled Hornbosted on DOT's page).",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/queensboro-bridge.shtml",
+    "title": "NYC DOT: Ed Koch Queensboro Bridge",
+    "page": null,
+    "quote": "Designed by the bridge engineer Gustav Lindenthal"
+   }
+  },
+  {
+   "id": "GUIDE-077",
+   "topic": "Bridges",
+   "question": "When it opened in 1903, the Williamsburg Bridge held what record?",
+   "options": [
+    "First bridge to carry automobiles",
+    "Tallest towers in the city",
+    "Shortest East River crossing",
+    "Longest suspension bridge in the world"
+   ],
+   "answer": 3,
+   "explanation": "In 1903 it was the longest suspension bridge in the world.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/williamsburg-bridge.shtml",
+    "title": "NYC DOT: Williamsburg Bridge",
+    "page": null,
+    "quote": "When it opened in 1903, the Williamsburg Bridge was the longest suspension bridge in the world"
+   }
+  },
+  {
+   "id": "GUIDE-078",
+   "topic": "Bridges",
+   "question": "Which subway lines cross the Williamsburg Bridge?",
+   "options": [
+    "B, D, N and Q",
+    "A and C",
+    "4, 5 and 6",
+    "J, M and Z"
+   ],
+   "answer": 3,
+   "explanation": "Two transit tracks carrying the J, M and Z run between the roadways.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/williamsburg-bridge.shtml",
+    "title": "NYC DOT: Williamsburg Bridge",
+    "page": null,
+    "quote": "with two rapid transit tracks (J, M, and Z subway lines) sandwiched in between."
+   }
+  },
+  {
+   "id": "GUIDE-079",
+   "topic": "Bridges",
+   "question": "What was New York City's first bridge?",
+   "options": [
+    "The Macombs Dam Bridge",
+    "The Brooklyn Bridge (1883)",
+    "The King's Bridge (1693) over Spuyten Duyvil Creek",
+    "The High Bridge (1848)"
+   ],
+   "answer": 2,
+   "explanation": "The King's Bridge, built 1693, spanned Spuyten Duyvil Creek between Manhattan and the Bronx.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/bridges.shtml",
+    "title": "NYC DOT: Bridges",
+    "page": null,
+    "quote": "New York City's first bridge, known as the King's Bridge, was constructed in 1693."
+   }
+  },
+  {
+   "id": "GUIDE-080",
+   "topic": "Bridges",
+   "question": "Which is the oldest NYC bridge still open to passengers or vehicles?",
+   "options": [
+    "Brooklyn Bridge",
+    "Williamsburg Bridge",
+    "Queensboro Bridge",
+    "Manhattan Bridge"
+   ],
+   "answer": 0,
+   "explanation": "The Brooklyn Bridge, opened 1883, is the oldest still open.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/bridges.shtml",
+    "title": "NYC DOT: Bridges",
+    "page": null,
+    "quote": "The oldest bridge that is open to passengers or vehicles is the Brooklyn Bridge, which opened in 1883."
+   }
+  },
+  {
+   "id": "GUIDE-081",
+   "topic": "Bridges",
+   "question": "Do drivers pay tolls on bridges operated by NYC DOT?",
+   "options": [
+    "Only for buses",
+    "Yes, in both directions",
+    "No, there are no tolls on NYC DOT bridges",
+    "Only the Brooklyn Bridge is tolled"
+   ],
+   "answer": 2,
+   "explanation": "There are no tolls on NYC DOT-operated bridges.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/bridges.shtml",
+    "title": "NYC DOT: Bridges",
+    "page": null,
+    "quote": "There are no tolls on bridges operated by NYC DOT."
+   }
+  },
+  {
+   "id": "GUIDE-082",
+   "topic": "Bridges",
+   "question": "Which landmarked bridge is operated by NYC Parks rather than NYC DOT?",
+   "options": [
+    "The Brooklyn Bridge",
+    "The Macombs Dam Bridge",
+    "The Carroll Street Bridge",
+    "The High Bridge"
+   ],
+   "answer": 3,
+   "explanation": "The three landmarked bridges not run by DOT are the George Washington Bridge (Port Authority), the High Bridge (Parks) and Hell Gate Bridge (Amtrak).",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/bridges.shtml",
+    "title": "NYC DOT: Bridges",
+    "page": null,
+    "quote": "the George Washington Bridge (Port Authority), the High Bridge ( NYC Department of Parks & Recreation ), and Hell Gate Bridge (Amtrak)."
+   }
+  },
+  {
+   "id": "GUIDE-083",
+   "topic": "Bridges",
+   "question": "What is Wards Island's former name, per NYC DOT?",
+   "options": [
+    "Nut Island",
+    "Great Barn Island",
+    "Hog Island",
+    "Blackwell's Island"
+   ],
+   "answer": 1,
+   "explanation": "Wards Island was formerly called Great Barn Island.",
+   "source": {
+    "url": "https://www.nyc.gov/html/dot/html/infrastructure/bridges-harlem.shtml",
+    "title": "NYC DOT: Harlem River Bridges",
+    "page": null,
+    "quote": "The first known bridge to Wards Island (formerly Great Barn Island) was built in 1807"
+   }
+  },
+  {
+   "id": "GUIDE-084",
+   "topic": "History",
+   "question": "Who built Gracie Mansion, and in what year?",
+   "options": [
+    "Archibald Gracie, in 1799",
+    "Peter Stuyvesant, in 1646",
+    "Fiorello La Guardia, in 1942",
+    "Jacob Walton, in 1770"
+   ],
+   "answer": 0,
+   "explanation": "Shipping merchant Archibald Gracie built the wood-frame country house in 1799.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/student_tour_booklet.pdf",
+    "title": "Gracie Mansion: A Student Guide to the People's House (PDF)",
+    "page": 3,
+    "quote": "In 1799, Gracie built a wood-frame house on the land."
+   }
+  },
+  {
+   "id": "GUIDE-085",
+   "topic": "History",
+   "question": "What was Archibald Gracie's profession?",
+   "options": [
+    "Fur trader",
+    "Architect",
+    "Shipping merchant",
+    "Banker and mayor"
+   ],
+   "answer": 2,
+   "explanation": "Gracie was a successful Scottish-born shipping merchant.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/student_tour_booklet.pdf",
+    "title": "Gracie Mansion: A Student Guide to the People's House (PDF)",
+    "page": 3,
+    "quote": "Archibald Gracie, a successful Scottish-born shipping merchant."
+   }
+  },
+  {
+   "id": "GUIDE-086",
+   "topic": "History",
+   "question": "Who was the first mayor to live at Gracie Mansion?",
+   "options": [
+    "John V. Lindsay",
+    "William O'Dwyer",
+    "Fiorello H. La Guardia",
+    "Robert F. Wagner"
+   ],
+   "answer": 2,
+   "explanation": "La Guardia moved in with his family in 1942.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/student_tour_booklet.pdf",
+    "title": "Gracie Mansion: A Student Guide to the People's House (PDF)",
+    "page": 9,
+    "quote": "Mayor Fiorello H. La Guardia moved into the house with his family and was the first mayor to live at Gracie Mansion."
+   }
+  },
+  {
+   "id": "GUIDE-087",
+   "topic": "History",
+   "question": "In what year did Gracie Mansion become the official residence of the Mayor?",
+   "options": [
+    "1923",
+    "1896",
+    "1942",
+    "1966"
+   ],
+   "answer": 2,
+   "explanation": "Gracie Mansion became the official mayoral residence in 1942.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/student_tour_booklet.pdf",
+    "title": "Gracie Mansion: A Student Guide to the People's House (PDF)",
+    "page": 9,
+    "quote": "In 1942, Gracie Mansion became the official residence of the Mayor of the City of New York."
+   }
+  },
+  {
+   "id": "GUIDE-088",
+   "topic": "History",
+   "question": "What 'first' did New York achieve when Gracie Mansion became the mayor's home?",
+   "options": [
+    "First city with a female mayor",
+    "First city with a public park",
+    "First city with a subway",
+    "First U.S. city with an official mayoral residence"
+   ],
+   "answer": 3,
+   "explanation": "New York became the first U.S. city with a special home for its mayor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/home/downloads/pdf/gracie-mansion/gracie_brochure.pdf",
+    "title": "Gracie Mansion Conservancy brochure (PDF)",
+    "page": 2,
+    "quote": "making New York the first city in the United States with an official mayoral residence."
+   }
+  },
+  {
+   "id": "GUIDE-089",
+   "topic": "History",
+   "question": "Which museum had its first home at Gracie Mansion, starting in 1923?",
+   "options": [
+    "Whitney Museum of American Art",
+    "New-York Historical Society",
+    "Museum of Modern Art",
+    "Museum of the City of New York"
+   ],
+   "answer": 3,
+   "explanation": "The Museum of the City of New York began at Gracie Mansion in 1923 and moved to Fifth Avenue in 1932.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/student_tour_booklet.pdf",
+    "title": "Gracie Mansion: A Student Guide to the People's House (PDF)",
+    "page": 9,
+    "quote": "In 1923, Gracie Mansion became the first home of the Museum of the City of New York."
+   }
+  },
+  {
+   "id": "GUIDE-090",
+   "topic": "History",
+   "question": "Where did the Museum of the City of New York move in 1932?",
+   "options": [
+    "Fifth Avenue at 103rd Street",
+    "Central Park West at 77th Street",
+    "Madison Avenue at 75th Street",
+    "Wall Street"
+   ],
+   "answer": 0,
+   "explanation": "It moved to its present location on Fifth Avenue at 103rd Street.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/home/downloads/pdf/gracie-mansion/gracie_brochure.pdf",
+    "title": "Gracie Mansion Conservancy brochure (PDF)",
+    "page": 2,
+    "quote": "the museum moved to its present location on Fifth Avenue at 103rd Street in 1932."
+   }
+  },
+  {
+   "id": "GUIDE-091",
+   "topic": "History",
+   "question": "Which Parks Commissioner convinced City authorities to make Gracie Mansion the mayor's residence?",
+   "options": [
+    "Robert Moses",
+    "Andrew Haswell Green",
+    "Frederick Law Olmsted",
+    "Calvert Vaux"
+   ],
+   "answer": 0,
+   "explanation": "Robert Moses persuaded the City during La Guardia's administration.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/home/downloads/pdf/gracie-mansion/gracie_brochure.pdf",
+    "title": "Gracie Mansion Conservancy brochure (PDF)",
+    "page": 2,
+    "quote": "Parks Commissioner Robert Moses convinced City authorities that Gracie Mansion should be designated the official residence"
+   }
+  },
+  {
+   "id": "GUIDE-092",
+   "topic": "History",
+   "question": "What name did Dutch farmer Sybout Claessen give the land where Gracie Mansion stands?",
+   "options": [
+    "Turtle Bay",
+    "Kip's Bay",
+    "Corlears Hook",
+    "Horn's Hook"
+   ],
+   "answer": 3,
+   "explanation": "Claessen called it 'Horn's Hook' after his birthplace, Hoorn in Holland.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/home/downloads/pdf/gracie-mansion/gracie_brochure.pdf",
+    "title": "Gracie Mansion Conservancy brochure (PDF)",
+    "page": 2,
+    "quote": "called his property “Horn’s Hook” after his birthplace, the town of Hoorn in Holland."
+   }
+  },
+  {
+   "id": "GUIDE-093",
+   "topic": "History",
+   "question": "Gracie Mansion overlooks Hell Gate, where which waters meet?",
+   "options": [
+    "The Hudson River and Upper Bay",
+    "Newtown Creek and the East River",
+    "Jamaica Bay and the Atlantic",
+    "The East River, Harlem River and Long Island Sound"
+   ],
+   "answer": 3,
+   "explanation": "Hell Gate is where the East River, Harlem River and Long Island Sound intersect.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/home/downloads/pdf/gracie-mansion/gracie_brochure.pdf",
+    "title": "Gracie Mansion Conservancy brochure (PDF)",
+    "page": 2,
+    "quote": "the waters of Hell Gate, where the East River, Harlem River, and Long Island Sound intersect."
+   }
+  },
+  {
+   "id": "GUIDE-094",
+   "topic": "History",
+   "question": "Which park surrounds Gracie Mansion?",
+   "options": [
+    "Central Park",
+    "John Jay Park",
+    "Carl Schurz Park",
+    "Tompkins Square Park"
+   ],
+   "answer": 2,
+   "explanation": "The former Gracie estate became East End Park, later renamed for Carl Schurz.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/home/downloads/pdf/gracie-mansion/gracie_brochure.pdf",
+    "title": "Gracie Mansion Conservancy brochure (PDF)",
+    "page": 2,
+    "quote": "provided the nucleus of the newly established East End Park, later renamed for Carl Schurz"
+   }
+  },
+  {
+   "id": "GUIDE-095",
+   "topic": "History",
+   "question": "Carl Schurz, for whom the park around Gracie Mansion is named, was the first person born in which country to serve as a U.S. Senator?",
+   "options": [
+    "Ireland",
+    "Scotland",
+    "Germany",
+    "Italy"
+   ],
+   "answer": 2,
+   "explanation": "Schurz, elected from Missouri in 1869, was the first German-born U.S. Senator.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 11,
+    "quote": "becoming the first German-born U.S. Senator"
+   }
+  },
+  {
+   "id": "GUIDE-096",
+   "topic": "History",
+   "question": "What is the painted floor technique in Gracie Mansion's Foyer, meant to look like marble, called?",
+   "options": [
+    "Pietra dura",
+    "Trompe l'oeil",
+    "Fresco",
+    "Sgraffito"
+   ],
+   "answer": 1,
+   "explanation": "Trompe l'oeil is French for 'trick the eye'.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/student_tour_booklet.pdf",
+    "title": "Gracie Mansion: A Student Guide to the People's House (PDF)",
+    "page": 4,
+    "quote": "The wooden floor is painted to look like marble using a technique known as trompe l’oeil"
+   }
+  },
+  {
+   "id": "GUIDE-097",
+   "topic": "History",
+   "question": "What is the reception addition to Gracie Mansion, completed in 1966, called?",
+   "options": [
+    "The La Guardia Wing",
+    "The Koch Pavilion",
+    "The Bloomberg Annex",
+    "The Susan E. Wagner Wing"
+   ],
+   "answer": 3,
+   "explanation": "Susan Wagner raised money for the reception wing, dedicated in 1966.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 16,
+    "quote": "The Susan E. Wagner Wing is completed, providing a public reception space for civic functions at Gracie Mansion."
+   }
+  },
+  {
+   "id": "GUIDE-098",
+   "topic": "History",
+   "question": "Which mayor established the Gracie Mansion Conservancy in 1981?",
+   "options": [
+    "Abraham Beame",
+    "David Dinkins",
+    "Edward I. Koch",
+    "John Lindsay"
+   ],
+   "answer": 2,
+   "explanation": "Mayor Koch established the Conservancy in 1981.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/home/downloads/pdf/gracie-mansion/gracie_brochure.pdf",
+    "title": "Gracie Mansion Conservancy brochure (PDF)",
+    "page": 1,
+    "quote": "In 1981, recognizing the extensive use of the house and the need for a comprehensive restoration, Mayor Edward I. Koch established the Gracie Mansion Conservancy."
+   }
+  },
+  {
+   "id": "GUIDE-099",
+   "topic": "History",
+   "question": "Which mayor declared Gracie Mansion the 'People's House' in 2002?",
+   "options": [
+    "Edward Koch",
+    "Michael R. Bloomberg",
+    "Rudolph Giuliani",
+    "Bill de Blasio"
+   ],
+   "answer": 1,
+   "explanation": "In 2002 Bloomberg restored the house and opened it more to the public as the 'People's House'.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 16,
+    "quote": "Gracie Mansion is again restored and declared the “People’s House” by Mayor Michael R. Bloomberg."
+   }
+  },
+  {
+   "id": "GUIDE-100",
+   "topic": "History",
+   "question": "Which famous author of The Legend of Sleepy Hollow was a guest of Archibald Gracie?",
+   "options": [
+    "Edgar Allan Poe",
+    "Herman Melville",
+    "Washington Irving",
+    "Walt Whitman"
+   ],
+   "answer": 2,
+   "explanation": "Gracie entertained Alexander Hamilton and Washington Irving, author of The Legend of Sleepy Hollow.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/student_tour_booklet.pdf",
+    "title": "Gracie Mansion: A Student Guide to the People's House (PDF)",
+    "page": 4,
+    "quote": "Washington Irving, author of The Legend of Sleepy Hollow."
+   }
+  },
+  {
+   "id": "GUIDE-101",
+   "topic": "History",
+   "question": "Archibald Gracie, Alexander Hamilton and others founded which newspaper in 1801?",
+   "options": [
+    "The New-York Evening Post",
+    "The Brooklyn Eagle",
+    "The New York Herald",
+    "The New York Times"
+   ],
+   "answer": 0,
+   "explanation": "Gracie was a founder of the New-York Evening Post.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 14,
+    "quote": "Along with Alexander Hamilton and Richard Varick, Gracie is a founder of The New-York Evening Post."
+   }
+  },
+  {
+   "id": "GUIDE-102",
+   "topic": "History",
+   "question": "The Tontine Association, which Gracie helped form, was a forerunner of what?",
+   "options": [
+    "The Chamber of Commerce",
+    "The New York Stock Exchange",
+    "The Federal Reserve",
+    "Tammany Hall"
+   ],
+   "answer": 1,
+   "explanation": "The Tontine Association was a forerunner of the NYSE.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 14,
+    "quote": "forming the Tontine Association, a forerunner of the New York Stock Exchange."
+   }
+  },
+  {
+   "id": "GUIDE-103",
+   "topic": "History",
+   "question": "In what year did 30 Dutch families begin to settle Manhattan?",
+   "options": [
+    "1624",
+    "1664",
+    "1683",
+    "1609"
+   ],
+   "answer": 0,
+   "explanation": "In 1624, 30 Dutch families (110 people) began to settle Manhattan.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 13,
+    "quote": "1624 30 Dutch families (110 people) begin to settle the island of Manhattan."
+   }
+  },
+  {
+   "id": "GUIDE-104",
+   "topic": "History",
+   "question": "Which company owned and operated New Amsterdam until 1664?",
+   "options": [
+    "The Hudson's Bay Company",
+    "The Virginia Company",
+    "The Dutch West India Company",
+    "The Dutch East India Company"
+   ],
+   "answer": 2,
+   "explanation": "New Amsterdam's first colonists were employees of the Dutch West India Company.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 13,
+    "quote": "the Dutch West India Company, the corporation that owns and operates the colony until 1664."
+   }
+  },
+  {
+   "id": "GUIDE-105",
+   "topic": "History",
+   "question": "With whom did the Dutch make the 1626 land deal for Manhattan?",
+   "options": [
+    "The Lenapes",
+    "The Iroquois Confederacy",
+    "The Mohawks",
+    "The Shinnecock"
+   ],
+   "answer": 0,
+   "explanation": "The Dutch traded about 60 guilders of goods with the Lenapes.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 13,
+    "quote": "the Dutch trade approximately 60 guilders worth of goods in a land deal with the Lenapes."
+   }
+  },
+  {
+   "id": "GUIDE-106",
+   "topic": "History",
+   "question": "What happened to New Amsterdam in 1664?",
+   "options": [
+    "It merged with Brooklyn",
+    "English soldiers took it and it became New York",
+    "It became the U.S. capital",
+    "It was destroyed by fire"
+   ],
+   "answer": 1,
+   "explanation": "Under King Charles II, 300 English soldiers took the town; the Dutch surrendered without a battle.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 13,
+    "quote": "New Amsterdam becomes New York as 300 English soldiers take the town from the Dutch."
+   }
+  },
+  {
+   "id": "GUIDE-107",
+   "topic": "History",
+   "question": "In what year did the IRT run its first subway train?",
+   "options": [
+    "1904",
+    "1898",
+    "1883",
+    "1932"
+   ],
+   "answer": 0,
+   "explanation": "The IRT ran its first subway train in 1904.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 15,
+    "quote": "1904 The IRT runs its first subway train"
+   }
+  },
+  {
+   "id": "GUIDE-108",
+   "topic": "History",
+   "question": "In what year did New York City officials adopt the grid plan for Manhattan?",
+   "options": [
+    "1811",
+    "1898",
+    "1853",
+    "1776"
+   ],
+   "answer": 0,
+   "explanation": "The 'grid plan' was adopted in 1811 to organize the development of streets and buildings.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 9,
+    "quote": "In 1811, New York City government officials decided to implement a “grid plan” over Manhattan island"
+   }
+  },
+  {
+   "id": "GUIDE-109",
+   "topic": "History",
+   "question": "Which Parks Commissioner (1934-60) is associated with the Triborough Bridge, the West Side Highway and the 1939 and 1964 World's Fairs?",
+   "options": [
+    "Fiorello La Guardia",
+    "Andrew Haswell Green",
+    "Robert Moses",
+    "Thomas Hoving"
+   ],
+   "answer": 2,
+   "explanation": "Robert Moses fundamentally altered the city's infrastructure.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 11,
+    "quote": "Moses was New York City Parks Commissioner from 1934-60"
+   }
+  },
+  {
+   "id": "GUIDE-110",
+   "topic": "History",
+   "question": "Before becoming mayor, Fiorello La Guardia worked as an interpreter where?",
+   "options": [
+    "City Hall",
+    "The United Nations",
+    "The Brooklyn Navy Yard",
+    "Ellis Island, for the U.S. Immigration Service"
+   ],
+   "answer": 3,
+   "explanation": "La Guardia interpreted for the U.S. Immigration Service at Ellis Island.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 11,
+    "quote": "LaGuardia worked as an interpreter for the United States Immigration Service at Ellis Island"
+   }
+  },
+  {
+   "id": "GUIDE-111",
+   "topic": "History",
+   "question": "The city's first municipal airport, built under Mayor La Guardia, is on which body of water?",
+   "options": [
+    "Gravesend Bay",
+    "Flushing Bay",
+    "Jamaica Bay",
+    "Upper New York Bay"
+   ],
+   "answer": 1,
+   "explanation": "It was built on Flushing Bay and later named LaGuardia Airport.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 12,
+    "quote": "LaGuardia presided over the construction of New York City's first municipal airport on Flushing Bay"
+   }
+  },
+  {
+   "id": "GUIDE-112",
+   "topic": "History",
+   "question": "What was New York City's first public transit, in 1827?",
+   "options": [
+    "A steam railroad",
+    "A horse-drawn bus seating 12",
+    "An elevated train",
+    "A cable car"
+   ],
+   "answer": 1,
+   "explanation": "In 1827 the city had its first public transit, a 12-seat horse-drawn bus.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/pdf/gmc_tour_curriculum.pdf",
+    "title": "A Visit to Gracie Mansion: Resource Guide for Teachers and Docents (PDF)",
+    "page": 15,
+    "quote": "In 1827 the city has its first public transit: a horse-drawn bus that seats 12."
+   }
+  },
+  {
+   "id": "GUIDE-113",
+   "topic": "Landmarks",
+   "question": "Since what year has City Hall been the seat of New York City government?",
+   "options": [
+    "1812",
+    "1898",
+    "1700",
+    "1789"
+   ],
+   "answer": 0,
+   "explanation": "City Hall has been the seat of city government since 1812.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/city-hall.page",
+    "title": "DCAS: City Hall",
+    "page": null,
+    "quote": "City Hall has been the seat of New York City government since 1812."
+   }
+  },
+  {
+   "id": "GUIDE-114",
+   "topic": "Landmarks",
+   "question": "Who designed City Hall?",
+   "options": [
+    "Joseph Francois Mangin and John McComb, Jr.",
+    "McKim, Mead & White",
+    "John Kellum and Leopold Eidlitz",
+    "John R. Thomas"
+   ],
+   "answer": 0,
+   "explanation": "Mangin and McComb won the 1802 design competition.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/city-hall.page",
+    "title": "DCAS: City Hall",
+    "page": null,
+    "quote": "Architect: Joseph Francois Mangin and John McComb, Jr."
+   }
+  },
+  {
+   "id": "GUIDE-115",
+   "topic": "Landmarks",
+   "question": "City Hall's architecture combines which two styles?",
+   "options": [
+    "Greek Revival exterior and Federal interior",
+    "Gothic exterior and Art Deco interior",
+    "Romanesque exterior and Beaux-Arts interior",
+    "French Renaissance exterior and American-Georgian interior"
+   ],
+   "answer": 3,
+   "explanation": "The exterior reflects the French Renaissance and the interior the American-Georgian style.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/city-hall.page",
+    "title": "DCAS: City Hall",
+    "page": null,
+    "quote": "The exterior facade reflects that of the French Renaissance, and the interior that of the American-Georgian style."
+   }
+  },
+  {
+   "id": "GUIDE-116",
+   "topic": "Landmarks",
+   "question": "The 1700 City Hall at Wall and Nassau Streets was renamed what when New York became the first U.S. capital?",
+   "options": [
+    "Fraunces Tavern",
+    "Trinity Hall",
+    "Federal Hall",
+    "Independence Hall"
+   ],
+   "answer": 2,
+   "explanation": "It was renamed Federal Hall; the Federal Hall National Memorial now stands on the site.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/city-hall.page",
+    "title": "DCAS: City Hall",
+    "page": null,
+    "quote": "It was renamed Federal Hall when New York became the first capital of the United States."
+   }
+  },
+  {
+   "id": "GUIDE-117",
+   "topic": "Landmarks",
+   "question": "Which two figures were laid in state in the City Hall rotunda?",
+   "options": [
+    "Fiorello La Guardia and Al Smith",
+    "Theodore Roosevelt and FDR",
+    "George Washington and Alexander Hamilton",
+    "Abraham Lincoln and Ulysses S. Grant"
+   ],
+   "answer": 3,
+   "explanation": "Lincoln and Grant lay in state in the rotunda.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/city-hall.page",
+    "title": "DCAS: City Hall",
+    "page": null,
+    "quote": "Abraham Lincoln and Ulysses S. Grant were laid in state here"
+   }
+  },
+  {
+   "id": "GUIDE-118",
+   "topic": "Landmarks",
+   "question": "Which architect designed both Castle Clinton and Hamilton Grange, as well as co-designing City Hall?",
+   "options": [
+    "Minard Lafever",
+    "John McComb, Jr.",
+    "Richard Upjohn",
+    "Joseph Mangin"
+   ],
+   "answer": 1,
+   "explanation": "McComb designed Hamilton Grange, Castle Clinton and the James Watson House.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/city-hall.page",
+    "title": "DCAS: City Hall",
+    "page": null,
+    "quote": "McComb designed the landmark Hamilton Grange on Convent Avenue, Castel Clinton in Battery Park and the James Watson House on State Street."
+   }
+  },
+  {
+   "id": "GUIDE-119",
+   "topic": "Landmarks",
+   "question": "Joseph Mangin, co-architect of City Hall, designed which church?",
+   "options": [
+    "St. Paul's Chapel",
+    "Trinity Church",
+    "Old St. Patrick's Church on Mott Street",
+    "Grace Church"
+   ],
+   "answer": 2,
+   "explanation": "Mangin designed Old St. Patrick's Church on Mott Street.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/city-hall.page",
+    "title": "DCAS: City Hall",
+    "page": null,
+    "quote": "He designed the landmark Old St. Patrick's Church on Mott Street."
+   }
+  },
+  {
+   "id": "GUIDE-120",
+   "topic": "Landmarks",
+   "question": "The Tweed Courthouse is the legacy of which political boss?",
+   "options": [
+    "Carmine DeSapio",
+    "William M. Tweed of Tammany Hall",
+    "Charles F. Murphy",
+    "Richard Croker"
+   ],
+   "answer": 1,
+   "explanation": "Boss Tweed used the construction project to embezzle large sums of money.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/tweed-courthouse.page",
+    "title": "DCAS: Tweed Courthouse",
+    "page": null,
+    "quote": "The courthouse is the legacy of Tammany Hall boss William M. Tweed (1823-1878), who used the construction project to embezzle large sums of money"
+   }
+  },
+  {
+   "id": "GUIDE-121",
+   "topic": "Landmarks",
+   "question": "Where was Boss Tweed tried in 1873?",
+   "options": [
+    "In an unfinished courtroom of the Tweed Courthouse",
+    "At City Hall",
+    "In Albany",
+    "At the Tombs"
+   ],
+   "answer": 0,
+   "explanation": "Tweed was tried and convicted in an unfinished courtroom in the building.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/tweed-courthouse.page",
+    "title": "DCAS: Tweed Courthouse",
+    "page": null,
+    "quote": "In 1873 “Boss” Tweed was tried and convicted in an unfinished courtroom in this building"
+   }
+  },
+  {
+   "id": "GUIDE-122",
+   "topic": "Landmarks",
+   "question": "Which two architects designed the Tweed Courthouse?",
+   "options": [
+    "Warren & Wetmore",
+    "John Kellum and Leopold Eidlitz",
+    "Carrère and Hastings",
+    "McComb and Mangin"
+   ],
+   "answer": 1,
+   "explanation": "Kellum began it in 1861; Eidlitz finished it after Kellum's death.",
+   "source": {
+    "url": "https://www.nyc.gov/html/om/html/tweed_courthouse.html",
+    "title": "Office of the Mayor: A Brief History of Tweed Courthouse",
+    "page": null,
+    "quote": "it is the product of two of New York’s most prominent 19th-century architects, John Kellum and Leopold Eidlitz."
+   }
+  },
+  {
+   "id": "GUIDE-123",
+   "topic": "Landmarks",
+   "question": "Which City agency is housed in Tweed Courthouse today?",
+   "options": [
+    "The Department of Education",
+    "The NYPD",
+    "The Department of Finance",
+    "The Landmarks Preservation Commission"
+   ],
+   "answer": 0,
+   "explanation": "Today the building is the headquarters of the Department of Education.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/tweed-courthouse.page",
+    "title": "DCAS: Tweed Courthouse",
+    "page": null,
+    "quote": "Today the building serves as the headquarters of the Department of Education."
+   }
+  },
+  {
+   "id": "GUIDE-124",
+   "topic": "Landmarks",
+   "question": "The Surrogate's Courthouse on Chambers Street was originally built as what?",
+   "options": [
+    "A police headquarters",
+    "A Hall of Records",
+    "A railroad terminal",
+    "A post office"
+   ],
+   "answer": 1,
+   "explanation": "It was designed as a Hall of Records and renamed the Surrogate's Courthouse in 1962.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/surrogate-courthouse.page",
+    "title": "DCAS: The Surrogate's Courthouse",
+    "page": null,
+    "quote": "The building was originally designed for use as a Hall of Records and this was its original name."
+   }
+  },
+  {
+   "id": "GUIDE-125",
+   "topic": "Landmarks",
+   "question": "The Surrogate's Courthouse is a major example of which early 20th-century movement?",
+   "options": [
+    "Gothic Revival",
+    "Arts and Crafts",
+    "International Style",
+    "City Beautiful"
+   ],
+   "answer": 3,
+   "explanation": "This Beaux Arts building is a major example of the City Beautiful movement.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/surrogate-courthouse.page",
+    "title": "DCAS: The Surrogate's Courthouse",
+    "page": null,
+    "quote": "This Beaux Arts style masterpiece is a major example of the early twentieth century City Beautiful movement."
+   }
+  },
+  {
+   "id": "GUIDE-126",
+   "topic": "Landmarks",
+   "question": "The Surrogate's Courthouse's grand staircase reflects the architect's appreciation of which building?",
+   "options": [
+    "St. Peter's Basilica",
+    "Westminster Palace",
+    "The U.S. Capitol",
+    "The Paris Opera House"
+   ],
+   "answer": 3,
+   "explanation": "Called the most Parisian thing in New York, its staircase echoes the Paris Opera House.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/surrogate-courthouse.page",
+    "title": "DCAS: The Surrogate's Courthouse",
+    "page": null,
+    "quote": "the grand marble staircase in the first floor rotunda reflects the architect's appreciation of the Paris Opera House."
+   }
+  },
+  {
+   "id": "GUIDE-127",
+   "topic": "Landmarks",
+   "question": "When was the Landmarks Preservation Commission created?",
+   "options": [
+    "1976",
+    "1898",
+    "1965",
+    "1916"
+   ],
+   "answer": 2,
+   "explanation": "LPC was created in 1965 by legislation signed by Mayor Robert F. Wagner.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/about-lpc.page",
+    "title": "Landmarks Preservation Commission: About LPC",
+    "page": null,
+    "quote": "The Commission was created in 1965 through groundbreaking legislation signed by the late Mayor Robert F. Wagner"
+   }
+  },
+  {
+   "id": "GUIDE-128",
+   "topic": "Landmarks",
+   "question": "The demolition of which building most notably prompted New York's Landmarks Law?",
+   "options": [
+    "The Singer Building",
+    "The Croton Reservoir",
+    "The old Madison Square Garden",
+    "Pennsylvania Station"
+   ],
+   "answer": 3,
+   "explanation": "LPC was created in response to losses of significant buildings, most notably Penn Station.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/about-lpc.page",
+    "title": "Landmarks Preservation Commission: About LPC",
+    "page": null,
+    "quote": "in response to the losses of historically significant buildings in New York City, most notably, Pennsylvania Station."
+   }
+  },
+  {
+   "id": "GUIDE-129",
+   "topic": "Landmarks",
+   "question": "Which firm designed the original Pennsylvania Station, completed in 1911?",
+   "options": [
+    "Shreve, Lamb & Harmon",
+    "McKim, Mead & White",
+    "Carrère and Hastings",
+    "Warren & Wetmore"
+   ],
+   "answer": 1,
+   "explanation": "The Beaux Arts station was designed by McKim, Mead & White.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/about-lpc.page",
+    "title": "Landmarks Preservation Commission: About LPC",
+    "page": null,
+    "quote": "Designed by the famous architectural firm of McKim, Mead & White and completed in 1911"
+   }
+  },
+  {
+   "id": "GUIDE-130",
+   "topic": "Landmarks",
+   "question": "In what year was the original Pennsylvania Station demolished?",
+   "options": [
+    "1945",
+    "1911",
+    "1971",
+    "1963"
+   ],
+   "answer": 3,
+   "explanation": "It was demolished in 1963 for Madison Square Garden and an underground station.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/about-lpc.page",
+    "title": "Landmarks Preservation Commission: About LPC",
+    "page": null,
+    "quote": "was demolished in 1963 to make way for Madison Square Garden and an underground commuter railroad station."
+   }
+  },
+  {
+   "id": "GUIDE-131",
+   "topic": "Landmarks",
+   "question": "How many commissioners sit on the Landmarks Preservation Commission?",
+   "options": [
+    "11",
+    "15",
+    "7",
+    "5"
+   ],
+   "answer": 0,
+   "explanation": "LPC has 11 commissioners appointed by the Mayor.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/about-lpc.page",
+    "title": "Landmarks Preservation Commission: About LPC",
+    "page": null,
+    "quote": "The agency is comprised of a panel of 11 commissioners who are appointed by the Mayor"
+   }
+  },
+  {
+   "id": "GUIDE-132",
+   "topic": "Landmarks",
+   "question": "How many scenic landmarks does LPC list?",
+   "options": [
+    "125",
+    "12",
+    "1,470",
+    "157"
+   ],
+   "answer": 1,
+   "explanation": "LPC lists 1,470 individual, 125 interior and 12 scenic landmarks.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/about-lpc.page",
+    "title": "Landmarks Preservation Commission: About LPC",
+    "page": null,
+    "quote": "1,470 individual landmarks, 125 interior landmarks, and 12 scenic landmarks."
+   }
+  },
+  {
+   "id": "GUIDE-133",
+   "topic": "Landmarks",
+   "question": "Which was among New York City's first historic districts, designated in 1965?",
+   "options": [
+    "Brooklyn Heights Historic District",
+    "Tribeca East Historic District",
+    "SoHo-Cast Iron Historic District",
+    "DUMBO Historic District"
+   ],
+   "answer": 0,
+   "explanation": "The Brooklyn Heights Historic District dates to 1965, the year LPC was created.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/lpc/downloads/pdf/Discover_NYC_Landmarks_FAQ.pdf",
+    "title": "LPC: Historic Building Data Project FAQ (PDF)",
+    "page": 1,
+    "quote": "Brooklyn Heights Historic District (1965)"
+   }
+  },
+  {
+   "id": "GUIDE-134",
+   "topic": "Landmarks",
+   "question": "The Heckscher (Crown) Building at Fifth Avenue and 57th Street was among the first skyscrapers to conform to what?",
+   "options": [
+    "The Landmarks Law",
+    "The 1811 Commissioners' Plan",
+    "The 1961 Zoning Resolution",
+    "The 1916 Zoning Resolution, the nation's first"
+   ],
+   "answer": 3,
+   "explanation": "It is one of the earliest surviving skyscrapers built under the 1916 Zoning Resolution, which required towers to taper.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2024/lpc-designates-the-heckscher-building-20240514.page",
+    "title": "LPC press release, May 14 2024",
+    "page": null,
+    "quote": "It is one of the earliest surviving skyscrapers to conform to the 1916 Zoning Resolution—the nation's first"
+   }
+  },
+  {
+   "id": "GUIDE-135",
+   "topic": "Landmarks",
+   "question": "Why did the 1916 Zoning Resolution require tall buildings to taper as they rose?",
+   "options": [
+    "To reduce fire risk",
+    "To save on steel",
+    "To let light and air reach the street",
+    "To protect views of the harbor"
+   ],
+   "answer": 2,
+   "explanation": "Setbacks let light and air reach the street to improve health and quality of life.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2024/lpc-designates-the-heckscher-building-20240514.page",
+    "title": "LPC press release, May 14 2024",
+    "page": null,
+    "quote": "requiring tall buildings to taper as they rose to allow light and air to reach the street"
+   }
+  },
+  {
+   "id": "GUIDE-136",
+   "topic": "Landmarks",
+   "question": "Warren & Wetmore, architects of the Heckscher Building, also designed which landmark?",
+   "options": [
+    "The Flatiron Building",
+    "Grand Central Terminal",
+    "The Woolworth Building",
+    "The Chrysler Building"
+   ],
+   "answer": 1,
+   "explanation": "Warren & Wetmore designed the New York Yacht Club, Grand Central Terminal and the New York Central Building.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2024/lpc-designates-the-heckscher-building-20240514.page",
+    "title": "LPC press release, May 14 2024",
+    "page": null,
+    "quote": "Warren & Wetmore, the architect of other well-known New York City landmarks including the New York Yacht Club, Grand Central Terminal"
+   }
+  },
+  {
+   "id": "GUIDE-137",
+   "topic": "Landmarks",
+   "question": "Who designed the Brutalist former Whitney Museum building at 945 Madison Avenue?",
+   "options": [
+    "Frank Lloyd Wright",
+    "Marcel Breuer",
+    "Philip Johnson",
+    "I. M. Pei"
+   ],
+   "answer": 1,
+   "explanation": "Marcel Breuer designed the 1966 building, an inverted-pyramid form.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2025/lpc-designates-the-former-whitney-museum-of-american-art-20250520.page",
+    "title": "LPC press release, May 20 2025",
+    "page": null,
+    "quote": "Designed by pioneering architect Marcel Breuer and Associates, the Brutalist-style building"
+   }
+  },
+  {
+   "id": "GUIDE-138",
+   "topic": "Landmarks",
+   "question": "When the Breuer building opened in 1966, it was the first new Manhattan museum since which one opened in 1959?",
+   "options": [
+    "The Cloisters",
+    "The Museum of Modern Art",
+    "The Frick Collection",
+    "The Guggenheim"
+   ],
+   "answer": 3,
+   "explanation": "It was the first new museum in Manhattan since the Guggenheim (1959).",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2025/lpc-designates-the-former-whitney-museum-of-american-art-20250520.page",
+    "title": "LPC press release, May 20 2025",
+    "page": null,
+    "quote": "it was the first new museum constructed in Manhattan since the Guggenheim opened in 1959"
+   }
+  },
+  {
+   "id": "GUIDE-139",
+   "topic": "Landmarks",
+   "question": "The former Whitney Museum building at 945 Madison Avenue is now the headquarters of which organization?",
+   "options": [
+    "The Metropolitan Museum of Art",
+    "Sotheby's",
+    "Christie's",
+    "The Frick Collection"
+   ],
+   "answer": 1,
+   "explanation": "Sotheby's acquired it in 2023 for its new global headquarters.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2025/lpc-designates-the-former-whitney-museum-of-american-art-20250520.page",
+    "title": "LPC press release, May 20 2025",
+    "page": null,
+    "quote": "In 2023, the building was acquired by Sotheby’s"
+   }
+  },
+  {
+   "id": "GUIDE-140",
+   "topic": "Landmarks",
+   "question": "Which building is the oldest Roman Catholic church building on Manhattan's Lower East Side?",
+   "options": [
+    "The Church of Saint Mary, 440 Grand Street",
+    "Old St. Patrick's",
+    "St. Patrick's Cathedral",
+    "St. Mark's Church in-the-Bowery"
+   ],
+   "answer": 0,
+   "explanation": "Built in 1833, it served early Irish Catholic immigrants.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2026/lpc-designates-3-buildings-linked-to-nyc-immigration-history.page",
+    "title": "LPC press release, Apr 7 2026",
+    "page": null,
+    "quote": "The Church of Saint Mary is the oldest Roman Catholic church building on Manhattan’s Lower East Side"
+   }
+  },
+  {
+   "id": "GUIDE-141",
+   "topic": "Landmarks",
+   "question": "Since 1910, the Lithuanian Alliance Building in Chelsea has served as headquarters of what?",
+   "options": [
+    "The Lithuanian Alliance of America",
+    "The Lithuanian consulate",
+    "A Lithuanian newspaper",
+    "A Lithuanian church"
+   ],
+   "answer": 0,
+   "explanation": "It houses the Lithuanian Alliance of America, the oldest continually operating Lithuanian organization in the U.S.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2026/lpc-designates-3-buildings-linked-to-nyc-immigration-history.page",
+    "title": "LPC press release, Apr 7 2026",
+    "page": null,
+    "quote": "it has served as the headquarters of the Lithuanian Alliance of America"
+   }
+  },
+  {
+   "id": "GUIDE-142",
+   "topic": "Landmarks",
+   "question": "In LPC's Garment District designations, Midtown South's garment industry is described as one of the city's most important what?",
+   "options": [
+    "Engines of New York's economy",
+    "Shipping centers",
+    "Residential districts",
+    "Tourist attractions"
+   ],
+   "answer": 0,
+   "explanation": "LPC calls the garment industry one of the most important engines of New York's economy.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2025/lpc-designates-five-garment-industry-related-buildings.page",
+    "title": "LPC press release, Aug 12 2025",
+    "page": null,
+    "quote": "the industry that was one of the most important engines of New York's economy."
+   }
+  },
+  {
+   "id": "GUIDE-143",
+   "topic": "Landmarks",
+   "question": "Which famous bookstore does LPC cite among the cultural associations of Broadway south of Union Square?",
+   "options": [
+    "Scribner's",
+    "The Strand Bookstore",
+    "Barnes & Noble",
+    "Rizzoli"
+   ],
+   "answer": 1,
+   "explanation": "LPC cites the internationally beloved Strand Bookstore.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2019/lpc-designates-7-broadway-buildings-south-ofunion-square-as-individual-landmarks.page",
+    "title": "LPC press release, Jun 11 2019",
+    "page": null,
+    "quote": "the internationally beloved Strand Bookstore."
+   }
+  },
+  {
+   "id": "GUIDE-144",
+   "topic": "Landmarks",
+   "question": "The Temple Court Building (now the Beekman Hotel) is notable for what interior feature?",
+   "options": [
+    "A two-story ballroom",
+    "A rooftop garden",
+    "A nine-story skylighted atrium",
+    "A Tiffany glass dome"
+   ],
+   "answer": 2,
+   "explanation": "More than 200 offices surrounded an ornate atrium rising nine stories to a pyramidal skylight.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2024/lpc-designates-temple-court-building-atrium-20240604.page",
+    "title": "LPC press release, Jun 4 2024",
+    "page": null,
+    "quote": "a strikingly ornate atrium that rose for nine stories to a large pyramidal skylight"
+   }
+  },
+  {
+   "id": "GUIDE-145",
+   "topic": "Landmarks",
+   "question": "In what style is the Brooklyn Edison Building at 345 Adams Street designed?",
+   "options": [
+    "Gothic Revival",
+    "Art Deco",
+    "Renaissance Revival",
+    "Brutalist"
+   ],
+   "answer": 2,
+   "explanation": "The 1922-1926 office building by McKenzie, Voorhees & Gmelin is Renaissance Revival.",
+   "source": {
+    "url": "https://www.nyc.gov/site/lpc/about/pr2024/lpc-designates-the-brooklyn-edison-building.page",
+    "title": "LPC press release, Jun 18 2024",
+    "page": null,
+    "quote": "this distinguished Renaissance Revival style office building is a notable landmark in the civic and commercial center of Brooklyn"
+   }
+  },
+  {
+   "id": "GUIDE-146",
+   "topic": "Museums & culture",
+   "question": "The City's public-private partnership with cultural institutions began in 1869 with the creation of which museum?",
+   "options": [
+    "Brooklyn Museum",
+    "American Museum of Natural History",
+    "Metropolitan Museum of Art",
+    "Museum of Modern Art"
+   ],
+   "answer": 1,
+   "explanation": "The CIG partnership began in 1869 with the American Museum of Natural History.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/cultural-funding/city-owned-institutions.page",
+    "title": "DCLA: Cultural Institutions Group",
+    "page": null,
+    "quote": "The genesis of this public-private partnership began in 1869, with the creation of the American Museum of Natural History."
+   }
+  },
+  {
+   "id": "GUIDE-147",
+   "topic": "Museums & culture",
+   "question": "Which of these is a CIG member located in the Bronx?",
+   "options": [
+    "Weeksville Heritage Center",
+    "Wave Hill",
+    "Snug Harbor Cultural Center",
+    "Flushing Town Hall"
+   ],
+   "answer": 1,
+   "explanation": "Wave Hill is in the Bronx; Flushing Town Hall is in Queens, Weeksville in Brooklyn and Snug Harbor on Staten Island.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/cultural-funding/city-owned-institutions.page",
+    "title": "DCLA: Cultural Institutions Group",
+    "page": null,
+    "quote": "Bronx Museum of the Arts Bronx Children's Museum New York Botanical Garden Wave Hill"
+   }
+  },
+  {
+   "id": "GUIDE-148",
+   "topic": "Museums & culture",
+   "question": "In which borough is the Louis Armstrong House Museum?",
+   "options": [
+    "Manhattan",
+    "Queens",
+    "Brooklyn",
+    "The Bronx"
+   ],
+   "answer": 1,
+   "explanation": "The CIG list places the Louis Armstrong House Museum in Queens.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/cultural-funding/city-owned-institutions.page",
+    "title": "DCLA: Cultural Institutions Group",
+    "page": null,
+    "quote": "Queens Flushing Town Hall Jamaica Center for Arts & Learning Louis Armstrong House Museum"
+   }
+  },
+  {
+   "id": "GUIDE-149",
+   "topic": "Museums & culture",
+   "question": "In which borough is the Weeksville Heritage Center?",
+   "options": [
+    "Queens",
+    "Brooklyn",
+    "Staten Island",
+    "Manhattan"
+   ],
+   "answer": 1,
+   "explanation": "The CIG list places Weeksville Heritage Center in Brooklyn.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/cultural-funding/city-owned-institutions.page",
+    "title": "DCLA: Cultural Institutions Group",
+    "page": null,
+    "quote": "Brooklyn Children's Museum Brooklyn Museum Weeksville Heritage Center"
+   }
+  },
+  {
+   "id": "GUIDE-150",
+   "topic": "Museums & culture",
+   "question": "Which four Queens institutions were chartered to operate facilities built for the 1964 World's Fair?",
+   "options": [
+    "Noguchi Museum, Socrates Park, Queens Museum, Hall of Science",
+    "Louis Armstrong House, Jamaica Center, Queens Museum, Citi Field",
+    "Queens Museum, Queens Botanical Garden, New York Hall of Science, Queens Theatre",
+    "MoMA PS1, Museum of the Moving Image, Flushing Town Hall, Queens Zoo"
+   ],
+   "answer": 2,
+   "explanation": "These four in Flushing Meadows-Corona Park continue operating 1964 World's Fair facilities.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/cultural-funding/history-of-city-owned-cultural-institutions.page",
+    "title": "DCLA: History of the Cultural Institutions Group",
+    "page": null,
+    "quote": "the Queens Museum of Art, the Queens Botanical Garden, the New York Hall of Science, and what later became known as Queens Theater"
+   }
+  },
+  {
+   "id": "GUIDE-151",
+   "topic": "Museums & culture",
+   "question": "The Brooklyn Institute of Arts and Sciences later split into which institutions?",
+   "options": [
+    "Green-Wood Cemetery and the Brooklyn Historical Society",
+    "Brooklyn Museum, Brooklyn Children's Museum, Brooklyn Botanic Garden and BAM",
+    "Pratt Institute and Brooklyn College",
+    "Brooklyn Public Library and Prospect Park Zoo"
+   ],
+   "answer": 1,
+   "explanation": "Its parts became the Brooklyn Museum, Children's Museum, Botanic Garden and Brooklyn Academy of Music.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/cultural-funding/history-of-city-owned-cultural-institutions.page",
+    "title": "DCLA: History of the Cultural Institutions Group",
+    "page": null,
+    "quote": "The latter's component parts later became the Brooklyn Museum of Art, the Brooklyn Children's Museum, The Brooklyn Botanic Garden, and the Brooklyn Academy of Music."
+   }
+  },
+  {
+   "id": "GUIDE-152",
+   "topic": "Museums & culture",
+   "question": "Richmond Town, a collection of historic houses on City land, is operated by which organization?",
+   "options": [
+    "Staten Island Historical Society",
+    "New-York Historical Society",
+    "Historic House Trust",
+    "Snug Harbor"
+   ],
+   "answer": 0,
+   "explanation": "Richmond Town is operated by the Staten Island Historical Society.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/cultural-funding/history-of-city-owned-cultural-institutions.page",
+    "title": "DCLA: History of the Cultural Institutions Group",
+    "page": null,
+    "quote": "Richmond Town, a collection of historic houses located on City land and operated by the Staten Island Historical Society"
+   }
+  },
+  {
+   "id": "GUIDE-153",
+   "topic": "Museums & culture",
+   "question": "What does NYC's Percent for Art Law require?",
+   "options": [
+    "Artists receive 1% property tax relief",
+    "1% of eligible City-funded construction budgets go to public art",
+    "Every new building must include a mural",
+    "1% of museum admissions go to artists"
+   ],
+   "answer": 1,
+   "explanation": "Enacted under Mayor Koch in 1982, it dedicates one percent of eligible construction budgets to public artworks.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/about/history.page",
+    "title": "NYC Department of Cultural Affairs: History",
+    "page": null,
+    "quote": "The Percent for Art Law is enacted, which requires that one percent of the budget for eligible City-funded construction is dedicated to creating public artworks."
+   }
+  },
+  {
+   "id": "GUIDE-154",
+   "topic": "Museums & culture",
+   "question": "Christo and Jeanne-Claude's 2005 Central Park installation was called what?",
+   "options": [
+    "The Gates",
+    "The Umbrellas",
+    "Surrounded Islands",
+    "Running Fence"
+   ],
+   "answer": 0,
+   "explanation": "The Gates transformed Central Park with saffron-colored fabric.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/about/history.page",
+    "title": "NYC Department of Cultural Affairs: History",
+    "page": null,
+    "quote": "Christo and Jeanne-Claude’s public art project The Gates transforms Central Park into a river of saffron-colored fabric."
+   }
+  },
+  {
+   "id": "GUIDE-155",
+   "topic": "Museums & culture",
+   "question": "Which mayor helped create the City Center of Music and Drama in 1943?",
+   "options": [
+    "Robert Wagner",
+    "John Lindsay",
+    "Jimmy Walker",
+    "Fiorello La Guardia"
+   ],
+   "answer": 3,
+   "explanation": "La Guardia and prominent New Yorkers created City Center as a municipal theater at affordable prices.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/about/history.page",
+    "title": "NYC Department of Cultural Affairs: History",
+    "page": null,
+    "quote": "create the City Center of Music and Drama as a municipal theater"
+   }
+  },
+  {
+   "id": "GUIDE-156",
+   "topic": "Museums & culture",
+   "question": "Which two companies eventually became constituents of City Center?",
+   "options": [
+    "The Philharmonic and the Public Theater",
+    "Alvin Ailey and Joffrey Ballet",
+    "American Ballet Theatre and the Met Opera",
+    "New York City Ballet and New York City Opera"
+   ],
+   "answer": 3,
+   "explanation": "NYC Ballet and NYC Opera both became City Center constituents.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/about/history.page",
+    "title": "NYC Department of Cultural Affairs: History",
+    "page": null,
+    "quote": "The New York City Ballet and the New York City Opera both eventually became constituent organizations of City Center Theater."
+   }
+  },
+  {
+   "id": "GUIDE-157",
+   "topic": "Museums & culture",
+   "question": "What is the Handel Medallion?",
+   "options": [
+    "An award for landmark restoration",
+    "New York City's highest award for contributions to its intellectual and cultural life",
+    "A prize for classical music students",
+    "A medal for tour guides"
+   ],
+   "answer": 1,
+   "explanation": "Created in 1959, it is the City's highest cultural honor for individuals.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/about/history.page",
+    "title": "NYC Department of Cultural Affairs: History",
+    "page": null,
+    "quote": "The Handel Medallion, the highest award bestowed by New York City to individuals for their contributions to the City’s intellectual and cultural life"
+   }
+  },
+  {
+   "id": "GUIDE-158",
+   "topic": "Museums & culture",
+   "question": "Created in 1898, what does the City's Art Commission review?",
+   "options": [
+    "Museum admission prices",
+    "Permanent art, architecture and landscape architecture on City-owned property",
+    "Broadway theater licenses",
+    "Street vendor permits"
+   ],
+   "answer": 1,
+   "explanation": "The 11-member panel reviews permanent works on City-owned property.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/about/history.page",
+    "title": "NYC Department of Cultural Affairs: History",
+    "page": null,
+    "quote": "The Art Commission is created, an 11-member panel that reviews permanent works of art, architecture and landscape architecture proposed for City-owned property."
+   }
+  },
+  {
+   "id": "GUIDE-159",
+   "topic": "Museums & culture",
+   "question": "Which museum opened the Rose Center for Earth and Space in 2000?",
+   "options": [
+    "Brooklyn Museum",
+    "New York Hall of Science",
+    "Intrepid Museum",
+    "American Museum of Natural History"
+   ],
+   "answer": 3,
+   "explanation": "The Rose Center opened at the American Museum of Natural History in 2000.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/about/history.page",
+    "title": "NYC Department of Cultural Affairs: History",
+    "page": null,
+    "quote": "The Rose Center for Earth and Space opens at the American Museum of Natural"
+   }
+  },
+  {
+   "id": "GUIDE-160",
+   "topic": "Museums & culture",
+   "question": "What program, born in 1978 from a Central Park Zoo refrigerator appeal, gives donated materials to arts groups and schools?",
+   "options": [
+    "Creative Engagement",
+    "Materials for the Arts",
+    "Arts for Transit",
+    "Percent for Art"
+   ],
+   "answer": 1,
+   "explanation": "Materials for the Arts (MFTA) collects donated materials and redistributes them free of charge.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dcla/about/history.page",
+    "title": "NYC Department of Cultural Affairs: History",
+    "page": null,
+    "quote": "Within minutes, the Zoo’s office is inundated with phone calls, and Materials for the Arts (MFTA) is born."
+   }
+  },
+  {
+   "id": "GUIDE-161",
+   "topic": "Immigration",
+   "question": "Per City Planning's 2013 Newest New Yorkers, which country was the largest source of NYC's foreign-born in 2011?",
+   "options": [
+    "The Dominican Republic",
+    "China",
+    "Mexico",
+    "Jamaica"
+   ],
+   "answer": 0,
+   "explanation": "The Dominican Republic led with 380,200 residents, followed by China.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/nny2013/chapter1.pdf",
+    "title": "NYC Planning: The Newest New Yorkers (2013), Chapter 1 (PDF)",
+    "page": 2,
+    "quote": "The Dominican Republic was the largest source of the foreign-born in 2011, with 380,200 resi- dents, followed by China"
+   }
+  },
+  {
+   "id": "GUIDE-162",
+   "topic": "Immigration",
+   "question": "Which region was the largest area of origin for NYC's foreign-born, per the 2013 Newest New Yorkers?",
+   "options": [
+    "Europe",
+    "Latin America",
+    "Africa",
+    "Asia"
+   ],
+   "answer": 1,
+   "explanation": "Latin America comprised nearly one-third, followed by Asia (28%) and the non-Hispanic Caribbean (19%).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/nny2013/chapter1.pdf",
+    "title": "NYC Planning: The Newest New Yorkers (2013), Chapter 1 (PDF)",
+    "page": 2,
+    "quote": "Latin America is now the largest area of origin, comprising nearly one-third of the city’s foreign-born"
+   }
+  },
+  {
+   "id": "GUIDE-163",
+   "topic": "Immigration",
+   "question": "Which landmark federal law, passed in 1965, set off the growth of NYC's foreign-born population?",
+   "options": [
+    "The Chinese Exclusion Act",
+    "The Homestead Act",
+    "The Immigration Act of 1924",
+    "The Immigration and Nationality Amendments of 1965"
+   ],
+   "answer": 3,
+   "explanation": "Since the 1965 amendments, NYC's foreign-born population has more than doubled to 3 million.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/nny2013/chapter1.pdf",
+    "title": "NYC Planning: The Newest New Yorkers (2013), Chapter 1 (PDF)",
+    "page": 2,
+    "quote": "Since the passage of the landmark Immigration andNationality Amendments of 1965, New York’s foreign-born population has more than doubled to 3 million"
+   }
+  },
+  {
+   "id": "GUIDE-164",
+   "topic": "Immigration",
+   "question": "Which Manhattan neighborhood had the most immigrants, per the 2013 Newest New Yorkers?",
+   "options": [
+    "East Harlem",
+    "the Lower East Side",
+    "Chinatown",
+    "Washington Heights"
+   ],
+   "answer": 3,
+   "explanation": "Washington Heights (80,200) led, ahead of Bensonhurst and Elmhurst.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/nny2013/chapter1.pdf",
+    "title": "NYC Planning: The Newest New Yorkers (2013), Chapter 1 (PDF)",
+    "page": 4,
+    "quote": "Washington Heights in Manhattan was the neighborhood with the largest number of immigrants (80,200)"
+   }
+  },
+  {
+   "id": "GUIDE-165",
+   "topic": "Immigration",
+   "question": "Which borough had the most immigrant residents, per the 2013 Newest New Yorkers?",
+   "options": [
+    "Queens",
+    "Manhattan",
+    "The Bronx",
+    "Brooklyn"
+   ],
+   "answer": 0,
+   "explanation": "Queens had 1.09 million immigrants and Brooklyn 946,500.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/nny2013/chapter1.pdf",
+    "title": "NYC Planning: The Newest New Yorkers (2013), Chapter 1 (PDF)",
+    "page": 3,
+    "quote": "1.09 million lived in Queens, and another 946,500 lived in Brooklyn"
+   }
+  },
+  {
+   "id": "GUIDE-166",
+   "topic": "Immigration",
+   "question": "What share of New Yorkers spoke a language other than English at home, per the 2013 Newest New Yorkers?",
+   "options": [
+    "15 percent",
+    "75 percent",
+    "49 percent",
+    "25 percent"
+   ],
+   "answer": 2,
+   "explanation": "49 percent of the population speaks a language other than English at home.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/nny2013/chapter1.pdf",
+    "title": "NYC Planning: The Newest New Yorkers (2013), Chapter 1 (PDF)",
+    "page": 1,
+    "quote": "49 per- cent of the population speaks a language other than English at home"
+   }
+  },
+  {
+   "id": "GUIDE-167",
+   "topic": "Immigration",
+   "question": "Which was the only European country in NYC's top 10 sources of foreign-born residents in 2011?",
+   "options": [
+    "Italy",
+    "Ireland",
+    "Poland",
+    "Russia"
+   ],
+   "answer": 3,
+   "explanation": "Russia was the only European country in the top 10.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/nny2013/chapter1.pdf",
+    "title": "NYC Planning: The Newest New Yorkers (2013), Chapter 1 (PDF)",
+    "page": 2,
+    "quote": "Russia was the only European country to make the top 10 in 2011."
+   }
+  }
+ ]
+}
