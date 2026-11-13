@@ -430,7 +430,7 @@ def fetch(b, since):
 
     # OATH: match on violation-location borough/block/lot (street name is often blank since May 2026).
     oath_where = (f"violation_location_borough={q(BORO[b['boro']])} AND violation_location_block_no={q(b['block'])} "
-                  f"AND violation_location_lot_no={q(b['lot'][-4:])}")
+                  f"AND violation_location_lot_no in ({q(b['lot'][-4:])},{q('0' + b['lot'][-4:])})")  # FDNY/DOB rows can use 5-digit lots
     oath_rows = soda("oath", {"$where": f"{oath_where} AND violation_date >= {q(s_iso)}", "$limit": 500})
     for r in oath_rows:
         if r["ticket_number"].lstrip("0") in seen_tickets:
@@ -446,7 +446,7 @@ def upcoming(b, today, horizon=14):
     """Reminders for OATH hearings in the next `horizon` days and status changes worth flagging."""
     out = []
     oath_where = (f"violation_location_borough={q(BORO[b['boro']])} AND violation_location_block_no={q(b['block'])} "
-                  f"AND violation_location_lot_no={q(b['lot'][-4:])}")
+                  f"AND violation_location_lot_no in ({q(b['lot'][-4:])},{q('0' + b['lot'][-4:])})")  # FDNY/DOB rows can use 5-digit lots
     rows = soda("oath", {"$where": f"{oath_where} AND hearing_date >= {q((today - dt.timedelta(days=120)).isoformat())}", "$limit": 500})
     for r in rows:
         hd = parse_date(r.get("hearing_date"))

@@ -211,7 +211,7 @@ async function lookup(text, boro) {
   const binList = bins.map(q).join(",");
   const today = new Date(); today.setHours(0,0,0,0);
   const todayIso = today.toISOString().slice(0, 10);
-  const oathWhere = `violation_location_borough=${q(BORO[b])} AND violation_location_block_no=${q(block)} AND violation_location_lot_no=${q(lot)}`;
+  const oathWhere = `violation_location_borough=${q(BORO[b])} AND violation_location_block_no=${q(block)} AND violation_location_lot_no in (${q(lot)},${q("0" + lot)})`;  // FDNY and some DOB rows store a 5-digit lot
   const none = Promise.resolve([]);
   const bbWhere = `bbl=${q(bbl)}` + (bins.length ? ` OR bin in (${binList})` : "");
   const [hpd, dob, ecb, oath, bedbug] = await Promise.all([
