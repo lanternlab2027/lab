@@ -1,0 +1,3157 @@
+{
+ "exam": "FPCES",
+ "title": "Examen de Protección de Alimentos de NYC",
+ "real_exam_questions": 50,
+ "real_exam_pass": 35,
+ "real_exam_minutes": 60,
+ "mock_questions": 50,
+ "mock_minutes": 60,
+ "page_numbering": "Índice de página del PDF (1 = primera página); null para páginas HTML",
+ "lang": "es",
+ "questions": [
+  {
+   "id": "FPC-001",
+   "topic": "Curso y certificado",
+   "question": "¿Qué exige el Código de Salud de NYC a un establecimiento de servicio de alimentos mientras está funcionando?",
+   "options": [
+    "Un exterminador con licencia en el local",
+    "Al menos un supervisor con certificado de protección de alimentos en el local",
+    "Un inspector del DOHMH presente",
+    "Que todo el personal tenga el certificado de protección de alimentos"
+   ],
+   "answer": 1,
+   "explanation": "Siempre que el establecimiento esté funcionando, debe haber al menos un supervisor certificado en el local.",
+   "source": {
+    "url": "https://www.nyc.gov/site/doh/business/health-academy/food-protection-online-free.page",
+    "title": "DOHMH: Food Protection Online Course",
+    "page": null,
+    "quote": "there be at least one supervisor certified in food protection on site any time a food service establishment and non-retail food processing establishment is operating.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "What does the NYC Health Code require of a food service establishment while it is operating?",
+    "answer": "At least one supervisor certified in food protection on site"
+   }
+  },
+  {
+   "id": "FPC-002",
+   "topic": "Curso y certificado",
+   "question": "¿Cuántas lecciones tiene el curso gratuito en línea de protección de alimentos del DOHMH?",
+   "options": [
+    "10",
+    "5",
+    "20",
+    "15"
+   ],
+   "answer": 3,
+   "explanation": "El curso se hace a su propio ritmo y tiene 15 lecciones. Después de cada lección hay un cuestionario que hay que aprobar.",
+   "source": {
+    "url": "https://www.nyc.gov/site/doh/business/health-academy/food-protection-online-free.page",
+    "title": "DOHMH: Food Protection Online Course",
+    "page": null,
+    "quote": "The course is self-paced and consists of 15 lessons.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "How many lessons are in DOHMH's free online Food Protection Course?",
+    "answer": "15"
+   }
+  },
+  {
+   "id": "FPC-003",
+   "topic": "Curso y certificado",
+   "question": "¿Cuál es el precio base del examen final presencial después del curso gratuito en línea?",
+   "options": [
+    "$50",
+    "$114",
+    "Es gratis",
+    "$24"
+   ],
+   "answer": 3,
+   "explanation": "El curso en línea es gratis; el precio base del examen presencial es $24.",
+   "source": {
+    "url": "https://www.nyc.gov/site/doh/business/health-academy/food-protection-online-free.page",
+    "title": "DOHMH: Food Protection Online Course",
+    "page": null,
+    "quote": "The base price of the exam is $24.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "What is the base price of the in-person final exam after the free online course?",
+    "answer": "$24"
+   }
+  },
+  {
+   "id": "FPC-004",
+   "topic": "Curso y certificado",
+   "question": "¿Por cuánto tiempo es válido el certificado de protección de alimentos?",
+   "options": [
+    "Nunca vence",
+    "3 años",
+    "5 años",
+    "1 año"
+   ],
+   "answer": 0,
+   "explanation": "El certificado nunca vence y no hay que repetir el curso, aunque en circunstancias especiales el Departamento puede exigirlo.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/hany/food-protection-course-faq.pdf",
+    "title": "DOHMH Food Protection Course - Online FAQ (PDF)",
+    "page": 1,
+    "quote": "The certificate never expires. There is no need to repeat the course.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "How long is a Food Protection Certificate valid?",
+    "answer": "It never expires"
+   }
+  },
+  {
+   "id": "FPC-005",
+   "topic": "Curso y certificado",
+   "question": "Si no aprueba el cuestionario de una lección en línea, ¿qué tiene que hacer antes de repetirlo?",
+   "options": [
+    "Empezar todo el curso de nuevo",
+    "Esperar 24 horas",
+    "Pagar $10",
+    "Pasar al menos 15 minutos seguidos activo en la lección"
+   ],
+   "answer": 3,
+   "explanation": "Tiene que volver a abrir la lección y pasar al menos 15 minutos seguidos activo en ella.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/hany/food-protection-course-faq.pdf",
+    "title": "DOHMH Food Protection Course - Online FAQ (PDF)",
+    "page": 1,
+    "quote": "spend at least 15 consecutive active minutes on the lesson before you can take the quiz again.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "If you fail an online lesson quiz, what must you do before retaking it?",
+    "answer": "Spend at least 15 consecutive active minutes on the lesson"
+   }
+  },
+  {
+   "id": "FPC-006",
+   "topic": "Curso y certificado",
+   "question": "¿Cuánto dura el curso presencial (en salón de clases) de protección de alimentos?",
+   "options": [
+    "3 horas",
+    "40 horas en dos semanas",
+    "8 horas en un solo día",
+    "15 horas en cinco días"
+   ],
+   "answer": 3,
+   "explanation": "El curso presencial dura 15 horas, repartidas en cinco sesiones diarias de 3 horas.",
+   "source": {
+    "url": "https://www.nyc.gov/site/doh/business/health-academy/food-protection-classroom.page",
+    "title": "DOHMH: Food Protection: Classroom",
+    "page": null,
+    "quote": "The course is 15 hours long and is given over five days and each daily session is three hours long.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "How long is the classroom Food Protection Course?",
+    "answer": "15 hours over five days"
+   }
+  },
+  {
+   "id": "FPC-007",
+   "topic": "Curso y certificado",
+   "question": "¿De qué división del Departamento de Salud depende la Academia de Salud, que ofrece el curso de protección de alimentos?",
+   "options": [
+    "La División de Control de Enfermedades",
+    "La División de Salud Ambiental",
+    "La Oficina de Estadísticas Vitales",
+    "La Oficina del Inspector General"
+   ],
+   "answer": 1,
+   "explanation": "La Academia de Salud es parte de la División de Salud Ambiental.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 4,
+    "quote": "La Academia de Salud (dependiente de la División de Salud Ambiental) ofrece al público cursos de capacitación y certificación",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which division of the Health Department includes the Health Academy, which provides the Food Protection Course?",
+    "answer": "The Division of Environmental Health"
+   }
+  },
+  {
+   "id": "FPC-008",
+   "topic": "Curso y certificado",
+   "question": "¿Es legal darle una propina a un inspector sanitario del Departamento de Salud?",
+   "options": [
+    "No; ofrecer cualquier soborno, propina o recompensa a cambio de mala conducta oficial es un delito",
+    "Sí, si se declara en un formulario",
+    "Sí, si es menos de $25",
+    "Sí, después de la inspección"
+   ],
+   "answer": 0,
+   "explanation": "Es ilegal ofrecerle al inspector un soborno, una propina o cualquier recompensa.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 3,
+    "quote": "Ofrecer sobornos, propinas o recompensas monetarias a cambio de mala conducta oficial es un delito",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Is it legal to offer a Health Department sanitarian a gratuity?",
+    "answer": "No; offering any bribe, gratuity or reward for official misconduct is a crime"
+   }
+  },
+  {
+   "id": "FPC-009",
+   "topic": "Permisos e inspección",
+   "question": "¿Quién emite el permiso que debe tener todo establecimiento de servicio de alimentos en NYC?",
+   "options": [
+    "El Departamento de Edificios de NYC",
+    "El Departamento de Agricultura del Estado de Nueva York",
+    "El Departamento de Bomberos (FDNY)",
+    "El Departamento de Salud de la Ciudad de Nueva York"
+   ],
+   "answer": 3,
+   "explanation": "Todo establecimiento de servicio de alimentos necesita un permiso válido y vigente del Departamento de Salud de la Ciudad.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "deben tener un permiso válido y vigente, emitido por el Departamento de Salud de la Ciudad de Nueva York",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Who issues the permit every NYC food service establishment must hold?",
+    "answer": "The New York City Health Department"
+   }
+  },
+  {
+   "id": "FPC-010",
+   "topic": "Permisos e inspección",
+   "question": "¿Cuándo tienen derecho los inspectores de salud a inspeccionar un establecimiento de servicio de alimentos?",
+   "options": [
+    "Solo después de una queja",
+    "Solo con 24 horas de aviso",
+    "Solo en horario comercial y con el dueño presente",
+    "En cualquier momento en que esté funcionando, con acceso a todas las áreas"
+   ],
+   "answer": 3,
+   "explanation": "Pueden inspeccionar cualquier establecimiento que esté funcionando, y se les debe dar acceso a todas las áreas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "Los inspectores de salud tienen derecho a inspeccionar cualquier establecimiento de servicio de alimentos o de procesamiento de alimentos que estén en funcionando",
+    "lang": "es"
+   },
+   "en": {
+    "question": "When do health inspectors have the right to inspect a food service establishment?",
+    "answer": "Any time it is operating, with access to all areas"
+   }
+  },
+  {
+   "id": "FPC-011",
+   "topic": "Permisos e inspección",
+   "question": "Según el Código de Salud de NYC, ¿quién debe tener el certificado de protección de alimentos en un establecimiento de servicio de alimentos?",
+   "options": [
+    "Los supervisores",
+    "Solo el dueño",
+    "Todos los empleados",
+    "Solo los cocineros"
+   ],
+   "answer": 0,
+   "explanation": "Los supervisores de todos los establecimientos de servicio de alimentos deben tener el certificado.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "los supervisores de todos los establecimientos de servicio de alimentos deben tener un certificado de protección de alimentos",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Under the NYC Health Code, who in a food service establishment must hold a Food Protection Certificate?",
+    "answer": "Supervisors"
+   }
+  },
+  {
+   "id": "FPC-012",
+   "topic": "Permisos e inspección",
+   "question": "¿Qué artículo del Código de Salud regula el funcionamiento de los establecimientos de comida?",
+   "options": [
+    "Artículo 11",
+    "Artículo 151",
+    "Artículo 81",
+    "Artículo 47"
+   ],
+   "answer": 2,
+   "explanation": "El Artículo 81 regula los establecimientos de comida para prevenir peligros para la salud pública.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 1,
+    "quote": "el Artículo 81, que regula las operaciones de los establecimientos de comida para prevenir amenazas a la salud pública",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which Health Code article regulates the operation of food establishments?",
+    "answer": "Article 81"
+   }
+  },
+  {
+   "id": "FPC-013",
+   "topic": "Definiciones",
+   "question": "¿Cómo define el curso la palabra «alimento»?",
+   "options": [
+    "Solo los alimentos potencialmente peligrosos",
+    "Solo lo cocinado que se vende a los clientes",
+    "Cualquier sustancia comestible, hielo, bebida o ingrediente que se usa o se vende para el consumo humano",
+    "Todo, menos las bebidas y el hielo"
+   ],
+   "answer": 2,
+   "explanation": "El hielo y las bebidas también cuentan como alimento.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "Alimento se refiere a cualquier sustancia comestible, hielo, bebidas o ingredientes que se usa o se vende para el consumo humano.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How does the course define 'food'?",
+    "answer": "Any edible substance, ice, beverage or ingredient used or sold for human consumption"
+   }
+  },
+  {
+   "id": "FPC-014",
+   "topic": "Definiciones",
+   "question": "¿Qué son los alimentos potencialmente peligrosos (PHF)?",
+   "options": [
+    "Alimentos que causan alergias",
+    "Alimentos que favorecen el crecimiento rápido de microorganismos",
+    "Alimentos con la fecha de venta vencida",
+    "Alimentos que tienen huesos"
+   ],
+   "answer": 1,
+   "explanation": "Los PHF favorecen el crecimiento rápido de microbios. La guía oficial en español los llama «alimentos potencialmente dañinos».",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "Alimentos potencialmente dañinos (Potentially Hazardous Foods, PHF, por sus siglas en inglés) son los alimentos que son propicios para el rápido crecimiento de microorganismos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What are Potentially Hazardous Foods (PHFs)?",
+    "answer": "Foods which support rapid growth of microorganisms"
+   }
+  },
+  {
+   "id": "FPC-015",
+   "topic": "Definiciones",
+   "question": "¿Cuál de estos es un alimento potencialmente peligroso (PHF)?",
+   "options": [
+    "Arroz cocido",
+    "Pasta seca sin cocinar",
+    "Azúcar",
+    "Sopa enlatada y sellada"
+   ],
+   "answer": 0,
+   "explanation": "Ejemplos de PHF: carnes, aves, leche y lácteos, pescado, mariscos, tofu, arroz cocido, pasta, frijoles, papas y ajo en aceite.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "Algunos ejemplos de PHF incluyen: todas las carnes crudas y cocidas, aves, leche y productos lácteos, pescado, mariscos, tofu, arroz cocido",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which of these is listed as a Potentially Hazardous Food?",
+    "answer": "Cooked rice"
+   }
+  },
+  {
+   "id": "FPC-016",
+   "topic": "Definiciones",
+   "question": "¿Qué es un alimento listo para comer?",
+   "options": [
+    "Cualquier alimento congelado",
+    "Un alimento en envase de atmósfera modificada",
+    "Un alimento que ya se cocinó una vez",
+    "Un alimento que no necesita más calor ni lavado"
+   ],
+   "answer": 3,
+   "explanation": "Un alimento listo para comer no se vuelve a cocinar ni a lavar, así que hay que tener más cuidado con él.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 3,
+    "quote": "Any food product that does not need additional heat treatment or washing is called ready-to-eat food.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "What is ready-to-eat food?",
+    "answer": "Food that needs no additional heat treatment or washing"
+   }
+  },
+  {
+   "id": "FPC-017",
+   "topic": "Definiciones",
+   "question": "¿A quién se deben comprar todos los alimentos?",
+   "options": [
+    "A fuentes aprobadas",
+    "A cualquier restaurante con licencia",
+    "Al proveedor más barato",
+    "Solo a granjas locales"
+   ],
+   "answer": 0,
+   "explanation": "Todos los alimentos deben venir de fuentes aprobadas que cumplan las reglas de producción.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 3,
+    "quote": "All foods must be purchased from approved sources.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "From whom must all foods be purchased?",
+    "answer": "Approved sources"
+   }
+  },
+  {
+   "id": "FPC-018",
+   "topic": "Temperatura",
+   "question": "¿Cuál es la zona de peligro de temperatura?",
+   "options": [
+    "Entre 0 °F y 41 °F",
+    "Entre 41 °F y 140 °F",
+    "Entre 32 °F y 100 °F",
+    "Entre 50 °F y 165 °F"
+   ],
+   "answer": 1,
+   "explanation": "Entre 41 °F y 140 °F la mayoría de los microbios dañinos se multiplican rápido.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "La zona de peligro de temperatura está entre 41 y 140 °F.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is the Temperature Danger Zone?",
+    "answer": "Between 41°F and 140°F"
+   }
+  },
+  {
+   "id": "FPC-019",
+   "topic": "Temperatura",
+   "question": "¿A qué temperatura o menos se deben mantener los alimentos fríos (menos el pescado ahumado)?",
+   "options": [
+    "41 °F",
+    "32 °F",
+    "45 °F",
+    "38 °F"
+   ],
+   "answer": 0,
+   "explanation": "Los alimentos fríos se mantienen a 41 °F o menos; el pescado ahumado, a 38 °F o menos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "Todos los alimentos fríos se deben mantener a una temperatura igual o inferior a 41 °F (excepto el pescado ahumado",
+    "lang": "es"
+   },
+   "en": {
+    "question": "At or below what temperature must cold foods be held (other than smoked fish)?",
+    "answer": "41°F"
+   }
+  },
+  {
+   "id": "FPC-020",
+   "topic": "Temperatura",
+   "question": "¿A qué temperatura o menos se debe mantener el pescado ahumado?",
+   "options": [
+    "38 °F",
+    "45 °F",
+    "0 °F",
+    "41 °F"
+   ],
+   "answer": 0,
+   "explanation": "El pescado ahumado se mantiene a 38 °F o menos para evitar el crecimiento de Clostridium botulinum.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "El pescado ahumado deberá mantenerse a una temperatura igual o inferior a 38 °F para evitar el crecimiento de la bacteria Clostridium botulinum.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Smoked fish must be held at or below what temperature?",
+    "answer": "38°F"
+   }
+  },
+  {
+   "id": "FPC-021",
+   "topic": "Temperatura",
+   "question": "¿A qué temperatura se deben mantener los alimentos congelados?",
+   "options": [
+    "32 °F o menos",
+    "20 °F o menos",
+    "0 °F o menos",
+    "41 °F o menos"
+   ],
+   "answer": 2,
+   "explanation": "Los alimentos congelados se mantienen a 0 °F o menos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 18,
+    "quote": "la carne fresca, de aves y otros alimentos potencialmente peligrosos, y a 0 °F o menos, los alimentos congelados.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "At what temperature must frozen foods be kept?",
+    "answer": "0°F or lower"
+   }
+  },
+  {
+   "id": "FPC-022",
+   "topic": "Temperatura",
+   "question": "¿A qué temperatura se deben mantener los alimentos calientes en una unidad para mantenerlos calientes?",
+   "options": [
+    "120 °F o más",
+    "140 °F o más",
+    "100 °F o más",
+    "165 °F o más"
+   ],
+   "answer": 1,
+   "explanation": "Para mantener la comida caliente se necesitan 140 °F o más.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "Los alimentos calientes que se almacenen en unidades para mantener el calor deben estar a una temperatura de 140 °F o superior.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "At what temperature must hot foods in a hot holding unit be held?",
+    "answer": "140°F or higher"
+   }
+  },
+  {
+   "id": "FPC-023",
+   "topic": "Temperatura",
+   "question": "¿Después de cuánto tiempo en la zona de peligro de temperatura hay que desechar los alimentos potencialmente peligrosos?",
+   "options": [
+    "Más de 2 horas",
+    "Más de 6 horas",
+    "Más de 4 horas",
+    "Más de 30 minutos"
+   ],
+   "answer": 0,
+   "explanation": "Después de más de 2 horas en la zona de peligro, la comida ya no es segura.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "Si se dejan alimentos potencialmente peligrosos en la zona de peligro de temperatura durante más de 2 horas, estos alimentos ya no son seguros",
+    "lang": "es"
+   },
+   "en": {
+    "question": "If potentially hazardous foods are left in the Temperature Danger Zone for more than how long, must they be discarded?",
+    "answer": "2 hours"
+   }
+  },
+  {
+   "id": "FPC-024",
+   "topic": "Temperatura",
+   "question": "¿Dónde se debe colocar el termómetro de un refrigerador?",
+   "options": [
+    "Por fuera de la puerta",
+    "Dentro del congelador",
+    "En la parte más caliente de la unidad",
+    "En la parte más fría de la unidad"
+   ],
+   "answer": 2,
+   "explanation": "Va en la parte más caliente (más cálida) de la unidad para medir la temperatura del aire.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 18,
+    "quote": "los termómetros deben estar ubicados en las partes más cálidas de la unidad de refrigeración.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Where should a refrigeration thermometer be placed?",
+    "answer": "In the warmest spot in the unit"
+   }
+  },
+  {
+   "id": "FPC-025",
+   "topic": "Termómetros",
+   "question": "¿Qué tipo de termómetro está prohibido en un establecimiento de servicio de alimentos?",
+   "options": [
+    "Los termómetros de vidrio",
+    "Los termistores",
+    "Los termómetros de vástago bimetálico",
+    "Los termopares"
+   ],
+   "answer": 0,
+   "explanation": "La ley prohíbe los termómetros de vidrio.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "La ley prohíbe el uso de termómetros de vidrio en establecimientos de servicio de alimentos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which type of thermometer is prohibited in a food service establishment?",
+    "answer": "Glass thermometers"
+   }
+  },
+  {
+   "id": "FPC-026",
+   "topic": "Termómetros",
+   "question": "¿Cuál es el rango de temperatura de un termómetro de vástago bimetálico?",
+   "options": [
+    "De 50 °F a 500 °F",
+    "De 0 °F a 220 °F",
+    "De 32 °F a 212 °F",
+    "De -40 °F a 100 °F"
+   ],
+   "answer": 1,
+   "explanation": "El termómetro de vástago bimetálico mide de 0 °F a 220 °F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "el termómetro de vástago bimetálico (intervalo de 0 a 220 °F), el termopar y el termistor (digital).",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is the temperature range of a bimetallic stem thermometer?",
+    "answer": "0°F to 220°F"
+   }
+  },
+  {
+   "id": "FPC-027",
+   "topic": "Termómetros",
+   "question": "¿Cómo se le conoce comúnmente al termómetro termistor?",
+   "options": [
+    "Termómetro de vidrio",
+    "Termómetro de carátula",
+    "Pistola infrarroja",
+    "Termómetro digital"
+   ],
+   "answer": 3,
+   "explanation": "El termistor tiene lectura digital y se le conoce como termómetro digital.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "el termopar y el termistor (digital).",
+    "lang": "es"
+   },
+   "en": {
+    "question": "A thermistor thermometer is commonly called what?",
+    "answer": "A digital thermometer"
+   }
+  },
+  {
+   "id": "FPC-028",
+   "topic": "Termómetros",
+   "question": "Según el manual, ¿qué tan preciso es un termómetro bimetálico?",
+   "options": [
+    "Más o menos 2 °F",
+    "Más o menos 10 °F",
+    "Más o menos 5 °F",
+    "Más o menos 0.1 °F"
+   ],
+   "answer": 0,
+   "explanation": "El bimetálico tiene una precisión de ±2 °F y es fácil de recalibrar.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 8,
+    "quote": "tiene una precisión de ±2 °F de diferencia y es fácil de recalibrar.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How accurate is a bimetallic stem thermometer, per the Training Manual?",
+    "answer": "Plus or minus 2°F"
+   }
+  },
+  {
+   "id": "FPC-029",
+   "topic": "Termómetros",
+   "question": "Al calibrar con hielo, ¿qué temperatura debe marcar el termómetro en una mezcla de mitad hielo y mitad agua?",
+   "options": [
+    "41 °F",
+    "212 °F",
+    "32 °F",
+    "0 °F"
+   ],
+   "answer": 2,
+   "explanation": "En la mezcla 50/50 de hielo y agua debe marcar 32 °F. Si no, se ajusta la tuerca.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 8,
+    "quote": "en una solución de hielo y agua 50/50. Cuando el indicador se detiene, mueva la tuerca de ajuste hasta que marque 32 °F.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "In the ice-point calibration method, what temperature should a thermometer read in a 50/50 ice-water slush?",
+    "answer": "32°F"
+   }
+  },
+  {
+   "id": "FPC-030",
+   "topic": "Termómetros",
+   "question": "¿Dónde se debe meter la punta del termómetro para medir la temperatura interna de un alimento?",
+   "options": [
+    "En el líquido alrededor del alimento",
+    "En la orilla del recipiente",
+    "En la superficie del alimento",
+    "En la parte más gruesa o en el centro del producto"
+   ],
+   "answer": 3,
+   "explanation": "Métala en la parte más gruesa o en el centro, y mejor en varios puntos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 4,
+    "quote": "Measure the internal product temperature by inserting the probe into the thickest part or the center of the product.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "Where should the thermometer probe be inserted to measure a food's internal temperature?",
+    "answer": "The thickest part or the center of the product"
+   }
+  },
+  {
+   "id": "FPC-031",
+   "topic": "Recibo de mercancía",
+   "question": "La carne inspeccionada por el USDA debe tener:",
+   "options": [
+    "Una fecha límite de venta de 9 días",
+    "Una etiqueta de mariscos",
+    "Solo una etiqueta del país de origen",
+    "El sello de inspección del USDA"
+   ],
+   "answer": 3,
+   "explanation": "La carne inspeccionada por el USDA debe tener el sello de inspección del USDA.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "deberá tener el sello de inspección del USDA.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Meat inspected by the USDA must bear what?",
+    "answer": "A USDA inspection stamp"
+   }
+  },
+  {
+   "id": "FPC-032",
+   "topic": "Recibo de mercancía",
+   "question": "¿Por cuánto tiempo se deben guardar las etiquetas de los mariscos?",
+   "options": [
+    "Hasta la próxima inspección",
+    "Al menos 90 días después de usar el producto",
+    "1 año",
+    "30 días después de la entrega"
+   ],
+   "answer": 1,
+   "explanation": "Las etiquetas de mariscos se archivan al menos 90 días después de usar el producto.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 1,
+    "quote": "Estas etiquetas deben archivarse durante al menos noventa días después del uso del producto.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How long must shellfish tags be kept on file?",
+    "answer": "At least 90 days after the product is used"
+   }
+  },
+  {
+   "id": "FPC-033",
+   "topic": "Recibo de mercancía",
+   "question": "¿Qué fecha límite de venta tiene la leche pasteurizada?",
+   "options": [
+    "45 días",
+    "3 días",
+    "30 días",
+    "9 días"
+   ],
+   "answer": 3,
+   "explanation": "La leche pasteurizada tiene fecha límite de venta de 9 días; la ultrapasteurizada, de no más de 45 días.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "La leche y los productos lácteos deben estar pasteurizados, con fecha límite de venta de nueve días",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What sell-by dating applies to pasteurized milk?",
+    "answer": "9 days"
+   }
+  },
+  {
+   "id": "FPC-034",
+   "topic": "Recibo de mercancía",
+   "question": "¿Qué fecha límite de venta tienen los productos lácteos ultrapasteurizados?",
+   "options": [
+    "90 días",
+    "45 días",
+    "14 días",
+    "9 días"
+   ],
+   "answer": 1,
+   "explanation": "Los ultrapasteurizados tienen fecha límite de venta de no más de 45 días.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "o ultrapasteurizados, con fecha límite de venta no superior a 45 días.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What sell-by dating applies to ultra-pasteurized milk products?",
+    "answer": "45 days"
+   }
+  },
+  {
+   "id": "FPC-035",
+   "topic": "Recibo de mercancía",
+   "question": "Al recibir mercancía, ¿qué latas debe rechazar?",
+   "options": [
+    "Latas de más de un galón",
+    "Latas con etiqueta de papel",
+    "Latas abolladas, con fugas, oxidadas o hinchadas",
+    "Latas de otro estado"
+   ],
+   "answer": 2,
+   "explanation": "Rechace las latas abolladas, con fugas, oxidadas o hinchadas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 14,
+    "quote": "Se deben retirar de circulación todas las latas que tengan pérdidas o los extremos hinchados, que estén muy oxidadas o abolladas",
+    "lang": "es"
+   },
+   "en": {
+    "question": "When receiving, which canned goods should you look out for and reject?",
+    "answer": "Dented, leaking, rusted or swollen cans"
+   }
+  },
+  {
+   "id": "FPC-036",
+   "topic": "Recibo de mercancía",
+   "question": "¿De qué color debe ser la carne de res fresca al recibirla?",
+   "options": [
+    "De rojo vivo a rojo oscuro",
+    "De café a gris",
+    "Rosada con orillas verdes",
+    "De morada a negra"
+   ],
+   "answer": 0,
+   "explanation": "La carne de res debe ser de rojo vivo a rojo oscuro y no tener mal olor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 9,
+    "quote": "el color de la carne de res debe ser rojo vivo a oscuro",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What color should fresh beef be when received?",
+    "answer": "Bright to dark red"
+   }
+  },
+  {
+   "id": "FPC-037",
+   "topic": "Recibo de mercancía",
+   "question": "¿Qué se debe hacer con las frutas y verduras que se van a servir crudas?",
+   "options": [
+    "Congelarlas primero",
+    "Remojarlas en cloro",
+    "Cocinarlas a 140 °F",
+    "Lavarlas bien antes de servirlas"
+   ],
+   "answer": 3,
+   "explanation": "Las frutas y verduras que se sirven crudas se deben lavar bien.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "Todas las frutas y verduras servidas crudas deben ser lavadas cuidadosamente antes de ser servidas.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What must be done with all fruits and vegetables that will be served raw?",
+    "answer": "Thoroughly wash them before serving"
+   }
+  },
+  {
+   "id": "FPC-038",
+   "topic": "Recibo de mercancía",
+   "question": "¿Se permite envasar alimentos al vacío en un establecimiento de venta al por menor?",
+   "options": [
+    "Sí, cualquier alimento",
+    "No, a menos que el Departamento de Salud dé un permiso especial",
+    "Sí, pero solo carne",
+    "Sí, si se le pone la fecha"
+   ],
+   "answer": 1,
+   "explanation": "Está prohibido envasar al vacío, salvo con un permiso especial del Departamento de Salud.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "se envase al vacío cualquier producto alimenticio de establecimientos de alimentos de venta minorista, a menos que se obtenga un permiso especial",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Is vacuum packaging food allowed in a retail food establishment?",
+    "answer": "No, unless special authorization is obtained from the Health Department"
+   }
+  },
+  {
+   "id": "FPC-039",
+   "topic": "Recibo de mercancía",
+   "question": "¿Cómo se deben usar los alimentos comerciales envasados en atmósfera modificada?",
+   "options": [
+    "Dentro de 24 horas después de abrirlos, diga lo que diga la etiqueta",
+    "Según las especificaciones del fabricante",
+    "Solo después de congelarlos",
+    "Solo en platos calientes"
+   ],
+   "answer": 1,
+   "explanation": "Se usan según las especificaciones del fabricante.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "Todos los alimentos envasados en atmósfera modificada deberán usarse de acuerdo con las especificaciones del fabricante.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How must commercial foods in modified atmosphere packaging be used?",
+    "answer": "Per the manufacturer's specifications"
+   }
+  },
+  {
+   "id": "FPC-040",
+   "topic": "Almacenamiento",
+   "question": "¿Qué significa FIFO?",
+   "options": [
+    "Food Inspection For Operators: inspección para operadores",
+    "Freeze It, Fry It Once: congélelo y fríalo una vez",
+    "First In, First Out: primero que entra, primero que sale",
+    "First Inspected, First Opened: primero inspeccionado, primero abierto"
+   ],
+   "answer": 2,
+   "explanation": "FIFO significa «primero que entra, primero que sale». El primer paso es ponerles fecha a los productos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "FIFO significa primero que entra, primero que sale (First In First Out, FIFO).",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What does FIFO stand for?",
+    "answer": "First In, First Out"
+   }
+  },
+  {
+   "id": "FPC-041",
+   "topic": "Almacenamiento",
+   "question": "¿Cuál es el primer paso para aplicar el método FIFO?",
+   "options": [
+    "Ponerles fecha a los productos",
+    "Congelar todos los productos",
+    "Botar la mercancía vieja",
+    "Marcar los alérgenos"
+   ],
+   "answer": 0,
+   "explanation": "El primer paso del FIFO es ponerles fecha a los productos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "El primer paso para implementar el método FIFO es ponerles fecha a los productos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is the first step in implementing the FIFO method?",
+    "answer": "Date the products"
+   }
+  },
+  {
+   "id": "FPC-042",
+   "topic": "Almacenamiento",
+   "question": "¿A qué altura del piso se deben guardar los alimentos?",
+   "options": [
+    "Al menos 12 pulgadas",
+    "Al menos 2 pulgadas",
+    "Al menos 18 pulgadas",
+    "Al menos 6 pulgadas"
+   ],
+   "answer": 3,
+   "explanation": "El Código de Salud exige guardar todos los alimentos al menos a 6 pulgadas del piso.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "todos los productos alimenticios deberán ser almacenados al menos a 6 pulgadas del piso.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How high off the floor must food items be stored?",
+    "answer": "At least 6 inches"
+   }
+  },
+  {
+   "id": "FPC-043",
+   "topic": "Almacenamiento",
+   "question": "En el refrigerador, ¿dónde se deben guardar los alimentos crudos con respecto a los cocidos?",
+   "options": [
+    "En el mismo estante, uno al lado del otro",
+    "En la puerta",
+    "Encima de los alimentos cocidos",
+    "Debajo de los alimentos cocidos"
+   ],
+   "answer": 3,
+   "explanation": "Guardar lo crudo debajo de lo cocido evita la contaminación cruzada.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "los alimentos crudos que se almacenen en el refrigerador deberán situarse en estantes inferiores a los estantes donde se almacenan los alimentos cocidos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "In a refrigerator, where must raw foods be stored relative to cooked foods?",
+    "answer": "Below cooked foods"
+   }
+  },
+  {
+   "id": "FPC-044",
+   "topic": "Almacenamiento",
+   "question": "Al guardar carnes crudas de abajo hacia arriba, ¿cuál va en el estante de más abajo?",
+   "options": [
+    "Carne molida",
+    "Bistec de res",
+    "Aves (pollo)",
+    "Cerdo"
+   ],
+   "answer": 2,
+   "explanation": "De abajo hacia arriba: aves, carnes molidas, cerdo y después las demás carnes.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 89,
+    "quote": "Store raw meats in the following order from bottom to top: i. Poultry ii. Ground meats iii. Pork iv. All other meats",
+    "lang": "en"
+   },
+   "en": {
+    "question": "Storing raw meats from bottom to top, which goes on the bottom shelf?",
+    "answer": "Poultry"
+   }
+  },
+  {
+   "id": "FPC-045",
+   "topic": "Almacenamiento",
+   "question": "¿Qué condiciones recomienda el manual para el almacén de alimentos secos?",
+   "options": [
+    "Humedad de 10% y 90 °F",
+    "Humedad de 50% y temperatura de 70 °F",
+    "Humedad de 90% y 41 °F",
+    "Cualquier condición, si todo está sellado"
+   ],
+   "answer": 1,
+   "explanation": "Para el almacén seco se recomienda mucho una humedad de 50% y una temperatura de 70 °F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 85,
+    "quote": "Humidity of 50% and a temperature of 70° F are strongly recommended.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "What dry storage conditions does the manual strongly recommend?",
+    "answer": "Humidity of 50% and a temperature of 70°F"
+   }
+  },
+  {
+   "id": "FPC-046",
+   "topic": "Almacenamiento",
+   "question": "¿Dónde nunca se deben guardar alimentos?",
+   "options": [
+    "En los cuartos fríos (walk-in)",
+    "En estantes a 6 pulgadas del piso",
+    "Debajo de las tuberías de desagüe",
+    "En recipientes a prueba de roedores e insectos"
+   ],
+   "answer": 2,
+   "explanation": "Nunca guarde alimentos debajo de las tuberías de desagüe.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "No almacene nunca alimentos debajo de las tuberías de desagüe.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Where must food never be stored?",
+    "answer": "Under wastewater lines"
+   }
+  },
+  {
+   "id": "FPC-047",
+   "topic": "Almacenamiento",
+   "question": "¿Se puede usar el hielo para consumo humano para enfriar latas y botellas?",
+   "options": [
+    "Sí, si las latas están lavadas",
+    "No",
+    "Sí, si el hielo se cambia todos los días",
+    "Sí, pero solo para bebidas"
+   ],
+   "answer": 1,
+   "explanation": "En el hielo para consumo no se pueden guardar latas, botellas ni otros alimentos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "No se pueden almacenar latas, botellas ni otros productos alimenticios en el hielo que está destinado para el consumo humano.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Can ice intended for human consumption be used to chill cans and bottles?",
+    "answer": "No"
+   }
+  },
+  {
+   "id": "FPC-048",
+   "topic": "Almacenamiento",
+   "question": "Cuando se guarda comida directamente en hielo, ¿qué se debe hacer con el agua derretida?",
+   "options": [
+    "Volver a congelarla",
+    "Echarle sal",
+    "Drenarla constantemente",
+    "Puede quedarse hasta el final del turno"
+   ],
+   "answer": 2,
+   "explanation": "El agua del hielo derretido se debe drenar constantemente.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "Cuando los alimentos se almacenan directamente en hielo, el agua derretida de ese hielo deberá drenarse constantemente.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "When food is stored directly in ice, what must happen to the meltwater?",
+    "answer": "It must be drained constantly"
+   }
+  },
+  {
+   "id": "FPC-049",
+   "topic": "Almacenamiento",
+   "question": "¿Cómo se deben guardar los alimentos almacenados?",
+   "options": [
+    "Destapados, para que circule el aire",
+    "En cajas de cartón",
+    "Tapados y en recipientes a prueba de roedores e insectos",
+    "En bolsas plásticas en el piso"
+   ],
+   "answer": 2,
+   "explanation": "Los alimentos almacenados van tapados y en recipientes a prueba de roedores e insectos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "Los alimentos almacenados deberán mantenerse cerrados y dentro de recipientes a prueba de roedores e insectos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How must stored food be kept?",
+    "answer": "Covered and in vermin-proof containers"
+   }
+  },
+  {
+   "id": "FPC-050",
+   "topic": "Letreros obligatorios",
+   "question": "¿Dónde se debe colocar el cartel «First Aid Choking» (primeros auxilios en caso de atragantamiento)?",
+   "options": [
+    "Solo en la cocina",
+    "Solo en el baño de los empleados",
+    "Afuera de la puerta principal",
+    "En un lugar visible de cada área designada para comer"
+   ],
+   "answer": 3,
+   "explanation": "Debe estar a la vista en cada área designada para comer.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 2,
+    "quote": "cartel de \"First Aid Choking\" (Primeros auxilios para ahogamiento) en un lugar visible (notorio) de cada una de las áreas de comida designadas.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Where must the 'First Aid Choking' poster be posted?",
+    "answer": "In a conspicuous place in each designated eating area"
+   }
+  },
+  {
+   "id": "FPC-051",
+   "topic": "Letreros obligatorios",
+   "question": "¿Qué establecimientos deben mostrar el letrero «Alcohol and Pregnancy Warning» (advertencia sobre el alcohol y el embarazo)?",
+   "options": [
+    "Los que sirven bebidas alcohólicas",
+    "Todos los establecimientos de servicio de alimentos",
+    "Solo los que tienen 20 asientos o más",
+    "Solo las panaderías"
+   ],
+   "answer": 0,
+   "explanation": "Los establecimientos que sirven alcohol deben mostrar este letrero.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 3,
+    "quote": "Los establecimientos de servicio de alimentos que sirven bebidas alcohólicas deben colocar un rótulo de \"Alcohol and Pregnancy Warning\"",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which establishments must display the 'Alcohol and Pregnancy Warning' sign?",
+    "answer": "Those that serve alcoholic beverages"
+   }
+  },
+  {
+   "id": "FPC-052",
+   "topic": "Letreros obligatorios",
+   "question": "¿Dónde se debe poner el letrero «Wash Hands» (lávese las manos)?",
+   "options": [
+    "En todos los lavamanos",
+    "En la entrada",
+    "Solo en los baños de los clientes",
+    "Solo en la puerta del cuarto frío"
+   ],
+   "answer": 0,
+   "explanation": "Cada lavamanos debe tener su letrero «Wash Hands».",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 3,
+    "quote": "deben colocarse rótulos de \"Wash Hands\" (Lavarse las manos) en todos los lavamanos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Where must a 'Wash Hands' sign be displayed?",
+    "answer": "At all hand washing sinks"
+   }
+  },
+  {
+   "id": "FPC-053",
+   "topic": "Riesgos y microbios",
+   "question": "¿Cuáles son los tres riesgos principales para la salud en los alimentos?",
+   "options": [
+    "Crudo, cocido y listo para comer",
+    "Alérgico, viral y por hongos",
+    "Físico, químico y biológico",
+    "Caliente, frío y congelado"
+   ],
+   "answer": 2,
+   "explanation": "Los riesgos son físicos, químicos y biológicos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "Existen tres riesgos importantes para nuestra salud: el físico, el químico y el biológico.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What are the three main hazards to health in food?",
+    "answer": "Physical, chemical and biological"
+   }
+  },
+  {
+   "id": "FPC-054",
+   "topic": "Riesgos y microbios",
+   "question": "Si aparecen pedacitos de vidrio en la comida, ¿qué tipo de riesgo es?",
+   "options": [
+    "Alérgico",
+    "Químico",
+    "Físico",
+    "Biológico"
+   ],
+   "answer": 2,
+   "explanation": "Los objetos extraños, como vidrio o metal, son un riesgo físico.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "La presencia de objetos extraños (por ejemplo, fragmentos de vidrio, pedazos de metal) en los alimentos se denomina riesgo físico.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Glass fragments found in food are which type of hazard?",
+    "answer": "Physical"
+   }
+  },
+  {
+   "id": "FPC-055",
+   "topic": "Riesgos y microbios",
+   "question": "Si hay productos de limpieza en la comida, ¿qué tipo de riesgo es?",
+   "options": [
+    "Físico",
+    "Químico",
+    "Natural",
+    "Biológico"
+   ],
+   "answer": 1,
+   "explanation": "Pesticidas, productos de limpieza y medicinas en la comida son un riesgo químico.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "La presencia de químicos perjudiciales (por ejemplo, pesticidas, agentes de limpieza, medicamentos recetados) en los alimentos se denomina riesgo químico.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Cleaning agents in food are which type of hazard?",
+    "answer": "Chemical"
+   }
+  },
+  {
+   "id": "FPC-056",
+   "topic": "Riesgos y microbios",
+   "question": "Las bacterias, virus, parásitos y hongos en la comida son, ¿qué tipo de riesgo?",
+   "options": [
+    "Biológico",
+    "Físico",
+    "Ambiental",
+    "Químico"
+   ],
+   "answer": 0,
+   "explanation": "Los microorganismos en la comida son un riesgo biológico.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "La presencia de microorganismos (bacterias, virus, parásitos y hongos) en los alimentos se denomina riesgo biológico.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Bacteria, viruses, parasites and fungi in food are which type of hazard?",
+    "answer": "Biological"
+   }
+  },
+  {
+   "id": "FPC-057",
+   "topic": "Riesgos y microbios",
+   "question": "¿Se puede saber por la vista, el sabor o el olor si la comida tiene bacterias que causan enfermedades?",
+   "options": [
+    "Sí, siempre huele agria",
+    "No; la comida contaminada muchas veces se ve, sabe y huele normal",
+    "Sí, cambia de color",
+    "Sí, sabe amarga"
+   ],
+   "answer": 1,
+   "explanation": "La comida contaminada con bacterias dañinas muchas veces no cambia de apariencia, sabor ni olor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "(patógenas) no suelen parecer contaminados, ya que no presentan ningún cambio en su apariencia, ni en el sabor ni en el olor.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Can you tell by sight, taste or smell whether food is contaminated with pathogenic bacteria?",
+    "answer": "No; contaminated food often looks, tastes and smells normal"
+   }
+  },
+  {
+   "id": "FPC-058",
+   "topic": "Riesgos y microbios",
+   "question": "En condiciones favorables, ¿cada cuánto se puede duplicar la cantidad de bacterias en un alimento?",
+   "options": [
+    "Cada 2 a 3 horas",
+    "Cada 24 horas",
+    "Cada 20 a 30 minutos",
+    "Cada 5 segundos"
+   ],
+   "answer": 2,
+   "explanation": "Las bacterias se pueden duplicar cada 20 a 30 minutos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "En condiciones favorables, la cantidad de bacterias en un alimento se puede duplicar cada 20 a 30 minutos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Under favorable conditions, how often can the number of bacteria in food double?",
+    "answer": "Every 20 to 30 minutes"
+   }
+  },
+  {
+   "id": "FPC-059",
+   "topic": "Riesgos y microbios",
+   "question": "¿En qué fase del crecimiento de las bacterias ocurre el crecimiento más rápido?",
+   "options": [
+    "Fase de reposo (lag)",
+    "Fase logarítmica (log)",
+    "Fase estacionaria",
+    "Fase de muerte"
+   ],
+   "answer": 1,
+   "explanation": "Las cuatro fases son reposo, logarítmica, estacionaria y muerte. El crecimiento más rápido es en la fase logarítmica.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "El crecimiento más rápido de las bacterias se presenta durante la fase logarítmica.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "In which phase of bacterial growth does the most rapid growth occur?",
+    "answer": "Log phase"
+   }
+  },
+  {
+   "id": "FPC-060",
+   "topic": "Riesgos y microbios",
+   "question": "¿Qué significa la sigla en inglés FATTOM?",
+   "options": [
+    "Comida, acidez, temperatura, tiempo, oxígeno y humedad (Food, Acidity, Temperature, Time, Oxygen, Moisture)",
+    "Grasa, ácido, toxina, temperatura, olor y moho",
+    "Comida, aire, sabor, textura, olor y masa",
+    "Congelar, añejar, descongelar, probar, abrir y mezclar"
+   ],
+   "answer": 0,
+   "explanation": "FATTOM son los seis factores que afectan el crecimiento de las bacterias.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "Hay seis factores que afectan el crecimiento de las bacterias: comida, humedad, acidez, temperatura, tiempo, oxígeno",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What does the acronym FATTOM stand for?",
+    "answer": "Food, Acidity, Temperature, Time, Oxygen, Moisture"
+   }
+  },
+  {
+   "id": "FPC-061",
+   "topic": "Riesgos y microbios",
+   "question": "¿Se pueden reproducir los virus en los alimentos?",
+   "options": [
+    "Solo en alimentos ácidos",
+    "Sí, pero solo en la zona de peligro",
+    "No, pero se pueden transmitir a las personas a través de los alimentos",
+    "Sí, más rápido que las bacterias"
+   ],
+   "answer": 2,
+   "explanation": "Los virus no se reproducen en la comida, pero sí se pueden transmitir por ella.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "Los virus no se pueden reproducir en los alimentos. Sin embargo, se pueden transmitir a las personas si están en los alimentos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Can viruses reproduce in food?",
+    "answer": "No, but they can be transmitted to people through food"
+   }
+  },
+  {
+   "id": "FPC-062",
+   "topic": "Riesgos y microbios",
+   "question": "¿Cuáles son dos virus comunes que se transmiten por comida o agua contaminada con las heces de una persona infectada?",
+   "options": [
+    "Influenza y sarampión",
+    "VIH y hepatitis C",
+    "Rabia y virus del Nilo Occidental",
+    "Hepatitis A y norovirus"
+   ],
+   "answer": 3,
+   "explanation": "Se previenen lavándose bien las manos después de usar el baño.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "La hepatitis A y el norovirus son dos virus comunes que se transmiten por los alimentos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which two common food-borne viruses are spread by food or water contaminated with an infected person's feces?",
+    "answer": "Hepatitis A and norovirus"
+   }
+  },
+  {
+   "id": "FPC-063",
+   "topic": "Riesgos y microbios",
+   "question": "La Trichinella spiralis, que causa la triquinosis, se encuentra generalmente en:",
+   "options": [
+    "Lechuga sin lavar",
+    "Cerdo mal cocido",
+    "Huevos crudos con cáscara",
+    "Pescado ahumado"
+   ],
+   "answer": 1,
+   "explanation": "Es un parásito del cerdo mal cocido. Para evitarlo, cocine el cerdo a 150 °F durante 15 segundos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "La Trichinella spiralis, que causa la triquinosis, es un parásito que se encuentra generalmente en el cerdo mal cocido.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Trichinella spiralis, which causes trichinosis, is typically found in which food?",
+    "answer": "Under-cooked pork"
+   }
+  },
+  {
+   "id": "FPC-064",
+   "topic": "Riesgos y microbios",
+   "question": "El Anisakis simplex es un parásito que se encuentra normalmente en:",
+   "options": [
+    "El cerdo",
+    "Las aves",
+    "El arroz",
+    "El pescado de mar"
+   ],
+   "answer": 3,
+   "explanation": "El Anisakis simplex es un parásito de los pescados marinos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "El Anisakis simplex es un parásito que se transmite por los alimentos y se encuentra normalmente en los pescados marinos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Anisakis simplex is a parasite typically found in what?",
+    "answer": "Marine fish"
+   }
+  },
+  {
+   "id": "FPC-065",
+   "topic": "Riesgos y microbios",
+   "question": "¿En qué alimentos se encuentra normalmente la Salmonella enteritidis?",
+   "options": [
+    "Aves crudas y huevos crudos con cáscara",
+    "Pescado ahumado",
+    "Arroz cocido",
+    "Verduras enlatadas"
+   ],
+   "answer": 0,
+   "explanation": "La Salmonella enteritidis es común en las aves crudas y en los huevos crudos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 4,
+    "quote": "La Salmonella enteritidis es una bacteria que se encuentra normalmente en las aves crudas y en las cáscaras de los huevos crudos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Salmonella enteritidis is commonly found in which foods?",
+    "answer": "Raw poultry and raw shell eggs"
+   }
+  },
+  {
+   "id": "FPC-066",
+   "topic": "Riesgos y microbios",
+   "question": "¿Cómo se controla el crecimiento del Clostridium perfringens?",
+   "options": [
+    "Enfriando rápido, recalentando rápido y sin preparar la comida con mucha anticipación",
+    "Congelando y descongelando despacio",
+    "Guardando la comida a temperatura ambiente",
+    "Echándole sal"
+   ],
+   "answer": 0,
+   "explanation": "Se controla con enfriamiento rápido, recalentamiento rápido y sin preparar la comida con anticipación.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 5,
+    "quote": "Se puede controlar el crecimiento del microorganismo Clostridium perfringens por medio de un enfriamiento rápido, un recalentamiento rápido y evitando preparar los alimentos con anticipación.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How can the growth of Clostridium perfringens be controlled?",
+    "answer": "Rapid cooling, rapid reheating and avoiding preparing foods in advance"
+   }
+  },
+  {
+   "id": "FPC-067",
+   "topic": "Riesgos y microbios",
+   "question": "¿Qué bacteria es común que la lleven personas sanas?",
+   "options": [
+    "Clostridium botulinum",
+    "E. coli 0157:H7",
+    "Staphylococcus aureus",
+    "Trichinella spiralis"
+   ],
+   "answer": 2,
+   "explanation": "Muchas personas sanas llevan Staphylococcus aureus.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 5,
+    "quote": "El Staphylococcus aureus es una bacteria que es transmitida comúnmente por los seres humanos sanos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which bacterium is commonly carried by healthy people?",
+    "answer": "Staphylococcus aureus"
+   }
+  },
+  {
+   "id": "FPC-068",
+   "topic": "Riesgos y microbios",
+   "question": "¿Cómo se previene la intoxicación alimentaria por estafilococo?",
+   "options": [
+    "Guardando la comida a temperatura ambiente",
+    "Usando termómetros de vidrio",
+    "Cocinando todo a 212 °F",
+    "Con buena higiene personal y sin tocar con las manos los alimentos listos para comer"
+   ],
+   "answer": 3,
+   "explanation": "Se previene con buena higiene y sin tocar con las manos desnudas los alimentos listos para comer.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 5,
+    "quote": "esta se puede prevenir si se tienen buenos hábitos de higiene personal y si evitando un contacto directo de las manos con el alimento",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How can staphylococcal food intoxication be prevented?",
+    "answer": "Good personal hygiene and avoiding bare-hand contact with ready-to-eat foods"
+   }
+  },
+  {
+   "id": "FPC-069",
+   "topic": "Riesgos y microbios",
+   "question": "¿A qué temperatura mínima se debe cocinar la carne molida para eliminar la E. coli 0157:H7?",
+   "options": [
+    "140 °F",
+    "145 °F",
+    "158 °F",
+    "165 °F"
+   ],
+   "answer": 2,
+   "explanation": "La carne molida debe llegar por lo menos a 158 °F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 5,
+    "quote": "deberá ser cocinada a una temperatura mínima de 158 °F para eliminar la Escherichia coli (E. coli) 0157:H7.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Ground meat must be cooked to what minimum temperature to eliminate E. coli 0157:H7?",
+    "answer": "158°F"
+   }
+  },
+  {
+   "id": "FPC-070",
+   "topic": "Riesgos y microbios",
+   "question": "El Clostridium botulinum, que causa el botulismo, se asocia con:",
+   "options": [
+    "Aves crudas y huevos",
+    "Cerdo mal cocido",
+    "Alimentos enlatados en casa, pescado ahumado y ajo en aceite",
+    "Lechugas frescas"
+   ],
+   "answer": 2,
+   "explanation": "Se asocia con alimentos envasados en casa, pescado ahumado, ajo en aceite y cualquier alimento sin aire (anaeróbico).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 5,
+    "quote": "Se le asocia con alimentos envasados en casa, pescado ahumado, ajo en aceite y cualquier alimento que se encuentre en un ambiente anaeróbico (sin aire).",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Clostridium botulinum, the cause of botulism, is associated with which foods?",
+    "answer": "Home-canned foods, smoked fish and garlic in oil"
+   }
+  },
+  {
+   "id": "FPC-071",
+   "topic": "Riesgos y microbios",
+   "question": "La intoxicación por escombroides viene de comer, después de un abuso de tiempo y temperatura:",
+   "options": [
+    "Salmón ahumado",
+    "Pescado con altos niveles de histamina, como el atún y la caballa (macarela)",
+    "Tilapia de criadero",
+    "Mariscos como las almejas"
+   ],
+   "answer": 1,
+   "explanation": "Pasa con pescados como atún, caballa, bonito, mahi mahi y anjova (bluefish).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 5,
+    "quote": "ocurre cuando se come cierto tipo de pescado con altos niveles de histamina (por ejemplo, atún, caballa, bonito, mahi mahi, pescado azul)",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Scombroid poisoning comes from eating which fish after time and temperature abuse?",
+    "answer": "Fish with high histamine levels such as tuna and mackerel"
+   }
+  },
+  {
+   "id": "FPC-072",
+   "topic": "Higiene personal",
+   "question": "¿Debe ir a trabajar un trabajador de alimentos con una enfermedad que se puede transmitir por la comida?",
+   "options": [
+    "No, hasta que se recupere por completo",
+    "Sí, después de tomar medicina",
+    "Sí, si usa guantes",
+    "Sí, si solo trabaja en la caja"
+   ],
+   "answer": 0,
+   "explanation": "No debe trabajar hasta que se recupere por completo.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 5,
+    "quote": "pueda transmitirse por contacto con los alimentos o a través de los alimentos no deben presentarse a trabajar hasta que no estén completamente recuperados.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Should a food worker with an illness transmissible through food come to work?",
+    "answer": "No, not until fully recovered"
+   }
+  },
+  {
+   "id": "FPC-073",
+   "topic": "Higiene personal",
+   "question": "¿A qué distancia máxima de las áreas de preparación de alimentos deben estar los lavamanos?",
+   "options": [
+    "25 pies",
+    "10 pies",
+    "100 pies",
+    "50 pies"
+   ],
+   "answer": 0,
+   "explanation": "Los lavamanos deben estar a no más de 25 pies de las áreas de preparación de alimentos, y en los baños o cerca de ellos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "hand washing sinks to be readily accessible within 25 feet of all food preparation areas and in or near all toilets.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "Within what distance of food preparation areas must hand washing sinks be readily accessible?",
+    "answer": "25 feet"
+   }
+  },
+  {
+   "id": "FPC-074",
+   "topic": "Higiene personal",
+   "question": "¿Qué debe tener un lavamanos?",
+   "options": [
+    "Una cubeta con desinfectante",
+    "Jabón, agua corriente fría y caliente, toallas desechables o secador de manos, y un letrero «Wash Hands»",
+    "Solo agua fría y jabón",
+    "Cloro y una toalla de tela"
+   ],
+   "answer": 1,
+   "explanation": "Se necesitan las cuatro cosas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 4,
+    "quote": "The hand washing sinks must be provided with soap, hot and cold running water, disposable towels or a hand dryer and a \"Wash Hands\" sign.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "What must a hand washing sink be provided with?",
+    "answer": "Soap, hot and cold running water, disposable towels or a hand dryer, and a 'Wash Hands' sign"
+   }
+  },
+  {
+   "id": "FPC-075",
+   "topic": "Higiene personal",
+   "question": "¿Qué joyas pueden usar los trabajadores de alimentos en los brazos y las manos?",
+   "options": [
+    "Solo el anillo de matrimonio y el brazalete de alerta médica",
+    "Cualquier joya",
+    "Relojes y anillos",
+    "Cualquier joya, si está debajo de los guantes"
+   ],
+   "answer": 0,
+   "explanation": "No se permiten joyas en brazos y manos, salvo el anillo de matrimonio y el brazalete de alerta médica.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 5,
+    "quote": "no deben llevar joyas en los brazos o manos (excepto anillos de matrimonio y brazaletes de alerta médica).",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What jewelry may food workers wear on their arms and hands?",
+    "answer": "Only wedding bands and medical bracelets"
+   }
+  },
+  {
+   "id": "FPC-076",
+   "topic": "Higiene personal",
+   "question": "¿Se puede usar el mismo fregadero para preparar alimentos y para lavarse las manos?",
+   "options": [
+    "Sí, en establecimientos pequeños",
+    "No",
+    "Sí, con un letrero",
+    "Sí, si se limpia entre un uso y otro"
+   ],
+   "answer": 1,
+   "explanation": "No se permite usar el mismo fregadero para preparar comida o lavar utensilios y para lavarse las manos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 66,
+    "quote": "No está permitido el uso del mismo fregadero para la preparación de alimentos o lavar equipo y/o utensilios y para lavarse las manos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Is a common sink allowed for both food preparation and hand washing?",
+    "answer": "No"
+   }
+  },
+  {
+   "id": "FPC-077",
+   "topic": "Higiene personal",
+   "question": "¿Los guantes reemplazan el lavado de manos?",
+   "options": [
+    "Sí, si se cambian cada hora",
+    "Sí, con alimentos listos para comer",
+    "No, los guantes nunca reemplazan un buen lavado de manos",
+    "Sí, si son guantes de tela"
+   ],
+   "answer": 2,
+   "explanation": "Los guantes nunca reemplazan el lavado de manos; lávese las manos antes de ponérselos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 90,
+    "quote": "The use of gloves is never a replacement for good hand washing practices!",
+    "lang": "en"
+   },
+   "en": {
+    "question": "Do gloves replace hand washing?",
+    "answer": "No, gloves are never a replacement for good hand washing"
+   }
+  },
+  {
+   "id": "FPC-078",
+   "topic": "Higiene personal",
+   "question": "¿Qué guantes NO se pueden usar con alimentos listos para comer?",
+   "options": [
+    "Guantes plásticos de un solo uso",
+    "Guantes de tela o reutilizables",
+    "Guantes desechables",
+    "Guantes de vinilo"
+   ],
+   "answer": 1,
+   "explanation": "Con alimentos listos para comer no se pueden usar guantes de tela ni reutilizables.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 90,
+    "quote": "Fabric or re-usable gloves may not be used with ready-to-eat (RTE) food.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "Which gloves may NOT be used with ready-to-eat food?",
+    "answer": "Fabric or re-usable gloves"
+   }
+  },
+  {
+   "id": "FPC-079",
+   "topic": "Higiene personal",
+   "question": "Si se interrumpe la preparación de alimentos, ¿qué debe hacer con los guantes?",
+   "options": [
+    "Limpiarlos con un trapo",
+    "Dejárselos puestos",
+    "Quitárselos y botarlos, y lavarse las manos antes de ponerse guantes limpios",
+    "Enjuagarlos con agua"
+   ],
+   "answer": 2,
+   "explanation": "Si se interrumpe el trabajo, quítese los guantes y bótelos. Al volver, lávese las manos y use guantes limpios.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 90,
+    "quote": "If an interruption occurs during food preparation, remove gloves and discard.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "What should you do with gloves if food preparation is interrupted?",
+    "answer": "Remove and discard them, then wash hands before using clean gloves"
+   }
+  },
+  {
+   "id": "FPC-080",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿Cuál es una forma aceptable de descongelar alimentos?",
+   "options": [
+    "En una unidad para mantener la comida caliente",
+    "Bajo agua corriente fría",
+    "Sobre el mostrador, a temperatura ambiente",
+    "En un fregadero con agua caliente"
+   ],
+   "answer": 1,
+   "explanation": "Formas aceptables: en el refrigerador, bajo agua corriente fría, o en el microondas si después se cocina enseguida. Nunca a temperatura ambiente.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide.pdf",
+    "title": "DOHMH Online Food Protection Course Study Guide (PDF)",
+    "page": 5,
+    "quote": "refrigerating them, placing them under cold running water, or defrosting them in a microwave oven with continuous cooking afterwards.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "Which is an acceptable way to thaw frozen food?",
+    "answer": "Under cold running water"
+   }
+  },
+  {
+   "id": "FPC-081",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿Se puede descongelar comida a temperatura ambiente?",
+   "options": [
+    "No, nunca",
+    "Sí, si son piezas pequeñas",
+    "Sí, si está tapada",
+    "Sí, por menos de 4 horas"
+   ],
+   "answer": 0,
+   "explanation": "Nunca descongele a temperatura ambiente, y nunca vuelva a congelar comida ya descongelada.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 88,
+    "quote": "Never thaw frozen food at room temperature.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "Should frozen food ever be thawed at room temperature?",
+    "answer": "No, never"
+   }
+  },
+  {
+   "id": "FPC-082",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿Qué es la contaminación cruzada?",
+   "options": [
+    "Cocinar dos alimentos en la misma olla",
+    "Mezclar dos salsas",
+    "Guardar comida a más de 41 °F",
+    "Cuando las bacterias de un alimento crudo pasan a un alimento cocido o listo para comer"
+   ],
+   "answer": 3,
+   "explanation": "Es el paso de bacterias de lo crudo a lo cocido o listo para comer.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "La contaminación cruzada ocurre cuando las bacterias de un alimento crudo contaminan los alimentos cocidos o listos para comer.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is cross contamination?",
+    "answer": "When bacteria from a raw food get into a cooked or ready-to-eat food"
+   }
+  },
+  {
+   "id": "FPC-083",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿A qué temperatura interna se deben cocinar las aves, las carnes rellenas y los rellenos?",
+   "options": [
+    "158 °F",
+    "150 °F",
+    "165 °F",
+    "140 °F"
+   ],
+   "answer": 2,
+   "explanation": "Aves, carnes rellenas y rellenos: 165 °F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "Las aves, las carnes rellenas y los rellenos se deben cocinar a una temperatura interna de 165 °F.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "To what internal temperature must poultry, stuffed meat and stuffing be cooked?",
+    "answer": "165°F"
+   }
+  },
+  {
+   "id": "FPC-084",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿A qué temperatura interna se debe cocinar el cerdo?",
+   "options": [
+    "158 °F",
+    "165 °F",
+    "150 °F",
+    "140 °F"
+   ],
+   "answer": 2,
+   "explanation": "El cerdo debe llegar a 150 °F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "El cerdo se debe cocinar a una temperatura interna de 150 °F.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "To what internal temperature must pork be cooked?",
+    "answer": "150°F"
+   }
+  },
+  {
+   "id": "FPC-085",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿A qué temperatura mínima se deben cocinar los huevos crudos?",
+   "options": [
+    "145 °F",
+    "140 °F",
+    "165 °F",
+    "158 °F"
+   ],
+   "answer": 0,
+   "explanation": "Los huevos crudos se cocinan a 145 °F como mínimo.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "Los huevos crudos se deben cocinar a una temperatura mínima de 145 °F.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "To what minimum temperature must raw shell eggs be cooked?",
+    "answer": "145°F"
+   }
+  },
+  {
+   "id": "FPC-086",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿A qué temperatura mínima se deben cocinar el pescado, los mariscos y la carne de res?",
+   "options": [
+    "158 °F",
+    "145 °F",
+    "165 °F",
+    "140 °F"
+   ],
+   "answer": 3,
+   "explanation": "Pescado, mariscos, carne de res y las demás carnes: 140 °F como mínimo.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "pescado, los mariscos, la carne de res, la ternera y los demás tipos de carne se deben cocinar a una temperatura mínima de 140 °F.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "To what minimum temperature must fish, shellfish, beef and lamb be cooked?",
+    "answer": "140°F"
+   }
+  },
+  {
+   "id": "FPC-087",
+   "topic": "Cocción y enfriamiento",
+   "question": "La comida ya cocinada y refrigerada que se va a mantener caliente, ¿a qué temperatura se debe recalentar?",
+   "options": [
+    "A 120 °F en el microondas",
+    "A 158 °F en la mesa de vapor",
+    "A 140 °F en la unidad para mantenerla caliente",
+    "A 165 °F, rápidamente, en la estufa o el horno"
+   ],
+   "answer": 3,
+   "explanation": "Recaliéntela rápido a 165 °F en la estufa o el horno. Nunca recaliente en la unidad para mantener caliente.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "deberán volver a calentarse rápidamente a 165 °F usando un horno u hornillo.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "To what temperature must previously cooked, refrigerated foods be reheated for hot holding?",
+    "answer": "165°F, rapidly, using a stove or oven"
+   }
+  },
+  {
+   "id": "FPC-088",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿Se puede usar una unidad para mantener la comida caliente para recalentar comida?",
+   "options": [
+    "Sí, si está a 165 °F",
+    "No, nunca",
+    "Sí, por un máximo de 2 horas",
+    "Sí, pero solo sopas"
+   ],
+   "answer": 1,
+   "explanation": "Nunca use un equipo para mantener caliente la comida para recalentarla.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "Para recalentar los alimentos, nunca use un equipo diseñado para mantener los alimentos calientes.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Can a hot holding unit be used to reheat foods?",
+    "answer": "No, never"
+   }
+  },
+  {
+   "id": "FPC-089",
+   "topic": "Cocción y enfriamiento",
+   "question": "Según el manual, ¿en cuánto tiempo se debe recalentar a 165 °F la comida ya cocinada?",
+   "options": [
+    "En dos horas o menos",
+    "En cuatro horas",
+    "En 30 minutos",
+    "En seis horas"
+   ],
+   "answer": 0,
+   "explanation": "La comida ya cocinada se recalienta a 165 °F en dos horas o menos, en la estufa o el horno.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 46,
+    "quote": "Recaliente los alimentos a 165 °F dentro de las dos horas.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Within what time must previously cooked foods be reheated to 165°F, per the Training Manual?",
+    "answer": "Within two hours"
+   }
+  },
+  {
+   "id": "FPC-090",
+   "topic": "Cocción y enfriamiento",
+   "question": "En el enfriamiento en dos pasos, ¿en cuánto tiempo debe bajar la comida de 140 °F a 70 °F?",
+   "options": [
+    "Dos horas",
+    "30 minutos",
+    "Seis horas",
+    "Cuatro horas"
+   ],
+   "answer": 0,
+   "explanation": "Paso 1: de 140 °F a 70 °F en dos horas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 56,
+    "quote": "baje de 140 °F a 70 °F dentro de las dos horas",
+    "lang": "es"
+   },
+   "en": {
+    "question": "In two-step cooling, within what time must food cool from 140°F to 70°F?",
+    "answer": "Two hours"
+   }
+  },
+  {
+   "id": "FPC-091",
+   "topic": "Cocción y enfriamiento",
+   "question": "En el enfriamiento en dos pasos, ¿en cuántas horas más debe bajar la comida de 70 °F a 41 °F?",
+   "options": [
+    "Seis horas más",
+    "Dos horas más",
+    "Cuatro horas más",
+    "Una hora más"
+   ],
+   "answer": 2,
+   "explanation": "Paso 2: de 70 °F a 41 °F en cuatro horas más.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 56,
+    "quote": "y de 70 °F a 41 °F o menos dentro de las cuatro horas siguientes.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "In two-step cooling, within how many additional hours must food cool from 70°F to 41°F?",
+    "answer": "Four additional hours"
+   }
+  },
+  {
+   "id": "FPC-092",
+   "topic": "Cocción y enfriamiento",
+   "question": "Al enfriar comida líquida en bandejas poco hondas, ¿qué profundidad máxima debe tener la comida?",
+   "options": [
+    "6 pulgadas en una bandeja de 8 pulgadas",
+    "Hasta el borde de cualquier bandeja",
+    "12 pulgadas en una olla grande",
+    "De 1 a 2 pulgadas en una bandeja de 4 pulgadas de hondo"
+   ],
+   "answer": 3,
+   "explanation": "Vierta la comida de 1 a 2 pulgadas de profundidad en bandejas de 4 pulgadas de hondo.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "verter los alimentos de 1 o 2 pulgadas de profundidad en bandejas de enfriamiento de 4 pulgadas de profundidad",
+    "lang": "es"
+   },
+   "en": {
+    "question": "When cooling liquid foods in shallow pans, what is the maximum product depth?",
+    "answer": "1 to 2 inches in a 4-inch deep pan"
+   }
+  },
+  {
+   "id": "FPC-093",
+   "topic": "Cocción y enfriamiento",
+   "question": "Para enfriar rápido los alimentos sólidos, ¿en pedazos de qué tamaño se deben cortar?",
+   "options": [
+    "1 lb o menos",
+    "10 lb o menos",
+    "20 lb o menos",
+    "6 lb o menos"
+   ],
+   "answer": 3,
+   "explanation": "Corte los alimentos sólidos en pedazos de 6 libras o menos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "cortar alimentos sólidos en pedazos pequeños (pedazos de 6 lb o menos).",
+    "lang": "es"
+   },
+   "en": {
+    "question": "To cool solid foods rapidly, into what size pieces should they be cut?",
+    "answer": "6 lbs. or less"
+   }
+  },
+  {
+   "id": "FPC-094",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿Cuándo se debe tapar la comida caliente que se está enfriando en el refrigerador?",
+   "options": [
+    "Nunca",
+    "Solo después de que se haya enfriado por completo a 41 °F o menos",
+    "Después de 30 minutos",
+    "Inmediatamente"
+   ],
+   "answer": 1,
+   "explanation": "Se tapa solo cuando ya llegó a 41 °F o menos; destapada se enfría más rápido.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "en el refrigerador para su enfriamiento deberán cubrirse solo después de que estén completamente fríos a una temperatura igual o inferior a 41 °F.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "When should hot foods cooling in a refrigerator be covered?",
+    "answer": "Only after they have completely cooled to 41°F or below"
+   }
+  },
+  {
+   "id": "FPC-095",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿Qué es el método de enfriamiento «hielo como ingrediente»?",
+   "options": [
+    "Poner la olla sobre hielo toda la noche",
+    "Preparar la receta con la mitad del agua y añadir la otra mitad en forma de hielo al enfriar",
+    "Servir la comida sobre hielo",
+    "Congelar la comida en cubetas de hielo"
+   ],
+   "answer": 1,
+   "explanation": "Se usa como hielo la mitad del agua que pide la receta, y se añade durante el enfriamiento.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 87,
+    "quote": "Prepare food with half the amount of water the recipe requires and use the other half in the form of ice",
+    "lang": "en"
+   },
+   "en": {
+    "question": "What is the 'ice as an ingredient' cooling method?",
+    "answer": "Prepare with half the water and add the other half as ice during cooling"
+   }
+  },
+  {
+   "id": "FPC-096",
+   "topic": "Cocción y enfriamiento",
+   "question": "Al preparar ensaladas frías, como la de atún, ¿cuál es la mejor práctica?",
+   "options": [
+    "Enfriar los ingredientes antes",
+    "Calentar primero la mayonesa",
+    "Congelar la ensalada terminada",
+    "Mezclar los ingredientes a temperatura ambiente"
+   ],
+   "answer": 0,
+   "explanation": "Lo mejor es enfriar los ingredientes antes de preparar ensaladas frías.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "Cuando se preparen ensaladas frías, como una ensalada de atún, la mejor práctica es enfriar previamente los ingredientes.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "When making cold salads such as tuna, what is the best practice?",
+    "answer": "Pre-chill the ingredients"
+   }
+  },
+  {
+   "id": "FPC-097",
+   "topic": "Cocción y enfriamiento",
+   "question": "¿Qué nunca se debe usar con los alimentos listos para comer?",
+   "options": [
+    "Papel para alimentos (papel de deli)",
+    "Pinzas",
+    "Las manos sin protección",
+    "Una cuchara para servir"
+   ],
+   "answer": 2,
+   "explanation": "Nunca use las manos sin protección. Use guantes limpios, pinzas, espátula, papel para alimentos o una cuchara.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 6,
+    "quote": "Cuando se trabaja con alimentos listos para comer, nunca use las manos sin protección.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What should never be used with ready-to-eat foods?",
+    "answer": "Bare hands"
+   }
+  },
+  {
+   "id": "FPC-098",
+   "topic": "Instalaciones",
+   "question": "¿Qué deben tener todos los fregaderos culinarios y los de lavar ollas y platos?",
+   "options": [
+    "Agua caliente a más de 200 °F",
+    "Un espacio de aire (air break)",
+    "Solo trampas de grasa",
+    "Pedales"
+   ],
+   "answer": 1,
+   "explanation": "Todos los fregaderos culinarios y de ollas y platos deben tener un espacio de aire para evitar el reflujo.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 7,
+    "quote": "Todos los fregaderos de ollas o platos y todos los fregaderos culinarios (relacionados con los alimentos) deben tener un espacio de aire",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What must be provided in all culinary and pot/dish washing sinks?",
+    "answer": "Air breaks"
+   }
+  },
+  {
+   "id": "FPC-099",
+   "topic": "Instalaciones",
+   "question": "¿Qué equipos deben tener un rompedor de vacío atmosférico (AVB)?",
+   "options": [
+    "Solo los cuartos fríos",
+    "Cualquier equipo conectado directamente al agua potable, como las máquinas de hielo",
+    "Solo las estufas de gas",
+    "Solo las campanas de extracción"
+   ],
+   "answer": 1,
+   "explanation": "El AVB va en todo equipo conectado directamente al agua potable, por ejemplo máquinas de hielo, cafeteras y lavaplatos. La guía oficial en español lo llama «igualador de vacío atmosférico».",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 7,
+    "quote": "igualadores de vacío atmosférico (AVB, por sus siglas en inglés) en todos los equipos que tengan conexiones directas para el suministro de agua potable.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which equipment must have an Atmospheric Vacuum Breaker (AVB)?",
+    "answer": "Any equipment directly connected to a potable water supply, such as ice machines"
+   }
+  },
+  {
+   "id": "FPC-100",
+   "topic": "Instalaciones",
+   "question": "¿Qué dispositivo evita una conexión cruzada en una manguera?",
+   "options": [
+    "Un termómetro de recibo",
+    "Un interceptor de grasa",
+    "Un interruptor de vacío tipo grifo de manguera (hose bib vacuum breaker)",
+    "Una cortina de aire"
+   ],
+   "answer": 2,
+   "explanation": "La conexión cruzada se previene instalando un interruptor de vacío en el grifo de la manguera.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 7,
+    "quote": "Las conexiones cruzadas se pueden prevenir instalando un interruptor de vacío tipo grifo de manguera.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What device can prevent a cross-connection at a hose?",
+    "answer": "A hose bib vacuum breaker"
+   }
+  },
+  {
+   "id": "FPC-101",
+   "topic": "Instalaciones",
+   "question": "¿Quién debe instalar los calentadores de agua a gas?",
+   "options": [
+    "Un plomero con licencia",
+    "Un exterminador con licencia",
+    "Cualquier empleado",
+    "El dueño del edificio"
+   ],
+   "answer": 0,
+   "explanation": "Los debe instalar un plomero con licencia (certificado), y hay que vigilar que los gases no se regresen (back draft).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 7,
+    "quote": "Un plomero certificado deberá instalar todos los calentadores de agua a gas",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Who must install gas-fired hot water heaters?",
+    "answer": "A licensed plumber"
+   }
+  },
+  {
+   "id": "FPC-102",
+   "topic": "Instalaciones",
+   "question": "¿Dónde es ilegal botar grasa?",
+   "options": [
+    "En cualquier fregadero que no tenga un interceptor de grasa adecuado",
+    "En un contenedor autorizado para recoger grasa",
+    "En la basura, después de que se enfríe",
+    "En un recipiente sellado"
+   ],
+   "answer": 0,
+   "explanation": "Las leyes de NYC prohíben botar grasa en fregaderos sin un interceptor de grasa adecuado.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 7,
+    "quote": "Las leyes de la Ciudad de Nueva York prohíben que se vierta grasa en los fregaderos que no tienen un interceptor de grasa adecuado.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Where is it illegal to dump grease?",
+    "answer": "In any sink without a proper grease interceptor"
+   }
+  },
+  {
+   "id": "FPC-103",
+   "topic": "Instalaciones",
+   "question": "¿Cuándo se deben tener baños para los clientes?",
+   "options": [
+    "Cuando hay 20 asientos o más en el comedor",
+    "Solo cuando se sirve alcohol",
+    "Siempre, sin importar el tamaño",
+    "Solo con 50 asientos o más"
+   ],
+   "answer": 0,
+   "explanation": "Con 20 asientos o más en el área de comer, hay que tener baños para los clientes.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Si el área de comida de un establecimiento de alimentos tiene 20 plazas o más, se debe proporcionar baños para los clientes.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "When must patron bathrooms be provided?",
+    "answer": "When there are 20 seats or more in the dining area"
+   }
+  },
+  {
+   "id": "FPC-104",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Cuál es el orden correcto para lavar platos a mano?",
+   "options": [
+    "Desinfectar, lavar, enjuagar, secar con toalla",
+    "Lavar, enjuagar, desinfectar, dejar secar al aire",
+    "Lavar, desinfectar, enjuagar, secar con toalla",
+    "Enjuagar, lavar, secar, desinfectar"
+   ],
+   "answer": 1,
+   "explanation": "El orden es lavar, enjuagar, desinfectar y dejar secar al aire.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "La secuencia adecuada para lavar platos a mano es la siguiente: lavar, enjuagar, desinfectar y dejar secar al aire.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is the proper sequence for washing dishes by hand?",
+    "answer": "Wash, rinse, sanitize, air-dry"
+   }
+  },
+  {
+   "id": "FPC-105",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Qué tipo de fregadero se usa para lavar platos a mano?",
+   "options": [
+    "Un fregadero de un solo compartimiento",
+    "Un lavamanos",
+    "Un fregadero de tres compartimientos",
+    "Un fregadero para trapeadores"
+   ],
+   "answer": 2,
+   "explanation": "Se lava en el primer compartimiento, se enjuaga en el segundo, se desinfecta en el tercero y se deja secar al aire.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 64,
+    "quote": "Use un fregadero con tres compartimientos (en el primer compartimiento lave; en el segundo enjuague; el tercero desinfecte).",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Manual dishwashing is allowed only in what kind of sink?",
+    "answer": "A three-compartment sink"
+   }
+  },
+  {
+   "id": "FPC-106",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Qué se debe hacer con las tablas de picar entre un uso y otro?",
+   "options": [
+    "Lavarlas, enjuagarlas y desinfectarlas",
+    "Enjuagarlas con agua fría",
+    "Secarlas con una toalla",
+    "Voltearlas"
+   ],
+   "answer": 0,
+   "explanation": "Las tablas de picar se lavan, se enjuagan y se desinfectan después de cada uso.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Todas las tablas de picar deben lavarse, enjuagarse y desinfectarse después de cada uso.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What must be done to cutting boards between each use?",
+    "answer": "Wash, rinse and sanitize"
+   }
+  },
+  {
+   "id": "FPC-107",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Cómo se desinfectan los utensilios con agua caliente?",
+   "options": [
+    "Sumergiéndolos en agua a 170 °F por al menos 30 segundos",
+    "Enjuagándolos en agua a 120 °F",
+    "Hirviéndolos 10 minutos",
+    "Sumergiéndolos en agua a 140 °F por 10 segundos"
+   ],
+   "answer": 0,
+   "explanation": "Con agua caliente: al menos 30 segundos en agua a 170 °F.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Para desinfectar con agua caliente, sumerja los utensilios en agua a 170 °F al menos durante 30 segundos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How do you hot-water sanitize utensils?",
+    "answer": "Immerse in 170°F water for at least 30 seconds"
+   }
+  },
+  {
+   "id": "FPC-108",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Cómo se prepara una solución desinfectante de cloro de 50 ppm?",
+   "options": [
+    "1 onza de cloro en 5 galones de agua",
+    "1 taza de cloro en 1 galón de agua",
+    "1 cucharadita de cloro en 1 cuarto de galón de agua",
+    "½ onza de cloro en 1 galón de agua"
+   ],
+   "answer": 3,
+   "explanation": "50 ppm: ½ onza de cloro por galón de agua.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Para preparar una solución desinfectante de cloro a 50 ppm, agregue ½ onza de cloro en 1 galón de agua.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How do you make a 50 PPM chlorine sanitizing solution?",
+    "answer": "Add ½ ounce of bleach to 1 gallon of water"
+   }
+  },
+  {
+   "id": "FPC-109",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Cuánto tiempo deben estar los utensilios sumergidos en una solución desinfectante de 50 ppm?",
+   "options": [
+    "Al menos 30 minutos",
+    "Al menos 1 minuto",
+    "Al menos 10 segundos",
+    "Al menos 10 minutos"
+   ],
+   "answer": 1,
+   "explanation": "La solución de 50 ppm se usa para sumergir utensilios al menos 1 minuto.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "La solución desinfectante a una concentración de 50 ppm se usa para sumergir los utensilios al menos durante 1 minuto.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How long must utensils be immersed in a 50 PPM sanitizing solution?",
+    "answer": "At least 1 minute"
+   }
+  },
+  {
+   "id": "FPC-110",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Cómo se prepara una solución desinfectante de cloro de 100 ppm?",
+   "options": [
+    "1 onza de cloro en 10 galones de agua",
+    "1 onza de cloro en 1 galón de agua",
+    "2 tazas de cloro en 1 galón de agua",
+    "½ onza de cloro en 1 galón de agua"
+   ],
+   "answer": 1,
+   "explanation": "100 ppm: 1 onza de cloro por galón de agua.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Para preparar una solución desinfectante de cloro de concentración de 100 ppm, agregue una onza de cloro a 1 galón de agua.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How do you make a 100 PPM chlorine sanitizing solution?",
+    "answer": "Add one ounce of bleach to 1 gallon of water"
+   }
+  },
+  {
+   "id": "FPC-111",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Para qué se usa normalmente una solución desinfectante de 100 ppm?",
+   "options": [
+    "Para guardar los trapos de limpiar",
+    "Para limpiar frotando, rociar o verter",
+    "Para sumergir vasos durante 1 minuto",
+    "Para lavar frutas y verduras"
+   ],
+   "answer": 1,
+   "explanation": "La de 100 ppm se usa para frotar, rociar o verter.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "La solución desinfectante a una concentración de 100 ppm se usa regularmente para frotar, rociar o verter.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is a 100 PPM sanitizing solution typically used for?",
+    "answer": "Wiping, spraying or pouring"
+   }
+  },
+  {
+   "id": "FPC-112",
+   "topic": "Limpieza y desinfección",
+   "question": "¿En qué se deben guardar los trapos de limpiar?",
+   "options": [
+    "En una solución desinfectante de 50 ppm",
+    "En una solución desinfectante de 100 ppm",
+    "En un recipiente seco",
+    "En agua caliente con jabón"
+   ],
+   "answer": 0,
+   "explanation": "Los trapos de limpiar se guardan en solución desinfectante de 50 ppm.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Los paños para limpiar deben permanecer en una solución desinfectante con una concentración de 50 ppm.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "In what must wiping cloths be stored?",
+    "answer": "A 50 PPM sanitizing solution"
+   }
+  },
+  {
+   "id": "FPC-113",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Cómo se revisa la concentración de una solución desinfectante química?",
+   "options": [
+    "Por el olor",
+    "Por el color",
+    "Con un termómetro",
+    "Con un kit de prueba"
+   ],
+   "answer": 3,
+   "explanation": "Durante la desinfección química, la solución se revisa con un kit de prueba.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Durante la desinfección química, se debe realizar una prueba a la solución de la sustancia química con un kit para pruebas.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How should the strength of a chemical sanitizing solution be checked?",
+    "answer": "With a test kit"
+   }
+  },
+  {
+   "id": "FPC-114",
+   "topic": "Limpieza y desinfección",
+   "question": "¿Cuál es la temperatura mínima del enjuague final en una lavaplatos de alta temperatura?",
+   "options": [
+    "212 °F",
+    "140 °F",
+    "180 °F",
+    "165 °F"
+   ],
+   "answer": 2,
+   "explanation": "En una lavaplatos de alta temperatura, el enjuague final debe ser de 180 °F o más.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 67,
+    "quote": "El agua caliente para el lavavajillas debe estar entre 140 ºF y 165 ºF para lavar y a 180 ºF para desinfectar.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is the minimum final rinse temperature for a high-temperature mechanical dishwasher?",
+    "answer": "180°F"
+   }
+  },
+  {
+   "id": "FPC-115",
+   "topic": "Control de plagas",
+   "question": "¿Cuáles son las tres estrategias clave del control integrado de plagas?",
+   "options": [
+    "Dejarlas sin comida, cerrarles la entrada y destruirlas",
+    "Inspeccionar, reportar y cerrar",
+    "Trampas, veneno y fumigación",
+    "Sellar, rociar y barrer"
+   ],
+   "answer": 0,
+   "explanation": "En inglés: starve them, build them out, destroy them. La guía oficial en español dice «matar de hambre, acorralar y destruir».",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Las tres estrategias clave para el control integrado de plagas son: matar de hambre, acorralar y destruir.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What are the three key strategies of Integrated Pest Management?",
+    "answer": "Starve them, build them out and destroy them"
+   }
+  },
+  {
+   "id": "FPC-116",
+   "topic": "Control de plagas",
+   "question": "¿Qué hacen los ratones de un restaurante cuando ya no encuentran comida?",
+   "options": [
+    "Hibernan",
+    "Se van",
+    "Comen papel y se quedan",
+    "Se vuelven más agresivos"
+   ],
+   "answer": 1,
+   "explanation": "Si los ratones no tienen comida a su alcance, se van.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Cuando la comida esta fuera del alcance de los ratones que han infestado un restaurante, se irán del lugar.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What do mice do when food becomes unavailable in an infested restaurant?",
+    "answer": "They move out"
+   }
+  },
+  {
+   "id": "FPC-117",
+   "topic": "Control de plagas",
+   "question": "Excremento fresco de rata en un establecimiento de alimentos es, ¿qué tipo de violación?",
+   "options": [
+    "No es una violación",
+    "Solo una advertencia",
+    "Una violación general",
+    "Una violación crítica"
+   ],
+   "answer": 3,
+   "explanation": "El excremento fresco de rata es una violación crítica.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "La presencia de excremento fresco de rata en un establecimiento de alimentos constituye una violación crítica.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Fresh rat droppings in a food establishment are what kind of violation?",
+    "answer": "A critical violation"
+   }
+  },
+  {
+   "id": "FPC-118",
+   "topic": "Control de plagas",
+   "question": "¿Quién puede aplicar insecticidas y raticidas en un restaurante?",
+   "options": [
+    "Un inspector de salud",
+    "Cualquier empleado capacitado",
+    "Solo un profesional de control de plagas con licencia",
+    "El gerente"
+   ],
+   "answer": 2,
+   "explanation": "Solo un profesional de control de plagas con licencia puede aplicar pesticidas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "Solo un funcionario de control de plagas autorizado puede aplicar pesticidas en un restaurante.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Who may apply insecticides and rodenticides in a restaurant?",
+    "answer": "Only a licensed pest control officer"
+   }
+  },
+  {
+   "id": "FPC-119",
+   "topic": "Control de plagas",
+   "question": "¿Cuál es el mejor método para eliminar las moscas y las cucarachas?",
+   "options": [
+    "Que el personal rocíe insecticida todos los días",
+    "Matamoscas eléctricos encima de la comida",
+    "Limpiar y desinfectar bien",
+    "Dejar las puertas abiertas para que circule el aire"
+   ],
+   "answer": 2,
+   "explanation": "El mejor método es una buena limpieza y desinfección.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 8,
+    "quote": "El mejor método para eliminar las moscas y las cucarachas de un establecimiento es mediante una limpieza y desinfección adecuadas.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is the best method for eliminating flies and roaches?",
+    "answer": "Proper cleaning and sanitizing"
+   }
+  },
+  {
+   "id": "FPC-120",
+   "topic": "Control de plagas",
+   "question": "¿En qué tipo de recipientes se debe poner la basura?",
+   "options": [
+    "Recipientes de metal con tapas bien ajustadas",
+    "Botes sin tapa",
+    "Cajas de cartón",
+    "Bolsas plásticas abiertas"
+   ],
+   "answer": 0,
+   "explanation": "La basura va en recipientes de metal con tapas que cierren bien.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual.pdf",
+    "title": "DOHMH Food Protection Course Training Manual (PDF)",
+    "page": 93,
+    "quote": "Place the garbage in metal containers with tight fitted lids.",
+    "lang": "en"
+   },
+   "en": {
+    "question": "In what kind of containers should garbage be placed?",
+    "answer": "Metal containers with tight-fitting lids"
+   }
+  },
+  {
+   "id": "FPC-121",
+   "topic": "HACCP",
+   "question": "¿Qué significa la sigla HACCP?",
+   "options": [
+    "Hygiene and Contamination Control Program (programa de control de higiene y contaminación)",
+    "Hazard Analysis and Critical Control Point (análisis de peligros y puntos críticos de control)",
+    "Health and Cleaning Compliance Plan (plan de cumplimiento de salud y limpieza)",
+    "Hazard Assessment and Cooking Control Procedure (procedimiento de evaluación de peligros y control de cocción)"
+   ],
+   "answer": 1,
+   "explanation": "El HACCP es un sistema de prevención que controla el crecimiento de microbios dañinos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "significa análisis de peligros y puntos críticos de control (Hazard Analysis Critical Control Point).",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What does HACCP stand for?",
+    "answer": "Hazard Analysis and Critical Control Point"
+   }
+  },
+  {
+   "id": "FPC-122",
+   "topic": "HACCP",
+   "question": "¿Cuántos principios tiene el HACCP?",
+   "options": [
+    "Cinco",
+    "Diez",
+    "Siete",
+    "Tres"
+   ],
+   "answer": 2,
+   "explanation": "Identificar peligros, determinar los puntos críticos de control (CCP), fijar límites críticos, vigilar los CCP, tomar medidas correctivas, verificar y llevar registros.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "Los siete principios del HACCP son: identificación de peligros, determinación de los puntos críticos de control",
+    "lang": "es"
+   },
+   "en": {
+    "question": "How many principles does HACCP have?",
+    "answer": "Seven"
+   }
+  },
+  {
+   "id": "FPC-123",
+   "topic": "HACCP",
+   "question": "¿Qué es un punto crítico de control (CCP)?",
+   "options": [
+    "Cualquier refrigerador",
+    "La caja registradora",
+    "Cualquier punto del recorrido de los alimentos donde hay que actuar para eliminar el peligro",
+    "El área de recibo"
+   ],
+   "answer": 2,
+   "explanation": "Un CCP es un punto donde hay que tomar medidas para eliminar un peligro.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "Un CCP se refiere a cualquier punto durante la preparación de alimentos en donde se debe tomar medidas para eliminar el riesgo.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is a Critical Control Point (CCP)?",
+    "answer": "Any point in the food flow where action must be taken to eliminate the hazard"
+   }
+  },
+  {
+   "id": "FPC-124",
+   "topic": "HACCP",
+   "question": "¿Cuál es el primer principio del HACCP?",
+   "options": [
+    "Vigilar los CCP",
+    "Identificar los peligros",
+    "Llevar registros",
+    "Tomar medidas correctivas"
+   ],
+   "answer": 1,
+   "explanation": "El primero es identificar los peligros; el último es llevar registros.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "Los siete principios del HACCP son: identificación de peligros",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which HACCP principle comes first?",
+    "answer": "Identify hazards"
+   }
+  },
+  {
+   "id": "FPC-125",
+   "topic": "HACCP",
+   "question": "¿Qué compañía creó el sistema HACCP en los años 60?",
+   "options": [
+    "Kraft",
+    "Nabisco",
+    "Pillsbury",
+    "General Mills"
+   ],
+   "answer": 2,
+   "explanation": "Pillsbury lo creó para dar comida segura a los astronautas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 88,
+    "quote": "fue impulsado por la Compañía Pillsbury en la década de 1960.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "Which company pioneered the HACCP system in the 1960s?",
+    "answer": "Pillsbury"
+   }
+  },
+  {
+   "id": "FPC-126",
+   "topic": "HACCP",
+   "question": "El HACCP se desarrolló para dar comida segura a:",
+   "options": [
+    "Los almuerzos escolares",
+    "Los soldados de la Segunda Guerra Mundial",
+    "Los astronautas del programa espacial",
+    "Los pasajeros de avión"
+   ],
+   "answer": 2,
+   "explanation": "El programa espacial necesitaba comida segura para los astronautas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 88,
+    "quote": "había una gran necesidad de proporcionar un suministro seguro de alimentos para los astronautas.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "HACCP was developed to meet whose need for safe food?",
+    "answer": "Astronauts in the space program"
+   }
+  },
+  {
+   "id": "FPC-127",
+   "topic": "Salud y seguridad",
+   "question": "¿Qué aumenta la grasa trans artificial?",
+   "options": [
+    "Solo el azúcar en la sangre",
+    "El HDL, el colesterol «bueno»",
+    "La vitamina D",
+    "El LDL, el colesterol «malo»"
+   ],
+   "answer": 3,
+   "explanation": "La grasa trans artificial aumenta el LDL y puede causar enfermedades del corazón.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "La grasa trans artificial aumenta el LDL (el colesterol \"malo\"), que puede producir enfermedades cardíacas.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What does artificial trans fat increase?",
+    "answer": "LDL, the 'bad' cholesterol"
+   }
+  },
+  {
+   "id": "FPC-128",
+   "topic": "Salud y seguridad",
+   "question": "¿Cuál es la regla sobre la grasa trans artificial en las comidas de restaurantes de NYC?",
+   "options": [
+    "Se permite hasta 2 gramos por porción",
+    "Solo se permite en frituras",
+    "Solo hay que indicarla en la etiqueta",
+    "Está prohibida en todas las comidas de restaurantes"
+   ],
+   "answer": 3,
+   "explanation": "La grasa trans artificial está prohibida en las comidas de restaurantes.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "Está prohibido que los alimentos de los restaurantes contengan grasa trans artificial.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What is the rule on artificial trans fat in NYC restaurant foods?",
+    "answer": "It is banned from all restaurant foods"
+   }
+  },
+  {
+   "id": "FPC-129",
+   "topic": "Salud y seguridad",
+   "question": "¿Qué calzado deben usar los trabajadores de alimentos para evitar resbalones, tropiezos y caídas?",
+   "options": [
+    "Zapatos antideslizantes",
+    "Sandalias abiertas",
+    "Cualquier zapato cerrado",
+    "Botas con punta de acero"
+   ],
+   "answer": 0,
+   "explanation": "Se deben usar zapatos antideslizantes.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "Para evitar resbalones, tropiezos y caídas, los trabajadores de alimentos deberán utilizar calzado antideslizante.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What footwear must food workers wear to avoid slips, trips and falls?",
+    "answer": "Slip-resistant shoes"
+   }
+  },
+  {
+   "id": "FPC-130",
+   "topic": "Salud y seguridad",
+   "question": "¿Qué se debe hacer de rutina para mejorar la seguridad de los alimentos y las prácticas de trabajo?",
+   "options": [
+    "Cambiar el menú",
+    "Una autoevaluación de las operaciones con alimentos",
+    "Una encuesta a los clientes",
+    "Una fiesta anual del personal"
+   ],
+   "answer": 1,
+   "explanation": "Haga autoevaluaciones de rutina de las operaciones con alimentos.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf",
+    "title": "DOHMH: Guía de estudio del curso en línea (PDF oficial en español)",
+    "page": 9,
+    "quote": "se deben hacer autoevaluaciones de rutina en las operaciones que involucren alimentos.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "What should be routinely conducted to improve food safety, security and work practice?",
+    "answer": "A self-assessment of food operations"
+   }
+  },
+  {
+   "id": "FPC-131",
+   "topic": "Salud y seguridad",
+   "question": "Para proteger los alimentos contra actos intencionales (food defense), ¿a qué áreas se debe limitar a los clientes?",
+   "options": [
+    "A cualquier área donde haya personal",
+    "A ninguna; pueden entrar a todas partes",
+    "Solo a las áreas públicas",
+    "A la cocina y el comedor"
+   ],
+   "answer": 2,
+   "explanation": "Limite a los clientes a las áreas públicas, y el acceso a las instalaciones solo a empleados y contratistas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf",
+    "title": "DOHMH: Manual de capacitación del Curso sobre Protección de Alimentos (PDF oficial en español, 2012)",
+    "page": 103,
+    "quote": "Restrinja el acceso de los clientes sólo a las áreas públicas. Limite el acceso a las instalaciones sólo a los empleados y contratistas.",
+    "lang": "es"
+   },
+   "en": {
+    "question": "For food defense, where should customers be restricted?",
+    "answer": "To public areas only"
+   }
+  }
+ ]
+}

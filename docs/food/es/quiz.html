@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prueba de práctica: Protección de Alimentos NYC en español</title>
+<meta name="description" content="Prueba de práctica gratis en español para el examen de protección de alimentos de NYC (DOHMH Food Protection Certificate), cada pregunta con su fuente oficial.">
+<!-- seo:start -->
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/food/es/quiz.html?exam=FPCES">
+<link rel="alternate" hreflang="es" href="https://lanternlab2027.github.io/lab/food/es/quiz.html?exam=FPCES">
+<link rel="alternate" hreflang="en" href="https://lanternlab2027.github.io/lab/food/quiz.html?exam=FPC">
+<link rel="alternate" hreflang="x-default" href="https://lanternlab2027.github.io/lab/food/quiz.html?exam=FPC">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_US">
+<meta property="og:site_name" content="Lantern Lab NYC">
+<meta property="og:title" content="Prueba de práctica: Protección de Alimentos NYC en español">
+<meta property="og:description" content="Prueba de práctica gratis en español para el examen de protección de alimentos de NYC (DOHMH Food Protection Certificate), cada pregunta con su fuente oficial.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/food/es/quiz.html?exam=FPCES">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/brand/cover.png">
+<meta property="og:image:width" content="1640">
+<meta property="og:image:height" content="624">
+<meta property="og:image:alt" content="Lantern Lab NYC: herramientas gratis para NYC">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prueba de práctica: Protección de Alimentos NYC en español">
+<meta name="twitter:description" content="Prueba de práctica gratis en español para el examen de protección de alimentos de NYC, cada pregunta con su fuente oficial.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/brand/cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Prueba de práctica de Protección de Alimentos de NYC (en español)",
+ "url": "https://lanternlab2027.github.io/lab/food/es/quiz.html?exam=FPCES",
+ "description": "Prueba de práctica gratis en español para el examen de protección de alimentos de NYC, cada pregunta con su fuente oficial del DOHMH.",
+ "inLanguage": "es",
+ "isAccessibleForFree": true,
+ "educationalUse": "assessment",
+ "about": {
+  "@type": "Thing",
+  "name": "Examen del Certificado de Protección de Alimentos del DOHMH de NYC"
+ },
+ "provider": {
+  "@type": "Organization",
+  "name": "Lantern Lab NYC",
+  "url": "https://lanternlab2027.github.io/lab/"
+ }
+}
+</script>
+<!-- seo:end -->
+<link rel="stylesheet" href="../style.css">
+<style>.langlink{margin-left:auto;font-size:.95rem}</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="6" fill="#1f5135"/><path d="M9 7v14M19 7v14M9 12h10" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="14" cy="20" r="2.2" fill="#f59e0b"/></svg>
+    <a class="site-name" href="index.html">Práctica: Protección de Alimentos NYC</a>
+    <a class="langlink" href="../quiz.html?exam=FPC" hreflang="en" lang="en">English</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1 id="title">Cargando&hellip;</h1>
+  <p class="lede" id="subtitle"></p>
+  <div class="disclaimer" role="note"><strong>No afiliado con la Ciudad de Nueva York ni con el DOHMH. Estudie el material oficial.</strong> <a href="https://www.nyc.gov/site/doh/business/health-academy/food-protection-online-free.page" hreflang="en">Curso oficial gratis en línea</a> &middot; <a href="https://www.nyc.gov/assets/doh/downloads/pdf/rii/study-guide-sp.pdf">Guía de estudio en español (PDF)</a> &middot; <a href="https://www.nyc.gov/assets/doh/downloads/pdf/rii/fpc-manual-sp.pdf">Manual en español (PDF)</a></div>
+
+  <!-- Quiz runner -->
+  <section id="runner" class="hidden" aria-live="polite">
+    <div class="qhead"><span id="qcount"></span><span id="qmode"></span><span class="timer hidden" id="timer" role="timer"></span></div>
+    <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+    <div class="qtopic" id="qtopic"></div>
+    <p class="qtext" id="qtext"></p>
+    <ul class="opts" id="opts"></ul>
+    <div class="feedback hidden" id="feedback"></div>
+    <div class="actions">
+      <button class="btn" id="next" disabled>Siguiente pregunta</button>
+      <button class="btn secondary hidden" id="finishEarly">Terminar el examen</button>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="hidden">
+    <div class="panel">
+      <div class="small" id="resLabel">Su resultado</div>
+      <div class="score" id="resScore"></div>
+      <div id="resText"></div>
+    </div>
+    <div id="review" class="hidden">
+      <h2>Repaso</h2>
+      <ol class="review" id="reviewList"></ol>
+    </div>
+  </section>
+
+  <!-- Email gate -->
+  <section id="gate" class="panel gate hidden">
+    <h2 id="gateTitle">Desbloquee todas las preguntas y el examen de práctica con reloj</h2>
+    <p>Escriba su correo electrónico para practicar con todas las preguntas y hacer un examen de práctica con reloj. Es gratis.</p>
+    <form id="gateForm" novalidate>
+      <label for="email" class="small">Correo electrónico</label>
+      <input type="email" id="email" name="email" autocomplete="email" required placeholder="usted@ejemplo.com">
+      <button class="btn" type="submit" id="gateBtn">Desbloquear ahora</button>
+    </form>
+    <p class="msg" id="gateMsg" role="status"></p>
+    <p class="small">De vez en cuando le enviaremos consejos de estudio para su examen. Puede darse de baja cuando quiera.</p>
+  </section>
+
+  <!-- Unlocked menu -->
+  <section id="unlocked" class="panel hidden">
+    <h2>Acceso completo desbloqueado</h2>
+    <p id="unlockedText"></p>
+    <div class="actions">
+      <button class="btn" id="startAll">Practicar todas las preguntas</button>
+    </div>
+    <div class="actions" id="mockButtons"></div>
+  </section>
+
+  <section id="error" class="panel hidden"></section>
+</main>
+
+<footer class="site">
+  <div class="wrap">No afiliado con la Ciudad de Nueva York ni con el Departamento de Salud e Higiene Mental (DOHMH), ni respaldado o aprobado por ellos. Las preguntas se basan en el material público y gratuito del DOHMH, y cada una cita su fuente.<br><a href="index.html">Página del examen</a> &middot; <a href="../quiz.html?exam=FPC" hreflang="en" lang="en">English version</a> &middot; <a href="../../">Lantern Lab NYC (en inglés)</a></div>
+</footer>
+<script src="quiz.js"></script>
+</body>
+</html>
