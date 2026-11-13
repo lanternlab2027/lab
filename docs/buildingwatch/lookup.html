@@ -153,6 +153,16 @@ function parseDate(v) {
 }
 const fmt = d => d ? d.toLocaleDateString("en-US", {weekday:"short", month:"short", day:"numeric", year:"numeric"}) : "n/a";
 
+// Street-name pieces for the AddressPoint fallback (same helpers as the LL97 page).
+const ORD = {FIRST:1,SECOND:2,THIRD:3,FOURTH:4,FIFTH:5,SIXTH:6,SEVENTH:7,EIGHTH:8,NINTH:9,TENTH:10,ELEVENTH:11,TWELFTH:12};
+const ABBR = Object.fromEntries(Object.entries(SUFFIX).filter(([k]) => !["STR","AV"].includes(k)).map(([k, v]) => [v, k]));
+const DIR1 = {WEST:"W",EAST:"E",NORTH:"N",SOUTH:"S"};
+function inferBoro(t) {
+  const up = t.toUpperCase();
+  const hints = [[/\b(MANHATTAN|NEW YORK,? NY|NYC)\b/,1],[/\bBRONX\b/,2],[/\bBROOKLYN\b/,3],[/\b(QUEENS|ASTORIA|FLUSHING|JAMAICA|BAYSIDE|CORONA|ELMHURST|JACKSON HEIGHTS|LONG ISLAND CITY|FOREST HILLS)\b/,4],[/\bSTATEN ISLAND\b/,5]];
+  for (const [re, b] of hints) if (re.test(up)) return b;
+  return null;
+}
 // Compare house numbers numerically, including Queens-style "36-06". Different shapes never match.
 function hnCmp(a, b) {
   const A = String(a).split("-").map(x => parseInt(x, 10)), B = String(b).split("-").map(x => parseInt(x, 10));
@@ -165,11 +175,7 @@ async function resolveBBL(text, boro) {
   if (/^\d{10}$/.test(t)) return t;
   const m = t.toUpperCase().match(/^\s*([0-9]+(?:-[0-9]+)?[A-Z]?)\s+(.+)$/);
   if (!m) throw new Error("Please start with the house number, e.g. 289 Garfield Pl.");
-  if (!boro) {
-    const up = t.toUpperCase();
-    const hints = [[/\b(MANHATTAN|NEW YORK,? NY|NYC)\b/,1],[/\bBRONX\b/,2],[/\bBROOKLYN\b/,3],[/\b(QUEENS|ASTORIA|FLUSHING|JAMAICA|BAYSIDE|CORONA|ELMHURST|JACKSON HEIGHTS|LONG ISLAND CITY|FOREST HILLS)\b/,4],[/\bSTATEN ISLAND\b/,5]];
-    for (const [re, b] of hints) { if (re.test(up)) { boro = b; break; } }
-  }
+  if (!boro) boro = inferBoro(t);
   if (!boro) throw new Error("Please pick a borough.");
   const house = m[1], street = normStreet(m[2].split(",")[0]);
   let rows = await soda("64uk-42ks", {$select: "bbl", $where: `address=${q(house + " " + street)} AND borough=${q(PLUTO_BORO[boro])}`, $limit: 5});
@@ -179,7 +185,25 @@ async function resolveBBL(text, boro) {
   // The server compares house numbers as text ("35" <= "350"), so re-check the range numerically.
   rows = rows.filter(r => r.housenumber === house || (r.lowhousenumber && r.highhousenumber && hnCmp(r.lowhousenumber, house) <= 0 && hnCmp(r.highhousenumber, house) >= 0));
   if (rows.length) return rows[0].boroid + String(rows[0].block).padStart(5, "0") + String(rows[0].lot).padStart(4, "0");
+  // Fallback: NYC AddressPoint (house number + street -> BIN), then BIN -> BBL.
+  const words = street.split(" ").map(w => ORD[w] ? String(ORD[w]) : w);
+  let dir = null, type = null;
+  if (words.length > 1 && DIR1[words[0]]) dir = DIR1[words.shift()];
+  if (words.length > 1 && ABBR[words[words.length - 1]]) type = ABBR[words.pop()];
+  const core = words.join(" ");
+  let ap = await soda("uf93-f8nk", {$select: "bin,pre_directional,post_type", $limit: 20,
+    $where: `boroughcode=${q(boro)} AND house_number=${q(house)} AND street_name=${q(core)}`});
+  ap = ap.filter(r => (!type || !r.post_type || r.post_type === type) && (!dir || !r.pre_directional || r.pre_directional === dir) && r.bin);
+  if (ap.length) {
+    const bbl = await bblForBin(ap[0].bin);
+    if (bbl) return bbl;
+  }
   throw new Error(`Couldn't find "${house} ${street}" in ${BORO[boro].toLowerCase()}. Try spelling out the street (e.g. "West 139 Street") or enter the BBL.`);
+}
+async function bblForBin(bin) {
+  const r = await soda("5zhs-2jue", {$select: "base_bbl,mappluto_bbl", $where: `bin=${q(bin)}`, $limit: 1});
+  const v = r[0] && (r[0].mappluto_bbl || r[0].base_bbl);
+  return v ? String(Math.trunc(parseFloat(v))) : null;
 }
 
 function item(sev, title, when, desc, link) {
