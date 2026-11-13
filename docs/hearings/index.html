@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC Hearing Watch</title>
+<meta name="description" content="Free lookup of upcoming NYC OATH hearings (Sanitation, DOB, FDNY, DEP and other summonses) for a business or property, with past defaults and what a missed hearing typically costs.">
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1c1d1f;--muted:#5e6166;--line:#e3e1da;--accent:#1f5f8b;--accent-ink:#fff;
+  --hi:#b42318;--hi-bg:#fdecea;--md:#9a5b00;--md-bg:#fff4e0;--lo:#2f6b3a;--lo-bg:#e9f5ec}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141518;--card:#1d1f23;--ink:#ecebe7;--muted:#a3a6ad;--line:#2e3036;--accent:#6fb0e0;--accent-ink:#0d1b26;
+  --hi:#ff8a80;--hi-bg:#3a1d1b;--md:#f3b45a;--md-bg:#352a17;--lo:#8fd19e;--lo-bg:#1b2e20}}
+:root[data-theme="dark"]{--bg:#141518;--card:#1d1f23;--ink:#ecebe7;--muted:#a3a6ad;--line:#2e3036;--accent:#6fb0e0;--accent-ink:#0d1b26;
+  --hi:#ff8a80;--hi-bg:#3a1d1b;--md:#f3b45a;--md-bg:#352a17;--lo:#8fd19e;--lo-bg:#1b2e20}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--accent)}
+header a{text-decoration:none;font-weight:600;color:var(--ink)}
+h1{font-size:1.7rem;line-height:1.2;margin:18px 0 6px}
+h2{font-size:1.25rem;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 20px}
+form.search{display:grid;grid-template-columns:150px 1fr 150px auto;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+input,select,button{font:inherit;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-width:0}
+button{background:var(--accent);color:var(--accent-ink);border:0;font-weight:600;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.hint{font-size:.85rem;color:var(--muted);margin:6px 2px 0}
+@media (max-width:640px){form.search{grid-template-columns:1fr}}
+form.search.noboro #boro{display:none}
+form.search.noboro{grid-template-columns:150px 1fr auto}
+@media (max-width:640px){form.search.noboro{grid-template-columns:1fr}}
+#status{margin:16px 0;color:var(--muted)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+.box h2{margin:0 0 4px}
+.meta{color:var(--muted);font-size:.9rem;overflow-wrap:anywhere}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+@media (max-width:640px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{border:1px solid var(--line);border-radius:10px;padding:10px;min-width:0}
+.tile b{display:block;font-size:1.45rem;line-height:1.15;overflow-wrap:anywhere}
+.tile span{font-size:.82rem;color:var(--muted)}
+section.list{margin:22px 0}
+section.list h3{font-size:1.05rem;margin:0 0 8px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0}
+.item .top{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.pill{font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.hi{color:var(--hi);background:var(--hi-bg)}.md{color:var(--md);background:var(--md-bg)}.lo{color:var(--lo);background:var(--lo-bg)}
+.item .desc{margin:6px 0 0;font-size:.92rem;overflow-wrap:anywhere}
+.item .when{font-size:.85rem;color:var(--muted);overflow-wrap:anywhere}
+.cost{margin:8px 0 0;font-size:.9rem;border-left:3px solid var(--line);padding-left:10px}
+.cost b{white-space:nowrap}
+.more{font-size:.88rem;color:var(--muted)}
+.notice{border-left:4px solid var(--md);background:var(--md-bg);padding:10px 12px;border-radius:6px;margin:12px 0;font-size:.95rem}
+.cta{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:16px;margin:24px 0}
+.cta h3{margin:0 0 4px}
+.cta form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.cta input{flex:1 1 220px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.disc{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:28px}
+.facts{font-size:.88rem;color:var(--muted);margin:0 0 12px}
+.big{font-size:1.05rem;margin:0 0 12px}
+.tbl{width:100%;border-collapse:collapse;font-size:.92rem}
+.tbl th,.tbl td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:.8rem;color:var(--muted);font-weight:600}
+.tbl td.n{white-space:nowrap;text-align:right}.tbl th.n{text-align:right}
+.tblwrap{overflow-x:auto}
+ol.steps{padding-left:22px;margin:8px 0}
+ol.steps li{margin:0 0 12px}
+ol.steps li b{display:block}
+details.names{margin:8px 0;font-size:.9rem}
+details.names summary{cursor:pointer;color:var(--muted)}
+details.names ul{margin:6px 0;padding-left:20px}
+</style>
+</head>
+<body>
+<main>
+<header><a href="./">NYC Hearing Watch</a></header>
+<h1>Got a NYC summons? Don't miss the hearing.</h1>
+<p class="sub">Look up upcoming OATH hearings for a business or property: Sanitation, Buildings (DOB/ECB), Fire Dept, DEP, Health and more. See past defaults and what a missed hearing typically costs. Free, straight from NYC Open Data.</p>
+
+<form class="search" id="f">
+  <select id="mode" aria-label="Search by">
+    <option value="addr">Address</option>
+    <option value="ticket">Summons #</option>
+    <option value="bbl">BBL</option>
+  </select>
+  <input id="q" placeholder="e.g. 183 Mulberry St" required>
+  <select id="boro" aria-label="Borough">
+    <option value="">Borough...</option><option value="1">Manhattan</option><option value="2">Bronx</option>
+    <option value="3">Brooklyn</option><option value="4">Queens</option><option value="5">Staten Island</option>
+  </select>
+  <button id="go">Look up</button>
+</form>
+<p class="hint" id="hint">House number and street, then pick the borough. We match the tax lot, so tickets for any business at that building show up.</p>
+
+<div id="status" role="status" aria-live="polite"></div>
+<div id="out"></div>
+
+<div class="cta" id="signup">
+  <h3>Get email reminders before each hearing (beta)</h3>
+  <div>Join the beta and we'll email you about a week before, and again two days before, each upcoming hearing on this lookup. Email reminders are starting soon; for now, the calendar download below each result works today. <b>Free while we're in beta.</b></div>
+  <form id="signup-form">
+    <input type="email" name="email" id="signup-email" placeholder="you@example.com" required>
+    <input type="hidden" id="signup-lookup">
+    <input type="hidden" id="signup-tickets">
+    <input type="hidden" id="signup-next">
+    <button type="submit">Remind me</button>
+  </form>
+  <div id="signup-msg" class="hint"></div>
+  <p class="hint">Prefer texts? OATH runs its own free reminders: text <b>OATHreminder</b> to <b>(917) 451-8829</b> (<a href="https://www.nyc.gov/site/oath/hearings/reopen-a-missed-hearing-default-online.page" target="_blank" rel="noopener">source</a>).</p>
+</div>
+
+<section class="box" id="why">
+  <h2>Why it matters</h2>
+  <p class="big" id="headline">Loading the latest figures...</p>
+  <div class="tblwrap"><table class="tbl" id="agtbl" hidden>
+    <thead><tr><th>Agency</th><th class="n">Typical penalty if you miss the hearing</th><th class="n">Typical penalty if found in violation at a hearing</th><th class="n">Dismissed at a hearing</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+  <p class="facts" id="agnote"></p>
+</section>
+
+<section class="box" id="todo">
+  <h2>What to do before your hearing</h2>
+  <p class="facts">Plain-English summary of OATH's own instructions. Rules can change, so follow the official page linked in each step.</p>
+  <ol class="steps">
+    <li><b>Check the date on your most recent notice.</b> If the date we show differs from your summons, OATH says to go by the most recent notice you received. Questions: call OATH at 844-OATH-NYC (844-628-4692). <a href="https://www.nyc.gov/site/oath/hearings/hearings-frequently-asked-questions.page" target="_blank" rel="noopener">OATH hearing FAQ</a></li>
+    <li><b>Decide: pay or fight.</b> Paying before the hearing date means you admit the charge and give up your right to a hearing. <a href="https://www.nyc.gov/site/oath/hearings/payments-penalties.page" target="_blank" rel="noopener">Payments and penalties</a></li>
+    <li><b>Fight it online, with no trip.</b> Many summonses qualify for an Online Hearing: a form where you type your defense and attach up to three files. It must be submitted on or before the hearing date. Not every violation code is eligible. <a href="https://www.nyc.gov/site/oath/hearings/online-hearing-submission.page" target="_blank" rel="noopener">Online Hearing</a></li>
+    <li><b>Or have your hearing by phone.</b> Request it at least 3 business days, and no more than 1 month, before the hearing date. OATH emails you a number and PIN; on the day you call in within three hours of the hearing time. <a href="https://www.nyc.gov/site/oath/hearings/hearing-by-phone.page" target="_blank" rel="noopener">Hearing by phone</a> &middot; <a href="https://www.nyc.gov/site/oath/hearings/request-phone-hearing-for-upcoming-hearing.page" target="_blank" rel="noopener">request form</a></li>
+    <li><b>In person or by mail are options too.</b> In-person hearings must be requested by email at least 5 business days ahead. A mailed written defense must reach OATH before the hearing date. <a href="https://www.nyc.gov/site/oath/hearings/hearing-in-person.page" target="_blank" rel="noopener">In person</a> &middot; <a href="https://www.nyc.gov/site/oath/hearings/mail-hearing-submission.page" target="_blank" rel="noopener">By mail</a></li>
+    <li><b>Can't make the date? Reschedule before it.</b> The reschedule request must reach OATH before the scheduled hearing. <a href="https://www.nyc.gov/site/oath/hearings/reschedule-upcoming-hearing.page" target="_blank" rel="noopener">Reschedule a hearing</a></li>
+    <li><b>Already missed it? Act within 75 days.</b> OATH grants a request for a new hearing if it is received within 75 days of the missed hearing date, and you can ask only once per summons. <a href="https://www.nyc.gov/site/oath/hearings/missed-hearings-default-frequently-asked-questions.page" target="_blank" rel="noopener">Missed hearing (default) FAQ</a> &middot; <a href="https://www.nyc.gov/site/oath/hearings/reopen-a-missed-hearing-default-online.page" target="_blank" rel="noopener">request online</a></li>
+  </ol>
+  <p class="facts">Free help: OATH's <a href="https://www.nyc.gov/site/oath/help-center/help-center.page" target="_blank" rel="noopener">Help Center</a> assists people who represent themselves.</p>
+</section>
+
+<p class="disc"><b>Not legal advice. Not affiliated with OATH or the City of New York.</b> NYC Hearing Watch is an independent, informational tool. Data comes from the OATH Hearings Division Case Status dataset on NYC Open Data, which can lag OATH's own records by days (the newest summonses often appear without an address at first). Penalty figures are typical past outcomes, not a prediction for your case. Always confirm your hearing date, status and options with OATH or on your summons. Results are matched by address, tax lot, name prefix or summons number, so a ticket listed here may belong to a different business or person at the same address.</p>
+</main>
+
+<script>
+const API = "https://data.cityofnewyork.us/resource/";
+const OATH = "jz4z-kudi";
+const BORO = {1:"MANHATTAN",2:"BRONX",3:"BROOKLYN",4:"QUEENS",5:"STATEN ISLAND"};
+const PLUTO_BORO = {1:"MN",2:"BX",3:"BK",4:"QN",5:"SI"};
+const DEFAULTS = ["DEFAULTED","Default/ No Appearance"];
+const LINK = {
+  reopen: "https://www.nyc.gov/site/oath/hearings/reopen-a-missed-hearing-default-online.page",
+  missed: "https://www.nyc.gov/site/oath/hearings/missed-hearings-default-frequently-asked-questions.page",
+  online: "https://www.nyc.gov/site/oath/hearings/online-hearing-submission.page",
+  phone: "https://www.nyc.gov/site/oath/hearings/hearing-by-phone.page",
+  pay: "https://www.nyc.gov/site/oath/hearings/payments-penalties.page",
+};
+// Street suffix / direction spellings. OATH and PLUTO each mix both forms ("5 AVENUE" and "5 AVE").
+const SUF = [["STREET","ST"],["AVENUE","AVE"],["PLACE","PL"],["ROAD","RD"],["BOULEVARD","BLVD"],["DRIVE","DR"],["LANE","LN"],
+  ["PARKWAY","PKWY"],["TERRACE","TER"],["COURT","CT"],["SQUARE","SQ"],["HIGHWAY","HWY"],["EXPRESSWAY","EXPY"],["TURNPIKE","TPKE"]];
+const DIR = [["WEST","W"],["EAST","E"],["NORTH","N"],["SOUTH","S"]];
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const q = s => "'" + String(s).replace(/'/g, "''") + "'";
+const clean = s => String(s ?? "").replace(/\s+/g, " ").trim();
+const money = v => v === null || v === undefined || v === "" || isNaN(+v) ? "n/a" : "$" + Math.round(+v).toLocaleString("en-US");
+const title = s => clean(s).toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+const AG = {"SANITATION OTHERS":"Sanitation (DSNY)","DOS - ENFORCEMENT AGENTS":"Sanitation enforcement agents","SANITATION RECYCLING":"Sanitation recycling",
+  "SANITATION POLICE":"Sanitation police","SANITATION VENDOR ENFORCEMENT":"Sanitation vendor enforcement","DEPT. OF BUILDINGS":"Buildings (DOB)",
+  "DEPARTMENT OF BUILDINGS":"Buildings (DOB)","FIRE DEPARTMENT OF NYC":"Fire Dept (FDNY)","DEP - BUREAU OF ENV. COMPLIANC":"Environmental Protection (DEP)",
+  "PCS - DOHMH":"Health Dept (DOHMH) pest control","DOH MENTAL HEALTH":"Health Dept (DOHMH)","DEPT OF TRANSPORTATION":"Transportation (DOT)",
+  "POLICE DEPARTMENT":"Police (NYPD)","PARKS DEPARTMENT":"Parks","ASBESTOS CONTROL PROGRAM":"DEP asbestos control","COOLING TOWERS - DOHMH":"Health Dept cooling towers"};
+const agency = s => AG[clean(s).toUpperCase()] || title(s) || "Agency not listed yet";
+let STATS = null;
+
+async function soda(id, params) {
+  const u = API + id + ".json?" + new URLSearchParams(params);
+  for (let i = 0; ; i++) {  // retry throttling / transient 5xx with backoff
+    let r;
+    try { r = await fetch(u); } catch (e) { if (i >= 3) throw new Error("Couldn't reach NYC Open Data. Please try again."); }
+    if (r && r.ok) return r.json();
+    if (r && !(r.status === 429 || r.status >= 500)) throw new Error("NYC Open Data returned " + r.status);
+    if (i >= 3) throw new Error("NYC Open Data is busy (" + (r ? r.status : "network") + "). Please try again in a minute.");
+    await new Promise(res => setTimeout(res, 1500 * 2 ** i));
+  }
+}
+function parseDate(v) {
+  const m = v && String(v).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? new Date(+m[1], m[2] - 1, +m[3]) : null;
+}
+const fmt = d => d ? d.toLocaleDateString("en-US", {weekday:"short", month:"short", day:"numeric", year:"numeric"}) : "n/a";
+const fmtShort = d => d ? d.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) : "n/a";
+function time12(t) {
+  const m = t && String(t).match(/^(\d{1,2}):(\d{2})/); if (!m) return "";
+  const h = +m[1]; return `${(h % 12) || 12}:${m[2]} ${h < 12 ? "AM" : "PM"}`;
+}
+
+// ---------- address -> street spellings + BBL ----------
+function streetVariants(raw) {
+  const t = raw.toUpperCase().replace(/[.,#]/g, " ").split(/\s+/).filter(Boolean)
+    .map(w => w.replace(/^(\d+)(ST|ND|RD|TH)$/, "$1"));
+  if (!t.length) return [];
+  const opts = t.map((w, i) => {
+    const set = new Set([w]);
+    if (i === t.length - 1) for (const p of SUF) if (p.includes(w)) p.forEach(x => set.add(x));
+    if (i === 0 && t.length > 1) for (const p of DIR) if (p.includes(w)) p.forEach(x => set.add(x));
+    return [...set];
+  });
+  let out = [""];
+  for (const o of opts) out = out.flatMap(a => o.map(w => (a ? a + " " : "") + w));
+  return out.slice(0, 16);
+}
+async function resolveAddress(text, boro) {
+  const m = text.trim().toUpperCase().match(/^([0-9]+(?:-[0-9]+)?[A-Z]?)\s+(.+)$/);
+  if (!m) throw new Error("Please start with the house number, e.g. 183 Mulberry St.");
+  if (!boro) throw new Error("Please pick a borough.");
+  const house = m[1], streets = streetVariants(m[2].split(",")[0]);
+  let bbl = null, label = null;
+  try {
+    const rows = await soda("64uk-42ks", {$select: "bbl,address", $where: `borough=${q(PLUTO_BORO[boro])} AND address in (${streets.map(s => q(house + " " + s)).join(",")})`, $limit: 5});
+    if (rows.length) { bbl = String(Math.trunc(parseFloat(rows[0].bbl))); label = rows[0].address; }
+    else {
+      const r2 = await soda("tesw-yqqr", {$select: "boroid,block,lot", $limit: 5,
+        $where: `boroid=${q(boro)} AND streetname in (${streets.map(q).join(",")}) AND (housenumber=${q(house)} OR (lowhousenumber<=${q(house)} AND highhousenumber>=${q(house)}))`});
+      if (r2.length) bbl = r2[0].boroid + String(r2[0].block).padStart(5, "0") + String(r2[0].lot).padStart(4, "0");
+    }
+  } catch (_) { /* fall back to matching OATH's own address fields */ }
+  return {house, streets, bbl, label: label || `${house} ${streets[0]}`};
+}
+// OATH stores lots as 4 digits for most agencies but 5 for FDNY and some DOB rows: match both.
+function lotWhere(bbl) {
+  const b = bbl[0], block = bbl.slice(1, 6), lot = bbl.slice(6);
+  return `(violation_location_borough=${q(BORO[b])} AND violation_location_block_no=${q(block)} AND violation_location_lot_no in (${q(lot)},${q("0" + lot)}))`;
+}
+
+async function buildQuery(mode, text, boro) {
+  text = clean(text);
+  if (mode === "ticket") {
+    const t = text.toUpperCase().replace(/[^0-9A-Z]/g, "");
+    if (t.length < 6) throw new Error("Summons numbers are usually 8-10 characters, e.g. 0803987140.");
+    const v = [...new Set([t, "0" + t, t.replace(/^0+/, "")])];
+    return {where: `ticket_number in (${v.map(q).join(",")})`, label: "Summons #" + t, key: "ticket:" + t};
+  }
+  if (mode === "bbl") {
+    const d = text.replace(/\D/g, "");
+    if (!/^[1-5]\d{9}$/.test(d)) throw new Error("A BBL is 10 digits: borough (1-5), 5-digit block, 4-digit lot, e.g. 1004810033.");
+    return {where: lotWhere(d), label: `BBL ${d} (${title(BORO[d[0]])})`, key: "bbl:" + d, bbl: d};
+  }
+  if (mode === "name") throw new Error("Name search is not available. Search by address, summons number or BBL.");
+  if (false) {
+    const n = text.toUpperCase();
+    if (n.length < 3) throw new Error("Please type at least 3 letters of the name.");
+    return {where: `starts_with(respondent_last_name, ${q(n)})`, label: `Names starting with "${n}"`, key: "name:" + n, name: n};
+  }
+  const a = await resolveAddress(text, boro);
+  const byAddr = `(violation_location_borough=${q(BORO[boro])} AND violation_location_house=${q(a.house)} AND violation_location_street_name in (${a.streets.map(q).join(",")}))`;
+  return {where: a.bbl ? `(${byAddr} OR ${lotWhere(a.bbl)})` : byAddr, label: `${title(a.label)}, ${title(BORO[boro])}`,
+    key: "addr:" + (a.bbl || a.house + " " + a.streets[0] + ", " + BORO[boro]), bbl: a.bbl};
+}
+
+// ---------- what a default typically costs ----------
+function costFor(r) {
+  if (!STATS) return null;
+  const c = r.charge_1_code && STATS.codes[r.charge_1_code];
+  const win = w => w === "recent" ? `last ${STATS.recentDays} days` : "last 12 months";
+  if (c && c.d) return {d: c.d[1], dn: c.d[0], v: c.v ? c.v[1] : null, vn: c.v ? c.v[0] : 0, basis: `code ${r.charge_1_code}, ${win(c.w)}`};
+  const a = STATS.agencies_recent[r.issuing_agency];
+  if (a && a.default) return {d: a.default.median, dn: a.default.n, v: a.in_violation ? a.in_violation.median : null,
+    vn: a.in_violation ? a.in_violation.n : 0, basis: `all ${a.label} summonses, last ${STATS.recentDays} days`};
+  return null;
+}
+
+function where(r) {
+  const parts = [clean(r.violation_location_house), title(r.violation_location_street_name)].filter(Boolean).join(" ");
+  const boro = r.violation_location_borough ? title(r.violation_location_borough) : "";
+  return [parts, boro].filter(Boolean).join(", ") || "address not listed yet";
+}
+function upcomingItem(r, today) {
+  const hd = parseDate(r.hearing_date), days = hd ? Math.round((hd - today) / 864e5) : null;
+  const st = clean(r.hearing_status).toUpperCase(), res = clean(r.hearing_result);
+  let pill, cls;
+  if (st === "PAID IN FULL") { pill = "PAID"; cls = "lo"; }
+  else if (st === "WRITTEN OFF") { pill = "WRITTEN OFF"; cls = "lo"; }
+  else if (DEFAULTS.includes(res)) { pill = "NEW DATE AFTER DEFAULT"; cls = "hi"; }
+  else if (days !== null && days <= 7) { pill = days === 0 ? "TODAY" : days === 1 ? "TOMORROW" : `IN ${days} DAYS`; cls = "hi"; }
+  else { pill = days !== null ? `IN ${days} DAYS` : "UPCOMING"; cls = "md"; }
+  const phone = /PHONE/i.test(r.scheduled_hearing_location || "");
+  const when = `${fmt(hd)}${r.hearing_time ? " at " + time12(r.hearing_time) : ""}${phone ? " (by phone)" : ""}`;
+  const c = costFor(r);
+  let cost = "";
+  if (st === "PAID IN FULL") cost = `<div class="cost">OATH's data shows this summons paid in full. Paying admits the charge and gives up the hearing, so confirm with OATH before ignoring the date.</div>`;
+  else if (st !== "WRITTEN OFF") {
+    cost = `<div class="cost">Penalty listed on the summons: <b>${money(r.total_violation_amount)}</b>.`;
+    if (c) cost += ` If no one responds by the hearing date, a default here typically costs <b>${money(c.d)}</b>` +
+      (c.v !== null ? `, against <b>${money(c.v)}</b> when found in violation at a hearing` : "") +
+      ` <span class="more">(median of ${c.dn.toLocaleString()} defaults${c.v !== null ? " / " + c.vn.toLocaleString() + " hearings" : ""}, ${esc(c.basis)})</span>.` +
+      (r.charge_2_code ? ` <span class="more">This summons has more than one charge, so its total can differ.</span>` : "");
+    cost += `</div>`;
+  }
+  if (!r.issuing_agency && !r.charge_1_code_description) cost = `<div class="cost">Details not posted yet. Brand-new summonses often appear in NYC Open Data a few days before the agency, charge and penalty are filled in.</div>`;
+  const prior = DEFAULTS.includes(res) ? `<p class="desc"><b>A default was entered on this summons earlier and a new hearing date is now set.</b> Check your most recent OATH notice for the details, and respond by this date.</p>` : "";
+  return `<div class="item"><div class="top"><span class="pill ${cls}">${esc(pill)}</span><b>${esc(when)}</b></div>
+    <div class="when">${esc(agency(r.issuing_agency))} &middot; summons #${esc(r.ticket_number)} &middot; status: ${esc(title(st) || "n/a")}</div>
+    <p class="desc">${esc(title(r.charge_1_code_description) || "Charge not listed")}${r.charge_2_code ? " (plus other charges)" : ""}</p>
+    <div class="when">At ${esc(where(r))}</div>
+    ${prior}${cost}</div>`;
+}
+function defaultItem(r, today) {
+  const hd = parseDate(r.hearing_date), ago = hd ? Math.round((today - hd) / 864e5) : null;
+  const docketed = parseDate(r.date_judgment_docketed);
+  const bal = +r.balance_due || 0;
+  const pill = bal > 0 ? `<span class="pill hi">OWES ${esc(money(bal))}</span>` : `<span class="pill lo">PAID</span>`;
+  const reopen = ago !== null && ago <= 75 && clean(r.hearing_status).toUpperCase() !== "PAID IN FULL"
+    ? `<div class="cost"><b>Missed ${ago} day${ago === 1 ? "" : "s"} ago.</b> OATH grants a request for a new hearing received within 75 days of the missed date (one request per summons). <a href="${LINK.reopen}" target="_blank" rel="noopener">Request a new hearing</a></div>` : "";
+  return `<div class="item"><div class="top">${pill}<b>Missed hearing ${esc(fmtShort(hd))}</b></div>
+    <div class="when">${esc(agency(r.issuing_agency))} &middot; summons #${esc(r.ticket_number)} &middot; status: ${esc(title(r.hearing_status) || "n/a")}</div>
+    <p class="desc">${esc(title(r.charge_1_code_description) || "Charge not listed")}</p>
+    <div class="when">At ${esc(where(r))}</div>
+    <div class="cost">Listed on summons ${money(r.total_violation_amount)} &rarr; penalty imposed on default <b>${money(r.penalty_imposed)}</b>${+r.additional_penalties_or_late_fees ? ` + ${money(r.additional_penalties_or_late_fees)} late fees` : ""} &middot; paid ${money(r.paid_amount)}${docketed ? ` &middot; judgment docketed ${esc(fmtShort(docketed))}` : ""}</div>
+    ${reopen}</div>`;
+}
+
+const FIELDS = "ticket_number,violation_date,issuing_agency,violation_location_borough,violation_location_house," +
+  "violation_location_street_name,hearing_status,hearing_result,scheduled_hearing_location,hearing_date,hearing_time,total_violation_amount," +
+  "penalty_imposed,paid_amount,balance_due,additional_penalties_or_late_fees,date_judgment_docketed,charge_1_code,charge_1_code_description,charge_2_code";
+const SHOW = 40;
+let LAST = null;
+
+async function lookup(mode, text, boro) {
+  const st = $("#status"), out = $("#out");
+  out.innerHTML = ""; st.textContent = mode === "addr" ? "Finding the tax lot..." : "Searching OATH records...";
+  const Q = await buildQuery(mode, text, boro);
+  st.textContent = "Loading hearings from NYC Open Data...";
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const todayIso = iso(today), since = iso(new Date(today.getFullYear() - 3, today.getMonth(), today.getDate()));
+  const defIn = `hearing_result in (${DEFAULTS.map(q).join(",")})`;
+  const past = `hearing_date < ${q(todayIso)} AND hearing_date >= ${q(since)}`;
+  const [up, defs, agg, names] = await Promise.all([
+    soda(OATH, {$select: FIELDS, $where: `${Q.where} AND hearing_date >= ${q(todayIso)}`, $order: "hearing_date, hearing_time", $limit: 300}),
+    soda(OATH, {$select: FIELDS, $where: `${Q.where} AND ${past} AND ${defIn}`, $order: "hearing_date DESC", $limit: 200}),
+    soda(OATH, {$select: `sum(case(${defIn},1,true,0)) as defaults, sum(case(${defIn},penalty_imposed,true,0)) as def_pen, sum(case(${defIn},balance_due,true,0)) as def_bal, count(*) as n`,
+      $where: `${Q.where} AND ${past}`}),
+    Q.name ? soda(OATH, {$select: "respondent_last_name as r, count(*) as n", $where: Q.where, $group: "respondent_last_name", $order: "n DESC", $limit: 12}) : Promise.resolve(null),
+  ]);
+  const a = agg[0] || {};
+  const nDef = +a.defaults || 0, nPast = +a.n || 0;
+  const open = up.filter(r => !["PAID IN FULL", "WRITTEN OFF"].includes(clean(r.hearing_status).toUpperCase()));
+  const next = open[0] ? parseDate(open[0].hearing_date) : null;
+  let atStake = 0, staked = 0;
+  for (const r of open) { const c = costFor(r); if (c) { atStake += c.d; staked++; } }
+  LAST = {Q, open, label: Q.label};
+
+  $("#signup-lookup").value = Q.key;
+  $("#signup-tickets").value = open.map(r => r.ticket_number).slice(0, 40).join(",");
+  $("#signup-next").value = next ? iso(next) : "";
+
+  const nameList = names && names.length ? `<details class="names"${names.length > 1 ? " open" : ""}><summary>${names.length >= 12 ? "12+" : names.length} respondent name${names.length === 1 ? "" : "s"} match. Type more of the name to narrow it down.</summary>
+    <ul>${names.map(x => `<li>${esc(x.r)} (${(+x.n).toLocaleString()} summonses, all years)</li>`).join("")}</ul></details>` : "";
+  const capNote = (arr, cap) => arr.length >= cap ? `<p class="more">Showing the first ${cap} from NYC Open Data; narrow your search to see the rest.</p>` : "";
+  const list = (items, empty, id) => {
+    if (!items.length) return `<p class="more">${empty}</p>`;
+    const rest = items.length > SHOW ? `<div id="${id}-more" hidden>${items.slice(SHOW).join("")}</div>
+      <button type="button" class="ghost" data-more="${id}">Show ${items.length - SHOW} more</button>` : "";
+    return items.slice(0, SHOW).join("") + rest;
+  };
+  const upItems = up.map(r => upcomingItem(r, today)), defItems = defs.map(r => defaultItem(r, today));
+
+  out.innerHTML = `<div class="box"><h2>${esc(Q.label)}</h2>
+    <div class="meta">OATH Hearings Division records &middot; past results cover the last 3 years (since ${esc(fmtShort(parseDate(since)))})</div>
+    ${nameList}
+    <div class="tiles">
+      <div class="tile"><b>${open.length}${up.length >= 300 ? "+" : ""}</b><span>upcoming hearing${open.length === 1 ? "" : "s"}</span></div>
+      <div class="tile"><b>${next ? (Math.round((next - today) / 864e5) === 0 ? "Today" : Math.round((next - today) / 864e5) + " days") : "None"}</b><span>${next ? "until the next one (" + esc(fmtShort(next)) + ")" : "scheduled"}</span></div>
+      <div class="tile"><b>${staked ? money(atStake) : "n/a"}</b><span>typical total if ${staked === 1 ? "it's" : "all are"} missed (est.)</span></div>
+      <div class="tile"><b>${nDef.toLocaleString()}</b><span>missed hearings (defaults) of ${nPast.toLocaleString()} past cases</span></div>
+    </div>
+    ${nDef ? `<p class="meta" style="margin:10px 0 0">Penalties imposed on those defaults: <b>${money(a.def_pen)}</b>; still owed: <b>${money(a.def_bal)}</b>.</p>` : ""}
+    ${open.length ? `<div class="row"><button type="button" id="ics-btn">Add hearings to my calendar (.ics)</button><span class="hint" style="margin:0">Reminders 7 days and 2 days before each one.</span></div>` : ""}
+    </div>
+    <section class="list"><h3>Upcoming hearings (${open.length}${up.length >= 300 ? "+" : ""}${up.length > open.length ? `, plus ${up.length - open.length} already paid or written off` : ""})</h3>
+      ${list(upItems, "No upcoming hearings found. Brand-new summonses can take a few days to appear with an address, so search by summons # if you have one.", "up")}${capNote(up, 300)}</section>
+    <section class="list"><h3>Past missed hearings (${nDef.toLocaleString()})</h3>
+      ${list(defItems, "No defaults in the last 3 years.", "def")}${capNote(defs, 200)}</section>`;
+  out.querySelectorAll("[data-more]").forEach(b => b.addEventListener("click", () => { $("#" + b.dataset.more + "-more").hidden = false; b.remove(); }));
+  const ics = $("#ics-btn"); if (ics) ics.addEventListener("click", () => downloadICS(open, Q.label));
+  st.textContent = `Data from NYC Open Data (OATH dataset jz4z-kudi), fetched ${new Date().toLocaleString()}.`;
+}
+
+// ---------- calendar file ----------
+function buildICS(rows, label, now = new Date()) {
+  const pad = n => String(n).padStart(2, "0");
+  const stamp = now.toISOString().replace(/[-:]/g, "").replace(/\.\d+/, "");
+  const tx = s => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+  const enc = new TextEncoder();
+  const fold = line => { const out = []; let cur = "", n = 0;
+    for (const ch of line) { const b = enc.encode(ch).length; if (n + b > (out.length ? 74 : 75)) { out.push(cur); cur = ch; n = b; } else { cur += ch; n += b; } }
+    out.push(cur); return out.join("\r\n "); };
+  const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//NYC Hearing Watch//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:" + tx("OATH hearings - " + label)];
+  for (const r of rows) {
+    const d = parseDate(r.hearing_date); if (!d) continue;
+    const day = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`;
+    const tm = String(r.hearing_time || "").match(/^(\d{1,2}):(\d{2})/);
+    const c = costFor(r);
+    const desc = `Summons #${r.ticket_number} (${agency(r.issuing_agency)})\n${title(r.charge_1_code_description)}\nAt ${where(r)}\n` +
+      `Penalty listed: ${money(r.total_violation_amount)}${c ? `. Typical penalty on a default: ${money(c.d)}` : ""}.\n\n` +
+      `Options: Online Hearing ${LINK.online}\nPhone hearing (request 3+ business days ahead) ${LINK.phone}\nPay (admits the charge) ${LINK.pay}\n\n` +
+      `Confirm the date on your most recent OATH notice. Informational reminder from NYC Hearing Watch; not legal advice, not affiliated with OATH.`;
+    L.push("BEGIN:VEVENT", `UID:${r.ticket_number}-${day}@nyc-hearing-watch`, `DTSTAMP:${stamp}`);
+    if (tm) { const s = `${day}T${pad(+tm[1])}${tm[2]}00`; L.push(`DTSTART:${s}`, "DURATION:PT1H"); }  // floating time = NYC local
+    else { const e = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1); L.push(`DTSTART;VALUE=DATE:${day}`, `DTEND;VALUE=DATE:${e.getFullYear()}${pad(e.getMonth() + 1)}${pad(e.getDate())}`); }
+    L.push("SUMMARY:" + tx(`OATH hearing: summons #${r.ticket_number} (${agency(r.issuing_agency)})`), "DESCRIPTION:" + tx(desc), "URL:" + LINK.online);
+    for (const t of ["-P7D", "-P2D"]) L.push("BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:" + tx("OATH hearing coming up: summons #" + r.ticket_number), "TRIGGER:" + t, "END:VALARM");
+    L.push("END:VEVENT");
+  }
+  L.push("END:VCALENDAR");
+  return L.map(fold).join("\r\n") + "\r\n";
+}
+function downloadICS(rows, label) {
+  const blob = new Blob([buildICS(rows, label)], {type: "text/calendar;charset=utf-8"});
+  const url = URL.createObjectURL(blob), a = document.createElement("a");
+  a.href = url; a.download = "oath-hearings.ics";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+// ---------- "why it matters" figures (penalties.json, built by bots/hearings/build_penalties.py) ----------
+async function loadStats() {
+  try {
+    const r = await fetch("penalties.json", {cache: "no-cache"});
+    if (!r.ok) throw new Error(r.status);
+    const s = await r.json();
+    const [rs, re] = s.windows.recent.map(parseDate);
+    s.recentDays = Math.round((re - rs) / 864e5) + 1;
+    STATS = s;
+    const h = s.headline, [ys, ye] = s.windows.ytd.map(parseDate);
+    $("#headline").innerHTML = `Of the <b>${h.with_result.toLocaleString()}</b> OATH hearings dated ${esc(fmtShort(ys))} to ${esc(fmtShort(ye))} that have a recorded result, ` +
+      `<b>${h.defaults.toLocaleString()} (${Math.round(h.default_share * 100)}%)</b> were defaults: the respondent did not show up or respond. Penalties imposed on those defaults total <b>$${(h.default_penalties / 1e6).toFixed(1)} million</b>. ` +
+      `And <b>${h.upcoming.toLocaleString()}</b> cases have a hearing date on or after ${esc(fmtShort(parseDate(s.generated.slice(0, 10))))}.`;
+    const order = Object.entries(s.agencies_recent).filter(([, a]) => a.default && a.default.n >= 100).sort((x, y) => y[1].default.n - x[1].default.n);
+    $("#agtbl tbody").innerHTML = order.map(([, a]) => `<tr><td>${esc(a.label)}</td><td class="n"><b>${money(a.default.median)}</b></td>
+      <td class="n">${a.in_violation ? money(a.in_violation.median) : "n/a"}</td><td class="n">${a.dismissed ? a.dismissed.n.toLocaleString() : 0}</td></tr>`).join("");
+    $("#agtbl").hidden = false;
+    const san = s.agencies_ytd["SANITATION OTHERS"], sanR = s.agencies_recent["SANITATION OTHERS"];
+    $("#agnote").innerHTML = `Median penalties for hearings dated ${esc(fmtShort(rs))} to ${esc(fmtShort(re))} (last ${s.recentDays} days). "Found in violation" means the respondent took part and the hearing officer still ruled against them. The last column counts cases dismissed at a hearing, with no penalty.` +
+      (san && sanR ? ` Default amounts shift over time: for Sanitation, the median default was ${money(san.default.median)} (mean ${money(san.default.avg)}) across hearings dated ${esc(fmtShort(ys))} to ${esc(fmtShort(ye))}, but ${money(sanR.default.median)} in the last ${s.recentDays} days, so per-summons estimates use the most recent figures.` : "") +
+      ` Source: OATH Hearings Division Case Status, NYC Open Data; computed ${esc(s.generated.slice(0, 10))}.`;
+  } catch (e) {
+    $("#headline").textContent = "Couldn't load the summary figures right now.";
+  }
+}
+
+// ---------- form wiring ----------
+const HINTS = {
+  addr: ["e.g. 183 Mulberry St", "House number and street, then pick the borough. We match the tax lot, so tickets for any business at that building show up."],
+  ticket: ["e.g. 0803987140", "The summons or ticket number printed on your summons."],
+  bbl: ["e.g. 1004810033", "The 10-digit borough-block-lot number from your property tax bill or ZoLa."],
+};
+function setMode(m) {
+  $("#q").placeholder = HINTS[m][0]; $("#hint").textContent = HINTS[m][1];
+  $("#f").classList.toggle("noboro", m !== "addr");
+  $("#boro").required = m === "addr";
+}
+$("#mode").addEventListener("change", e => setMode(e.target.value));
+$("#f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const btn = $("#go"); btn.disabled = true;
+  try {
+    await (STATS ? null : statsReady);
+    await lookup($("#mode").value, $("#q").value, $("#boro").value);
+    try { localStorage.setItem("hw-last", JSON.stringify({m: $("#mode").value, q: $("#q").value, b: $("#boro").value})); } catch (_) {}
+  } catch (err) {
+    $("#status").textContent = err.message || String(err);
+  } finally { btn.disabled = false; }
+});
+const statsReady = loadStats();
+try { const l = JSON.parse(localStorage.getItem("hw-last") || "null"); if (l && HINTS[l.m]) { $("#mode").value = l.m; $("#q").value = l.q; $("#boro").value = l.b; } } catch (_) {}
+setMode($("#mode").value);
+const qp = new URLSearchParams(location.search);
+for (const m of Object.keys(HINTS)) if (qp.get(m)) { $("#mode").value = m; setMode(m); $("#q").value = qp.get(m); if (qp.get("boro")) $("#boro").value = qp.get("boro"); $("#f").requestSubmit(); break; }
+</script>
+
+<script>
+(function(){
+  const KIT_KEY = "9OgTfHEbtX6FB0NWVjkgyg"; const TAG = 25840015;
+  const f = document.getElementById('signup-form');
+  const msg = document.getElementById('signup-msg');
+  f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('signup-email').value.trim();
+    const lookup = document.getElementById('signup-lookup').value;
+    if (!lookup) { msg.textContent = 'Look up an address, summons or BBL first, then sign up for its reminders.'; return; }
+    const btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Signing up...';
+    try {
+      const r = await fetch('https://api.convertkit.com/v3/tags/' + TAG + '/subscribe', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({api_key: KIT_KEY, email: email, fields: {
+          hearing_lookup: lookup,
+          hearing_tickets: document.getElementById('signup-tickets').value,
+          next_hearing: document.getElementById('signup-next').value}})
+      });
+      if (!r.ok) throw new Error('status ' + r.status);
+      f.innerHTML = "<b>You're on the list.</b> Email reminders are starting soon. Until then, use the calendar download above so you don't miss a date.";
+      msg.textContent = '';
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Remind me';
+      msg.textContent = "Sorry, that didn't go through. Please try again in a moment.";
+    }
+  });
+})();
+</script>
+</body>
+</html>
