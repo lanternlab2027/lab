@@ -1,0 +1,40 @@
+:root{--paper:#f7f1e5;--card:#fffaf0;--ink:#2a2119;--muted:#6b5d4f;--rule:#d9cbb2;--accent:#8a2f1d;--accent2:#3f5a4a}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px 60px}
+h1,h2,h3{font-family:"Didot","Bodoni 72","Playfair Display",Georgia,serif;font-weight:600;line-height:1.2;color:var(--ink)}
+h2{font-size:1.45rem;margin:2.4rem 0 .6rem;padding-bottom:.35rem;border-bottom:1px solid var(--rule)}
+h2 .n{color:var(--accent);font-size:.9rem;letter-spacing:.12em;display:block;font-family:inherit;margin-bottom:.2rem}
+a{color:var(--accent)}
+sup a{text-decoration:none;font-size:.72em;padding-left:1px}
+.cover{text-align:center;padding:64px 20px 40px;border-bottom:3px double var(--rule);margin-bottom:12px}
+.cover .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.75rem;color:var(--muted)}
+.cover h1{font-size:clamp(2rem,6vw,3.1rem);margin:.6rem 0 .3rem}
+.cover .addr{font-size:1.15rem;color:var(--muted);font-style:italic}
+.cover .meta{margin-top:1.4rem;font-size:.85rem;color:var(--muted)}
+.sample{display:inline-block;margin-top:1rem;border:1px solid var(--accent);color:var(--accent);padding:.15rem .7rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));background:var(--card);border:1px solid var(--rule);margin:1rem 0;overflow:hidden}
+.glance div{padding:.8rem 1rem;box-shadow:1px 1px 0 var(--rule)}
+.glance b{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:normal}
+.glance span{font-size:1.05rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem;margin:.8rem 0}
+th,td{text-align:left;padding:.45rem .5rem;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:normal}
+.tbl{overflow-x:auto}
+.clip{background:var(--card);border-left:3px solid var(--accent);padding:.7rem 1rem;margin:1rem 0}
+.clip .src{font-size:.82rem;color:var(--muted)}
+.clip q{font-style:italic}
+figure{margin:1.2rem 0;background:var(--card);border:1px solid var(--rule);padding:10px}
+figure img{width:100%;height:auto;display:block}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:.5rem}
+.note{font-size:.88rem;color:var(--muted);background:#efe6d3;padding:.7rem 1rem;border-radius:3px}
+.gap{border:1px dashed var(--accent2);padding:.6rem 1rem;font-size:.9rem;color:var(--accent2);margin:1rem 0}
+ol.sources{font-size:.82rem;padding-left:1.6rem;word-break:break-word}
+ol.sources li{margin:.35rem 0}
+.timeline{list-style:none;padding:0;margin:1rem 0;border-left:2px solid var(--rule)}
+.timeline li{padding:.25rem 0 .55rem 1rem;position:relative}
+.timeline li:before{content:"";position:absolute;left:-6px;top:.75rem;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.timeline b{font-variant-numeric:oldstyle-nums}
+footer{margin-top:3rem;font-size:.8rem;color:var(--muted);text-align:center}
+@media print{body{background:#fff;font-size:11pt}.wrap{max-width:none;padding:0}.cover{page-break-after:always;padding-top:30vh}h2{page-break-after:avoid}figure,.clip{page-break-inside:avoid}a{color:inherit}.noprint{display:none}}
