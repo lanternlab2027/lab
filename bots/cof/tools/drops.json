@@ -1,0 +1,8 @@
+{
+ "F-01": {
+  "27": "Source is internally inconsistent: same paragraph says record kept 'at least 3 years' and 'maintained for at least 48 hours after the fire watch has finished'."
+ },
+ "S-95": {
+  "12": "Blanket statement 'FDNY does not respond to supervisory signals' conflicts with p21 (CO detector supervisory signal: FDNY must determine safe levels) and p29 (central station notifies FDNY of gas-detector supervisory signals)."
+ }
+}

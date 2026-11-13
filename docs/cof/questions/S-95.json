@@ -1,0 +1,877 @@
+{
+ "exam": "S-95",
+ "title": "Supervision of Fire Alarm Systems",
+ "real_exam_questions": 35,
+ "real_exam_minutes": 53,
+ "source_pdf": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+ "page_numbering": "PDF page index (1 = first page of the PDF file)",
+ "questions": [
+  {
+   "id": "S-95-001",
+   "question": "If no FLS Director or F-80 holder is required, which Certificate of Fitness must supervise an approved fire alarm system WITHOUT a voice communication system?",
+   "options": [
+    "W-96",
+    "S-95",
+    "F-60",
+    "F-01"
+   ],
+   "answer": 1,
+   "explanation": "Any approved fire alarm system without voice communication (no FLSD/F-80 required) must be supervised by an S-95 holder.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "any approved fire alarm system without voice communication system must be under supervision of an S-95 Certificate of Fitness holder."
+   }
+  },
+  {
+   "id": "S-95-002",
+   "question": "Which Certificate of Fitness holders are exempt from obtaining a separate S-95 for the same premises?",
+   "options": [
+    "G-60 holders",
+    "F-60 holders",
+    "F-01 holders",
+    "F-89/T-89/F-80/F-53 holders"
+   ],
+   "answer": 3,
+   "explanation": "Holders of F-89/T-89/F-80/F-53 are exempt from a separate S-95 for the same premises.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 4,
+    "quote": "The individuals who have obtained the F-89/T-89/F-80/F-53 Certificate of Fitness will be exempt from having to obtain a separate S-95"
+   }
+  },
+  {
+   "id": "S-95-003",
+   "question": "What document should Certificate of Fitness holders make sure their premises' fire alarm system is approved by?",
+   "options": [
+    "A tenant petition",
+    "An insurance certificate",
+    "The manufacturer's warranty card",
+    "An FDNY letter of approval"
+   ],
+   "answer": 3,
+   "explanation": "COF holders should ensure the premises fire alarm system is approved by an FDNY letter of approval.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 11,
+    "quote": "All Certificate of Fitness holders should ensure their respective premises have fire alarm systems approved by a FDNY letter of approval."
+   }
+  },
+  {
+   "id": "S-95-004",
+   "question": "What does a supervisory signal indicate?",
+   "options": [
+    "That a fire drill has ended",
+    "That the system has been reset",
+    "The need for action in connection with supervision of guard tours, fire extinguishing systems or related maintenance features",
+    "That a fire is definitely present"
+   ],
+   "answer": 2,
+   "explanation": "A supervisory signal indicates the need for action related to supervision of systems or maintenance features.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "SUPERVISORY SIGNAL: A signal indicating the need for action in connection with the supervision of guard tours, fire extinguishing systems or equipment"
+   }
+  },
+  {
+   "id": "S-95-005",
+   "question": "What does a trouble signal indicate?",
+   "options": [
+    "That the building is evacuated",
+    "That a sprinkler is flowing water",
+    "A confirmed fire",
+    "A fault in a monitored circuit or component"
+   ],
+   "answer": 3,
+   "explanation": "A trouble signal indicates a fault in a monitored circuit or component and must be investigated and corrected by an approved company.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "TROUBLE SIGNAL: A signal initiated by the fire alarm system or device indicative of a fault in a monitored circuit or component."
+   }
+  },
+  {
+   "id": "S-95-006",
+   "question": "The fire alarm system functions as designed, but the alarm was caused by cigarette smoke in a non-smoking area. This is an example of:",
+   "options": [
+    "A trouble signal",
+    "An unwarranted alarm",
+    "An unnecessary alarm",
+    "A supervisory signal"
+   ],
+   "answer": 2,
+   "explanation": "An unnecessary alarm is one where the system worked as designed but an FDNY response proved unnecessary, such as cigarette smoke.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "An example of an unnecessary alarm is an alarm triggered by smoke from a lit cigarette in a non-smoking area"
+   }
+  },
+  {
+   "id": "S-95-007",
+   "question": "An alarm caused by improper smoke detector placement is an example of:",
+   "options": [
+    "A supervisory signal",
+    "A malicious false alarm",
+    "An unnecessary alarm",
+    "An unwarranted alarm"
+   ],
+   "answer": 3,
+   "explanation": "Unwarranted alarms result when the system fails to function as designed, e.g., improper detector placement.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "Examples of unwarranted alarms are alarms resulting from improper smoke detector placement, improper detector setting for installed location"
+   }
+  },
+  {
+   "id": "S-95-008",
+   "question": "What feature reduces the number of unwarranted alarms?",
+   "options": [
+    "The fan restart key",
+    "The alarm silence switch",
+    "The lamp test",
+    "The alarm verification feature"
+   ],
+   "answer": 3,
+   "explanation": "The alarm verification feature reduces the number of unwarranted alarms.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "It is important to know that the alarm verification feature reduces the number of unwarranted alarms."
+   }
+  },
+  {
+   "id": "S-95-009",
+   "question": "In the study material, what does the word \"SHALL\" indicate?",
+   "options": [
+    "A mandatory requirement",
+    "An optional feature",
+    "A recommendation",
+    "A suggestion for large buildings only"
+   ],
+   "answer": 0,
+   "explanation": "SHALL indicates a mandatory requirement; SHOULD indicates a recommendation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 13,
+    "quote": "SHALL. Indicates a mandatory requirement."
+   }
+  },
+  {
+   "id": "S-95-010",
+   "question": "May an S-95 Certificate of Fitness holder perform smoke detector cleaning?",
+   "options": [
+    "Yes, if the detector is analog",
+    "Yes, once every six months",
+    "No",
+    "Yes, with a vacuum"
+   ],
+   "answer": 2,
+   "explanation": "S-95 holders are not allowed to perform smoke detector cleaning; it must be done by a properly certified person.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 41,
+    "quote": "The S-95 Certificate of Fitness holders are not allowed to perform the smoke detector cleaning."
+   }
+  },
+  {
+   "id": "S-95-011",
+   "question": "What is the primary purpose of fire alarm systems within protected premises?",
+   "options": [
+    "To unlock all doors automatically",
+    "To control the building's heating",
+    "To warn building occupants and transmit fire signals to the Fire Department via an approved central station",
+    "To record security camera video"
+   ],
+   "answer": 2,
+   "explanation": "The primary purpose is to warn occupants and transmit fire signals to the FDNY via an FDNY-approved central station company.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 15,
+    "quote": "THE PRIMARY PURPOSE OF FIRE ALARM SYSTEMS WITHIN PROTECTED PREMISES IS TO WARN BUILDING OCCUPANTS AND TRANSMIT SIGNALS INDICATING A FIRE CONDITION"
+   }
+  },
+  {
+   "id": "S-95-012",
+   "question": "Is it lawful to install a security camera disguised as a smoke detector that does not perform a fire protection function?",
+   "options": [
+    "Yes, if a real detector is within 10 feet",
+    "Yes, if it is labeled",
+    "No; non-functioning devices resembling fire protection equipment are never permitted",
+    "Yes, in hallways only"
+   ],
+   "answer": 2,
+   "explanation": "It is unlawful to install or maintain any fire protection device that does not perform the fire protection function.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 16,
+    "quote": "It is unlawful to install or maintain any fire protection device which does not perform the fire protection function."
+   }
+  },
+  {
+   "id": "S-95-013",
+   "question": "In what order must central station operators process fire alarm signals?",
+   "options": [
+    "In the order they are received",
+    "Only after calling the premises",
+    "After trouble signals",
+    "Before any other signals, regardless of the order received"
+   ],
+   "answer": 3,
+   "explanation": "Fire alarm signals are processed before all other signals regardless of the order received.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 17,
+    "quote": "Central station operators must monitor and process all fire alarm signals before any other signals, regardless of the order in which they are received."
+   }
+  },
+  {
+   "id": "S-95-014",
+   "question": "A fire alarm signal is automatically restored by the premises system. Must the central station still retransmit it to the FDNY?",
+   "options": [
+    "Yes; every fire alarm signal must be retransmitted, with no exceptions",
+    "Only if it happens twice",
+    "No, restored signals are ignored",
+    "Only during business hours"
+   ],
+   "answer": 0,
+   "explanation": "Every fire alarm signal must be retransmitted immediately, even if automatically restored. There are no exceptions.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 17,
+    "quote": "EVERY fire alarm signal must be re-transmitted immediately to the FDNY as a fire alarm signal even if it is automatically restored"
+   }
+  },
+  {
+   "id": "S-95-015",
+   "question": "Which device generates a SUPERVISORY signal?",
+   "options": [
+    "Smoke detector",
+    "Low air pressure switch on a dry pipe sprinkler system",
+    "Manual pull station",
+    "Sprinkler water-flow switch"
+   ],
+   "answer": 1,
+   "explanation": "Supervisory signals come from devices like valve supervisory switches, tank level switches, dry-pipe low air switches and fire pump monitors.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 17,
+    "quote": "3. Low air pressure switch from a dry pipe sprinkler system"
+   }
+  },
+  {
+   "id": "S-95-016",
+   "question": "Which of the following is a common trouble condition monitored by a FACP?",
+   "options": [
+    "Smoke in a hallway",
+    "AC power failure",
+    "Water flowing in a sprinkler pipe",
+    "A pulled manual station"
+   ],
+   "answer": 1,
+   "explanation": "Common trouble conditions include battery condition, AC failure, ground fault, open or short circuits, phone line failure and internal component failure.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "conditions monitored by a FACP are battery condition, AC failure, ground fault, open or short circuit on a wire, phone line failure"
+   }
+  },
+  {
+   "id": "S-95-017",
+   "question": "Routine handling of a trouble signal by the central station should take a maximum of how long until the telephone investigation begins?",
+   "options": [
+    "Twenty-four hours",
+    "Forty minutes",
+    "Four hours",
+    "Four minutes"
+   ],
+   "answer": 3,
+   "explanation": "Routine handling should take a maximum of four minutes from receipt to initiation of investigation by telephone.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "Routine handling should take a maximum of four minutes from receipt of a trouble signal by the central station"
+   }
+  },
+  {
+   "id": "S-95-018",
+   "question": "How must a sub-system (e.g., range hood, FM200, pre-action) relate to the base building fire alarm system?",
+   "options": [
+    "It must report directly to tenants",
+    "It must only connect to the elevator",
+    "It must be interconnected to it for alarm and trouble supervision",
+    "It must be completely separate"
+   ],
+   "answer": 2,
+   "explanation": "All sub-systems must be interconnected to the base building fire alarm system and annunciate their type and location.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "All sub-systems must be interconnected to the base building fire alarm system for alarm and trouble supervision"
+   }
+  },
+  {
+   "id": "S-95-019",
+   "question": "After an alarm, what must the S-95 holder record in the log book?",
+   "options": [
+    "Only the time the alarm stopped",
+    "The names of all occupants",
+    "Nothing if the FDNY responded",
+    "Date and time, location, which device was activated, and the probable cause"
+   ],
+   "answer": 3,
+   "explanation": "The S-95 holder records the date and time of the alarm, its location, the activated device and the probable cause.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "The S-95 COF holder must record the date and time of alarm, its location, which device was the activated, and the probable cause."
+   }
+  },
+  {
+   "id": "S-95-020",
+   "question": "Does pressing the alarm silence switch stop the signal from being transmitted to the central station?",
+   "options": [
+    "Yes, if pressed within 30 seconds",
+    "Yes, always",
+    "Yes, in older systems only",
+    "No"
+   ],
+   "answer": 3,
+   "explanation": "The silence switch does not prevent a signal from being transmitted to the central station.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "the silence switch does not prevent a signal from being transmitted to a FDNY approved central station company."
+   }
+  },
+  {
+   "id": "S-95-021",
+   "question": "When may the fire alarm system be reset after an alarm?",
+   "options": [
+    "As soon as the alarm noise stops",
+    "Whenever the central station asks",
+    "After 5 minutes of alarm",
+    "Only after the condition is verified by FDNY personnel"
+   ],
+   "answer": 3,
+   "explanation": "Never reset the fire alarm system until the condition is verified by FDNY personnel.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "Never reset the fire alarm system until the condition is verified by the FDNY personnel."
+   }
+  },
+  {
+   "id": "S-95-022",
+   "question": "After a fire alarm is reset, what usually needs to be done for fans?",
+   "options": [
+    "Restart them from a separate \"fan restart\" button or key switch",
+    "Nothing; they restart automatically",
+    "Call the central station to restart them",
+    "Replace the fan belts"
+   ],
+   "answer": 0,
+   "explanation": "After reset, the fan usually requires restarting from a separate fan restart button or key switch.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 20,
+    "quote": "After a fire alarm is reset, the fan usually requires restarting from a separate “fan restart” button or key switch."
+   }
+  },
+  {
+   "id": "S-95-023",
+   "question": "What normally happens to a fixed-temperature heat detector after it sounds an alarm?",
+   "options": [
+    "It must be repainted",
+    "It is moved to another room",
+    "It normally requires replacement",
+    "It resets itself every time"
+   ],
+   "answer": 2,
+   "explanation": "Fixed-temperature heat detectors normally require replacement after alarming (intelligent ones usually reset).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 25,
+    "quote": "The fixed-temperature heat detectors normally require replacement after they have sounded an alarm."
+   }
+  },
+  {
+   "id": "S-95-024",
+   "question": "Which heat detector is more sensitive?",
+   "options": [
+    "Neither detects heat",
+    "Rate-of-rise",
+    "Both are equally sensitive",
+    "Fixed-temperature"
+   ],
+   "answer": 1,
+   "explanation": "The rate-of-rise detector is more sensitive than the fixed temperature detector.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 25,
+    "quote": "This type of detector is more sensitive than the fixed temperature detector."
+   }
+  },
+  {
+   "id": "S-95-025",
+   "question": "A carbon monoxide detector activates. What must happen before the panel can be reset?",
+   "options": [
+    "The S-95 holder opens a window",
+    "The FDNY must determine carbon monoxide is at safe levels",
+    "Wait 10 minutes",
+    "The central station resets it remotely"
+   ],
+   "answer": 1,
+   "explanation": "For a CO detector, FDNY must determine CO at safe levels in the space before the panel can be reset.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 21,
+    "quote": "FDNY must determine carbon monoxide at safe levels in space before panel can be reset."
+   }
+  },
+  {
+   "id": "S-95-026",
+   "question": "How often must smoke detectors connected to a defined fire alarm system be cleaned (non-analog)?",
+   "options": [
+    "Once every five years",
+    "Once a week",
+    "Not less than once every six months",
+    "Only when they alarm"
+   ],
+   "answer": 2,
+   "explanation": "Smoke detectors must be cleaned not less than once every six months; analog detectors within one week of a cleaning indication.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 41,
+    "quote": "cleaned not less than once every six (6) months, except for analog (intelligent) smoke detectors"
+   }
+  },
+  {
+   "id": "S-95-027",
+   "question": "How often must smoke detectors be tested for smoke entry?",
+   "options": [
+    "Never",
+    "Not less than once a year",
+    "Once a month",
+    "Once every five years"
+   ],
+   "answer": 1,
+   "explanation": "Smoke detectors must be tested for smoke entry not less than once a year.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 41,
+    "quote": "tested for smoke entry not less than once a year."
+   }
+  },
+  {
+   "id": "S-95-028",
+   "question": "An analog (intelligent) smoke detector indicates it needs cleaning. Within what time must it be cleaned?",
+   "options": [
+    "No later than one year",
+    "No later than six months",
+    "No later than one week",
+    "At the next annual inspection"
+   ],
+   "answer": 2,
+   "explanation": "Analog smoke detectors must be cleaned no later than one week from receipt of an indication of the need for cleaning.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 41,
+    "quote": "except for analog (intelligent) smoke detectors, which must be cleaned no later than one (1) week from receipt of an indication"
+   }
+  },
+  {
+   "id": "S-95-029",
+   "question": "Which building function does the fire alarm system commonly control during an alarm?",
+   "options": [
+    "Turning on all ovens",
+    "Recall of elevator cars to a designated landing floor",
+    "Starting the water heater",
+    "Unlocking the cash register"
+   ],
+   "answer": 1,
+   "explanation": "The fire alarm system integrates with elevator controls to recall elevator cars to a designated landing floor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 22,
+    "quote": "The fire alarm system integrates with elevator controls to recall elevator cars to a designated landing floor in the event of an alarm."
+   }
+  },
+  {
+   "id": "S-95-030",
+   "question": "How do smoke detectors compare to heat detectors in detecting most fires?",
+   "options": [
+    "They are identical",
+    "Heat detectors are always faster",
+    "Smoke detectors detect most fires much more rapidly",
+    "Smoke detectors only work on Class D fires"
+   ],
+   "answer": 2,
+   "explanation": "Smoke detectors detect most fires much more rapidly than heat detectors.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 23,
+    "quote": "Smoke detectors detect most fires much more rapidly than heat detectors."
+   }
+  },
+  {
+   "id": "S-95-031",
+   "question": "During construction, when should listed smoke detector covers be removed?",
+   "options": [
+    "Only at the end of the project",
+    "Once a month",
+    "Never",
+    "At the end of each shift or when work stops"
+   ],
+   "answer": 3,
+   "explanation": "Cover detectors only during dust-generating work; remove covers at the end of each shift or when work stops.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 24,
+    "quote": "Remove covers at the end of each shift or when work stops."
+   }
+  },
+  {
+   "id": "S-95-032",
+   "question": "Does a sprinkler waterflow alarm-initiating device turn the water on or off?",
+   "options": [
+    "Yes, it turns the water off",
+    "No; it only detects flow and sends an alarm signal",
+    "Yes, it controls water pressure",
+    "Yes, it turns the water on"
+   ],
+   "answer": 1,
+   "explanation": "The waterflow device detects flow and sends a signal; it does not turn water on or off.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 26,
+    "quote": "This device does not turn on or off the water."
+   }
+  },
+  {
+   "id": "S-95-033",
+   "question": "Carbon monoxide detectors are required in any building that has what?",
+   "options": [
+    "Fossil fuel (gas or oil) burning equipment",
+    "A swimming pool",
+    "More than 10 floors",
+    "An elevator"
+   ],
+   "answer": 0,
+   "explanation": "CO detectors are required in any building with fossil (gas and oil) fuel burning equipment.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 26,
+    "quote": "Carbon monoxide detectors are required in any building that has fossil (gas and oil) fuel burning equipment."
+   }
+  },
+  {
+   "id": "S-95-034",
+   "question": "If a flammable gas detector is connected to the FACP, what signal does its activation generate?",
+   "options": [
+    "A fire alarm signal with building tones",
+    "A trouble signal only at the detector",
+    "A supervisory signal",
+    "No signal"
+   ],
+   "answer": 2,
+   "explanation": "Gas detector activation on the FACP generates a supervisory signal transmitted to the central station; no alarm tone sounds on premises.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 29,
+    "quote": "the activation will generate a supervisory signal on the Fire Alarm Control Panel and be transmitted to the Central Station."
+   }
+  },
+  {
+   "id": "S-95-035",
+   "question": "It is unlawful to transmit how many unnecessary or unwarranted alarms in any three-month period?",
+   "options": [
+    "Ten or more",
+    "Two or more",
+    "Fifty or more",
+    "There is no limit"
+   ],
+   "answer": 1,
+   "explanation": "It is unlawful to transmit two or more unnecessary or unwarranted alarms in any three-month period.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 30,
+    "quote": "It is unlawful to transmit two (2) or more unnecessary or unwarranted alarms in any three-month period."
+   }
+  },
+  {
+   "id": "S-95-036",
+   "question": "Is a malicious false alarm from a manual fire alarm box considered an unnecessary alarm?",
+   "options": [
+    "Yes",
+    "Only if it happens twice",
+    "No",
+    "Only in residential buildings"
+   ],
+   "answer": 2,
+   "explanation": "The malicious transmission of a false alarm by a manual fire alarm box will not be considered an unnecessary alarm.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 31,
+    "quote": "The malicious transmission of a false alarm by activation of a manual fire alarm box will not be considered an unnecessary alarm."
+   }
+  },
+  {
+   "id": "S-95-037",
+   "question": "The partial/staged evacuation signal activates audio/visual devices on which floors?",
+   "options": [
+    "Only the top floor",
+    "Every floor in the building",
+    "The floor of alarm, the floor immediately above and the floor below",
+    "Only the lobby"
+   ],
+   "answer": 2,
+   "explanation": "Partial/staged signals activate devices on the floor of alarm plus the floor above and below; total/general activates all floors.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 33,
+    "quote": "activates the audio/visual devices only on the floor of alarm as well as the floor immediately above and the floor below."
+   }
+  },
+  {
+   "id": "S-95-038",
+   "question": "What does a two-way voice communication system use?",
+   "options": [
+    "Warden phones",
+    "Text messages to tenants",
+    "Only strobes",
+    "Only ceiling speakers"
+   ],
+   "answer": 0,
+   "explanation": "Two-way voice communication uses warden phones, usually located near exit stairways, plus one at the FACP.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "Two-way voice communication system uses warden phones."
+   }
+  },
+  {
+   "id": "S-95-039",
+   "question": "A central station transmitter must have what?",
+   "options": [
+    "A primary and secondary means of communication",
+    "A security camera",
+    "A backup paper printer",
+    "Only a single phone line"
+   ],
+   "answer": 0,
+   "explanation": "The central station transmitter must have a primary and secondary means of communication.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "The Central Station transmitter must have a primary and secondary means of communication."
+   }
+  },
+  {
+   "id": "S-95-040",
+   "question": "Who is authorized to perform service and testing on fire alarm systems?",
+   "options": [
+    "Any S-95 holder",
+    "The building porter",
+    "Only certified technicians holding S-97 or S-98",
+    "Any F-01 fire guard"
+   ],
+   "answer": 2,
+   "explanation": "Only S-97 or S-98 certified technicians may perform service and testing.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 35,
+    "quote": "Only certified technicians holding S-97 or S-98 Certificate of Fitness are authorized to perform service and testing on the fire alarm systems."
+   }
+  },
+  {
+   "id": "S-95-041",
+   "question": "Where must the alarm log book be maintained?",
+   "options": [
+    "At FDNY headquarters",
+    "On the premises, at the building's main fire alarm control panel",
+    "At the central station company's office",
+    "At the owner's home"
+   ],
+   "answer": 1,
+   "explanation": "The alarm log book is maintained on the premises at the main fire alarm control panel.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 36,
+    "quote": "An alarm log book must be maintained on the premises, at the building's main fire alarm control panel."
+   }
+  },
+  {
+   "id": "S-95-042",
+   "question": "What type of book must the alarm log book be?",
+   "options": [
+    "A spiral notebook",
+    "Any notepad",
+    "Loose-leaf binder pages",
+    "A bound book (not spiral bound) with consecutively numbered, lined pages"
+   ],
+   "answer": 3,
+   "explanation": "It must be bound (other than spiral bound) with consecutively numbered and lined pages.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 36,
+    "quote": "The alarm log book must be a bound book (other than spiral bound) with consecutively numbered and lined pages."
+   }
+  },
+  {
+   "id": "S-95-043",
+   "question": "How must alarm log book entries be made?",
+   "options": [
+    "In ink and dated",
+    "In pencil",
+    "In any color marker, undated",
+    "Only typed"
+   ],
+   "answer": 0,
+   "explanation": "All entries must be made in ink and dated.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 36,
+    "quote": "All entries must be made in ink and dated."
+   }
+  },
+  {
+   "id": "S-95-044",
+   "question": "How long must alarm log books be retained?",
+   "options": [
+    "Six months",
+    "Ten years",
+    "Three years from the date of the last entry",
+    "One year"
+   ],
+   "answer": 2,
+   "explanation": "Log books are retained three years from the last entry, and a separate book is kept for each calendar year.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 36,
+    "quote": "Log books must be retained for a period of three (3) years from the date of the last entry."
+   }
+  },
+  {
+   "id": "S-95-045",
+   "question": "Into how many separate sections must the alarm log book be divided?",
+   "options": [
+    "4",
+    "10",
+    "6",
+    "2"
+   ],
+   "answer": 0,
+   "explanation": "Daily entries, system off-line entries, activated alarm entries and notification entries: four sections.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 38,
+    "quote": "The alarm log book must be divided into 4 separate sections as set forth below."
+   }
+  },
+  {
+   "id": "S-95-046",
+   "question": "According to the NYC Fire Code as stated in the study material, what color must manual fire alarm boxes be?",
+   "options": [
+    "Blue",
+    "Yellow",
+    "Red",
+    "White"
+   ],
+   "answer": 2,
+   "explanation": "Manual fire alarm boxes must be red in color.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 41,
+    "quote": "Based on the New York City Fire Code, manual fire alarm boxes must be red in color."
+   }
+  },
+  {
+   "id": "S-95-047",
+   "question": "Before activating a fire alarm system for a test, inspection or fire drill, what is mandatory?",
+   "options": [
+    "Cover all smoke detectors",
+    "Disconnect the batteries",
+    "Notify the local newspaper",
+    "Take the system off-line by notifying the FDNY-approved central station beforehand"
+   ],
+   "answer": 3,
+   "explanation": "It is mandatory to take the system off-line by notifying the central station beforehand to prevent unnecessary FDNY dispatch.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 42,
+    "quote": "it is mandatory to take the system “off-line” by notifying the FDNY approved central station company monitoring the fire alarm beforehand"
+   }
+  },
+  {
+   "id": "S-95-048",
+   "question": "Is it necessary to take the system off-line for speaker audibility tests?",
+   "options": [
+    "Only in hotels",
+    "No",
+    "Yes, always",
+    "Only if more than one floor is tested"
+   ],
+   "answer": 1,
+   "explanation": "It is not necessary to take the system offline when speaker audibility tests are being conducted.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 42,
+    "quote": "It is not necessary to take the system offline when the speaker audibility tests are being conducted."
+   }
+  },
+  {
+   "id": "S-95-049",
+   "question": "A manual fire alarm box is found defective. What should the Certificate of Fitness holder do?",
+   "options": [
+    "Tape it shut without notice",
+    "Remove the box and throw it away",
+    "Notify the supervisor and put a placard over the box indicating it is out of service",
+    "Ignore it until the annual test"
+   ],
+   "answer": 2,
+   "explanation": "The COF holder must notify the supervisor and place an out-of-service placard over the defective box.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 43,
+    "quote": "A Certificate of Fitness holder must notify his/her supervisor and put a placard over the defective box indicating that device is out of service."
+   }
+  },
+  {
+   "id": "S-95-050",
+   "question": "In the absence of a specific designee, who is considered the Impairment Coordinator?",
+   "options": [
+    "The S-95 holder",
+    "The nearest fire company officer",
+    "The central station operator",
+    "The owner"
+   ],
+   "answer": 3,
+   "explanation": "If no one is specifically designated, the owner is considered the Impairment Coordinator.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 44,
+    "quote": "In the absence of a specific designee, the owner must be considered the Impairment Coordinator."
+   }
+  },
+  {
+   "id": "S-95-051",
+   "question": "Portable fire extinguishers are required within what distance of commercial cooking equipment?",
+   "options": [
+    "5 feet",
+    "30 feet",
+    "200 feet",
+    "75 feet"
+   ],
+   "answer": 1,
+   "explanation": "Portable fire extinguishers are required within 30 feet of commercial cooking equipment.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-s95-noe-study-materials.pdf",
+    "page": 45,
+    "quote": "Within 30 feet of commercial cooking equipment."
+   }
+  }
+ ]
+}

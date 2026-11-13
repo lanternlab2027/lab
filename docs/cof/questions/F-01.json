@@ -1,0 +1,911 @@
+{
+ "exam": "F-01",
+ "title": "Fire Guard for Impairment (Citywide)",
+ "real_exam_questions": 20,
+ "real_exam_minutes": 30,
+ "source_pdf": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+ "page_numbering": "PDF page index (1 = first page of the PDF file)",
+ "questions": [
+  {
+   "id": "F-01-001",
+   "question": "What is the maximum building floor area that one F-01 fire guard may patrol?",
+   "options": [
+    "50,000 square feet",
+    "100,000 square feet",
+    "10,000 square feet",
+    "25,000 square feet"
+   ],
+   "answer": 0,
+   "explanation": "One fire guard may not patrol more than 50,000 sq ft; larger areas need more than one fire guard.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "No individual fire guard must patrol more than 50,000 square feet of building floor area."
+   }
+  },
+  {
+   "id": "F-01-002",
+   "question": "How often must a fire guard patrol all areas where the fire protection system is out of service?",
+   "options": [
+    "At least once every hour",
+    "At least once every 4 hours",
+    "At least once every 15 minutes",
+    "Once per shift"
+   ],
+   "answer": 0,
+   "explanation": "Patrols of the affected areas are required at least once every hour.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "A fire guard must be available to patrol all areas in which the fire protection system is out of service at least once every hour."
+   }
+  },
+  {
+   "id": "F-01-003",
+   "question": "For an area of 50,000 sq ft or less, after how many hours of an out-of-service condition must patrols be done only by F-01 fire guards?",
+   "options": [
+    "24 hours",
+    "1 hour",
+    "8 hours",
+    "4 hours"
+   ],
+   "answer": 3,
+   "explanation": "For the first 4 hours the impairment coordinator or a trained, designated person may do the fire watch; after that only F-01 holders may.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "After 4 hours of an out of service condition, such patrols can only be conducted by fire guards holding the F-01 certificate of fitness."
+   }
+  },
+  {
+   "id": "F-01-004",
+   "question": "When are impairment fire guards required while a system remains out of service?",
+   "options": [
+    "Only for the first 8 hours",
+    "Only during business hours",
+    "24 hours a day, until the systems are restored to good working order",
+    "Only overnight when the building is empty"
+   ],
+   "answer": 2,
+   "explanation": "Impairment fire guards are required around the clock until the systems are restored.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "The impairment fire guard(s) are required on a 24 hours a day basis. Impairment duties must continue until the systems are restored"
+   }
+  },
+  {
+   "id": "F-01-005",
+   "question": "How long must the records relating to maintenance of fire protection systems be kept at the location?",
+   "options": [
+    "Three years",
+    "One year",
+    "Six months",
+    "Ten years"
+   ],
+   "answer": 0,
+   "explanation": "The owner must keep these records at the location for three years, available to any member of the FDNY.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "Such records must be kept at the location for a period of three years and made available for inspection by any member of the FDNY."
+   }
+  },
+  {
+   "id": "F-01-006",
+   "question": "If no impairment coordinator has been designated, who must act as the impairment coordinator?",
+   "options": [
+    "The building owner",
+    "The nearest fire company",
+    "The F-01 fire guard",
+    "The central station company"
+   ],
+   "answer": 0,
+   "explanation": "In the absence of an impairment coordinator, the building owner acts as the impairment coordinator.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "In absence of an impairment coordinator the building owner must act as the impairment coordinator."
+   }
+  },
+  {
+   "id": "F-01-007",
+   "question": "At a construction site, who must be designated as impairment coordinator when an installed and approved fire protection system is out of service?",
+   "options": [
+    "The F-01 fire guard on duty",
+    "The Construction Site Fire Safety Manager (S-56)",
+    "The FDNY inspector",
+    "The tower crane operator"
+   ],
+   "answer": 1,
+   "explanation": "The S-56 Construction Site Fire Safety Manager must be designated as the impairment coordinator.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "The Construction Site Fire Safety Manager (S-56) must be designated to be the impairment coordinator"
+   }
+  },
+  {
+   "id": "F-01-008",
+   "question": "At a construction site, when is no impairment coordinator or fire watch required for a fire protection system?",
+   "options": [
+    "Only on weekends",
+    "Before the system is installed and approved",
+    "Whenever the standpipe is out of service",
+    "Whenever fewer than 10 workers are on site"
+   ],
+   "answer": 1,
+   "explanation": "No impairment coordinator or fire watch is required before the system is installed and approved (all required approvals and sign-offs obtained).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "No impairment coordinator or fire watch is required before the system is installed and approved"
+   }
+  },
+  {
+   "id": "F-01-009",
+   "question": "Which best describes a \"central station\"?",
+   "options": [
+    "The main fire alarm control panel in the lobby",
+    "A facility that receives alarm signals from a protected premises and reports them to the Fire Department",
+    "The FDNY headquarters testing center",
+    "A room where portable fire extinguishers are stored"
+   ],
+   "answer": 1,
+   "explanation": "A central station receives alarm signals from a protected premises and retransmits or reports them to the department.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 11,
+    "quote": "A facility that receives alarm signals from a protected premises and retransmits or otherwise reports such alarm signals to the department."
+   }
+  },
+  {
+   "id": "F-01-010",
+   "question": "Which best describes a \"fire watch\"?",
+   "options": [
+    "A monthly inspection of fire extinguishers",
+    "A temporary measure ensuring continuous and systematic surveillance of a building to identify fire hazards and detect fire",
+    "A permanent sprinkler system installed in a building",
+    "An electronic smoke detection system"
+   ],
+   "answer": 1,
+   "explanation": "A fire watch is a temporary measure of continuous, systematic surveillance by qualified individuals.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 12,
+    "quote": "A temporary measure intended to ensure continuous and systematic surveillance of a building or portion thereof by one or more qualified individuals"
+   }
+  },
+  {
+   "id": "F-01-011",
+   "question": "What is an \"impairment\"?",
+   "options": [
+    "A fire that has been extinguished",
+    "A scheduled fire drill",
+    "A building with more than one exit",
+    "Any condition in which a fire protection system cannot perform its designed fire safety function"
+   ],
+   "answer": 3,
+   "explanation": "An impairment is any condition that stops a fire protection system from performing its designed fire safety function.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 13,
+    "quote": "IMPAIRMENT: Any condition in which a fire protection system cannot perform its designed fire safety function."
+   }
+  },
+  {
+   "id": "F-01-012",
+   "question": "Who designates the impairment coordinator?",
+   "options": [
+    "The central station company",
+    "The Department of Buildings",
+    "The F-01 fire guard",
+    "The owner"
+   ],
+   "answer": 3,
+   "explanation": "The impairment coordinator is the person designated by the owner.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 13,
+    "quote": "IMPAIRMENT COORDINATOR: The person designated by the owner and responsible for ensuring that proper notification and safety precautions are taken"
+   }
+  },
+  {
+   "id": "F-01-013",
+   "question": "Which of the following is listed as \"hot work\"?",
+   "options": [
+    "Painting",
+    "Brazing",
+    "Sweeping",
+    "Mopping floors"
+   ],
+   "answer": 1,
+   "explanation": "Hot work includes cutting, welding, brazing, soldering, grinding, thawing pipe and similar operations.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 13,
+    "quote": "HOT WORK. Cutting, welding, thermit welding, brazing, soldering, grinding, thermal spraying, thawing pipe, cadwelding"
+   }
+  },
+  {
+   "id": "F-01-014",
+   "question": "A means of egress consists of which three parts?",
+   "options": [
+    "Exit access, exit, and exit discharge",
+    "Stairs, elevators, and lobby",
+    "Doors, windows, and roof",
+    "Corridor, sprinkler, and standpipe"
+   ],
+   "answer": 0,
+   "explanation": "The three parts of a means of egress are the exit access, the exit and the exit discharge.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 13,
+    "quote": "A means of egress consists of three separate and distinct parts: the exit access, the exit and the exit discharge."
+   }
+  },
+  {
+   "id": "F-01-015",
+   "question": "Which of the following is an example of an UNPLANNED out-of-service condition?",
+   "options": [
+    "Routine scheduled servicing of a component",
+    "Taking a system out of service for scheduled testing",
+    "A major leak in the system water piping",
+    "Taking a system out of service for a planned alteration"
+   ],
+   "answer": 2,
+   "explanation": "Unplanned conditions are serious defects such as empty tanks, breaks or major leaks in piping; testing, servicing and alterations are planned removals.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "Unplanned out of service conditions are serious defects such as empty tanks, breaks or major leaks in the system water piping"
+   }
+  },
+  {
+   "id": "F-01-016",
+   "question": "Before starting to patrol, the fire guard should have enough knowledge to identify which of the following?",
+   "options": [
+    "The building's assessed property value",
+    "Every tenant's lease expiration date",
+    "The entry routes to the affected area",
+    "The elevator manufacturer's name"
+   ],
+   "answer": 2,
+   "explanation": "Before patrolling, the fire guard should know entry routes, level of out-of-service condition, hazardous materials, extinguisher locations and means of notification.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 15,
+    "quote": "the fire guard should have enough knowledge to identify: (1) the entry routes to the affected area;"
+   }
+  },
+  {
+   "id": "F-01-017",
+   "question": "In an office building (Group B) with a Fire and Life Safety Director, who must the fire guard work closely with?",
+   "options": [
+    "The building's elevator mechanic",
+    "The Fire and Life Safety Director (FLSD)",
+    "The nearest police precinct",
+    "The tenants' association"
+   ],
+   "answer": 1,
+   "explanation": "There is normally at least one FLSD in Group B and R-1 buildings, and the fire guard must work closely with the FLSD.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 15,
+    "quote": "The fire guard must work closely with the FLSD (Fire and Life Safety Director)."
+   }
+  },
+  {
+   "id": "F-01-018",
+   "question": "According to the study material, which statement about hazardous materials risk is correct?",
+   "options": [
+    "Quantity of hazardous material does not affect risk",
+    "Non-flammable compressed gas is more dangerous than propane",
+    "Flammable liquids are more dangerous than combustible liquids",
+    "Combustible liquids are more dangerous than flammable liquids"
+   ],
+   "answer": 2,
+   "explanation": "Flammable liquids are more dangerous than combustible liquids, and flammable compressed gas is more dangerous than non-flammable gas.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 16,
+    "quote": "Flammable liquids are more dangerous than combustible liquids."
+   }
+  },
+  {
+   "id": "F-01-019",
+   "question": "A building has both its sprinkler system and its fire alarm system out of service. Compared with only one system impaired, the risk to occupants is:",
+   "options": [
+    "Greater",
+    "The same",
+    "Not affected, as long as exits are clear",
+    "Lower"
+   ],
+   "answer": 0,
+   "explanation": "When both systems are out of service, the risk to building occupants is greater than when only one is impaired.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 16,
+    "quote": "If a building has both an out of service sprinkler system and fire alarm system, the risk to building occupants is greater"
+   }
+  },
+  {
+   "id": "F-01-020",
+   "question": "Per the orientation checklist, what must the fire guard do if no fire extinguishers are provided in the area of responsibility?",
+   "options": [
+    "Use a garden hose instead",
+    "Carry one fire extinguisher with them",
+    "Wait for the FDNY to deliver one",
+    "Skip the fire watch for that area"
+   ],
+   "answer": 1,
+   "explanation": "If extinguishers are not provided, the fire guard must carry one.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 17,
+    "quote": "If no, I must carry one fire extinguisher with me."
+   }
+  },
+  {
+   "id": "F-01-021",
+   "question": "Can a fire guard on impairment duty be assigned other responsibilities during the fire watch?",
+   "options": [
+    "Yes, if the area is under 10,000 square feet",
+    "Yes, they may also work as the building doorman",
+    "Yes, light maintenance work is allowed",
+    "No, they cannot be given any other responsibilities"
+   ],
+   "answer": 3,
+   "explanation": "Fire guards must make regular inspections of their area and cannot be given other responsibilities.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "The fire guards need to make regular inspections of the assigned area. They cannot be given any other responsibilities."
+   }
+  },
+  {
+   "id": "F-01-022",
+   "question": "How wide is the exit aisle generally required to be?",
+   "options": [
+    "At least 10 feet",
+    "At least 3 feet",
+    "At least 1 foot",
+    "At least 18 inches"
+   ],
+   "answer": 1,
+   "explanation": "The exit aisle is generally required to be at least 3 feet wide.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "The exit aisle is generally required to be at least 3 feet wide."
+   }
+  },
+  {
+   "id": "F-01-023",
+   "question": "What should happen if the fire guard finds a lock or chain on an exit door while the building is in use?",
+   "options": [
+    "It may stay if the door is rarely used",
+    "The fire guard should note it at the end of the month",
+    "It may stay until the next FDNY inspection",
+    "It must be removed immediately and reported to the building owner"
+   ],
+   "answer": 3,
+   "explanation": "Locks, bolts and chains cannot be on exit doors while the building is in use; they must be removed immediately and reported to the owner.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "chains cannot be installed on the exit doors while the building is in use. If locks are seen, they must be removed immediately."
+   }
+  },
+  {
+   "id": "F-01-024",
+   "question": "How should self-closing doors be kept when not in use?",
+   "options": [
+    "Closed at all times",
+    "Locked from both sides",
+    "Propped open for ventilation",
+    "Open during business hours"
+   ],
+   "answer": 0,
+   "explanation": "Self-closing doors slow the spread of fire and must not be left open for any reason.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "The fire guard must ensure that all self-closing doors are not left open for any reason."
+   }
+  },
+  {
+   "id": "F-01-025",
+   "question": "Is hot work allowed in areas of a building where the sprinkler system is impaired?",
+   "options": [
+    "Yes, if the fire alarm is working",
+    "No",
+    "Yes, with a fire extinguisher nearby",
+    "Yes, during daylight hours only"
+   ],
+   "answer": 1,
+   "explanation": "The fire guard must know that hot work is not allowed where the sprinkler system is impaired.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "The fire guard must know that hot work is not allowed in areas of a building where the sprinkler system is impaired."
+   }
+  },
+  {
+   "id": "F-01-026",
+   "question": "At a construction site, impairment of which system(s) means hot work operations are not allowed?",
+   "options": [
+    "Only the HVAC system",
+    "Only the elevator system",
+    "The sprinkler system or the standpipe system",
+    "Only the lighting system"
+   ],
+   "answer": 2,
+   "explanation": "At a construction site, hot work is not allowed if either the sprinkler or the standpipe system is impaired.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "At a construction site, hot work operations are not allowed if the sprinkler system or the standpipe system is impaired."
+   }
+  },
+  {
+   "id": "F-01-027",
+   "question": "If there is an accumulation of trash in the building, who must be promptly notified?",
+   "options": [
+    "The central station",
+    "The building owner",
+    "The tenants on that floor only",
+    "The Department of Sanitation"
+   ],
+   "answer": 1,
+   "explanation": "Trash is a fire hazard; if it accumulates, the building owner must be promptly notified.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "If there is an accumulation of trash, building owner must be promptly notified."
+   }
+  },
+  {
+   "id": "F-01-028",
+   "question": "Which item must be logged in the fire guard's daily written record?",
+   "options": [
+    "The fire guard's name, Certificate of Fitness number and signature",
+    "The number of building tenants",
+    "The building's insurance policy number",
+    "The weather forecast"
+   ],
+   "answer": 0,
+   "explanation": "The record must include inspections completed, defects, violations, and the date, name, C of F number and signature of the fire guard.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "(d) the date, name, Certificate of Fitness number and signature of the fire guard who conducted the inspections."
+   }
+  },
+  {
+   "id": "F-01-029",
+   "question": "On the hourly fire watch log, how should an unsatisfactory item be marked?",
+   "options": [
+    "Leave it blank",
+    "OK",
+    "N/A",
+    "X"
+   ],
+   "answer": 3,
+   "explanation": "Mark \"OK\" for satisfactory, \"X\" for unsatisfactory and \"N/A\" for not applicable items.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 20,
+    "quote": "Mark “OK” for items that are satisfactory, “X” for items that are unsatisfactory"
+   }
+  },
+  {
+   "id": "F-01-030",
+   "question": "When must the Fire Department be notified that a standpipe system is out of service?",
+   "options": [
+    "Whenever it is or will be out of service for any period of time",
+    "Only if it is out on more than one floor",
+    "Only if a fire occurs",
+    "Only if it is out for more than 8 hours"
+   ],
+   "answer": 0,
+   "explanation": "Standpipe outages must be reported for any period of time.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 21,
+    "quote": "Notification must be made to the department whenever a standpipe system is or will be out of service for any period of time."
+   }
+  },
+  {
+   "id": "F-01-031",
+   "question": "A sprinkler system must be reported to the Fire Department if it cannot be restored to service within how many hours?",
+   "options": [
+    "1 hour",
+    "8 hours",
+    "72 hours",
+    "24 hours"
+   ],
+   "answer": 1,
+   "explanation": "Notify the Department if sprinkler work or repairs cannot be completed and the system restored within 8 hours.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 21,
+    "quote": "the work or repairs cannot be completed, and the system restored to service, within 8 hours"
+   }
+  },
+  {
+   "id": "F-01-032",
+   "question": "Which situation requires the Fire Department to be notified that a sprinkler or fire alarm system is out of service?",
+   "options": [
+    "The building manager changes",
+    "The system is out of service for 10 minutes on one floor for a test",
+    "The system is or will be out of service on more than one floor",
+    "A single smoke detector is being dusted"
+   ],
+   "answer": 2,
+   "explanation": "Out of service on more than one floor is one of the listed notification triggers.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 21,
+    "quote": "The sprinkler system or fire alarm system is or will be out of service on more than one floor of a building"
+   }
+  },
+  {
+   "id": "F-01-033",
+   "question": "According to the study material, what is the most direct and effective way to notify the Fire Department?",
+   "options": [
+    "By sending a letter",
+    "By email",
+    "By phone",
+    "By waiting for the central station"
+   ],
+   "answer": 2,
+   "explanation": "Notifying by phone is the most direct and effective way to notify the Fire Department.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 21,
+    "quote": "Notifying by phone is the most direct and effective way to notify the Fire Department."
+   }
+  },
+  {
+   "id": "F-01-034",
+   "question": "A fire guard discovers a fire. When should they notify the impairment coordinator or FLSD?",
+   "options": [
+    "Immediately, but only after calling 911",
+    "Before calling 911",
+    "At the end of the shift",
+    "Only if the fire spreads"
+   ],
+   "answer": 0,
+   "explanation": "Call 911 first, then immediately notify the impairment coordinator, FLSD, CSFSM or other on-site responsible personnel.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 22,
+    "quote": "The fire guard must also immediately notify the impairment coordinator, FLSD, CSFSM or other on-site responsible personnel, but only after calling 911."
+   }
+  },
+  {
+   "id": "F-01-035",
+   "question": "During a fire, which occupants are in the greatest danger and must be evacuated first?",
+   "options": [
+    "Occupants on the top floor only",
+    "Occupants on the ground floor",
+    "Occupants on the fire floor and the floor above",
+    "Occupants in the basement only"
+   ],
+   "answer": 2,
+   "explanation": "Occupants on the fire floor and the floor above are in the greatest danger.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 22,
+    "quote": "Occupants on the fire floor and the floor above are in the greatest danger and must be evacuated first."
+   }
+  },
+  {
+   "id": "F-01-036",
+   "question": "When calling 911, when should you hang up?",
+   "options": [
+    "After 30 seconds",
+    "As soon as you give the address",
+    "As soon as you hear sirens",
+    "When the operator instructs you to"
+   ],
+   "answer": 3,
+   "explanation": "Do not hang up the phone until the operator instructs you to.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 22,
+    "quote": "Finally, do not hang up the phone until the operator instructs you to."
+   }
+  },
+  {
+   "id": "F-01-037",
+   "question": "You hear a fire alarm sounding after someone used a manual pull station. What should you assume about the FDNY?",
+   "options": [
+    "The central station will always send the FDNY",
+    "The FDNY only needs to be called if smoke is visible",
+    "Do not assume the FDNY was notified; a call to 911 must always be made",
+    "The FDNY has automatically been notified"
+   ],
+   "answer": 2,
+   "explanation": "Manual pull stations may not directly transmit a signal to the FDNY, so a phone call must always be made.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 23,
+    "quote": "The manual pull stations may not directly transmit a signal to the FDNY. A phone call must always be made to 911"
+   }
+  },
+  {
+   "id": "F-01-038",
+   "question": "How many steps does a double action manual pull station require to activate the alarm?",
+   "options": [
+    "Three",
+    "One",
+    "Four",
+    "Two"
+   ],
+   "answer": 3,
+   "explanation": "Double action stations require two steps: break a glass/open a door/lift a cover, then operate the switch or lever.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 23,
+    "quote": "Double action stations: Double action stations require 2 steps in order to activate the alarm."
+   }
+  },
+  {
+   "id": "F-01-039",
+   "question": "After a pull station is activated, who may reset the alarm at the main Fire Alarm Control Panel?",
+   "options": [
+    "Any building occupant",
+    "The person who pulled the station",
+    "An S-95 Certificate of Fitness holder, after being advised by a Fire Department representative",
+    "The F-01 fire guard, at any time"
+   ],
+   "answer": 2,
+   "explanation": "The alarm must be reset at the main FACP and only by an S-95 holder after being advised by a Fire Department representative.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 24,
+    "quote": "The alarm may be reset only by an S-95 Certificate of Fitness holder after being advised by a Fire Department representative."
+   }
+  },
+  {
+   "id": "F-01-040",
+   "question": "How far from the exit doorway opening must pull stations be located?",
+   "options": [
+    "Within 25 feet",
+    "Within 5 feet",
+    "Within 50 feet",
+    "Within 100 feet"
+   ],
+   "answer": 1,
+   "explanation": "Pull stations must be within 5 feet of the exit doorway opening and never blocked.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 24,
+    "quote": "Pull stations must be located within 5 feet from the exit doorway opening and never be blocked."
+   }
+  },
+  {
+   "id": "F-01-041",
+   "question": "How high may the top of a mounted portable fire extinguisher be above the floor?",
+   "options": [
+    "Not more than 10 feet",
+    "Not more than 3 feet",
+    "Not more than 7 feet",
+    "Not more than 5 feet"
+   ],
+   "answer": 3,
+   "explanation": "The top of the extinguisher must not be more than 5 feet above the floor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 27,
+    "quote": "All fire extinguishers must be mounted so that the top of the extinguisher is not more than 5 feet above the floor."
+   }
+  },
+  {
+   "id": "F-01-042",
+   "question": "What is the minimum clearance between the bottom of a fire extinguisher and the floor?",
+   "options": [
+    "At least 4 inches",
+    "At least 12 inches",
+    "At least 1 inch",
+    "No clearance; it may sit on the floor"
+   ],
+   "answer": 0,
+   "explanation": "The bottom should be at least 4 inches from the floor; extinguishers are not allowed on the floor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 27,
+    "quote": "The bottom of the fire extinguisher should be at least 4 inches from the floor. Fire extinguishers are NOT allowed to be on the floor."
+   }
+  },
+  {
+   "id": "F-01-043",
+   "question": "What does P.A.S.S. stand for when using a fire extinguisher?",
+   "options": [
+    "Pull, Alarm, Signal, Shout",
+    "Pull, Aim, Squeeze, Sweep",
+    "Push, Alert, Spray, Stop",
+    "Point, Activate, Shake, Spray"
+   ],
+   "answer": 1,
+   "explanation": "P.A.S.S. stands for Pull, Aim, Squeeze, and Sweep.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 29,
+    "quote": "P.A.S.S. stands for Pull, Aim, Squeeze, and Sweep."
+   }
+  },
+  {
+   "id": "F-01-044",
+   "question": "Which type of extinguisher must NOT be used on a Class C (electrical) fire?",
+   "options": [
+    "Multi-purpose A:B:C dry chemical",
+    "Dry chemical rated B:C",
+    "Water or foam",
+    "CO2"
+   ],
+   "answer": 2,
+   "explanation": "Class C fires need extinguishers that do not conduct electricity; foam and water types must not be used.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 29,
+    "quote": "Foam and water type extinguishers must not be used to extinguish electrical fires."
+   }
+  },
+  {
+   "id": "F-01-045",
+   "question": "Class D fires involve which materials?",
+   "options": [
+    "Wood, paper and cloth",
+    "Energized electrical equipment",
+    "Ignitable metals such as magnesium and titanium",
+    "Gasoline and oil"
+   ],
+   "answer": 2,
+   "explanation": "Class D fires are caused by ignitable metals; water should not be used on them.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 29,
+    "quote": "Class D fires are caused by ignitable metals, such as magnesium, titanium, and metallic sodium"
+   }
+  },
+  {
+   "id": "F-01-046",
+   "question": "Who is responsible for selecting the person who does the monthly \"quick check\" of portable fire extinguishers?",
+   "options": [
+    "The extinguisher manufacturer",
+    "The W-96 company",
+    "The FDNY",
+    "The owner of the business"
+   ],
+   "answer": 3,
+   "explanation": "The business owner selects the person to do the monthly quick check.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 31,
+    "quote": "The owner of the business is responsible for selecting a person to do a monthly inspection."
+   }
+  },
+  {
+   "id": "F-01-047",
+   "question": "At least how often must portable fire extinguishers be checked by a W-96 Certificate of Fitness holder from an FDNY-approved company?",
+   "options": [
+    "Monthly",
+    "Weekly",
+    "Every five years",
+    "Annually"
+   ],
+   "answer": 3,
+   "explanation": "At least annually a W-96 holder from an FDNY-approved company must check all portable fire extinguishers and replace the tag.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 31,
+    "quote": "At least annually all Portable Fire Extinguishers must be checked by a W-96 Certificate of Fitness holder from FDNY approved company."
+   }
+  },
+  {
+   "id": "F-01-048",
+   "question": "How large is the genuine hologram strip on an FDNY portable fire extinguisher tag?",
+   "options": [
+    "1 inch long by 1 inch wide",
+    "3 inches long by ¼ inch wide",
+    "There is no hologram on genuine tags",
+    "6 inches long by ½ inch wide"
+   ],
+   "answer": 1,
+   "explanation": "A real hologram strip is 3 inches long by 1/4 inch wide and changes color as it is moved.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 30,
+    "quote": "A real hologram strip shown on the tag is 3 inches long by ¼ inch wide."
+   }
+  },
+  {
+   "id": "F-01-049",
+   "question": "According to FDNY lithium-ion battery guidance, how should batteries be charged?",
+   "options": [
+    "Plugged into a power strip",
+    "Plugged directly into a wall electrical outlet",
+    "Overnight while unattended",
+    "Under a pillow to keep them warm"
+   ],
+   "answer": 1,
+   "explanation": "Always plug directly into a wall outlet; never use a power strip or charge overnight.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 32,
+    "quote": "plug directly into a wall electrical outlet for charging."
+   }
+  },
+  {
+   "id": "F-01-050",
+   "question": "When charging more than five personal mobility devices (or their removable batteries), where must the charging take place?",
+   "options": [
+    "In a dedicated room with ventilation and a self-closing door",
+    "In any stairwell",
+    "Outdoors only, under a tarp",
+    "In the main exit corridor"
+   ],
+   "answer": 0,
+   "explanation": "Charging more than five devices must be in a dedicated room with ventilation and a self-closing door.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 33,
+    "quote": "more than five (5) personal mobility devices or their removable batteries, it must be in a dedicated room with ventilation and a self-closing door."
+   }
+  },
+  {
+   "id": "F-01-051",
+   "question": "After all visible fire on a lithium-ion battery has been put out, what does the study material warn?",
+   "options": [
+    "The battery may re-ignite minutes, hours or even days later",
+    "The battery is permanently safe",
+    "The battery can be immediately recharged",
+    "Re-ignition only happens if water was used"
+   ],
+   "answer": 0,
+   "explanation": "Reignition is common; lithium-ion batteries can unexpectedly re-ignite minutes, hours and even days later.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "Lithium-Ion Batteries are known to unexpectedly re-ignite (without warning) minutes, hours and even days after all visible fire has been put out."
+   }
+  },
+  {
+   "id": "F-01-052",
+   "question": "A sprinkler head is described as \"fused.\" What does that mean?",
+   "options": [
+    "The sprinkler head was recently inspected",
+    "The sprinkler head has opened",
+    "The sprinkler head is painted over",
+    "The sprinkler head is missing"
+   ],
+   "answer": 1,
+   "explanation": "The term \"fused\" means that sprinkler heads opened.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 26,
+    "quote": "The term “fused” means that sprinkler heads opened."
+   }
+  },
+  {
+   "id": "F-01-053",
+   "question": "What is a \"wet\" standpipe system?",
+   "options": [
+    "A system that only uses foam",
+    "A system that is always filled with water (\"charged\")",
+    "A system that is out of service",
+    "A system whose pipes are dry and empty when not in use"
+   ],
+   "answer": 1,
+   "explanation": "Wet systems are charged, meaning they are always filled with water; dry systems are empty when not in use.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f01-noe-study-materials.pdf",
+    "page": 27,
+    "quote": "Wet systems are “charged,” meaning that they are always filled with water."
+   }
+  }
+ ]
+}

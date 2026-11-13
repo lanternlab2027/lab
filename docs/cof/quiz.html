@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoF Practice Quiz</title>
+<meta name="description" content="Practice quiz for an FDNY Certificate of Fitness exam, with explanations cited to the official study material.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="6" fill="#1f3a5f"/><path d="M8 20V8h8M8 14h6" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="20" cy="19" r="3" fill="#e0473e"/></svg>
+    <a class="site-name" href="index.html">CoF Practice</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1 id="title">Loading&hellip;</h1>
+  <p class="lede" id="subtitle"></p>
+  <div class="disclaimer" role="note"><strong>Not affiliated with FDNY; study the official material.</strong> <a id="pdflink" href="#">Official study booklet (PDF)</a></div>
+
+  <!-- Quiz runner -->
+  <section id="runner" class="hidden" aria-live="polite">
+    <div class="qhead"><span id="qcount"></span><span id="qmode"></span><span class="timer hidden" id="timer"></span></div>
+    <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+    <p class="qtext" id="qtext"></p>
+    <ul class="opts" id="opts"></ul>
+    <div class="feedback hidden" id="feedback"></div>
+    <div class="actions">
+      <button class="btn" id="next" disabled>Next question</button>
+      <button class="btn secondary hidden" id="finishEarly">Finish exam</button>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="hidden">
+    <div class="panel">
+      <div class="small" id="resLabel">Your score</div>
+      <div class="score" id="resScore"></div>
+      <div id="resText"></div>
+    </div>
+    <div id="review" class="hidden">
+      <h2>Review</h2>
+      <ol class="review" id="reviewList"></ol>
+    </div>
+  </section>
+
+  <!-- Email gate -->
+  <section id="gate" class="panel gate hidden">
+    <h2 id="gateTitle">Unlock all questions + timed mock exam</h2>
+    <p>Enter your email to practice the full question bank and take a timed mock exam built like the real one, with the same number of questions and time limit. It's free.</p>
+    <form id="gateForm" novalidate>
+      <label for="email" class="small">Email address</label>
+      <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+      <button class="btn" type="submit" id="gateBtn">Unlock now</button>
+    </form>
+    <p class="msg" id="gateMsg" role="status"></p>
+    <p class="small">We'll send occasional study tips for your exam. Unsubscribe anytime.</p>
+  </section>
+
+  <!-- Unlocked menu -->
+  <section id="unlocked" class="panel hidden">
+    <h2>Full access unlocked</h2>
+    <p id="unlockedText"></p>
+    <div class="actions">
+      <button class="btn" id="startAll">Practice all questions</button>
+      <button class="btn secondary" id="startMock">Start timed mock exam</button>
+    </div>
+    <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+    <a class="btn buy" href="#buy" id="buyBtn">Get the full prep pack — $14.99</a>
+  </section>
+
+  <section id="error" class="panel hidden"></section>
+</main>
+
+<footer class="site">
+  <div class="wrap">Not affiliated with, endorsed by or approved by the Fire Department of the City of New York. Each question cites the page of FDNY's free study booklet it comes from.</div>
+</footer>
+<script src="quiz.js"></script>
+</body>
+</html>

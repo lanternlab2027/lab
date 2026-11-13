@@ -1,0 +1,809 @@
+{
+ "exam": "F-60",
+ "title": "Fire Guard for Torch Operations",
+ "real_exam_questions": 25,
+ "real_exam_minutes": 38,
+ "source_pdf": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+ "page_numbering": "PDF page index (1 = first page of the PDF file)",
+ "questions": [
+  {
+   "id": "F-60-001",
+   "question": "At which of these locations must the fire watch for torch operations be performed by an F-60 fire guard?",
+   "options": [
+    "Only inside private homes",
+    "Construction sites",
+    "Only in restaurant kitchens",
+    "Only at gas stations"
+   ],
+   "answer": 1,
+   "explanation": "F-60 fire guards are required at construction sites, on any rooftop, and in any building when the operator holds a citywide torch permit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 17,
+    "quote": "F-60 certificate of fitness fire guards are required to perform the fire watch for torch operations at (a) construction sites, (b) on any rooftop"
+   }
+  },
+  {
+   "id": "F-60-002",
+   "question": "Can an F-60 Certificate of Fitness holder serve as a watchperson at a construction site?",
+   "options": [
+    "Yes, F-60 covers all construction site duties",
+    "Yes, if the site is under 50,000 square feet",
+    "Yes, on weekends only",
+    "No; a watchperson must take the S-60 test"
+   ],
+   "answer": 3,
+   "explanation": "The F-60 is NOT qualified to serve as a construction site watchperson; that requires the S-60.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 1,
+    "quote": "Applicants who apply to be a watchperson should take S-60 Certificate of Fitness test."
+   }
+  },
+  {
+   "id": "F-60-003",
+   "question": "Can an F-60 Certificate of Fitness holder serve as a fire guard for impairment at a construction site?",
+   "options": [
+    "Yes, for up to 8 hours",
+    "Yes, F-60 covers impairment duties",
+    "No; that requires the F-01 Certificate of Fitness",
+    "Yes, if no hot work is being done"
+   ],
+   "answer": 2,
+   "explanation": "The F-60 is NOT qualified to serve as a fire guard for impairment; applicants should take the F-01 test.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 1,
+    "quote": "Applicants who apply to be a fire guard for impairment should take the F-01 Certificate of Fitness test."
+   }
+  },
+  {
+   "id": "F-60-004",
+   "question": "An FDNY permit is required for hot work storing, using or handling any flammable gas over how much?",
+   "options": [
+    "40 SCF",
+    "400 SCF",
+    "100 lbs",
+    "4,000 SCF"
+   ],
+   "answer": 1,
+   "explanation": "A permit is required for flammable gas (e.g., LPG, CNG or acetylene) over 400 SCF.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 7,
+    "quote": "storing, using, or handling any flammable gas (e.g. LPG or CNG or acetylene) over 400 SCF."
+   }
+  },
+  {
+   "id": "F-60-005",
+   "question": "An FDNY permit is required for hot work storing, using or handling any oxidizing gas (e.g., oxygen) over how much?",
+   "options": [
+    "504 SCF",
+    "400 SCF",
+    "50 SCF",
+    "5,000 SCF"
+   ],
+   "answer": 0,
+   "explanation": "A permit is required for oxidizing gas over 504 SCF.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 7,
+    "quote": "storing, using, or handling any oxidizing gas (e.g. oxygen) over 504 SCF"
+   }
+  },
+  {
+   "id": "F-60-006",
+   "question": "For LPG, 400 SCF is approximately how many pounds?",
+   "options": [
+    "400 lbs",
+    "100 lbs",
+    "4 lbs",
+    "47 lbs"
+   ],
+   "answer": 3,
+   "explanation": "For LPG, 400 SCF is approximately 47 lbs.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 7,
+    "quote": "For LPG, 400 SCF is approximately 47 lbs."
+   }
+  },
+  {
+   "id": "F-60-007",
+   "question": "What is the maximum weight of any single standard portable LPG container?",
+   "options": [
+    "500 lbs",
+    "100 lbs",
+    "47 lbs",
+    "20 lbs"
+   ],
+   "answer": 1,
+   "explanation": "Any single standard portable LPG container must not exceed 100 lbs.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 8,
+    "quote": "Any single standard portable LPG container must not exceed 100 lbs in weight."
+   }
+  },
+  {
+   "id": "F-60-008",
+   "question": "What is required to use LPG/propane on an occupied roof?",
+   "options": [
+    "A sign posted at the roof door",
+    "An affidavit from a licensed Architect or Engineer stating the roof is non-combustible",
+    "Verbal permission from the building super",
+    "Nothing beyond a fire extinguisher"
+   ],
+   "answer": 1,
+   "explanation": "Use of LPG/propane on an occupied roof requires an affidavit from a licensed professional stating the roof is non-combustible.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 8,
+    "quote": "Use of LPG/Propane on an occupied roof requires an affidavit from a licensed professional (Architect or Engineer) stating the roof is constructed of non-combustible material(s)."
+   }
+  },
+  {
+   "id": "F-60-009",
+   "question": "How long is a permanent site-specific FDNY permit valid?",
+   "options": [
+    "12 months",
+    "30 days",
+    "3 years",
+    "Indefinitely"
+   ],
+   "answer": 0,
+   "explanation": "Permanent permits are valid for 12 months only; every permit or renewal requires an inspection.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 8,
+    "quote": "Permanent permits are valid for 12 months only."
+   }
+  },
+  {
+   "id": "F-60-010",
+   "question": "Under a citywide permit, the activity at any individual location may not exceed how long?",
+   "options": [
+    "90 calendar days",
+    "7 calendar days",
+    "30 calendar days",
+    "1 year"
+   ],
+   "answer": 2,
+   "explanation": "Citywide permit activity at one location may not exceed 30 calendar days; longer requires a site-specific permit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "The duration of such activity at any individual location does not exceed 30 calendar days"
+   }
+  },
+  {
+   "id": "F-60-011",
+   "question": "Can an FDNY permit be transferred to a new owner of the business?",
+   "options": [
+    "Yes, within 30 days",
+    "Yes, if the operation stays the same",
+    "No; any change in ownership requires a new permit",
+    "Yes, by signing the back"
+   ],
+   "answer": 2,
+   "explanation": "Permits are not transferable; any change in occupancy, operation, tenancy or ownership requires a new permit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "All permits are not transferable, and any change in occupancy, operation, tenancy or ownership requires that a new permit be issued."
+   }
+  },
+  {
+   "id": "F-60-012",
+   "question": "Who issues the hot work program authorization?",
+   "options": [
+    "The Department of Buildings",
+    "The F-60 fire guard",
+    "The responsible person (it is not issued by the FDNY)",
+    "The FDNY"
+   ],
+   "answer": 2,
+   "explanation": "Hot work program authorization is NOT issued by the FDNY; it is signed and issued by the responsible person.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "Hot work program authorization is NOT issued by the FDNY, it must be signed and issued by the responsible person"
+   }
+  },
+  {
+   "id": "F-60-013",
+   "question": "For how long after the work is complete must the hot work authorization remain available for inspection?",
+   "options": [
+    "1 year",
+    "48 hours",
+    "30 days",
+    "1 hour"
+   ],
+   "answer": 1,
+   "explanation": "The authorization must be available during the work and for 48 hours after the work is complete.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "available for inspection by any representative of the Fire Department during the performance of the work, and for 48 hours after the work is complete."
+   }
+  },
+  {
+   "id": "F-60-014",
+   "question": "According to the study material, what is the source of ignition in about 60% of all fires in industrial occupancies?",
+   "options": [
+    "Sparks and pieces of hot metal",
+    "Lightning",
+    "Cigarettes",
+    "The torch flame itself"
+   ],
+   "answer": 0,
+   "explanation": "Usually it is not the flame but the sparks and pieces of hot metal that cause fires.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 13,
+    "quote": "sparks and pieces of hot metal are the source of ignition in about 60% of all fires in industrial occupancies."
+   }
+  },
+  {
+   "id": "F-60-015",
+   "question": "Why should clothing with pockets or cuffs be avoided while doing hot work?",
+   "options": [
+    "They block the view of the fire guard",
+    "They make it hard to climb ladders",
+    "Sparks or slag can catch in cuffs or pockets",
+    "They are against the dress code"
+   ],
+   "answer": 2,
+   "explanation": "Sparks or slag can catch in cuffs or pockets.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "Avoid clothing with pockets or cuffs while working. Sparks or slag can catch in cuffs or pockets."
+   }
+  },
+  {
+   "id": "F-60-016",
+   "question": "For hot work under a citywide permit, how far in advance must the premises owner be notified in writing?",
+   "options": [
+    "At least 30 days",
+    "No notice is needed",
+    "At least 1 hour",
+    "At least 48 hours"
+   ],
+   "answer": 3,
+   "explanation": "The citywide permit holder must notify the owner in writing at least 48 hours before hot work starts.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 15,
+    "quote": "the owner of the premises of the hot work operation areas must be notified in writing by the citywide permit holder at least 48 hours"
+   }
+  },
+  {
+   "id": "F-60-017",
+   "question": "How often must the responsible person conduct the pre-hot work check?",
+   "options": [
+    "Only on the first day of a project",
+    "Once a month",
+    "At least once per day, and before hot work is authorized",
+    "Once a week"
+   ],
+   "answer": 2,
+   "explanation": "The pre-hot work check must be done by the responsible person at least once per day and before hot work is authorized.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 16,
+    "quote": "The pre-hot work check must be conducted by the responsible person at least once per day and before the hot work is authorized."
+   }
+  },
+  {
+   "id": "F-60-018",
+   "question": "Hot work involving cutting or welding must be conducted at least how far from combustible materials (unless shielded)?",
+   "options": [
+    "35 feet",
+    "10 feet",
+    "25 feet",
+    "100 feet"
+   ],
+   "answer": 0,
+   "explanation": "The 35-foot rule applies to cutting and welding; other hot work uses 25 feet.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 16,
+    "quote": "Hot work operations involving cutting or welding must be conducted at least 35 feet from combustible materials and combustible waste"
+   }
+  },
+  {
+   "id": "F-60-019",
+   "question": "Hot work OTHER than cutting or welding must be conducted at least how far from combustible materials (unless shielded)?",
+   "options": [
+    "5 feet",
+    "35 feet",
+    "50 feet",
+    "25 feet"
+   ],
+   "answer": 3,
+   "explanation": "All other hot work must be at least 25 feet from combustible materials and waste, or shielded.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 16,
+    "quote": "All other hot work operations must be conducted at least 25 feet from combustible materials and combustible waste"
+   }
+  },
+  {
+   "id": "F-60-020",
+   "question": "When hot work near sprinklers extends over several days, when must the shields over sprinkler heads be removed?",
+   "options": [
+    "Once a week",
+    "Only when the whole project is complete",
+    "At the end of each workday",
+    "Never; they stay on permanently"
+   ],
+   "answer": 2,
+   "explanation": "Damp cloth guards or noncombustible barriers must be removed at the end of each workday if the work extends over several days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 16,
+    "quote": "If the work extends over several days, the shields must be removed at the end of each workday."
+   }
+  },
+  {
+   "id": "F-60-021",
+   "question": "Which Certificate of Fitness is required for the person doing torch operations using oxygen and a flammable gas?",
+   "options": [
+    "S-95",
+    "F-01",
+    "F-60",
+    "G-60"
+   ],
+   "answer": 3,
+   "explanation": "G-60 is required for the torch operator using oxygen and flammable gas; F-60 is for the fire guard.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 16,
+    "quote": "G-60 certificates of fitness are required for torch operations using oxygen and a flammable gas"
+   }
+  },
+  {
+   "id": "F-60-022",
+   "question": "How many torches may one person operate at a time?",
+   "options": [
+    "Two, if they are close together",
+    "Any number, if a fire guard is present",
+    "Three on rooftops",
+    "Only one, and it must not be left unattended while ignited"
+   ],
+   "answer": 3,
+   "explanation": "Each person must operate only one torch at a time and never leave it unattended while ignited.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 17,
+    "quote": "Each person must operate only one torch at a time, and the torch must not be left unattended while ignited."
+   }
+  },
+  {
+   "id": "F-60-023",
+   "question": "When may hot work be performed on a container that has held a flammable liquid?",
+   "options": [
+    "Only outdoors",
+    "Only with a damp cloth over it",
+    "Any time, if it is empty",
+    "Only after it has been thoroughly cleaned and purged"
+   ],
+   "answer": 3,
+   "explanation": "Hot work must not be performed on such a container until it has been thoroughly cleaned and purged.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "until the container or equipment has been thoroughly cleaned and purged."
+   }
+  },
+  {
+   "id": "F-60-024",
+   "question": "Is it permitted to perform welding or cutting while supported by or resting on compressed gas containers?",
+   "options": [
+    "Yes, if the containers are empty",
+    "No, it is prohibited",
+    "Yes, with a fire guard present",
+    "Yes, on rooftops"
+   ],
+   "answer": 1,
+   "explanation": "Welding or cutting while supported by or resting on compressed gas containers is prohibited.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "It is prohibited to perform welding or cutting when supported by or resting on any compressed gas containers."
+   }
+  },
+  {
+   "id": "F-60-025",
+   "question": "Torch use in a repair garage located on a property with a motor-fuel dispensing facility must be done where?",
+   "options": [
+    "Within a fire-rated enclosure approved by the Building Department",
+    "Next to the fuel pumps",
+    "Only on the sidewalk",
+    "Anywhere in the garage"
+   ],
+   "answer": 0,
+   "explanation": "It must be conducted within a fire-rated enclosure with fireproof, self-closing doors.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "must be conducted within a fire-rated enclosure (approved by the Building Department)."
+   }
+  },
+  {
+   "id": "F-60-026",
+   "question": "May persons conducting a fire watch for hot work have other duties?",
+   "options": [
+    "Yes, they may also be the site safety manager",
+    "Yes, if the hot work is brief",
+    "Yes, they may help the torch operator",
+    "No"
+   ],
+   "answer": 3,
+   "explanation": "Persons conducting a fire watch must keep constant watch and must not have other duties.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "The persons conducting a fire watch must not have other duties."
+   }
+  },
+  {
+   "id": "F-60-027",
+   "question": "What is the minimum rating of the portable fire extinguisher required near general hot work?",
+   "options": [
+    "1-A:5-B:C",
+    "2-A:20-B:C",
+    "No extinguisher is required",
+    "10-B:C"
+   ],
+   "answer": 1,
+   "explanation": "At least one extinguisher with a minimum 2-A:20-B:C rating must be readily accessible (3-A:40-B:C for roofing).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "At least one portable fire extinguisher with a minimum 2-A:20-B:C rating must be provided and readily accessible"
+   }
+  },
+  {
+   "id": "F-60-028",
+   "question": "What minimum extinguisher rating is required for roofing operations using heat-producing systems?",
+   "options": [
+    "2-A:20-B:C",
+    "3-A:40-B:C",
+    "1-A:10-B:C",
+    "10-B:C"
+   ],
+   "answer": 1,
+   "explanation": "Roofing operations need at least one multipurpose extinguisher rated at least 3-A:40-B:C.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "There must be at least one multipurpose portable fire extinguisher with a minimum 3-A 40-B:C rating for roofing"
+   }
+  },
+  {
+   "id": "F-60-029",
+   "question": "Within what distance of the hot work location and fire guard position must the required portable fire extinguisher be readily accessible?",
+   "options": [
+    "30 feet",
+    "5 feet",
+    "150 feet",
+    "75 feet"
+   ],
+   "answer": 0,
+   "explanation": "The required extinguisher must be readily accessible within 30 feet of the hot work and the fire guard's position.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 26,
+    "quote": "must be readily accessible within 30 feet of the location where hot work is performed and where the fire guards are positioned."
+   }
+  },
+  {
+   "id": "F-60-030",
+   "question": "Is it lawful to install roofing material using a torch on a roof of combustible construction?",
+   "options": [
+    "Yes, with a 3-A:40-B:C extinguisher",
+    "Yes, if the roof is wet",
+    "Yes, with an F-60 fire guard",
+    "No, it is unlawful"
+   ],
+   "answer": 3,
+   "explanation": "It is unlawful to install roofing material with a torch on a roof of combustible construction.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 20,
+    "quote": "It must be unlawful to install any roofing material using a torch on a roof of combustible construction"
+   }
+  },
+  {
+   "id": "F-60-031",
+   "question": "A single fire guard may watch more than one torch operation on the same floor if each operation is no more than how far away (by actual path of travel)?",
+   "options": [
+    "200 feet",
+    "10 feet",
+    "100 feet",
+    "50 feet"
+   ],
+   "answer": 3,
+   "explanation": "One fire guard may cover multiple torch operations on the same level if each is within 50 feet by path of travel and in view.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 20,
+    "quote": "if each torch operation is not more than 50 feet from the fire guard, as measured by the actual path of travel"
+   }
+  },
+  {
+   "id": "F-60-032",
+   "question": "During torch operations on the roof of a building, how must fire guards be on duty?",
+   "options": [
+    "Only after the work ends",
+    "Only at the start of the work",
+    "Every other hour",
+    "On continuous duty during all torch operations"
+   ],
+   "answer": 3,
+   "explanation": "Fire guards must be on continuous duty during all torch operations on a roof.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 20,
+    "quote": "Fire guards must be on continuous duty during all torch operations on the roof of a building."
+   }
+  },
+  {
+   "id": "F-60-033",
+   "question": "When is an additional F-60 fire guard required on the floor below a torch operation?",
+   "options": [
+    "Only on weekends",
+    "Never",
+    "Only if the floor below is occupied by tenants",
+    "When the torch operation is at or near the edge of an unenclosed floor or near a floor opening"
+   ],
+   "answer": 3,
+   "explanation": "An additional F-60 fire guard is required below when sparks and slag may travel to lower floors, such as at an unenclosed edge or floor opening.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 20,
+    "quote": "Additional F-60 fire guard is required to perform fire watch on floor below if the torch operation is being conducted at or near the edge"
+   }
+  },
+  {
+   "id": "F-60-034",
+   "question": "If sparks or slag are observed to extend beyond 35 feet and may expose lower floors, what must happen?",
+   "options": [
+    "Move the fire guard to the roof",
+    "The torch operation must be immediately discontinued and the floors below inspected",
+    "Continue working and check later",
+    "Spray water on the sparks"
+   ],
+   "answer": 1,
+   "explanation": "The operation must stop immediately and the floors below must be inspected for any fire condition.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 21,
+    "quote": "the torch operation must be immediately discontinued, and the floors or levels below must be inspected for any fire condition."
+   }
+  },
+  {
+   "id": "F-60-035",
+   "question": "How long must the fire watch continue after hot work ends?",
+   "options": [
+    "A minimum of 30 minutes",
+    "5 minutes",
+    "No time after work ends",
+    "Exactly 8 hours"
+   ],
+   "answer": 0,
+   "explanation": "The fire watch must continue for a minimum of 30 minutes after hot work ends; it may be extended.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 22,
+    "quote": "The fire watch must continue for a minimum of 30 minutes after the hot work ends."
+   }
+  },
+  {
+   "id": "F-60-036",
+   "question": "For a CNG or LPG torch operation, when are the two post-work inspections conducted?",
+   "options": [
+    "5 minutes and 10 minutes after completion",
+    "1 hour and 24 hours after completion",
+    "Only once, the next morning",
+    "30 minutes and 1 hour after completion"
+   ],
+   "answer": 3,
+   "explanation": "First inspection 30 minutes after completion; second inspection 1 hour after completion, to catch smoldering fires.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 22,
+    "quote": "the first inspection must be conducted 30 minutes after completion of torch operations; the second inspection 1 hour after completion"
+   }
+  },
+  {
+   "id": "F-60-037",
+   "question": "Who receives and retains the fire guard's signed inspection report?",
+   "options": [
+    "The FDNY borough office",
+    "The person in charge of the torch operations",
+    "The fire extinguisher company",
+    "The building's tenants"
+   ],
+   "answer": 1,
+   "explanation": "The report must be submitted to and retained by the person in charge of the torch operations.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 22,
+    "quote": "This report must be submitted to and retained by the person in charge of the torch operations."
+   }
+  },
+  {
+   "id": "F-60-038",
+   "question": "Oxygen containers, valves, regulators and hoses must be kept free of what?",
+   "options": [
+    "Paint markings",
+    "Oil or grease",
+    "Water",
+    "Labels"
+   ],
+   "answer": 1,
+   "explanation": "Oxygen equipment must be kept free of oil or grease and not handled with oily hands, gloves or tools.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 24,
+    "quote": "Oxygen containers and oxygen container valves, regulators, hose, and other apparatus and fittings must be kept free of oil or grease."
+   }
+  },
+  {
+   "id": "F-60-039",
+   "question": "When must the torch valve be closed and the gas supply to the torch completely shut off?",
+   "options": [
+    "When hot work is discontinued for 1 hour or more",
+    "Only at the end of the week",
+    "Only during rain",
+    "Only when the cylinder is empty"
+   ],
+   "answer": 0,
+   "explanation": "The torch valve must be closed and gas shut off when hot work stops for 1 hour or more.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 24,
+    "quote": "the gas supply to the torch completely shut off when hot work operations are discontinued for a period of 1 hour or more."
+   }
+  },
+  {
+   "id": "F-60-040",
+   "question": "How must piping equipment or systems be tested for suspected leaks?",
+   "options": [
+    "Using soapy water",
+    "Using a flame",
+    "By smelling for gas",
+    "By increasing the pressure"
+   ],
+   "answer": 0,
+   "explanation": "It is unlawful to test for leaks using a flame; soapy water must be used.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 24,
+    "quote": "Tests for suspected leaks in piping equipment and systems must be done using soapy water."
+   }
+  },
+  {
+   "id": "F-60-041",
+   "question": "From which direction should a fire be approached?",
+   "options": [
+    "From directly above",
+    "From a downwind direction",
+    "From an upwind direction",
+    "From any direction"
+   ],
+   "answer": 2,
+   "explanation": "Approach the flame from upwind to avoid being burned; never approach from downwind.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 27,
+    "quote": "The flame must be approached from an upwind direction."
+   }
+  },
+  {
+   "id": "F-60-042",
+   "question": "Where should the dry chemical stream be directed when extinguishing a gas fire?",
+   "options": [
+    "Toward the point where the flame begins",
+    "At the surrounding wall",
+    "At the top of the flame",
+    "At the center of the flame"
+   ],
+   "answer": 0,
+   "explanation": "Direct the stream toward the point where the flame begins, not at the center of the flame.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 28,
+    "quote": "The dry chemical stream must be directed toward the point where the flame begins."
+   }
+  },
+  {
+   "id": "F-60-043",
+   "question": "A gas cylinder fire cannot be shut off because the fire is near the shut-off valve. What should you do?",
+   "options": [
+    "Extinguish the flame immediately with an extinguisher",
+    "Spray water directly on the valve",
+    "Pick up the cylinder and move it",
+    "Allow the flame to burn itself out, call 911, and prevent spread to surroundings"
+   ],
+   "answer": 3,
+   "explanation": "When the gas cannot be shut off and supply is limited, let the flame burn itself out and call 911; never extinguish the flame unless the gas supply is off.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 28,
+    "quote": "allow the flame to burn itself out and call 911."
+   }
+  },
+  {
+   "id": "F-60-044",
+   "question": "Which fires must be reported, according to the Fire Guard Daily Log for Hot Work?",
+   "options": [
+    "Only fires larger than 10 square feet",
+    "Fires of all sizes, even if immediately extinguished",
+    "Only fires that cause injury",
+    "Only fires that need the FDNY"
+   ],
+   "answer": 1,
+   "explanation": "Fires of all sizes must be reported even if they are immediately extinguished.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 23,
+    "quote": "Fires of all sizes must be reported, even if they are immediately extinguished."
+   }
+  },
+  {
+   "id": "F-60-045",
+   "question": "If a fire alarm system is taken off-line during hot work to avoid unwarranted alarms, what must be provided?",
+   "options": [
+    "A fire watch for impairment",
+    "Nothing else",
+    "An extra torch operator",
+    "A second hot work permit"
+   ],
+   "answer": 0,
+   "explanation": "Fire watch for impairment must be provided when the alarm system is off-line.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 26,
+    "quote": "Fire watch for impairment must be provided when the alarm system is off-line."
+   }
+  },
+  {
+   "id": "F-60-046",
+   "question": "When must visible hazard identification signs be posted at a hot work area?",
+   "options": [
+    "Where the hot work area is accessible to persons other than the operator",
+    "Only on rooftops",
+    "Only at night",
+    "Never; signs are optional"
+   ],
+   "answer": 0,
+   "explanation": "Signs must be posted conspicuously where others besides the operator can access the hot work area.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 18,
+    "quote": "Where the hot work area is accessible to persons other than the operator of the hot work equipment, visible hazard identification signs must be posted"
+   }
+  },
+  {
+   "id": "F-60-047",
+   "question": "What should the fire guard know about lithium-ion battery fires and fire extinguishers?",
+   "options": [
+    "Fire extinguishers do not work on lithium-ion battery fires",
+    "Any ABC extinguisher will put them out",
+    "Water always stops them",
+    "They cannot re-ignite once out"
+   ],
+   "answer": 0,
+   "explanation": "The study material states fire extinguishers do not work on lithium-ion battery fires, and reignition is common.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f60-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "Fire Extinguishers do not work on lithium-ion batteries fires."
+   }
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "F-01": {
+  "drafted": 54,
+  "auto_fail": 0,
+  "manual_drop": 1,
+  "final": 53
+ },
+ "F-03": {
+  "drafted": 49,
+  "auto_fail": 0,
+  "manual_drop": 0,
+  "final": 49
+ },
+ "F-60": {
+  "drafted": 47,
+  "auto_fail": 0,
+  "manual_drop": 0,
+  "final": 47
+ },
+ "S-95": {
+  "drafted": 52,
+  "auto_fail": 0,
+  "manual_drop": 1,
+  "final": 51
+ }
+}

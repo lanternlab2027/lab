@@ -1,0 +1,850 @@
+{
+ "exam": "F-03",
+ "title": "Indoor Place of Assembly Safety Personnel",
+ "real_exam_questions": 25,
+ "real_exam_minutes": 38,
+ "source_pdf": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+ "page_numbering": "PDF page index (1 = first page of the PDF file)",
+ "questions": [
+  {
+   "id": "F-03-001",
+   "question": "The FDNY may require at least one place of assembly safety personnel where the Certificate of Occupancy indicates how many people will gather INDOORS?",
+   "options": [
+    "300 or more",
+    "25 or more",
+    "75 or more",
+    "1,000 or more"
+   ],
+   "answer": 2,
+   "explanation": "Safety personnel may be required where 75 or more people gather indoors (200 or more outdoors).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "the Certificate of Occupancy indicates that 75 or more people will gather indoors or 200 or more outdoors."
+   }
+  },
+  {
+   "id": "F-03-002",
+   "question": "The FDNY may require at least one place of assembly safety personnel where the Certificate of Occupancy indicates how many people will gather OUTDOORS?",
+   "options": [
+    "75 or more",
+    "5,000 or more",
+    "200 or more",
+    "50 or more"
+   ],
+   "answer": 2,
+   "explanation": "The outdoor threshold is 200 or more people (indoor is 75 or more).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "the Certificate of Occupancy indicates that 75 or more people will gather indoors or 200 or more outdoors."
+   }
+  },
+  {
+   "id": "F-03-003",
+   "question": "For a temporary place of assembly (TPA) event, when must safety personnel arrive and how long must they stay?",
+   "options": [
+    "When the doors open, until the headliner finishes",
+    "15 minutes before the event, until the event ends",
+    "At least 1 hour before the event, and until all audience members leave",
+    "At least 4 hours before, until midnight"
+   ],
+   "answer": 2,
+   "explanation": "TPA safety personnel arrive at least 1 hour prior and remain until all audience members leave.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "the safety personnel are required to arrive at the premises at least 1 hour prior to the events and remain until all audience members leave."
+   }
+  },
+  {
+   "id": "F-03-004",
+   "question": "For a temporary place of assembly event, where is the minimum number of safety personnel indicated?",
+   "options": [
+    "On the event ticket",
+    "On the Certificate of Fitness card",
+    "On the TPA permit",
+    "In the venue's liquor license"
+   ],
+   "answer": 2,
+   "explanation": "For TPA situations, the minimum number of safety personnel will be indicated on the TPA permit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 10,
+    "quote": "For the temporary place of assembly situations, the minimum number of safety personnel will be indicated on the TPA permit."
+   }
+  },
+  {
+   "id": "F-03-005",
+   "question": "According to the study material, how are most occupants of places of assembly likely to exit?",
+   "options": [
+    "Through the nearest emergency exit",
+    "The same way they entered, even if it is not the nearest or safest exit",
+    "Through the windows",
+    "Through the exit closest to the stage"
+   ],
+   "answer": 1,
+   "explanation": "Most occupants exit the way they came in; safety personnel help direct them to the nearest and safest exit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "likely to exit the same way they entered the building, whether or not it is the nearest or safest exit."
+   }
+  },
+  {
+   "id": "F-03-006",
+   "question": "What is the main duty of place of assembly safety personnel in a fire or other emergency?",
+   "options": [
+    "To fight the fire with hose lines",
+    "To sell tickets",
+    "To assist the occupants",
+    "To reset the fire alarm panel"
+   ],
+   "answer": 2,
+   "explanation": "Their main duties are to assist the occupants in the event of a fire or other emergency.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 9,
+    "quote": "Their main duties are to “assist the occupants” in the event of a fire or other emergency."
+   }
+  },
+  {
+   "id": "F-03-007",
+   "question": "Which assembly occupancy group includes restaurants, bars and nightclubs?",
+   "options": [
+    "A-4",
+    "A-5",
+    "A-1",
+    "A-2"
+   ],
+   "answer": 3,
+   "explanation": "Group A-2 covers assembly uses intended for food and/or drink consumption, such as restaurants, taverns, bars and nightclubs.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "Assembly Group A-2 includes assembly uses intended for food and/or drink consumption."
+   }
+  },
+  {
+   "id": "F-03-008",
+   "question": "Which assembly occupancy group includes motion picture theaters and concert halls, usually with fixed seating?",
+   "options": [
+    "A-3",
+    "A-2",
+    "A-1",
+    "A-5"
+   ],
+   "answer": 2,
+   "explanation": "Group A-1 is for the production and viewing of performing arts or motion pictures, usually with fixed seating.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "Assembly Group A-1 occupancy includes assembly uses usually with fixed seating, intended for the production and viewing of performing arts or motion pictures."
+   }
+  },
+  {
+   "id": "F-03-009",
+   "question": "Which assembly occupancy group includes amusement parks, bleachers, grandstands and stadiums?",
+   "options": [
+    "A-3",
+    "A-2",
+    "A-5",
+    "A-1"
+   ],
+   "answer": 2,
+   "explanation": "Group A-5 covers participation in or viewing of outdoor activities.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 14,
+    "quote": "Assembly Group A-5 includes assembly uses intended for participation in or viewing outdoor activities."
+   }
+  },
+  {
+   "id": "F-03-010",
+   "question": "What is an \"assembly area\" as defined in the study material?",
+   "options": [
+    "A designated area outside a building to which occupants report during an evacuation",
+    "A storage room for folding chairs",
+    "The lobby where tickets are sold",
+    "The main seating area of a theater"
+   ],
+   "answer": 0,
+   "explanation": "An assembly area is a designated area outside of a building where occupants report upon evacuation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 12,
+    "quote": "A designated area outside of a building to which building occupants are directed to report upon implementation of a partial or full evacuation"
+   }
+  },
+  {
+   "id": "F-03-011",
+   "question": "What is a \"partial evacuation\"?",
+   "options": [
+    "Moving occupants to the roof",
+    "Evacuating everyone except the safety personnel",
+    "The emptying of a building of some but not all occupants",
+    "Evacuating only employees"
+   ],
+   "answer": 2,
+   "explanation": "Partial evacuation is the emptying of some but not all building occupants in response to a fire or emergency.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 13,
+    "quote": "Partial Evacuation - The emptying of a building of some but not all building occupants in response to a fire or an emergency."
+   }
+  },
+  {
+   "id": "F-03-012",
+   "question": "Which are the two duties of place of assembly safety personnel named in the study material?",
+   "options": [
+    "Selling tickets and checking IDs",
+    "Cooking and serving food safely",
+    "Maintaining occupant safety during a gathering, and assisting in implementing the evacuation plan",
+    "Repairing sprinklers and testing alarms"
+   ],
+   "answer": 2,
+   "explanation": "The two duties are maintaining the safety of occupants and assisting in implementing the evacuation plan.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 23,
+    "quote": "Two duties of the place of assembly safety personnel are: (1) maintaining the safety of the occupants during a gathering; and (2) assisting"
+   }
+  },
+  {
+   "id": "F-03-013",
+   "question": "If defects are found during the pre-event visual check, when should arrangements be made to correct them?",
+   "options": [
+    "After the event ends",
+    "Immediately",
+    "Within 30 days",
+    "At the next annual inspection"
+   ],
+   "answer": 1,
+   "explanation": "The owner or designated responsible person should arrange to have defects corrected IMMEDIATELY.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 24,
+    "quote": "should make arrangements to have the defects corrected IMMEDIATELY."
+   }
+  },
+  {
+   "id": "F-03-014",
+   "question": "If a required fire protection system is out of service at a place of assembly, what is required?",
+   "options": [
+    "Only a sign on the door",
+    "An extra ticket taker",
+    "Additional F-01 fire guard(s)",
+    "Nothing, if the event is short"
+   ],
+   "answer": 2,
+   "explanation": "If any required fire protection system is out of service, additional F-01 fire guard(s) are required.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 24,
+    "quote": "If any required fire protection system is out of service, additional F-01 fire guard(s) is/are required."
+   }
+  },
+  {
+   "id": "F-03-015",
+   "question": "In the ESCAPE pre-event inspection acronym, what does \"C\" stand for?",
+   "options": [
+    "Cleaning",
+    "Capacity",
+    "Curtains",
+    "Cameras"
+   ],
+   "answer": 1,
+   "explanation": "C is Capacity: the number of people does not exceed the posted capacity and capacity certificates are posted.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 25,
+    "quote": "C - Capacity – The number of persons occupying the building or space does not exceed the posted capacity."
+   }
+  },
+  {
+   "id": "F-03-016",
+   "question": "In the ESCAPE pre-event inspection acronym, what does \"P\" stand for?",
+   "options": [
+    "Protection (smoke, fire alarm, sprinkler systems and extinguishers in working order)",
+    "Pyrotechnics",
+    "Permits",
+    "Parking"
+   ],
+   "answer": 0,
+   "explanation": "P is Protection: smoke, fire alarm and sprinkler systems and fire extinguishers are in proper working order.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 25,
+    "quote": "P - Protection – Smoke, fire alarm, sprinkler systems, and fire extinguishers are in proper working order."
+   }
+  },
+  {
+   "id": "F-03-017",
+   "question": "What does the first \"E\" in the ESCAPE acronym check?",
+   "options": [
+    "Exits are unblocked, unlocked, and properly marked",
+    "Electrical panels are labeled",
+    "Elevators are running",
+    "Entertainment schedule is posted"
+   ],
+   "answer": 0,
+   "explanation": "E is Exits: all exits are unblocked, unlocked, and properly marked.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 25,
+    "quote": "E - Exits – All exits are unblocked, unlocked, and properly marked"
+   }
+  },
+  {
+   "id": "F-03-018",
+   "question": "During an event you notice your area is excessively crowded. What should you do?",
+   "options": [
+    "Lock the exit doors to stop more people entering",
+    "Pull the fire alarm",
+    "Inform your supervisor immediately and follow their instructions",
+    "Ignore it until the event ends"
+   ],
+   "answer": 2,
+   "explanation": "If your responsible area is excessively crowded, inform your supervisor immediately and follow his/her instruction.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 27,
+    "quote": "If you notice that your responsible area is excessively crowded, you should inform your supervisor immediately and follow his/her instruction."
+   }
+  },
+  {
+   "id": "F-03-019",
+   "question": "Are people allowed to stand in a required aisle during an event?",
+   "options": [
+    "Yes, during intermission only",
+    "Yes, if they are staff",
+    "Yes, if seats are full",
+    "No"
+   ],
+   "answer": 3,
+   "explanation": "Required aisles must be unobstructed; people are NOT allowed to stand in an aisle.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 27,
+    "quote": "Required aisles must be unobstructed. People are NOT allowed to stand, in an aisle."
+   }
+  },
+  {
+   "id": "F-03-020",
+   "question": "In a performing arts or motion picture theater, when must the Certificate of Fitness holder conduct daily visual checks?",
+   "options": [
+    "Only when the FDNY is present",
+    "On any day the premises is to be used and occupied for a performance",
+    "Once a week",
+    "Only on opening night"
+   ],
+   "answer": 1,
+   "explanation": "Daily visual checks are required on any day the theater is used and occupied for a performance.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 29,
+    "quote": "must conduct the daily visual checks in a performing arts or motion picture theater on any day in which the premises is to be used"
+   },
+   "theater_section": true
+  },
+  {
+   "id": "F-03-021",
+   "question": "In a theater, how should standpipe and sprinkler system monthly inspection records be kept?",
+   "options": [
+    "They do not need to be kept",
+    "On loose sheets in the manager's car",
+    "Only on a personal phone",
+    "Up to date, in a bound logbook, readily available to the FDNY"
+   ],
+   "answer": 3,
+   "explanation": "Monthly inspection records should be up to date, in a bound logbook and readily available for FDNY inspection.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 29,
+    "quote": "Standpipe and sprinkler systems monthly inspection records should be up to date and in a bound logbook"
+   },
+   "theater_section": true
+  },
+  {
+   "id": "F-03-022",
+   "question": "How long must theater logbooks and records be kept on the premises?",
+   "options": [
+    "A minimum of three years",
+    "Until the end of the current show's run",
+    "A minimum of one year",
+    "A minimum of 30 days"
+   ],
+   "answer": 0,
+   "explanation": "All logbooks and records must be kept on the premises for a minimum of three years.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 30,
+    "quote": "All logbooks and records must be kept on the premises for a minimum of three (3) years"
+   },
+   "theater_section": true
+  },
+  {
+   "id": "F-03-023",
+   "question": "How soon before the start of each performance should the exit location announcement be made?",
+   "options": [
+    "Exactly 30 minutes prior",
+    "Not more than 10 minutes prior",
+    "Only after the performance ends",
+    "At least 1 hour prior"
+   ],
+   "answer": 1,
+   "explanation": "The audio announcement about exits should be made not more than 10 minutes before the start of each performance.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 30,
+    "quote": "The event coordinator should make an audio announcement not more than 10 minutes prior to the start of each performance or program."
+   },
+   "theater_section": true
+  },
+  {
+   "id": "F-03-024",
+   "question": "How high must the rope, tape or barrier separating a standing area in a theater be?",
+   "options": [
+    "Exactly 6 feet",
+    "At least 8 feet",
+    "Not less than 3 feet and not more than 4 feet above the floor",
+    "Not less than 1 foot and not more than 2 feet"
+   ],
+   "answer": 2,
+   "explanation": "Standing areas are separated by barriers not less than 3 feet and not more than 4 feet above the floor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 30,
+    "quote": "A height of not less than 3 feet and not more than 4 feet above the floor"
+   },
+   "theater_section": true
+  },
+  {
+   "id": "F-03-025",
+   "question": "How many rows of persons are allowed to stand in theater balconies?",
+   "options": [
+    "As many as fit",
+    "Only one row",
+    "Two rows",
+    "Three rows"
+   ],
+   "answer": 1,
+   "explanation": "For balconies, only one row of persons is allowed to stand.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 30,
+    "quote": "For balconies, only one row of persons is allowed to stand in balconies."
+   },
+   "theater_section": true
+  },
+  {
+   "id": "F-03-026",
+   "question": "You hold both an F-03 and an F-01 Certificate of Fitness. A sprinkler system is out of service during a performance. Can you perform both duties at the same time?",
+   "options": [
+    "Yes, F-03 duties include F-01 duties",
+    "Yes, with supervisor approval",
+    "Yes, if the theater is small",
+    "No"
+   ],
+   "answer": 3,
+   "explanation": "The F-03 does not cover F-01 duties, and an F-01 holder cannot do both duties at the same time.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 31,
+    "quote": "If you hold an F-01 Certificate of Fitness, you CANNOT do both duties at the same time."
+   },
+   "theater_section": true
+  },
+  {
+   "id": "F-03-027",
+   "question": "Before a temporary place of assembly event, what must the sponsor and any promoter provide?",
+   "options": [
+    "A parking plan approved by the police",
+    "A catering menu",
+    "A site plan approved by the NYC Department of Buildings",
+    "A list of performers"
+   ],
+   "answer": 2,
+   "explanation": "The sponsor and promoter must provide a site plan approved by the NYC Department of Buildings.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 32,
+    "quote": "the sponsor and any promoter of the event must provide a site plan approved by the NYC Department of Buildings."
+   }
+  },
+  {
+   "id": "F-03-028",
+   "question": "At a TPA event, what must every safety personnel posted at an exit normally be equipped with?",
+   "options": [
+    "A fire hose",
+    "A ticket scanner",
+    "A bullhorn only",
+    "A two-way radio (walkie-talkie)"
+   ],
+   "answer": 3,
+   "explanation": "Personnel at an exit must have two-way radio communication to reach persons manning a telephone to the Fire Department.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 32,
+    "quote": "every safety personnel posted at an exit must be equipped with a two-way radio communication (walkie-talkie)"
+   }
+  },
+  {
+   "id": "F-03-029",
+   "question": "At a TPA event, what must safety personnel posted at an event entrance normally be equipped with?",
+   "options": [
+    "A device to verify the occupancy count, such as a scanner or hand-held counter",
+    "A fire extinguisher only",
+    "A first aid kit only",
+    "A flare gun"
+   ],
+   "answer": 0,
+   "explanation": "Personnel at an entrance need a device (scanner, hand-held counter, ticket) to verify the occupancy count.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 32,
+    "quote": "every safety personnel posted at an event entrance must be equipped with a device (e.g., scanner, hand-held counter, ticket) to verify the occupancy count."
+   }
+  },
+  {
+   "id": "F-03-030",
+   "question": "At an outdoor public gathering, what is prohibited regarding portable CNG cylinders?",
+   "options": [
+    "Only using them after dark",
+    "Nothing; they are allowed anywhere",
+    "Their storage, handling and use",
+    "Only their sale"
+   ],
+   "answer": 2,
+   "explanation": "The storage, handling and use of portable CNG cylinders are prohibited at outdoor public gatherings.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "The storage, handling and use of portable CNG cylinders are prohibited at outdoor public gatherings."
+   }
+  },
+  {
+   "id": "F-03-031",
+   "question": "At an outdoor public gathering, when must fueling of generators be done?",
+   "options": [
+    "During intermission",
+    "Before the event is open to the public",
+    "After the first hour of the event",
+    "Whenever the fuel runs low"
+   ],
+   "answer": 1,
+   "explanation": "All fueling of generators and other approved devices must be done before the event opens to the public.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "all fueling of generators and other approved devices, equipment and systems must be conducted before the event is open to the public."
+   }
+  },
+  {
+   "id": "F-03-032",
+   "question": "May guests charge or store lithium-ion batteries (e-bikes, scooters) at TPA events?",
+   "options": [
+    "Yes, if the battery is under 50% charge",
+    "Yes, in any corridor",
+    "Yes, if supervised by a guest",
+    "No"
+   ],
+   "answer": 3,
+   "explanation": "Guests are NOT permitted to charge or store lithium-ion batteries at events.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "Guests are NOT permitted to charge or store lithium-ion batteries at events."
+   }
+  },
+  {
+   "id": "F-03-033",
+   "question": "What is required to use pyrotechnics at an event?",
+   "options": [
+    "A permit from the FDNY",
+    "Nothing, if the event is outdoors",
+    "A sign saying \"fireworks in use\"",
+    "Permission from the headliner"
+   ],
+   "answer": 0,
+   "explanation": "Pyrotechnic use is strictly prohibited without a permit from the FDNY.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "Pyrotechnic use is strictly prohibited without a permit from the FDNY."
+   }
+  },
+  {
+   "id": "F-03-034",
+   "question": "Why should electric wires at an event be secured by cord covers?",
+   "options": [
+    "To increase the power supply",
+    "To make them waterproof",
+    "To minimize tripping hazards",
+    "To hide them from inspectors"
+   ],
+   "answer": 2,
+   "explanation": "Wires should be secured by cord covers to minimize tripping hazards.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 33,
+    "quote": "The electric wires should be secured by cord covers in order to minimize the tripping hazards."
+   }
+  },
+  {
+   "id": "F-03-035",
+   "question": "What hazard do temporary, unsecured or un-ganged chairs pose?",
+   "options": [
+    "A great hazard in an emergency",
+    "Only a hazard for staff",
+    "Only a hazard indoors",
+    "No hazard if they are new"
+   ],
+   "answer": 0,
+   "explanation": "Chairs should be ganged; unsecured or un-ganged chairs may pose a great hazard in an emergency.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 34,
+    "quote": "Temporary, unsecured or un-ganged chairs may pose a great hazard in event of emergency."
+   }
+  },
+  {
+   "id": "F-03-036",
+   "question": "What is the most effective way to notify the building occupants in case of a fire emergency?",
+   "options": [
+    "Activating the fire alarm pull station",
+    "Shouting from the stage",
+    "Sending a text message",
+    "Turning off the lights"
+   ],
+   "answer": 0,
+   "explanation": "Activating the pull station is the most effective way to notify the building occupants of a fire.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 37,
+    "quote": "Activating the pull station is the most effective way to notify the building occupants in case of a fire emergency."
+   }
+  },
+  {
+   "id": "F-03-037",
+   "question": "After a pull station has been activated, when can the fire alarm control panel be reset?",
+   "options": [
+    "Only at the pull station itself",
+    "Only when directed by a Fire Department representative, by an S-95 holder",
+    "By any staff member once the alarm stops",
+    "Immediately by the safety personnel"
+   ],
+   "answer": 1,
+   "explanation": "The alarm must be reset at the main FACP after the pull station is reset, and only when directed by a Fire Department representative, by an S-95 holder.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 38,
+    "quote": "Only when directed by a Fire Department representative, an S-95 holder, the alarm control panel can then be re-set."
+   }
+  },
+  {
+   "id": "F-03-038",
+   "question": "What equipment does the FDNY highly recommend place of assembly safety personnel carry?",
+   "options": [
+    "A fire axe and a hose",
+    "A ladder and a hard hat",
+    "A megaphone and a whistle only",
+    "A flashlight, a two-way radio and a cell phone"
+   ],
+   "answer": 3,
+   "explanation": "The FDNY highly recommends a flashlight, a two-way radio communication device and a cell phone.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 42,
+    "quote": "the FDNY highly recommends that you should be equipped with a flashlight, two-way radio communication device (e.g., walkie talkie), and a cell phone."
+   }
+  },
+  {
+   "id": "F-03-039",
+   "question": "You reach your post and have no cellular service. What should you do?",
+   "options": [
+    "Do nothing until an emergency happens",
+    "Leave your post to find a signal",
+    "Immediately notify your supervisor and plan another form of communication",
+    "Go home"
+   ],
+   "answer": 2,
+   "explanation": "If you have no cellular service, immediately notify your supervisor and plan another form of communication.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 42,
+    "quote": "If you reach your post and have no cellular service, you should immediately notify your supervisor."
+   }
+  },
+  {
+   "id": "F-03-040",
+   "question": "In a fire emergency with no fire safety director or FEP staff in charge, where should you evacuate occupants to?",
+   "options": [
+    "To the roof",
+    "Along evacuation routes to the assembly areas designated by the evacuation plan",
+    "Into the basement",
+    "To the nearest elevator lobby"
+   ],
+   "answer": 1,
+   "explanation": "Without an FSD or FEP staff, evacuate along evacuation routes to assembly areas designated by the plan.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 43,
+    "quote": "evacuate the area (in-building relocation, partial evacuation, or evacuation of building occupants) along evacuation routes to assembly areas designated by the evacuation plan."
+   }
+  },
+  {
+   "id": "F-03-041",
+   "question": "For place of assembly events with attendance over what number may an on-site emergency health care facility be provided?",
+   "options": [
+    "75 people",
+    "100,000 people",
+    "500 people",
+    "5,000 people"
+   ],
+   "answer": 3,
+   "explanation": "For events with attendance over 5,000, an on-site emergency health care facility may be provided.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 43,
+    "quote": "For the place of assembly events with an attendance of over 5,000 people, an on-site emergency health care facility may be provided."
+   }
+  },
+  {
+   "id": "F-03-042",
+   "question": "During a medical emergency, when should the victim be moved?",
+   "options": [
+    "As soon as the victim can stand",
+    "Always, to the nearest exit",
+    "Always, to the lobby",
+    "Only if the victim's location is unsafe"
+   ],
+   "answer": 3,
+   "explanation": "Do not move the victim unless the victim's location is unsafe.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 44,
+    "quote": "Do not move the victim unless the victim’s location is unsafe."
+   }
+  },
+  {
+   "id": "F-03-043",
+   "question": "You find a suspicious package and cannot verify its contents. What should you do with it?",
+   "options": [
+    "Throw it in the trash",
+    "Do not touch, move or open it",
+    "Carry it outside",
+    "Open it carefully to check"
+   ],
+   "answer": 1,
+   "explanation": "For a suspicious package, do not touch, move or open the article and follow emergency reporting protocols.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 44,
+    "quote": "Do not touch/move/open the article."
+   }
+  },
+  {
+   "id": "F-03-044",
+   "question": "Should the manual fire alarm be activated during an active shooter emergency?",
+   "options": [
+    "Yes, always",
+    "Yes, to evacuate everyone immediately",
+    "Yes, but only on the ground floor",
+    "No; pull stations should only be activated during fire or smoke conditions"
+   ],
+   "answer": 3,
+   "explanation": "The manual fire alarm should NOT be activated for an active shooter emergency.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 48,
+    "quote": "Manual Fire Alarm System should NOT be activated for an active shooter emergency."
+   }
+  },
+  {
+   "id": "F-03-045",
+   "question": "If an active shooter incident is occurring OUTSIDE the building, what should safety personnel do with building occupants?",
+   "options": [
+    "Prevent them from evacuating, to avoid the outside threat",
+    "Evacuate everyone out the front door",
+    "Tell them to go look",
+    "Send them to the parking lot"
+   ],
+   "answer": 0,
+   "explanation": "Secure entrances, relocate occupants to safe areas, and prevent occupants from evacuating into the outside threat.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 45,
+    "quote": "prevent building occupants from evacuating to avoid encountering the outside threat."
+   }
+  },
+  {
+   "id": "F-03-046",
+   "question": "What are the three survival tactics suggested by the NYPD for an active shooter incident inside a building?",
+   "options": [
+    "Avoid, Barricade, Confront",
+    "Stop, Drop, Roll",
+    "Pull, Aim, Squeeze",
+    "Run, Call, Wait"
+   ],
+   "answer": 0,
+   "explanation": "The three tactics are Avoid (run/evacuate), Barricade (hide), Confront (fight/take action).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 45,
+    "quote": "following one of the three tactics: Avoid, Barricade, Confront."
+   }
+  },
+  {
+   "id": "F-03-047",
+   "question": "Class K fires involve which materials?",
+   "options": [
+    "Energized electrical equipment",
+    "Combustible metals",
+    "Ordinary combustibles like wood and paper",
+    "Vegetable oils, animal oils or fats in cooking appliances"
+   ],
+   "answer": 3,
+   "explanation": "Class K fires involve vegetable oils, animal oils, or fats in cooking appliances, as in commercial kitchens.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 52,
+    "quote": "Class K fires are fires that involve vegetable oils, animal oils, or fats in cooking appliances."
+   }
+  },
+  {
+   "id": "F-03-048",
+   "question": "How can you identify an FDNY outdoor portable fire extinguisher tag?",
+   "options": [
+    "It is printed on paper",
+    "It is always blue",
+    "It has no hologram",
+    "The series number on the back contains a \"D\" letter"
+   ],
+   "answer": 3,
+   "explanation": "Outdoor tags are durable and tear resistant; the series number on the back contains a \"D\" and/or an \"O\" is printed on the front.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 56,
+    "quote": "On the back of the tag, the series number will contain a “D” letter;"
+   }
+  },
+  {
+   "id": "F-03-049",
+   "question": "What lesson does the study material draw from the Station Nightclub fire (West Warwick, RI, 2003)?",
+   "options": [
+    "The band had a valid pyrotechnics permit",
+    "The club did not have an automatic fire sprinkler system",
+    "The club had too many exits",
+    "The fire was caused by a kitchen grease fire"
+   ],
+   "answer": 1,
+   "explanation": "Lessons learned include that the club did not have an automatic fire sprinkler system to extinguish the fire.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/fdny/downloads/pdf/business/cof-f03-noe-study-materials.pdf",
+    "page": 19,
+    "quote": "The club did not have an automatic fire sprinkler system to extinguish the fire."
+   }
+  }
+ ]
+}
