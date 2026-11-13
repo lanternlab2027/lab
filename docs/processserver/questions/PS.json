@@ -1,0 +1,2691 @@
+{
+ "exam": "PS",
+ "title": "NYC Process Server Individual License Exam",
+ "real_exam_questions": 35,
+ "real_exam_pass": 25,
+ "real_exam_minutes": null,
+ "mock_questions": 35,
+ "mock_minutes": null,
+ "page_numbering": "PDF page index (1 = first page of the PDF file); null for HTML pages",
+ "questions": [
+  {
+   "id": "PS-001",
+   "topic": "The exam",
+   "question": "How many questions are on the Process Server Individual exam?",
+   "options": [
+    "25",
+    "30",
+    "50",
+    "35"
+   ],
+   "answer": 3,
+   "explanation": "The exam has 35 multiple-choice questions.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "The exam consists of 35 multiple choice questions."
+   }
+  },
+  {
+   "id": "PS-002",
+   "topic": "The exam",
+   "question": "What is the minimum number of correct answers needed to pass the Process Server Individual exam?",
+   "options": [
+    "28",
+    "25",
+    "30",
+    "21"
+   ],
+   "answer": 1,
+   "explanation": "You must answer no fewer than 25 of the 35 questions correctly.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 5,
+    "quote": "To pass the exam, you must correctly answer no fewer than 25 questions."
+   }
+  },
+  {
+   "id": "PS-003",
+   "topic": "The exam",
+   "question": "What is the Process Server Individual exam fee?",
+   "options": [
+    "$75, separate from the license fee and nonrefundable",
+    "$50, refundable once you pass the exam",
+    "$340, the same as the license fee",
+    "Nothing extra; it is included in the license fee"
+   ],
+   "answer": 0,
+   "explanation": "The exam fee is $75, separate from the license fee and nonrefundable.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "The fee is $75. The exam fee is separate from the license fee and is nonrefundable."
+   }
+  },
+  {
+   "id": "PS-004",
+   "topic": "The exam",
+   "question": "Who must take the Process Server Individual exam?",
+   "options": [
+    "Both new and renewing applicants",
+    "Only applicants with prior violations",
+    "Only agency employees",
+    "New applicants only"
+   ],
+   "answer": 0,
+   "explanation": "Unlike the HIC and guide exams, the process server exam is required for new AND renewing applicants.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 1,
+    "quote": "Process Server Individual (NEW and RENEWING applicants)"
+   }
+  },
+  {
+   "id": "PS-005",
+   "topic": "The exam",
+   "question": "What happens if a process server applicant fails the exam twice?",
+   "options": [
+    "They pay $50 for two more tries",
+    "They must reapply for the license",
+    "They take a DCWP course instead",
+    "They wait 30 days and retry free"
+   ],
+   "answer": 1,
+   "explanation": "After two failures the application is denied and the applicant must reapply for the license, paying the fees again.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "If you fail the exam twice, you must reapply for the license"
+   }
+  },
+  {
+   "id": "PS-006",
+   "topic": "The exam",
+   "question": "Does a second attempt at the process server exam cost an additional fee?",
+   "options": [
+    "No additional fee",
+    "Yes, another $75",
+    "Yes, a $50 retake fee",
+    "Yes, the full license fee"
+   ],
+   "answer": 0,
+   "explanation": "An applicant who fails the first time may take the exam a second time without an additional fee.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 10,
+    "quote": "may take the examination a second time without an additional fee."
+   }
+  },
+  {
+   "id": "PS-007",
+   "topic": "The exam",
+   "question": "Once your information appears in ExamBuilder's system, how long do you have to take and pass the exam?",
+   "options": [
+    "1 year",
+    "30 days",
+    "90 days",
+    "60 days"
+   ],
+   "answer": 3,
+   "explanation": "You have 60 days from the time your information appears in ExamBuilder's system.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "You have 60 days to take and pass the exam from the time your information appears in ExamBuilder’s system."
+   }
+  },
+  {
+   "id": "PS-008",
+   "topic": "The exam",
+   "question": "After failing your first attempt, how long must you wait before scheduling the second?",
+   "options": [
+    "30 days",
+    "7 days",
+    "24 hours",
+    "No wait"
+   ],
+   "answer": 2,
+   "explanation": "You must wait 24 hours from the failed attempt before scheduling again.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 3,
+    "quote": "You must wait 24 hours from your failed attempt before scheduling the exam for a second attempt."
+   }
+  },
+  {
+   "id": "PS-009",
+   "topic": "The exam",
+   "question": "Which of these is listed as acceptable ID at the ExamBuilder Test Center?",
+   "options": [
+    "A recent utility bill with your address",
+    "Your DCWP process server license",
+    "A public library card with your name",
+    "A credit card that shows your photo"
+   ],
+   "answer": 1,
+   "explanation": "Acceptable government photo IDs with signature include a driver's license, passport, IDNYC and your DCWP Process Server Individual license.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 3,
+    "quote": "Your DCWP Process Server Individual license"
+   }
+  },
+  {
+   "id": "PS-010",
+   "topic": "The exam",
+   "question": "What happens if you miss a scheduled exam without rescheduling in advance?",
+   "options": [
+    "You get a free retake",
+    "You keep both attempts",
+    "Your license is revoked",
+    "You automatically fail"
+   ],
+   "answer": 3,
+   "explanation": "A no-show counts as a fail, reported to DCWP by ExamBuilder.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 2,
+    "quote": "If you miss a scheduled exam without rescheduling in advance, you will automatically fail"
+   }
+  },
+  {
+   "id": "PS-011",
+   "topic": "The exam",
+   "question": "How does DCWP describe its Educational Materials for Process Servers?",
+   "options": [
+    "Optional reading unrelated to the exam",
+    "Not a study guide exclusively for the exam",
+    "The complete official answer key",
+    "A copy of the exam questions"
+   ],
+   "answer": 1,
+   "explanation": "DCWP says the materials help but are not exclusively an exam study guide; consult other resources too.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 4,
+    "quote": "These materials are not a “study guide” exclusively for the exam."
+   }
+  },
+  {
+   "id": "PS-012",
+   "topic": "The exam",
+   "question": "Which part of the NYC Marshals Handbook of Regulations does DCWP point process servers to?",
+   "options": [
+    "Chapter X only",
+    "The appendix on evictions only",
+    "Chapter I, Section 1",
+    "Chapter IV, Section 2-2 and Section 5"
+   ],
+   "answer": 3,
+   "explanation": "DCWP lists the Marshals Handbook, in particular Chapter IV, Section 2-2 and Section 5.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "New York City Marshals Handbook of Regulations, in particular Chapter IV, Section 2-2 and Section 5."
+   }
+  },
+  {
+   "id": "PS-013",
+   "topic": "The exam",
+   "question": "Under General Business Law § 89-ff, what must a process server put on any affidavit of service they sign?",
+   "options": [
+    "The plaintiff's name, phone number and attorney's address",
+    "Their license number and the distributing agency's name and address",
+    "Their home address, date of birth and years of experience",
+    "Their fee for the service and the time spent serving"
+   ],
+   "answer": 1,
+   "explanation": "GBL § 89-ff requires the license number plus the name and address of any distributing agency (DCWP's own sample question).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 42,
+    "quote": "the name and address of any process serving agency from whom he obtained the process for service"
+   }
+  },
+  {
+   "id": "PS-014",
+   "topic": "Licensing",
+   "question": "How many services of process in a calendar year require a Process Server Individual license?",
+   "options": [
+    "Twenty or more",
+    "Five or more",
+    "One or more",
+    "Ten or more"
+   ],
+   "answer": 1,
+   "explanation": "You need a license if you serve process five or more times in a calendar year.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "You must have a Process Server Individual license if you serve process five (5) or more times in a calendar year."
+   }
+  },
+  {
+   "id": "PS-015",
+   "topic": "Licensing",
+   "question": "Which of these people does NOT need a Process Server license?",
+   "options": [
+    "A courier who serves eviction papers weekly",
+    "A retired police officer serving process for an agency",
+    "An attorney admitted to practice in New York State",
+    "A paralegal who serves 10 summonses a year"
+   ],
+   "answer": 2,
+   "explanation": "Attorneys admitted in New York are exempt from the subchapter.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 3,
+    "quote": "The provisions of this subchapter shall not apply to attorneys duly admitted to practice law in the state of New York."
+   }
+  },
+  {
+   "id": "PS-016",
+   "topic": "Licensing",
+   "question": "A City employee serves papers as part of their job. Do they need a Process Server license?",
+   "options": [
+    "No, if acting within the scope of employment",
+    "Only for papers in Housing Court cases",
+    "Only if they serve more than 5 papers a year",
+    "Yes, always, like any other process server"
+   ],
+   "answer": 0,
+   "explanation": "Government employees acting within the scope of their employment are exempt.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "You are an employee of a City, State, or Federal department or agency acting within the scope of your employment."
+   }
+  },
+  {
+   "id": "PS-017",
+   "topic": "Licensing",
+   "question": "Does an office employee of a process server who never actually serves process need a license?",
+   "options": [
+    "Only if they handle records",
+    "No",
+    "Only if they notarize affidavits",
+    "Yes"
+   ],
+   "answer": 1,
+   "explanation": "Employees of a process server or attorney who do not actually serve process need no license.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 8,
+    "quote": "No license under Subchapter 23 shall be required of any employee of a process server or attorney who does not actually serve process."
+   }
+  },
+  {
+   "id": "PS-018",
+   "topic": "Licensing",
+   "question": "Where do the City's process server licensing rules apply?",
+   "options": [
+    "Only to service of process within the City of New York",
+    "Anywhere a New York City case is filed",
+    "Anywhere in New York State, if the case is in NYC",
+    "Only to papers in cases filed in Manhattan courts"
+   ],
+   "answer": 0,
+   "explanation": "Subchapter 23 applies only to service of process within NYC.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 8,
+    "quote": "The provisions of Subchapter 23 shall only apply to service of process within the City of New York."
+   }
+  },
+  {
+   "id": "PS-019",
+   "topic": "Licensing",
+   "question": "Under 6 RCNY § 2-231, when is a legal paper NOT \"process\"?",
+   "options": [
+    "When mailing alone can legally serve it",
+    "When it is a subpoena for documents",
+    "When it is served on a corporation",
+    "When it is under 10 pages long"
+   ],
+   "answer": 0,
+   "explanation": "If state law lets the paper be served by mail, it is not process for this subchapter.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 8,
+    "quote": "the mailing of such legal paper is sufficient to effect service, such legal paper will not be process"
+   }
+  },
+  {
+   "id": "PS-020",
+   "topic": "Licensing",
+   "question": "Which of these is excluded from the definition of a process serving agency?",
+   "options": [
+    "A partnership that dispatches servers",
+    "A corporation that distributes process",
+    "A city marshal",
+    "A firm that assigns papers to servers"
+   ],
+   "answer": 2,
+   "explanation": "Attorneys or law firms located in the state, and city marshals, are not process serving agencies.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 3,
+    "quote": "other than an attorney or law firm located in this state, or city marshal"
+   }
+  },
+  {
+   "id": "PS-021",
+   "topic": "Licensing",
+   "question": "What is the license fee for a full 24-month Process Server Individual license?",
+   "options": [
+    "$425",
+    "$200",
+    "$75",
+    "$340"
+   ],
+   "answer": 3,
+   "explanation": "The biennial license fee is $340.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "Pay $340 for a license expiring February 28 of the next even year."
+   }
+  },
+  {
+   "id": "PS-022",
+   "topic": "Licensing",
+   "question": "When do Process Server Individual licenses expire?",
+   "options": [
+    "December 31 every year",
+    "February 28 of even years",
+    "February 28 of odd years",
+    "March 31 of even years"
+   ],
+   "answer": 1,
+   "explanation": "Process server licenses expire February 28 in even-numbered years.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "Expiration Date: February 28 in Even Years"
+   }
+  },
+  {
+   "id": "PS-023",
+   "topic": "Licensing",
+   "question": "An applicant filing between September 1 of an odd year and February 28 of an even year can choose a 30-month license. What does it cost?",
+   "options": [
+    "$255",
+    "$85",
+    "$340",
+    "$425"
+   ],
+   "answer": 3,
+   "explanation": "Option 2 in that window is $425 for a license valid up to 30 months.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "Option 2: Pay $425 for a license expiring February 28 of the next even year."
+   }
+  },
+  {
+   "id": "PS-024",
+   "topic": "Licensing",
+   "question": "What does DCWP charge to photograph an applicant at an in-person appointment?",
+   "options": [
+    "$25.00",
+    "Nothing",
+    "$15.00",
+    "$10.00"
+   ],
+   "answer": 1,
+   "explanation": "DCWP photographs license applicants at no cost.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "DCWP will photograph license applicants at no cost."
+   }
+  },
+  {
+   "id": "PS-025",
+   "topic": "Licensing",
+   "question": "Where must a process server upload their Roster of Process Serving Agencies?",
+   "options": [
+    "The NYS court e-filing system",
+    "DCWP's mailing address only",
+    "ExamBuilder's site",
+    "DCWP's Process Server Portal"
+   ],
+   "answer": 3,
+   "explanation": "The roster is submitted with the application and uploaded to DCWP's Process Server Portal.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "you must also upload your Roster of Process Serving Agencies to DCWP's Process Server Portal"
+   }
+  },
+  {
+   "id": "PS-026",
+   "topic": "Licensing",
+   "question": "Which certification about GPS devices must a Process Server Individual applicant submit?",
+   "options": [
+    "The Bond Rider",
+    "The Trust Fund Enrollment",
+    "The Electronic Device Certification",
+    "The Lead Paint Affirmation"
+   ],
+   "answer": 2,
+   "explanation": "Applicants submit the Process Server Individual Electronic Device Certification form.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "Download the Process Server Individual Electronic Device Certification form ."
+   }
+  },
+  {
+   "id": "PS-027",
+   "topic": "Licensing",
+   "question": "In the Recordkeeping Certification, the applicant affirms records will be retained for how long?",
+   "options": [
+    "Seven years",
+    "Three years",
+    "Two years",
+    "Ten years"
+   ],
+   "answer": 0,
+   "explanation": "The applicant affirms that required records will be retained for seven years.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Individual-Recordkeeping.pdf",
+    "title": "DCWP Process Server Individual Recordkeeping Certification (PDF)",
+    "page": 1,
+    "quote": "will retain for seven (7) years all records required to be maintained in compliance with 6 RCNY section 2-233."
+   }
+  },
+  {
+   "id": "PS-028",
+   "topic": "Licensing",
+   "question": "What kind of email address must every process server give DCWP?",
+   "options": [
+    "A regularly used email address",
+    "None; DCWP uses mail only",
+    "A court-issued email",
+    "Any address, even if unchecked"
+   ],
+   "answer": 0,
+   "explanation": "Process servers must provide a regularly used email; DCWP may send licensing documents and subpoenas there.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 21,
+    "quote": "All process servers and process serving agencies must provide to the Department a regularly used email address."
+   }
+  },
+  {
+   "id": "PS-029",
+   "topic": "Licensing",
+   "question": "When DCWP suspends or revokes a process server's license, how quickly must it post this and notify all agencies?",
+   "options": [
+    "At the next audit",
+    "Within 90 days",
+    "No more than five days",
+    "Within 30 days"
+   ],
+   "answer": 2,
+   "explanation": "Notification and posting must happen within five days of the action.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 5,
+    "quote": "Such notification and posting shall occur no more than five days from the date the department has suspended, revoked or denied renewal"
+   }
+  },
+  {
+   "id": "PS-030",
+   "topic": "Licensing",
+   "question": "A person harmed by improper service sues. When can punitive damages be awarded?",
+   "options": [
+    "Only for willful failure to serve process",
+    "Never; only compensatory damages are allowed",
+    "Only in suits against process serving agencies",
+    "In every case where service was defective"
+   ],
+   "answer": 0,
+   "explanation": "Punitive damages are available only for a willful failure to serve process.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 6,
+    "quote": "punitive damages shall only be awarded in the case of willful failure to serve process"
+   }
+  },
+  {
+   "id": "PS-031",
+   "topic": "Licensing",
+   "question": "Whom may a person injured by improper service sue under Admin Code § 20-409.2?",
+   "options": [
+    "Only the process server, not the agency",
+    "The process server and the agency that assigned the process",
+    "Only DCWP, which licensed the process server",
+    "Only the plaintiff's attorney who hired the agency"
+   ],
+   "answer": 1,
+   "explanation": "The cause of action runs against the process server and the process serving agency that distributed the process.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 6,
+    "quote": "shall have a cause of action against such process server and process serving agency"
+   }
+  },
+  {
+   "id": "PS-032",
+   "topic": "Licensing",
+   "question": "Which state law governs whether a criminal conviction can justify denying a process server license?",
+   "options": [
+    "Civil Court Act § 110",
+    "General Business Law § 11",
+    "CPLR Article 3",
+    "Article 23-A of the Correction Law"
+   ],
+   "answer": 3,
+   "explanation": "Denials based on convictions follow Article 23-A of the Correction Law.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 6,
+    "quote": "in accordance with article twenty-three-a of the correction law"
+   }
+  },
+  {
+   "id": "PS-033",
+   "topic": "Licensing",
+   "question": "At renewal, what must a process server certify in writing?",
+   "options": [
+    "That they hold a bond",
+    "That they passed a drug test",
+    "That they served at least 100 papers",
+    "Compliance with the recordkeeping provisions"
+   ],
+   "answer": 3,
+   "explanation": "Renewal applicants subject to § 20-406.3(a) certify in writing that they complied with recordkeeping rules.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 6,
+    "quote": "shall certify in writing compliance with the record keeping provisions of such section."
+   }
+  },
+  {
+   "id": "PS-034",
+   "topic": "Licensing",
+   "question": "A process server ceases to serve exclusively as an employee of an agency. How soon must they notify DCWP?",
+   "options": [
+    "At renewal",
+    "Within one year",
+    "Within five days",
+    "Within 30 days"
+   ],
+   "answer": 2,
+   "explanation": "Notify DCWP within five days of ceasing that exclusive employment.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 19,
+    "quote": "within five (5) days that he or she ceases such employment"
+   }
+  },
+  {
+   "id": "PS-035",
+   "topic": "Licensing",
+   "question": "When renewing, which agencies must a process server report to DCWP?",
+   "options": [
+    "Every agency used in the previous two years",
+    "None; agencies report their own servers",
+    "Only agencies used in the past six months",
+    "Only the agency they currently work for"
+   ],
+   "answer": 0,
+   "explanation": "Renewing servers report every agency they accepted process from within the previous two years.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 19,
+    "quote": "from which it has accepted assignment of service of process within the previous two years."
+   }
+  },
+  {
+   "id": "PS-036",
+   "topic": "Licensing",
+   "question": "How long must a process server keep a list of the agencies that assign them service?",
+   "options": [
+    "Until the license expires",
+    "Two years",
+    "Seven years",
+    "Three years"
+   ],
+   "answer": 2,
+   "explanation": "Keep the list of assigning agencies for seven years and produce it on request.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 19,
+    "quote": "The process server must maintain the list for seven years and produce it upon request by the Department."
+   }
+  },
+  {
+   "id": "PS-037",
+   "topic": "Licensing",
+   "question": "How soon must a licensee respond in writing to a complaint DCWP sends it?",
+   "options": [
+    "Within 20 days",
+    "Within 45 days",
+    "Only if a hearing is set",
+    "Within 5 days"
+   ],
+   "answer": 0,
+   "explanation": "Responses to DCWP complaints are due within 20 days of the date sent.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 34,
+    "quote": "The response must be made within 20 days of the date the complaint is sent to the licensee or applicant"
+   }
+  },
+  {
+   "id": "PS-038",
+   "topic": "Licensing",
+   "question": "A process server renews 75 days after the license expired. How does DCWP treat the application?",
+   "options": [
+    "As a new license application",
+    "As a normal renewal",
+    "As a late renewal with a $15 fee",
+    "It is automatically denied"
+   ],
+   "answer": 0,
+   "explanation": "Renewals filed sixty days or more after expiration are treated as new applications.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 33,
+    "quote": "filed sixty days or more after the expiration date of such license shall be treated as a new license application"
+   }
+  },
+  {
+   "id": "PS-039",
+   "topic": "Licensing",
+   "question": "Where must a licensee appear to answer a DCWP notice of hearing?",
+   "options": [
+    "The Office of Administrative Trials and Hearings (OATH)",
+    "The DCWP Licensing Center at 42 Broadway",
+    "Housing Court in the borough of the violation",
+    "NYC Civil Court in the server's home county"
+   ],
+   "answer": 0,
+   "explanation": "Notices of hearing are answered at OATH.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 35,
+    "quote": "A licensee must appear at the Office of Administrative Trials and Hearings to answer a notice of hearing"
+   }
+  },
+  {
+   "id": "PS-040",
+   "topic": "Records",
+   "question": "How long must process servers retain records of each process served under Admin Code § 20-406.3?",
+   "options": [
+    "At least seven years",
+    "One year",
+    "Three years",
+    "Until the case closes"
+   ],
+   "answer": 0,
+   "explanation": "Records must be kept no less than seven years for each process served.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 5,
+    "quote": "for no less than seven (7) years of each process served."
+   }
+  },
+  {
+   "id": "PS-041",
+   "topic": "Records",
+   "question": "Which two ways may an individual process server keep records of service under 6 RCNY § 2-233?",
+   "options": [
+    "Notes on the papers served, or texts to the agency",
+    "Only on the GPS device",
+    "Bound paginated volumes, or electronic records with a third-party contractor",
+    "Loose-leaf binders, or spreadsheets on a home computer"
+   ],
+   "answer": 2,
+   "explanation": "Records are kept in bound paginated volumes or as electronic records stored with a third-party contractor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 11,
+    "quote": "by keeping bound paginated volumes or by storing electronic records with a third party contractor."
+   }
+  },
+  {
+   "id": "PS-042",
+   "topic": "Records",
+   "question": "A server keeps a bound paginated volume. Within how long must entries be scanned into an image file?",
+   "options": [
+    "Within 24 hours of each service or attempt",
+    "Within three business days of the last event recorded",
+    "Once a month, on the first business day",
+    "At license renewal, for the whole license term"
+   ],
+   "answer": 1,
+   "explanation": "Scanning must be done within three business days from the last event recorded.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 11,
+    "quote": "such scanning must be done within three business days from the last event recorded in the records"
+   }
+  },
+  {
+   "id": "PS-043",
+   "topic": "Records",
+   "question": "How must the scanned image file of a bound volume be named?",
+   "options": [
+    "With any name, as long as it is dated",
+    "With the defendant's last and first name",
+    "With the court index number only",
+    "With the service date and server's license number"
+   ],
+   "answer": 3,
+   "explanation": "Image files are named with the service date and the process server's license number, and date/time stamped.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 11,
+    "quote": "must be named with the date of the service or attempted service recorded in the bound paginated volume and the process server's license number"
+   }
+  },
+  {
+   "id": "PS-044",
+   "topic": "Records",
+   "question": "How many bound paginated volumes may a process server make entries in at the same time?",
+   "options": [
+    "One per agency",
+    "Only one",
+    "Two",
+    "One per borough"
+   ],
+   "answer": 1,
+   "explanation": "Entries go in only one volume at a time until it is full.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 11,
+    "quote": "The process server must make entries in only one volume at a time"
+   }
+  },
+  {
+   "id": "PS-045",
+   "topic": "Records",
+   "question": "How must a portable media device holding scanned records be labeled?",
+   "options": [
+    "Server's last name, license number and the date range of records",
+    "The agency's name and the server's DCWP license number",
+    "No label is needed if the device is password-protected",
+    "The word \"CONFIDENTIAL\" and the year of the records"
+   ],
+   "answer": 0,
+   "explanation": "Label it with the server's last name, license number and the date range stored.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 11,
+    "quote": "labeled with the process server's last name, license number and the date range of the records stored on the device"
+   }
+  },
+  {
+   "id": "PS-046",
+   "topic": "Records",
+   "question": "What does \"chronological\" mean for process server records?",
+   "options": [
+    "Entries in time order with no blank spaces",
+    "Entries grouped by the assigning agency",
+    "Entries grouped by court and county",
+    "Entries in alphabetical order by defendant"
+   ],
+   "answer": 0,
+   "explanation": "Each entry is sequential by time and date, without blank spaces that would allow insertions.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 7,
+    "quote": "without leaving any blank spaces between each entry"
+   }
+  },
+  {
+   "id": "PS-047",
+   "topic": "Records",
+   "question": "What does \"contemporaneous\" mean for record entries?",
+   "options": [
+    "At the end of each work week, in one batch",
+    "Before the attempt is made, as a plan for the day",
+    "When the affidavit of service is filed with the court",
+    "At or near the time of the event, or within a reasonable time after"
+   ],
+   "answer": 3,
+   "explanation": "Contemporaneous means at or near the time of the event recorded, or within a reasonable time thereafter.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 7,
+    "quote": "“Contemporaneous” in relation to entries in records means at or near the time of the event"
+   }
+  },
+  {
+   "id": "PS-048",
+   "topic": "Records",
+   "question": "In what file format must an \"image file\" of scanned records be saved?",
+   "options": [
+    "Microsoft Word",
+    "PDF",
+    "Plain text",
+    "JPEG"
+   ],
+   "answer": 1,
+   "explanation": "An image file is an exact replica saved as a portable data file (pdf).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 7,
+    "quote": "is saved as a portable data file (“pdf”)."
+   }
+  },
+  {
+   "id": "PS-049",
+   "topic": "Records",
+   "question": "How may a process server correct an error in a bound paginated volume?",
+   "options": [
+    "Remove the page and recopy the day's entries",
+    "Erase it neatly and rewrite the correct information",
+    "Draw a straight line through it and print the correct information directly above",
+    "Cover it with correction fluid and write the fix on top"
+   ],
+   "answer": 2,
+   "explanation": "Only a straight line through the error, with the correction printed directly above, is allowed.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 14,
+    "quote": "only by drawing a straight line through the inaccurate entry and clearly printing the accurate information directly above the inaccurate entry."
+   }
+  },
+  {
+   "id": "PS-050",
+   "topic": "Records",
+   "question": "Which correction methods are prohibited in bound volumes?",
+   "options": [
+    "Printing above the entry",
+    "Erasing, opaquing, obliterating or redacting",
+    "All corrections are prohibited",
+    "Drawing a single line through"
+   ],
+   "answer": 1,
+   "explanation": "All other methods, including erasing, opaquing, obliterating or redacting, are prohibited.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 14,
+    "quote": "including but not limited to erasing, opaquing, obliterating or redacting, are prohibited."
+   }
+  },
+  {
+   "id": "PS-051",
+   "topic": "Records",
+   "question": "How is an electronic record with a third-party contractor amended to fix a typo?",
+   "options": [
+    "By asking the contractor to overwrite it",
+    "By a new entry citing the original in italics",
+    "By deleting the entry and re-entering it",
+    "By editing the original entry in place"
+   ],
+   "answer": 1,
+   "explanation": "Amendments are new entries in which the original record is identified by reference in italics.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 14,
+    "quote": "creating a new entry in which the original record must be identified by reference in italics within the new entry"
+   }
+  },
+  {
+   "id": "PS-052",
+   "topic": "Records",
+   "question": "Which of these is expressly prohibited for electronic process server records?",
+   "options": [
+    "Producing records to DCWP",
+    "Storing records with a contractor",
+    "Using a meta data scrubber",
+    "Making a daily backup"
+   ],
+   "answer": 2,
+   "explanation": "Tampering with data or properties, including with a meta data scrubber, is prohibited.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 14,
+    "quote": "using a meta data scrubber or similar device or program"
+   }
+  },
+  {
+   "id": "PS-053",
+   "topic": "Records",
+   "question": "How must a process server's license number be entered in records of service?",
+   "options": [
+    "As a seven-digit number, with leading zero(s) if shorter",
+    "Exactly as printed on the license, at any length",
+    "With the prefix \"DCWP-\" before the number",
+    "As the last four digits of the license number"
+   ],
+   "answer": 0,
+   "explanation": "The license number is a seven-digit number, padded with zero if shorter.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "specified as a seven-digit number, where the first number must be zero if the process server's license number is less than seven digits"
+   }
+  },
+  {
+   "id": "PS-054",
+   "topic": "Records",
+   "question": "In what format must the date of service be entered in records?",
+   "options": [
+    "DD/MM/YY",
+    "MM/DD/YYYY",
+    "Month name and day",
+    "YYYY-MM-DD"
+   ],
+   "answer": 1,
+   "explanation": "Dates are entered as MM/DD/YYYY.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "the date that service was attempted or effected, which must be entered as MM/DD/YYYY"
+   }
+  },
+  {
+   "id": "PS-055",
+   "topic": "Records",
+   "question": "In what format must the time of service be entered?",
+   "options": [
+    "Military time",
+    "Time zone offset",
+    "AM/PM time",
+    "Rounded to the hour"
+   ],
+   "answer": 0,
+   "explanation": "Times are entered in military time.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "the time service was attempted or effected, which must be entered as military time"
+   }
+  },
+  {
+   "id": "PS-056",
+   "topic": "Records",
+   "question": "Into how many fields must the service address be split in the records?",
+   "options": [
+    "Three",
+    "Five",
+    "One",
+    "Two"
+   ],
+   "answer": 1,
+   "explanation": "Building number, street name, address details, city or borough, and ZIP code: five fields.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "which must be entered in five different fields"
+   }
+  },
+  {
+   "id": "PS-057",
+   "topic": "Records",
+   "question": "How is whether service was effected recorded?",
+   "options": [
+    "Check mark only",
+    "Y for yes or N for no",
+    "Done or Pending",
+    "1 or 0"
+   ],
+   "answer": 1,
+   "explanation": "Records show whether service was effected with Y or N.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "whether service was effected, as indicated by a Y for yes or N for no"
+   }
+  },
+  {
+   "id": "PS-058",
+   "topic": "Records",
+   "question": "For service under CPLR 308(1)-(3), how many fields must the description of the person served have?",
+   "options": [
+    "Seven",
+    "Three",
+    "Five",
+    "Ten"
+   ],
+   "answer": 0,
+   "explanation": "The description must have seven fields: sex, skin color, hair color, approximate age, height, weight and other features.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "a description of the person served which must consist of seven fields"
+   }
+  },
+  {
+   "id": "PS-059",
+   "topic": "Records",
+   "question": "In the records, what does the service-type code \"C\" mean?",
+   "options": [
+    "Conspicuous service delivery",
+    "Certified mail service",
+    "Court-ordered service",
+    "Corporate service"
+   ],
+   "answer": 0,
+   "explanation": "C is conspicuous service; CO is corporate service.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "an S for substituted service, a C for conspicuous service delivery"
+   }
+  },
+  {
+   "id": "PS-060",
+   "topic": "Records",
+   "question": "Which service-type code is used for corporate service?",
+   "options": [
+    "CO",
+    "V",
+    "C",
+    "CP"
+   ],
+   "answer": 0,
+   "explanation": "CO stands for corporate service.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "a CO for corporate service"
+   }
+  },
+  {
+   "id": "PS-061",
+   "topic": "Records",
+   "question": "For affix-and-mail (CPLR 308(4)) service, what extra description must the record include?",
+   "options": [
+    "The defendant's car and license plate, if seen",
+    "The weather and lighting at the time of service",
+    "The building's age and number of floors",
+    "The door and adjacent area, including hallway wall color and composition"
+   ],
+   "answer": 3,
+   "explanation": "Records describe the door and adjacent area, including color and composition of hallway walls and floor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "a description of the door and the area adjacent including the color and composition of hallway walls"
+   }
+  },
+  {
+   "id": "PS-062",
+   "topic": "Records",
+   "question": "If RPAPL 735(1) service uses registered or certified mail, what must be recorded?",
+   "options": [
+    "Nothing extra",
+    "The mail carrier's name",
+    "The postage amount",
+    "The postal receipt number"
+   ],
+   "answer": 3,
+   "explanation": "The record includes the postal receipt number of the registered or certified mail.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 12,
+    "quote": "the postal receipt number of registered or certified mail"
+   }
+  },
+  {
+   "id": "PS-063",
+   "topic": "Records",
+   "question": "How long must a third-party records contractor keep the original electronic record unaltered?",
+   "options": [
+    "Not less than seven years",
+    "Until the case ends",
+    "Three years",
+    "Ninety days"
+   ],
+   "answer": 0,
+   "explanation": "The contractor must keep the original record unaltered for at least seven years.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 14,
+    "quote": "maintain the original electronic record submitted by the process server unaltered for a period of not less than seven years"
+   }
+  },
+  {
+   "id": "PS-064",
+   "topic": "Records",
+   "question": "How often must a third-party records contractor back up submitted data?",
+   "options": [
+    "Monthly",
+    "Daily",
+    "Weekly",
+    "Annually"
+   ],
+   "answer": 1,
+   "explanation": "The contractor must maintain a daily backup of all submitted data.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 14,
+    "quote": "maintain a daily backup of all submitted data"
+   }
+  },
+  {
+   "id": "PS-065",
+   "topic": "Records",
+   "question": "How long must a licensee keep a copy of each affidavit or affirmation of service?",
+   "options": [
+    "One year, unless a traverse hearing is scheduled",
+    "Three years, in paper form only",
+    "At least seven years, electronically or on paper",
+    "Until the case is decided, then they may be discarded"
+   ],
+   "answer": 2,
+   "explanation": "Keep a copy of each affidavit and affirmation of service for at least seven years.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 20,
+    "quote": "maintain a copy of each affidavit of service and affirmation of service for at least seven years"
+   }
+  },
+  {
+   "id": "PS-066",
+   "topic": "Records",
+   "question": "Records are kept with a third party. Does that excuse a server from producing them to DCWP?",
+   "options": [
+    "Only for records under a year old",
+    "Yes, unless DCWP pays",
+    "No, they must still produce each requested record",
+    "Yes, DCWP must ask the contractor"
+   ],
+   "answer": 2,
+   "explanation": "Servers must produce subpoenaed or requested records even where a third party maintains them.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 22,
+    "quote": "even where they maintain their records with a third party."
+   }
+  },
+  {
+   "id": "PS-067",
+   "topic": "Records",
+   "question": "Under GBL § 89-cc, what must the record include for service under CPLR 308(4)?",
+   "options": [
+    "The defendant's employer",
+    "The plaintiff's address",
+    "The color of the door to which the summons was affixed",
+    "The name of the building superintendent"
+   ],
+   "answer": 2,
+   "explanation": "GBL § 89-cc requires a description of the color of the door the summons was affixed to.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 41,
+    "quote": "a description of the color of the door to which the summons is affixed"
+   }
+  },
+  {
+   "id": "PS-068",
+   "topic": "Records",
+   "question": "If required records are lost or stolen, when must the licensee report it to DCWP?",
+   "options": [
+    "Never",
+    "At renewal",
+    "Within ten calendar days, by affidavit",
+    "Within 24 hours, by phone"
+   ],
+   "answer": 2,
+   "explanation": "Loss or theft of required records must be reported by affidavit within ten calendar days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 34,
+    "quote": "within ten calendar days of such loss or theft."
+   }
+  },
+  {
+   "id": "PS-069",
+   "topic": "GPS",
+   "question": "When must a process server carry the GPS-enabled device required by Admin Code § 20-410?",
+   "options": [
+    "Only when serving papers in Housing Court cases",
+    "Only when serving corporations and other businesses",
+    "At all times during licensed activities, operating it when serving or attempting",
+    "Only when the assigning agency requires it"
+   ],
+   "answer": 2,
+   "explanation": "The device must be carried at all times during licensed activities and operated at each service or attempt.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 6,
+    "quote": "carry at all times during the commission of his or her licensed activities and operate at the time process is served or attempted"
+   }
+  },
+  {
+   "id": "PS-070",
+   "topic": "GPS",
+   "question": "How long must GPS records of service be maintained?",
+   "options": [
+    "Until the license renews",
+    "Ninety days",
+    "Seven years from creation",
+    "Two years"
+   ],
+   "answer": 2,
+   "explanation": "Device records are kept in an electronic database for seven years.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 6,
+    "quote": "for seven (7) years from the date such record is created."
+   }
+  },
+  {
+   "id": "PS-071",
+   "topic": "GPS",
+   "question": "If no GPS signal is available at the moment of service, how is location determined?",
+   "options": [
+    "By the defendant's address on the papers",
+    "By the server's written estimate",
+    "It is left blank",
+    "By triangulated cell tower signals"
+   ],
+   "answer": 3,
+   "explanation": "Without GPS, location, time and date come from triangulated cell tower signals.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 15,
+    "quote": "the location, time and date will be determined by triangulated cell tower signals."
+   }
+  },
+  {
+   "id": "PS-072",
+   "topic": "GPS",
+   "question": "When must the GPS electronic record be made?",
+   "options": [
+    "Immediately after the attempted or effected service",
+    "Before knocking on the door, to log the arrival",
+    "At the end of the day, for all attempts together",
+    "When the affidavit of service is signed"
+   ],
+   "answer": 0,
+   "explanation": "The record is made immediately after the attempt; a record made before the attempt is non-compliant.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 15,
+    "quote": "The process server is not in compliance with this provision if its electronic record was made before the time of attempted or effected service."
+   }
+  },
+  {
+   "id": "PS-073",
+   "topic": "GPS",
+   "question": "A GPS record is made more than how many minutes after service before non-compliance is presumed?",
+   "options": [
+    "One hour",
+    "Twenty-four hours",
+    "Thirty minutes",
+    "Five minutes"
+   ],
+   "answer": 3,
+   "explanation": "There is a rebuttable presumption of non-compliance if the record is made more than five minutes after service.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 15,
+    "quote": "rebuttable presumption that the process server was not in compliance with this provision if its electronic record is made more than five minutes after"
+   }
+  },
+  {
+   "id": "PS-074",
+   "topic": "GPS",
+   "question": "In what format must the GPS record's latitude and longitude be given?",
+   "options": [
+    "Street intersection",
+    "Map grid square",
+    "Decimal degree format",
+    "Degrees-minutes-seconds"
+   ],
+   "answer": 2,
+   "explanation": "Coordinates returned by the GPS device are recorded in decimal degree format.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 16,
+    "quote": "latitudinal and longitudinal coordinates returned by the GPS device in decimal degree format"
+   }
+  },
+  {
+   "id": "PS-075",
+   "topic": "GPS",
+   "question": "When must the GPS electronic record be transmitted to the GPS Contractor?",
+   "options": [
+    "Weekly, when the server uploads the week's records",
+    "At license renewal, for the full license term",
+    "Only when DCWP asks for the records in an audit",
+    "Automatically, as soon as a GPS or cellular signal is available"
+   ],
+   "answer": 3,
+   "explanation": "The record is automatically transmitted from the device as soon as a signal is available.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 16,
+    "quote": "must be automatically transmitted electronically from the mobile device to the GPS Contractor as soon as a GPS or cellular signal is available"
+   }
+  },
+  {
+   "id": "PS-076",
+   "topic": "GPS",
+   "question": "When is a GPS contractor NOT \"independent\" of a process serving agency?",
+   "options": [
+    "When an agency officer or 10%+ owner has an interest",
+    "When it charges servers a monthly fee",
+    "When it serves more than one agency",
+    "When it is located outside New York State"
+   ],
+   "answer": 0,
+   "explanation": "A third party is not independent if any agency officer or 10%+ shareholder has any direct or indirect interest in it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 17,
+    "quote": "will not be considered independent if any officer or owner of ten percent or more of the shares of the licensed process serving agency"
+   }
+  },
+  {
+   "id": "PS-077",
+   "topic": "GPS",
+   "question": "A process server switches to a different GPS contractor. How soon must they file an amended certification?",
+   "options": [
+    "Within thirty days",
+    "Within two days",
+    "At renewal",
+    "Within one year"
+   ],
+   "answer": 1,
+   "explanation": "An amended certification is due within two days of contracting with a different GPS contractor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 17,
+    "quote": "A licensed process server must submit to the Department an amended certification within two days of entering into a contract with a different GPS Contractor."
+   }
+  },
+  {
+   "id": "PS-078",
+   "topic": "GPS",
+   "question": "On request, what map must the GPS contractor provide to the server or DCWP?",
+   "options": [
+    "A hand-drawn sketch of each location, if asked",
+    "A hard-copy street map and an interactive e-map",
+    "Only a satellite photo of each address served",
+    "No map; only a spreadsheet of coordinates"
+   ],
+   "answer": 1,
+   "explanation": "GPS contractors provide a hard-copy street map and an interactive electronic map showing where records were made.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 17,
+    "quote": "a street map in hard copy format and access to an interactive electronic street map"
+   }
+  },
+  {
+   "id": "PS-079",
+   "topic": "GPS",
+   "question": "May a process server who works for a licensed agency use the agency's GPS device and contractor?",
+   "options": [
+    "Only with written court approval",
+    "No, every server needs their own contract",
+    "Yes, under the agency's GPS contract",
+    "Only for Housing Court assignments"
+   ],
+   "answer": 2,
+   "explanation": "A server doing agency work may use the device and facilities the agency obtains under a GPS contract.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Individual-Electronic-Device.pdf",
+    "title": "DCWP Process Server Individual Electronic Device Certification (PDF)",
+    "page": 1,
+    "quote": "The Process Serving Agency for whom I serve process will provide me with the device and services required by 6 RCNY section 2-233b."
+   }
+  },
+  {
+   "id": "PS-080",
+   "topic": "Affidavits",
+   "question": "When may a licensee sign an affirmation of service or have an affidavit of service notarized?",
+   "options": [
+    "Whenever the assigning agency asks for it",
+    "Before going out, so the form is ready to file",
+    "Any time within 20 days, even if details are missing",
+    "Only after all factual averments have been set forth"
+   ],
+   "answer": 3,
+   "explanation": "Do not sign or notarize until all factual averments are set forth in the document.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 20,
+    "quote": "until all factual averments have been set forth"
+   }
+  },
+  {
+   "id": "PS-081",
+   "topic": "Affidavits",
+   "question": "What must appear on every affidavit and affirmation of service a licensee signs?",
+   "options": [
+    "Their home phone number",
+    "Their GPS contractor's name",
+    "Their Social Security number",
+    "Their license number"
+   ],
+   "answer": 3,
+   "explanation": "Licensees must include their license number on all affidavits and affirmations of service.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 20,
+    "quote": "The licensee must include their license number on all affidavits of service and affirmations of service signed by them."
+   }
+  },
+  {
+   "id": "PS-082",
+   "topic": "Affidavits",
+   "question": "When serving a business through a person said to be its \"managing agent,\" what must the affidavit state?",
+   "options": [
+    "That the server asked if they could accept service and they said yes",
+    "Nothing beyond the address where papers were left",
+    "Only the person's first name and approximate age",
+    "The business's tax ID and state filing number"
+   ],
+   "answer": 0,
+   "explanation": "The affidavit must state the server inquired whether the person was authorized and received an affirmative response, plus name, job and supporting facts.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 20,
+    "quote": "that the process server inquired if that individual was authorized to accept service and received an affirmative response"
+   }
+  },
+  {
+   "id": "PS-083",
+   "topic": "Affidavits",
+   "question": "What can DCWP do if a licensee is found to have made a false statement in an affidavit of service?",
+   "options": [
+    "Deny, refuse to renew, suspend or revoke the license",
+    "Only issue a written warning to the licensee",
+    "Nothing, since perjury is only a court matter",
+    "Only fine the agency that assigned the papers"
+   ],
+   "answer": 0,
+   "explanation": "A false statement in an affidavit or affirmation of service is grounds for denial, non-renewal, suspension or revocation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 20,
+    "quote": "A licensee must not make any false statement in an affidavit of service or affirmation of service."
+   }
+  },
+  {
+   "id": "PS-084",
+   "topic": "Affidavits",
+   "question": "Under CPLR 2106, how may an affirmation under penalty of perjury be used in a New York action?",
+   "options": [
+    "Only in federal court, not in state court",
+    "Only in criminal cases, not in civil actions",
+    "In lieu of and with the same force as an affidavit",
+    "Only if it is also notarized by a notary public"
+   ],
+   "answer": 2,
+   "explanation": "A statement affirmed under penalty of perjury may be used in place of an affidavit with the same effect.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 47,
+    "quote": "may be used in an action in New York in lieu of and with the same force and effect as an affidavit."
+   }
+  },
+  {
+   "id": "PS-085",
+   "topic": "Affidavits",
+   "question": "Under CPLR 306(b), proof of personal delivery must describe the person served. Which item is listed?",
+   "options": [
+    "Native language",
+    "Occupation",
+    "Shoe size",
+    "Hair color"
+   ],
+   "answer": 3,
+   "explanation": "The description covers gender, race, hair color, approximate age, approximate weight and height, and other features.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 43,
+    "quote": "the process server’s perception of the person’s: gender, race, hair color, approximate age, approximate weight and height, and other identifying features."
+   }
+  },
+  {
+   "id": "PS-086",
+   "topic": "Affidavits",
+   "question": "Under CPLR 306(c), what must proof of affix-and-mail service also specify?",
+   "options": [
+    "The names of neighbors who were asked about the person",
+    "The weather and lighting conditions at each attempt",
+    "Only the date of the final, successful attempt",
+    "The dates, addresses and times of the earlier attempts"
+   ],
+   "answer": 3,
+   "explanation": "Proof of 308(4) service must specify the dates, addresses and times of attempted service under 308(1)-(3).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 43,
+    "quote": "proof of service shall also specify the dates, addresses and the times of attempted service pursuant to subdivisions one, two or three of such section."
+   }
+  },
+  {
+   "id": "PS-087",
+   "topic": "Affidavits",
+   "question": "In what form is proof of service made by a private process server, under CPLR 306(d)?",
+   "options": [
+    "An oral statement",
+    "A receipt from the defendant only",
+    "An affidavit",
+    "A certificate"
+   ],
+   "answer": 2,
+   "explanation": "A sheriff or public officer uses a certificate; any other person uses an affidavit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 43,
+    "quote": "in the form of an affidavit if made by any other person"
+   }
+  },
+  {
+   "id": "PS-088",
+   "topic": "Affidavits",
+   "question": "Under DRL § 232, what must an affidavit of service in a divorce action state about the defendant?",
+   "options": [
+    "What the server knew about the defendant's identity and how they knew it",
+    "The grounds for divorce stated in the complaint",
+    "The defendant's income and employer at the time of service",
+    "The names and ages of any children of the marriage"
+   ],
+   "answer": 0,
+   "explanation": "It must state what knowledge the server had that the person was the named defendant and how it was acquired.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 50,
+    "quote": "what knowledge the affiant or officer who executed the certificate had that he was the defendant named and how he acquired such knowledge"
+   }
+  },
+  {
+   "id": "PS-089",
+   "topic": "Affidavits",
+   "question": "In a divorce action where the complaint is not served with the summons, what must appear on the summons?",
+   "options": [
+    "The name of the judge assigned to the divorce case",
+    "Nothing extra beyond the usual summons information",
+    "The bar number of the plaintiff's attorney",
+    "A legible notice of the nature of the action, such as \"Action for a divorce\""
+   ],
+   "answer": 3,
+   "explanation": "The summons face must show the nature of the action (e.g., \"Action for a divorce\") and any ancillary relief.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 50,
+    "quote": "the summons shall have legibly written or printed upon the face thereof"
+   }
+  },
+  {
+   "id": "PS-090",
+   "topic": "Traverse hearings",
+   "question": "Within how many days must a licensee report a scheduled traverse hearing to DCWP?",
+   "options": [
+    "24 hours",
+    "After the hearing ends",
+    "10 days of receiving notice",
+    "30 days"
+   ],
+   "answer": 2,
+   "explanation": "Report a scheduled hearing contesting service within 10 days of receiving oral or written notice.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "title": "DCWP: Process Server Individual License Application Checklist",
+    "page": null,
+    "quote": "must report a scheduled traverse hearing (hearing contesting service) to DCWP within 10 days of receiving oral or written notice."
+   }
+  },
+  {
+   "id": "PS-091",
+   "topic": "Traverse hearings",
+   "question": "Does an oral communication about a scheduled traverse hearing trigger the reporting duty?",
+   "options": [
+    "Only a subpoena to appear counts",
+    "Yes, any notice, even oral, counts",
+    "Only a notice sent by DCWP counts",
+    "No, only written notice from the court"
+   ],
+   "answer": 1,
+   "explanation": "Any type of notice, including oral, triggers the 10-day report.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 20,
+    "quote": "receives any type of notice, including an oral communication, that a court has scheduled a hearing"
+   }
+  },
+  {
+   "id": "PS-092",
+   "topic": "Traverse hearings",
+   "question": "Which of these must the traverse hearing report include?",
+   "options": [
+    "The server's fee and the agency that paid it",
+    "The defendant's phone number and date of birth",
+    "The court and the judge before whom the hearing is scheduled",
+    "The assigning agency's bank and billing details"
+   ],
+   "answer": 2,
+   "explanation": "The report includes title and index number, court and judge, hearing date(s), and every licensee involved.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 20,
+    "quote": "the court and the judge before whom the hearing is scheduled"
+   }
+  },
+  {
+   "id": "PS-093",
+   "topic": "Traverse hearings",
+   "question": "If the party has not reported a traverse hearing's result, when must the licensee first search the court clerk's file?",
+   "options": [
+    "Ten days after the scheduled hearing",
+    "One year after the scheduled hearing",
+    "Sixty days after the scheduled hearing",
+    "The day after the scheduled hearing"
+   ],
+   "answer": 2,
+   "explanation": "At sixty days without a written report from the party, search the clerk's file; if needed, search again at ninety days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 21,
+    "quote": "Sixty days after the date of the scheduled hearing, if the party or its attorney has not provided to the licensee a written report"
+   }
+  },
+  {
+   "id": "PS-094",
+   "topic": "Traverse hearings",
+   "question": "If a licensee cannot learn a traverse hearing's result, by when must they report that to DCWP?",
+   "options": [
+    "They need not report if the result is unknown",
+    "No later than 30 days after the hearing",
+    "No later than one year after the hearing",
+    "No later than 100 days after the scheduled hearing"
+   ],
+   "answer": 3,
+   "explanation": "Report the result within ten days of learning it, or report unsuccessful attempts no later than 100 days after the hearing date.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 21,
+    "quote": "not later than one-hundred days after the scheduled date of such hearing."
+   }
+  },
+  {
+   "id": "PS-095",
+   "topic": "Traverse hearings",
+   "question": "What must a licensed process server bring to a NYC Civil Court traverse hearing at which they testify?",
+   "options": [
+    "All related records, and their license",
+    "Only the affidavit of service",
+    "Only their GPS device",
+    "Nothing; the court has the records"
+   ],
+   "answer": 0,
+   "explanation": "Rule 208.29 requires all relevant records, and a licensed server must also bring the license.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 49,
+    "quote": "Where the process server is licensed, he or she also shall bring the license to the court."
+   }
+  },
+  {
+   "id": "PS-096",
+   "topic": "Conduct",
+   "question": "May a licensee wear a badge or shield while serving process?",
+   "options": [
+    "Yes, a DCWP badge",
+    "No, badges, insignia and shields are prohibited",
+    "Only when serving at night",
+    "Yes, if it says \"Process Server\""
+   ],
+   "answer": 1,
+   "explanation": "No licensee serving process may wear or display any badge, insignia, shield, medal or facsimile.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 21,
+    "quote": "No licensee while serving process shall wear or display any badge, insignia, shield, medal, decoration or facsimile thereof."
+   }
+  },
+  {
+   "id": "PS-097",
+   "topic": "Conduct",
+   "question": "What must the envelope for process mailed under CPLR 308(4) or RPAPL 735(1) include?",
+   "options": [
+    "The words \"LEGAL PAPERS\"",
+    "The server's license number",
+    "A return receipt",
+    "The proper ZIP code of the person served"
+   ],
+   "answer": 3,
+   "explanation": "Mailed copies must include the proper ZIP code in the address.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 21,
+    "quote": "must include on the envelope as part of the address the proper ZIP code of the person served."
+   }
+  },
+  {
+   "id": "PS-098",
+   "topic": "Conduct",
+   "question": "What is the effect of serving civil process on a Sunday (absent a statutory exception)?",
+   "options": [
+    "It is absolutely void",
+    "It is valid but late",
+    "It is valid if personal",
+    "It is valid with court approval later"
+   ],
+   "answer": 0,
+   "explanation": "GBL § 11 makes Sunday service void for every purpose, except in criminal proceedings or where a statute authorizes it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 40,
+    "quote": "Service or execution of any process upon said day except as herein permitted is absolutely void for any and every purpose whatsoever."
+   }
+  },
+  {
+   "id": "PS-099",
+   "topic": "Conduct",
+   "question": "Sunday service of process is allowed in which situation?",
+   "options": [
+    "Housing Court cases only, for urgent evictions",
+    "Criminal proceedings, or where a statute specially authorizes it",
+    "Any case, if the defendant agrees to accept it",
+    "Small claims cases, if the court clerk approves it"
+   ],
+   "answer": 1,
+   "explanation": "GBL § 11 excepts criminal proceedings and service specially authorized by statute.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 40,
+    "quote": "except in criminal proceedings or where service or execution is specially authorized by statute."
+   }
+  },
+  {
+   "id": "PS-100",
+   "topic": "Conduct",
+   "question": "Maliciously serving civil process on Saturday on someone who keeps Saturday as holy time is:",
+   "options": [
+    "Allowed",
+    "Valid but unethical",
+    "Only a DCWP rule violation",
+    "A misdemeanor"
+   ],
+   "answer": 3,
+   "explanation": "GBL § 13 makes this a misdemeanor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 40,
+    "quote": "maliciously procures any civil action to which such person is a party to be adjourned to that day for trial, is guilty of a misdemeanor"
+   }
+  },
+  {
+   "id": "PS-101",
+   "topic": "Conduct",
+   "question": "Under GBL § 89-bb, a person is a process server if they derive income from serving papers or did what?",
+   "options": [
+    "Served at least once in the past calendar year",
+    "Effected service in five or more actions in the prior twelve months",
+    "Holds a notary public commission in the state",
+    "Works for a law firm as a clerk or paralegal"
+   ],
+   "answer": 1,
+   "explanation": "The state definition includes anyone who served process in five or more actions in the preceding twelve months.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 40,
+    "quote": "has effected service of process in five or more actions or proceedings in the twelve month period immediately preceding the service in question."
+   }
+  },
+  {
+   "id": "PS-102",
+   "topic": "Conduct",
+   "question": "Under GBL § 89-ee, when is a process serving agency legally responsible for a server's acts?",
+   "options": [
+    "If it could reasonably have known the server was acting improperly",
+    "Only if the server is the agency's W-2 employee",
+    "Never; each server alone is responsible",
+    "Only after DCWP has fined the server"
+   ],
+   "answer": 0,
+   "explanation": "An agency is responsible if it could reasonably have known the server was acting improperly.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 41,
+    "quote": "if it could reasonably have known that the process server was acting improperly."
+   }
+  },
+  {
+   "id": "PS-103",
+   "topic": "Methods of service",
+   "question": "Under CPLR 308(2), within what period of each other must delivery to a person of suitable age and the mailing occur?",
+   "options": [
+    "Thirty days",
+    "Three days",
+    "Twenty days",
+    "Ten days"
+   ],
+   "answer": 2,
+   "explanation": "Delivery and mailing must be effected within twenty days of each other.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "such delivery and mailing to be effected within twenty days of each other"
+   }
+  },
+  {
+   "id": "PS-104",
+   "topic": "Methods of service",
+   "question": "Under CPLR 308(2), when is service complete?",
+   "options": [
+    "On the day of delivery",
+    "When the mailed copy arrives",
+    "Ten days after proof is filed",
+    "Twenty days after mailing"
+   ],
+   "answer": 2,
+   "explanation": "Service is complete ten days after filing proof of service.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "service shall be complete ten days after such filing"
+   }
+  },
+  {
+   "id": "PS-105",
+   "topic": "Methods of service",
+   "question": "How must the envelope be marked when mailing to a defendant's actual place of business under CPLR 308(2)?",
+   "options": [
+    "\"Urgent legal mail\"",
+    "\"Legal process enclosed\"",
+    "\"Personal and confidential\"",
+    "\"From the law office of...\""
+   ],
+   "answer": 2,
+   "explanation": "The envelope bears the legend \"personal and confidential\" and must not show it is from an attorney or about a lawsuit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "in an envelope bearing the legend \"personal and confidential\""
+   }
+  },
+  {
+   "id": "PS-106",
+   "topic": "Methods of service",
+   "question": "What must the business-address envelope NOT indicate under CPLR 308(2) and 308(4)?",
+   "options": [
+    "That it is from an attorney or concerns an action against the person",
+    "The person's name, as it appears on the papers",
+    "The ZIP code of the person being served",
+    "The street address, including the apartment number"
+   ],
+   "answer": 0,
+   "explanation": "Nothing on the outside may indicate it is from an attorney or concerns an action against the person.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "not indicating on the outside thereof, by return address or otherwise, that the communication is from an attorney"
+   }
+  },
+  {
+   "id": "PS-107",
+   "topic": "Methods of service",
+   "question": "Within how long must proof of CPLR 308(2) service be filed with the court clerk?",
+   "options": [
+    "Within twenty days of the delivery or mailing, whichever is later",
+    "Within three days of delivery, as with eviction papers",
+    "Before the mailing is sent, along with the affidavit",
+    "Within 120 days of filing the summons and complaint"
+   ],
+   "answer": 0,
+   "explanation": "Proof must be filed within twenty days of the later of delivery or mailing.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "proof of such service shall be filed with the clerk of the court designated in the summons within twenty days"
+   }
+  },
+  {
+   "id": "PS-108",
+   "topic": "Methods of service",
+   "question": "When may a server use affix-and-mail (\"nail and mail\") service under CPLR 308(4)?",
+   "options": [
+    "Only if 308(1) and (2) fail despite due diligence",
+    "Whenever the defendant is not home on one visit",
+    "Whenever the server chooses, as a first option",
+    "Only on weekends, when no one answers the door"
+   ],
+   "answer": 0,
+   "explanation": "Affixing to the door is allowed only where personal and substituted service cannot be made with due diligence.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 45,
+    "quote": "where service under paragraphs one and two cannot be made with due diligence, by affixing the summons to the door"
+   }
+  },
+  {
+   "id": "PS-109",
+   "topic": "Methods of service",
+   "question": "When may service be made in a manner the court directs under CPLR 308(5)?",
+   "options": [
+    "Only after the 120-day service period has run",
+    "Only when serving corporations and LLCs",
+    "When service under 308(1), (2) and (4) is impracticable",
+    "Whenever the plaintiff prefers a faster method"
+   ],
+   "answer": 2,
+   "explanation": "A court may direct another method on motion without notice when the standard methods are impracticable.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 45,
+    "quote": "in such manner as the court, upon motion without notice, directs, if service is impracticable under paragraphs one, two and four of this section."
+   }
+  },
+  {
+   "id": "PS-110",
+   "topic": "Methods of service",
+   "question": "Under CPLR 308(6), what counts as a defendant's \"actual place of business\"?",
+   "options": [
+    "Any place it held out as its business by regular ads or solicitation",
+    "The defendant's home, if the defendant works from home",
+    "Only the business address on file with the Department of State",
+    "Only an office the defendant leases or owns in its own name"
+   ],
+   "answer": 0,
+   "explanation": "It includes any location the defendant held out as its place of business through regular solicitation or advertisement.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 45,
+    "quote": "shall include any location that the defendant, through regular solicitation or advertisement, has held out as its place of business."
+   }
+  },
+  {
+   "id": "PS-111",
+   "topic": "Methods of service",
+   "question": "Under CPLR 306-b, within how long after commencing an action must the summons and complaint generally be served?",
+   "options": [
+    "30 days",
+    "60 days",
+    "1 year",
+    "120 days"
+   ],
+   "answer": 3,
+   "explanation": "Service is due within 120 days after commencement (with a shorter rule for short limitation periods).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "shall be made within one hundred twenty days after the commencement of the action or proceeding"
+   }
+  },
+  {
+   "id": "PS-112",
+   "topic": "Methods of service",
+   "question": "If the statute of limitations is four months or less, when must service be made under CPLR 306-b?",
+   "options": [
+    "Before the summons is filed with the court",
+    "Within 3 days after the limitations period expires",
+    "No later than 15 days after the limitations period expires",
+    "Within 120 days of filing, as in any other action"
+   ],
+   "answer": 2,
+   "explanation": "For short limitation periods, service must be made within 15 days after the statute of limitations expires.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "service shall be made not later than fifteen days after the date on which the applicable statute of limitations expires."
+   }
+  },
+  {
+   "id": "PS-113",
+   "topic": "Methods of service",
+   "question": "How is personal service made on the State of New York?",
+   "options": [
+    "Deliver it to the Secretary of State in Albany only",
+    "Deliver it to any state employee at a state office",
+    "Mail it by certified mail to the Governor's office",
+    "Deliver to an assistant attorney-general at an AG office, or to the attorney-general"
+   ],
+   "answer": 3,
+   "explanation": "Personal service upon the state is by delivery to an assistant attorney-general at an AG office, or to the attorney-general, within the state.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "delivering the summons to an assistant attorney-general at an office of the attorney-general or to the attorney-general within the state"
+   }
+  },
+  {
+   "id": "PS-114",
+   "topic": "Methods of service",
+   "question": "Certified-mail service on a state agency under CPLR 307 is effective only if the envelope front bears what?",
+   "options": [
+    "The agency's ZIP+4",
+    "\"URGENT LEGAL MAIL\" in capital letters",
+    "A court seal",
+    "\"Personal and confidential\""
+   ],
+   "answer": 1,
+   "explanation": "The front must bear the legend URGENT LEGAL MAIL in capitals.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 44,
+    "quote": "Service by certified mail shall not be effective unless the front of the envelope bears the legend \"URGENT LEGAL MAIL\" in capital letters."
+   }
+  },
+  {
+   "id": "PS-115",
+   "topic": "Methods of service",
+   "question": "Serving a summons on a 15-year-old, who must be personally served under CPLR 309(a)?",
+   "options": [
+    "The child's school principal, as custodian",
+    "Only a parent, since the child is a minor",
+    "Only the child, since the child is over 14",
+    "A parent, guardian or custodian, and also the child"
+   ],
+   "answer": 3,
+   "explanation": "Serve a parent, guardian or person with legal custody; an infant aged 14 or over must also be personally served.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 45,
+    "quote": "If the infant is of the age of fourteen years or over, the summons shall also be personally served upon him within the state."
+   }
+  },
+  {
+   "id": "PS-116",
+   "topic": "Methods of service",
+   "question": "How may personal service be made on persons doing business as a partnership under CPLR 310(a)?",
+   "options": [
+    "Only by mail",
+    "Only by serving all partners",
+    "Only through the Secretary of State",
+    "By personally serving any one of the partners"
+   ],
+   "answer": 3,
+   "explanation": "Personal service may be made by personally serving any one of the partners.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 45,
+    "quote": "Personal service upon persons conducting a business as a partnership may be made by personally serving the summons upon any one of them."
+   }
+  },
+  {
+   "id": "PS-117",
+   "topic": "Methods of service",
+   "question": "Under CPLR 311(a)(1), which person can accept service for a corporation?",
+   "options": [
+    "The building's doorman or concierge",
+    "Any employee working at the front desk",
+    "Any shareholder of the corporation",
+    "An officer, director, managing or general agent, or cashier"
+   ],
+   "answer": 3,
+   "explanation": "Delivery may be to an officer, director, managing or general agent, cashier or assistant cashier, or an authorized agent.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 46,
+    "quote": "to an officer, director, managing or general agent, or cashier or assistant cashier or to any other agent authorized by appointment or by law"
+   }
+  },
+  {
+   "id": "PS-118",
+   "topic": "Methods of service",
+   "question": "How is personal service made on the City of New York?",
+   "options": [
+    "Deliver it to the head of any City agency involved",
+    "Deliver it to the Corporation Counsel or a filed designee",
+    "Mail it by certified mail to City Hall in Manhattan",
+    "Deliver it to the Mayor or a deputy mayor at City Hall"
+   ],
+   "answer": 1,
+   "explanation": "Service on the City is made on the Corporation Counsel or a person designated in a writing filed with the New York County clerk.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 46,
+    "quote": "upon the city of New York, to the corporation counsel"
+   }
+  },
+  {
+   "id": "PS-119",
+   "topic": "Methods of service",
+   "question": "Under CPLR 311, whom may a server deliver a summons to when serving a town?",
+   "options": [
+    "The county executive",
+    "The town's police chief",
+    "Any town resident",
+    "The supervisor or the clerk"
+   ],
+   "answer": 3,
+   "explanation": "Service on a town is made on the supervisor or the clerk.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 46,
+    "quote": "upon a town, to the supervisor or the clerk"
+   }
+  },
+  {
+   "id": "PS-120",
+   "topic": "Methods of service",
+   "question": "For a member-managed LLC, to whom may process be delivered under CPLR 311-a?",
+   "options": [
+    "Only its accountant",
+    "Any employee",
+    "Any member of the LLC in New York",
+    "Only the Secretary of State"
+   ],
+   "answer": 2,
+   "explanation": "If management is vested in members, delivery to any member in the state works.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 47,
+    "quote": "any member of the limited liability company in this state, if the management of the limited liability company is vested in its members"
+   }
+  },
+  {
+   "id": "PS-121",
+   "topic": "Methods of service",
+   "question": "How may personal service be made on a court of three or more judges?",
+   "options": [
+    "Mail it to the chief judge",
+    "Deliver to all judges",
+    "Deliver the summons to any one of the judges",
+    "Deliver to the court clerk only"
+   ],
+   "answer": 2,
+   "explanation": "Delivery to any one of the judges suffices.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 47,
+    "quote": "Personal service upon a court consisting of three or more judges may be made by delivering the summons to any one of them."
+   }
+  },
+  {
+   "id": "PS-122",
+   "topic": "Methods of service",
+   "question": "Under Civil Court Act § 403, where must service of a NYC Civil Court summons generally be made?",
+   "options": [
+    "Only within the City of New York, unless otherwise authorized",
+    "Anywhere in the United States, by any method",
+    "Only in the county where the case was filed",
+    "Anywhere in New York State, as in Supreme Court"
+   ],
+   "answer": 0,
+   "explanation": "Civil Court summonses are served only within NYC unless service beyond is authorized.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 48,
+    "quote": "but it shall be made only within the city of New York unless service beyond the city be authorized by this act"
+   }
+  },
+  {
+   "id": "PS-123",
+   "topic": "Methods of service",
+   "question": "What must appear on a Civil Court summons as served, under CCA § 400?",
+   "options": [
+    "The server's license number",
+    "The actual index number",
+    "The judge's name",
+    "The defendant's date of birth"
+   ],
+   "answer": 1,
+   "explanation": "The actual index number must be on the summons, notice of petition or order to show cause as served.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 48,
+    "quote": "The actual index number shall be on the summons, notice of petition or order to show cause as served."
+   }
+  },
+  {
+   "id": "PS-124",
+   "topic": "Methods of service",
+   "question": "What is \"VTL service\" under the DCWP rules?",
+   "options": [
+    "Serving a non-resident via the Secretary of State (VTL § 253)",
+    "Serving papers on drivers by text message",
+    "Serving traffic tickets on behalf of the NYPD",
+    "Serving papers on drivers at a DMV office"
+   ],
+   "answer": 0,
+   "explanation": "VTL service includes service on a non-resident through the Secretary of State under VTL § 253.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 8,
+    "quote": "a non-resident by service on the Secretary of State as permitted by and in accordance with the provisions of Vehicle and Traffic Law § 253"
+   }
+  },
+  {
+   "id": "PS-125",
+   "topic": "Methods of service",
+   "question": "What is \"substituted service\" under the DCWP rules?",
+   "options": [
+    "Service carried out by court officers instead of a server",
+    "Delivery to anyone found at the address, of any age",
+    "Service by email to the person's last known address",
+    "Delivery to a person of suitable age and discretion at the home or business"
+   ],
+   "answer": 3,
+   "explanation": "Substituted service is delivery within the state to a person of suitable age and discretion at the actual place of business, dwelling or usual abode.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 8,
+    "quote": "delivering process within the state to an individual of suitable age and discretion at the actual place of business, dwelling place"
+   }
+  },
+  {
+   "id": "PS-126",
+   "topic": "Eviction papers (RPAPL 735)",
+   "question": "After substituted or conspicuous service of a notice of petition under RPAPL 735, when must it be mailed?",
+   "options": [
+    "Within ten days",
+    "Within three business days",
+    "Within one day",
+    "Within twenty days"
+   ],
+   "answer": 2,
+   "explanation": "Mailing must follow within one day after the delivery, affixing or placement.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 51,
+    "quote": "within one day after such delivering to such suitable person or such affixing or placement, by mailing to the respondent"
+   }
+  },
+  {
+   "id": "PS-127",
+   "topic": "Eviction papers (RPAPL 735)",
+   "question": "How must those RPAPL 735 papers be mailed?",
+   "options": [
+    "By registered or certified mail only",
+    "By regular first class mail only",
+    "By certified (or registered) and first class mail",
+    "By email plus regular first class mail"
+   ],
+   "answer": 2,
+   "explanation": "Both registered or certified mail and regular first class mail are required.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 51,
+    "quote": "both by registered or certified mail and by regular first class mail"
+   }
+  },
+  {
+   "id": "PS-128",
+   "topic": "Eviction papers (RPAPL 735)",
+   "question": "Within how long must the notice of petition and proof of service be filed with the court under RPAPL 735?",
+   "options": [
+    "Within three days",
+    "Within twenty days",
+    "Within ten days",
+    "Within 120 days"
+   ],
+   "answer": 0,
+   "explanation": "They must be filed within three days after personal delivery or after mailing.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 51,
+    "quote": "together with proof of service thereof shall be filed with the court or clerk thereof within three days after"
+   }
+  },
+  {
+   "id": "PS-129",
+   "topic": "Eviction papers (RPAPL 735)",
+   "question": "Under RPAPL 735, when is personal delivery to the respondent complete?",
+   "options": [
+    "Immediately upon delivery",
+    "When the mail arrives",
+    "Ten days after filing",
+    "When the proof is filed"
+   ],
+   "answer": 0,
+   "explanation": "Personal delivery service is complete immediately upon delivery.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 51,
+    "quote": "such service shall be complete immediately upon such personal delivery"
+   }
+  },
+  {
+   "id": "PS-130",
+   "topic": "Eviction papers (RPAPL 735)",
+   "question": "Under RPAPL 735, when is substituted or conspicuous service complete?",
+   "options": [
+    "Ten days after mailing",
+    "Upon the filing of proof of service",
+    "When the respondent appears",
+    "Immediately upon affixing"
+   ],
+   "answer": 1,
+   "explanation": "With the alternative methods, service is complete when proof of service is filed.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 51,
+    "quote": "such service shall be complete upon the filing of proof of service."
+   }
+  },
+  {
+   "id": "PS-131",
+   "topic": "Eviction papers (RPAPL 735)",
+   "question": "Under RPAPL 735, besides affixing to a conspicuous part of the property, what else may a server do if admittance cannot be obtained?",
+   "options": [
+    "Leave it with a neighbor",
+    "Hand it to the super at another building",
+    "Place a copy under the entrance door",
+    "Leave it in the lobby"
+   ],
+   "answer": 2,
+   "explanation": "The papers may be affixed to a conspicuous part of the property or placed under the entrance door.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 51,
+    "quote": "placing a copy under the entrance door of such premises"
+   }
+  },
+  {
+   "id": "PS-132",
+   "topic": "Corporations (BCL 306)",
+   "question": "Under BCL § 306, where is in-person service on the Secretary of State made?",
+   "options": [
+    "At the Department of State office in Albany",
+    "At the corporation's main office",
+    "At any county clerk's office",
+    "At City Hall in Manhattan"
+   ],
+   "answer": 0,
+   "explanation": "Duplicate copies with the statutory fee are delivered at the Department of State office in Albany.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 52,
+    "quote": "at the office of the department of state in the city of Albany, duplicate copies of such process together with the statutory fee"
+   }
+  },
+  {
+   "id": "PS-133",
+   "topic": "Corporations (BCL 306)",
+   "question": "When is in-person service on a corporation through the Secretary of State complete?",
+   "options": [
+    "When the corporation answers",
+    "Ten days after filing",
+    "When the corporation receives the mail",
+    "When the Secretary of State is served"
+   ],
+   "answer": 3,
+   "explanation": "Service is complete when the Secretary of State is served.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 52,
+    "quote": "Service of process on such corporation shall be complete when the secretary of state is so served."
+   }
+  },
+  {
+   "id": "PS-134",
+   "topic": "Corporations (BCL 306)",
+   "question": "When is electronic service through the Department of State complete under BCL § 306?",
+   "options": [
+    "When the corporation opens the notice",
+    "When the Department of State's email is sent out",
+    "Ten days after the process is submitted",
+    "When the Secretary of State has reviewed and accepted it"
+   ],
+   "answer": 3,
+   "explanation": "Electronic service is complete when the Secretary of State has reviewed and accepted service.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 52,
+    "quote": "Service of process on such corporation shall be complete when the secretary of state has reviewed and accepted service of such process."
+   }
+  },
+  {
+   "id": "PS-135",
+   "topic": "Agencies and audits",
+   "question": "How often must a process serving agency review the records of each server it assigns work to?",
+   "options": [
+    "Only after a complaint",
+    "At least once each month",
+    "Every six months",
+    "Once a year"
+   ],
+   "answer": 1,
+   "explanation": "Agencies review each server's records for completeness and accuracy at least monthly.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 18,
+    "quote": "at least once each month, review for completeness and accuracy the records of each individual process server"
+   }
+  },
+  {
+   "id": "PS-136",
+   "topic": "Agencies and audits",
+   "question": "How soon must an agency report a non-compliant process server to DCWP?",
+   "options": [
+    "At the agency's next license renewal",
+    "Within 24 hours of learning of it",
+    "Within 30 days of learning of it",
+    "Within ten days of learning of it"
+   ],
+   "answer": 3,
+   "explanation": "Agencies report non-compliant servers' names and license numbers within ten days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 18,
+    "quote": "within ten (10) days of learning of such non-compliance"
+   }
+  },
+  {
+   "id": "PS-137",
+   "topic": "Agencies and audits",
+   "question": "How long must an agency keep each employee's signed statement of rights and obligations?",
+   "options": [
+    "Seven years",
+    "Three years",
+    "Permanently",
+    "One year"
+   ],
+   "answer": 1,
+   "explanation": "The signed statement is kept on file at the principal place of business for three years.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 4,
+    "quote": "Keep on file in its principal place of business for a period of three (3) years a statement for each employee"
+   }
+  },
+  {
+   "id": "PS-138",
+   "topic": "Agencies and audits",
+   "question": "At minimum, what share of certifying process servers must DCWP audit each year?",
+   "options": [
+    "All of them",
+    "At least 50 percent",
+    "At least 5 percent",
+    "At least 20 percent"
+   ],
+   "answer": 3,
+   "explanation": "DCWP audits at least 20% of servers who certified serving Civil Court Act § 110 process.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 5,
+    "quote": "for at least 20 percent of the licensed process servers who have certified"
+   }
+  },
+  {
+   "id": "PS-139",
+   "topic": "Agencies and audits",
+   "question": "In an audit, what is the longest period of records a DCWP subpoena may cover?",
+   "options": [
+    "Two years",
+    "Six months",
+    "Seven years",
+    "Two months"
+   ],
+   "answer": 3,
+   "explanation": "The audit subpoena period is no longer than two months.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 21,
+    "quote": "for the period identified by the Department in such subpoena for the following records no longer than two months"
+   }
+  },
+  {
+   "id": "PS-140",
+   "topic": "Agencies and audits",
+   "question": "How soon must a process server comply with a DCWP audit subpoena?",
+   "options": [
+    "Within 20 days of issuance",
+    "By the next renewal",
+    "Within 60 days",
+    "Within 5 days"
+   ],
+   "answer": 0,
+   "explanation": "Each document demand must be met within 20 days of the date the subpoena was issued.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 22,
+    "quote": "within 20 days of the date on which the subpoena was issued"
+   }
+  },
+  {
+   "id": "PS-141",
+   "topic": "Agencies and audits",
+   "question": "The housing court certification concerns process subject to which statute?",
+   "options": [
+    "Business Corporation Law § 306",
+    "Section 110 of the Civil Court Act",
+    "General Business Law § 11, on Sunday service",
+    "CPLR 306-b, on the time limit for service"
+   ],
+   "answer": 1,
+   "explanation": "Servers certify whether they served process subject to Civil Court Act § 110 (housing court).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials for Process Servers (PDF, updated 3/3/2025)",
+    "page": 5,
+    "quote": "that is subject to the provisions of section 110 of the civil court act"
+   }
+  }
+ ]
+}

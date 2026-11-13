@@ -1,0 +1,2748 @@
+{
+ "exam": "HIC",
+ "title": "NYC Home Improvement Contractor License Exam",
+ "real_exam_questions": 30,
+ "real_exam_pass": 21,
+ "real_exam_minutes": null,
+ "mock_questions": 30,
+ "mock_minutes": null,
+ "page_numbering": "PDF page index (1 = first page of the PDF file); null for HTML pages",
+ "questions": [
+  {
+   "id": "HIC-001",
+   "topic": "The exam",
+   "question": "How many questions are on the DCWP Home Improvement exam?",
+   "options": [
+    "50",
+    "30",
+    "100",
+    "25"
+   ],
+   "answer": 1,
+   "explanation": "The exam has 30 multiple-choice questions.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "The exam consists of 30 questions. You must answer a minimum of 21 questions correctly to pass."
+   }
+  },
+  {
+   "id": "HIC-002",
+   "topic": "The exam",
+   "question": "What is the minimum number of correct answers needed to pass the Home Improvement exam?",
+   "options": [
+    "24",
+    "18",
+    "15",
+    "21"
+   ],
+   "answer": 3,
+   "explanation": "You must answer no fewer than 21 of the 30 questions correctly (70%).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 4,
+    "quote": "To pass the exam, you must correctly answer no fewer than 21 questions."
+   }
+  },
+  {
+   "id": "HIC-003",
+   "topic": "The exam",
+   "question": "For a corporation applying for an HIC license, how many people must pass the Home Improvement exam?",
+   "options": [
+    "Every employee who will sell jobs",
+    "Only one, such as an officer or 10%+ shareholder",
+    "Every shareholder, regardless of stake",
+    "Every corporate officer and director"
+   ],
+   "answer": 1,
+   "explanation": "Only one qualifying person (sole proprietor, general partner, officer, principal, director, member, or 10%+ shareholder) needs to pass.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "Only ONE of the following persons needs to pass the Home Improvement Exam"
+   }
+  },
+  {
+   "id": "HIC-004",
+   "topic": "The exam",
+   "question": "A shareholder can be the person who takes the HIC exam if he or she owns at least what share of company stock?",
+   "options": [
+    "25%",
+    "10%",
+    "5%",
+    "51%"
+   ],
+   "answer": 1,
+   "explanation": "A shareholder owning 10% or more of the company's stock may be the exam taker.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 4,
+    "quote": "corporate officer, principal, director, member, or shareholder owning 10% or more of company stock"
+   }
+  },
+  {
+   "id": "HIC-005",
+   "topic": "The exam",
+   "question": "What does the HIC license application fee include with respect to the exam?",
+   "options": [
+    "Nothing; the exam is always billed separately",
+    "Unlimited exam attempts",
+    "One exam attempt only",
+    "The cost of taking the exam up to two times"
+   ],
+   "answer": 3,
+   "explanation": "The application fee covers up to two exam attempts.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "The license application fee includes the cost of taking the exam up to two times."
+   }
+  },
+  {
+   "id": "HIC-006",
+   "topic": "The exam",
+   "question": "An HIC applicant fails the exam twice. What must they do to try again?",
+   "options": [
+    "Take a DCWP classroom course",
+    "Wait one year",
+    "Pay the full license fee again",
+    "Pay a $50 exam fee"
+   ],
+   "answer": 3,
+   "explanation": "After two failures you must pay $50 to retake the exam.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "If you fail the exam twice, you must pay $50 to retake the exam."
+   }
+  },
+  {
+   "id": "HIC-007",
+   "topic": "The exam",
+   "question": "How many additional exam attempts does the $50 HIC retake fee cover?",
+   "options": [
+    "Unlimited within 60 days",
+    "One",
+    "Two",
+    "Three"
+   ],
+   "answer": 2,
+   "explanation": "The $50 fee includes two additional attempts.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "The $50 fee includes two additional exam attempts."
+   }
+  },
+  {
+   "id": "HIC-008",
+   "topic": "The exam",
+   "question": "Once your information appears in ExamBuilder's system, how long do you have to take and pass the exam?",
+   "options": [
+    "90 days",
+    "6 months",
+    "30 days",
+    "60 days"
+   ],
+   "answer": 3,
+   "explanation": "You have 60 days from the time your information appears in ExamBuilder's system.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "You have 60 days to take and pass the exam from the time your information appears in ExamBuilder’s system."
+   }
+  },
+  {
+   "id": "HIC-009",
+   "topic": "The exam",
+   "question": "How soon can you schedule the exam after DCWP processes your completed HIC application?",
+   "options": [
+    "24 hours later",
+    "Immediately",
+    "After 10 business days",
+    "After the license is mailed"
+   ],
+   "answer": 0,
+   "explanation": "It takes 24 hours for your information to reach ExamBuilder, so you can schedule 24 hours after processing.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "You can schedule the exam 24 hours after DCWP has processed your completed license application"
+   }
+  },
+  {
+   "id": "HIC-010",
+   "topic": "The exam",
+   "question": "Which company administers all DCWP licensing exams?",
+   "options": [
+    "Pearson VUE",
+    "ExamBuilder",
+    "PSI Services",
+    "Prometric"
+   ],
+   "answer": 1,
+   "explanation": "ExamBuilder administers all DCWP licensing exams.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 1,
+    "quote": "ExamBuilder administers all DCWP licensing exams."
+   }
+  },
+  {
+   "id": "HIC-011",
+   "topic": "The exam",
+   "question": "After failing a first attempt, how long must you wait before scheduling a second attempt?",
+   "options": [
+    "24 hours",
+    "7 days",
+    "There is no waiting period",
+    "30 days"
+   ],
+   "answer": 0,
+   "explanation": "You must wait 24 hours from the failed attempt before scheduling again.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 3,
+    "quote": "You must wait 24 hours from your failed attempt before scheduling the exam for a second attempt."
+   }
+  },
+  {
+   "id": "HIC-012",
+   "topic": "The exam",
+   "question": "What is the deadline to reschedule a DCWP exam?",
+   "options": [
+    "Noon on the day of the exam",
+    "48 hours before the exam starts",
+    "5:00 p.m. the day before the exam",
+    "One week before the exam date"
+   ],
+   "answer": 2,
+   "explanation": "Requests for a new date must be made by 5:00 p.m. the day before.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 2,
+    "quote": "you must request a new exam date by 5:00 p.m. the day before the originally scheduled exam date."
+   }
+  },
+  {
+   "id": "HIC-013",
+   "topic": "The exam",
+   "question": "What happens if you miss a scheduled exam without rescheduling in advance?",
+   "options": [
+    "Nothing, if you call within a week",
+    "You are rescheduled for free",
+    "You automatically fail",
+    "Your application is withdrawn"
+   ],
+   "answer": 2,
+   "explanation": "A no-show counts as a fail, and ExamBuilder reports it to DCWP.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 2,
+    "quote": "If you miss a scheduled exam without rescheduling in advance, you will automatically fail"
+   }
+  },
+  {
+   "id": "HIC-014",
+   "topic": "The exam",
+   "question": "If you miss your exam because of an emergency, how soon must you contact DCWP to request an excused absence?",
+   "options": [
+    "Within 10 business days",
+    "Within 30 calendar days",
+    "Within 24 hours of the exam",
+    "Within two business days"
+   ],
+   "answer": 3,
+   "explanation": "Contact DCWP within two business days after the missed exam day.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 2,
+    "quote": "within two (2) business days following the day of the exam that you missed to request an excused absence"
+   }
+  },
+  {
+   "id": "HIC-015",
+   "topic": "The exam",
+   "question": "What identification must you bring to the ExamBuilder Test Center?",
+   "options": [
+    "Your workers' compensation certificate",
+    "Your Social Security card",
+    "Two utility bills",
+    "One government-issued photo ID with your signature"
+   ],
+   "answer": 3,
+   "explanation": "Bring one government-issued photo ID that shows your signature.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 3,
+    "quote": "You must bring one (1) form of government-issued photo identification with your signature."
+   }
+  },
+  {
+   "id": "HIC-016",
+   "topic": "The exam",
+   "question": "Must a contractor who is renewing an HIC license retake the Home Improvement exam?",
+   "options": [
+    "No, the exam is for new applicants only",
+    "Yes, at every renewal",
+    "Only if the business changed its name",
+    "Yes, every other renewal"
+   ],
+   "answer": 0,
+   "explanation": "The Home Improvement exam is required of new applicants only.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 1,
+    "quote": "Home Improvement Contractor (NEW applicants only)"
+   }
+  },
+  {
+   "id": "HIC-017",
+   "topic": "The exam",
+   "question": "Where do applicants who were granted a language accommodation take the exam?",
+   "options": [
+    "The DCWP Licensing Center at 42 Broadway",
+    "Online from home",
+    "Any public library",
+    "The Department of Buildings"
+   ],
+   "answer": 0,
+   "explanation": "Applicants with a granted language or disability accommodation test at the DCWP Licensing Center, 42 Broadway.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 2,
+    "quote": "Applicants granted a language-related accommodation will take the exam at the DCWP Licensing Center: 42 Broadway, New York, NY 10004."
+   }
+  },
+  {
+   "id": "HIC-018",
+   "topic": "The exam",
+   "question": "What are ExamBuilder Test Center hours?",
+   "options": [
+    "By evening appointment only",
+    "9:00 a.m. to 5:00 p.m., seven days a week",
+    "10:00 a.m. to 6:00 p.m., Monday to Saturday",
+    "8:00 a.m. to 4:00 p.m., weekdays only"
+   ],
+   "answer": 1,
+   "explanation": "Test centers in multiple locations citywide are open 9 to 5, seven days a week.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "Test Centers are open from 9:00 a.m. to 5:00 p.m. seven days a week in multiple locations citywide."
+   }
+  },
+  {
+   "id": "HIC-019",
+   "topic": "The exam",
+   "question": "When do you learn your Home Improvement exam result?",
+   "options": [
+    "By mail within 30 days",
+    "When the license is issued",
+    "Right after you finish the exam",
+    "After DCWP reviews it within 10 days"
+   ],
+   "answer": 2,
+   "explanation": "ExamBuilder gives you your score and pass/fail result when you finish.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 3,
+    "quote": "ExamBuilder will provide you with the exam results, including your score and result, i.e., Pass or Fail, after you finish your exam."
+   }
+  },
+  {
+   "id": "HIC-020",
+   "topic": "The exam",
+   "question": "In how many languages besides English is the Home Improvement Examination Guide available?",
+   "options": [
+    "3",
+    "11",
+    "5",
+    "None"
+   ],
+   "answer": 1,
+   "explanation": "The guide is offered in English and 11 additional languages.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Licensing-FAQs-Exams.pdf",
+    "title": "DCWP Frequently Asked Questions: Exams (PDF)",
+    "page": 4,
+    "quote": "The Guide is in English and 11 additional languages."
+   }
+  },
+  {
+   "id": "HIC-021",
+   "topic": "The exam",
+   "question": "Which of these is one of the four areas the Home Improvement exam covers?",
+   "options": [
+    "Advertising and Selling Practices",
+    "Structural Load Calculations",
+    "Real Estate Appraisal",
+    "OSHA Fall Protection"
+   ],
+   "answer": 0,
+   "explanation": "The four areas are the basics of the law, contracts and cancellations, advertising and selling practices, and general industry and business knowledge.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 1,
+    "quote": "III. Advertising and Selling Practices"
+   }
+  },
+  {
+   "id": "HIC-022",
+   "topic": "Licensing",
+   "question": "How long is an HIC license term, and when does it expire?",
+   "options": [
+    "2 years; February 28 of odd years",
+    "3 years; June 30",
+    "1 year; December 31",
+    "2 years; March 31 of even years"
+   ],
+   "answer": 0,
+   "explanation": "HIC licenses run 2 years and expire on February 28 of odd-numbered years.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "License Period: 2 years Expiration Date: February 28 in Odd Years"
+   }
+  },
+  {
+   "id": "HIC-023",
+   "topic": "Licensing",
+   "question": "What is the license fee for a full 24-month HIC license (applying March 1 to August 31 of an odd year)?",
+   "options": [
+    "$340",
+    "$50",
+    "$200",
+    "$100"
+   ],
+   "answer": 2,
+   "explanation": "Applying in that window costs $200 for a license valid for up to 24 months.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "Pay $200 for a license expiring February 28 of the next odd year."
+   }
+  },
+  {
+   "id": "HIC-024",
+   "topic": "Licensing",
+   "question": "What does it cost to join the Home Improvement Business Trust Fund?",
+   "options": [
+    "$50",
+    "$1,000",
+    "$20,000",
+    "$200"
+   ],
+   "answer": 3,
+   "explanation": "The Trust Fund enrollment fee is $200.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "The fee for joining the Trust Fund is $200."
+   }
+  },
+  {
+   "id": "HIC-025",
+   "topic": "Licensing",
+   "question": "If a contractor does not enroll in the Trust Fund, what must it submit instead?",
+   "options": [
+    "Proof of $1 million liability insurance",
+    "A copy of a $20,000 surety bond",
+    "A $2,000 cash deposit",
+    "A letter from a bank"
+   ],
+   "answer": 1,
+   "explanation": "Contractors that do not join the Trust Fund must submit a $20,000 surety bond naming DCWP as certificate holder.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "If you do not enroll your business in the Trust Fund , you must submit a copy of a $20,000 Surety Bond"
+   }
+  },
+  {
+   "id": "HIC-026",
+   "topic": "Licensing",
+   "question": "When do Trust Fund participants who stay in the Fund NOT have to pay again at license renewal?",
+   "options": [
+    "When the licensee has had no consumer complaints in two years",
+    "When the Fund paid out less than $200,000 in the prior year",
+    "When the Fund held more than $2 million as of July of the prior year",
+    "When the licensee has stayed in the Fund for ten straight years"
+   ],
+   "answer": 2,
+   "explanation": "Remaining participants skip the payment if the Fund had more than $2 million as of July of the prior year.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "do not have to pay again when renewing their license if the Fund had more than $2 million as of July"
+   }
+  },
+  {
+   "id": "HIC-027",
+   "topic": "Licensing",
+   "question": "Are payments into the Home Improvement Business Trust Fund refundable?",
+   "options": [
+    "No, they are nonrefundable as long as the Fund exists",
+    "Yes, when the license expires",
+    "Yes, after 6 years without complaints",
+    "Yes, on request at any time"
+   ],
+   "answer": 0,
+   "explanation": "Payments are held in trust and are nonrefundable as long as the Fund exists.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Contractor-Trust-Fund-Enrollment.pdf",
+    "title": "DCWP Home Improvement Business Trust Fund Enrollment (PDF)",
+    "page": 1,
+    "quote": "are nonrefundable as long as the Fund exists."
+   }
+  },
+  {
+   "id": "HIC-028",
+   "topic": "Licensing",
+   "question": "If the Home Improvement Business Trust Fund dissolves, what happens to the money?",
+   "options": [
+    "It is split equally among contributors licensed at that time",
+    "It returns to the original contributors with interest",
+    "It is paid to consumers with open complaints",
+    "It goes to the City's general fund"
+   ],
+   "answer": 0,
+   "explanation": "Fund monies are distributed equally to contributors who are licensed when the Fund dissolves.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Contractor-Trust-Fund-Enrollment.pdf",
+    "title": "DCWP Home Improvement Business Trust Fund Enrollment (PDF)",
+    "page": 1,
+    "quote": "If the Fund dissolves, Fund monies will be distributed equally to Fund contributors who are licensed at the time the Fund dissolves."
+   }
+  },
+  {
+   "id": "HIC-029",
+   "topic": "Licensing",
+   "question": "Which rule section governs the Home Improvement Business Trust Fund?",
+   "options": [
+    "6 RCNY § 1-03",
+    "6 RCNY § 2-224",
+    "6 RCNY § 2-233",
+    "6 RCNY § 2-235"
+   ],
+   "answer": 1,
+   "explanation": "The Trust Fund rules are in 6 RCNY § 2-224.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Contractor-Trust-Fund-Enrollment.pdf",
+    "title": "DCWP Home Improvement Business Trust Fund Enrollment (PDF)",
+    "page": 1,
+    "quote": "Additional information is available under 6 RCNY § 2-224."
+   }
+  },
+  {
+   "id": "HIC-030",
+   "topic": "Licensing",
+   "question": "Who must be named as certificate holder on the workers' compensation insurance certificate submitted with an HIC application?",
+   "options": [
+    "The contractor's bank or lender",
+    "The Department of Buildings",
+    "The consumer whose home is being worked on",
+    "The Department of Consumer and Worker Protection"
+   ],
+   "answer": 3,
+   "explanation": "The insurance certificate must name DCWP, at 42 Broadway, as certificate holder.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "The Insurance Certificate must name the Department of Consumer and Worker Protection as the certificate holder"
+   }
+  },
+  {
+   "id": "HIC-031",
+   "topic": "Licensing",
+   "question": "Are ACORD forms acceptable as proof of New York State workers' compensation coverage for an HIC license?",
+   "options": [
+    "Yes, if notarized",
+    "No",
+    "Yes, always",
+    "Only for sole proprietors"
+   ],
+   "answer": 1,
+   "explanation": "DCWP does not accept ACORD forms as proof of workers' compensation coverage.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "ACORD Forms are not acceptable proof of New York State workers’ compensation coverage."
+   }
+  },
+  {
+   "id": "HIC-032",
+   "topic": "Licensing",
+   "question": "In the EPA certification requirement for HIC applicants, what does RRP stand for?",
+   "options": [
+    "Residential Roofing Practices",
+    "Removal of Regulated Pollutants",
+    "Renovation, Repair, and Painting",
+    "Registered Remodeling Professional"
+   ],
+   "answer": 2,
+   "explanation": "RRP is the EPA Renovation, Repair, and Painting certification.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "EPA Renovation, Repair, and Painting (RRP) certification"
+   }
+  },
+  {
+   "id": "HIC-033",
+   "topic": "Licensing",
+   "question": "A contractor affirmed it needs no EPA lead certification, then takes on work that requires one. How soon must it notify DCWP?",
+   "options": [
+    "Within 30 days, by sending a copy of the EPA course receipt",
+    "At the next license renewal, on the renewal application",
+    "Within five business days, with proof of certification",
+    "Only if DCWP asks, by producing the certificate on request"
+   ],
+   "answer": 2,
+   "explanation": "The HIC Affirmation commits the business to notify DCWP within five business days and include proof of certification.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/HICSelfAffirmation.pdf",
+    "title": "DCWP Home Improvement Contractor Affirmation (PDF)",
+    "page": 1,
+    "quote": "I will notify DCWP of the change within five business days and include proof of certification."
+   }
+  },
+  {
+   "id": "HIC-034",
+   "topic": "Licensing",
+   "question": "With which company do HIC principals schedule fingerprinting?",
+   "options": [
+    "The NYPD",
+    "The Department of Buildings",
+    "IdentoGO",
+    "ExamBuilder"
+   ],
+   "answer": 2,
+   "explanation": "Fingerprinting appointments are made through IdentoGO.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "must schedule an appointment with IdentoGO to be fingerprinted"
+   }
+  },
+  {
+   "id": "HIC-035",
+   "topic": "Licensing",
+   "question": "Which tax-related number must an HIC applicant provide?",
+   "options": [
+    "A Department of Buildings contractor registration number",
+    "A New York State commercial rent tax account number",
+    "A federal employer identification number from the IRS",
+    "A sales tax identification number (or its application confirmation number)"
+   ],
+   "answer": 3,
+   "explanation": "Applicants submit a Sales Tax Identification Number or an Application Confirmation Number.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "Sales Tax Identification Number OR Application Confirmation Number"
+   }
+  },
+  {
+   "id": "HIC-036",
+   "topic": "Licensing",
+   "question": "A utility bill submitted as proof of business address must be dated within what period?",
+   "options": [
+    "The last 90 days",
+    "The last 30 days",
+    "The last 6 months",
+    "The last year"
+   ],
+   "answer": 0,
+   "explanation": "Utility bills must be dated within the last 90 days.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "Utility bill, dated within the last 90 days"
+   }
+  },
+  {
+   "id": "HIC-037",
+   "topic": "Licensing",
+   "question": "Which state office must an LLC or corporation applying for an HIC license be registered and active with?",
+   "options": [
+    "The New York State Division of Corporations",
+    "The NYS Department of Labor",
+    "The NYS Attorney General",
+    "The Business Integrity Commission"
+   ],
+   "answer": 0,
+   "explanation": "Corporations, LPs, LLCs and LLPs must register and stay active with the NYS Division of Corporations.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "must register and remain active with the New York State Division of Corporations"
+   }
+  },
+  {
+   "id": "HIC-038",
+   "topic": "Licensing",
+   "question": "A sole proprietor operates under a name other than their own. What certificate do they need?",
+   "options": [
+    "A Partnership Certificate",
+    "A Certificate of Occupancy",
+    "A Certificate of Authority from DOB",
+    "A Business/Assumed Name Certificate"
+   ],
+   "answer": 3,
+   "explanation": "Sole proprietors using another name must have a Business/Assumed Name Certificate.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "Sole proprietors operating under a name other than your own must have a Business/Assumed Name Certificate."
+   }
+  },
+  {
+   "id": "HIC-039",
+   "topic": "Licensing",
+   "question": "What fee is added when HIC license fees are paid by credit card?",
+   "options": [
+    "A nonrefundable 2% convenience fee",
+    "No fee is added for card payments",
+    "A refundable 5% card surcharge",
+    "A flat $25 card processing fee"
+   ],
+   "answer": 0,
+   "explanation": "Card payments carry a nonrefundable 2% convenience fee.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "You will be charged a nonrefundable 2% Convenience Fee."
+   }
+  },
+  {
+   "id": "HIC-040",
+   "topic": "Licensing",
+   "question": "What is required before work to raise, lift, elevate or move a house?",
+   "options": [
+    "Only a DCWP license",
+    "Written consent of the neighbors",
+    "A special inspection by DOB",
+    "A DOT sidewalk permit"
+   ],
+   "answer": 2,
+   "explanation": "Raising, lifting, elevating or moving a building requires a special inspection by the Department of Buildings.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page",
+    "title": "DCWP: Home Improvement Contractor License Application Checklist",
+    "page": null,
+    "quote": "Work to raise, lift, elevate, or move a house or building requires a special inspection by DOB."
+   }
+  },
+  {
+   "id": "HIC-041",
+   "topic": "Licensing",
+   "question": "What must a contractor obtain to haul waste from its home improvement jobs?",
+   "options": [
+    "A Department of Sanitation commercial pickup contract",
+    "A DCWP general trucking license for each vehicle used",
+    "A Class One Self Hauler Registration from the Business Integrity Commission",
+    "A Department of Transportation dumpster and container permit"
+   ],
+   "answer": 2,
+   "explanation": "Hauling your own waste requires a Class One Self Hauler Registration from BIC.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 10,
+    "quote": "you must obtain a Class One Self Hauler Registration from the New York City Business Integrity Commission"
+   }
+  },
+  {
+   "id": "HIC-042",
+   "topic": "Licensing",
+   "question": "Which agency issues permits for sidewalk work?",
+   "options": [
+    "The Department of Transportation",
+    "The Department of Sanitation",
+    "The Department of Buildings",
+    "DCWP"
+   ],
+   "answer": 0,
+   "explanation": "Sidewalk work requires a DOT permit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 10,
+    "quote": "Sidewalk work requires a permit from DOT."
+   }
+  },
+  {
+   "id": "HIC-043",
+   "topic": "Licensing",
+   "question": "Which agency should a contractor contact for a permit to place a dumpster on the street?",
+   "options": [
+    "The Police Department",
+    "The Department of Transportation",
+    "The Department of Buildings",
+    "The Department of Sanitation"
+   ],
+   "answer": 1,
+   "explanation": "Street dumpster permits come from DOT.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 10,
+    "quote": "A contractor should contact the Department of Transportation (DOT) for a dumpster permit."
+   }
+  },
+  {
+   "id": "HIC-044",
+   "topic": "Basics of the law",
+   "question": "Under the Examination Guide's definition, which of these is home improvement work?",
+   "options": [
+    "Selling tiles with no installation",
+    "Building a brand-new house",
+    "Installing a new fence at a house",
+    "Repairing a City-owned residence"
+   ],
+   "answer": 2,
+   "explanation": "Home improvement includes work on basements, driveways, fences, garages, landscaping, patios, porches, sidewalks, pools and terraces of residential property.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 1,
+    "quote": "including basements, driveways, fences, garages, landscaping, patios, porches, sidewalks, swimming pools, and terraces"
+   }
+  },
+  {
+   "id": "HIC-045",
+   "topic": "Basics of the law",
+   "question": "Is installing central air conditioning in a home considered home improvement?",
+   "options": [
+    "Only if it costs over $5,000",
+    "Yes",
+    "Only in a multi-family building",
+    "No, it is HVAC trade work"
+   ],
+   "answer": 1,
+   "explanation": "Home improvement includes installation of central heating or air conditioning.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 1,
+    "quote": "installation of: • Central heating/air conditioning"
+   }
+  },
+  {
+   "id": "HIC-046",
+   "topic": "Basics of the law",
+   "question": "Which of these is NOT home improvement under the Guide?",
+   "options": [
+    "Construction of a new home",
+    "Replacing a driveway",
+    "Building a new garage at a house",
+    "Remodeling a kitchen"
+   ],
+   "answer": 0,
+   "explanation": "Construction of a new home or building is excluded from the definition.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "Construction of a new home or building"
+   }
+  },
+  {
+   "id": "HIC-047",
+   "topic": "Basics of the law",
+   "question": "Painting an apartment, with no other home improvement services, is:",
+   "options": [
+    "Not home improvement",
+    "Home improvement requiring a license",
+    "Home improvement only over $200",
+    "Home improvement only in co-ops"
+   ],
+   "answer": 0,
+   "explanation": "Painting or decoration alone, with no other home improvement services, is not home improvement.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "Painting or decoration of a building, residence, home, or apartment when no other home improvement services are provided"
+   }
+  },
+  {
+   "id": "HIC-048",
+   "topic": "Basics of the law",
+   "question": "Work on a residence owned or controlled by the state or a municipality is:",
+   "options": [
+    "Home improvement requiring two licenses",
+    "Not home improvement under the law",
+    "Home improvement exempt from contracts",
+    "Home improvement only if federally funded"
+   ],
+   "answer": 1,
+   "explanation": "Work on a residence owned or controlled by the state or a municipality is excluded.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "Work performed on a residence owned or controlled by the state or municipality"
+   }
+  },
+  {
+   "id": "HIC-049",
+   "topic": "Basics of the law",
+   "question": "A store sells windows but neither arranges nor takes part in installing them. Is that home improvement?",
+   "options": [
+    "No",
+    "Only if delivery is included",
+    "Only if the windows are custom-made",
+    "Yes"
+   ],
+   "answer": 0,
+   "explanation": "Selling goods or materials without arranging or participating in installation is not home improvement.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "The sale of goods or materials where the seller neither arranges nor participates in the installation"
+   }
+  },
+  {
+   "id": "HIC-050",
+   "topic": "Basics of the law",
+   "question": "Can a subcontractor be a \"contractor\" under the home improvement law?",
+   "options": [
+    "Only if it signs the consumer contract",
+    "Yes, whether prime contractor or subcontractor",
+    "Only if it is a corporation",
+    "No, only prime contractors"
+   ],
+   "answer": 1,
+   "explanation": "A contractor is anyone doing or soliciting home improvement, whether prime contractor or subcontractor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "whether or not the contractor is a prime contractor or subcontractor"
+   }
+  },
+  {
+   "id": "HIC-051",
+   "topic": "Basics of the law",
+   "question": "Under the definition, must a home improvement contract be written to count as a contract?",
+   "options": [
+    "No, it is an agreement whether or not in writing",
+    "Yes, only signed writings count",
+    "Only if over $1,000",
+    "Only if notarized"
+   ],
+   "answer": 0,
+   "explanation": "The definition covers agreements whether or not in writing (though the rules then require a written contract).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "is an agreement, whether or not in writing, between a contractor and an owner or tenant"
+   }
+  },
+  {
+   "id": "HIC-052",
+   "topic": "Basics of the law",
+   "question": "Since August 9, 2020, how does DCWP treat Home Improvement Salespersons?",
+   "options": [
+    "They need their own exam",
+    "It no longer licenses them",
+    "They must be fingerprinted annually",
+    "They need a $10,000 bond"
+   ],
+   "answer": 1,
+   "explanation": "Local Law 31 of 2020 repealed the salesperson license.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "As of August 9, 2020, DCWP no longer licenses Home Improvement Salespersons."
+   }
+  },
+  {
+   "id": "HIC-053",
+   "topic": "Basics of the law",
+   "question": "Below what job value is a person exempt from needing a DCWP HIC license?",
+   "options": [
+    "There is no dollar exemption",
+    "Less than $1,000",
+    "Less than $500",
+    "Less than $200"
+   ],
+   "answer": 3,
+   "explanation": "A person performing a home improvement job of less than $200 does not need a license.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "A person performing a home improvement job, which is less than $200"
+   }
+  },
+  {
+   "id": "HIC-054",
+   "topic": "Basics of the law",
+   "question": "Which of these does NOT need a DCWP HIC license?",
+   "options": [
+    "A subcontractor installing kitchen cabinets",
+    "A licensed plumber doing plumbing work",
+    "A company selling and installing siding",
+    "A sole proprietor renovating bathrooms"
+   ],
+   "answer": 1,
+   "explanation": "Plumbers and electricians acting within the scope of their licensed craft are exempt.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "Plumbers and electricians acting within the scope of their licensed craft"
+   }
+  },
+  {
+   "id": "HIC-055",
+   "topic": "Basics of the law",
+   "question": "Does a salesperson employed by a licensed contractor need a separate DCWP license?",
+   "options": [
+    "Yes, a salesperson license",
+    "Only if paid on commission",
+    "No",
+    "Yes, an HIC license"
+   ],
+   "answer": 2,
+   "explanation": "An individual employee of the contractor, including a salesperson, does not need a license.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "An individual employee who works for the contractor, including a salesperson"
+   }
+  },
+  {
+   "id": "HIC-056",
+   "topic": "Basics of the law",
+   "question": "Where must a contractor display its HIC license?",
+   "options": [
+    "At the entrance of every job site, facing the street",
+    "Only on its website, next to the license number",
+    "In its office where all consumers can see it, or shown on request",
+    "On the windshield of every truck the business operates"
+   ],
+   "answer": 2,
+   "explanation": "Post the license in your office where consumers can see it, or show it on request.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 2,
+    "quote": "You must post your license in your office where all consumers can see it or show it to consumers upon request."
+   }
+  },
+  {
+   "id": "HIC-057",
+   "topic": "Basics of the law",
+   "question": "What must a contractor do before a change of ownership (management)?",
+   "options": [
+    "Notify DCWP in advance and get approval",
+    "Notify within 30 days after",
+    "File with the Department of Buildings",
+    "Nothing; notify at renewal"
+   ],
+   "answer": 0,
+   "explanation": "A change of ownership needs advance notice to, and approval from, DCWP.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 3,
+    "quote": "You must notify DCWP in advance to get approval for a change of ownership (management)."
+   }
+  },
+  {
+   "id": "HIC-058",
+   "topic": "Basics of the law",
+   "question": "A contractor operates from two places of business. How many HIC licenses does it need?",
+   "options": [
+    "Two, one for each place of business",
+    "None for the second if it is a warehouse",
+    "One, plus a $200 branch fee",
+    "One covers all locations"
+   ],
+   "answer": 0,
+   "explanation": "A separate HIC license is required for each place of business.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 3,
+    "quote": "A separate Home Improvement Contractor license is required for each place of business."
+   }
+  },
+  {
+   "id": "HIC-059",
+   "topic": "Basics of the law",
+   "question": "How long must a contractor keep contracts and business records?",
+   "options": [
+    "10 years, regardless of any guarantee or warranty",
+    "3 years from the date of the contract, in all cases",
+    "1 year after the job is completed and paid in full",
+    "6 years, or the length of any contractual guarantee if longer"
+   ],
+   "answer": 3,
+   "explanation": "Keep records for six years or the length of any contractual guarantee, whichever is longer.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 3,
+    "quote": "for six (6) years or the length of time of any contractual guarantee, whichever is longer."
+   }
+  },
+  {
+   "id": "HIC-060",
+   "topic": "Basics of the law",
+   "question": "What may a contractor use a consumer's payments for while the job is underway?",
+   "options": [
+    "Any expense of the business, as long as it is recorded",
+    "Only expenses directly related to that home improvement",
+    "Paying down the business's earlier debts and loans",
+    "Payroll and materials for the contractor's other jobs"
+   ],
+   "answer": 1,
+   "explanation": "Funds received must be used to pay expenses directly related to that home improvement.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 3,
+    "quote": "The home improvement contractor must use all funds received to pay expenses directly related to the home improvement."
+   }
+  },
+  {
+   "id": "HIC-061",
+   "topic": "Basics of the law",
+   "question": "When may a contractor use a consumer's funds for unrelated expenses?",
+   "options": [
+    "After the job is completed and all labor, material and subcontractor costs are paid",
+    "Once the consumer signs the certificate of completion",
+    "As soon as the three-day cancellation period has passed",
+    "Once at least half of the contracted work has been done"
+   ],
+   "answer": 0,
+   "explanation": "Only when the job is completed and all direct expenses for it have been paid.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 3,
+    "quote": "unless the home improvement is completed and all expenses for direct labor, material, and subcontractors related to the home improvement have been paid."
+   }
+  },
+  {
+   "id": "HIC-062",
+   "topic": "Basics of the law",
+   "question": "When may a contractor start the contracted work?",
+   "options": [
+    "As soon as the consumer's deposit check has cleared",
+    "After the three-day cancellation period expires without cancellation",
+    "Right after both parties sign the contract and the copy is given",
+    "As soon as the consumer signs the permit disclosure"
+   ],
+   "answer": 1,
+   "explanation": "No work or changes to the property until the three-day cancellation period has expired without cancellation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 5,
+    "quote": "until after the three-day cancellation period has expired and the consumer has not exercised the right of cancellation."
+   }
+  },
+  {
+   "id": "HIC-063",
+   "topic": "Basics of the law",
+   "question": "Under what name may a licensed contractor do business?",
+   "options": [
+    "Any name registered with the state",
+    "Only the business name or DBA listed on the license",
+    "The owner's personal name only",
+    "Any name, if the license number is shown"
+   ],
+   "answer": 1,
+   "explanation": "Doing business under any other name than the one on the license is prohibited.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 4,
+    "quote": "Conduct the home improvement business in any name other than the name of the business or Doing Business As (DBA) name listed on the license."
+   }
+  },
+  {
+   "id": "HIC-064",
+   "topic": "Basics of the law",
+   "question": "May a home improvement contractor arrange a home improvement loan for a consumer?",
+   "options": [
+    "Yes, for jobs worth over $10,000",
+    "Yes, if it is disclosed in the contract",
+    "No, contractors cannot arrange such loans",
+    "Yes, but only through a licensed bank"
+   ],
+   "answer": 2,
+   "explanation": "Contractors may not act as agent for, advertise, promote or arrange home or home improvement loans.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 4,
+    "quote": "Act as an agent for, or advertise, promote, or arrange a home loan or a home improvement loan for the consumer."
+   }
+  },
+  {
+   "id": "HIC-065",
+   "topic": "Basics of the law",
+   "question": "Which of these is prohibited conduct for a contractor?",
+   "options": [
+    "Using subcontractors",
+    "Asking for a deposit",
+    "Charging for an estimate",
+    "Abandoning agreed-upon work"
+   ],
+   "answer": 3,
+   "explanation": "Contractors cannot abandon or fail to perform agreed-upon work.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 4,
+    "quote": "Abandon or fail to perform agreed-upon work."
+   }
+  },
+  {
+   "id": "HIC-066",
+   "topic": "Basics of the law",
+   "question": "Must a contractor give a consumer a written estimate?",
+   "options": [
+    "Only if the consumer pays in advance",
+    "Only for jobs over $1,000",
+    "Never; estimates are optional",
+    "Yes, if the consumer requests one"
+   ],
+   "answer": 3,
+   "explanation": "A written estimate must be provided when the consumer asks for one.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 4,
+    "quote": "Yes, if the consumer requests one."
+   }
+  },
+  {
+   "id": "HIC-067",
+   "topic": "Basics of the law",
+   "question": "A contractor charges a fee for an estimate. What must it do?",
+   "options": [
+    "Refund it if the consumer does not sign the final contract",
+    "Bill it separately after the job is done, outside the price",
+    "Keep it under $50 and collect it in cash before the visit",
+    "Disclose the fee before the estimate and itemize it in the total estimated price"
+   ],
+   "answer": 3,
+   "explanation": "The fee must be disclosed beforehand and included and itemized in the total estimated contract price.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 4,
+    "quote": "disclose the fee to the consumer before you provide the estimate and you must include and itemize the fee in the total estimated contract price"
+   }
+  },
+  {
+   "id": "HIC-068",
+   "topic": "Basics of the law",
+   "question": "What civil fine can apply for each day of unlicensed home improvement activity?",
+   "options": [
+    "$1 per day",
+    "$10,000 per day",
+    "Up to $100 per day",
+    "There is no daily fine"
+   ],
+   "answer": 2,
+   "explanation": "Civil fines of up to $100 per day apply to unlicensed activity or aiding it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 4,
+    "quote": "faces fines of up to $100 per day for engaging in unlicensed activity or aiding and abetting"
+   }
+  },
+  {
+   "id": "HIC-069",
+   "topic": "Basics of the law",
+   "question": "Besides fines, what can DCWP do about unlicensed home improvement work?",
+   "options": [
+    "Nothing beyond fines",
+    "Seize the consumer's property",
+    "Revoke the worker's driver's license",
+    "Padlock the business and confiscate tools and trucks"
+   ],
+   "answer": 3,
+   "explanation": "DCWP can padlock and confiscate tools and trucks used for unlicensed work.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 5,
+    "quote": "DCWP can padlock (close down) and confiscate (take) the tools and trucks used in connection with unlicensed home improvement work."
+   }
+  },
+  {
+   "id": "HIC-070",
+   "topic": "Basics of the law",
+   "question": "What can happen to a contract entered into after a contractor's misrepresentations?",
+   "options": [
+    "It becomes binding only on the consumer",
+    "It is automatically extended by 30 days",
+    "It may be voided, with restitution ordered",
+    "Nothing, as long as the work is completed"
+   ],
+   "answer": 2,
+   "explanation": "Such a contract may be voided and the contractor ordered to pay restitution.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 4,
+    "quote": "a contract entered into after misrepresentations are made may be declared null and void, and a contractor may be ordered to pay restitution"
+   }
+  },
+  {
+   "id": "HIC-071",
+   "topic": "Basics of the law",
+   "question": "Operating a home improvement business without a license may be what kind of offense?",
+   "options": [
+    "Not an offense at all",
+    "A felony only",
+    "A misdemeanor",
+    "A traffic infraction"
+   ],
+   "answer": 2,
+   "explanation": "Operating without a license, or while suspended or revoked, may be a misdemeanor.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 4,
+    "quote": "may be guilty of a misdemeanor and may be prosecuted criminally"
+   }
+  },
+  {
+   "id": "HIC-072",
+   "topic": "Contracts",
+   "question": "What form must every home improvement contract take?",
+   "options": [
+    "Written, signed by the contractor only",
+    "In writing and signed by everyone involved",
+    "Oral is fine under $1,000",
+    "Email confirmation is enough"
+   ],
+   "answer": 1,
+   "explanation": "Every contract must be in writing and signed by everyone involved.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 5,
+    "quote": "Every home improvement contract must be in writing and signed by everyone involved."
+   }
+  },
+  {
+   "id": "HIC-073",
+   "topic": "Contracts",
+   "question": "When must the consumer receive a copy of the contract?",
+   "options": [
+    "When the job is complete",
+    "Within 10 business days",
+    "Only if the consumer asks",
+    "At signing and before any work is done"
+   ],
+   "answer": 3,
+   "explanation": "Give a completed, legible copy at signing and before any work.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 5,
+    "quote": "You must give the consumer a completed, legible copy of the contract at the time of signing and before any work is done."
+   }
+  },
+  {
+   "id": "HIC-074",
+   "topic": "Contracts",
+   "question": "A contractor makes its sales pitch in Spanish. In what language(s) must the contract be?",
+   "options": [
+    "Spanish and English",
+    "Any language the contractor chooses",
+    "Spanish only",
+    "English only"
+   ],
+   "answer": 0,
+   "explanation": "If another language was used in the oral sales presentation, the contract must be in that language and in English.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 5,
+    "quote": "unless another language was used in any oral (spoken) sales presentation, in which case the contract needs to be in that language and in English."
+   }
+  },
+  {
+   "id": "HIC-075",
+   "topic": "Contracts",
+   "question": "A consumer wants work beyond the original contract. What should the contractor provide?",
+   "options": [
+    "A note in the contractor's records",
+    "A verbal agreement",
+    "A new estimate only",
+    "A written change order signed by both parties"
+   ],
+   "answer": 3,
+   "explanation": "Additional work requires a written amendment, a change order, signed by both.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 5,
+    "quote": "The contractor should provide a written amendment to the contract, known as a change order, which the consumer and the contractor must both sign."
+   }
+  },
+  {
+   "id": "HIC-076",
+   "topic": "Contracts",
+   "question": "What must a change order include, per DCWP's inspection checklist?",
+   "options": [
+    "The consumer's initials and a new three-day cancellation notice",
+    "The DOB permit number and the name of each subcontractor",
+    "The cost of the extra work, the new contract price and when payment is due",
+    "Only a short description of the extra work, without prices"
+   ],
+   "answer": 2,
+   "explanation": "Change orders must show the added cost, the new contract price and the payment due date.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 2,
+    "quote": "The change order must include the cost of the additional work, the new contract price, and the date when payment is due."
+   }
+  },
+  {
+   "id": "HIC-077",
+   "topic": "Contracts",
+   "question": "Under DCWP's model contract, when must the consumer get a copy of a signed change order?",
+   "options": [
+    "Only if the consumer asks for one in writing",
+    "Within 30 days after the change order is signed",
+    "Before the additional or changed work starts",
+    "Together with the final invoice when the job is done"
+   ],
+   "answer": 2,
+   "explanation": "The contractor gives the consumer the signed change order before starting the changed work.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Model-Contract.pdf",
+    "title": "DCWP Home Improvement Estimate, Contract and Forms (PDF)",
+    "page": 7,
+    "quote": "The Contractor shall provide the Consumer with a copy of the signed Change Order form before starting the additional or changed work."
+   }
+  },
+  {
+   "id": "HIC-078",
+   "topic": "Contracts",
+   "question": "Under DCWP's model change order form, when are extra charges for a change order due, unless agreed otherwise in writing?",
+   "options": [
+    "30 days after the change",
+    "Before the contractor begins the change in work",
+    "After the next payment milestone",
+    "At final completion"
+   ],
+   "answer": 1,
+   "explanation": "Unless otherwise agreed in writing, extra charges are due before the change in work begins.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Model-Contract.pdf",
+    "title": "DCWP Home Improvement Estimate, Contract and Forms (PDF)",
+    "page": 15,
+    "quote": "extra charges for a Change Order shall be due before the Contractor begins the Change in Work"
+   }
+  },
+  {
+   "id": "HIC-079",
+   "topic": "Contracts",
+   "question": "Which contractor detail must appear in a home improvement contract?",
+   "options": [
+    "Its insurance premium amount",
+    "Its bank account number",
+    "Its DCWP license number",
+    "Its owner's Social Security number"
+   ],
+   "answer": 2,
+   "explanation": "The contract must show the contractor's name, office address, telephone number and DCWP license number.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 5,
+    "quote": "the contractor’s name, office address, telephone number, and DCWP license number."
+   }
+  },
+  {
+   "id": "HIC-080",
+   "topic": "Contracts",
+   "question": "Which dates must the contract give?",
+   "options": [
+    "Only the date the contract was signed",
+    "Approximate start and substantial completion dates",
+    "Only the dates when each payment is due",
+    "The expiration dates of all required permits"
+   ],
+   "answer": 1,
+   "explanation": "Contracts state approximate dates when work will begin and be substantially completed.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 5,
+    "quote": "Approximate dates when work will begin and be substantially completed"
+   }
+  },
+  {
+   "id": "HIC-081",
+   "topic": "Contracts",
+   "question": "If the parties agree that a definite completion date is \"of the essence,\" what must the contractor do?",
+   "options": [
+    "Nothing; it is implied",
+    "Post a bond",
+    "Get a DOB sign-off",
+    "Note it in the contract"
+   ],
+   "answer": 3,
+   "explanation": "An agreed essential completion date must be noted in the contract.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 2,
+    "quote": "If you and the consumer have agreed that a definite completion date is of the essence, you must note this in the contract."
+   }
+  },
+  {
+   "id": "HIC-082",
+   "topic": "Contracts",
+   "question": "How must the contract describe the materials the contractor will provide?",
+   "options": [
+    "Including make and model number and other identifying information",
+    "By general category, such as \"standard windows\"",
+    "By supplier name only, without models or brands",
+    "It need not describe materials if the price is stated"
+   ],
+   "answer": 0,
+   "explanation": "Materials, including appliances, must be described with make, model number and other identifying information.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 2,
+    "quote": "include materials’ make and model number and any other identifying information."
+   }
+  },
+  {
+   "id": "HIC-083",
+   "topic": "Contracts",
+   "question": "What lien notice must the contract give the owner?",
+   "options": [
+    "The contractor waives any lien rights once the deposit is paid",
+    "An unpaid contractor or subcontractor may have a claim enforceable against the property",
+    "Only the consumer's mortgage lender can file a lien on the home",
+    "Liens can be filed only on commercial, not residential, work"
+   ],
+   "answer": 1,
+   "explanation": "The contract warns that unpaid contractors or subcontractors may have a claim enforceable against the property under lien laws.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 3,
+    "quote": "the contractor or subcontractor who performs work and is not paid may have a claim against the consumer which may be enforced against the property"
+   }
+  },
+  {
+   "id": "HIC-084",
+   "topic": "Contracts",
+   "question": "Under the Lien Law notice in the contract, what is the contractor required to do with payments received before completion?",
+   "options": [
+    "Spend them on any costs of running the contracting business",
+    "Forward them to DCWP to hold until the job is completed",
+    "Deposit them (or post a bond or contract of indemnity instead)",
+    "Hold them in cash on site until the job is finished"
+   ],
+   "answer": 2,
+   "explanation": "The contractor must deposit pre-completion payments, or instead post a bond or contract of indemnity with the consumer.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 3,
+    "quote": "the contractor is legally required to deposit all payments received prior to completion of work"
+   }
+  },
+  {
+   "id": "HIC-085",
+   "topic": "Contracts",
+   "question": "Which New York State law section is cited in the contract notice about depositing payments?",
+   "options": [
+    "Lien Law § 71-a",
+    "CPLR § 308",
+    "General Business Law § 89-cc",
+    "Real Property Law § 235"
+   ],
+   "answer": 0,
+   "explanation": "The notice cites subdivision 4 of Section 71-a of the NYS Lien Law.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 3,
+    "quote": "in accordance with subdivision 4 Section 71-a of New York State’s Lien Law"
+   }
+  },
+  {
+   "id": "HIC-086",
+   "topic": "Contracts",
+   "question": "If a contract has progress payments, how must each advance payment relate to the work?",
+   "options": [
+    "It must bear a reasonable relationship to the work performed",
+    "It must be paid in cash",
+    "It must equal one third of the price",
+    "It may be any amount the contractor sets"
+   ],
+   "answer": 0,
+   "explanation": "Each advance payment must bear a reasonable relationship to the work performed.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Contractor-Contractual-Compliance.pdf",
+    "title": "DCWP HIC Contractual Compliance Agreement and Checklist (PDF)",
+    "page": 2,
+    "quote": "each advance payment must bear a “reasonable relationship” to the work performed"
+   }
+  },
+  {
+   "id": "HIC-087",
+   "topic": "Contracts",
+   "question": "What must the contract say about workers' compensation?",
+   "options": [
+    "Workers' compensation coverage is optional for small home jobs",
+    "The consumer must carry insurance covering the contractor's workers",
+    "The contractor will show proof of coverage at final payment",
+    "The contractor will furnish a Certificate of Workers' Compensation Insurance before beginning work"
+   ],
+   "answer": 3,
+   "explanation": "The contract must state that the contractor will furnish the certificate before work begins.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 5,
+    "quote": "The contract must inform the consumer that the contractor will furnish a Certificate of Workers’ Compensation Insurance before beginning work."
+   }
+  },
+  {
+   "id": "HIC-088",
+   "topic": "Contracts",
+   "question": "A contractor is exempt from carrying workers' compensation insurance. What must it give the consumer?",
+   "options": [
+    "Nothing, since exempt contractors have no paperwork to share",
+    "A signed letter from its accountant explaining the exemption",
+    "A copy of the Certificate of Attestation of Exemption from the NYS Workers' Compensation Board",
+    "A copy of its DCWP license, which shows the exemption status"
+   ],
+   "answer": 2,
+   "explanation": "Exempt contractors give the consumer the WCB Certificate of Attestation of Exemption.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 3,
+    "quote": "you must give the consumer a copy of the Certificate of Attestation of Exemption from the New York State Workers’ Compensation Board."
+   }
+  },
+  {
+   "id": "HIC-089",
+   "topic": "Contracts",
+   "question": "Where in the contract must the \"YOU, THE BUYER, MAY CANCEL\" statement appear?",
+   "options": [
+    "Directly above the signature lines",
+    "Anywhere in the fine print",
+    "In a separate email",
+    "On the back page"
+   ],
+   "answer": 0,
+   "explanation": "The cancellation statement goes directly above (in immediate proximity to) the signature lines.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 6,
+    "quote": "The contract must include the following statement directly above the signature lines"
+   }
+  },
+  {
+   "id": "HIC-090",
+   "topic": "Contracts",
+   "question": "What is the minimum type size for the contract's cancellation statement?",
+   "options": [
+    "8-point regular",
+    "10-point boldface",
+    "14-point capitals",
+    "12-point italic"
+   ],
+   "answer": 1,
+   "explanation": "The statement must be boldface and at least 10 point.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 6,
+    "quote": "This statement must be in boldface, and the font size must be at least 10 point."
+   }
+  },
+  {
+   "id": "HIC-091",
+   "topic": "Contracts",
+   "question": "Until when may a buyer cancel a home improvement contract?",
+   "options": [
+    "Midnight of the third business day after the transaction",
+    "Seven days after signing",
+    "Midnight of the third calendar day",
+    "Any time before work starts"
+   ],
+   "answer": 0,
+   "explanation": "The buyer may cancel any time before midnight of the third business day after the transaction date.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 6,
+    "quote": "YOU, THE BUYER, MAY CANCEL THIS TRANSACTION AT ANY TIME PRIOR TO MIDNIGHT OF THE THIRD BUSINESS DAY AFTER THE DATE OF THIS TRANSACTION."
+   }
+  },
+  {
+   "id": "HIC-092",
+   "topic": "Contracts",
+   "question": "How many copies of the Notice of Cancellation form must be attached to the signed contract?",
+   "options": [
+    "Three",
+    "Two",
+    "One",
+    "None; it is mailed later"
+   ],
+   "answer": 1,
+   "explanation": "Two copies (in duplicate) of the completed Notice of Cancellation must be attached.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 6,
+    "quote": "the contractor must attach to the signed contract two copies of a separate, completed form titled “Notice of Cancellation.”"
+   }
+  },
+  {
+   "id": "HIC-093",
+   "topic": "Contracts",
+   "question": "How must the Notice of Cancellation be attached to the contract?",
+   "options": [
+    "Printed in the contract body",
+    "On the back of the signature page",
+    "So that it is easily detachable",
+    "Stapled permanently"
+   ],
+   "answer": 2,
+   "explanation": "The notice is attached to the contract and easily detachable.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Contractor-Contractual-Compliance.pdf",
+    "title": "DCWP HIC Contractual Compliance Agreement and Checklist (PDF)",
+    "page": 3,
+    "quote": "which will be attached to the contract and easily detachable."
+   }
+  },
+  {
+   "id": "HIC-094",
+   "topic": "Contracts",
+   "question": "After a valid cancellation, within how many business days must payments be refunded?",
+   "options": [
+    "10 business days",
+    "30 calendar days",
+    "3 business days",
+    "20 business days"
+   ],
+   "answer": 0,
+   "explanation": "Honor a valid cancellation and refund all payments within 10 business days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 7,
+    "quote": "The contractor should honor any valid notice of cancellation and must within 10 business days:"
+   }
+  },
+  {
+   "id": "HIC-095",
+   "topic": "Contracts",
+   "question": "After cancellation, the buyer makes delivered goods available, but the seller does not pick them up. When may the buyer keep or dispose of them?",
+   "options": [
+    "After 10 business days",
+    "Never; they must be returned",
+    "After 20 days from the cancellation notice",
+    "After 3 business days"
+   ],
+   "answer": 2,
+   "explanation": "If the seller does not pick up within 20 days of the notice, the buyer may keep or dispose of the goods.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 7,
+    "quote": "DOES NOT PICK THEM UP WITHIN 20 DAYS OF THE DATE OF YOUR NOTICE OF CANCELLATION, YOU MAY RETAIN OR DISPOSE OF THE GOODS"
+   }
+  },
+  {
+   "id": "HIC-096",
+   "topic": "Contracts",
+   "question": "If a cancelling buyer follows the seller's shipping instructions to return goods, who bears the cost and risk?",
+   "options": [
+    "The seller",
+    "They split it",
+    "The shipping company",
+    "The buyer"
+   ],
+   "answer": 0,
+   "explanation": "Return shipment under the seller's instructions is at the seller's expense and risk.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 6,
+    "quote": "REGARDING THE RETURN SHIPMENT OF THE GOODS AT THE SELLER’S EXPENSE AND RISK."
+   }
+  },
+  {
+   "id": "HIC-097",
+   "topic": "Contracts",
+   "question": "Besides the written notice, how else must the contractor tell the consumer about the right to cancel?",
+   "options": [
+    "By text message after work starts",
+    "No other notice is needed",
+    "Orally, at the time of signing",
+    "By certified mail a week later"
+   ],
+   "answer": 2,
+   "explanation": "The contractor must also tell the consumer orally at signing.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 7,
+    "quote": "A contractor must tell the consumer at the time of contract signing about the right to cancel"
+   }
+  },
+  {
+   "id": "HIC-098",
+   "topic": "Contracts",
+   "question": "If the contractor never gives the required oral and written cancellation notices, how long may the consumer cancel?",
+   "options": [
+    "For 30 days",
+    "Only before work starts",
+    "Only for 3 business days anyway",
+    "Until the contractor complies"
+   ],
+   "answer": 3,
+   "explanation": "Until the contractor complies, the consumer may cancel the contract.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 7,
+    "quote": "Until the contractor complies with the requirements for oral and written notice of the consumer’s right to cancel, the consumer may cancel the contract."
+   }
+  },
+  {
+   "id": "HIC-099",
+   "topic": "Contracts",
+   "question": "After a cancellation, what must the contractor tell the consumer about materials already delivered?",
+   "options": [
+    "Whether it intends to repossess or abandon them",
+    "That they become DCWP property",
+    "Nothing",
+    "That the consumer must pay for them"
+   ],
+   "answer": 0,
+   "explanation": "Within 10 business days the contractor must say whether it will repossess or abandon delivered materials.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 7,
+    "quote": "Notify the consumer as to whether the contractor intends to repossess or abandon any shipped/delivered materials."
+   }
+  },
+  {
+   "id": "HIC-100",
+   "topic": "Contracts",
+   "question": "May a contract say the consumer waives rights or remedies under the law?",
+   "options": [
+    "Yes, if written in bold",
+    "Yes, for jobs under $200",
+    "No",
+    "Yes, if initialed"
+   ],
+   "answer": 2,
+   "explanation": "Contracts cannot state that the consumer waives or cannot assert legal rights, claims, defenses or remedies.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 5,
+    "quote": "The contract cannot state that the consumer is waiving, giving up, or is prohibited from asserting any rights, claims, defenses, or remedies"
+   }
+  },
+  {
+   "id": "HIC-101",
+   "topic": "Contracts",
+   "question": "May a contractor ask the consumer to sign a certificate of completion before the work is done?",
+   "options": [
+    "No",
+    "Yes, to speed up final payment",
+    "Yes, if the job is 90% complete",
+    "Yes, with a written promise to finish"
+   ],
+   "answer": 0,
+   "explanation": "Asking for a completion certificate before the work is actually completed is prohibited.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 6,
+    "quote": "You cannot ask the consumer to sign a certificate of completion before you actually completed the work."
+   }
+  },
+  {
+   "id": "HIC-102",
+   "topic": "Contracts",
+   "question": "May a contractor perform work not described in the contract?",
+   "options": [
+    "Only with the consumer's written consent",
+    "Only with verbal approval",
+    "Yes, if it costs under $200",
+    "Yes, if it is needed"
+   ],
+   "answer": 0,
+   "explanation": "Work that is not in, or differs from, the contract needs the consumer's written consent.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 5,
+    "quote": "You cannot perform work that is not in the contract, or is different from the work described in the contract, without the consumer’s written consent."
+   }
+  },
+  {
+   "id": "HIC-103",
+   "topic": "Contracts",
+   "question": "How does DCWP count violations when a contract is missing several required items?",
+   "options": [
+    "Only the first missing item counts",
+    "One violation per inspection",
+    "Each missing item is a separate violation",
+    "One violation per contract"
+   ],
+   "answer": 2,
+   "explanation": "Each missing contract requirement is a separate violation with its own penalty.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 2,
+    "quote": "Each missing contract requirement is a separate violation for which a penalty will be assessed."
+   }
+  },
+  {
+   "id": "HIC-104",
+   "topic": "Contracts",
+   "question": "What right may homeowners insist on if the contractor fails to start work on time?",
+   "options": [
+    "To cancel for a full refund after an agreed number of days past the start date",
+    "To withhold half the contract price until the work is done",
+    "To charge the contractor a daily fee until work begins",
+    "To have DCWP assign another contractor to finish the job"
+   ],
+   "answer": 0,
+   "explanation": "Homeowners can insist the contract let them cancel for a full refund if work is not started within an agreed number of days after the start date.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Contractor-Contractual-Compliance.pdf",
+    "title": "DCWP HIC Contractual Compliance Agreement and Checklist (PDF)",
+    "page": 2,
+    "quote": "Homeowners have the right to insist that the contract entitle them to cancel for a full refund if the Contractor fails to start the work"
+   }
+  },
+  {
+   "id": "HIC-105",
+   "topic": "Contracts",
+   "question": "Under DCWP's model contract, who is responsible if the contractor fails to pay subcontractors or suppliers it arranged?",
+   "options": [
+    "DCWP's Trust Fund automatically",
+    "The subcontractor's insurer",
+    "The contractor, not the consumer",
+    "The consumer"
+   ],
+   "answer": 2,
+   "explanation": "The contractor pays the subcontractors and vendors it arranged; the consumer is not responsible if it fails to.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Model-Contract.pdf",
+    "title": "DCWP Home Improvement Estimate, Contract and Forms (PDF)",
+    "page": 6,
+    "quote": "The Consumer is not responsible if the Contractor fails to pay these subcontractors or supply vendors."
+   }
+  },
+  {
+   "id": "HIC-106",
+   "topic": "Contracts",
+   "question": "What is the legal claim an unpaid contractor or supplier may have against the property called?",
+   "options": [
+    "A lis pendens",
+    "A tax warrant",
+    "A stop-work order",
+    "A mechanic's lien"
+   ],
+   "answer": 3,
+   "explanation": "An unpaid contractor, subcontractor or supplier may have a mechanic's lien against the property.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Model-Contract.pdf",
+    "title": "DCWP Home Improvement Estimate, Contract and Forms (PDF)",
+    "page": 7,
+    "quote": "who is not paid may have a valid legal claim against your property known as a mechanic’s lien."
+   }
+  },
+  {
+   "id": "HIC-107",
+   "topic": "Contracts",
+   "question": "How can a consumer file a complaint about a contractor, per the model contract?",
+   "options": [
+    "Only in Small Claims Court",
+    "Only by certified letter to DOB",
+    "Call 311 or go online to nyc.gov/dcwp",
+    "Through the contractor's insurer"
+   ],
+   "answer": 2,
+   "explanation": "Complaints can be filed by calling 311 or online at nyc.gov/dcwp.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Model-Contract.pdf",
+    "title": "DCWP Home Improvement Estimate, Contract and Forms (PDF)",
+    "page": 7,
+    "quote": "The Consumer may file a complaint regarding the Contractor’s performance or the job by calling 311"
+   }
+  },
+  {
+   "id": "HIC-108",
+   "topic": "Permits",
+   "question": "Which 2025 local law added the home improvement permit disclosure requirement?",
+   "options": [
+    "Local Law 181 of 2025",
+    "Local Law 31 of 2020",
+    "Local Law 183 of 2025",
+    "Local Law 97 of 2019"
+   ],
+   "answer": 0,
+   "explanation": "DCWP's 2026 rule implements Local Law 181 of 2025, which added the permit disclosure.",
+   "source": {
+    "url": "https://www.nyc.gov/site/dca/about/new-laws-rules.page",
+    "title": "DCWP: New Laws and Rules",
+    "page": null,
+    "quote": "implement Local Law 181 of 2025, which adds a new disclosure requirement for home improvement contractors relating to permits."
+   }
+  },
+  {
+   "id": "HIC-109",
+   "topic": "Permits",
+   "question": "What must the written permit notice tell the owner about checking on permits?",
+   "options": [
+    "How to appeal a permit denial to DCWP",
+    "The DOB plan examiner's direct phone number",
+    "Nothing; verification is the owner's job",
+    "How to verify permit status in City databases"
+   ],
+   "answer": 3,
+   "explanation": "The notice must explain how the owner can verify permit status through City databases such as DOB's system.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Contractor-Contractual-Compliance.pdf",
+    "title": "DCWP HIC Contractual Compliance Agreement and Checklist (PDF)",
+    "page": 3,
+    "quote": "Instructions on how the owner can verify the status of such permits through New York City databases"
+   }
+  },
+  {
+   "id": "HIC-110",
+   "topic": "Permits",
+   "question": "For which kinds of work may a DOB permit be needed, per DCWP's inspection checklist?",
+   "options": [
+    "Plumbing, electrical work, pointing and home extensions",
+    "Only painting, wallpapering and other decorative work",
+    "Only window cleaning and other routine maintenance",
+    "Only landscaping, fencing and other outdoor yard work"
+   ],
+   "answer": 0,
+   "explanation": "DOB permits may be needed for plumbing, electrical work, pointing, extensions and other work.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 5,
+    "quote": "You may need to obtain a permit from the New York City Department of Buildings (DOB) for plumbing, electrical work, pointing, home extensions"
+   }
+  },
+  {
+   "id": "HIC-111",
+   "topic": "Permits",
+   "question": "Which agency issues permits for an addition or alteration to a house?",
+   "options": [
+    "The Department of Buildings",
+    "The Fire Department",
+    "DCWP",
+    "The Department of Transportation"
+   ],
+   "answer": 0,
+   "explanation": "Permits for additions and alterations come from DOB.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "A contractor secures all necessary permits from the New York City Department of Buildings (DOB)."
+   }
+  },
+  {
+   "id": "HIC-112",
+   "topic": "Permits",
+   "question": "Who must file alterations to building plans with DOB?",
+   "options": [
+    "A DCWP inspector after a site inspection",
+    "Any licensed home improvement contractor",
+    "A registered architect or licensed engineer",
+    "The homeowner, signing as the owner of record"
+   ],
+   "answer": 2,
+   "explanation": "A registered architect or licensed engineer must file plan alterations with DOB.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "a registered architect or licensed engineer must file alterations to building plans with DOB."
+   }
+  },
+  {
+   "id": "HIC-113",
+   "topic": "Permits",
+   "question": "Before starting a home extension, what should a contractor do first?",
+   "options": [
+    "Collect the full contract price up front",
+    "Ask DOB staff for a zoning opinion on the plan",
+    "Consult a licensed architect or engineer about zoning",
+    "Order the materials to lock in current prices"
+   ],
+   "answer": 2,
+   "explanation": "First consult a licensed architect or engineer (not DOB) on whether the extension complies with zoning.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 10,
+    "quote": "consult with a licensed architect or engineer—not DOB—to determine if the owner can put in the extension"
+   }
+  },
+  {
+   "id": "HIC-114",
+   "topic": "Permits",
+   "question": "Who files an amended Certificate of Occupancy at DOB?",
+   "options": [
+    "A registered architect or professional engineer",
+    "The contractor's salesperson or office manager",
+    "A DCWP inspector after a final inspection",
+    "The homeowner's mortgage lender"
+   ],
+   "answer": 0,
+   "explanation": "The actual amended Certificate of Occupancy must be filed by a registered architect or professional engineer.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "A registered architect or professional engineer must file the actual amended Certificate of Occupancy at DOB."
+   }
+  },
+  {
+   "id": "HIC-115",
+   "topic": "Advertising",
+   "question": "What must all HIC advertising and sales literature contain?",
+   "options": [
+    "The owner's home address and personal phone number",
+    "A statement of the lifetime warranty offered",
+    "The DOB permit number for each job advertised",
+    "The DCWP Home Improvement Contractor license number"
+   ],
+   "answer": 3,
+   "explanation": "All advertising and sales literature must show the DCWP license number.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "All advertising and sales literature must contain the DCWP Home Improvement Contractor license number."
+   }
+  },
+  {
+   "id": "HIC-116",
+   "topic": "Advertising",
+   "question": "If a licensee emails consumers, what must the email contain?",
+   "options": [
+    "The bond number",
+    "A cancellation form",
+    "The DCWP license number",
+    "A photo of the license"
+   ],
+   "answer": 2,
+   "explanation": "Licensees that use email with consumers must include the license number in the email.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 33,
+    "quote": "If a licensee uses email to communicate with consumers, the licensee's email must contain the license number"
+   }
+  },
+  {
+   "id": "HIC-117",
+   "topic": "Advertising",
+   "question": "An ad lists a price, but installation costs extra. What must the ad do?",
+   "options": [
+    "Quote installation as free",
+    "Clearly say installation is extra",
+    "Nothing, if the price is accurate",
+    "Show installation in small print only"
+   ],
+   "answer": 1,
+   "explanation": "If installation is extra, the ad must clearly say so.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "If installation is extra, the ad must clearly say so."
+   }
+  },
+  {
+   "id": "HIC-118",
+   "topic": "Advertising",
+   "question": "When may a contractor advertise \"Factory to you\" or \"Buy from manufacturer\"?",
+   "options": [
+    "If it buys directly from a factory",
+    "If it offers a discount",
+    "Never, under any circumstances",
+    "Only if it actually makes or produces the items"
+   ],
+   "answer": 3,
+   "explanation": "Those claims are allowed only when the contractor actually makes or produces the items.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "You cannot make statements such as “Factory to you” and “Buy from manufacturer” unless you actually make or produce the items."
+   }
+  },
+  {
+   "id": "HIC-119",
+   "topic": "Advertising",
+   "question": "May a contractor offer a \"lifetime\" guarantee?",
+   "options": [
+    "Yes, if the guarantee is backed by a surety bond",
+    "Yes, but only for roofing and siding work",
+    "No; guarantees may extend only to the item's normal life",
+    "Yes, as long as the guarantee is given in writing"
+   ],
+   "answer": 2,
+   "explanation": "Lifetime guarantees are prohibited; guarantees may cover only the normal life of the item or service.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "You cannot make “lifetime” guarantees or warranties."
+   }
+  },
+  {
+   "id": "HIC-120",
+   "topic": "Advertising",
+   "question": "For defective materials and workmanship, how long may a guarantee run?",
+   "options": [
+    "At least ten years for all materials and labor",
+    "Exactly one year from the date of completion",
+    "Any length the contractor chooses to offer",
+    "No longer than the period within which the defect is likely to show up"
+   ],
+   "answer": 3,
+   "explanation": "A defect guarantee cannot extend beyond the period within which the defect is likely to appear.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "you cannot make the guarantee beyond the period within which the defect is likely to show up."
+   }
+  },
+  {
+   "id": "HIC-121",
+   "topic": "Advertising",
+   "question": "What is the rule for a \"savings\" claim in an ad?",
+   "options": [
+    "It is banned entirely in home improvement ads",
+    "It must state the savings as a percentage only",
+    "It must be approved in advance by DCWP",
+    "It cannot imply the amount specified is the selling price"
+   ],
+   "answer": 3,
+   "explanation": "A savings claim cannot suggest that the stated savings amount is the selling price.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "A “savings” claim cannot imply the amount specified is the selling price."
+   }
+  },
+  {
+   "id": "HIC-122",
+   "topic": "Advertising",
+   "question": "A contractor advertises that its windows cut energy bills by 40%, without proof. This is:",
+   "options": [
+    "Allowed, if the ad adds an asterisk and fine print",
+    "Allowed, since it is ordinary sales puffery",
+    "Allowed, if the window maker made the same claim",
+    "Prohibited, since benefit claims must rest on known and provable facts"
+   ],
+   "answer": 3,
+   "explanation": "Ads cannot claim benefits that are not based on known and provable facts.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/DCAInspectionChecklist_HomeImprovement.pdf",
+    "title": "DCWP Inspection Checklist: Home Improvement Contractors (PDF)",
+    "page": 6,
+    "quote": "Advertisements cannot make claims that your products or services will result in benefits that are not based on known and provable facts."
+   }
+  },
+  {
+   "id": "HIC-123",
+   "topic": "Advertising",
+   "question": "What is the rule for ad headings?",
+   "options": [
+    "They must be in capital letters",
+    "They must name the manufacturer",
+    "They must include a price",
+    "They must not contain exaggeration or deception"
+   ],
+   "answer": 3,
+   "explanation": "Headings must not exaggerate or deceive.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 8,
+    "quote": "Headings must not contain exaggeration or deception."
+   }
+  },
+  {
+   "id": "HIC-124",
+   "topic": "Advertising",
+   "question": "May an unlicensed person advertise home improvement services in NYC print or broadcast media?",
+   "options": [
+    "Yes, outside Manhattan",
+    "Yes, with a disclaimer",
+    "No",
+    "Yes, if the license is pending"
+   ],
+   "answer": 2,
+   "explanation": "People required to be licensed who are not licensed may not advertise those services.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 28,
+    "quote": "who is not so licensed may not advertise the availability of goods and services related to the carrying on of such trade"
+   }
+  },
+  {
+   "id": "HIC-125",
+   "topic": "Business knowledge",
+   "question": "What distinguishes an employee from a subcontractor?",
+   "options": [
+    "An employee always holds its own DCWP license",
+    "An employee works for wages under direct supervision",
+    "A subcontractor works for wages under supervision",
+    "There is no legal difference between the two"
+   ],
+   "answer": 1,
+   "explanation": "An employee works for wages under direct supervision; a subcontractor is in business for itself.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "An employee works for wages and is under the employer’s (prime or subcontractor) direct supervision and control."
+   }
+  },
+  {
+   "id": "HIC-126",
+   "topic": "Business knowledge",
+   "question": "Must a subcontractor doing home improvement work in NYC have a DCWP license?",
+   "options": [
+    "No, the prime contractor's license covers it",
+    "Yes",
+    "Only if it signs with the consumer",
+    "Only for jobs over $1,000"
+   ],
+   "answer": 1,
+   "explanation": "A subcontractor, unlike an employee, must have its own DCWP license.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "A subcontractor, as opposed to an employee of a general contractor, must have a DCWP license to perform home improvement work in New York City."
+   }
+  },
+  {
+   "id": "HIC-127",
+   "topic": "Business knowledge",
+   "question": "Which agency licenses electricians and plumbers in NYC?",
+   "options": [
+    "The Department of Buildings",
+    "The Department of Environmental Protection",
+    "The Fire Department",
+    "DCWP"
+   ],
+   "answer": 0,
+   "explanation": "DOB licenses electricians and plumbers.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "DOB licenses electricians and plumbers."
+   }
+  },
+  {
+   "id": "HIC-128",
+   "topic": "Business knowledge",
+   "question": "What is the net profit of a job?",
+   "options": [
+    "The deposit amount",
+    "The total contract price",
+    "Profit before paying subcontractors",
+    "The final profit after expenses"
+   ],
+   "answer": 3,
+   "explanation": "Net profit is the final profit of any job after expenses.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "Net profit is the final profit of any job after expenses."
+   }
+  },
+  {
+   "id": "HIC-129",
+   "topic": "Business knowledge",
+   "question": "Which insurance must cover a contractor's employees?",
+   "options": [
+    "Workers' compensation and disability insurance",
+    "Only commercial auto insurance",
+    "Only general liability insurance",
+    "None for crews of fewer than 5 workers"
+   ],
+   "answer": 0,
+   "explanation": "Employees must be covered by workers' compensation and disability insurance.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "You must cover employees with Workers’ Compensation and disability insurance."
+   }
+  },
+  {
+   "id": "HIC-130",
+   "topic": "Business knowledge",
+   "question": "What are a contractor's tax duties for employees?",
+   "options": [
+    "Only report wages over $10,000",
+    "Report wages to the IRS and withhold taxes",
+    "Pay a flat City payroll fee",
+    "Nothing; employees pay their own"
+   ],
+   "answer": 1,
+   "explanation": "Employers report employee wages to the IRS and withhold taxes.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "You must report employee wages to the Internal Revenue Service (IRS), and you must withhold taxes."
+   }
+  },
+  {
+   "id": "HIC-131",
+   "topic": "Business knowledge",
+   "question": "What do federal immigration laws require of employers?",
+   "options": [
+    "Registering every employee with DCWP each year",
+    "Nothing for contractors with few employees",
+    "Ensuring employees have legal authority to work in the US",
+    "Hiring only United States citizens"
+   ],
+   "answer": 2,
+   "explanation": "Employers must ensure employees are legally authorized to work in the United States.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "comply with the federal immigration laws, which require employers to ensure that employees have legal authority to work in the United States."
+   }
+  },
+  {
+   "id": "HIC-132",
+   "topic": "Business knowledge",
+   "question": "When must a home improvement contractor use a licensed electrician?",
+   "options": [
+    "Only in commercial buildings, not in private homes",
+    "To install anything having to do with light, heat and power, regardless of voltage",
+    "Only for work above 120 volts, such as dryers and ranges",
+    "Only when adding new circuits to the electrical panel"
+   ],
+   "answer": 1,
+   "explanation": "A licensed electrician must install anything to do with light, heat and power, at any voltage.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "You must use a licensed electrician to install anything having to do with light, heat, and power, regardless of voltage."
+   }
+  },
+  {
+   "id": "HIC-133",
+   "topic": "Business knowledge",
+   "question": "How must a contractor handle sales tax on repairs?",
+   "options": [
+    "Collect it only on materials over $500",
+    "Pay it out of profit",
+    "Collect it from the consumer",
+    "Repairs are tax-exempt"
+   ],
+   "answer": 2,
+   "explanation": "Contractors must collect sales tax on repairs from the consumer.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 9,
+    "quote": "Contractors must collect sales tax for repairs from the consumer."
+   }
+  },
+  {
+   "id": "HIC-134",
+   "topic": "Business knowledge",
+   "question": "Which of these is an example of a capital improvement?",
+   "options": [
+    "Repairing a window frame",
+    "Adding a bathroom to a home",
+    "Fixing a leaky faucet",
+    "Painting the living room"
+   ],
+   "answer": 1,
+   "explanation": "Adding a bathroom is a capital improvement; repairs and painting are not.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 10,
+    "quote": "Adding a bathroom to a home is an example of a capital improvement."
+   }
+  },
+  {
+   "id": "HIC-135",
+   "topic": "Business knowledge",
+   "question": "Is repairing a window frame a capital improvement?",
+   "options": [
+    "Yes",
+    "Only if the frame is replaced in wood",
+    "No, it is a repair",
+    "Only in landmark buildings"
+   ],
+   "answer": 2,
+   "explanation": "Repairs such as fixing a window frame or painting do not qualify as capital improvements.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Home-Improvement-Business-Exam-Guide.pdf",
+    "title": "DCWP Home Improvement Examination Guide (PDF)",
+    "page": 10,
+    "quote": "Repairs such as repairing a window frame or painting the living room do not qualify as capital improvements."
+   }
+  },
+  {
+   "id": "HIC-136",
+   "topic": "DCWP enforcement",
+   "question": "How soon must a licensee respond in writing to a complaint DCWP sends it?",
+   "options": [
+    "Only if a hearing is scheduled",
+    "Within 60 days",
+    "Within 5 days",
+    "Within 20 days"
+   ],
+   "answer": 3,
+   "explanation": "Respond in writing within 20 days of the date DCWP sends the complaint.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 34,
+    "quote": "The response must be made within 20 days of the date the complaint is sent to the licensee or applicant"
+   }
+  },
+  {
+   "id": "HIC-137",
+   "topic": "DCWP enforcement",
+   "question": "A renewal application filed how late is treated as a new license application?",
+   "options": [
+    "One day after expiration",
+    "Sixty days or more after expiration",
+    "One year after expiration",
+    "Thirty days after expiration"
+   ],
+   "answer": 1,
+   "explanation": "Renewals filed 60 or more days after expiration are treated as new applications.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 33,
+    "quote": "filed sixty days or more after the expiration date of such license shall be treated as a new license application"
+   }
+  },
+  {
+   "id": "HIC-138",
+   "topic": "DCWP enforcement",
+   "question": "How soon must a licensee satisfy a consumer's judgment related to licensed activity (absent a stay, appeal or agreed schedule)?",
+   "options": [
+    "At the next license renewal",
+    "Within 30 days of entry of the judgment",
+    "Within 90 days",
+    "Within 1 year"
+   ],
+   "answer": 1,
+   "explanation": "Judgments must be satisfied within 30 days of entry unless stayed, appealed, or on an agreed schedule.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 36,
+    "quote": "within thirty (30) days from the date of entry of the judgment"
+   }
+  },
+  {
+   "id": "HIC-139",
+   "topic": "DCWP enforcement",
+   "question": "How soon must a licensee reply to a DCWP subpoena or document request?",
+   "options": [
+    "Only after a court orders it",
+    "Within twenty days",
+    "Within ninety days",
+    "Within five days"
+   ],
+   "answer": 1,
+   "explanation": "Replies are due within twenty days of the date the request was mailed or served.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 34,
+    "quote": "A licensee must reply to a subpoena, a request for documents or interrogatories within twenty days"
+   }
+  },
+  {
+   "id": "HIC-140",
+   "topic": "DCWP enforcement",
+   "question": "If required business records are lost or stolen, when must the licensee report it to DCWP?",
+   "options": [
+    "No report is required",
+    "Within ten calendar days, by affidavit",
+    "At renewal",
+    "Within 24 hours, by phone"
+   ],
+   "answer": 1,
+   "explanation": "Loss or theft of required records must be reported by affidavit within ten calendar days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 34,
+    "quote": "within ten calendar days of such loss or theft."
+   }
+  },
+  {
+   "id": "HIC-141",
+   "topic": "DCWP enforcement",
+   "question": "Can a DCWP license be sold or transferred to another business?",
+   "options": [
+    "Yes, for a $15 fee",
+    "No, unless law or rule specifically allows it",
+    "Yes, with the buyer's signature",
+    "Yes, within the same borough"
+   ],
+   "answer": 1,
+   "explanation": "Licenses are not assignable or transferable unless specifically provided by law, regulation or rule.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 27,
+    "quote": "No license issued under chapter two shall be assignable or transferable unless otherwise specifically provided"
+   }
+  },
+  {
+   "id": "HIC-142",
+   "topic": "DCWP enforcement",
+   "question": "If DCWP charges unlicensed activity starting on a given date, what does the law presume?",
+   "options": [
+    "It happened only on that one date, unless more is proven",
+    "The activity continued every day through the hearing, unless rebutted",
+    "Nothing; DCWP must prove each day separately",
+    "It stopped on the day the notice was served"
+   ],
+   "answer": 1,
+   "explanation": "There is a rebuttable presumption that unlicensed activity continued daily without interruption.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 37,
+    "quote": "there shall be a rebuttable presumption that the unlicensed activity continued every day, without interruption"
+   }
+  },
+  {
+   "id": "HIC-143",
+   "topic": "DCWP enforcement",
+   "question": "Where must a licensee appear to answer a DCWP notice of hearing?",
+   "options": [
+    "Housing Court in the borough of the business",
+    "Small Claims Court in the consumer's borough",
+    "The Department of Buildings hearing office",
+    "The Office of Administrative Trials and Hearings (OATH)"
+   ],
+   "answer": 3,
+   "explanation": "Licensees answer notices of hearing at OATH.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 35,
+    "quote": "A licensee must appear at the Office of Administrative Trials and Hearings to answer a notice of hearing"
+   }
+  },
+  {
+   "id": "HIC-144",
+   "topic": "DCWP enforcement",
+   "question": "After a licensee fails to renew, how soon must it destroy its DCWP license and ID documents?",
+   "options": [
+    "Before the expiration date",
+    "It may keep them",
+    "Within 10 business days after expiration",
+    "Within 1 year"
+   ],
+   "answer": 2,
+   "explanation": "Former licensees must destroy license and identification documents within 10 business days of expiration.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/dca/downloads/pdf/businesses/Process-Server-Educational-Materials.pdf",
+    "title": "DCWP Educational Materials (PDF): License Enforcement laws and rules for all DCWP licensees",
+    "page": 36,
+    "quote": "not later than 10 business days after the expiration of such license, destroy all license and identification documents"
+   }
+  }
+ ]
+}

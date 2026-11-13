@@ -1,0 +1,2015 @@
+2
+Note: New York City businesses must comply with all relevant federal, state, and City laws and
+rules. All laws and rules of the City of New York, including the Consumer Protection Law and
+Rules, are available through the Public Access Portal, which businesses can access by visiting
+nyc.gov/BusinessToolbox. For convenience, sections of relevant New York State Law and/or
+New York City Law and Rules are included as a handout in this packet.
+Please note that businesses are responsible for knowing and complying with the most current
+laws, including any City Council amendments. The Department of Consumer and Worker
+Protection (DCWP) is not responsible for errors or omissions in the handout provided in this
+packet. The information is not legal advice. You can only obtain legal advice from a lawyer.
+Table of Contents
+I. New York City Laws and Rules
+a. New York City Administrative Code and Rules regarding Process Servers ………page 3
+b. New York City Administrative Code and Rules regarding License Enforcement ...page 22
+II. New York General Business Law ……………………………………………....……. page 40
+III. New York Civil Practice Law and Rules ………………………………………….…. page 43
+IV. New York Civil Court Act …………………………………………………….………. page 48
+V. Uniform Civil Rules of the New York City Civil Court ……………….……………. page 49
+VI. New York Domestic Relations Law …………………………………………..…….… page 50
+VII. New York Real Property Actions and Proceedings Law ……………….………...… page 51
+VIII. New York Business Corporation Law ………………………………………..……... page 52
+Updated 3/3/2025
+3
+New York City Laws and Rules
+New York City Administrative Code and Rules regarding Process
+Servers
+NEW YORK CITY ADMINISTRATIVE CODE
+TITLE 20: CONSUMER AND WORKER PROTECTION
+CHAPTER 2: LICENSES
+SUBCHAPTER 23: PROCESS SERVERS
+§ 20-403. License required.
+a. Process server license. It shall be unlawful for any person to do business as, be employed as or
+perform the services of a process server without a license therefor.
+b. Process serving agency license. It shall be unlawful for any process serving agency to assign or
+distribute process to individual process servers for actual service in the city of New York without a
+license therefore.
+§ 20-404. Definition.
+a. A process server is a person engaged in the business of serving or one who purports to serve or one
+who serves personally or by substituted service upon any person, corporation, governmental or
+political subdivision or agency, a summons, subpoena, notice, citation or other process, directing an
+appearance or response to a legal action, legal proceeding or administrative proceedings.
+b. A process serving agency is any person, firm, partnership, association or corporation, other than an
+attorney or law firm located in this state, or city marshal, who maintains an office, bureau or agency,
+the purpose of which is to assign or distribute process to individual process servers for actual service
+in the city of New York.
+c. For the purposes of this subchapter the service of five or more process in any one year shall be deemed
+to constitute doing business as a process server.
+§ 20-405. Exceptions.
+a. The provisions of this subchapter shall not apply to any employee of any city, state or federal
+department or agency, who is acting within the scope of his or her employment.
+b. The provisions of this subchapter shall not apply to attorneys duly admitted to practice law in the state
+of New York.
+§ 20-406. Application; Fingerprinting.
+a. An application for such a license or renewal thereof shall be made to the commissioner on a form
+prescribed by him or her.
+b. The commissioner shall require that applicants for licenses issued pursuant to this subchapter be
+fingerprinted for the purpose of securing criminal history records from the state division of criminal
+justice services. The applicant shall pay a processing fee as required by the state division of criminal
+justice services. Fingerprints shall be taken of the individual owner if the applicant is a sole
+proprietorship; the general partners if the applicant is a partnership; and the officers, principals,
+directors, and stockholders owning more than ten percent of the outstanding stock of the corporation if
+the applicant is a corporation. Any person required to be fingerprinted hereunder shall furnish to the
+department three current passport-size photographs of such person. Notwithstanding the foregoing, the
+commissioner need not require applicants for licenses required under this subchapter to be
+4
+fingerprinted if criminal history records concerning such applicants are not available from the state
+division of criminal justice services.
+c. Each such applicant for a process server license or renewal thereof shall be required to pass an
+examination satisfactorily. Such examination shall be under the supervision of the commissioner and
+shall test the knowledge of the applicant concerning proper service of process within the city of New
+York and familiarity with relevant laws and rules.
+§ 20-406.1. Bond Required.
+a. As a condition of the issuance of a process server license, each applicant for such license or a renewal
+thereof shall furnish to the commissioner a surety bond executed by the applicant in the sum of ten
+thousand dollars, payable to the city of New York, and a surety approved by the commissioner. Such
+bond shall be conditioned upon the applicant's compliance with the provisions of this subchapter and
+any rules promulgated thereunder, and upon the further condition that the applicant will pay (i) to the
+city any fine, penalty or other obligation the city imposes relating to a violation of this subchapter and
+any rules promulgated thereunder, and (ii) to a plaintiff any final judgment recovered in an action
+arising out of the violation of any of the provisions of this subchapter within thirty days of its
+imposition. If an applicant is unable to obtain a surety bond as required by this section, and upon the
+provision of proof satisfactory to the commissioner of such inability, the individual applicant may, in
+lieu of furnishing such bond, deposit an amount of no less than one thousand dollars in a fund to be
+established by the commissioner to pay (i) to the city any fine, penalty or other obligation the city
+imposes relating to a violation of this subchapter and any rules promulgated thereunder, and (ii) to a
+plaintiff any final judgment recovered in an action arising out of the violation of any of the provisions
+of this subchapter within thirty days of its imposition.
+b. A process server licensed under this subchapter who engages in the business of serving process
+exclusively as an employee of a process serving agency licensed under this subchapter shall not be
+required to furnish a surety bond.
+c. As a condition of the issuance of a process serving agency license, each applicant for such license or a
+renewal thereof shall furnish to the commissioner a surety bond in the sum of one hundred thousand
+dollars executed by the applicant payable to the city of New York, and a surety approved by the
+commissioner. Such bond shall be conditioned upon the applicant's compliance with the provisions of
+this subchapter and any rules promulgated thereunder, and upon the further condition that the applicant
+will pay (i) to the city any fine, penalty or other obligation the city imposes relating to a violation of
+this subchapter and any rules promulgated thereunder, and (ii) to a plaintiff any final judgment
+recovered in an action arising out of the violation of any of the provisions of this subchapter within
+thirty days of its imposition.
+§ 20-406.2. Responsibilities of Process Serving Agencies.
+Every process serving agency licensed under this subchapter shall:
+(a) Comply with all applicable state and federal laws;
+(b) Be legally responsible for any failure to act in accordance with the laws and rules governing service of
+process by each process server to whom it has distributed, assigned or delivered process for service;
+(c) Provide to each process server employed by such agency a written statement indicating the rights of
+such employee and the obligations of the process serving agency under city, state and federal law.
+Such statement of rights and obligations shall include, but not be limited to, a general description of
+employee rights and employer obligations pursuant to laws regarding minimum wage, overtime and
+hours of work, record keeping, social security payments, unemployment insurance coverage, disability
+insurance coverage and workers' compensation;
+(d) Keep on file in its principal place of business for a period of three (3) years a statement for each
+employee, signed by such employee, indicating that the employee read and understood the statement
+of rights and obligations such employee received pursuant to subdivision (c) of this section.
+5
+§ 20-406.3. Records, Audits.
+a. Every process server and process serving agency licensed under this subchapter shall retain records in
+compliance with section 89-cc of the New York state general business law for no less than seven (7)
+years of each process served. Such records shall be retained in electronic form. Tampering with any
+such electronic records shall be prohibited.
+b. A process server licensed under this subchapter who engages in the business of serving process
+exclusively as an employee of a process serving agency licensed under this subchapter shall not be
+subject to the provisions of subdivision (a) of this section, but shall be required to comply with all
+other applicable laws.
+c. The commissioner shall conduct audits of the information required to be kept pursuant to subdivision
+(a) of this section in order to monitor compliance with this subchapter. The commissioner shall
+conduct annual audits, of the information required to be kept pursuant to subdivision a, for at least 20
+percent of the licensed process servers who have certified, pursuant to subdivision d, having served at
+least one summons, subpoena, notice, citation or other process, directing an appearance or response to
+a legal action, legal proceeding or administrative proceeding that is subject to the provisions of section
+110 of the civil court act.
+d. By February 1, 2020 and every six months thereafter, each licensed process server shall submit
+electronically to the commissioner a certification, in a form to be determined by the commissioner,
+stating whether the licensed process server has served at least one summons, subpoena, notice, citation
+or other process, directing an appearance or response to a legal action, legal proceeding or
+administrative proceeding that is subject to the provisions of section 110 of the civil court act within
+the immediately prior semi-annual calendar year period.
+§ 20-406.4. Educational Materials.
+The commissioner shall develop educational materials to be provided to all process servers and process
+serving agencies licensed under this subchapter. Such materials shall at a minimum identify the laws and
+regulations pertaining to service of process in the city of New York.
+§ 20-407. Fee; Term.
+The biennial license fee to be paid by such persons shall be three hundred forty dollars.
+§ 20-408. Rules and Regulations.
+The commissioner may make and promulgate such rules and regulations as he or she may deem necessary
+for the proper implementation and enforcement of this subchapter.
+§ 20-409. Issuance, Renewal, Suspension and Revocation of a License.
+a. A license issued hereunder may be suspended or revoked or its renewal denied by the commissioner at
+any time for the failure of the licensee to comply with any rule, regulation or order promulgated by the
+commissioner. Where a license is suspended or revoked or its renewal denied for the reasons set forth
+in this section, where a penalty is issued pursuant to section 20-409.1 or where such license holder is
+otherwise disciplined by the commissioner, the commissioner shall post to the department’s website
+and notify all process serving agencies of the suspension, revocation or denial of renewal of such
+license, the issuance of a penalty pursuant to section 20-409.1 and the reasons for such suspension,
+revocation or denial of renewal or issuance of such penalty. Such notification and posting shall occur
+no more than five days from the date the department has suspended, revoked or denied renewal of
+such license, or issued such penalty.
+6
+b. In addition to any of the powers that may be exercised by the commissioner pursuant to this
+subchapter and chapter one of this title, the commissioner, after notice and an opportunity to be heard,
+may refuse to issue or renew, or may suspend or revoke, a license required under this subchapter if the
+applicant or licensee, or any of its principals, officers or directors, or any of its stockholders owning
+more than ten percent of the outstanding stock of the corporation has been convicted of a crime which,
+in the judgment of the commissioner, has a direct relationship to such person's fitness or ability to
+perform any of the activities for which a license is required under this subchapter or has been
+convicted of any other crime which, in accordance with article twenty-three-a of the correction law,
+would provide a justification for the commissioner to refuse to issue or renew, or to suspend or revoke,
+such license.
+c. Upon application for renewal of a license issued pursuant to this subchapter, applicants subject to
+subdivision (a) of section 20-406.3 of this subchapter shall certify in writing compliance with the
+record keeping provisions of such section.
+§ 20-409.1. Violations and Penalties.
+Any person who, after notice and hearing shall be found guilty of violating any provision of this
+subchapter, shall be punished in accordance with the provisions of chapter one of this title and shall be
+subject to a penalty of not less than seven hundred dollars nor more than one thousand dollars for each
+violation.
+§ 20-409.2. Civil Cause of Action.
+Any person injured by the failure of a process server to act in accordance with the laws and rules
+governing service of process in New York state, including this subchapter and regulations promulgated
+thereunder, shall have a cause of action against such process server and process serving agency, which
+distributed or assigned process for service, in any court of competent jurisdiction for any or all of the
+following relief:
+a. compensatory and punitive damages, provided that punitive damages shall only be awarded in the case
+of willful failure to serve process;
+b. injunctive and declaratory relief;
+c. attorneys' fees and costs; and
+d. such other relief as a court may deem appropriate.
+§ 20-409.3. Reporting.
+Twenty-four months after the local law that added this section becomes effective, the commissioner shall
+submit a report to the speaker of the council regarding the effectiveness of these provisions on effectuating
+proper service and improving oversight over the process service industry. Such report shall include,
+among other things, the results of audits the commissioner has completed of process servers and process
+serving agencies, including information regarding their compliance with the provisions of this subchapter.
+§ 20-410. Electronic Record of Service.
+A process server licensed pursuant to this subchapter shall carry at all times during the commission of his
+or her licensed activities and operate at the time process is served or attempted an electronic device that
+uses a global positioning system, wi-fi device or other such technology as the Commissioner by rule shall
+prescribe to electronically establish and record the time, date, and location of service or attempted service.
+All records created by such electronic device shall be maintained in an electronic database by the process
+server, or if such process server is acting exclusively as an employee of a process service agency, by the
+process service agency, for seven (7) years from the date such record is created.
+7
+RULES OF THE CITY OF NEW YORK
+TITLE 6: DEPARTMENT OF CONSUMER AND WORKER PROTECTION
+CHAPTER 2: LICENSES
+SUBCHAPTER W: PROCESS SERVERS
+§ 2-231. Definitions.
+For the purposes of the application of Subchapter 23 of Chapter 2 of Title 20 of the Administrative Code, the
+following definitions apply, unless the context indicates otherwise.
+Bound paginated volume. “Bound paginated volume” means a book or ledger that at the time of purchase contains
+a specified number of unfolded sheets of paper or other material that are permanently secured to covers by stitching,
+glue or any other such method that is calculated to make readily discernible the removal or insertion of one or more
+sheets after the first use of such volume and that that each page in such book or ledger is sequentially numbered
+starting with the number “1” or contains an indelible label stating the number of pages the volume originally
+contained.
+Chronological. “Chronological” with respect to the notation in a process server record or log means that each
+notation must be entered sequentially according to the time and date of the activity recorded and without leaving
+any blank spaces between each entry that would allow for the insertion of any additional notation between any two
+entries.
+Conspicuous service delivery. “Conspicuous service delivery” means, if permissible by law (e.g., CPLR § 308 or
+RPAPL § 735): affixing the process to the door of either the actual place of business, dwelling place or usual place
+of abode within the state of the person to be served; or affixing a copy of the notice and petition upon a conspicuous
+part of the property sought to be recovered or placing a copy under the entrance door of such premises.
+Contemporaneous. “Contemporaneous” in relation to entries in records means at or near the time of the event as to
+which an entry is recorded, or within a reasonable time thereafter.
+Corporate service. “Corporate service” means service of process on a domestic or foreign corporation in
+accordance with the provisions of CPLR § 311 or RPAPL § 735; or governmental subdivision (including the City of
+New York) in accordance with the provisions of CPLR § 311; or a domestic or foreign limited liability company in
+accordance with the provisions of CPLR § 311-a; or the state in accordance with the provisions of CPLR § 307.
+Department. “Department” means the New York City Department of Consumer and Worker Protection.
+Engaged in the business of serving. “Engaged in the business of serving” means the following:
+(1) Service of five or more processes within the City of New York in any one calendar year; or
+(2) One who assigns, distributes, or delivers processes to another for actual service.
+Image file. “Image file” in relation to scans of the records kept by process servers or process serving agencies
+means a file that contains graphic data such that the file is an exact replica of a specific set of data and is saved as a
+portable data file (“pdf”).
+Legible. “Legible” with respect to the handwriting in the record kept by process servers and in the scanned or
+copied images of such record means easily read and discernible in all of its details, and in no way obscured.
+8
+Partnership service. “Partnership service” means service of process on persons conducting a business as a
+partnership in accordance with the provisions of CPLR § 310, or on a domestic or foreign limited partnership in
+accordance with the provisions of CPLR § 310-a.
+Person. “Person” means any individual, firm, company, partnership, corporation, association or other organization.
+Personal delivery service. “Personal delivery service” means delivering process within the state to the individual
+intended to be served process.
+Portable media device. “Portable media device” as it pertains to electronic record-keeping means an electronic
+data storage device used to record and store data, such as a flash memory device, CD-ROM or external hard drive.
+Process. “Process” means a summons, notice of petition, order to show cause, subpoena, notice, citation or other
+legal paper issued under the laws of the State of New York directing an appearance or response to a legal action,
+legal proceeding or administrative proceeding; provided, however, that if under the laws of the State of New York
+the mailing of such legal paper is sufficient to effect service, such legal paper will not be process for the purpose of
+this subchapter.
+Process Server. “Process Server” means a person engaged in the business of serving process upon any person,
+corporation, governmental or political subdivision or agency.
+Process Serving Agency. “Process serving agency” means any person, firm, partnership, association or
+corporation, other than an attorney or a law firm located in this state, or city marshal, who maintains an office,
+bureau or agency, one purpose of which is to assign or distribute process to individual process servers for actual
+service in the City of New York.
+Scanning. “Scanning” in relation to electronic record-keeping means the process of translating a document into a
+digital form that can be recognized by a computer. A “scan” with respect to electronic record-keeping is the image
+file that is created by scanning.
+Substituted service. “Substituted service” means delivering process within the state to an individual of suitable age
+and discretion at the actual place of business, dwelling place or usual place of abode of the individual to be served;
+or, as applicable, on an individual of suitable age and discretion who resides or is employed at the property sought
+to be recovered.
+VTL service. “VTL service” means delivering process intended to be served on: (1) a non-resident by service on
+the Secretary of State as permitted by and in accordance with the provisions of Vehicle and Traffic Law § 253; or
+(2) residents who departs from the state or on residents’ executors or administrators who are nonresidents or who
+depart from the state as permitted and in accordance with the provisions of Vehicle and Traffic Law § 254.
+§ 2-232. License Requirement Exceptions.
+(a) No license under Subchapter 23 of Chapter 2 of Title 20 of the Administrative Code is required of any
+employee of any city, state or federal department or agency, who is acting within the scope of his
+employment.
+(b) No license under Subchapter 23 shall be required of any attorneys duly admitted to practice in the
+State of New York.
+(c) No license under Subchapter 23 shall be required of any employee of a process server or attorney who
+does not actually serve process.
+(d) The provisions of Subchapter 23 shall only apply to service of process within the City of New York.
+9
+§ 2-232a. Surety Bond Requirements for Process Server and Process Serving Agencies.
+(a) The surety bond required under Section 20-406.1 of the Administrative Code shall be paid in full and
+must be effective for the entire term of the license.
+(b) If a process server or process serving agency's surety bond lapses for any reason, the license issued
+pursuant to Section 20-403 of the Administrative Code shall become void for such process server or
+process serving agency.
+§ 2-232b. Employee Exemption from Bond.
+(a) Any process server seeking exemption from the bond requirement pursuant to Section 20-406.1(a) of
+the Administrative Code because he or she serves process exclusively as an employee of a licensed
+process serving agency shall furnish to the Department upon application or renewal, a certification
+from the licensed process serving agency for which he or she works in a form approved by the
+Commissioner that affirms that
+(1) the process server serves process exclusively as an employee of the process serving agency;
+(2) the bond that the licensed process server agency has furnished to the commissioner is conditioned
+upon the process server's compliance with the laws and rules governing the activities of a process
+server and upon the further conditions set forth in Section 20-406.1(a) of the Administrative
+Code; and
+(3) the process serving agency acknowledges that it must notify the Department in writing within five
+(5) days of the date that the process server ceases to serve process exclusively as an employee of
+the process serving agency.
+(b) The process server or the process serving agency shall provide additional documentation that the
+Department may seek regarding the process server's employee status.
+§ 2-232c. Process Server Trust Fund.
+(a) Establishment. There is hereby established a Process Server Trust Fund (hereinafter, “the Fund”) to
+provide for the payment of outstanding awards to aggrieved consumers and fines owed to the City.
+The Fund will be administered by the Comptroller of the City of New York pursuant to §93(h) of the
+New York City Charter.
+(b) Participation in the Fund.
+(1) To qualify for participation in the Fund, an applicant for a process server license or renewal
+therefore must submit with such server's application a copy of its completed application to two
+sureties approved by the Commissioner for the bond required by § 20-406.1 of the Administrative
+Code of the City of New York and the original copies of the rejection or denial of such application
+by such sureties. Pursuant to such section, process serving agencies are not eligible to participate
+in the Fund.
+(2) Any process server who qualifies for participation in the fund may participate by submitting with
+the application for a process server license or renewal thereof a certified check or money order in
+the amount $1,000, made payable to the New York City Department of Consumer and Worker
+Protection for depositing the amount in such Fund.
+(3) A bonded licensee may participate in the Fund in lieu of continued compliance with the bond
+requirement of §20-406.1(a) of such Code by submitting proof that consists of an original copy
+from the process server's current surety denying renewal and the completed applications and
+original denials from two additional sureties approved by the Commissioner, and upon submitting
+to the Department a certified check or money order in the amount of $1,000 made payable to the
+New York City Department of Consumer and Worker Protection, prior to the expiration or
+cancellation of the licensee's bond.
+(4) The required deposit to be made by applicants to participate in the Fund may not be refundable
+upon the issuance of a process server license. If the Department denies issuance of a license or
+10
+renewal thereof, the deposit made by the applicant must be refunded within thirty days after the
+application for a license or renewal thereof is denied.
+(5) Participation in the Fund does not relieve a licensee of any obligation to pay awards or fines
+imposed by the Department or judgments or arbitration awards rendered against the licensee by a
+court of competent jurisdiction. In the event that a process server's license is revoked, surrendered
+or the process server fails to renew its license, and the Fund is invaded to pay an award, fine or
+judgment that was rendered against such process server pursuant to the provisions of the Code or
+these rules, no license may be issued or reinstated to such process server unless the amount(s)
+paid out of the Fund on behalf of such process server is reimbursed by such process server in full.
+(c) Invasion of the Fund.
+(1) If the Department has revoked a process server's license or the licensee has surrendered or failed
+to renew the license, the Commissioner may require that disbursements be made from the Fund to
+pay to the City any fine, penalty or other obligation the City imposes relating to the violation of
+subchapter 23 of Chapter 2, Title 20 of the Administrative Code of the City of New York and any
+rules promulgated thereunder or to pay a final outstanding judgment recovered in an action arising
+out of the violation of the provisions of such subchapter.
+(2) No disbursement may be made from the Fund to pay an award, fine or judgment that is rendered
+against a licensee who has furnished a bond pursuant to the requirements of § 20-406.1(a) of the
+Administrative Code of the City of New York or against a process server who was not licensed by
+the Department or a participant in the Fund at the time of the violation.
+(3) Disbursement from the Fund may be made at the discretion of the Commissioner or his or her
+designee, provided, however, that invasion of the fund must be limited to no more than $10,000
+for all awards, fines or judgments arising out of a single service of process.
+(4) The Commissioner or his or her designee may order that partial payment of awards, fines, or
+judgments be made from the Fund.
+(5) Nothing contained herein may be construed to limit the rights and remedies of any party,
+including the Department, to pursue a cause of action against a process server who is a participant
+in the Fund.
+(6) Nothing contained herein may be construed to provide for the payment of awards or judgments
+rendered against Fund participants in personal injury actions.
+(d) Accounting. The Commissioner must, by January 31 of each year, cause an accounting to be made of
+all of the Fund's activities during the preceding calendar year.
+§ 2-232d. Testing.
+Every person who applies for a process server license or renewal thereof shall be required to pass an
+examination prior to being issued a license or renewal. Such examination shall test the applicant or
+licensee's knowledge regarding proper service of process within the city of New York and familiarity with
+relevant laws and rules. The fee for this examination will be $75 and is not refundable. An applicant who
+fails the exam on the first attempt may take the examination a second time without an additional fee. After
+the second successive failure, the applicant's application or renewal will be denied and he or she must
+reapply for a process server license.
+§ 2-233. Records.
+(a) Duty of individual process server to keep records. Each process server must maintain records of all
+service made by them in compliance with the provisions of section 89-cc of the New York General
+Business Law and section 20-406.3 of chapter 20 of the Administrative Code of the City of New York, as
+follows:
+11
+(1) Maintenance of records of service. Process servers must maintain records of all service and
+attempted service by keeping bound paginated volumes or by storing electronic records with a third party
+contractor.
+(i) Bound paginated volumes. Where a process server maintains records in bound paginated
+volumes, the process server must record each entry separately in chronological order contemporaneous
+with service or attempted service. The process server must make entries in only one volume at a time,
+which must contain every attempted and effected service made by the process server, until all of the
+available space in the volume is filled. A process server who maintains records in bound paginated
+volumes must also maintain an electronic copy of such volumes by scanning records into an image file
+that legibly reproduces in all details the original record the process server maintains in bound paginated
+volumes. Such electronic record must be kept as follows:
+(A) the image file must be named with the date of the service or attempted service
+recorded in the bound paginated volume and the process server's license number, and must be
+date and time stamped with the date and time that the file was created; and
+(B) such scanning must be done within three business days from the last event
+recorded in the records; and
+(C) the process server must save the scanned image file in a manner that:
+(I) ensures the authenticity, reliability and integrity of the scanned image file;
+(II) permits the efficient retrieval of the scanned image file;
+(III) contains a backup support system such that the scanned image file must be
+capable of being reconstructed if an electronic or computer malfunction or unforeseen
+incident resulting in the destruction of the system or the information contained therein;
+and
+(D) where the process server stores scanned image files on a portable media device,
+such portable media device must be labeled with the process server's last name, license number
+and the date range of the records stored on the device;
+(ii) Electronic records with a third party contractor. Where a process server maintains
+electronic records with a third party contractor, the process server must submit recorded entries in
+chronological order to such contractor within three business days of service or attempted service. The
+process server must enter a contract with a contractor pursuant to which such contractor must be required
+to provide services and perform functions consistent with 6 RCNY § 2-233(c), provided, however, the
+process server may use the services and functions for electronic record storage that a process serving
+agency has made available to process servers under a contract with a third party contractor.
+(2) Content of records of service. Each record of service and attempted service must include, at a
+minimum, the following information:
+(i) name of the process server, which will be entered as last name, first name, provided, however,
+that where a process server keeps records in bound paginated volumes, the name of such
+12
+process server may be entered on the first page of each bound paginated volume, rather than
+each record;
+(ii) the license number of the process server, which will be specified as a seven-digit number,
+where the first number must be zero if the process server's license number is less than seven
+digits, provided, however, that where a process server keeps records in bound paginated
+volumes, the license number of such process server may be entered on the first page of each
+bound paginated volume, rather than each record;
+(iii) the name and license number of the process serving agency from whom the process served
+was received, or, if not received from a process serving agency, of such other person or firm
+from whom the process served was received;
+(iv) whether service was effected, as indicated by a Y for yes or N for no;
+(v) the title of the action or proceeding or a reasonable abbreviation thereof;
+(vi) the name of the intended recipient of the process, which must be entered in two data fields
+such that the first data field is the last name of the intended recipient, or, if not a natural
+person, the name of the entity, and the second data field is the first name of the intended
+recipient if a natural person;
+(vii) the name of the individual to whom process was delivered, which must be entered in two data
+fields such that the first data field is the last name of the individual, and the second data field
+is the first name of the individual;
+(viii) the date that service was attempted or effected, which must be entered as MM/DD/YYYY;
+(ix) the time service was attempted or effected, which must be entered as military time;
+(x) the address where service was attempted or effected, which must be entered in five different
+fields: the first field will be for the building number; the second field will be for the street
+name; the third field will be for address details, e.g., apartment, suite, floor or room number;
+the fourth field will be for the city or borough; and the fifth field will be for the ZIP code;
+(xi) the nature of the papers served;
+(xii) the court in which the action has been commenced, which must be entered as either Civil
+Court NYC, Civil Supreme, Criminal, Housing (L/T), or District Court, followed by the
+county of the court, the judicial department if appellate, or the federal district;
+(xiii) the full index number, which must be entered with all information necessary to identify the
+case, such as XXXXX/XX, unless the case is a Civil Local matter, in which case, it will
+include the prefix of CV, CC, LT, MI, NC, RE, SC, or TS;
+(xiv) if service was effected pursuant to subdivisions (1) through (3) of CPLR § 308, a description
+of the person served which must consist of seven fields, including sex, color of skin, hair
+color, approximate age, height, weight, and any other identifying features provided by the
+process server;
+(xv) the type of service delivery, which must be entered as a P for personal delivery service, an S
+for substituted service, a C for conspicuous service delivery, a CO for corporate service, a PA
+for partnership service, and a V for VTL service;
+(xvi) if service was effected pursuant to subdivision (4) of CPLR § 308 or subdivision (1) of
+RPAPL § 735, a description of the door and the area adjacent including the color and
+composition of hallway walls, color and composition of hallway floor or doorstep, and
+location of premises in relation to stairs, elevator or entranceway;
+(xvii) if service is effected pursuant to RPAPL § 735(1) using registered or certified mail, the postal
+receipt number of registered or certified mail; and
+13
+(xviii) if an affidavit or affirmation of service is filed with the court by the process server, the record
+shall include the date of such filing.
+(b) Duty of licensed process serving agencies to keep records. Every process serving agency must keep
+complete and accurate records for each individual process server to whom it assigns or distributes process to
+be served. Such records must be kept in a searchable manner that permits ready identification of (i) the daily
+activity of each such individual process server and (ii) any or all process assigned or distributed for service by
+the name of the person or entity from whom the process serving agency received such papers for service.
+(1) Maintenance of records. Process serving agencies must maintain electronic records by copying
+records to an electronic records management system or by submitting records to a third party
+contractor.
+(i) Electronic records management system. If the process serving agency elects to store
+records itself rather than through a third party contractor, it must save the record to an
+electronic records management system within three business days from the last event
+recorded in the record. Such electronic records management system must maintain
+electronic records, including the required records described in 6 RCNY § 2-233(b)(2), in a
+manner that:
+(A) ensures the authenticity, reliability and integrity of the electronic records;
+(B) permits the efficient retrieval of electronic records;
+(C) contains a backup support system such that the electronic records must be capable of
+being reconstructed if an electronic or computer malfunction or unforeseen incident
+results in the destruction of the system or the information contained therein.
+(ii) Third party contractor. Where a process serving agency maintains its records with a third
+party contractor, the process serving agency must submit records to such contractor within
+three business days from the last event recorded in the record. The process serving agency
+must enter into a contract with such contractor pursuant to which such contractor must be
+required to provide services and perform functions consistent with 6 RCNY § 2-233(c).
+(2) Required records. Process serving agencies must maintain, at a minimum, the following records:
+(i) An electronic file that legibly reproduces the original record of service or attempted service
+containing all of the individual process server’s records maintained pursuant to 6 RCNY §
+2-233(a) of this rule for each day on which the individual process server attempted or
+effected service of the process assigned or distributed to the individual process server by
+the process serving agency;
+(ii) A copy of every routing sheet, work order or other written instruction given to the
+individual process server;
+(iii) Copies of any notes, memoranda or other writings submitted by the individual process
+server containing information related to the attempted or effected service of process
+assigned by the process serving agency;
+(iv) A copy of every affidavit of service and affirmation of service signed by the individual
+process server for service assigned by the process serving agency;
+(v) if an affidavit or affirmation of service is filed with the court by the process serving agency,
+the record must also include the date of such filing.
+(c) Storage of records with a third party contractor. Where a process server or process serving agency uses
+a third party contractor to maintain records consistent with 6 RCNY § 2-233(a)(1)(ii) or 6 RCNY § 2-
+233(b)(1)(ii), respectively, such process server or process serving agency must enter a contract with such
+contractor pursuant to which such contractor must be required to provide services and perform functions
+that include, but are not limited to:
+14
+(1) maintain a daily backup of all submitted data, and ensure all data is available for review upon
+request of any and all interested parties;
+(2) maintain the original electronic record submitted by the process server unaltered for a period of
+not less than seven years;
+(3) prohibit the process server, the process serving agency, or any person to alter the original record;
+(4) maintain the records in a manner that will permit retrieval by the DCWP license number of the
+process server, the DCWP license number of the process serving agency that has distributed the
+process for service, the name of the plaintiff or petitioner, the name of the defendant or
+respondent, the docket number (if any), the name of the person to whom process is delivered and
+a unique file identifier of the process being served;
+(5) maintain the records in a manner that will ensure that their integrity is adequate for admissibility
+in a judicial proceeding under the rules of evidence applicable in the state of New York;
+(6) provide a backup support system such that the electronic records must be capable of being
+reconstructed if an electronic or computer malfunction or unforeseen incident results in the
+destruction of the system or the information contained therein;
+(7) produce upon request by the Department, a copy of the electronic records, or any reasonably
+described part involved, certified to be true and accurate;
+(8) produce to the Department upon request the electronic records containing required information set
+forth in 6 RCNY § 2-233(a)(2) in the format provided by the Department on its website.
+(d) Integrity of records. Corrections to bound paginated volumes and electronic records with a third party
+contractor must be made only as follows:
+(1) Bound paginated volumes. A process server may make corrections in bound paginated volumes
+only by drawing a straight line through the inaccurate entry and clearly printing the accurate
+information directly above the inaccurate entry. All other methods of correction, including but not
+limited to erasing, opaquing, obliterating or redacting, are prohibited.
+(2) Electronic records with a third party contractor. A process server and process serving agency
+must ensure that permissions pertaining to electronic records submitted to a third party contractor
+will be secured so that the data cannot be deleted upon submission to such contractor. No process
+server or process serving agency may tamper with data or properties of any electronic record kept
+pursuant to this section after a file is made by modifying, amending, deleting, rearranging or in
+any other way altering any such data or properties including, but not limited to, using a meta data
+scrubber or similar device or program. If a typographical error has occurred or if data contained in
+the process server or process serving agency’s record was accidentally omitted from the electronic
+data entry, the process server or process serving agency must promptly make an amendment to
+their records of service with the third party contractor. A process server who attempted or effected
+process may make other corrective amendment, or supplement (such as concerning filing or
+additional mailing), to the record of service with the third party contractor. Any amendment must
+be made by creating a new entry in which the original record must be identified by reference in
+italics within the new entry.
+(e) Retention and production of records.
+(1) Process servers and process serving agencies must retain all records required to be maintained
+pursuant to this section for a period of seven years from the date of service. Where a process
+server is employed as a process server by any person, a copy of such records must also be
+maintained by such person at such person’s principal office for the same period;
+15
+(2) Upon request by the Department, process servers and process serving agencies must produce a
+copy of any record they are required to maintain pursuant to this section, or any reasonably
+described part involved, certified to be true and accurate;
+(3) Except where a process server maintains records in bound paginated volumes, process servers
+must produce, upon request by the Department, the information required to be maintained
+pursuant to 6 RCNY § 2-233(a)(2) in the format provided by the Department on its website;
+(4) Upon request by the Department, process serving agencies must produce the information required
+to be maintained pursuant to 6 RCNY § 2-233(a)(2) in the format provided by the Department on
+its website.
+§ 2-233b. Electronic Record of Service/GPS Requirements.
+(a) General Requirements for GPS. A process server licensed pursuant to this subchapter must comply
+with the requirement of section 20-410 of the Code to carry at all times during the commission of their
+licensed activities, and operate at the time process is served or attempted, a device to establish
+electronically and record the time, date, and location of service or attempted service as follows:
+(1) Equipment.
+(i) The process server must obtain a mobile device, such as a telephone or personal
+digital assistant, that utilizes the software necessary to make an electronic record of
+the location where, and the time and date when, the record is made as determined by
+Global Positioning System (“GPS”) technology or Assisted-Global Positioning
+System (“A-GPS”) technology, and labels the record with the network date and time
+maintained by the mobile device, the DCWP license number of the process server, the
+DCWP license number of the process serving agency that has distributed the process
+for service, the name of the plaintiff or petitioner, the name of the defendant or
+respondent, the docket number (if any), the name of the person to whom process is
+delivered and a unique file identifier of the process being served.
+(ii) The mobile device must be equipped with the software necessary to make an
+electronic record of the location where and time and date when the record is made, as
+determined by triangulated cell tower signals, if at the time of the effected or
+attempted service of process a GPS signal is not available.
+(iii) The mobile device software must automatically add that location, time and date
+information to the electronic record as soon as a GPS or cellular signal reaches the
+device if neither a GPS nor a cellular signal is present at the time the process server
+causes the electronic record to be made.
+(2) Operation of Equipment.
+(i) On every occasion that a process server attempts or effects service of process, the
+process server must ensure that the mobile device makes an electronic record of the
+GPS location, time and date of the attempted or effected service immediately after
+attempting or effecting service. If no GPS signal is available at the time of attempted
+or effected service of process, the location, time and date will be determined by
+triangulated cell tower signals. The process server is not in compliance with this
+provision if its electronic record was made before the time of attempted or effected
+service. There shall be a rebuttable presumption that the process server was not in
+compliance with this provision if its electronic record is made more than five minutes
+after the time of attempted or effected service.
+(ii) [Reserved.]
+(iii) Each electronic record must include, at a minimum, the following information:
+16
+(a) a unique file identifier of the process being served;
+(b) the name of the plaintiff or petitioner;
+(c) the name of the defendant or respondent;
+(d) the full index number, entered with all information necessary to identify the case,
+such as XXXXXX/XX, unless the case is a Civil Local matter, in which case, it will
+include the prefix of CV, CC, LT, MI, NC, RE, SC, or TS;
+(e) the date that service was effected or attempted according to GPS or cellular signals,
+entered as MM/DD/YYYY;
+(f) the time that service was effected or attempted according to GPS or cellular signals
+entered as military time:
+(g) the location where service was effected or attempted, which must include building
+number, street name, address details, e.g., apartment, suite, floor or room number,
+city or borough, ZIP code, which must be five digits, and latitudinal and longitudinal
+coordinates returned by the GPS device in decimal degree format;
+(h) the name of the person to whom process is delivered;
+(i) the DCWP license number of the process server; and
+(j) the DCWP license number of the process serving agency that distributed the process
+for service
+(3) Contract for Services. The process server must enter into a contract with an independent third
+party who will provide services and perform functions described in paragraph (4) of this
+subdivision that enable the process server to meet the data storage and retrieval requirements
+set forth in such paragraph (“the GPS Contractor”), provided, however, that if the process
+server performs process serving activities distributed to them by a licensed process serving
+agency, the process server may utilize the device and facilities for the electronic record of
+service that the process serving agency obtains under a contract with a GPS Contractor.
+(4) Data Storage and Retrieval. The electronic record must be automatically transmitted
+electronically from the mobile device to the GPS Contractor as soon as a GPS or cellular signal
+is available and location, date and time are entered into the electronic record. The GPS
+Contractor must store the electronic record according to the following terms:
+(i) the original digital file must be maintained by the GPS Contractor unaltered for a
+period of not less than seven years;
+(ii) neither the process server nor the process serving agency will be permitted to alter the
+original data, but may obtain copies of the original data file;
+(iii) the GPS Contractor must maintain the records in a manner that will permit retrieval
+by the DCWP license number of the process server, which will be specified as a
+17
+seven-digit number, where the first number must be zero if the process server's
+license number is less than seven digits, the DCWP license number of the process
+serving agency from whom the process served was received, or, if not received from a
+process serving agency, the name of such other person or firm from whom the
+process served was received, the name of the plaintiff or petitioner, the name of the
+defendant or respondent, the docket number (if any), the name of the person to whom
+process is delivered and a unique file identifier of the process being served;
+(iv) the GPS Contractor must maintain the records in a manner that will ensure that their
+integrity is adequate for admissibility in a judicial proceeding under the rules of
+evidence applicable in the state of New York;
+(v) the GPS Contractor must produce upon request by the process server or the
+Department, and to any other party according to an appropriate order or subpoena, a
+copy of the electronic records, or any reasonably described part involved, certified by
+the GPS Contractor to be true and accurate;
+(vi) the GPS Contractor must provide to the process server or the Department upon
+request a street map in hard copy format and access to an interactive electronic street
+map that display the locations where the digital records were recorded with a date and
+time provided by GPS or cellular date and time;
+(vii) the GPS Contractor must provide to the process server or the Department upon
+request, and to any other party according to an appropriate order or subpoena, the
+process server’s electronic record in the format provided by the Department on its
+website.
+(b) Provision of Equipment and Services by Process Serving Agency. A process serving agency licensed
+according to this subchapter may provide to licensed process servers the device and services required
+by subparagraph (a) according to a contract with an independent third party. For purposes of this Rule,
+a third party will not be considered independent if any officer or owner of ten percent or more of the
+shares of the licensed process serving agency has any interest, direct or indirect, in the third party.
+(c) Report to Department.
+(1) Within sixty days after the effective date of this Rule a licensed process server must submit to
+the Department in a form approved by the Commissioner a certification that he or she has
+secured the contract required by this Rule and identifying the name, address and account
+number of the GPS Contractor(s) providing the required device and services. After sixty days
+after the effective date of this Rule, no process server license will be issued or renewed unless
+the applicant submits such a certificate.
+(2) A licensed process server must submit to the Department an amended certification within two
+days of entering into a contract with a different GPS Contractor.
+(3) In place of submitting the certificates required by the preceding provisions, the licensed
+process server may submit a certification in a form approved by the Commissioner affirmed by
+an owner or officer of a licensed process serving agency that the device and services the
+process server is required to obtain are provided by the agency under a contract with an
+independent third party.
+(d) Compliance with all laws. Compliance with the requirements of this Rule does not relieve a licensed
+process server of the obligation to make or maintain records required by any other federal, state, or
+local law, rule or regulation.
+18
+§ 2-234. Duty to Comply with Law.
+The licensee shall at all times strictly and promptly conform to all laws, rules, regulations and
+requirements of the federal, state and municipal authorities relating to the conduct of licensees and the
+service of process in the State of New York and the preparation, notarization and filing of affidavits of
+service; and the preparation and filing of affirmations of service and other documents now in force or
+hereafter adopted during any license period.
+§ 2-234a. Duties of Process Serving Agencies.
+(a) Assignment of Process to Individual Process Servers. A process serving must not assign or distribute
+process for service to an individual process server who:
+(1) is not licensed to serve process;
+(2) has not complied with the requirements of Section 20-406.1 of the Administrative Code;
+(3) does not display integrity and honesty in his or her process serving activities; and
+(4) does not comply with the recordkeeping requirements applicable to the service of process in
+the City of New York, including maintaining an electronic record of service.
+(b) Compliance Plan. A process serving agency must develop and implement policies and procedures set
+forth in a written Compliance Plan to ensure that an individual process server acts with integrity and
+honesty and complies with the recordkeeping requirements applicable to process servers. Such
+Compliance Plan, must include, but not be limited to, the following requirements for process serving
+agencies:
+(1) The process serving agency must take appropriate disciplinary action against an individual
+process server who fails to comply with the law, including, but not limited to, suspending or
+terminating its employment, agency or other relationship with the individual process server;
+(2) To ensure each process server's compliance with recordkeeping requirements, the process
+serving agency must:
+(i) at least once each month, review for completeness and accuracy the records of each
+individual process server to whom it assigns or distributes process;
+(ii) prepare a monthly written report of its review of the records maintained pursuant to
+section 2-233 of these Rules of each individual process server to whom it assigns or
+distributes process during that month;
+(iii) maintain each monthly report for at least seven years;
+(iv) maintain records of any disciplinary actions taken against the individual licensed
+process server;
+(v) report to the Department in writing the name and license number of each individual
+licensed process server who does not comply with the law governing process servers
+within ten (10) days of learning of such non-compliance;
+(vi) make available, upon request, to the Department a copy of its record review
+procedures, any written reports of the reviews it maintains, and copies of any referrals
+of individual process servers to the Department.
+(c) Implementation Affirmation. A process serving agency in possession of a license issued by the
+Department on the effective date of this Rule must submit an affirmation to the Department that it has
+adopted a written Compliance Plan within sixty (60) days of such effective date. After the effective
+day of this Rule, no license will be issued or renewed until the process serving agency files with the
+Department an affirmation that it has adopted a Compliance Plan.
+(d) Persons to Whom the Agency Assigns Service.
+(1) A process serving agency must notify the Department in a manner designated on its website at
+the time of the process serving agency’s application or renewal, or at such times as requested
+by the Department of:
+19
+(i) the names, addresses, and Department license numbers of each process server who
+serves process exclusively as an employee of the process serving agency; and
+(ii) the names, addresses, and Department license numbers of each process server who
+serves process on behalf of the process serving agency.
+(2) If additional process servers are assigned process by the process serving agency or a new
+process server is hired to serve process exclusively as an employee of the process serving
+agency after the date of such application or renewal, the licensee must notify the Department in
+a manner designated on its website within five (5) days of the new assignment or employee
+with the names, addresses and Department license numbers of such additional process servers.
+(3) If a process server ceases to serve process exclusively as an employee of a process serving
+agency after the date of such application or renewal, the process serving agency must notify the
+Department in a manner designated on its website within five (5) days that the process server
+ceases to serve process exclusively as an employee with the name, address and Department
+license number of such process server.
+(4) The process serving agency must advise the Department of any process server who is
+misrepresenting his or her license status or his or her compliance with the requirements of
+Section 20-406.1 of the Administrative Code.
+§ 2-234b. Duty of Process Servers to Report Agencies That Assign Service.
+(a) A process server must notify the Department in a manner designated on its website of the name and
+license number of the process serving agency for whom he or she serves process exclusively as an
+employee when applying for a license or renewal thereof.
+(b) A process server must notify the Department in a manner designated on its website of when he or she
+ceases to exclusively serve process as an employee of a process serving agency within five (5) days that
+he or she ceases such employment. The process server must include the name and license number of any
+other process serving agency that he serves process exclusively as an employee.
+(c) When applying for a license or renewal thereof, a process server must notify the Department in a manner
+designated on its website of the name and license number of every process serving agency which he or
+she has reason to believe assigns process for service to the applicant.
+(d) A process server applying for a renewal of a licensee must notify the Department in a manner designated
+on its website of the name and license number of every process serving agency from which it has
+accepted assignment of service of process within the previous two years.
+(e) A process server must keep a list of the name and address of each process serving agency that assigns
+service to the process server. The process server must maintain the list for seven years and produce it
+upon request by the Department.
+20
+§ 2-235. Preparation of Affidavits of Service or Affirmations of Service
+(a) A licensee may not sign an affirmation of service or notarize or cause to be signed or notarized an
+affidavit of service until all factual averments have been set forth. The licensee must include their
+license number on all affidavits of service and affirmations of service signed by them. On each
+affidavit of service and affirmation of service, the licensee must: (1) specify the papers served; the
+person who was served; the individual who was delivered service; the date, time and address or place
+of service; and the manner of service; and (2) set forth facts showing that service was made in an
+authorized manner. A process server purporting to serve a business entity by delivery of papers to an
+individual that the process server, upon personal knowledge, avers in the affidavit of service or
+affirmation of service to be the “agent,” “managing agent” or “general agent,” or other individual
+authorized to accept service, also must state in the affidavit of service or affirmation of service, at a
+minimum: (1) that the process server inquired if that individual was authorized to accept service and
+received an affirmative response; (2) that the process server inquired of the individual their name and
+job or responsibilities and the individual’s responses; and (3) facts confirming or explaining the
+statement that the process server knew the individual served was the type of agent specified in the
+affidavit of service or affirmation of service. The licensee must maintain a copy of each affidavit of
+service and affirmation of service for at least seven years in electronic form or as a paper copy.
+(b) A licensee must not make any false statement in an affidavit of service or affirmation of service.
+(c) The commissioner may deny any license application or refuse to renew any license, and, after due
+notice and opportunity to be heard, may suspend or revoke such license, if the applicant or person
+holding such license, or where applicable, any of its officers, principals, directors, members,
+managers, employees, or stockholders owning ten percent or more of the outstanding stock of the
+corporation, has been found, in connection with the applicant’s or licensee’s business, to have made a
+false statement in an affirmation of service or affidavit of service.
+§ 2-235a. Duty to Testify Truthfully
+(a) A licensee may not make any other false statement orally or in writing under oath or affirmation
+before any court, body, agency, public servant, or other person authorized by law to administer an
+oath, where the false statement is material to the action, proceeding or matter in which it is made.
+(b) The commissioner may deny any license application or refuse to any license, and, after due notice and
+opportunity to be heard, may suspend or revoke such license, if the applicant or person holding such
+license, or where applicable, any of its officers, principals, directors, members, managers, employees,
+or stockholders owning ten percent or more of the outstanding stock of the corporation, has been
+found, in connection with the applicant’s or licensee’s business, to have made such a false statement.
+§ 2-236. Duty to Report Hearings Contesting Service.
+(a) Whenever a process server or process serving agency receives any type of notice, including an oral
+communication, that a court has scheduled a hearing to determine whether service of process made or
+assigned by such licensee was effective, the licensee must submit a report to the Department in the
+manner designated by the Department on its website within ten days of receiving such notice. Such
+written report must include:
+(1) the title and index number of the action;
+(2) the court and the judge before whom the hearing is scheduled;
+(3) the date(s) of the hearing; and
+(4) the name and license number of every licensee who effected service or assigned or distributed
+the process for service.
+21
+(b) On request, such licensee must provide copies of all records, including but not limited to, routing
+sheets, the pages of the licensee's logbook for each day on which service of the process in issue was
+attempted or effected, and all affidavits of service and affirmations of service, pertaining to the
+contested service.
+(c) (1) The licensee must attempt to learn the result of such hearing, including any judicial order or
+voluntary settlement resolving the challenge to service of process, by making a written or email
+request to the party on whose behalf the challenged service of process was made or the party's attorney
+for a written report of the result of the hearing. Sixty days after the date of the scheduled hearing, if the
+party or its attorney has not provided to the licensee a written report of the result of such hearing, the
+licensee must search for the result in the file in the office of the clerk of the court where such hearing
+was scheduled to occur. If the clerk's file does not contain a result sixty days after the hearing, the
+licensee must search for the result in the clerk's file ninety days after the scheduled date of such
+hearing.
+(2) The licensee must report to the Department in the manner designated by the Department on its
+website (i) within ten days of learning the result, or (ii) that it made attempts to learn the result and
+was unable to do so not later than one-hundred days after the scheduled date of such hearing.
+§ 2-237. Wearing of Insignia Prohibited.
+No licensee while serving process shall wear or display any badge, insignia, shield, medal, decoration or
+facsimile thereof.
+§ 2-238. Use of Zip Codes.
+All copies of process mailed pursuant to the requirements of CPLR § 308(4) or RPAPL § 735(1) must
+include on the envelope as part of the address the proper ZIP code of the person served.
+§ 2-239. Use of Email.
+All process servers and process serving agencies must provide to the Department a regularly used email
+address. The Department may send licensing documents and subpoenas, notices, requests, or other
+communications to such address.
+§ 2-240. Audits.
+(a) Pursuant to subdivision c of section 20-406.3 of the Administrative Code, the Department may audit
+any process server that has served at least one summons, subpoena, notice, citation or other process,
+directing an appearance or response to a legal action, legal proceeding or administrative proceeding that
+is subject to the provisions of section 110 of the civil court act. In conducting such an audit, the
+Department may issue a subpoena by email to a process server for the period identified by the
+Department in such subpoena for the following records no longer than two months:
+(1) Records that a process server is required to maintain pursuant to 6 RCNY § 2-233(a);
+(2) Affidavits of service and affirmations of service filed with a court by a process server or on
+behalf of a process server related to service;
+(3) Records of the GPS location, time and date of attempted or effected service of process made
+pursuant to 6 RCNY § 2-233b(a)(2); and
+(4) Documents sufficient to identify all traverse hearings scheduled to occur, whether or not held,
+by any court, including courts outside of New York City, concerning process served or
+attempted to be served, and any result of such hearings.
+(b) Records described by paragraphs one through three of subdivision a of this section must be produced
+in electronic form, unless otherwise specified by the Department, and records described by paragraph
+four of subdivision a of this section may be produced in paper or electronic form. Records described in
+paragraph two of subdivision a of this section must be produced in chronological order.
+22
+(c) A process server must comply with each document production demand in a subpoena from the
+Department within 20 days of the date on which the subpoena was issued, provided that the monetary
+penalties authorized by 6 RCNY § 6-30 for violation of 6 RCNY § 2-240 will not apply while such
+subpoena is the subject of a pending judicial proceeding. Each failure to comply with a document
+production demand in a subpoena is a separate violation.
+(d) By February 1st and August 1st of each calendar year, a process server must submit, by electronic
+means, a certification to the Department stating whether it has served at least one summons, subpoena,
+notice, citation or other process, directing an appearance or response to a legal action, legal proceeding
+or administrative proceeding that is subject to the provisions of section 110 of the civil court act in the
+most recent six-month period, as follows: the February 1st certification must cover the six-month
+period from July through December of the previous year; the August 1st certification must cover the
+six-month period from January through June of the current year.
+(e) Nothing in this section limits the Department’s authority to request or inspect records or information
+pursuant to any other provisions of law or rule, including, but not limited to, the Commissioner’s
+authority to conduct audits of process servers and process serving agencies pursuant to the first
+sentence of subdivision c of section 20-406.3 of the Administrative Code.
+(f) A process server or process serving agency must produce each subpoenaed or requested document and
+record they are required to maintain pursuant to law or rule, even where they maintain their records
+with a third party. Each failure to comply is a separate violation.
+New York City Laws and Rules
+New York City Administrative Code and Rules regarding License
+Enforcement
+NEW YORK CITY ADMINISTRATIVE CODE
+TITLE 20: CONSUMER AND WORKER PROTECTION
+CHAPTER 1: LICENSE ENFORCEMENT
+§ 20-101. Legislative Intent.
+The council finds that for the protection and relief of the public from deceptive, unfair and unconscionable
+practices, for the maintenance of standards of integrity, honesty and fair dealing among persons and
+organizations engaging in licensed activities, for the protection of the health and safety of the people of
+New York city and for other purposes requisite to promoting the general welfare, licensing by the
+department of consumer and worker protection is a necessary and proper mode of regulation with respect
+to certain trades, businesses and industries. The council finds further that, in order to secure the above-
+mentioned purposes, and generally to carry out responsibilities for supervising and regulating licensed
+activities, trades, businesses and industries, the commissioner of consumer and worker protection requires
+powers, remedies and sanctions which are equitable, flexible and efficient. Finally, the council finds that
+23
+sanctions and penalties applied by the commissioner and by the courts for the violation of laws and
+regulations by individuals and organizations engaging in various licensed activities, trades, businesses and
+industries, must be sufficient to achieve these above-mentioned purposes of licensing.
+§ 20-102. Definitions.
+Wherever used in this title:
+a. "Commissioner" shall mean the commissioner of consumer and worker protection.
+b. "Department" shall mean the department of consumer and worker protection.
+c. "License" shall mean an authorization by the department of consumer and worker protection to carry
+on various activities within its jurisdiction, which may take the form of a license, permit, registration,
+certification or such other form as is designated under law, regulation or rule.
+d. "Organization" shall mean a business entity, including but not limited to a corporation, trust, estate,
+partnership, cooperative, association, firm, club or society.
+e. "Person" shall mean a natural person or an organization.
+f. "Trade name" shall mean that name under which an organization or person solicits, engages in,
+conducts or transacts a business or activity.
+§ 20-103. Construction of this Chapter and Chapter Two of this Title.
+The provisions of this chapter and chapter two of this title shall be liberally construed in accordance with
+the legislative declaration of the city council set forth in section 20-101.
+§ 20-104. Powers of the Commissioner with Respect to Licensing.
+a. The commissioner shall have cognizance and control of the granting, issuance, transferring, renewal,
+denial, revocation, suspension and cancellation of all licenses issued under chapter two and under all
+other laws conferring such powers upon him or her. The commissioner or the commissioner's designee
+shall collect all fees for all such licenses and permits and shall otherwise enforce the provisions of
+chapter two.
+b. The commissioner shall, as he or she determines necessary and appropriate, promulgate, amend and
+rescind regulations and rules:
+1. to carry out the powers and duties of the department;
+2. to prevent and remedy fraud, misrepresentation, deceit and unconscionable dealing, and to
+promote fair trade practices by those engaging in licensed activities;
+3. to require adequate disclosure by those engaging in licensed activities of both the terms and
+conditions under which they perform licensed activities, adequate disclosure of the true names
+or true corporate names of licensees, and adequate disclosure of applicable local, state and
+federal law pertinent to consumers' interests regarding the conduct of activities licensed under
+chapter two;
+4. to require that licensees keep such records as he or she may determine are necessary or useful
+for carrying out the purposes of chapter two and, except as specifically set forth in chapter two,
+retain them for three years;
+5. to ensure that all persons and organizations licensed under this title have made appropriate
+financial disclosure, and that the premises complies with all legal requirements necessary to
+engage in the licensed activity;
+6. with respect to licensed activities, to protect the health, safety, convenience and welfare of the
+general public; and
+7. to ensure that those engaging in licensed activities do not discriminate against any person on
+the basis of age, sex, race, color, national origin, creed or religion in violation of city, state or
+federal laws.
+c. The commissioner shall compile all regulations and rules promulgated by the department and maintain
+a copy thereof, available for public inspection at his or her principal office at such times as that office
+24
+shall be open for business. A record of each license issued indicating its kind and class, the license
+number, the fee received therefor and such other records as the commissioner may require shall be
+kept by the department.
+d. The commissioner or the commissioner's designee shall be authorized to conduct investigations, to
+issue subpoenas, to receive evidence, to hear complaints regarding activities for which a license is or
+may be required, to take depositions on due notice, to serve interrogatories, to hold public and private
+hearings upon due notice, to take testimony and to promulgate, amend and modify procedures and
+practices governing such proceedings.
+e. (1) The commissioner shall be authorized, upon due notice and hearing, to suspend, revoke or
+cancel any license issued by him or her in accordance with the provisions of chapter two and to
+impose or institute fines or civil penalties for the violation of (i) any of the provisions of chapter two
+of this title and regulations and rules promulgated under chapter two of this title and (ii) any of the
+provisions of any other law, rule or regulation, the enforcement of which is within the jurisdiction of
+the department including but not limited to subchapter one of chapter five of this title (the consumer
+protection law) subchapter two of chapter five (the truth in-pricing-law); provided that such violation
+is committed in the course of and is related to the conduct of the business, trade or occupation which is
+required to be licensed pursuant to chapter two of this title. Except to the extent that dollar limits are
+otherwise specifically provided such fines or civil penalties shall not exceed five hundred dollars for
+each violation.
+(2) The commissioner may arrange for the redress of injuries caused by such violations, and
+may otherwise provide for compliance with the provisions and purposes of chapter two of this title.
+(3) The commissioner or the commissioner's designee shall be authorized to suspend the license
+of any person pending payment of such fine or civil penalty or pending compliance with any other
+lawful order of the department.
+(4) The commissioner shall be authorized to impose a fine or civil penalty or to suspend a
+license or both for a failure to appear at a hearing at the department after due notice of such hearing. If
+a license has been suspended, it shall be returned to the department forthwith upon receipt of the order
+of suspension. Failure to surrender the license shall be grounds for a fine or civil penalty or revocation
+of the license.
+(5) Any of the remedies provided for in this section shall be in addition to any other remedies
+provided under any other provision of law.
+f. The commissioner, upon due notice and hearing, may require that persons licensed under chapter two
+of this title who have committed repeated, multiple or persistent violations of chapter two or any other
+law, rule or regulation the enforcement of which is within the jurisdiction of the department,
+conspicuously display at their place of business and in advertisements a notice (of a form, content and
+size to be specified by the commissioner), which shall describe the person's record of such violations;
+provided that, for each time such display is required, the commissioner may require that such notice be
+displayed for not less than ten nor more than one hundred days.
+g. The commissioner may refuse to issue or renew any license issued in accordance with the provisions
+of chapter two of this title and may suspend or revoke any such license, after due notice and
+opportunity to be heard, upon the occurrence of any one or more of the following conditions:
+1. Two or more judgments within a two-year period against the applicant or licensee for theft of
+identity as defined in section three hundred eighty-s of the general business law; or
+2. One criminal conviction against the applicant or licensee for acts of identity theft or unlawful
+possession of personal identification information as defined in article one hundred ninety of the
+penal law; or
+3. Two or more criminal convictions within a two-year period of any employees or associates of
+the applicant or licensee for acts of identity theft or unlawful possession of personal
+identification information as defined in article one hundred ninety of the penal law that are
+committed with the use of the applicant's or licensee's equipment, data, technology, or other
+25
+similar resource. It shall be an affirmative defense that a applicant or licensee did not have
+reasonable grounds to believe the proscribed acts were taking place with the use of the
+licensee's equipment, data, technology, or other similar resource or that the proscribed acts
+were not taking place with the use of the applicant's or licensee's equipment, data, technology,
+or other similar resource.
+§ 20-105. Additional Powers of Commissioner with Respect to Unlicensed Activities.
+a. It shall be unlawful for any person required to be licensed pursuant to the provisions of chapter two or
+pursuant to provisions of state law enforced by the department to engage in any trade, business or
+activity for which a license is required without such license.
+b. In addition to the enforcement procedures set forth in section 20-106 of this chapter, the commissioner
+after notice and a hearing shall be authorized:
+1. to impose fines upon any person in violation of subdivision a of this section of one hundred
+dollars per violation per day for each and every day during which such person violates such
+subdivision, with each day constituting a distinct and independent violation. Except as
+otherwise expressly provided in chapter two of this title, fines imposed pursuant to this
+paragraph shall be in addition to, and shall not be offset or modified by, any fines or civil
+penalty prescribed by chapter two of this title.
+2. to order any person in violation of subdivision a of this section immediately to discontinue
+such activity at the premises on which such activity is occurring.
+3. to order that such premises on which such activity is occurring be sealed, provided that such
+premises are primarily used for such activity.
+4. to order that any devices, items or goods sold, offered for sale available for public use or
+utilized in the operation of a business and relating to such activity for which a license is
+required but has not been obtained pursuant to the provisions of chapter two shall be removed,
+sealed or otherwise made inoperable.
+c. Orders of the commissioner issued pursuant to this subdivision shall be posted at the premises on
+which unlicensed activity occurs in violation of this section.
+d. Orders of the commissioner issued pursuant to paragraph two, three or four of subdivision b of this
+section shall be stayed with respect to any person who, prior to service of the notice provided in
+subdivision b of this section, had submitted a full and complete application in proper form and
+accompanied by the requisite fee for a license or the renewal of a license while such application is
+pending.
+e. Ten days after the posting of an order issued pursuant to paragraph two, three or four of subdivision b
+of this section and upon the written directive of the commissioner, officers and employees of the
+department and officers of the New York city police department are authorized to act upon and
+enforce such orders.
+f. Any devices, items or goods removed pursuant to the provisions of subdivision b of this section shall
+be stored in a garage, pound or other place of safety and the owner or other person lawfully entitled to
+the possession of such devices, items, or goods may be charged with reasonable costs for removal and
+storage payable prior to the release of such devices, items or goods to such owner or such other
+person.
+g. The commissioner shall order that any premises which are sealed pursuant to this section shall be
+unsealed and that any devices, items or goods removed, sealed or otherwise made inoperable pursuant
+to this section shall be released, unsealed or made operable upon:
+1. payment of all outstanding fines and all reasonable costs for removal and storage, and
+2. presentation of proof that a license has been obtained for such activity or, if such person or
+premises are for any reason ineligible to obtain a license, proof satisfactory to the
+commissioner that such premises, devices, items or goods will not be used in violation of this
+section.
+26
+h. It shall be a misdemeanor for any person to remove the seal on any premises or remove the seal or
+make operable any devices, items or goods sealed or otherwise made inoperable in accordance with an
+order of the commissioner.
+i. The owner or other person lawfully entitled to reclaim the devices, items or goods removed pursuant
+to this section shall reclaim such devices, items or goods. If such owner or such other person does not
+reclaim such devices, items or goods within ninety days of their removal, such devices, items or goods
+shall be subject to forfeiture upon notice and judicial determination in accordance with provisions of
+law. Upon forfeiture the department shall, upon a public notice of at least five days, sell such forfeited
+devices, items or goods at public sale. The net proceeds of such sale, after deduction of the lawful
+expenses incurred, shall be paid into the general fund of the city.
+j. In the event that any removal made pursuant to this section shall include any perishable items, goods
+or food products which cannot be retained in custody without such items, goods or food products
+becoming unwholesome, putrid, decomposed or unfit in any way, they may be delivered to the
+commissioner of health for disposition pursuant to the provisions of section 17-323 of this code.
+k. The provisions of this section shall not be construed to apply to general vendors required to be
+licensed pursuant to subchapter twenty-seven of chapter two of this title.
+§ 20-106. Judicial Enforcement.
+a. Except as otherwise specifically provided in chapter two of this title, or in subdivision b of this
+section, any person, whether or not he or she holds a license issued under chapter two, who violates
+any provision of chapter two or any regulation or rule promulgated under it shall, upon conviction
+thereof, be punished for each violation by a fine of not less than twenty-five dollars nor more than five
+hundred dollars, or by imprisonment not exceeding fifteen days, or both; and any such person shall be
+subject also to a civil penalty in the sum of one hundred dollars for each violation, to be recovered in a
+civil action.
+b. Any person who engages without a license therefor in an activity for which a license is required by
+any provision of chapter two, shall, upon conviction thereof, be subject to the following sanctions:
+1. If he or she has never held a license for such activity, he or she shall be subject to a fine of not
+less than twenty-five dollars, nor more than five hundred dollars, or by imprisonment not
+exceeding fifteen days, or both; and any such person shall be subject also to the payment of a
+civil penalty in the sum of the greater of twice the applicable license fee or one hundred
+dollars, to be recovered in a civil action.
+2. If he or she has never held a license for such activity, and has been convicted once previously
+for engaging in such activity without a license, or if he or she has held such license and his or
+her license has lapsed prior to such person's perfecting an application for a renewal, he or she
+shall be subject to a fine of not less than one hundred dollars nor more than one thousand
+dollars, or by imprisonment not exceeding thirty days, or both; and he or she shall be subject
+also to civil penalty in the sum of one thousand dollars, to be recovered in a civil action.
+3. If such person has held such a license, but his or her license has been suspended or revoked, or
+he or she has twice previously been convicted of engaging in such activity without a license, he
+or she shall be subject to a fine of not less than two hundred dollars nor more than two
+thousand dollars, or by imprisonment not exceeding sixty days, or both; and he or she shall be
+subject also to a civil penalty in the sum of two thousand dollars, to be recovered in a civil
+action.
+c. Every manager or proprietor of a business required to be licensed under chapter two who consents to,
+causes or allows that business to operate without a license and every person aiding such unlicensed
+business and every owner or lessee of any building, part of building, grounds, room or place, who
+leases or lets the premises for the operation of any unlicensed business or assents that the premises be
+used for any such purpose, is in violation of this title and shall be subject to a penalty of one hundred
+27
+dollars per day for every day during which the unlicensed business operates. This penalty shall be
+prosecuted, sued for and recovered in the name of the city.
+d. The corporation counsel is authorized to bring an injunction proceeding to restrain or enjoin any
+violation of this title.
+§ 20-107. Application; Filing Fee; License Fee.
+a. All applications for licenses shall be made to the commissioner or the commissioner's designee in such
+form and detail as shall be prescribed.
+b. Except as specifically provided in chapter two, every application shall include the license fee for the
+full license term. If the license is not issued, the lesser of fifty dollars or one-half of the amount of the
+annual license fee shall be retained by the department as a non-returnable filing fee. In the event a
+license is issued for less than the full license term, the applicable fee shall be decreased
+proportionately to the nearest half year, except that in no case shall the fee be less than the fee for one-
+half year. Where a two year license is surrendered for a reason other than suspension or revocation and
+less than one year of the license term has expired, the licensee may apply for a refund of an amount
+equal to one year's license fee.
+c. Except as otherwise specifically provided for in chapter two, reference to fees, license fees or any
+other word of similar import shall be deemed to be the license fee for one year. Notwithstanding any
+inconsistent provision of this section, whenever the commissioner increases or decreases the term of a
+type of license pursuant to section 20-108 of this chapter, the fee for such license shall be increased or
+decreased proportionately and the amount of refund due upon surrender of such license before the
+expiration of the term for a reason other than suspension or revocation shall be prorated to the
+unexpired term.
+§ 20-108. License Terms.
+a. The commissioner shall establish by regulation the expiration date of licenses issued pursuant to
+chapter two.
+b. Licenses issued pursuant to chapter two shall be for a two-year term unless otherwise specifically
+provided for in chapter two; provided, however, that whenever the commissioner changes the
+expiration date of a type of license pursuant to subdivision a of this section, he or she may also increase
+or decrease the term of such type of license by rule to the extent necessary to effectuate the change.
+§ 20-109. Transferability.
+No license issued under chapter two shall be assignable or transferable unless otherwise specifically
+provided by law or regulation or rule issued by the commissioner.
+§ 20-110. Change of Corporate Ownership.
+Where any person or organization becomes the beneficial owner of ten percent or more of the stock of an
+organization to which a license has been granted pursuant to chapter two, if such person or organization
+previously did not hold at least a ten percent interest, such license shall immediately become void unless
+prior written approval of the commissioner or the commissioner's designee is obtained.
+§ 20-111. Change in a Partnership.
+Any license issued under chapter two shall immediately become void upon the addition or termination of
+any general partner or upon the dissolution of a partnership unless prior written approval of the
+commissioner or the commissioner's designee is obtained.
+§ 20-112. Address of Licensed Activity.
+Except as specifically provided in chapter two, a license shall be valid only for the location designated
+upon the application therefor, except in the case of licenses issued for activities which in their nature are
+28
+carried out at large and not at a fixed place of business. No license shall be issued for more than one
+location. Licensees shall, at least ten days prior thereto, notify the commissioner or the commissioner's
+designee by registered or certified mail, or personal service, of any change of address of the licensed
+premises or of the residence of the licensee.
+§ 20-113. Trade Name.
+A license issued under chapter two shall be valid only for activities conducted under the name of the
+person or organization to whom such license was issued or under the trade name stated in the application
+therefor; if a licensed activity is to be conducted under a trade name, the application must state that trade
+name. No license shall be issued for more than one trade name, and no licensed activity may be carried out
+under more than one such name; provided, however, that if a person or organization was engaged in bona
+fide licensed activities under more than one such trade name or was issued a license to conduct licensed
+activities under more than one trade name prior to June fifth, nineteen hundred seventy-three, a single
+license shall be issued for such trade names. Licensees shall notify the commissioner or the
+commissioner's designee of any change of trade name at least ten days before such change becomes
+effective, and no such change may take place without the prior written approval of the commissioner or
+the commissioner's designee.
+§ 20-114 Inspection; display of license.
+a. All licensed vehicles or places of business shall be regularly inspected, and reports thereof shall be
+made to the commissioner.
+b. All licensees shall conspicuously post on their premises, licenses issued under chapter two and said
+licenses shall be accessible at all times for inspection by any interested person. Licensees having no
+fixed place of business shall exhibit their licenses upon the request of any interested person.
+§ 20-115. Bonds.
+Except as specifically provided in chapter two, a bond may be required for any licensed activity in a form
+and amount approved by the commissioner for the due observance of the provisions of chapter two and the
+laws, regulations and rules governing the conduct of licensed activities. The amount of the bond shall be
+established by the commissioner after a public hearing, five-day notice of which shall be published in the
+City Record.
+§ 20-116. Advertising.
+a. Any person required to be licensed under chapter two or pursuant to provisions of state law enforced
+by the department to carry on a trade, occupation or business activity, who is not so licensed may not
+advertise the availability of goods and services related to the carrying on of such trade, occupation or
+business activity in any print publication or broadcast media having a circulation or audience within
+the city.
+b. The commissioner after notice and hearing shall be authorized to impose civil penalties upon any
+person found to have violated subdivision a of this section. Such penalties shall be levied for each
+broadcast of such advertisement and shall be not less than fifty dollars nor more than two hundred fifty
+dollars for each violation. Such penalties for printed advertisements shall be determined based on the
+period of time the publication in which the advertisement appears remains current. The current period
+shall be determined as that time when a publication is initially offered for sale until the period when
+the next dated publication is offered for sale. In no case shall this period be less than twenty-four
+hours. If the current period is: daily, such penalty shall be not less than fifty dollars nor more than one
+hundred dollars per day; weekly, such penalty shall be not less than two hundred fifty dollars nor more
+than three hundred fifty dollars per week; greater than one week and not more than one month, such
+penalty shall be not less than three hundred fifty dollars nor more than five hundred dollars; greater
+29
+than one month, such penalty shall be not less than five hundred dollars nor more than one thousand
+dollars. Such civil penalties may be recovered in a civil action before any court having jurisdiction of
+such actions.
+c. The commissioner shall promulgate regulations requiring that any person required to be licensed under
+this title or pursuant to provisions of state law enforced by the department shall state in all print
+advertising with respect to such licensed activity the license number, and that the activity is licensed
+by the department.
+§ 20-117 Licensee disclosure of security breach; notification requirements.
+[Repealed by Local Law 80 of 2021, effective 11/15/2021]
+§ 20-118 Notifications regarding identity theft.
+[Repealed by Local Law 80 of 2021, effective 11/15/2021]
+§ 20-119 Penalties.
+(a) Except as otherwise provided in this section and this chapter, any person who violates any provision of
+this chapter or any rules promulgated pursuant to this chapter shall be subject to a civil penalty of: (i)
+one hundred seventy-five dollars for the first violation (ii) three hundred dollars for the second
+violation committed; and (iii) five hundred dollars for the third and any subsequent violation
+committed.
+(b) Any person who violates section 1-21 of title 6 of the rules of the city of New York, or any successor
+to such provision, shall be subject to a civil penalty of five hundred dollars.
+30
+31
+RULES OF THE CITY OF NEW YORK
+TITLE 6: DEPARTMENT OF CONSUMER AND WORKER PROTECTION
+CHAPTER 1: LICENSE ENFORCEMENT
+§ 1-01. Fingerprinting.
+(a) The Department may require applicants to appear in person at the Department or a location designated
+by the Department to be fingerprinted. This requirement applies to: an individual, if the applicant is an
+individual; the general partners, if the applicant is a partnership; the officers, directors and
+stockholders owning more than ten percent of the stock of the corporation ("principal stockholders"),
+if the applicant is a corporation; and the members, if the applicant is a limited liability company.
+(b) The Commissioner may, in his or her discretion, waive the fingerprint requirement if a person required
+to be fingerprinted is unavailable, or for other good cause shown.
+§ 1-01.1. Applications.
+(a) No applicant for a license or a renewal thereof shall fail to provide complete and truthful responses to
+all the information requested on an application for such license or renewal thereof and any documents
+related thereto.
+(b) No applicant for a license or a license renewal shall conceal any information, make a false statement
+or falsify or allow to be falsified any certificate, form, signed statement, application or report required
+to be filed with an application for a license or license renewal to be issued by the department.
+(c) Unless otherwise provided by law or rule, no applicant for a license or renewal thereof, or licensee,
+including the general partners, officers, directors, members, and principal stockholders of such
+applicant or licensee, whose application or renewal thereof is denied or whose license is revoked by
+the Department may submit a new application for the same license for a period of 12 months from the
+date the initial application or renewal was denied or the license was revoked. This subsection shall
+only apply if the initial application or renewal was denied, or the license was revoked, because the
+applicant or licensee concealed information, made a false statement, or falsified or allowed to be
+falsified any certificate, form, signed statement, application or report required to be filed with an
+application for a license that is to be issued by the Department or for a renewal thereof.
+(d) The commissioner may deny any license application or refuse to renew any license, and may, after due
+notice and opportunity to be heard, suspend or revoke such license, if the applicant or person holding
+such license, or where applicable, any of its officers, principals, directors, members, managers,
+employees, or stockholders owning ten percent or more of the outstanding stock of the corporation,
+has been found to have violated subdivisions a or b of this section in connection with the application
+or licensed business.
+§ 1-02 Term and Expiration Date of Licenses.
+(d) The licenses and permits listed below expire on the dates indicated:
+License Date (years refer to calendar years)
+Booting of Motor Vehicles December 31 of Odd Years
+Debt Collection Agency January 31 of Odd Years
+Electronic or Home Appliance Service Dealers June 30 of Even Years
+Electronic Stores December 31 of Even Years
+Employment Agency May 1 of Even Years
+Garage, Parking Lot March 31 of Odd Years
+32
+Home Improvement Contractor February 28 of Odd Years
+Horse Drawn Cab March 31 of Even Years
+Horse Drawn Cab Driver May 31 of Even Years
+Laundry – Retail, Industrial, and Industrial Delivery December 31 of Odd Years
+Locksmith; Locksmith Apprentice May 31 of Odd Years
+Process Server February 28 of Even Years
+Products-for-the-Disabled Dealer March 15 of Odd Years
+Secondhand Dealer July 31 of Odd Years
+Sightseeing Bus March 31 of Even Years
+Sightseeing Guide March 31 of Even Years
+Stoop Line Stand March 31 of Even Years
+Storage Warehouse April 1 of Odd Years
+Towing Vehicles Company April 30 of Even Years
+Towing Vehicles Driver October 31 of Even Years
+(b) General vendor licenses are valid for one year. Such licenses shall expire September 30 of each year.
+(c) Newsstand licenses are valid for a two year term and shall expire on either March 31 or September 30
+and in either odd or even numbered years, depending on the date designated in the license document.
+(d) [Reserved.]
+(e) [Reserved.]
+(f) Pedicab business licenses and pedicab driver licenses are valid for one year. Pedicab business licenses
+shall expire November 1 of each year and pedicab driver licenses shall expire April 30 of each year.
+(g) Car wash licenses are valid for a two year term and shall expire October 31 of odd-numbered years.
+(h) In all instances where the license expiration dates differ from those in existence prior to the effective
+date of this section, or amendments thereto, the License Issuance Division of the Department shall
+make appropriate adjustments.
+§ 1-03. Display of License Sign.
+(a) Every licensee must post conspicuously at the licensee’s place of business the license sign provided by
+the Department that includes the license information, instructions on contacting the Department to file
+a complaint, and other important information for consumers as the Department deems appropriate. A
+licensee may post a copy of such sign at the licensee’s place of business only if the original is
+available at such place of business for inspection by any person. A licensee having no fixed place of
+business must exhibit his or her license upon the request of any person.
+(b) [Reserved.].
+§ 1-04. Making False Representations and Altering or Falsifying Department Documents.
+(a) No licensee or employee or agent of such licensee shall make a false representation to the Department
+or falsify or allow to be falsified any certificate, form, signed statement, application or report required
+to be filed with the Department.
+(b) No licensee or employee or agent of such licensee shall forge, counterfeit, alter, fabricate, or falsely
+make any document issued by the Department or purported to be issued by the Department, including,
+but not limited to, Department licenses, permits, and letterhead.
+33
+(c) No licensee or employee or agent of such licensee shall use, attempt to use, possess, obtain, accept,
+receive, or provide to another any document prohibited by subdivision b of this section.
+(d) The commissioner may deny any license application or refuse to renew any license, and may, after due
+notice and opportunity to be heard, suspend or revoke such license, if the applicant or person holding
+such license, or where applicable, any of its officers, principals, directors, members, managers,
+employees, or stockholders owning ten percent or more of the outstanding stock of the corporation,
+has been found to have violated subdivisions a, b, or c of this section in connection with the
+application or licensed business.
+§ 1-05. License Number in Advertisements and Other Printed Matter.
+Any advertisement, letterhead, receipt, online media, website, electronic advertisement, or other printed or
+electronic matter of a licensee must contain the license number assigned to the licensee by the
+Department. If a licensee uses email to communicate with consumers, the licensee's email must contain
+the license number assigned to the licensee by the Department. The license number must be clearly
+identified as a New York City Department of Consumer Affairs license number and must be disclosed and
+disseminated in a lawful manner. Any telephone listing consisting solely of the name, address, and
+telephone number of the licensee need not specify the licensee's license number. Licensees holding
+licenses for more than one location must also include their respective license number(s) clearly identified
+as New York City Department of Consumer Affairs license number(s) on all correspondence and other
+matter which contains or makes reference to one or more of such licensees' licensed location(s).
+§ 1-06. Proof of Surety Bond.
+No license or renewal shall be issued unless the licensee or applicant submits proof that every bond
+required by the Department for the license is in effect and does not expire prior to the end of the licensing
+period. Except where otherwise provided, all such bonds must allow any person aggrieved by the
+bondholder's breach of the conditions of the bond to proceed against the bond.
+§ 1-07. Liability Insurance.
+Every licensee required to have liability insurance must obtain a liability insurance policy that obligates
+the insurer to notify the License Issuance Division of the Department if the policy is canceled or if the
+insured fails to renew 30 days prior to the expiration of the policy.
+§ 1-08. Change of Address.
+A licensee shall notify the Department in writing of any change of address within 10 days of the change.
+This requirement applies to the address of the licensed business, and to the residence addresses of:
+individual licensees; all partners of partnership licensees; and the officers and principal stockholders of
+corporate licensees.
+§ 1-09. Late Renewal.
+(a) Except as provided in subdivision (b), any application for a license renewal that is filed sixty days or
+more after the expiration date of such license shall be treated as a new license application.
+(b) Any application for renewal of a license subject to Emergency Executive Order number 107 of 2020,
+received by the Department within 60 days of the effective date of this subdivision, will be treated as a
+renewal application.
+§ 1-10. Lost or Mutilated Licenses and License Plates and Lost or Stolen Records.
+(a) Lost License or License Plate. A licensee shall immediately report, in an affidavit, the loss of a license
+or license plate issued to him or her by the Department, requesting the issuance of a new license or
+plate. Replacement licenses and plates are issued at the discretion of the Department.
+34
+(b) Mutilated License or License Plate. Should a license or license plate issued by the Department to any
+licensee become mutilated or otherwise illegible, the holder of the license or plate shall promptly
+surrender it to the Department and request the issuance of a new license or plate. The request shall be
+made upon a form provided by the Department.
+(c) Fee. A fee of fifteen dollars ($15) shall be charged for the issuance of a replacement license, and a fee
+of twenty-five dollars ($25) shall be charged for the issuance of a replacement license plate. This fee
+must be paid when the affidavit for a lost license or plate is filed or when a mutilated or otherwise
+illegible license or plate is surrendered and a request for the issuance of a new license or plate is filed.
+This fee will be refunded should the Department decide not to issue the replacement license or plate.
+This fee shall not be charged if the license or license plate is not received by the licensee and the
+Department receives a certification from the licensee that such license or license plate was not
+received within 30 days of the license or license plate being issued.
+(d) Lost or Stolen Records. A licensee shall report to the Department, in an affidavit, the loss or theft of
+any records required to be maintained by it under Chapters 1 and 2 of Title 20 of the New York City
+Administrative Code, within ten calendar days of such loss or theft.
+§ 1-11. Dishonored Check Fee.
+Any licensee or license applicant who, in payment of a license fee, renewal fee, fine or other fee or charge
+assessed by the Department, tenders or causes to be tendered to the Department a check or other item that
+is subsequently dishonored, shall pay to the Department, in addition to any other fees or penalties
+provided by law, the amount of any fee for a dishonored check or other item that is charged to the
+Department for such check or item.
+§ 1-12. Compliance with the Consumer Protection Law.
+[Repealed City Record 2/24/2020, effective 3/25/2021]
+§ 1-13. Response to Complaints.
+A licensee or license applicant must respond in writing to the Department about any complaint sent to the
+licensee or applicant by the Department. The response must be made within 20 days of the date the
+complaint is sent to the licensee or applicant and must set forth the licensee's or applicant's position
+regarding the transaction which is the subject of the complaint, including the facts which the licensee or
+applicant believes justify its position. The licensee or applicant must also provide with its response any
+documents in its possession related to the transaction which is the subject of the complaint. The licensee
+or applicant must respond to subsequent communications from the Department concerning the complaint
+within 10 days after receiving a communication. The Department may rely on any complaint, regardless of
+whether it has been resolved, or any response to such complaint, in any subsequent Department action,
+including, but not limited to, decisions to deny, suspend, or revoke an application or license.
+§ 1-14. Requests for Documents, Subpoenas, Interrogatories, and Notices of Deposition.
+(a) This section applies to requests for documents, subpoenas, interrogatories, or notices of depositions
+issued to licensees or applicants pursuant to Section 2203 of the Charter, title 20 of the New York City
+Administrative Code, or any other provisions of law or rule within the jurisdiction of the Department.
+(b) A licensee must reply to a subpoena, a request for documents or interrogatories within twenty days of
+the date the request was mailed or otherwise served upon the licensee.
+(1) If the licensee fails to respond to a subpoena, a request for documents or interrogatories, the
+licensee is liable for a separate violation for each day the licensee fails to respond to the
+requests.
+(2) If the licensee provides an incomplete response to a subpoena, a request for documents or
+interrogatories, the Department may send a deficiency letter to the licensee. If the licensee does
+35
+not provide a complete response within 14 days of the deficiency letter being sent, the licensee
+is liable for a separate violation for each day the licensee fails to provide a complete response.
+If the licensee provides an incomplete response to a subpoena, a request for documents or
+interrogatories, or to a subsequent deficiency letter, there will be a presumption that the
+licensee has neglected to respond to each such subpoena, request for documents, interrogatory,
+or deficiency letter unless the licensee states that the licensee has no responsive documents to
+that particular request or no information responsive to that particular interrogatory.
+(3) Licensees must include a notarized certification that each subpoena, request for documents or
+interrogatory was answered fully and truthfully, accompanying their response. Responses to a
+subpoena, request for documents or interrogatories will not be deemed complete until they are
+accompanied by such certification.
+(c) A licensee must appear at a time and place designated by the Department for a deposition. Failure to
+appear for a noticed deposition will be grounds for revocation of the licensee's license upon notice and
+opportunity to be heard. If the licensee is an individual, he or she must appear; if a partnership, one of
+its general partners with relevant knowledge of the partnership must appear; and if a corporation or
+limited liability company, one of its members or officers with relevant knowledge of the corporation
+must appear.
+(d) The Department may serve subpoenas, interrogatories, requests for documents, and notices of
+deposition upon an applicant regarding materials related to a license or renewal application. Failure by
+the applicant to fully respond to a subpoena, interrogatories or a request for documents, or to appear
+for a deposition, within twenty days of the mailing date of the request or of the date indicated on the
+notice of deposition will be grounds for denial of the license application.
+(e) Subpoenas, interrogatories, requests for documents and notices of deposition pursuant to this section
+may be served by ordinary mail addressed to the licensee's or applicant's place of business. They may
+also be served by ordinary mail addressed to the residence of an individual licensee; the residence of a
+general partner of a partnership licensee; the residence of an officer or principal stockholder of a
+corporate licensee, or the residence of a member of a limited liability company licensee. They may
+also be served by email if an email address has been provided by the licensee or applicant.
+(f) Upon good cause shown, the Department may extend the time to respond as required under this
+section.
+§ 1-14.1. Notices of Hearing.
+A licensee must appear at the Office of Administrative Trials and Hearings to answer a notice of hearing
+served upon that licensee. If the licensee is an individual, he or she must appear; if a partnership, one of its
+general partners must appear; if a corporation, one of its officers must appear; and if a limited liability
+company, one of its members must appear. A notice of hearing pursuant to this section may be served by
+ordinary mail addressed to the licensee’s place of business. It may also be served by ordinary mail
+addressed to the residence of an individual licensee; the residence of a general partner of a partnership
+licensee; the residence of an officer or principal stockholder of a corporate licensee, or the residence of a
+member of a limited liability company licensee. It may also be served by email if an email address has
+been provided by the licensee or applicant. Notices of hearing includes summonses, petitions, and other
+notices of violation filed by the Department.
+36
+§ 1-15. Judgments.
+A licensee or license applicant must satisfy any outstanding judgment against him or her that has been
+obtained by a consumer and that relates to activities for which a license is required:
+(a) within thirty (30) days from the date of entry of the judgment; or
+(b) if the judgment has been stayed or appealed, within thirty (30) days from the date the stay is
+lifted or the appeal decided; or
+(c) according to a payment schedule the parties agree upon.
+§ 1-16. Inspections of Records and Business Premises.
+(a) Every licensee shall maintain the records which it is required to maintain under Chapters 1 and 2 of
+Title 20 of the New York City Administrative Code and the regulations promulgated thereunder, and,
+except as otherwise set forth in said chapters or regulations, shall retain such records for three years.
+Licensees shall make such records available for inspection at the offices of the Department of
+Consumer Affairs, or at licensee's place of business, during business hours.
+(b) The Commissioner or authorized representatives of the Commissioner may enter the business premises
+of a licensee during business hours for the purposes of:
+(1) Inspecting or examining licensee's place of business in order to verify compliance with the
+provisions of Chapters 1 and 2 of Title 20 of the New York City Administrative Code and the
+regulations promulgated thereunder; and
+(2) Inspecting or examining any records or documents licensee is required to maintain pursuant to
+said chapters and regulations; and
+(3) Inspecting or examining non-public areas of licensee's place of business for the purposes stated
+in paragraph (b)(1) above.
+(c) Inspections of the type described above will be conducted at least once in every two-year period, and
+additional inspections will be conducted if an inspection reveals alleged violations of Chapters 1 and 2
+of Title 20 of the New York City Administrative Code or the regulations promulgated thereunder.
+Additional inspections shall also be conducted whenever the Department receives information alleging
+violation of said chapters or regulations.
+§ 1-17. Wearing of Badge Prohibited.
+No licensee or employee or agent of such licensee shall purchase, procure, or have made, or shall wear,
+display, carry, possess or exhibit any badge, insignia, shield, medal, decoration or facsimile thereof that in
+any way denotes, suggests, implies or could lead anyone to believe it confers or represents its wearer has
+an official or governmental status, except when required to do so by law or rule, nor shall a licensee in any
+way permit, authorize, encourage, acquiesce or consent to, any employee or agent doing so.
+§ 1-18 Destruction of Identification Documents Issued by the Department.
+Whenever any licensee has not renewed a license upon its expiration, such former licensee must, not later
+than 10 business days after the expiration of such license, destroy all license and identification documents
+that have been issued to such licensee and to any of its employees or agents.
+37
+§ 1-19 Presumption of Continued Unlicensed Activity.
+(a) Unless otherwise specified in the notice, if the Department, on notice, charges a business or individual
+with engaging in activity without a license required under Chapter 2 of Title 20 of the New York City
+Administrative Code or under provisions of state law enforced by the Department, there shall be a
+rebuttable presumption that the unlicensed activity continued every day, without interruption, from the
+date specified by the Department in the notice as the first date of unlicensed activity through the
+hearing date.
+(b) The first date of unlicensed activity specified by the Department in the notice may be the date of an
+inspection at which unlicensed activity is identified, the date on which a previously-held license
+expired, was suspended or revoked, or became void by operation of law, or any other date on which
+unlicensed activity first occurred, such as the date the business or individual entered into a contract to
+conduct business for which a license was required or the first date a business or individual advertised
+or offered services for which a license was required.
+(c) Regardless of the date specified by the Department in the notice, if the Department presents at the
+hearing a copy of a decision or order from a prior proceeding finding that the business or individual
+engaged in the same unlicensed activity, or a copy of a settlement from a prior proceeding resolving a
+charge of the same unlicensed activity, there shall be a rebuttable presumption that the unlicensed
+activity continued every day, without interruption, from the date of the decision, order or settlement
+through the date of the hearing, unless the decision, order or settlement specifically provides
+otherwise.
+(d) Regardless of the date specified by the Department in the notice, if the Department presents at the
+hearing a copy of a decision or order from a prior proceeding revoking or suspending the license to
+engage in the same activity forming the basis of the charge of unlicensed activity, or a copy of a
+settlement from a prior proceeding that includes such license revocation or suspension, there shall be a
+rebuttable presumption that the unlicensed activity continued every day, without interruption, from the
+date following the decision, order or settlement through the date of the hearing.
+(e) A party may present credible evidence at the hearing to rebut the presumption of continued unlicensed
+activity, such as written proof that the party obtained a license; receipts or other documentation
+indicating that merchandise was returned to distributors; written termination of leases or agreements;
+or photographs demonstrating the discontinuance of the unlicensed activity.
+§ 1-20 Non-Payment of Civil Penalties.
+(a) The Commissioner may deny a new or renewal application for any license, permit or registration, and
+may revoke, suspend, cancel, or terminate any license, permit or registration, if (i) the applicant,
+licensee, permittee or registrant has failed to timely pay civil penalties imposed by a tribunal of the
+New York City Office of Administrative Trials and Hearings (OATH), and (ii) an agency has provided
+the Commissioner with the following information: the name, address, Department license number and
+license category, where applicable, and information sufficient to determine the delinquency and
+monetary amount of the outstanding civil penalties owed by the applicant, licensee, permittee or
+registrant.
+(b) In determining whether to exercise the power granted by paragraph (a) of this section, the
+Commissioner shall consider the amount of time that has passed since the applicant, licensee,
+permittee or registrant failed to satisfy a final judgment, order or decision imposing civil penalties
+from OATH, the amount of the outstanding civil penalties, whether the applicant, licensee, permittee
+38
+or registrant has committed a series of violations, and any such other matters as justice may require, as
+follows:
+1. New applications for licenses, permits or registrations may be denied where there is an
+outstanding final judgment, order, or decision of any amount older than thirty (30) days.
+2. Licenses, permits or registrations may be suspended, and renewal applications denied, where
+outstanding final judgments, orders, or decisions are:
+A. Older than sixty (60) days; and
+B. Five hundred dollars ($500) or more.
+3. Licenses, permits or registrations may be revoked or cancelled where outstanding final
+judgments, orders, or decisions are:
+A. Older than ninety (90) days; and
+B. One thousand dollars ($1,000) or more; and
+C. The applicant, licensee, permittee or registrant violated any provision the enforcement
+of which is within the jurisdiction of the Department in the previous five (5) years.
+(c) If the applicant, licensee, permittee or registrant breaches the terms of a settlement agreement or
+payment plan reached with the City for satisfaction of a final judgment, order or decision imposing
+civil penalties, time will be calculated from the date of the breach or first missed payment, unless
+otherwise set forth in the agreement.
+(d) For purposes of this subsection, a judgment, order or decision imposing civil penalties from OATH is
+considered “final” when:
+1. An appeal or motion to vacate challenging the judgment, order, or decision has been resolved;
+2. The entity or legal representative against whom the judgment, order or decision was imposed
+fails to appeal within the time allotted by OATH; or
+3. The entity or legal representative against whom the judgment, order or decision was entered on
+default fails to move to vacate the judgment, order or decision within sixty (60) of the date
+entered.
+(e) The Department reserves the right to take any action on an application or license for any monies owed
+to the Department regardless of the criteria provided in this section.
+§ 1-21 Injurious Conduct by Licensees.
+(a) No licensee, or employee or agent of a licensee, shall assault, menace, unlawfully imprison, or harass,
+or attempt to assault, menace, unlawfully imprison, or harass, any employee of the Department
+engaged in carrying out any duty for the Department. No person shall intentionally damage any
+property of the Department. A licensee found in violation of this subdivision, or a licensee whose
+employees or agents are found in violation of this subdivision, is subject to suspension and/or
+revocation of its licenses as provided for in this section.
+(b) In addition to any of the powers that may be exercised by the commissioner pursuant to any other
+provision of law or rule, upon the issuance of a summons alleging a violation of subdivision (a) by a
+licensee, or employee or agent of a licensee, the commissioner may immediately suspend any license
+held by the licensee, subject to a prompt post-suspension hearing held no more than 7 business days
+after the commencement of the suspension. In a summons alleging violation of subdivision (a), the
+Department may request suspension or revocation of any license issued by the Department and held by
+the licensee, in addition to alleging any other violations.
+(c) Post-suspension hearing and trial.
+39
+(1) At the post-suspension hearing prescribed by subdivision (b) of this section, continued suspension of a
+license must be ordered if the department if found to have alleged facts which, if true, are sufficient to
+establish a violation of subdivision (a) of this section and the Department establishes by a
+preponderance of the evidence that continued licensure poses a risk to public safety or the
+Department’s ability to perform enforcement. Suspension ordered pursuant to this subdivision must
+be continued until a final determination is issued pursuant to paragraph (2) of this subdivision.
+(2) Following the post-suspension hearing prescribed by subdivision (b) of this section, a trial will be held
+to adjudicate all violations alleged in the summons as well as continued suspension or revocation
+requested by the Department. At such trial, the Department must prove by a preponderance of the
+evidence that the licensee’s continued licensure poses a risk to safety or the Department’s ability to
+perform enforcement. Such trial must commence within 45 days of the decision rendered in the post-
+suspension hearing.
+(d) As used in this section, the following terms shall be defined as follows:
+(1) “Assault” shall mean to intentionally or recklessly cause physical injury to another person.
+(2) “Menace” shall mean to intentionally place another person in reasonable fear of physical
+injury.
+(3) “Unlawfully imprison” shall mean to restrict a person’s movements intentionally and
+unlawfully in such manner as to interfere substantially with his or her liberty by moving him or
+her from one place to another, or by confining him or her either in the place where the
+restriction commences or in a place to which he or she has been moved, without consent and
+with knowledge that the restriction is unlawful. A person is so moved or confined “without
+consent” when such is accomplished by physical force, intimidation or deception.
+(4) “Harass” shall mean to intentionally and repeatedly harass another person by following such
+person in or about a public place or places or by engaging in a course of conduct or by
+repeatedly committing acts which places such person in reasonable fear of physical injury.
+(5) “Person” shall the same meaning as found in § 20-102 of Title 20 of the New York City
+Administrative Code.
+§ 1-22 Reservation of Rights.
+Nothing in this chapter shall impair, diminish, or otherwise affect any other authority granted to the
+Department by any general, special or local law or any rule promulgated pursuant thereto to deny an
+application for a license, permit or registration, or suspend, terminate or revoke a license, permit or
+registration.
+§ 1-23 References to the Department of Consumer Affairs.
+Any reference to the Department of Consumer Affairs in this title shall be deemed to be a reference to the
+Department of Consumer and Worker Protection.
+40
+New York General Business Law
+§ 11. Serving civil process on Sunday.
+All service or execution of legal process, of any kind whatever, on the first day of the week is
+prohibited, except in criminal proceedings or where service or execution is specially authorized by statute.
+Service or execution of any process upon said day except as herein permitted is absolutely void for any
+and every purpose whatsoever.
+§ 13. Maliciously serving process on Saturday on person who keeps Saturday as holy time.
+Maliciously serving process on Saturday on person who keeps Saturday as holy time. Whoever
+maliciously procures any process in a civil action to be served on Saturday, upon any person who keeps
+Saturday as holy time, and does not labor on that day, or serves upon him any process returnable on that
+day, or maliciously procures any civil action to which such person is a party to be adjourned to that day
+for trial, is guilty of a misdemeanor.
+§ 89-bb. Definitions.
+For the purposes of this article:
+1. A "process server" is a person, other than an attorney or a party to an action acting on his own behalf,
+who: (a) derives income from the service of papers in an action; or (b) has effected service of process
+in five or more actions or proceedings in the twelve month period immediately preceding the service
+in question. A person who serves interlocutory papers upon an attorney or who serves papers on behalf
+of a federal, state or local governmental agency in the course of his employment by such agency shall
+not be deemed a process server within the meaning of this article by virtue of such service.
+2. A "process serving agency" is any person, firm, partnership, association or corporation, other than an
+attorney or a law firm located in this state, who, as owner, manager or contractor, maintains an office,
+bureau or agency for the purpose of assigning or distributing process to individual process servers for
+actual service.
+§ 89-cc. Process server records.
+1. Each process server shall maintain a legible record of all service made by him or her as prescribed in
+this section. Such records shall be kept, either:
+a. in chronological order in a bound, paginated volume. Corrections in records shall be made
+only by drawing a straight line through the inaccurate entry and clearly printing the accurate
+information directly above the inaccurate entry. All other methods of correction, including but not
+limited to erasing, opaquing, obliterating or redacting, are prohibited; or
+b. by submitting recorded entries to a third party contractor within three days of service or
+attempted service, provided, however that permissions pertaining to such data will be secured s that
+the data cannot be deleted upon submission. Records shall be reported in chronological order. It
+shall be unlawful for any process server to tamper with data or properties of any electronic record
+kept pursuant to this section after an image file is made by modifying, amending, deleting,
+rearranging or in any other way altering any such data or properties including, but not limited to,
+using a meta data scrubber or similar device or program. If a typographical error has occurred or if
+data contained in the process server’s record was accidentally omitted from the electronic data entry,
+the third party contractor may make an amendment in which the original record shall be identified by
+entering it in italics. All third party contractors must maintain a daily backup of all submitted data,
+and all data must be available for review upon request of any and all interested parties.
+41
+2. The record to be maintained shall include the following information, where applicable:
+(a) the title of the action or a reasonable abbreviation thereof;
+(b) the name of the person served, if known;
+(c) the date and approximate time service was effected;
+(d) the address where service was effected;
+(e) the nature of the papers served;
+(f) the court in which the action has been commenced;
+(g) the index number of the action, if known;
+(h) if service is effectuated pursuant to subdivision four of section three hundred eight of the civil
+practice law and rules or subdivision one of section seven hundred thirty-five of the real
+property actions and proceedings law, a description of the color of the door to which the
+summons is affixed;
+(i) the process serving agency from whom the process served was received, if any;
+(j) type of service effected whether personal, substituted or conspicuous;
+(k) if service is effected pursuant to subdivision one, two or three of section three hundred eight of
+the civil practice law and rules, the record shall also include the description of the person
+served, including, but not limited to sex, color of skin, hair color, approximate age, height and
+weight and other identifying features;
+(l) if service is effected pursuant to subdivision four of section three hundred eight of the civil
+practice law and rules, the record shall also include the dates, addresses and time of attempted
+service pursuant to subdivision one, two or three of such section;
+(m) if the process server files an affidavit of service with the court, his record shall include the date
+of such filing.
+§ 89-dd. Process serving agency records.
+1. Each process serving agency shall be required to keep complete and accurate records with respect to
+each process server to whom it distributes, assigns or delivers process to be served. Corrections in
+records shall be made only by drawing a straight line through the inaccurate entry and clearly printing
+the accurate information directly above the inaccurate entry. All other methods of correction, including
+but not limited to, erasing, opaquing, obliterating, or redacting, are prohibited.
+2. Such records shall include, where applicable:
+(a) The name of the process server to whom process is distributed, assigned or delivered to be
+served;
+(b) The titles or a reasonable abbreviation thereof and index numbers of each case if filed in court
+by the agency;
+(c) The date that such papers were assigned for service, and the date that service was effected;
+(d) The person from whom such papers were received for service;
+(e) The date of filing of papers with the court if filed by the agency;
+(f) The type of service effected whether personal, substituted or conspicuous.
+§ 89-ee. Responsibility of process serving agency and process servers.
+1. It shall be unlawful for a process server to fail to comply with all legal requirements for the service of
+process.
+2. A process serving agency shall be legally responsible for the acts of each process server to whom it
+has distributed, assigned or delivered process for service if it could reasonably have known that the
+process server was acting improperly.
+42
+3. It shall be unlawful for a process serving agency or a process server to fail to comply with all laws and
+regulations respecting preparation, notarization and filing of affidavits of service of process and other
+documents.
+§ 89-ff. Affidavits of service.
+It shall be unlawful for a process server to fail to set forth on any affidavit of service or process signed by
+him his license or registration number if such process server is required to be licensed or registered
+pursuant to any state or local law and the name and address of any process serving agency from whom he
+obtained the process for service if any.
+43
+New York Civil Practice Law and Rules
+§ 303. Designation of attorney as agent for service.
+The commencement of an action in the state by a person not subject to personal jurisdiction is a
+designation by him of his attorney appearing in the action or of the clerk of the court if no attorney
+appears, as agent, during the pendency of the action, for service of a summons pursuant to section 308, in
+any separate action in which such a person is a defendant and another party to the action is a plaintiff if
+such separate action would have been permitted as a counterclaim had the action been brought in the
+supreme court.
+§ 306. Proof of service.
+(a) Generally. Proof of service shall specify the papers served, the person who was served and the date,
+time, address, or, in the event there is no address, place and manner of service, and set forth facts
+showing that the service was made by an authorized person and in an authorized manner.
+(b) Personal service. Whenever service is made pursuant to this article by delivery of the summons to an
+individual, proof of service shall also include, in addition to any other requirement, a description of the
+person to whom it was so delivered, including, but not limited to, the process server’s perception of
+the person’s: gender, race, hair color, approximate age, approximate weight and height, and other
+identifying features.
+(c) Other service. Where service is made pursuant to subdivision four of section three hundred eight of
+this chapter, proof of service shall also specify the dates, addresses and the times of attempted service
+pursuant to subdivisions one, two or three of such section.
+(d) Form. Proof of service shall be in the form of a certificate if the service is made by a sheriff or other
+authorized public officer, in the form of an affidavit if made by any other person, or in the form of a
+signed acknowledgement of receipt of a summons and complaint, or summons and notice or notice of
+petition as provided for in section 312-a of this article.
+(e) Admission of service. A writing admitting service by the person to be served is adequate proof of
+service.
+§ 306-a. Index number in an action or proceeding commenced in supreme or county court.
+(a) Upon filing the summons and complaint, summons with notice or petition in an action or proceeding
+commenced in supreme or county court with the clerk of the county, an index number shall be
+assigned and the fee required by subdivision (a) of section eight thousand eighteen of this chapter shall
+be paid. Upon the filing of a summons and complaint against a person not already a party, as permitted
+under section one thousand seven or rule one thousand eleven of this chapter, the fee required by
+subdivision (a) of section eight thousand eighteen of this chapter shall be paid, but a separate index
+number shall not be assigned.
+(b) If a person other than the plaintiff or third-party plaintiff who served the summons or third-party
+summons obtains the index number and pays the fee therefor, the clerk shall issue an order directing
+the plaintiff or the third-party plaintiff to pay such person the amount of the fee paid. If such fee is not
+paid within thirty days of service of the order with notice of entry, the person who paid the fee, in
+addition to any other remedies available at law, may apply to the clerk for an order dismissing the
+action without prejudice.
+44
+§ 306-b. Service of the summons and complaint, summons with notice, third-party summons and
+complaint, or petition with notice of petition or order to show cause.
+Service of the summons and complaint, summons with notice, third-party summons and complaint, or
+petition with a notice of petition or order to show cause shall be made within one hundred twenty days
+after the commencement of the action or proceeding, provided that in an action or proceeding, except a
+proceeding commenced under the election law, where the applicable statute of limitations is four months
+or less, service shall be made not later than fifteen days after the date on which the applicable statute of
+limitations expires. If service is not made upon a defendant within the time provided in this section, the
+court, upon motion, shall dismiss the action without prejudice as to that defendant, or upon good cause
+shown or in the interest of justice, extend the time for service.
+§ 307. Personal service upon the state.
+1. Personal service upon the state shall be made by delivering the summons to an assistant attorney-
+general at an office of the attorney-general or to the attorney-general within the state.
+2. Personal service on a state officer sued solely in an official capacity or state agency, which shall be
+required to obtain personal jurisdiction over such an officer or agency, shall be made by (1) delivering
+the summons to such officer or to the chief executive officer of such agency or to a person designated
+by such chief executive officer to receive service, or (2) by mailing the summons by certified mail,
+return receipt requested, to such officer or to the chief executive officer of such agency, and by
+personal service upon the state in the manner provided by subdivision one of this section. Service by
+certified mail shall not be complete until the summons is received in a principal office of the agency
+and until personal service upon the state in the manner provided by subdivision one of this section is
+completed. For purposes of this subdivision, the term "principal office of the agency" shall mean the
+location at which the office of the chief executive officer of the agency is generally located. Service by
+certified mail shall not be effective unless the front of the envelope bears the legend "URGENT
+LEGAL MAIL" in capital letters. The chief executive officer of every such agency shall designate at
+least one person, in addition to himself or herself, to accept personal service on behalf of the agency.
+For purposes of this subdivision the term state agency shall be deemed to refer to any agency, board,
+bureau, commission, division, tribunal or other entity which constitutes the state for purposes of
+service under subdivision one of this section.
+§ 308. Personal service upon a natural person.
+Personal service upon a natural person shall be made by any of the following methods:
+1. by delivering the summons within the state to the person to be served; or
+2. by delivering the summons within the state to a person of suitable age and discretion at the actual
+place of business, dwelling place or usual place of abode of the person to be served and by either
+mailing the summons to the person to be served at his or her last known residence or by mailing the
+summons by first class mail to the person to be served at his or her actual place of business in an
+envelope bearing the legend "personal and confidential" and not indicating on the outside thereof, by
+return address or otherwise, that the communication is from an attorney or concerns an action against
+the person to be served, such delivery and mailing to be effected within twenty days of each other;
+proof of such service shall be filed with the clerk of the court designated in the summons within
+twenty days of either such delivery or mailing, whichever is effected later; service shall be complete
+ten days after such filing; proof of service shall identify such person of suitable age and discretion and
+state the date, time and place of service, except in matrimonial actions where service hereunder may
+be made pursuant to an order made in accordance with the provisions of subdivision a of section two
+hundred thirty-two of the domestic relations law; or
+45
+3. by delivering the summons within the state to the agent for service of the person to be served as
+designated under rule 318, except in matrimonial actions where service hereunder may be made
+pursuant to an order made in accordance with the provisions of subdivision a of section two hundred
+thirty-two of the domestic relations law;
+4. where service under paragraphs one and two cannot be made with due diligence, by affixing the
+summons to the door of either the actual place of business, dwelling place or usual place of abode
+within the state of the person to be served and by either mailing the summons to such person at his or
+her last known residence or by mailing the summons by first class mail to the person to be served at
+his or her actual place of business in an envelope bearing the legend "personal and confidential" and
+not indicating on the outside thereof, by return address or otherwise, that the communication is from
+an attorney or concerns an action against the person to be served, such affixing and mailing to be
+effected within twenty days of each other; proof of such service shall be filed with the clerk of the
+court designated in the summons within twenty days of either such affixing or mailing, whichever is
+effected later; service shall be complete ten days after such filing, except in matrimonial actions where
+service hereunder may be made pursuant to an order made in accordance with the provisions of
+subdivision a of section two hundred thirty-two of the domestic relations law;
+5. in such manner as the court, upon motion without notice, directs, if service is impracticable under
+paragraphs one, two and four of this section.
+6. For purposes of this section, "actual place of business" shall include any location that the defendant,
+through regular solicitation or advertisement, has held out as its place of business.
+§ 309. Personal service upon an infant, incompetent or conservatee.
+(a) Upon an infant. Personal service upon an infant shall be made by personally serving the summons
+within the state upon a parent or any guardian or any person having legal custody or, if the infant is
+married, upon an adult spouse with whom the infant resides, or, if none are within the state, upon any
+other person with whom he resides, or by whom he is employed. If the infant is of the age of fourteen
+years or over, the summons shall also be personally served upon him within the state.
+(b) Upon a person judicially declared to be incompetent. Personal service upon a person judicially
+declared to be incompetent to manage his affairs and for whom a committee has been appointed shall
+be made by personally serving the summons within the state upon the committee and upon the
+incompetent, but the court may dispense with service upon the incompetent.
+(c) Upon a conservatee. Personal service on a person for whom a conservator has been appointed shall be
+made by personally serving the summons within the state upon the conservator and upon the
+conservatee, but the court may dispense with service upon the conservatee.
+§ 310. Personal service upon a partnership.
+(a) Personal service upon persons conducting a business as a partnership may be made by personally
+serving the summons upon any one of them.
+(b) Personal service upon said partnership may also be made within the state by delivering the summons
+to the managing or general agent of the partnership or the person in charge of the office of the
+partnership within the state at such office and by either mailing the summons to the partner thereof
+intended to be served by first class mail to his last known residence or to the place of business of the
+partnership. Proof of such service shall be filed within twenty days with the clerk of the court
+designated in the summons; service shall be complete ten days after such filing; proof of service shall
+identify the person to whom the summons was so delivered and state the date, time of day and place of
+service.
+(c) Where service under subdivisions (a) and (b) of this section cannot be made with due diligence, it may
+be made by affixing a copy of the summons to the door of the actual place of business of the
+46
+partnership within the state and by either mailing the summons by first class mail to the partner
+intended to be so served to such person to his last known residence or to said person at the office of
+said partnership within the state. Proof of such service shall be filed within twenty days thereafter with
+the clerk of the court designated in the summons; service shall be complete ten days after filing.
+(d) Personal service on such partnership may also be made by delivering the summons to any other agent
+or employee of the partnership authorized by appointment to receive service; or to any other person
+designated by the partnership to receive process in writing, filed in the office of the clerk of the county
+wherein such partnership is located.
+(e) If service is impracticable under subdivisions (a), (b) and (c) of this section, it may be made in such
+manner as the court, upon motion without notice directs.
+§ 310-a. Personal service upon a limited partnership.
+(a) Personal service upon any domestic or foreign limited partnership shall be made by delivering a copy
+personally to any managing or general agent or general partner of the limited partnership in this state,
+to any other agent or employee of the limited partnership authorized by appointment to receive service
+or to any other person designated by the limited partnership to receive process, in the manner provided
+by law for service of summons, as if such person was the defendant. Personal service upon a limited
+partnership subject to the provisions of article eight-A of the partnership law may also be made
+pursuant to section 121-109 of such law.
+(b) If service is impracticable under subdivision (a) of this section, it may be made in such manner as the
+court, upon motion without notice, directs.
+(c) A limited liability partnership may also be served pursuant to section 121-1505 of the partnership law.
+§ 311. Personal service upon a corporation or governmental subdivision.
+(a) Personal service upon a corporation or governmental subdivision shall be made by delivering the
+summons as follows:
+1. upon any domestic or foreign corporation, to an officer, director, managing or general agent, or
+cashier or assistant cashier or to any other agent authorized by appointment or by law to
+receive service. A business corporation may also be served pursuant to section three hundred
+six or three hundred seven of the business corporation law. A not-for-profit corporation may
+also be served pursuant to section three hundred six or three hundred seven of the not-for-profit
+corporation law;
+2. upon the city of New York, to the corporation counsel or to any person designated to receive
+process in a writing filed in the office of the clerk of New York county;
+3. upon any other city, to the mayor, comptroller, treasurer, counsel or clerk; or, if the city lacks
+such officers, to an officer performing a corresponding function under another name;
+4. upon a county, to the chair or clerk of the board of supervisors, clerk, attorney or treasurer;
+5. upon a town, to the supervisor or the clerk;
+6. upon a village, to the mayor, clerk, or any trustee;
+7. upon a school district, to a school officer, as defined in the education law; and
+8. upon a park, sewage or other district, to the clerk, any trustee or any member of the board.
+(b) If service upon a domestic or foreign corporation within the one hundred twenty days allowed by
+section three hundred six-b of this article is impracticable under paragraph one of subdivision (a) of
+this section or any other law, service upon the corporation may be made in such manner, and proof of
+service may take such form, as the court, upon motion without notice, directs.
+47
+§ 311-a. Personal service on limited liability companies.
+(a) Service of process on any domestic or foreign limited liability company shall be made by delivering a
+copy personally to (i) any member of the limited liability company in this state, if the management of
+the limited liability company is vested in its members, (ii) any manager of the limited liability
+company in this state, if the management of the limited liability company is vested in one or more
+managers, (iii) to any other agent authorized by appointment to receive process, or (iv) to any other
+person designated by the limited liability company to receive process, in the manner provided by law
+for service of a summons as if such person was a defendant. Service of process upon a limited liability
+company may also be made pursuant to article three of the limited liability company law.
+(b) If service is impracticable under subdivision (a) of this section, it may be made in such manner as the
+court, upon motion without notice, directs.
+§ 312. Personal service upon a court, board or commission.
+Personal service upon a court consisting of three or more judges may be made by delivering the summons
+to any one of them. Personal service upon a board or commission having a chairman or other presiding
+officer, secretary or clerk, by whatever official title he is called, may be made by delivering the summons
+to him. Personal service upon a board or commission of a town or village may also be made by delivering
+the summons to the clerk of the town or village. Personal service upon any other board or commission
+shall be made by delivering the summons to any one of the members.
+Rule 2106. Affirmation of truth of statement.
+The statement of any person wherever made, subscribed and affirmed by that person to be true under the
+penalties of perjury, may be used in an action in New York in lieu of and with the same force and
+effect as an affidavit. Such affirmation shall be in substantially the following form:
+I affirm this ___ day of ______, ____, under the penalties of perjury under the laws of New York,
+which may include a fine or imprisonment, that the foregoing is true, and I understand that this
+document may be filed in an action or proceeding in a court of law.
+(Signature)
+48
+New York Civil Court Act
+§ 400. Method of commencing action or special proceeding.
+1. An action is commenced in this court by filing a summons and complaint. A special proceeding is
+commenced by filing a notice of petition and petition or order to show cause and petition. For
+purposes of this section, and for purposes of section two hundred three of the civil practice law and
+rules, filing shall mean the delivery of the summons and complaint, the notice of petition and petition
+or order to show cause and petition to the clerk of the court in the county in which the action or special
+proceeding is brought together with any fee required by section nineteen hundred eleven of this act. At
+the time of filing, the original and a copy of the papers shall be date stamped by the court clerk who
+shall file the original and maintain a record of the filing and shall return the copy to the party who
+brought the filing. The clerk shall accept the fee and file the papers as soon as reasonably practicable.
+2. Jurisdiction is acquired over a party to an action or special proceeding by service upon such party of a
+copy of the summons and complaint, the notice of petition and petition or the order to show cause and
+petition.
+3. The actual index number shall be on the summons, notice of petition or order to show cause as served.
+Failure to include the index number on the papers as served shall be cured by stipulation
+between the parties or by leave of court, which shall not be unreasonably withheld.
+§ 403. Summons; method and place of service.
+Service of summons shall be made in the manner prescribed in supreme court practice, including the
+optional method of service by mail authorized by CPLR 312-a, but it shall be made only within the city of
+New York unless service beyond the city be authorized by this act or by such other provision of law, other
+than the CPLR, as expressly applies to courts of limited jurisdiction or to all courts of the state
+§ 404. Summons; personal jurisdiction by acts of non-residents.
+(a) Acts which are the basis of jurisdiction. The court may exercise personal jurisdiction over any non-
+resident of the city of New York, or his executor or administrator, as to a cause of action arising
+from any of the acts enumerated in this section, in the same manner as if he were a domiciliary of the
+state and a resident of the city of New York if, in person or through an agent, he:
+1. transacts any business within the city of New York or contracts anywhere to supply goods or
+services in the city of New York; or
+2. commits a tortious act within the city of New York, except as to a cause of action for
+defamation of character arising from the act; or
+3. owns, uses or possesses any real property situated within the city of New York.
+(b) Service of summons. Service of summons under this section may be made in such manner and at such
+place, regardless of city or state lines, as would confer jurisdiction on supreme court in a like case.
+(c) Effect of appearance. Where personal jurisdiction is based solely upon this section, an appearance
+does not confer such jurisdiction with respect to causes of action not arising from an act enumerated
+in this section.
+(d) Corporation or association. If service of the summons cannot be effected by personal delivery thereof
+within the city of New York so as to acquire in personam jurisdiction of a corporation or
+unincorporated association, such corporation or association shall be deemed a non-resident of the
+city of New York for purposes of this section.
+49
+Uniform Civil Rules of the New York City Civil
+Court
+Section 208.29 Traverse hearings.
+Whenever the court has scheduled a hearing to determine whether process was served validly and timely
+upon a party, and where a process server will testify as to the service, the process server shall be required
+to bring to the hearing all records in the possession of the process server relating to the matter at issue.
+Where the process server is licensed, he or she also shall bring the license to the court.
+50
+New York Domestic Relations Law
+Chapter 14
+§ 232. Notice of nature of matrimonial action; proof of service.
+a. In an action to annul a marriage or for divorce or for separation, if the complaint is not personally
+served with the summons, the summons shall have legibly written or printed upon the face thereof:
+"Action to annul a marriage", "Action to declare the nullity of a void marriage", "Action for a
+divorce", or "Action for a separation", as the case may be, and shall specify the nature of any ancillary
+relief demanded. A judgment shall not be rendered in favor of the plaintiff upon the defendant's default
+in appearing or pleading, unless either (1) the summons and a copy of the complaint were personally
+delivered to the defendant; or (2) the copy of the summons (a) personally delivered to the defendant,
+or (b) served on the defendant pursuant to an order directing the method of service of the summons in
+accordance with the provisions of section three hundred eight or three hundred fifteen of the civil
+practice law and rules, shall contain such notice.
+b. An affidavit or certificate proving service shall state affirmatively in the body thereof that the
+required notice was written or printed on the face of the copy of the summons delivered to the
+defendant and what knowledge the affiant or officer who executed the certificate had that he was the
+defendant named and how he acquired such knowledge. The court may require the affiant or officer
+who executed the affidavit or certificate to appear in court and be examined in respect thereto.
+51
+New York Real Property Actions and Proceedings
+Law
+Sec. 735. Manner of service; filing; when service complete.
+1. Service of the notice of petition and petition shall be made by personally delivering them to the
+respondent; or by delivering to and leaving personally with a person of suitable age and discretion who
+resides or is employed at the property sought to be recovered, a copy of the notice of petition and
+petition, if upon reasonable application admittance can be obtained and such person found who will
+receive it; or if admittance cannot be obtained and such person found, by affixing a copy of the notice
+and petition upon a conspicuous part of the property sought to be recovered or placing a copy under
+the entrance door of such premises; and in addition, within one day after such delivering to such
+suitable person or such affixing or placement, by mailing to the respondent both by registered or
+certified mail and by regular first class mail,
+(a) if a natural person, as follows: at the property sought to be recovered, and if such
+property is not the place of residence of such person and if the petitioner shall have
+written information of the residence address of such person, at the last residence
+address as to which the petitioner has such information, or if the petitioner shall have
+no such information, but shall have written information of the place of business or
+employment of such person, to the last business or employment address as to which the
+petitioner has such information; and
+(b) if a corporation, joint-stock or other unincorporated association, as follows: at the
+property sought to be recovered, and if the principal office or principal place of
+business of such corporation, joint stock or other unincorporated association is not
+located on the property sought to be recovered, and if the petitioner shall have written
+information of the principal office or principal place of business within the state, at the
+last place as to which petitioner has such information, or if the petitioner shall have no
+such information but shall have written information of any office or place of business
+within the state, to any such place as to which the petitioner has such information.
+Allegations as to such information as may affect the mailing address shall be set forth
+either in the petition, or in a separate affidavit and filed as part of the proof of service.
+2. The notice of petition, or order to show cause, and petition together with proof of service thereof shall
+be filed with the court or clerk thereof within three days after;
+(a) personal delivery to respondent, when service has been made by that means, and such
+service shall be complete immediately upon such personal delivery; or
+(b) mailing to respondent, when service is made by the alternatives above provided, and
+such service shall be complete upon the filing of proof of service.
+52
+New York Business Corporation Law
+§ 306. Service of process
+(a) Service of process on a registered agent may be made in the manner provided by law for the service of
+a summons, as if the registered agent was a defendant.
+(1) Service of process on the secretary of state as agent of a domestic or authorized foreign
+corporation shall be made in the manner provided by clause (i) or (ii) of this subparagraph. Either
+option of service authorized pursuant to this subparagraph shall be available at no extra cost to the
+consumer. (i) Personally delivering to and leaving with the secretary of state or a deputy, or with any
+person authorized by the secretary of state to receive such service, at the office of the department of
+state in the city of Albany, duplicate copies of such process together with the statutory fee, which fee
+shall be a taxable disbursement. Service of process on such corporation shall be complete when the
+secretary of state is so served. The secretary of state shall promptly send one of such copies by
+certified mail, return receipt requested, to such corporation, at the post office address, on file in the
+department of state, specified for the purpose. If a domestic or authorized foreign corporation has no
+such address on file in the department of state, the secretary of state shall so mail such copy, in the
+case of a domestic corporation, in care of any director named in its certificate of incorporation at the
+director's address stated therein or, in the case of an authorized foreign corporation, to such
+corporation at the address of its office within this state on file in the department. (ii) Electronically
+submitting a copy of the process to the department of state together with the statutory fee, which fee
+shall be a taxable disbursement, through an electronic system operated by the department of state,
+provided the domestic or authorized foreign corporation has an email address on file in the
+department of state to which the secretary of state shall email a notice of the fact that process has
+been served electronically on the secretary of state. Service of process on such corporation shall be
+complete when the secretary of state has reviewed and accepted service of such process. The
+secretary of state shall promptly send a notice of the fact that process has been served to such
+corporation at the email address on file in the department of state, specified for the purpose and shall
+make a copy of the process available to such corporation.
+(2) An additional service of the summons may be made pursuant to paragraph four of subdivision (f)
+of section thirty-two hundred fifteen of the civil practice law and rules.
+(b) If an action or special proceeding is instituted in a court of limited jurisdiction, service of process may
+be made in the manner provided in this section if the office of the domestic or foreign corporation is
+within the territorial jurisdiction of the court.
+(c) Nothing in this section shall affect the right to serve process in any other manner permitted by law.
+
