@@ -49,6 +49,32 @@ section.list h3{font-size:1.05rem;margin:0 0 8px}
 .cta form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .cta input{flex:1 1 220px}
 .disc{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:28px}
+/* compliance calendar */
+.comp{margin:28px 0 8px}
+.comp>h2{font-size:1.25rem;margin:0 0 4px}
+.facts{font-size:.88rem;color:var(--muted);margin:0 0 12px}
+.stat{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 0 16px}
+@media (max-width:600px){.stat{grid-template-columns:1fr}}
+.stat .item{margin:0}
+.cal{list-style:none;margin:0;padding:0}
+.cal li{display:grid;grid-template-columns:76px 1fr;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0}
+.cal .d{border-right:1px solid var(--line);padding-right:10px;text-align:center;line-height:1.15}
+.cal .d b{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:var(--accent)}
+.cal .d span{display:block;font-size:1.35rem;font-weight:700}
+.cal .d small{display:block;font-size:.72rem;color:var(--muted)}
+.cal .body{min-width:0}
+.cal h4{margin:0;font-size:1rem}
+.cal .win{font-size:.85rem;color:var(--muted);margin:2px 0 6px}
+.cal p{margin:4px 0;font-size:.92rem;overflow-wrap:anywhere}
+.cal .why{color:var(--muted);font-size:.86rem}
+.tag{font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:99px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+.tag.yes{color:var(--lo);background:var(--lo-bg)}.tag.maybe{color:var(--md);background:var(--md-bg)}.tag.now{color:var(--hi);background:var(--hi-bg)}
+.icsbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 6px}
+.icsbar .hint{margin:0}
+details.na{margin:12px 0;font-size:.9rem}
+details.na summary{cursor:pointer;color:var(--muted)}
+details.na ul{margin:8px 0;padding-left:20px}
+.remind{margin:10px 0 0;font-weight:600}
 </style>
 </head>
 <body>
@@ -73,6 +99,7 @@ section.list h3{font-size:1.05rem;margin:0 0 8px}
 <div class="cta" id="signup">
   <h3>Get daily alerts for this building</h3>
   <div>We email you when something new is filed: violations, complaints, summonses, hearing dates and filing deadlines, in plain English. <b>Free while we're in beta</b> (your first 3 months). After that it's $6/building/month or $59/year, and you can cancel any time.</div>
+  <p class="remind">Get a reminder email before each deadline.</p>
   <form id="signup-form">
     <input type="email" name="email" id="signup-email" placeholder="you@example.com" required>
     <input type="hidden" name="bbl" id="signup-bbl">
@@ -165,9 +192,10 @@ async function lookup(text, boro) {
   const b = bbl[0], block = bbl.slice(1, 6), lot = bbl.slice(6);
   st.textContent = "Loading records from NYC Open Data...";
   const [pl, fp, reg] = await Promise.all([
-    soda("64uk-42ks", {$select: "address,unitsres,unitstotal,bldgclass,zipcode", $where: `bbl=${q(bbl)}`, $limit: 1}),
+    soda("64uk-42ks", {$select: "address,unitsres,unitstotal,bldgclass,zipcode,yearbuilt,cd", $where: `bbl=${q(bbl)}`, $limit: 1}),
     soda("5zhs-2jue", {$select: "bin", $where: `base_bbl=${q(bbl)} OR mappluto_bbl=${q(bbl)}`, $limit: 50}),
-    soda("tesw-yqqr", {$select: "bin,registrationenddate", $where: `boroid=${q(b)} AND block=${q(+block)} AND lot=${q(+lot)}`, $order: "registrationenddate DESC", $limit: 5}),
+    // registration status only: no owner/agent contact fields are requested or shown
+    soda("tesw-yqqr", {$select: "bin,registrationid,lastregistrationdate,registrationenddate", $where: `boroid=${q(b)} AND block=${q(+block)} AND lot=${q(+lot)}`, $order: "registrationenddate DESC", $limit: 5}),
   ]);
   const p = pl[0] || {};
   const bins = [...new Set([...fp, ...reg].map(r => r.bin).filter(x => x && !/000000$/.test(x)))];
@@ -176,11 +204,13 @@ async function lookup(text, boro) {
   const todayIso = today.toISOString().slice(0, 10);
   const oathWhere = `violation_location_borough=${q(BORO[b])} AND violation_location_block_no=${q(block)} AND violation_location_lot_no=${q(lot)}`;
   const none = Promise.resolve([]);
-  const [hpd, dob, ecb, oath] = await Promise.all([
+  const bbWhere = `bbl=${q(bbl)}` + (bins.length ? ` OR bin in (${binList})` : "");
+  const [hpd, dob, ecb, oath, bedbug] = await Promise.all([
     soda("wvxf-dwi5", {$where: `bbl=${q(bbl)} AND violationstatus='Open'`, $order: "novissueddate DESC", $limit: 500}),
     bins.length ? soda("3h2n-5cm9", {$where: `bin in (${binList}) AND violation_category like '%ACTIVE%'`, $order: "issue_date DESC", $limit: 200}) : none,
     bins.length ? soda("6bgk-3dad", {$where: `bin in (${binList}) AND ecb_violation_status='ACTIVE'`, $order: "issue_date DESC", $limit: 200}) : none,
     soda("jz4z-kudi", {$where: `${oathWhere} AND hearing_date >= ${q(todayIso)}`, $order: "hearing_date", $limit: 100}),
+    soda("wz6d-d3jb", {$select: "bin,of_dwelling_units,filing_date,filing_period_start_date,filling_period_end_date", $where: bbWhere, $order: "filing_date DESC", $limit: 50}).catch(() => null),
   ]);
   $("#signup-bbl").value = bbl;
 
@@ -215,13 +245,9 @@ async function lookup(text, boro) {
       "https://www.nyc.gov/site/oath/hearings/hearings-and-defaults.page");
   });
 
-  const regEnd = parseDate(reg[0] && reg[0].registrationenddate);
-  let notices = "";
-  if (units >= 3) {
-    notices += `<div class="notice"><b>Bedbug report:</b> buildings with 3+ apartments must file HPD's annual bedbug report between <b>December 1 and December 31</b> (covering Nov 1 - Oct 31). <a href="https://www.nyc.gov/site/hpd/services-and-information/bedbugs.page" target="_blank" rel="noopener">How to file</a></div>`;
-    if (!regEnd) notices += `<div class="notice"><b>HPD registration:</b> no registration record found in open data for this lot. 3+ unit buildings must register yearly; confirm on HPD Online.</div>`;
-    else if (regEnd < today) notices += `<div class="notice"><b>HPD registration:</b> open data shows the registration ended ${esc(fmt(regEnd))}. Confirm on HPD Online and renew if needed.</div>`;
-  }
+  // Bedbug and registration notices now live in the compliance section below.
+  const notices = "";
+  const comp = complianceSection({bbl, p, units, reg, bedbug, today, boroName: BORO[b]});
 
   out.innerHTML = `<div class="bldg"><h2>${esc(p.address || "BBL " + bbl)}, ${esc(BORO[b][0] + BORO[b].slice(1).toLowerCase())}</h2>
     <div class="meta">BBL ${esc(bbl)} | BIN ${esc(bins.join(", ") || "n/a")} | ${units} residential / ${esc(Math.trunc(parseFloat(p.unitstotal || 0)))} total units | class ${esc(p.bldgclass || "n/a")}</div>
@@ -235,8 +261,253 @@ async function lookup(text, boro) {
     ${listSection("Upcoming OATH hearings", oathItems, "No upcoming hearings found for this tax lot.")}
     ${listSection("Active ECB violations (DOB summonses)", ecbItems, "None found.")}
     ${listSection("Open HPD violations", hpdItems, "None found.")}
-    ${listSection("Active DOB violations", dobItems, "None found.")}`;
+    ${listSection("Active DOB violations", dobItems, "None found.")}
+    ${comp.html}`;
+  const icsBtn = $("#ics-btn");
+  if (icsBtn) icsBtn.addEventListener("click", () => downloadICS(comp.events, bbl, p.address || "BBL " + bbl));
   st.textContent = `Data from NYC Open Data, fetched ${new Date().toLocaleString()}.`;
+}
+
+// ---------- Compliance calendar (rules verified on nyc.gov 2026-11-13; see NOTES.md) ----------
+const LINKS = {
+  bedbug: "https://www.nyc.gov/site/hpd/services-and-information/bedbugs.page",
+  reg: "https://www.nyc.gov/site/hpd/services-and-information/register-your-property.page",
+  lead: "https://www.nyc.gov/site/hpd/services-and-information/annual-notice-and-investigations.page",
+  wg: "https://www.nyc.gov/site/doh/health/health-topics/window-guards.page",
+  heat: "https://www.nyc.gov/site/hpd/services-and-information/heat-and-hot-water-information.page",
+  boiler: "https://www.nyc.gov/site/buildings/safety/boiler-compliance.page",
+  gas: "https://www.nyc.gov/site/buildings/property-or-business-owner/gas-piping-inspections.page",
+  bins: "https://www.nyc.gov/site/dsny/collection/containerization/residential-containerization.page",
+};
+// DOB: buildings in these DOF classes are exempt from LL152 gas piping inspections (M3/M4 are conditional).
+const GAS_EXEMPT = new Set(["A0","A1","A2","A3","A4","A5","A6","A7","A8","A9","B1","B2","B3","B9","CM","N2","S0","S1","S2"]);
+const GAS_CYCLE = [{cds:[1,3,10], base:2024}, {cds:[2,5,7,13,18], base:2025}, {cds:[4,6,8,9,16], base:2026}, {cds:[11,12,14,15,17], base:2027}];
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const Dt = (y, m, d) => new Date(y, m - 1, d);
+const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+const md = d => MON[d.getMonth()] + " " + d.getDate();
+function rangeLabel(s, e) {
+  if (!e || +s === +e) return `${md(s)}, ${s.getFullYear()}`;
+  if (s.getFullYear() !== e.getFullYear()) return `${md(s)}, ${s.getFullYear()} - ${md(e)}, ${e.getFullYear()}`;
+  if (s.getMonth() === e.getMonth()) return `${md(s)}-${e.getDate()}, ${s.getFullYear()}`;
+  return `${md(s)} - ${md(e)}, ${s.getFullYear()}`;
+}
+// Next occurrence of a yearly window (may wrap past Dec 31) that hasn't ended yet.
+function nextWindow(today, sm, sd, em, ed) {
+  for (let y = today.getFullYear() - 1; ; y++) {
+    const s = Dt(y, sm, sd), e = Dt(em < sm ? y + 1 : y, em, ed);
+    if (e >= today) return {s, e};
+  }
+}
+
+function complianceSection({bbl, p, units, reg, bedbug, today, boroName}) {
+  const yb = parseInt(p.yearbuilt, 10) || 0;
+  const pre60 = yb > 0 && yb < 1960, y60to78 = yb >= 1960 && yb < 1978;
+  const unitsTotal = Math.trunc(parseFloat(p.unitstotal || 0));
+  const cls = String(p.bldgclass || "").toUpperCase();
+  const cdNum = parseInt(p.cd, 10) || 0, district = cdNum % 100;
+  const known = units > 0, multi = units >= 3, small = known && units <= 2;
+  const horizon = addDays(today, 365);
+  const ev = [], na = [], later = [];
+  const add = o => ev.push(o);
+
+  // 1. Bedbug annual report (multiple dwellings)
+  {
+    const w = nextWindow(today, 12, 1, 12, 31);
+    const o = {id: "bedbug", title: "Bedbug annual report to HPD", s: w.s, e: w.e, rrule: "FREQ=YEARLY", link: LINKS.bedbug,
+      todo: `File the free Bedbug Annual Report online for Nov 1, ${w.s.getFullYear() - 1} - Oct 31, ${w.s.getFullYear()}, then give tenants the filing receipt or post it in the building.`};
+    if (multi) add({...o, applies: "yes", why: `${units} apartments makes this a multiple dwelling (3+ units).`});
+    else if (!known) add({...o, applies: "maybe", why: "Required if the building has 3 or more apartments (unit count unavailable)."});
+    else na.push(["Bedbug annual report", "only multiple dwellings (3+ apartments) file it."]);
+  }
+  // 2. HPD property registration
+  {
+    const w = nextWindow(today, 5, 21, 9, 1);
+    const o = {id: "hpdreg", title: "HPD property registration due", s: w.s, e: w.e, key: w.e, rrule: "FREQ=YEARLY", link: LINKS.reg,
+      todo: "Renew the annual HPD Property Registration (window opens May 21; the $13 fee is billed on your property tax statement)."};
+    if (multi) add({...o, applies: "yes", why: `${units} residential units; every building with 3+ units must register each year.`});
+    else add({...o, applies: "maybe", why: "1-2 unit buildings must register only if neither the owner nor the owner's immediate family lives there."});
+  }
+  // 3. HCR rent registration (only if rent-stabilized; stated on HPD's registration page)
+  if (multi) {
+    const w = nextWindow(today, 7, 31, 7, 31);
+    add({id: "hcr", title: "NY State rent registration (HCR)", s: w.s, e: w.e, rrule: "FREQ=YEARLY", link: LINKS.reg, applies: "maybe",
+      why: "Only if any apartment is rent-stabilized or otherwise rent-regulated.",
+      todo: "Register the building and its regulated apartments with NY State Homes and Community Renewal by July 31. This is separate from HPD registration."});
+  }
+  // 4. Annual notice (window guards for 3+ units; lead paint for pre-1960)
+  {
+    let o = null;
+    if (multi) {
+      const w = nextWindow(today, 1, 1, 1, 15);
+      o = {id: "notice", s: w.s, e: w.e, rrule: "FREQ=YEARLY", applies: "yes",
+        title: pre60 ? "Annual lead-paint and window-guard notice" : "Annual window-guard notice",
+        link: pre60 ? LINKS.lead : LINKS.wg,
+        why: `${units} apartments (window-guard notice is required in 3+ unit buildings)` + (pre60 ? `; built ${yb}, before 1960, so the lead-paint notice applies too.` : y60to78 ? `; built ${yb}: the lead notice also applies if you know there is lead paint (use the combined pre-1978 form).` : "."),
+        todo: "Deliver the annual notice to every apartment and keep proof of delivery. DOHMH sets Jan 1-15 for window guards (HPD allows to Jan 16 for lead), so Jan 15 covers both."};
+    } else if (small && pre60) {
+      const w = nextWindow(today, 1, 1, 1, 16);
+      o = {id: "notice", s: w.s, e: w.e, rrule: "FREQ=YEARLY", applies: "maybe", title: "Annual lead-paint notice to tenants", link: LINKS.lead,
+        why: `Built ${yb} (before 1960); in 1-2 unit buildings it applies to tenant-occupied units.`,
+        todo: "Deliver the annual lead-paint notice to each tenant-occupied unit and keep proof of delivery."};
+    } else if (!known) {
+      const w = nextWindow(today, 1, 1, 1, 15);
+      o = {id: "notice", s: w.s, e: w.e, rrule: "FREQ=YEARLY", applies: "maybe", title: "Annual lead-paint / window-guard notice", link: LINKS.lead,
+        why: "Window-guard notice applies to 3+ unit buildings; lead notice to buildings built before 1960 (unit count or year unavailable).",
+        todo: "Deliver the annual notice to every apartment and keep proof of delivery."};
+    } else na.push(["Annual lead-paint / window-guard notice", `window-guard notice is for 3+ unit buildings, and the lead notice for buildings built before 1960${yb ? ` (this one: ${yb})` : ""}.`]);
+    if (o) {
+      add(o);
+      const lead = pre60 || !known;
+      const w2 = lead ? nextWindow(today, 2, 15, 3, 1) : nextWindow(today, 2, 15, 2, 15);
+      add({id: "notice-return", title: "Annual notices due back from tenants", s: w2.s, e: w2.e, rrule: "FREQ=YEARLY", applies: o.applies, link: o.link, why: o.why,
+        todo: (lead ? "Tenants return notices by Feb 15. For units with no answer, try to inspect Feb 16 - Mar 1 and notify the Health Department in writing if you can't get access." : "Tenants return notices by Feb 15.")
+          + (multi ? " Install window guards wherever a child 10 or younger lives or a tenant asks." : "")});
+    }
+  }
+  // 5. Heat season
+  {
+    const w = nextWindow(today, 10, 1, 5, 31);
+    const keyS = w.s <= today ? Dt(w.s.getFullYear() + 1, 10, 1) : w.s;
+    const o = {id: "heat", title: "Heat season", s: w.s, e: w.e, key: keyS, keyTitle: "Heat season begins (runs to May 31)", rrule: "FREQ=YEARLY", link: LINKS.heat,
+      todo: "When it's below 55\u00b0F outside, keep apartments at 68\u00b0F+ from 6am-10pm; 62\u00b0F+ overnight regardless. Hot water at 120\u00b0F all year."};
+    add(multi ? {...o, applies: "yes", why: "Owners must supply heat to tenants; this building has rental apartments."}
+              : {...o, applies: "maybe", why: "Applies to any unit you rent to a tenant."});
+  }
+  // 6. DOB annual boiler inspection
+  {
+    const y = today.getFullYear(), s = Dt(y, 1, 1), e = Dt(y, 12, 31);
+    const o = {id: "boiler", title: "Annual boiler inspection (DOB)", s, e, key: e, keyTitle: "Last day of this year's boiler inspection cycle", rrule: "FREQ=YEARLY", link: LINKS.boiler,
+      todo: "Have the boiler inspected within the Jan 1-Dec 31 cycle and file the report in DOB NOW: Safety within 14 days of the inspection."};
+    const mixed = unitsTotal > units && units >= 1 && units <= 5;
+    if (units >= 6) add({...o, applies: "maybe", why: `${units} residential units (6+ families): applies to a building boiler; a boiler inside one apartment that heats only that apartment is exempt.`});
+    else if (mixed) add({...o, applies: "maybe", why: `Commercial plus ${units} residential unit${units === 1 ? "" : "s"} (mixed-use): boilers in mixed-use buildings need the annual inspection regardless of size.`});
+    else if (known) na.push(["Annual DOB boiler inspection", "low-pressure boilers in residential buildings with 5 or fewer families are exempt."]);
+  }
+  // 7. LL152 gas piping inspection (every 4 years by community district)
+  {
+    const cyc = GAS_CYCLE.find(c => c.cds.includes(district));
+    if (GAS_EXEMPT.has(cls) || /^V/.test(cls)) na.push(["Gas piping inspection (Local Law 152)", `building class ${cls} (1-2 family / R-3) is exempt.`]);
+    else if (!cyc) add({id: "gas", title: "Gas piping inspection (Local Law 152)", s: today, e: today, ongoing: true, applies: "maybe", link: LINKS.gas,
+      why: "Required every 4 years for most buildings other than 1-2 family homes; the year depends on the community district, which we couldn't match.",
+      todo: "Look up this building's due year with DOB's LL152 tool on the official page."});
+    else {
+      let y = cyc.base; while (y < today.getFullYear()) y += 4;
+      const s = Dt(y, 1, 1), e = Dt(y, 12, 31);
+      const o = {id: "gas", title: "Gas piping inspection (Local Law 152)", s, e, key: e, keyTitle: "Gas piping inspection cycle ends", rrule: "FREQ=YEARLY;INTERVAL=4", link: LINKS.gas,
+        applies: /^M[34]$/.test(cls) ? "maybe" : "yes",
+        why: `Class ${cls || "n/a"} is not exempt, and ${boroName.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())} Community District ${district} is due in ${y} (then every 4 years).`,
+        todo: `Hire a Licensed Master Plumber to inspect gas piping during ${y}; submit the certification to DOB within 60 days of the inspection. No gas piping? File a no-gas certification. If already filed this cycle, you're done until ${y + 4}.`};
+      if (s <= horizon) add(o); else later.push([o.title, `next cycle is ${y} (Community District ${district}).`]);
+    }
+  }
+  // 8. DSNY official NYC Bins (standing rule)
+  if (known && units <= 9) add({id: "bins", title: "Official NYC Bins for trash", s: today, e: today, ongoing: true, applies: "yes", link: LINKS.bins,
+    why: `${units} residential unit${units === 1 ? "" : "s"}; properties with 1-9 units must use official NYC Bins.`,
+    todo: "Set out trash only in official NYC Bins (required since June 1, 2026; full enforcement since Sept 8, 2026)."});
+  else if (units >= 10) na.push(["Official NYC Bins", "10+ unit buildings follow separate container rules (Empire Bins or NYC Bins); see DSNY."]);
+
+  // Order: ongoing / in-effect first, then by start date; keep only the next 12 months.
+  const cal = ev.filter(o => o.s <= horizon);
+  const sortKey = o => (o.s <= today ? today : o.s).getTime();
+  cal.sort((a, b) => sortKey(a) - sortKey(b) || (b.ongoing ? 1 : 0) - (a.ongoing ? 1 : 0));
+
+  const tagTxt = {yes: "Applies", maybe: "If applicable"};
+  const li = o => {
+    const now = o.s <= today && o.e >= today;
+    const badge = o.ongoing ? `<b>Ongoing</b><span>&bull;</span><small>standing rule</small>`
+      : now ? `<b>Now</b><span>&bull;</span><small>until ${esc(md(o.e))}</small>`
+      : `<b>${esc(MON[o.s.getMonth()])}</b><span>${o.s.getDate()}</span><small>${o.s.getFullYear()}</small>`;
+    const win = o.ongoing ? "In force now" : (now ? "Open now: " : "") + rangeLabel(o.s, o.e);
+    return `<li><div class="d">${badge}</div><div class="body">
+      <h4>${esc(o.title)}<span class="tag ${o.applies}">${tagTxt[o.applies]}</span></h4>
+      <div class="win">${esc(win)}</div>
+      <p>${esc(o.todo)}</p>
+      <p class="why">Why it applies here: ${esc(o.why)}</p>
+      <a href="${esc(o.link)}" target="_blank" rel="noopener">Official info</a></div></li>`;
+  };
+
+  // ---- Status cards: bedbug filing + HPD registration ----
+  const card = (cls, pill, title, body, link) => `<div class="item"><div class="top"><span class="pill ${cls}">${esc(pill)}</span><b>${esc(title)}</b></div>
+    <p class="desc">${body}</p>${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">Official info</a>` : ""}</div>`;
+  const Y = today.getMonth() === 11 ? today.getFullYear() : today.getFullYear() - 1;   // most recent filing window that has opened
+  const period = `Nov 1, ${Y - 1} - Oct 31, ${Y}`;
+  const nextY = Y + 1;
+  const nextLine = today.getMonth() === 11 ? "" : ` Next window: <b>Dec 1-31, ${nextY}</b> (covers Nov 1, ${nextY - 1} - Oct 31, ${nextY}).`;
+  let bb;
+  if (bedbug === null) bb = card("md", "UNAVAILABLE", "Bedbug filing", "Couldn't load HPD bedbug filings from NYC Open Data right now. Please try again later.", LINKS.bedbug);
+  else {
+    const hit = bedbug.find(r => String(r.filling_period_end_date || "").startsWith(`${Y}-10-31`));
+    const fd = hit && parseDate(hit.filing_date);
+    if (hit) {
+      const late = fd && fd > Dt(Y, 12, 31);
+      bb = card(late ? "md" : "lo", late ? "FILED LATE" : "FILED", `Bedbug report for ${Y} filed`,
+        `Filed ${esc(fmt(fd))} for ${esc(period)} (window was Dec 1-31, ${Y})${late ? ", after the Dec 31 deadline" : ""}.${nextLine}`, LINKS.bedbug);
+    } else if (small) {
+      bb = card("lo", "NOT REQUIRED", "Bedbug report", `Only buildings with 3+ apartments file. No report found for ${esc(period)}.${nextLine}`, LINKS.bedbug);
+    } else if (today.getMonth() === 11) {
+      bb = card("md", "WINDOW OPEN", `Bedbug report for ${Y}`, `Not in open data yet for ${esc(period)}. Window closes <b>Dec 31, ${Y}</b>. Open data can lag HPD's own system by weeks.`, LINKS.bedbug);
+    } else {
+      bb = card("hi", "NOT FOUND", `Bedbug report for ${Y}`, `No report in NYC Open Data for ${esc(period)} (window was Dec 1-31, ${Y}). Check HPD Online; open data can lag.${nextLine}`, LINKS.bedbug);
+    }
+  }
+  const r0 = reg && reg[0], regEnd = parseDate(r0 && r0.registrationenddate), regLast = parseDate(r0 && r0.lastregistrationdate);
+  let rg;
+  if (regEnd && regEnd >= today) rg = card("lo", "ACTIVE", "HPD registration", `Registered through <b>${esc(fmt(regEnd))}</b>${regLast ? ` (last filed ${esc(fmt(regLast))})` : ""}. Renew between May 21 and Sept 1 each year.`, LINKS.reg);
+  else if (regEnd) rg = card(multi ? "hi" : "md", "EXPIRED", "HPD registration", `Open data shows the registration ended ${esc(fmt(regEnd))}.${multi ? " 3+ unit buildings must register every year;" : " Required for 1-2 unit buildings only if the owner's family doesn't live there;"} confirm on HPD Online.`, LINKS.reg);
+  else rg = card(multi ? "hi" : "md", multi ? "NOT FOUND" : "NONE ON FILE", "HPD registration", multi ? "No registration found in open data for this tax lot. 3+ unit buildings must register every year; confirm on HPD Online."
+    : "No registration on file. 1-2 unit buildings must register only if neither the owner nor the owner's immediate family lives there.", LINKS.reg);
+
+  const boroTitle = boroName.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  const facts = [`${known ? units : "unknown"} residential / ${unitsTotal || "?"} total units`, `built ${yb || "n/a"}`, `class ${cls || "n/a"}`,
+    district ? `${boroTitle} Community District ${district}` : null].filter(Boolean).join(" \u00b7 ");
+  const icsEvents = cal.filter(o => !o.ongoing);
+  const notList = [...later, ...na];
+  const html = `<section class="comp" id="compliance">
+    <h2>Your building's compliance calendar</h2>
+    <p class="facts">Based on: ${esc(facts)} (NYC PLUTO). Next 12 months from ${esc(fmt(today))}.</p>
+    <div class="stat">${bb}${rg}</div>
+    <ul class="cal">${cal.map(li).join("")}</ul>
+    ${notList.length ? `<details class="na"><summary>Not on this building's calendar (${notList.length})</summary><ul>${notList.map(([t, w]) => `<li><b>${esc(t)}</b>: ${esc(w)}</li>`).join("")}</ul></details>` : ""}
+    <div class="icsbar"><button type="button" id="ics-btn">Download calendar (.ics)</button>
+      <span class="hint">${icsEvents.length} dated reminders, repeating on each rule's cycle, with an alert a week ahead. Imports into most calendar apps.</span></div>
+    <p class="disc" style="margin-top:12px">Informational reminders, not legal advice. Some items depend on facts we can't see (who lives in each unit, whether units are rented or rent-stabilized, boiler type). Confirm requirements and dates on the official sites linked above.</p>
+  </section>`;
+  return {html, events: icsEvents};
+}
+
+function buildICS(events, bbl, addr, now = new Date()) {
+  const pad = n => String(n).padStart(2, "0");
+  const dv = d => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`;
+  const stamp = now.toISOString().replace(/[-:]/g, "").replace(/\.\d+/, "");
+  const tx = s => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+  const enc = new TextEncoder();
+  const fold = line => { const out = []; let cur = "", n = 0;
+    for (const ch of line) { const b = enc.encode(ch).length; if (n + b > (out.length ? 74 : 75)) { out.push(cur); cur = ch; n = b; } else { cur += ch; n += b; } }
+    out.push(cur); return out.join("\r\n "); };
+  const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//NYC Small-Building Watch//Compliance Calendar//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    "X-WR-CALNAME:" + tx("Compliance - " + addr)];
+  for (const o of events) {
+    // Short windows (<= 31 days) become multi-day all-day events; long windows collapse to their key date.
+    const long = (o.e - o.s) / 864e5 > 31;
+    const s = long ? (o.key || o.s) : o.s, e = long ? s : o.e;
+    const title = (o.applies === "maybe" ? "(If applicable) " : "") + (long && o.keyTitle ? o.keyTitle : o.title);
+    const desc = `${o.todo}\n\nWindow: ${o.ongoing ? "ongoing" : rangeLabel(o.s, o.e)}\nWhy this building: ${o.why}\nOfficial info: ${o.link}\n\nInformational reminder, not legal advice. Confirm on the official site.`;
+    L.push("BEGIN:VEVENT", `UID:${o.id}-${bbl}@nyc-small-building-watch`, `DTSTAMP:${stamp}`,
+      `DTSTART;VALUE=DATE:${dv(s)}`, `DTEND;VALUE=DATE:${dv(addDays(e, 1))}`);
+    if (o.rrule) L.push("RRULE:" + o.rrule);
+    L.push("SUMMARY:" + tx(`${title} - ${addr}`), "DESCRIPTION:" + tx(desc), "URL:" + o.link, "TRANSP:TRANSPARENT",
+      "BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:" + tx(title), "TRIGGER:-P7D", "END:VALARM", "END:VEVENT");
+  }
+  L.push("END:VCALENDAR");
+  return L.map(fold).join("\r\n") + "\r\n";
+}
+function downloadICS(events, bbl, addr) {
+  const blob = new Blob([buildICS(events, bbl, addr)], {type: "text/calendar;charset=utf-8"});
+  const url = URL.createObjectURL(blob), a = document.createElement("a");
+  a.href = url; a.download = `compliance-calendar-${bbl}.ics`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 $("#f").addEventListener("submit", async e => {
