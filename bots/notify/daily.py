@@ -26,7 +26,7 @@ import watch                                    # noqa: E402  (NYC Open Data log
 from sender import Message, get_sender          # noqa: E402
 
 TAG_BUILDING, TAG_HEARING = "building-watch", "nyc-hearings"
-SITE = "https://lanternlab2027.github.io/"
+SITE = "https://lanternlab2027.github.io/lab/"
 OATH_COLS = ("ticket_number,hearing_date,hearing_time,hearing_status,hearing_result,issuing_agency,"
              "charge_1_code_description,balance_due")   # no respondent name/address columns
 SEV = {"high": 0, "medium": 1, "low": 2}
