@@ -182,6 +182,13 @@ function inferBoro(t) {
   for (const [re, b] of hints) if (re.test(up)) return b;
   return null;
 }
+// Compare house numbers numerically, including Queens-style "36-06". Different shapes never match.
+function hnCmp(a, b) {
+  const A = String(a).split("-").map(x => parseInt(x, 10)), B = String(b).split("-").map(x => parseInt(x, 10));
+  if (A.length !== B.length || A.concat(B).some(isNaN)) return NaN;
+  for (let i = 0; i < A.length; i++) if (A[i] !== B[i]) return A[i] - B[i];
+  return 0;
+}
 async function resolveBBL(text, boro) {
   const t = text.trim().replace(/^bbl\s*/i, "");
   if (/^\d{10}$/.test(t)) return t;
@@ -192,8 +199,10 @@ async function resolveBBL(text, boro) {
   const house = m[1], street = normStreet(m[2].split(",")[0]);
   let rows = await soda("64uk-42ks", {$select: "bbl", $where: `address=${q(house + " " + street)} AND borough=${q(PLUTO_BORO[boro])}`, $limit: 5});
   if (rows.length) return String(Math.trunc(parseFloat(rows[0].bbl)));
-  rows = await soda("tesw-yqqr", {$select: "boroid,block,lot", $limit: 5,
+  rows = await soda("tesw-yqqr", {$select: "boroid,block,lot,housenumber,lowhousenumber,highhousenumber", $limit: 50,
     $where: `boroid=${q(boro)} AND streetname=${q(street)} AND (housenumber=${q(house)} OR (lowhousenumber<=${q(house)} AND highhousenumber>=${q(house)}))`});
+  // The server compares house numbers as text ("35" <= "350"), so re-check the range numerically.
+  rows = rows.filter(r => r.housenumber === house || (r.lowhousenumber && r.highhousenumber && hnCmp(r.lowhousenumber, house) <= 0 && hnCmp(r.highhousenumber, house) >= 0));
   if (rows.length) return rows[0].boroid + String(rows[0].block).padStart(5, "0") + String(rows[0].lot).padStart(4, "0");
   // Fallback: NYC AddressPoint (house number + street -> BIN), then BIN -> BBL.
   const words = street.split(" ").map(w => ORD[w] ? String(ORD[w]) : w);
@@ -242,13 +251,14 @@ const COEF = {
 const PENALTY = 268;   // $ per tCO2e over the limit, Admin. Code §28-320.6 and 1 RCNY §103-14(h)
 const FUELS = [["kwh","Grid electricity","kWh"],["gas","Natural gas","kBtu"],["oil2","Fuel oil #2","kBtu"],["oil4","Fuel oil #4","kBtu"],
   ["steam","District steam","kBtu"],["diesel","Diesel","kBtu"],["propane","Propane","kBtu"],["kerosene","Kerosene","kBtu"],["oil1","Fuel oil #1","kBtu"]];
-// ESPM names in LL84 that differ from the rule's list. "rename": newer ESPM name for a listed type.
+// ESPM names in LL84 that differ from the rule's list. "rename": newer ESPM name for a listed type (DOB guide / ENERGY STAR).
+// "assumed": newer ESPM name we map to the closest listed type ourselves (not confirmed by DOB).
 // "guide": DOB Article 320 Info Guide's "Suggested Property Type" for types the rule doesn't list.
 const ALIAS = {
   "Senior Living Community": ["Senior Care Community", "rename"],
   "Vehicle Dealership": ["Automobile Dealership", "rename"],
-  "Vehicle Repair Services": ["Repair Services (Vehicle, Shoe, Locksmith, etc.)", "rename"],
-  "Community Center and Social Meeting Hall": ["Social/Meeting Hall", "rename"],
+  "Vehicle Repair Services": ["Repair Services (Vehicle, Shoe, Locksmith, etc.)", "assumed"],
+  "Community Center and Social Meeting Hall": ["Social/Meeting Hall", "assumed"],
   "Personal Services (Health/Beauty, Dry Cleaning, etc)": ["Personal Services (Health/Beauty, Dry Cleaning, etc.)", "rename"],
   "Aquarium": ["Museum", "guide"], "Bar/Nightclub": ["Restaurant", "guide"], "Casino": ["Social/Meeting Hall", "guide"],
   "Convention Center": ["Social/Meeting Hall", "guide"], "Ice/Curling Rink": ["Fitness Center/Health Club/Gym", "guide"],
@@ -330,7 +340,7 @@ function ll97(r) {
   if (uncounted.length) res.flags.push(`Not counted (no coefficient applied here): ${uncounted.join(", ")}. Real emissions would be higher.`);
   if (res.unmapped.length) res.flags.push(`Left out of the limit because LL97 has no emissions factor for the use as reported: ${res.unmapped.map(u => `${u.name}${u.area ? " (" + fmtN(u.area) + " sq ft)" : ""}`).join(", ")}. LL97 does not allow "Other" or "Mixed Use"; a design professional would reclassify this space, which would raise the limit.`);
   if (r.alert_energy_meter_has_less === "Possible Issue") res.flags.push("Portfolio Manager flagged that an energy meter has less than 12 full months of data, so annual use may be understated.");
-  if (/yes/i.test(String(r.estimated_values_energy || ""))) res.flags.push("Some energy values in this report were estimated by the filer.");
+  if (/yes/i.test(String(r.estimated_values_energy || ""))) res.flags.push("Portfolio Manager notes that some energy meter entries in this report are marked as estimates.");
   res.ok = true;
   return res;
 }
@@ -375,7 +385,7 @@ function propertyCard(r, hist, bbls) {
     const over1 = est.e1 > est.lim1, over2 = est.e2 > est.lim2;
     const useRows = est.uses.map(u => `<tr><td>${esc(u.name)}${u.name !== u.key ? ` <span class="src">(as ${esc(u.key)})</span>` : ""}</td><td class="r">${fmtN(u.area)}</td><td class="r">${u.l1}</td><td class="r">${u.l2}</td></tr>`).join("");
     const fuelRows = FUELS.filter(([k]) => est.energy[k] > 0).map(([k, n, unit]) => `<tr><td>${esc(n)}</td><td class="r">${fmtN(est.energy[k])} ${unit}</td><td class="r">${COEF.p1[k]}</td><td class="r">${COEF.p2[k]}</td></tr>`).join("");
-    const subs = est.subs.length ? `<p class="src">Property types substituted: ${est.subs.map(([a, b, how]) => `${esc(a)} &rarr; ${esc(b)} (${how === "rename" ? "newer ESPM name for the same type" : "DOB Article 320 guide's suggested type"})`).join("; ")}.</p>` : "";
+    const subs = est.subs.length ? `<p class="src">Property types substituted: ${est.subs.map(([a, b, how]) => `${esc(a)} &rarr; ${esc(b)} (${how === "rename" ? "newer ESPM name for the same type" : how === "assumed" ? "closest listed type, our assumption" : "DOB Article 320 guide's suggested type"})`).join("; ")}.</p>` : "";
     estHtml = `
       <p class="src" style="margin:0 0 8px">Uses this building's ${esc(r.report_year)} energy use as reported to the city, the LL97 emissions coefficients and the LL97 limits for its reported property types (${fmtN(est.area)} sq ft). Assumes the building follows Article 320 from 2024 and that energy use stays the same.</p>
       ${periodBlock("2024-2029 limits", `Coefficients and limits in force now. Grid electricity counted at 0.000288962 tCO2e/kWh.`, est.e1, est.lim1)}
