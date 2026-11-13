@@ -1,0 +1,13 @@
+{
+ "_comment": "Test-only subscribers. Fake example.com addresses; real public BBLs and OATH summons numbers (hearings Nov 16 and Nov 19 2026).",
+ "building-watch": [
+  {"id": 900001, "email": "owner-a@example.com", "first_name": "Ana", "fields": {"bbl": "3010730066", "building_address": "289 Garfield Pl, Brooklyn"}},
+  {"id": 900002, "email": "owner-b@example.com", "first_name": null, "fields": {"bbl": null, "building_address": "110-28 Corona Ave, Queens"}},
+  {"id": 900003, "email": "shared@example.com", "first_name": "Sam", "fields": {"bbl": "1020250013"}},
+  {"id": 900004, "email": "no-building@example.com", "first_name": "Nobody", "fields": {"bbl": null, "building_address": null}}
+ ],
+ "nyc-hearings": [
+  {"id": 900003, "email": "shared@example.com", "first_name": "Sam", "fields": {"hearing_lookup": "ticket:0891129618", "hearing_tickets": "0891129618,0891137931", "next_hearing": "2026-11-19"}},
+  {"id": 900005, "email": "biz@example.com", "first_name": "Dee", "fields": {"hearing_lookup": "addr:2042260006", "hearing_tickets": "0881353267", "next_hearing": "2026-11-16"}}
+ ]
+}

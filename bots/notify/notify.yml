@@ -1,0 +1,60 @@
+# Draft GitHub Actions workflow -> save as .github/workflows/notify.yml in the repo that holds bots/.
+# Daily per-subscriber alerts (Building Watch + Hearing Watch). Dry run unless the repo
+# variable EMAIL_SEND is "true" (or a manual run sets send=true) AND EMAIL_BACKEND is smtp|kit.
+name: daily-alerts
+
+on:
+  schedule:
+    - cron: "41 11 * * *"   # 11:41 UTC = 6:41 AM EST / 7:41 AM EDT (off the hour)
+  workflow_dispatch:
+    inputs:
+      send:
+        description: "Really send? (false = dry run, writes outbox only)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write            # commit notify_state.json (hashes only)
+
+concurrency:
+  group: daily-alerts
+  cancel-in-progress: false
+
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build and send alerts
+        working-directory: bots/notify
+        env:
+          KIT_API_SECRET: ${{ secrets.KIT_API_SECRET }}         # read subscribers (V3 secret)
+          NOTIFY_STATE_SALT: ${{ secrets.NOTIFY_STATE_SALT }}   # any long random string
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}   # optional
+          EMAIL_BACKEND: ${{ vars.EMAIL_BACKEND }}              # "kit" or "smtp"
+          KIT_V4_API_KEY: ${{ secrets.KIT_V4_API_KEY }}         # kit backend
+          SMTP_HOST: ${{ vars.SMTP_HOST }}                      # smtp backend, e.g. smtp.gmail.com
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_FROM: ${{ vars.EMAIL_FROM }}
+        run: |
+          if [ "${{ github.event.inputs.send }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ "${{ vars.EMAIL_SEND }}" = "true" ]; }; then
+            python daily.py --send --state notify_state.json
+          else
+            python daily.py --state notify_state.json
+            rm -rf outbox   # never upload or commit subscriber emails
+          fi
+
+      - name: Commit state (salted hashes only)
+        run: |
+          git config user.name  "alerts-bot"
+          git config user.email "alerts-bot@users.noreply.github.com"
+          git add bots/notify/notify_state.json 2>/dev/null || exit 0
+          git diff --cached --quiet || git commit -m "alerts: update state $(date -u +%F)"
+          git push

@@ -75,7 +75,7 @@ Each query takes roughly 0.4-12 s. About 10 per building, so the script runs 4 b
 - **Address parsing** is basic: no GeoSearch/Geoclient. `geosearch.planninglabs.nyc` was blocked by the sandbox proxy, so it is untested. It would be a good primary geocoder for the browser page if its CORS allows it.
 - **Condos:** billing BBLs (lots 75xx) work for PLUTO and footprints, but HPD and OATH may record unit lots. This is untested.
 - **1-2 family homes:** PLUTO-based units are fine, but the registration and bedbug rules only fire at 3+ units by design.
-- **Email:** `send_email()` is a stub that writes to `outbox/`. Wire up Postmark, Resend or SES with `EMAIL_API_KEY`. There is no per-subscriber routing yet; the prototype sends one digest per run.
+- **Email:** `send_email()` now goes through `bots/notify/sender.py`: dry run (writes `outbox/`) unless `--send` and `EMAIL_BACKEND=smtp|kit`. Per-subscriber alerts read from Kit live in `bots/notify/daily.py`. See `bots/EMAIL_SENDING.md`.
 - **Sales-page claims to verify before launch:** competitor prices (SiteCompli ~$250/mo minimum, PBS Alert ~$9/bldg) came from the brief and were not checked. "Agencies don't email owners about new violations" should also be checked against any current DOB/HPD notification features.
 - **lookup.html:** the logic was tested in Node 22 against the live API for all 5 buildings and a bad address. Socrata returns `Access-Control-Allow-Origin: *`, and the requests are simple GETs with no preflight. It has not been viewed in a real browser.
 

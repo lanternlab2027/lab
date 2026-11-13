@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Appeal?</title>
+<meta name="description" content="Free check for NYC 1-3 family homes and small buildings: your DOF market and assessed value, the year-over-year change, recent comparable sales, and whether a Tax Commission appeal is likely worth it.">
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1c1d1f;--muted:#5e6166;--line:#e3e1da;--accent:#1f5f8b;--accent-ink:#fff;
+  --hi:#b42318;--hi-bg:#fdecea;--md:#9a5b00;--md-bg:#fff4e0;--lo:#2f6b3a;--lo-bg:#e9f5ec}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141518;--card:#1d1f23;--ink:#ecebe7;--muted:#a3a6ad;--line:#2e3036;--accent:#6fb0e0;--accent-ink:#0d1b26;
+  --hi:#ff8a80;--hi-bg:#3a1d1b;--md:#f3b45a;--md-bg:#352a17;--lo:#8fd19e;--lo-bg:#1b2e20}}
+:root[data-theme="dark"]{--bg:#141518;--card:#1d1f23;--ink:#ecebe7;--muted:#a3a6ad;--line:#2e3036;--accent:#6fb0e0;--accent-ink:#0d1b26;
+  --hi:#ff8a80;--hi-bg:#3a1d1b;--md:#f3b45a;--md-bg:#352a17;--lo:#8fd19e;--lo-bg:#1b2e20}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--accent)}
+header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+header a{text-decoration:none;font-weight:600;color:var(--ink)}
+header a.alt{font-weight:400;font-size:.9rem;color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.2;margin:18px 0 6px}
+h2{font-size:1.25rem;margin:28px 0 8px}
+.sub{color:var(--muted);margin:0 0 20px}
+form.search{display:grid;grid-template-columns:1fr 160px auto;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+input,select,button{font:inherit;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-width:0}
+button{background:var(--accent);color:var(--accent-ink);border:0;font-weight:600;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+.hint{font-size:.85rem;color:var(--muted);margin:6px 2px 0}
+@media (max-width:600px){form.search{grid-template-columns:1fr}}
+#status{margin:16px 0;color:var(--muted)}
+.warn{border:2px solid var(--hi);background:var(--hi-bg);border-radius:12px;padding:12px 14px;margin:20px 0;font-size:.92rem}
+.warn b{color:var(--hi)}
+.bldg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+.bldg h2{margin:0 0 4px;font-size:1.25rem}
+.meta{color:var(--muted);font-size:.9rem}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+@media (max-width:600px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{border:1px solid var(--line);border-radius:10px;padding:10px;min-width:0}
+.tile b{display:block;font-size:1.3rem;line-height:1.15;overflow-wrap:anywhere}
+.tile span{font-size:.82rem;color:var(--muted);display:block}
+.tile small{font-size:.8rem;display:block;margin-top:2px}
+.up{color:var(--hi)}.down{color:var(--lo)}
+.roll{font-size:.88rem;margin:10px 0 0;padding:8px 10px;border-radius:8px;background:var(--md-bg);color:var(--ink)}
+.verdict{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:16px;margin:20px 0}
+.verdict.hi{border-color:var(--hi)}.verdict.md{border-color:var(--md)}.verdict.lo{border-color:var(--lo)}
+.verdict .big{display:inline-block;font-size:1.3rem;font-weight:800;padding:4px 12px;border-radius:99px;margin:0 0 6px}
+.big.hi{color:var(--hi);background:var(--hi-bg)}.big.md{color:var(--md);background:var(--md-bg)}.big.lo{color:var(--lo);background:var(--lo-bg)}
+.verdict .so{font-size:1.05rem;font-weight:600;margin:4px 0 10px}
+.verdict ol{margin:8px 0 0;padding-left:22px}
+.verdict li{margin:6px 0;overflow-wrap:anywhere}
+.calc{font-variant-numeric:tabular-nums}
+.note{font-size:.88rem;color:var(--muted)}
+.comps{margin:8px 0}
+.comp{display:grid;grid-template-columns:1fr auto;gap:2px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:6px 0;font-variant-numeric:tabular-nums}
+.comp .a{font-weight:600;overflow-wrap:anywhere;min-width:0}
+.comp .p{font-weight:700;text-align:right}
+.comp .d{font-size:.84rem;color:var(--muted);min-width:0}
+.comp .r{font-size:.84rem;color:var(--muted);text-align:right}
+.more{font-size:.88rem;color:var(--muted)}
+details{margin:10px 0}
+details summary{cursor:pointer;color:var(--accent)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0}
+.box h3{margin:0 0 6px;font-size:1.05rem}
+.box ul{margin:6px 0;padding-left:20px}
+.box li{margin:4px 0}
+.cal{list-style:none;margin:0;padding:0}
+.cal li{display:grid;grid-template-columns:76px 1fr;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0}
+.cal .dt{border-right:1px solid var(--line);padding-right:10px;text-align:center;line-height:1.15}
+.cal .dt b{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:var(--accent)}
+.cal .dt span{display:block;font-size:1.35rem;font-weight:700}
+.cal .dt small{display:block;font-size:.72rem;color:var(--muted)}
+.cal h4{margin:0;font-size:1rem}
+.cal p{margin:4px 0;font-size:.92rem;overflow-wrap:anywhere}
+.cal li.mine{border:2px solid var(--accent)}
+.tag{font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:99px;margin-left:6px;vertical-align:2px;white-space:nowrap;color:var(--accent);background:var(--bg);border:1px solid var(--accent)}
+.cta{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:16px;margin:24px 0}
+.cta h3{margin:0 0 4px}
+.cta form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.cta input{flex:1 1 220px}
+.beta{font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:99px;margin-left:6px;vertical-align:3px;color:var(--md);background:var(--md-bg)}
+.disc{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:28px}
+.src{font-size:.82rem;color:var(--muted)}
+.src li{margin:3px 0;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+<header><a href="../buildingwatch/index.html">NYC Small-Building Watch</a><a class="alt" href="../buildingwatch/lookup.html">Violations lookup &rarr;</a></header>
+<h1>Should I appeal my property tax assessment?</h1>
+<p class="sub">For NYC 1-3 family homes and small buildings. See the city's market value and assessed value for your property, how they changed from last year, and how the market value compares with recent sales of similar homes nearby. Then get a plain answer with the math shown. Free, no sign-up.</p>
+
+<div class="warn" id="top-disc"><b>Not tax or legal advice. Not affiliated with the City of New York.</b> This is a rough screen built from public NYC Open Data. It can be wrong. It doesn't know your home's condition, renovations, or anything else that isn't in the city's data. Read your Notice of Property Value and the official instructions before you decide anything.</div>
+
+<form class="search" id="f">
+  <input id="addr" placeholder="e.g. 45-46 193rd St, or BBL 4055340120" autocomplete="street-address" required>
+  <select id="boro" aria-label="Borough">
+    <option value="">Borough...</option><option value="1">Manhattan</option><option value="2">Bronx</option>
+    <option value="3">Brooklyn</option><option value="4">Queens</option><option value="5">Staten Island</option>
+  </select>
+  <button id="go">Check</button>
+</form>
+<p class="hint">Enter the house number and street, then pick the borough. A 10-digit BBL works without a borough.</p>
+
+<div id="status" role="status" aria-live="polite"></div>
+<div id="out"></div>
+
+<h2 id="deadlines">Appeal deadlines</h2>
+<div id="dl"></div>
+
+<h2>What an appeal can and can't change</h2>
+<div class="box">
+  <h3>Two separate agencies, two different requests</h3>
+  <ul>
+    <li><b>NYC Tax Commission (the appeal).</b> An independent agency that can lower your <b>assessed value</b>, fix your tax class, or review an exemption. It <b>can't change the market value figure</b> on your notice, and it can't change the building description. Filing is free for homes like these. The $175 fee applies only when the assessed value is $2 million or more.</li>
+    <li><b>Department of Finance (DOF) Request for Review.</b> This asks DOF itself to take another look at the tentative value. Use DOF's <b>Request to Update</b> to fix wrong facts such as square footage, units or stories. Neither one replaces a Tax Commission application filed on time.</li>
+  </ul>
+  <h3>Class 1 (1-3 family homes): why a high market value may not matter</h3>
+  <ul>
+    <li>Your assessed value starts at <b>6%</b> of DOF's market value. State law also <b>caps increases at 6% a year and 20% over five years</b>. Work such as additions or renovations, and an exemption that ends, aren't covered by the caps.</li>
+    <li>Because of the caps, most Class 1 homes are taxed on less than 6% of market value. DOF calls the value you're actually taxed on the <b>effective market value</b>: your assessed value divided by 6%.</li>
+    <li>Your tax only goes down if you show that the home is worth <b>less than the effective market value</b>. That's often well below the market value printed on the notice. It's also why your assessed value can keep rising after the market value falls.</li>
+    <li>The Tax Commission's own test (Form TC108): multiply what you think the home would sell for by 6%. If the result isn't below the assessed value on your notice, don't file.</li>
+  </ul>
+  <h3>Small buildings in Class 2 and 4</h3>
+  <ul>
+    <li>Assessed value is 45% of market value. Class 2A, 2B and 2C (4-10 units) increases are capped at 8% a year and 30% over five years. Other Class 2 and Class 4 changes are phased in over five years.</li>
+    <li>DOF generally values rental buildings by their income, so comparing sale prices per square foot is only a rough cross-check. Appeals for rental property need an income and expense statement, except for residential buildings with 6 or fewer units and no commercial space.</li>
+  </ul>
+</div>
+
+<div class="cta" id="signup">
+  <h3>Remind me before the appeal deadline + send me my comparables <span class="beta">BETA</span></h3>
+  <div>We'll email you a reminder before your class's 2027 deadline, plus this property's comparable sales after DOF posts the new tentative values (around January 15). It's free, and you can unsubscribe any time.</div>
+  <form id="signup-form">
+    <input type="email" name="email" id="signup-email" placeholder="you@example.com" required>
+    <input type="hidden" name="bbl" id="signup-bbl">
+    <button type="submit">Remind me</button>
+  </form>
+  <div id="signup-msg" class="disc"></div>
+</div>
+
+<section class="src">
+  <h3>Sources (checked Nov 13, 2026)</h3>
+  <ul>
+    <li>Values: <a href="https://data.cityofnewyork.us/d/8y4t-faws" target="_blank" rel="noopener">NYC Open Data, DOF Property Valuation and Assessment Data, Tax Classes 1-4</a> (latest roll in the data: 2026/27 final).</li>
+    <li>Sales: <a href="https://data.cityofnewyork.us/d/usep-8jbt" target="_blank" rel="noopener">DOF Citywide Rolling Calendar Sales</a> (latest 12 months) and <a href="https://data.cityofnewyork.us/d/w2pb-icbu" target="_blank" rel="noopener">DOF Citywide Annualized Calendar Sales</a> (earlier months).</li>
+    <li>Deadlines, forms, grounds and the 6% / 45% ratios and caps: <a href="https://www.nyc.gov/site/taxcommission/about/challenging-notice-of-property-value.page" target="_blank" rel="noopener">Tax Commission, Challenging Your Notice of Property Value</a>; <a href="https://www.nyc.gov/site/taxcommission/forms/forms.page" target="_blank" rel="noopener">Tax Commission forms</a>; <a href="https://www.nyc.gov/assets/taxcommission/downloads/pdf/tc600-2026.pdf" target="_blank" rel="noopener">TC600, How to Appeal a Tentative Assessment (2026/27)</a>.</li>
+    <li>Effective market value, Class 1 caps and DOF deadlines: <a href="https://www.nyc.gov/assets/finance/downloads/pdf/brochures/class_1_guide.pdf" target="_blank" rel="noopener">DOF Class 1 Property Tax Guide</a>; <a href="https://www.nyc.gov/site/finance/property/challenge-your-assessment.page" target="_blank" rel="noopener">DOF, Challenge your assessment</a>; <a href="https://www.nyc.gov/site/finance/property/property-forms-assessments-and-valuations.page" target="_blank" rel="noopener">DOF assessment and valuation forms</a>; <a href="https://www.nyc.gov/site/finance/about/finance-calendar.page" target="_blank" rel="noopener">DOF calendar</a>.</li>
+    <li>Class 1 tax rate (19.843%, tax year 2026): <a href="https://www.nyc.gov/site/finance/property/property-tax-rates.page" target="_blank" rel="noopener">DOF property tax rates</a>.</li>
+  </ul>
+</section>
+
+<p class="disc"><b>Not tax, legal, appraisal or financial advice. Not affiliated with, endorsed by, or speaking for the City of New York, the NYC Tax Commission or the Department of Finance.</b> Every number here comes from public NYC Open Data, which can be incomplete, out of date, or wrong for your property. Sale records include some sales that aren't arm's-length, and square footage isn't measured the same way everywhere. The "comparable" sales are picked automatically and haven't been inspected. The tax-savings figure is a rough upper bound that ignores exemptions, abatements and future rate changes. Deadlines are strict, and the Tax Commission must <i>receive</i> your application on time. Always confirm dates and rules on the official pages linked above, or talk to a qualified professional. Filing with the Tax Commission is free for most homes, so you never need to pay anyone to file for you.</p>
+</main>
+
+<script>
+const API = "https://data.cityofnewyork.us/resource/";
+const PVAD = "8y4t-faws", ROLL = "usep-8jbt", ANNUAL = "w2pb-icbu";
+const BORO = {1:"MANHATTAN",2:"BRONX",3:"BROOKLYN",4:"QUEENS",5:"STATEN ISLAND"};
+const PLUTO_BORO = {1:"MN",2:"BX",3:"BK",4:"QN",5:"SI"};
+const SUFFIX = {ST:"STREET",STR:"STREET",AVE:"AVENUE",AV:"AVENUE",PL:"PLACE",RD:"ROAD",BLVD:"BOULEVARD",DR:"DRIVE",
+  LN:"LANE",PKWY:"PARKWAY",TER:"TERRACE",CT:"COURT",SQ:"SQUARE",HWY:"HIGHWAY",EXPY:"EXPRESSWAY",TPKE:"TURNPIKE"};
+const DIRS = {W:"WEST",E:"EAST",N:"NORTH",S:"SOUTH"};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const q = s => "'" + String(s).replace(/'/g, "''") + "'";
+const titleCase = s => String(s || "").toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+
+async function soda(id, params) {
+  const u = API + id + ".json?" + new URLSearchParams(params);
+  for (let i = 0; ; i++) {  // retry throttling / transient 5xx with backoff
+    let r;
+    try { r = await fetch(u); } catch (e) { if (i >= 3) throw new Error("Couldn't reach NYC Open Data. Please try again."); }
+    if (r && r.ok) return r.json();
+    if (r && !(r.status === 429 || r.status >= 500)) throw new Error("NYC Open Data returned " + r.status);
+    if (i >= 3) throw new Error("NYC Open Data is busy (" + (r ? r.status : "network") + "). Please try again in a minute.");
+    await new Promise(res => setTimeout(res, 1500 * 2 ** i));
+  }
+}
+function normStreet(s) {
+  const t = s.toUpperCase().replace(/[.,#]/g, " ").split(/\s+/).filter(Boolean);
+  return t.map((w, i) => {
+    w = w.replace(/^(\d+)(ST|ND|RD|TH)$/, "$1");
+    if (i === 0 && DIRS[w] && t.length > 1) return DIRS[w];
+    if (i === t.length - 1 && SUFFIX[w]) return SUFFIX[w];
+    return w;
+  }).join(" ");
+}
+
+// ---------- Address / BBL resolution (same as the LL97 page: PLUTO, then HPD registrations, then AddressPoint) ----------
+const ORD = {FIRST:1,SECOND:2,THIRD:3,FOURTH:4,FIFTH:5,SIXTH:6,SEVENTH:7,EIGHTH:8,NINTH:9,TENTH:10,ELEVENTH:11,TWELFTH:12};
+const ABBR = Object.fromEntries(Object.entries(SUFFIX).filter(([k]) => !["STR","AV"].includes(k)).map(([k, v]) => [v, k]));
+const DIR1 = {WEST:"W",EAST:"E",NORTH:"N",SOUTH:"S"};
+function inferBoro(t) {
+  const up = t.toUpperCase();
+  const hints = [[/\b(MANHATTAN|NEW YORK,? NY|NYC)\b/,1],[/\bBRONX\b/,2],[/\bBROOKLYN\b/,3],[/\b(QUEENS|ASTORIA|FLUSHING|JAMAICA|BAYSIDE|CORONA|ELMHURST|JACKSON HEIGHTS|LONG ISLAND CITY|FOREST HILLS)\b/,4],[/\bSTATEN ISLAND\b/,5]];
+  for (const [re, b] of hints) if (re.test(up)) return b;
+  return null;
+}
+// Compare house numbers numerically, including Queens-style "36-06". Different shapes never match.
+function hnCmp(a, b) {
+  const A = String(a).split("-").map(x => parseInt(x, 10)), B = String(b).split("-").map(x => parseInt(x, 10));
+  if (A.length !== B.length || A.concat(B).some(isNaN)) return NaN;
+  for (let i = 0; i < A.length; i++) if (A[i] !== B[i]) return A[i] - B[i];
+  return 0;
+}
+async function bblForBin(bin) {
+  const r = await soda("5zhs-2jue", {$select: "base_bbl,mappluto_bbl", $where: `bin=${q(bin)}`, $limit: 1});
+  const v = r[0] && (r[0].mappluto_bbl || r[0].base_bbl);
+  return v ? String(Math.trunc(parseFloat(v))) : null;
+}
+async function resolveBBL(text, boro) {
+  const t = text.trim().replace(/^bbl\s*/i, "");
+  if (/^\d{10}$/.test(t)) return t;
+  const dashed = t.match(/^([1-5])[-\s\/](\d{1,5})[-\s\/](\d{1,4})$/);
+  if (dashed) return dashed[1] + dashed[2].padStart(5, "0") + dashed[3].padStart(4, "0");
+  const m = t.toUpperCase().match(/^\s*([0-9]+(?:-[0-9]+)?[A-Z]?)\s+(.+)$/);
+  if (!m) throw new Error("Please start with the house number, e.g. 45-46 193rd St.");
+  if (!boro) boro = inferBoro(t);
+  if (!boro) throw new Error("Please pick a borough.");
+  const house = m[1], street = normStreet(m[2].split(",")[0]);
+  let rows = await soda("64uk-42ks", {$select: "bbl", $where: `address=${q(house + " " + street)} AND borough=${q(PLUTO_BORO[boro])}`, $limit: 5});
+  if (rows.length) return String(Math.trunc(parseFloat(rows[0].bbl)));
+  rows = await soda("tesw-yqqr", {$select: "boroid,block,lot,housenumber,lowhousenumber,highhousenumber", $limit: 50,
+    $where: `boroid=${q(boro)} AND streetname=${q(street)} AND (housenumber=${q(house)} OR (lowhousenumber<=${q(house)} AND highhousenumber>=${q(house)}))`});
+  // The server compares house numbers as text ("35" <= "350"), so re-check the range numerically.
+  rows = rows.filter(r => r.housenumber === house || (r.lowhousenumber && r.highhousenumber && hnCmp(r.lowhousenumber, house) <= 0 && hnCmp(r.highhousenumber, house) >= 0));
+  if (rows.length) return rows[0].boroid + String(rows[0].block).padStart(5, "0") + String(rows[0].lot).padStart(4, "0");
+  // Fallback: NYC AddressPoint (house number + street -> BIN), then BIN -> BBL.
+  const words = street.split(" ").map(w => ORD[w] ? String(ORD[w]) : w);
+  let dir = null, type = null;
+  if (words.length > 1 && DIR1[words[0]]) dir = DIR1[words.shift()];
+  if (words.length > 1 && ABBR[words[words.length - 1]]) type = ABBR[words.pop()];
+  const core = words.join(" ");
+  let ap = await soda("uf93-f8nk", {$select: "bin,pre_directional,post_type", $limit: 20,
+    $where: `boroughcode=${q(boro)} AND house_number=${q(house)} AND street_name=${q(core)}`});
+  ap = ap.filter(r => (!type || !r.post_type || r.post_type === type) && (!dir || !r.pre_directional || r.pre_directional === dir) && r.bin);
+  if (ap.length) {
+    const bbl = await bblForBin(ap[0].bin);
+    if (bbl) return bbl;
+  }
+  throw new Error(`Couldn't find "${house} ${street}" in ${BORO[boro].toLowerCase()}. Try spelling out the street (e.g. "193rd Street") or enter the 10-digit BBL from your tax bill.`);
+}
+
+// ---------- Verified figures (see bots/taxappeal/NOTES.md for sources) ----------
+const RATIO = {1: 0.06, 2: 0.45, 4: 0.45};          // class assessment ratios, TC600 para. 6 (2026/27)
+const C1_RATE = 0.19843;                             // Class 1 tax rate, tax year 2026 (DOF property tax rates page)
+const LINKS = {
+  tcForms: "https://www.nyc.gov/site/taxcommission/forms/forms.page",
+  tcHow: "https://www.nyc.gov/site/taxcommission/about/challenging-notice-of-property-value.page",
+  tc600: "https://www.nyc.gov/assets/taxcommission/downloads/pdf/tc600-2026.pdf",
+  rfrOnline: "https://www.nyc.gov/assets/finance/jump/property_rfr.html",
+  dofForms: "https://www.nyc.gov/site/finance/property/property-forms-assessments-and-valuations.page",
+  dofChallenge: "https://www.nyc.gov/site/finance/property/challenge-your-assessment.page",
+  nopv: "https://www.nyc.gov/site/finance/property/notice-of-property-value.page",
+  c1guide: "https://www.nyc.gov/assets/finance/downloads/pdf/brochures/class_1_guide.pdf",
+};
+// DOF building class descriptions (nyc.gov/assets/finance/jump/hlpbldgcode.html), small-building classes only.
+const BCLASS = {A0:"Cape Cod",A1:"one-family, two stories, detached",A2:"one-family, one story",A3:"large suburban one-family",A4:"city residence, one family",
+  A5:"one-family attached or semi-detached",A6:"summer cottage",A7:"mansion or town house",A8:"bungalow colony",A9:"miscellaneous one-family",
+  B1:"two-family brick",B2:"two-family frame",B3:"two-family converted from one-family",B9:"miscellaneous two-family",
+  C0:"three-family",C3:"four-family",C2:"five to six families",CB:"walk-up, under 11 units",
+  S0:"1 family with 2 stores or offices",S1:"1 family with 1 store or office",S2:"2 family with 1 store or office",S3:"3 family with 1 store or office",
+  S4:"4 family with 1 store or office",S5:"5-6 family with 1 store or office",R3:"condo unit in a 1-3 story building"};
+
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const Dt = (y, m, d) => new Date(y, m - 1, d);
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+const longDate = d => d.toLocaleDateString("en-US", {weekday: "short", month: "short", day: "numeric", year: "numeric"});
+const money = n => "$" + Math.round(n).toLocaleString("en-US");
+const pct = (x, digits = 1) => (x > 0 ? "+" : "") + (x * 100).toFixed(digits) + "%";
+const num = v => { const n = parseFloat(String(v ?? "").replace(/,/g, "")); return isFinite(n) ? n : 0; };
+// Statutory dates that land on a weekend move to the next business day (as in 2026: Mar 1 -> Mar 2, Mar 15 -> Mar 16).
+function nextBiz(d) { const w = d.getDay(); return w === 6 ? Dt(d.getFullYear(), d.getMonth() + 1, d.getDate() + 2) : w === 0 ? Dt(d.getFullYear(), d.getMonth() + 1, d.getDate() + 1) : d; }
+const OFFICIAL = {2026: {c1: Dt(2026, 3, 16), c234: Dt(2026, 3, 2)}};  // published by the Tax Commission for 2026/27
+// The appeal season (Jan-Mar of calendar year Y) is for tax year Y/Y+1, which the DOF data calls year Y+1.
+function season(today) {
+  let y = today.getFullYear();
+  const c1 = (OFFICIAL[y] || {}).c1 || nextBiz(Dt(y, 3, 15));
+  if (today > c1) y++;
+  const off = OFFICIAL[y];
+  return {y, fy: y + 1, official: !!off, roll: Dt(y, 1, 15),
+    c234: off ? off.c234 : nextBiz(Dt(y, 3, 1)), c1: off ? off.c1 : nextBiz(Dt(y, 3, 15)), rfr4: nextBiz(Dt(y, 4, 1))};
+}
+const fyLabel = fy => `${fy - 1}/${String(fy).slice(2)}`;
+const classGroup = tc => { const c = String(tc || "").charAt(0); return c === "1" ? 1 : c === "2" ? 2 : c === "4" ? 4 : c === "3" ? 3 : 0; };
+
+function deadlinesHtml(today, cls) {
+  const s = season(today);
+  const expect = s.official ? "" : " (expected: the statutory date; the Tax Commission posts the official date with the new forms in January)";
+  const item = (d, title, body, mine) => `<li class="${mine ? "mine" : ""}"><div class="dt"><b>${MON[d.getMonth()]}</b><span>${d.getDate()}</span><small>${d.getFullYear()}</small></div>
+    <div><h4>${esc(title)}${mine ? '<span class="tag">Your class</span>' : ""}</h4><p>${body}</p></div></li>`;
+  return `<ul class="cal">
+    ${item(s.roll, "Notices of Property Value and tentative roll", `DOF publishes ${fyLabel(s.fy)} tentative values around January 15 and mails each owner a Notice of Property Value. <a href="${LINKS.nopv}" target="_blank" rel="noopener">See your notice</a>. The appeal window runs from then until the deadlines below.`, false)}
+    ${item(s.c234, "Deadline: Tax Class 2, 3 and 4", `Tax Commission application (Form TC101, TC109 for condos, or TC106) must be <b>received by 5:00 PM on ${esc(longDate(s.c234))}</b>${esc(expect)}. DOF's Request for Review deadline is the same day for Class 2, and ${esc(longDate(s.rfr4))} for Class 4.`, cls === 2 || cls === 4)}
+    ${item(s.c1, "Deadline: Tax Class 1 (1-3 family homes)", `Tax Commission application (Form TC108) must be <b>received by 5:00 PM on ${esc(longDate(s.c1))}</b>${esc(expect)}. DOF's Request for Review deadline for Class 1 is the same day.`, cls === 1)}
+  </ul>
+  <div class="box"><h3>How to file (free)</h3><ul>
+    <li><b>Tax Commission appeal:</b> download the current year's form from the <a href="${LINKS.tcForms}" target="_blank" rel="noopener">Tax Commission forms page</a> (TC108 for Class 1). Read <a href="${LINKS.tc600}" target="_blank" rel="noopener">TC600</a> first. File <b>in person or by mail</b> at 1 Centre St., Room 2400, Manhattan, or at a DOF Business Center. Applications need an original signature, so <b>fax and email aren't accepted</b>. Get a date-stamped TC10 receipt, which is your only proof of filing on time. Deadlines can't be extended. You must use that year's forms: the 2026/27 forms are up now, and the ${fyLabel(s.fy)} versions are normally posted in January. <a href="${LINKS.tcHow}" target="_blank" rel="noopener">Official instructions</a>.</li>
+    <li><b>DOF Request for Review (optional, online):</b> <a href="${LINKS.rfrOnline}" target="_blank" rel="noopener">file online with DOF</a> (<a href="${LINKS.dofForms}" target="_blank" rel="noopener">forms and deadlines</a>). It doesn't replace a Tax Commission application.</li>
+    <li>For a different deadline: if you get a <b>revised notice dated after February 1</b> that raises your assessment, you have 20 calendar days from the notice date.</li>
+  </ul></div>`;
+}
+
+// ---------- Comparable sales ----------
+function quant(sorted, p) {
+  if (!sorted.length) return NaN;
+  const i = (sorted.length - 1) * p, lo = Math.floor(i), hi = Math.ceil(i);
+  return sorted[lo] + (sorted[hi] - sorted[lo]) * (i - lo);
+}
+async function findComps(p, today) {
+  const boro = String(p.boro), cls = p.bldg_class, zip = p.zip_code, sf = num(p.gross_sqft);
+  const blk = parseInt(p.block, 10), lot = parseInt(p.lot, 10);
+  const cutD = Dt(today.getFullYear() - 2, today.getMonth() + 1, today.getDate()), cut = iso(cutD);
+  // DOF neighborhood: from the most recent recorded sale on the same tax block.
+  const blockWhere = `borough=${q(boro)} AND block=${q(blk)}`;
+  const [nr, na] = await Promise.all([
+    soda(ROLL, {$select: "neighborhood,sale_date", $where: blockWhere, $order: "sale_date DESC", $limit: 1}),
+    soda(ANNUAL, {$select: "neighborhood,sale_date", $where: blockWhere, $order: "sale_date DESC", $limit: 1}),
+  ]);
+  const nb = [...nr, ...na].sort((a, b) => String(b.sale_date).localeCompare(String(a.sale_date)))[0];
+  const hood = nb && nb.neighborhood ? nb.neighborhood.trim() : null;
+  const area = hood ? `(zip_code=${q(zip)} OR neighborhood=${q(hood)})` : `zip_code=${q(zip)}`;
+  const where = `borough=${q(boro)} AND building_class_at_time_of=${q(cls)} AND sale_price>=10000 AND sale_date>=${q(cut + "T00:00:00")} AND ${area}`;
+  const sel = "borough,neighborhood,block,lot,address,zip_code,residential_units,gross_square_feet,building_class_at_time_of,sale_price,sale_date";
+  const [r1, r2] = await Promise.all([
+    soda(ROLL, {$select: sel, $where: where, $limit: 5000}),
+    soda(ANNUAL, {$select: sel, $where: where, $limit: 5000}),
+  ]);
+  // The two datasets overlap by a few months: de-duplicate on block, lot, date and price.
+  const seen = new Map();
+  for (const s of [...r1, ...r2]) {
+    const k = [parseInt(s.block, 10), parseInt(s.lot, 10), String(s.sale_date).slice(0, 10), Math.round(num(s.sale_price))].join("|");
+    if (!seen.has(k)) seen.set(k, s);
+  }
+  let all = [...seen.values()].map(s => ({
+    addr: String(s.address || "").trim(), hood: String(s.neighborhood || "").trim(), zip: s.zip_code,
+    blk: parseInt(s.block, 10), lot: parseInt(s.lot, 10), price: num(s.sale_price), sf: num(s.gross_square_feet),
+    date: String(s.sale_date).slice(0, 10)}));
+  const own = all.filter(s => s.blk === blk && s.lot === lot);
+  all = all.filter(s => !(s.blk === blk && s.lot === lot));
+  // One price recorded on several lots on the same day is a package deal, not a single-home price.
+  const pk = new Map();
+  for (const s of all) { const k = s.date + "|" + s.price; pk.set(k, (pk.get(k) || 0) + 1); }
+  const pkg = all.filter(s => pk.get(s.date + "|" + s.price) > 1).length;
+  all = all.filter(s => pk.get(s.date + "|" + s.price) === 1 && s.sf > 0);
+  all.forEach(s => { s.psf = s.price / s.sf; s.sizeDiff = sf > 0 ? Math.abs(s.sf - sf) / sf : 1; s.both = (!hood || s.hood === hood) && s.zip === zip; });
+  const tiers = [
+    {n: 8, f: s => s.both && s.sizeDiff <= 0.25, label: `same building class (${cls}), same zip${hood ? " and DOF neighborhood" : ""}, within 25% of your square footage`},
+    {n: 5, f: s => s.sizeDiff <= 0.25, label: `same building class (${cls}), same zip${hood ? " or DOF neighborhood" : ""}, within 25% of your square footage`},
+    {n: 5, f: s => s.sizeDiff <= 0.40, label: `same building class (${cls}), same zip${hood ? " or DOF neighborhood" : ""}, within 40% of your square footage (fewer close matches)`},
+  ];
+  let picked = [], label = tiers[2].label;
+  if (sf > 0) for (const t of tiers) { const c = all.filter(t.f); if (c.length >= t.n) { picked = c; label = t.label; break; } picked = c; label = t.label; }
+  // Drop likely non-market sales: under half or over double the group's median price per sq ft.
+  const m0 = quant(picked.map(s => s.psf).sort((a, b) => a - b), 0.5);
+  const kept = picked.filter(s => s.psf >= m0 / 2 && s.psf <= m0 * 2);
+  const out = picked.length - kept.length;
+  const ps = kept.map(s => s.psf).sort((a, b) => a - b);
+  kept.sort((a, b) => b.date.localeCompare(a.date));
+  return {comps: kept, outliers: out, pkg, own, hood, zip, label, cut: cutD,
+    med: quant(ps, 0.5), p25: quant(ps, 0.25), p75: quant(ps, 0.75)};
+}
+
+function compsHtml(c) {
+  const row = s => `<div class="comp"><div class="a">${esc(titleCase(s.addr))}</div><div class="p">${money(s.price)}</div>
+    <div class="d">${esc(s.date)} &middot; ${esc(titleCase(s.hood))} ${esc(s.zip)} &middot; block ${s.blk}, lot ${s.lot}</div><div class="r">${Math.round(s.sf).toLocaleString("en-US")} sq ft &middot; ${money(s.psf)}/sq ft</div></div>`;
+  const cap = 12, first = c.comps.slice(0, cap).map(row).join(""), rest = c.comps.slice(cap).map(row).join("");
+  return `<div class="comps">${first}</div>${rest ? `<details><summary>Show ${c.comps.length - cap} more sales</summary><div class="comps">${rest}</div></details>` : ""}`;
+}
+
+// ---------- Main lookup ----------
+async function lookup(text, boro) {
+  const st = $("#status"), out = $("#out");
+  out.innerHTML = ""; st.textContent = "Finding the tax lot...";
+  const bbl = await resolveBBL(text, boro);
+  st.textContent = "Loading DOF values...";
+  const hist = await soda(PVAD, {$select: "parid,boro,block,lot,year,period,bldg_class,curtaxclass,pytaxclass,curmkttot,pymkttot,curacttot,curtrntot,curtxbtot,curtxbextot,pytxbtot,gross_sqft,units,yrbuilt,zip_code,housenum_lo,street_name,yralt1",
+    $where: `parid=${q(bbl)}`, $order: "year DESC, period DESC", $limit: 50});
+  if (!hist.length) throw new Error(`No DOF assessment record found for BBL ${bbl}. Condo units have their own unit BBL (lot 1001 and up); use the one on your tax bill.`);
+  const p = hist[0];
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const s = season(today);
+  const fy = parseInt(p.year, 10), cls = classGroup(p.curtaxclass);
+  const finalBy = {};  // last row per tax year, for the 5-year cap check
+  for (const r of hist) if (!finalBy[r.year]) finalBy[r.year] = r;
+  const mv = num(p.curmkttot), pmv = num(p.pymkttot), sf = num(p.gross_sqft);
+  const av = num(p.curtxbtot) || Math.min(num(p.curacttot), num(p.curtrntot) || Infinity);
+  const pav = num(p.pytxbtot), ex = num(p.curtxbextot);
+  const addr = `${p.housenum_lo || ""} ${titleCase(p.street_name)}`.trim();
+  $("#signup-bbl").value = bbl;
+
+  st.textContent = "Finding comparable sales...";
+  const c = await findComps(p, today);
+
+  const periodName = {1: "tentative roll", 2: "tentative roll, after changes by notice", 3: "final roll", 4: "final roll, with a later correction"}[parseInt(p.period, 10)] || "roll";
+  const rollNote = fy >= s.fy
+    ? `These are the <b>${fyLabel(fy)} ${periodName}</b> values. This is the year you can appeal now, until the ${cls === 1 ? "Class 1" : "Class " + (p.curtaxclass || "")} deadline below.`
+    : `These are the <b>${fyLabel(fy)} ${periodName}</b> values. That year's appeal deadline has passed. Next you can appeal the <b>${fyLabel(s.fy)}</b> values, which DOF publishes around ${esc(longDate(s.roll))}. Check again then. The comparison below shows whether DOF's numbers for this property have been in line.`;
+
+  const chg = (a, b) => b > 0 ? (a - b) / b : null;
+  const mvC = chg(mv, pmv), avC = chg(av, pav);
+  const chgHtml = (x, label) => x === null ? `<small>no prior-year figure</small>` : `<small class="${x > 0 ? "up" : x < 0 ? "down" : ""}">${pct(x)} vs ${label}</small>`;
+  const ratio = RATIO[cls];
+  const emv = cls === 1 && av > 0 ? av / 0.06 : null;
+
+  // 5-year and 1-year cap check (Class 1: 6% / 20%; Class 2A-2C: 8% / 30%).
+  let capNote = "";
+  const capped = cls === 1 ? [0.06, 0.20] : /^2[ABC]$/.test(p.curtaxclass) ? [0.08, 0.30] : null;
+  if (capped && pav > 0 && !(av > 0 && ex >= av)) {
+    const y4 = finalBy[String(fy - 4)], av4 = y4 ? num(y4.curtxbtot) : 0;
+    const over1 = av > pav * (1 + capped[0]) * 1.005, over5 = av4 > 0 && av > av4 * (1 + capped[1]) * 1.005;
+    capNote = `<li>Cap check: your assessed value changed ${pct(avC)} from last year (cap ${capped[0] * 100}%)${av4 ? ` and ${pct(av / av4 - 1)} from ${fyLabel(fy - 4)} (cap ${capped[1] * 100}% over five years)` : ""}. ` +
+      (over1 || over5 ? `<b>That's more than the cap.</b> Usually this is because of a physical change (such as an addition or renovation) or an exemption ending, which the caps don't cover. If neither happened, "an assessment cap has been exceeded" is one of the grounds the Tax Commission accepts.</li>`
+                      : `That's within the caps.</li>`);
+  }
+
+  // ---- Verdict ----
+  let verdict;
+  if (av > 0 && ex >= av) verdict = {cls: "lo", big: "Fully exempt", so: `DOF's data shows exemptions of ${money(ex)}, which cover the whole assessed value, so no property tax is billed on this lot. An appeal of the value can't lower a bill that's already zero. If the exemption itself is at risk, see Form TC106.`, steps: []};
+  else if (sf <= 0) verdict ={cls: "md", big: "Can't compare", so: "DOF has no building square footage for this lot, so we can't compare its value with sales per square foot.", steps: []};
+  else if (c.comps.length < 5) verdict = {cls: "md", big: "Not enough sales", so: `We found only ${c.comps.length} usable sale${c.comps.length === 1 ? "" : "s"} of similar ${esc(p.bldg_class)} properties nearby in the last 2 years, which is too few to judge.`, steps: []};
+  else {
+    const mpsf = mv / sf, r = mpsf / c.med, implied = c.med * sf;
+    const label = r > 1.10 ? "Looks high" : r < 0.90 ? "Looks low" : "In line";
+    const steps = [
+      `DOF market value ${money(mv)} &divide; ${Math.round(sf).toLocaleString("en-US")} sq ft = <b>${money(mpsf)}/sq ft</b>.`,
+      `${c.comps.length} recent sales (${esc(c.label)}): median <b>${money(c.med)}/sq ft</b>; the middle half sold for ${money(c.p25)}-${money(c.p75)}/sq ft.`,
+      `${money(mpsf)} is ${Math.abs(r - 1) < 0.0005 ? "the same as" : `${Math.abs((r - 1) * 100).toFixed(1)}% ${r > 1 ? "above" : "below"}`} the median. We call within 10% "in line". Your market value is <b>${label === "In line" ? "in line with sales" : label === "Looks high" ? "high compared with sales" : "low compared with sales"}</b>.`,
+      `At the median price per sq ft, sales suggest a value of about <b>${money(implied)}</b> for ${Math.round(sf).toLocaleString("en-US")} sq ft.`,
+    ];
+    let worth = false, so;
+    if (cls === 1) {
+      const target = implied * 0.06, cut = av - target;
+      steps.push(`Class 1 test (Form TC108): ${money(implied)} &times; 6% = ${money(target)}, against your assessed value of ${money(av)}. Your <b>effective market value</b> is ${money(av)} &divide; 6% = <b>${money(emv)}</b>, the value your tax is actually based on.`);
+      if (implied < emv * 0.90) {
+        worth = true;
+        steps.push(`Sales point to a value ${((1 - implied / emv) * 100).toFixed(0)}% below your effective market value. If the Tax Commission fully accepted the sales figure, your assessed value could drop by up to ${money(cut)}. That's very roughly <b>${money(cut * C1_RATE)} a year</b> at the 19.843% Class 1 rate, before exemptions and abatements, and it's an upper bound.`);
+        so = "Worth a closer look. Sales of similar homes support a lower value than the one your tax is based on.";
+      } else if (implied < emv) {
+        steps.push(`Sales point to a value only ${((1 - implied / emv) * 100).toFixed(0)}% below your effective market value (at most about ${money(cut * C1_RATE)} a year in tax). That's a thin margin to prove.`);
+        so = "Borderline. Probably not worth appealing unless you have strong evidence, such as a recent appraisal or your own purchase price.";
+      } else {
+        steps.push(`Sales support a value <b>above</b> your effective market value, so even a win on market value wouldn't lower your assessed value. The caps are already keeping it below what sales support.`);
+        so = label === "Looks high" ? "Probably not worth appealing. DOF's market value looks high, but the caps already keep your assessed value below what sales support." : "Probably not worth appealing.";
+      }
+    } else {
+      worth = r > 1.10;
+      steps.push(`Class ${esc(p.curtaxclass)}: assessed value is set from 45% of market value${/^2[ABC]$/.test(p.curtaxclass) ? " with 8%/30% caps" : ", with changes phased in over five years"}. DOF usually values rental buildings by their income, so sales per square foot are only a rough cross-check. A Tax Commission appeal usually needs income and expense figures.`);
+      so = worth ? "Worth a closer look, ideally with your rent roll and expenses, or with a professional." : "Probably not worth appealing on value alone.";
+    }
+    if (c.comps.length < 8) steps.push(`Only ${c.comps.length} sales matched, so treat this as a weak signal.`);
+    const vcls = label === "Looks high" && worth ? "hi" : label === "Looks high" ? "md" : "lo";
+    verdict = {cls: vcls, big: label, so: label === "In line" || label === "Looks low" ? (cls === 1 && worth ? so : "Probably not worth appealing.") : so, steps};
+  }
+  const ownHtml = c.own.length ? `<p class="note">This property itself has a recorded sale in the period: ${c.own.map(s => `${esc(s.date)} for ${money(s.price)}`).join("; ")}. A recent arm's-length purchase price is strong evidence of market value, whichever way it points. It isn't counted as a comparable.</p>` : "";
+  const exclNote = (c.outliers || c.pkg) ? `<p class="note">Left out: ${c.outliers ? `${c.outliers} sale${c.outliers === 1 ? "" : "s"} under half or over double the group median per sq ft (likely family transfers, distressed sales or data errors)` : ""}${c.outliers && c.pkg ? "; " : ""}${c.pkg ? `${c.pkg} multi-lot package sale record${c.pkg === 1 ? "" : "s"}` : ""}.</p>` : "";
+
+  out.innerHTML = `<div class="bldg"><h2>${esc(addr)}, ${esc(titleCase(BORO[p.boro]))} ${esc(p.zip_code || "")}</h2>
+    <div class="meta">BBL ${esc(bbl)} &middot; Tax class ${esc(p.curtaxclass || "n/a")} &middot; Building class ${esc(p.bldg_class)}${BCLASS[p.bldg_class] ? " (" + esc(BCLASS[p.bldg_class]) + ")" : ""} &middot; ${sf ? Math.round(sf).toLocaleString("en-US") + " sq ft" : "sq ft n/a"} &middot; ${esc(num(p.units) || "?")} unit${num(p.units) === 1 ? "" : "s"} &middot; built ${esc(num(p.yrbuilt) || "n/a")}${c.hood ? " &middot; DOF neighborhood: " + esc(titleCase(c.hood)) : ""}</div>
+    <div class="tiles">
+      <div class="tile"><span>DOF market value</span><b>${money(mv)}</b>${chgHtml(mvC, fyLabel(fy - 1))}</div>
+      <div class="tile"><span>Assessed value</span><b>${money(av)}</b>${chgHtml(avC, fyLabel(fy - 1))}</div>
+      <div class="tile"><span>Market value per sq ft</span><b>${sf ? money(mv / sf) : "n/a"}</b><small>${c.comps.length >= 5 && sf ? "sales median " + money(c.med) : "&nbsp;"}</small></div>
+      ${cls === 1 ? `<div class="tile"><span>Effective market value</span><b>${money(emv)}</b><small>assessed value &divide; 6%</small></div>`
+                  : `<div class="tile"><span>Assessed &divide; market</span><b>${mv ? (av / mv * 100).toFixed(1) + "%" : "n/a"}</b><small>class ratio ${ratio ? ratio * 100 + "%" : "n/a"}</small></div>`}
+    </div>
+    <p class="note" style="margin:8px 0 0">Prior year: market value ${pmv ? money(pmv) : "n/a"}, assessed value ${pav ? money(pav) : "n/a"} (${fyLabel(fy - 1)}).${ex ? ` Exemptions on file reduce the taxable value by ${money(ex)}.` : ""}</p>
+    <div class="roll">${rollNote}</div></div>
+
+    <div class="verdict ${verdict.cls}" id="verdict"><div class="big ${verdict.cls}">${esc(verdict.big)}</div>
+      <div class="so">${verdict.so}</div>
+      ${verdict.steps.length || capNote ? `<b>How we got there</b><ol class="calc">${verdict.steps.map(x => `<li>${x}</li>`).join("")}${capNote}</ol>` : ""}
+      ${cls === 3 || cls === 0 ? `<p class="note">This tool is built for 1-3 family homes and small buildings. For Class ${esc(p.curtaxclass)} property, read the official instructions.</p>` : ""}
+      <p class="note">Rough screen from public data, not an appraisal and not tax or legal advice. Your home's condition, layout, lot and renovations can matter more than any of this.</p></div>
+
+    <h2>Comparable sales (${c.comps.length})</h2>
+    <p class="note">Sales from ${esc(longDate(c.cut))} to the latest DOF data, ${esc(c.label)}. Only sales of $10,000 or more. Sale records include some sales that aren't arm's-length. If you appeal, choose the closest matches yourself and check them on <a href="https://www.nyc.gov/site/finance/property/acris.page" target="_blank" rel="noopener">ACRIS</a>.</p>
+    ${ownHtml}${exclNote}
+    ${c.comps.length ? compsHtml(c) : `<p class="more">No matching sales found.</p>`}`;
+  $("#dl").innerHTML = deadlinesHtml(today, cls);
+  st.textContent = `Data from NYC Open Data, fetched ${new Date().toLocaleString()}.`;
+}
+
+$("#dl").innerHTML = deadlinesHtml((() => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; })(), 0);
+$("#f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const btn = $("#go"); btn.disabled = true;
+  try {
+    await lookup($("#addr").value, $("#boro").value);
+    try { localStorage.setItem("ta-last", JSON.stringify({a: $("#addr").value, b: $("#boro").value})); } catch (_) {}
+  } catch (err) {
+    $("#status").textContent = err.message || String(err);
+  } finally { btn.disabled = false; }
+});
+try { const l = JSON.parse(localStorage.getItem("ta-last") || "null"); if (l) { $("#addr").value = l.a; $("#boro").value = l.b; } } catch (_) {}
+const qp = new URLSearchParams(location.search);
+if (qp.get("bbl")) { $("#addr").value = qp.get("bbl"); $("#f").requestSubmit(); }
+</script>
+
+<script>
+(function(){
+  const KIT_KEY = "9OgTfHEbtX6FB0NWVjkgyg"; const TAG = 25843567;
+  const f = document.getElementById('signup-form');
+  const msg = document.getElementById('signup-msg');
+  f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('signup-email').value.trim();
+    const bbl = document.getElementById('signup-bbl').value || '';
+    const inp = document.querySelector('#f input');
+    const addr = inp ? inp.value : '';
+    const btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Signing up...';
+    try {
+      const r = await fetch('https://api.convertkit.com/v3/tags/' + TAG + '/subscribe', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({api_key: KIT_KEY, email: email, fields: {bbl: bbl, building_address: addr}})
+      });
+      if (!r.ok) throw new Error('status ' + r.status);
+      f.innerHTML = "<b>You're in.</b> We'll email you before the appeal deadline, and send this property's comparable sales after the new values come out in January.";
+      msg.textContent = '';
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Remind me';
+      msg.textContent = "Sorry, that didn't go through. Please try again in a moment.";
+    }
+  });
+})();
+</script>
+</body>
+</html>

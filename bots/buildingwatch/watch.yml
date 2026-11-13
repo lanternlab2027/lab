@@ -33,7 +33,8 @@ jobs:
       - name: Run watcher
         env:
           SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}   # optional, raises NYC Open Data rate limits
-          EMAIL_API_KEY: ${{ secrets.EMAIL_API_KEY }}           # email provider key (send_email is a stub for now)
+          # Email: dry run unless --send is added below and EMAIL_BACKEND/SMTP_* or KIT_V4_API_KEY are set.
+          # Per-subscriber alerts use bots/notify/notify.yml instead; see bots/EMAIL_SENDING.md.
           ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
         run: |
           if [ -n "${{ github.event.inputs.since }}" ]; then

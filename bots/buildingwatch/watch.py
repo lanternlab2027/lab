@@ -562,14 +562,14 @@ def render_md(blds, alerts, run_date):
     return "\n".join(lines)
 
 
-def send_email(to_addr, subject, body_md):
-    """Stub. Wire to a provider (e.g. Postmark/Resend/SES) using EMAIL_API_KEY from the environment."""
-    key = os.environ.get("EMAIL_API_KEY")
-    os.makedirs("outbox", exist_ok=True)
-    fn = os.path.join("outbox", re.sub(r"[^A-Za-z0-9]+", "_", f"{to_addr}_{subject}")[:120] + ".md")
-    with open(fn, "w") as f:
-        f.write(body_md)
-    print(f"[email stub] {'key present' if key else 'no EMAIL_API_KEY'}; would send '{subject}' to {to_addr}; saved {fn}")
+def send_email(to_addr, subject, body_md, send=False):
+    """Single-digest send via ../notify/sender.py. DRY RUN (writes outbox/) unless send=True
+    AND EMAIL_BACKEND=smtp|kit. Per-subscriber alerts live in ../notify/daily.py."""
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "notify"))
+    from sender import Message, get_sender
+    s = get_sender(send=send)
+    s.add(Message(to=to_addr, subject=subject, text=body_md, tag="building-watch"))
+    s.flush()
 
 
 def main():
@@ -583,7 +583,8 @@ def main():
     ap.add_argument("--out", default="alerts.md")
     ap.add_argument("--json", default="alerts.json")
     ap.add_argument("--no-save", action="store_true", help="don't update state.json")
-    ap.add_argument("--email", help="send the digest to this address (stub)")
+    ap.add_argument("--email", help="send the digest to this address (dry run unless --send)")
+    ap.add_argument("--send", action="store_true", help="really send (also needs EMAIL_BACKEND=smtp|kit)")
     ap.add_argument("--workers", type=int, default=4, help="buildings fetched in parallel")
     ap.add_argument("--resolve",help="just resolve one address/BBL and print it")
     a = ap.parse_args()
@@ -646,7 +647,7 @@ def main():
     if not a.no_save:
         save_state(a.state, state)
     if a.email and alerts:
-        send_email(a.email, f"{len(alerts)} new building alert(s) - {today}", md)
+        send_email(a.email, f"{len(alerts)} new building alert(s) - {today}", md, send=a.send)
     print(f"{len(alerts)} alert(s) for {len(blds)} building(s) -> {a.out}", file=sys.stderr)
 
 
