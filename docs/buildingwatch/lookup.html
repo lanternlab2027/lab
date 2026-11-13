@@ -153,6 +153,13 @@ function parseDate(v) {
 }
 const fmt = d => d ? d.toLocaleDateString("en-US", {weekday:"short", month:"short", day:"numeric", year:"numeric"}) : "n/a";
 
+// Compare house numbers numerically, including Queens-style "36-06". Different shapes never match.
+function hnCmp(a, b) {
+  const A = String(a).split("-").map(x => parseInt(x, 10)), B = String(b).split("-").map(x => parseInt(x, 10));
+  if (A.length !== B.length || A.concat(B).some(isNaN)) return NaN;
+  for (let i = 0; i < A.length; i++) if (A[i] !== B[i]) return A[i] - B[i];
+  return 0;
+}
 async function resolveBBL(text, boro) {
   const t = text.trim().replace(/^bbl\s*/i, "");
   if (/^\d{10}$/.test(t)) return t;
@@ -167,8 +174,10 @@ async function resolveBBL(text, boro) {
   const house = m[1], street = normStreet(m[2].split(",")[0]);
   let rows = await soda("64uk-42ks", {$select: "bbl", $where: `address=${q(house + " " + street)} AND borough=${q(PLUTO_BORO[boro])}`, $limit: 5});
   if (rows.length) return String(Math.trunc(parseFloat(rows[0].bbl)));
-  rows = await soda("tesw-yqqr", {$select: "boroid,block,lot", $limit: 5,
+  rows = await soda("tesw-yqqr", {$select: "boroid,block,lot,housenumber,lowhousenumber,highhousenumber", $limit: 50,
     $where: `boroid=${q(boro)} AND streetname=${q(street)} AND (housenumber=${q(house)} OR (lowhousenumber<=${q(house)} AND highhousenumber>=${q(house)}))`});
+  // The server compares house numbers as text ("35" <= "350"), so re-check the range numerically.
+  rows = rows.filter(r => r.housenumber === house || (r.lowhousenumber && r.highhousenumber && hnCmp(r.lowhousenumber, house) <= 0 && hnCmp(r.highhousenumber, house) >= 0));
   if (rows.length) return rows[0].boroid + String(rows[0].block).padStart(5, "0") + String(rows[0].lot).padStart(4, "0");
   throw new Error(`Couldn't find "${house} ${street}" in ${BORO[boro].toLowerCase()}. Try spelling out the street (e.g. "West 139 Street") or enter the BBL.`);
 }
