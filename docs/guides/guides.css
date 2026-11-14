@@ -1,0 +1,79 @@
+/* Shared styles for /lab/guides/. Each page sets a theme class on <body> that matches its app. */
+:root {
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --serif: var(--font);
+}
+body.t-wrapped {
+  --bg: #12082e; --ink: #fff; --muted: #c9c2e8; --line: rgba(255,255,255,.16); --card: rgba(255,255,255,.07);
+  --link: #ffe066; --accent: #ff3d77; --btn-ink: #1a0630; --btn: linear-gradient(95deg, #ffe066, #ff9f6b 50%, #ff3d77);
+  --note-bg: rgba(77,255,176,.10); --note-line: rgba(77,255,176,.45); --warn-bg: rgba(255,224,102,.10); --warn-line: rgba(255,224,102,.5);
+  --cta-bg: linear-gradient(135deg, rgba(255,61,119,.25), rgba(138,61,255,.25)); --h: #fff; --code: rgba(255,255,255,.14);
+  background-color: #12082e;
+  background-image: radial-gradient(1200px 600px at 10% -10%, #5b1fd6 0%, transparent 60%), radial-gradient(900px 500px at 110% 10%, #ff2e63 0%, transparent 55%);
+  background-repeat: no-repeat;
+}
+body.t-reading {
+  --bg: #f5ecd9; --ink: #1d2a21; --muted: #55604f; --line: rgba(29,42,33,.18); --card: rgba(255,252,243,.7);
+  --link: #7d1f32; --accent: #7d1f32; --btn-ink: #fbf3e2; --btn: #7d1f32;
+  --note-bg: rgba(23,64,44,.08); --note-line: rgba(23,64,44,.35); --warn-bg: rgba(201,154,59,.14); --warn-line: rgba(201,154,59,.6);
+  --cta-bg: #17402c; --h: #17402c; --code: rgba(29,42,33,.08);
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, Cambria, serif;
+  background-color: #f5ecd9;
+  background-image: radial-gradient(1000px 520px at 85% -8%, rgba(201,154,59,.28) 0%, transparent 60%);
+  background-repeat: no-repeat;
+}
+body.t-awards {
+  --bg: #0a1b33; --ink: #fff; --muted: #b9c7dc; --line: rgba(255,255,255,.16); --card: rgba(255,255,255,.06);
+  --link: #ffcc33; --accent: #ffcc33; --btn-ink: #0a1b33; --btn: #ffcc33;
+  --note-bg: rgba(31,157,85,.14); --note-line: rgba(31,157,85,.6); --warn-bg: rgba(255,204,51,.10); --warn-line: rgba(255,204,51,.5);
+  --cta-bg: linear-gradient(135deg, #17804a, #0f2a4d); --h: #fff; --code: rgba(255,255,255,.14);
+  background-color: #0a1b33;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.6; overflow-x: hidden; }
+a { color: var(--link); text-underline-offset: 2px; }
+a:focus-visible, summary:focus-visible, .btn:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+nav.crumbs { padding: 18px 0 0; font-size: 14px; color: var(--muted); }
+nav.crumbs a { color: var(--muted); font-weight: 700; }
+header.top { padding: 18px 0 8px; }
+.brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--serif); font-size: clamp(32px, 8.4vw, 50px); line-height: 1.05; margin: 10px 0 12px; letter-spacing: -.02em; color: var(--h); }
+.lede { font-size: clamp(18px, 4.6vw, 20px); margin: 0 0 12px; }
+.meta { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+h2 { font-family: var(--serif); font-size: clamp(24px, 6vw, 32px); line-height: 1.15; margin: 40px 0 10px; letter-spacing: -.01em; color: var(--h); }
+h3 { font-size: 19px; margin: 22px 0 6px; font-family: var(--serif); color: var(--h); }
+p { margin: 0 0 12px; }
+ul, ol { padding-left: 22px; margin: 0 0 12px; }
+li { margin: 6px 0; }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px; margin: 14px 0; }
+.panel > :last-child { margin-bottom: 0; }
+.quick { border-left: 5px solid var(--accent); }
+.quick b.label { display: block; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.note { background: var(--note-bg); border-color: var(--note-line); }
+.warn { background: var(--warn-bg); border-color: var(--warn-line); }
+ol.steps { counter-reset: s; list-style: none; padding: 0; }
+ol.steps > li { counter-increment: s; position: relative; padding: 2px 0 2px 46px; margin: 14px 0; }
+ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 15px; background: var(--accent); color: var(--btn-ink); }
+body.t-wrapped ol.steps > li::before { background: #ffe066; }
+ol.steps > li b.step { display: block; }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+summary { cursor: pointer; padding: 14px 18px; font-weight: 800; font-size: 17px; min-height: 48px; }
+details > div { padding: 0 18px 14px; }
+details > div > :last-child { margin-bottom: 0; }
+code, kbd { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--code); padding: 1px 6px; border-radius: 6px; word-break: break-word; }
+.cta { background: var(--cta-bg); color: #fff; border-radius: 22px; padding: 22px 18px; margin: 40px 0 10px; }
+body.t-reading .cta { color: #f6eddb; }
+.cta h2 { margin: 0 0 8px; color: inherit; }
+.cta p { margin: 0 0 14px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 14px 22px; border-radius: 999px; font: 800 17px/1.1 var(--font); text-decoration: none; color: var(--btn-ink); background: var(--btn); }
+body.t-reading .cta .btn { background: #e4bc62; color: #2b1b0b; }
+.sources li { word-break: break-word; }
+.guide-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.guide-list a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; text-decoration: none; color: var(--ink); min-height: 48px; }
+.guide-list a b { color: var(--link); display: block; font-size: 18px; }
+.guide-list a span { color: var(--muted); font-size: 15px; }
+footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+footer a { color: var(--ink); font-weight: 700; }
+footer p { margin: 6px 0; }

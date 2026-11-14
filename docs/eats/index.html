@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://data.cityofnewyork.us https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>NYC Restaurant Grades Lookup: Health Inspection Report Card (Free)</title>
+<meta name="description" content="Look up any NYC restaurant's health inspection letter grade, score history and violations in plain English, from official DOHMH open data. Share a report card before you pick where to eat.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/eats/">
+<meta name="theme-color" content="#f7f2e8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="NYC Restaurant Report Card: health grades in plain English">
+<meta property="og:description" content="Search any NYC restaurant to see its current DOHMH letter grade, inspection history and violations explained simply. Free, no login.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/eats/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/eats/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NYC Restaurant Report Card: a sample report card for a made-up restaurant">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NYC Restaurant Report Card: health grades in plain English">
+<meta name="twitter:description" content="Current DOHMH letter grade, inspection history and plain-English violations for any NYC restaurant. Free, no login.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/eats/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "NYC Restaurant Report Card",
+ "url": "https://lanternlab2027.github.io/lab/eats/",
+ "applicationCategory": "UtilitiesApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Look up NYC restaurant health inspection grades, score history and violations in plain English, from official NYC DOHMH open data.",
+ "isAccessibleForFree": true,
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --paper: #f7f2e8; --paper2: #efe7d7; --sheet: #fffdf8; --ink: #1d1b18; --muted: #5e574c; --line: #d9cfbd;
+    --A: #1f6b4a; --B: #9a6412; --C: #9e3d2a; --Z: #3f5873; --N: #5e574c;
+    --accent: #1d1b18; --accent-ink: #f7f2e8; --focus: #2a62c9; --crit: #8f2f1f; --crit-bg: #f6e1da; --ok-bg: #e6efe8;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #17150f; --paper2: #211e17; --sheet: #1f1c16; --ink: #f2ece0; --muted: #b8ae9c; --line: #3a352b;
+      --A: #5fbf8f; --B: #e0a44a; --C: #ec8a74; --Z: #8fb0d6; --N: #b8ae9c;
+      --accent: #f2ece0; --accent-ink: #17150f; --focus: #8fb0ff; --crit: #ffb4a3; --crit-bg: #3a221c; --ok-bg: #1d2b23;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #17150f; --paper2: #211e17; --sheet: #1f1c16; --ink: #f2ece0; --muted: #b8ae9c; --line: #3a352b;
+    --A: #5fbf8f; --B: #e0a44a; --C: #ec8a74; --Z: #8fb0d6; --N: #b8ae9c;
+    --accent: #f2ece0; --accent-ink: #17150f; --focus: #8fb0ff; --crit: #ffb4a3; --crit-bg: #3a221c; --ok-bg: #1d2b23;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+  header.top { padding: 28px 0 8px; }
+  .brand { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+  h1 { font-size: clamp(34px, 9vw, 58px); line-height: 1; letter-spacing: -.025em; margin: 10px 0 12px; font-weight: 900; }
+  h1 .ul { white-space: nowrap; box-shadow: inset 0 -.22em 0 color-mix(in srgb, var(--A) 28%, transparent); }
+  .lede { margin: 0 0 18px; color: var(--muted); font-size: 18px; max-width: 620px; }
+
+  form.search { background: var(--sheet); border: 1px solid var(--line); border-radius: 16px; padding: 14px; display: grid; gap: 10px; grid-template-columns: 1fr 1fr; box-shadow: 0 1px 0 var(--line); }
+  form.search .q { grid-column: 1 / -1; }
+  form.search label { display: block; font-weight: 800; font-size: 14px; margin-bottom: 4px; }
+  form.search .opt { font-weight: 600; color: var(--muted); }
+  input, select { width: 100%; font: 600 17px var(--font); padding: 12px; min-height: 48px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+  .btn { appearance: none; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font: 800 17px var(--font); padding: 12px 18px; min-height: 48px; cursor: pointer; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn[disabled] { opacity: .55; cursor: progress; }
+  form.search .btn { grid-column: 1 / -1; }
+  @media (min-width: 720px) {
+    form.search { grid-template-columns: 1fr 180px 120px auto; align-items: end; }
+    form.search .q { grid-column: auto; }
+    form.search .btn { grid-column: auto; }
+  }
+  .hint { color: var(--muted); font-size: 14px; margin: 8px 2px 0; }
+  .status { min-height: 1.5em; margin: 14px 0 0; font-weight: 700; }
+  .status.err { color: var(--crit); }
+
+  section { margin: 28px 0; }
+  h2 { font-size: 26px; line-height: 1.15; margin: 0 0 10px; letter-spacing: -.01em; }
+  h3 { font-size: 19px; margin: 0 0 6px; }
+
+  ul.results { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  ul.results button { width: 100%; text-align: left; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--sheet); color: var(--ink); font: inherit; cursor: pointer; }
+  ul.results button:hover { border-color: var(--ink); }
+  ul.results b { font-size: 18px; line-height: 1.25; }
+  ul.results small { grid-column: 1; color: var(--muted); font-size: 14px; }
+  .chip { grid-row: 1 / span 2; grid-column: 2; min-width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; font-size: 26px; border: 4px solid currentColor; background: var(--paper); }
+  .chip.sm { font-size: 11px; line-height: 1.05; text-align: center; padding: 2px; }
+  .g-A { color: var(--A); } .g-B { color: var(--B); } .g-C { color: var(--C); } .g-Z, .g-P { color: var(--Z); } .g-N, .g- { color: var(--N); }
+
+  .sheet { background: var(--sheet); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .back { background: none; border: 0; color: var(--ink); font: 700 16px var(--font); padding: 10px 0; min-height: 44px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .rc-head { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 640px) { .rc-head { grid-template-columns: auto 1fr; align-items: center; } }
+  .badge { width: 148px; height: 148px; border-radius: 50%; border: 10px solid currentColor; display: grid; place-items: center; font-weight: 900; font-size: 92px; line-height: 1; background: var(--paper); }
+  .badge.word { font-size: 22px; text-align: center; line-height: 1.1; padding: 10px; }
+  .rc-name { font-size: clamp(26px, 7vw, 38px); line-height: 1.1; margin: 0 0 4px; letter-spacing: -.015em; }
+  .rc-meta { color: var(--muted); margin: 0; }
+  .glabel { font-weight: 900; font-size: 20px; margin: 10px 0 2px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0 0; }
+  .facts div { background: var(--paper); border-radius: 12px; padding: 10px 12px; }
+  .facts dt { font-size: 13px; color: var(--muted); font-weight: 700; }
+  .facts dd { margin: 0; font-weight: 800; }
+  .note { border-left: 4px solid var(--Z); background: var(--paper); padding: 10px 12px; border-radius: 0 10px 10px 0; margin: 12px 0 0; font-size: 15px; }
+  .snap { font-size: 15px; color: var(--muted); margin: 14px 0 0; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+
+  .cardwrap { margin: 16px 0 0; }
+  .cardwrap canvas { width: 100%; max-width: 360px; height: auto; aspect-ratio: 4 / 5; display: block; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+
+  .chart { width: 100%; height: auto; display: block; }
+  .chart text { font-family: var(--font); fill: var(--muted); }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; vertical-align: -1px; margin-right: 5px; }
+
+  details.ins { border: 1px solid var(--line); border-radius: 14px; background: var(--sheet); margin: 10px 0; }
+  details.ins > summary { list-style: none; cursor: pointer; padding: 14px; display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; min-height: 48px; }
+  details.ins > summary::-webkit-details-marker { display: none; }
+  details.ins > summary b { font-size: 17px; }
+  details.ins > summary small { color: var(--muted); font-size: 14px; grid-column: 1; }
+  details.ins > summary .sc { grid-row: 1 / span 2; grid-column: 2; text-align: right; font-weight: 900; font-size: 20px; }
+  details.ins > summary .sc span { display: block; font-size: 12px; font-weight: 700; color: var(--muted); }
+  details.ins > div { padding: 0 14px 14px; }
+  .action { font-size: 15px; color: var(--muted); margin: 0 0 8px; }
+  ul.viol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  ul.viol li { border-top: 1px solid var(--line); padding-top: 10px; }
+  .vhead { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin-bottom: 2px; }
+  .code { font: 800 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--paper2); border-radius: 6px; padding: 2px 7px; }
+  .flag { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; border-radius: 99px; padding: 3px 9px; }
+  .flag.crit { background: var(--crit-bg); color: var(--crit); }
+  .flag.gen { background: var(--ok-bg); color: var(--ink); }
+  .flag.na { background: var(--paper2); color: var(--muted); }
+  .plain { margin: 4px 0 2px; font-weight: 700; }
+  .official { margin: 0; font-size: 14px; color: var(--muted); }
+
+  .signup { background: var(--paper2); }
+  form.kit { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.kit input { flex: 1 1 220px; width: auto; }
+  .small { font-size: 14px; color: var(--muted); }
+
+  .how dl { margin: 0; }
+  .how dt { font-weight: 800; margin-top: 12px; }
+  .how dd { margin: 2px 0 0; }
+  table.bands { border-collapse: collapse; width: 100%; margin: 6px 0 4px; font-size: 16px; }
+  table.bands th, table.bands td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 6px; }
+  ol.src { padding-left: 20px; font-size: 15px; }
+  ol.src li { margin: 4px 0; overflow-wrap: anywhere; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  .toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 10px 16px; border-radius: 10px; font-weight: 700; opacity: 0; pointer-events: none; transition: opacity .2s; max-width: calc(100% - 32px); }
+  .toast.on { opacity: 1; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="top wrap">
+  <a class="brand" href="../">Lantern Lab</a>
+  <h1>NYC Restaurant <span class="ul">Report Card</span></h1>
+  <p class="lede">Check a restaurant's health inspection grade before you go: the current letter grade, its inspection history, and every violation in plain English. Straight from the city's open data.</p>
+  <form class="search" id="search" role="search" novalidate>
+    <div class="q">
+      <label for="q">Restaurant name or street address</label>
+      <input id="q" name="q" type="text" autocomplete="off" autocapitalize="words" enterkeyhint="search" placeholder="e.g. Joe's Pizza or 205 E Houston St" required>
+    </div>
+    <div>
+      <label for="boro">Borough <span class="opt">(optional)</span></label>
+      <select id="boro" name="boro">
+        <option value="">Any borough</option>
+        <option>Manhattan</option><option>Brooklyn</option><option>Queens</option><option>Bronx</option><option>Staten Island</option>
+      </select>
+    </div>
+    <div>
+      <label for="zip">ZIP <span class="opt">(optional)</span></label>
+      <input id="zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" placeholder="10002">
+    </div>
+    <button class="btn" id="go" type="submit">Search</button>
+  </form>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+</header>
+
+<main class="wrap">
+  <section id="results-sec" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Results</h2>
+    <p class="small" id="results-note"></p>
+    <ul class="results" id="results"></ul>
+  </section>
+
+  <section id="detail" hidden aria-labelledby="rc-name">
+    <button class="back" id="back" type="button">&larr; Back to results</button>
+    <article class="sheet">
+      <div class="rc-head">
+        <div class="badge" id="badge" aria-hidden="true"></div>
+        <div>
+          <h2 class="rc-name" id="rc-name"></h2>
+          <p class="rc-meta" id="rc-meta"></p>
+          <p class="glabel" id="glabel"></p>
+          <p class="small" id="gexplain" style="margin:0"></p>
+        </div>
+      </div>
+      <dl class="facts" id="facts"></dl>
+      <div id="notes"></div>
+      <p class="snap">A grade reflects one inspection on one day. Restaurants are inspected unannounced, at least once a year, and conditions can change in either direction. Read the full history below before drawing conclusions.</p>
+      <div class="actions">
+        <button class="btn" id="share" type="button">Share report card</button>
+        <button class="btn ghost" id="copy" type="button">Copy link</button>
+      </div>
+      <div class="cardwrap" id="cardwrap" hidden>
+        <canvas id="card" width="1080" height="1350" role="img" aria-label="Shareable report card image"></canvas>
+        <div class="actions">
+          <button class="btn" id="card-share" type="button">Share image</button>
+          <button class="btn ghost" id="card-save" type="button">Save image</button>
+        </div>
+      </div>
+    </article>
+
+    <section aria-labelledby="tl-h">
+      <h2 id="tl-h">Score over time</h2>
+      <p class="small" style="margin-top:0">Lower is better. Shaded bands show the A (0&ndash;13), B (14&ndash;27) and C (28+) ranges. Filled dots are inspections that issued a grade; hollow dots were scored but not graded.</p>
+      <div id="chart"></div>
+    </section>
+
+    <section aria-labelledby="hist-h">
+      <h2 id="hist-h">Inspection history</h2>
+      <p class="small" style="margin-top:0" id="asof"></p>
+      <div id="history"></div>
+    </section>
+
+    <section class="sheet signup" id="alert" aria-labelledby="alert-h" hidden>
+      <h2 id="alert-h" style="font-size:22px">Alert me if this restaurant's grade changes</h2>
+      <p class="small" style="margin:0">Optional. We'll email you when a new grade for <b id="alert-name"></b> shows up in the city's data. Unsubscribe anytime.</p>
+      <form class="kit" id="signup-form" novalidate>
+        <label class="sr" for="signup-email">Email</label>
+        <input id="signup-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <input id="signup-camis" type="hidden" value="">
+        <button class="btn" type="submit">Alert me</button>
+      </form>
+      <p class="small" id="signup-msg" role="status" aria-live="polite"></p>
+    </section>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-h">
+    <h2 id="how-h">How NYC restaurant grades work</h2>
+    <p>The NYC Health Department (DOHMH) inspects restaurants unannounced. Each violation adds points, and <b>the lower the score, the better the grade</b>.<sup><a href="#s1">1</a></sup></p>
+    <table class="bands">
+      <thead><tr><th>Score</th><th>Grade</th></tr></thead>
+      <tbody>
+        <tr><td>0 to 13 points</td><td><b class="g-A">A</b></td></tr>
+        <tr><td>14 to 27 points</td><td><b class="g-B">B</b></td></tr>
+        <tr><td>28 or more points</td><td><b class="g-C">C</b></td></tr>
+      </tbody>
+    </table>
+    <dl>
+      <dt>Initial inspection and re-inspection</dt>
+      <dd>A restaurant gets two chances to earn an A in each inspection cycle. If the initial inspection scores 0&ndash;13, that's an A. If not, the initial inspection is scored but not graded, and an inspector returns unannounced, typically within a month, for a re-inspection, which is graded A, B or C.<sup><a href="#s1">1</a></sup> DOHMH's data notes say the re-inspection is at least 7 days after the initial one.<sup><a href="#s3">3</a></sup></dd>
+      <dt>Grade Pending (Z) and P</dt>
+      <dd>A restaurant that gets a B or C on re-inspection receives both the grade card and a Grade Pending card, and can post either until it has a hearing at the Office of Administrative Trials and Hearings (OATH).<sup><a href="#s1">1</a></sup> In the data, <b>Z</b> means Grade Pending and <b>P</b> means a Grade Pending card issued when a restaurant re-opens after being closed following an initial inspection.<sup><a href="#s2">2</a></sup></dd>
+      <dt>Not Yet Graded (N)</dt>
+      <dd>Until a restaurant has a graded inspection, it is listed as Not Yet Graded.<sup><a href="#s1">1</a></sup> New restaurants with no inspection yet appear in the data with a placeholder date of January 1, 1900.<sup><a href="#s3">3</a></sup></dd>
+      <dt>Critical vs. not critical</dt>
+      <dd>Points depend on the health risk. DOHMH sorts violations into public health hazards (at least 7 points, for example not keeping food at the right temperature), critical violations (at least 5 points) and general violations (at least 2 points), with extra points for how extensive the problem is.<sup><a href="#s1">1</a></sup> The open data marks each violation <b>Critical</b> (the kind most likely to contribute to foodborne illness) or <b>Not Critical</b>; administrative and special-program items (such as smoke-free or menu-labeling rules) are marked Not Applicable and don't count toward the score.<sup><a href="#s2">2</a>,<a href="#s3">3</a></sup></dd>
+      <dt>Not every inspection is graded</dt>
+      <dd>Compliance inspections, monitoring inspections, re-opening inspections, inspections of new restaurants not yet open, and some complaint inspections are scored but not graded.<sup><a href="#s1">1</a>,<a href="#s3">3</a></sup> So the newest inspection isn't always the one behind the current grade.</dd>
+      <dt>Scores can change after a hearing</dt>
+      <dd>Restaurants can contest violations at OATH. Dismissed violations are removed from the data, and scores are updated after adjudication, so a score or grade here can change later.<sup><a href="#s3">3</a></sup></dd>
+    </dl>
+    <h3 style="margin-top:18px">Sources</h3>
+    <ol class="src">
+      <li id="s1">NYC DOHMH, &ldquo;How We Score and Grade&rdquo; (PDF): <a href="https://www.nyc.gov/assets/doh/downloads/pdf/rii/restaurant-grading-faq.pdf" rel="noopener">nyc.gov/assets/doh/downloads/pdf/rii/restaurant-grading-faq.pdf</a>, linked from <a href="https://www.nyc.gov/site/doh/business/food-operators/letter-grading-for-restaurants.page" rel="noopener">Letter Grading for Restaurants</a>.</li>
+      <li id="s2">NYC Open Data, &ldquo;DOHMH New York City Restaurant Inspection Results&rdquo; (dataset 43nn-pn8j), column descriptions: <a href="https://data.cityofnewyork.us/d/43nn-pn8j" rel="noopener">data.cityofnewyork.us/d/43nn-pn8j</a>.</li>
+      <li id="s3">DOHMH, &ldquo;About Restaurant Inspection Data on NYC Open Data&rdquo; (attachment to dataset 43nn-pn8j).</li>
+      <li>Official lookup: <a href="https://www.nyc.gov/site/doh/services/restaurant-grades.page" rel="noopener">NYC Health, Restaurant Inspection Results (ABCEats)</a>.</li>
+    </ol>
+    <p class="small">Plain-English summaries are our own paraphrases of the official violation text, which is always shown underneath. Rules checked on nyc.gov on November 14, 2026.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p><b>Not affiliated with NYC DOHMH</b> or the City of New York. This is an independent, free tool that displays official open data as published. It may lag the city's own site, and data can contain errors; for the official record, use <a href="https://www.nyc.gov/site/doh/services/restaurant-grades.page" rel="noopener">ABCEats on nyc.gov</a> or the grade card posted at the restaurant.</p>
+  <p>No tracking, no ads, no login. Searches go directly from your browser to NYC Open Data.</p>
+  <p><a href="../">More free NYC tools from Lantern Lab</a></p>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="violations.js"></script>
+<script src="grades.js"></script>
+<script src="soda.js"></script>
+<script src="card.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>

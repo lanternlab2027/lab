@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>How to Export Telegram Chat History to JSON (Telegram Desktop)</title>
+<meta name="description" content="Export a Telegram chat or group to JSON with Telegram Desktop: step-by-step, which apps can export, troubleshooting, and what result.json contains.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html">
+<meta name="theme-color" content="#1b0b4d">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="How to export Telegram chat history (JSON)">
+<meta property="og:description" content="Export a Telegram chat or group to JSON with Telegram Desktop: step-by-step, which apps can export, troubleshooting, and what result.json contains.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/wrapped/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to export Telegram chat history (JSON)">
+<meta name="twitter:description" content="Export a Telegram chat or group to JSON with Telegram Desktop: step-by-step, which apps can export, troubleshooting, and what result.json contains.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/wrapped/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "name": "How to export Telegram chat history as JSON with Telegram Desktop",
+ "description": "Export a Telegram chat or group to JSON with Telegram Desktop: step-by-step, which apps can export, troubleshooting, and what result.json contains.",
+ "inLanguage": "en",
+ "url": "https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html",
+ "tool": [
+  {
+   "@type": "HowToTool",
+   "name": "Telegram Desktop on Windows, macOS or Linux"
+  }
+ ],
+ "step": [
+  {
+   "@type": "HowToStep",
+   "position": 1,
+   "name": "Install Telegram Desktop and sign in.",
+   "text": "Download it from desktop.telegram.org (Windows, macOS or Linux). Telegram's phone apps don't have chat export.",
+   "url": "https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html#steps"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 2,
+   "name": "Open the chat or group.",
+   "text": "Click it in the chat list on the left.",
+   "url": "https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html#steps"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 3,
+   "name": "Click the ⋮ menu, then Export chat history.",
+   "text": "The menu is in the top-right corner of the chat.",
+   "url": "https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html#steps"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 4,
+   "name": "Untick the media you don't need.",
+   "text": "For text only, untick photos, videos, voice messages and files. The export is much faster without them.",
+   "url": "https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html#steps"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 5,
+   "name": "Set Format to Machine-readable JSON.",
+   "text": "Choose HTML instead if you just want to read the chat in a browser. JSON is what other tools (including ours) can read.",
+   "url": "https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html#steps"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 6,
+   "name": "Click Export.",
+   "text": "When it finishes, open the folder Telegram shows you. The JSON file is called result.json. An HTML export opens from messages.html.",
+   "url": "https://lanternlab2027.github.io/lab/guides/how-to-export-telegram-chat-history.html#steps"
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="guides.css">
+</head>
+<body class="t-wrapped">
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Lantern Lab</a> &rsaquo; <a href="./">Guides</a></nav>
+  <header class="top">
+    <div class="brand">A Lantern Lab guide</div>
+    <h1>How to export Telegram chat history</h1>
+    <p class="lede">Telegram exports chats from its desktop app only. Here's how to get a single chat as a <code>result.json</code> file, and what's inside it.</p>
+    <p class="meta">Last checked: Nov 2026 against the official help pages listed under <a href="#sources">Sources</a>.</p>
+  </header>
+  <main>
+
+  <div class="panel quick">
+    <b class="label">Quick answer</b>
+    <p>On a computer, open <b>Telegram Desktop</b> &rarr; open the chat &rarr; &#8942; &rarr; <b>Export chat history</b> &rarr; untick media &rarr; Format: <b>Machine-readable JSON</b> &rarr; <b>Export</b>. You get a <code>result.json</code> file.</p>
+  </div>
+
+  <h2 id="which-apps">Which Telegram apps can export?</h2>
+  <p>Telegram added its export tool to <b>Telegram Desktop</b> in 2018. Telegram's own suggestion tracker still lists "Chat Export in mobile apps" as an open request, and its workaround is to use Telegram Desktop. So:</p>
+  <ul>
+    <li><b>iPhone and Android:</b> no export. Use Telegram Desktop on a computer and sign in to the same account.</li>
+    <li><b>Mac:</b> there are two Telegram apps for Mac. Official docs only describe export in <b>Telegram Desktop</b> from desktop.telegram.org, not the separate "Telegram for macOS" app, so install Telegram Desktop if you don't see the option.</li>
+    <li><b>Web versions:</b> not covered by any official export docs we found.</li>
+  </ul>
+
+  <h2 id="steps">Export one chat as JSON in Telegram Desktop</h2>
+<ol class="steps">
+  <li><b class="step">Install Telegram Desktop and sign in.</b>Download it from <a href='https://desktop.telegram.org/' rel='noopener'>desktop.telegram.org</a> (Windows, macOS or Linux). Telegram's phone apps don't have chat export.</li>
+  <li><b class="step">Open the chat or group.</b>Click it in the chat list on the left.</li>
+  <li><b class="step">Click the &#8942; menu, then <b>Export chat history</b>.</b>The menu is in the top-right corner of the chat.</li>
+  <li><b class="step">Untick the media you don't need.</b>For text only, untick photos, videos, voice messages and files. The export is much faster without them.</li>
+  <li><b class="step">Set <b>Format</b> to <b>Machine-readable JSON</b>.</b>Choose HTML instead if you just want to read the chat in a browser. JSON is what other tools (including ours) can read.</li>
+  <li><b class="step">Click <b>Export</b>.</b>When it finishes, open the folder Telegram shows you. The JSON file is called <code>result.json</code>. An HTML export opens from <code>messages.html</code>.</li>
+</ol>
+
+  <h3>Exporting everything instead of one chat</h3>
+  <p>To export your whole account (all chats, contacts and more), Telegram's docs say to go to <b>Settings &rarr; Advanced &rarr; Export Telegram data</b>. For a single group, the per-chat export above is smaller and simpler.</p>
+
+  <h2 id="troubleshooting">Troubleshooting</h2>
+  <details><summary>I can't find "Export chat history"</summary><div>
+    <p>You're probably in a phone app or the separate "Telegram for macOS" app. Install Telegram Desktop from desktop.telegram.org, sign in, and look in the chat's &#8942; menu. Update the app if it's old.</p>
+  </div></details>
+  <details><summary>My export only has my own messages</summary><div>
+    <p>That's expected for public groups and channels: Telegram's export docs say exports of those only contain the messages sent by the person exporting. Private groups and one-to-one chats include everyone's messages.</p>
+  </div></details>
+  <details><summary>I got HTML files but need JSON</summary><div>
+    <p>Run the export again and change <b>Format</b> to <b>Machine-readable JSON</b>. The JSON file is <code>result.json</code>.</p>
+  </div></details>
+  <details><summary>Some photos or files are missing</summary><div>
+    <p>Telegram's docs say media larger than your chosen size limit is replaced with a note instead of the file. Raise the size limit and export again if you need it.</p>
+  </div></details>
+  <details><summary>Telegram asks me to wait before exporting</summary><div>
+    <p>Some people see a security message asking them to come back later, usually on a newly signed-in computer. Telegram's docs that we checked don't describe this, so follow the time shown in the app. If you didn't start an export yourself, check <b>Settings &rarr; Devices</b> for sessions you don't recognize.</p>
+  </div></details>
+
+  <h2 id="privacy">Privacy: what's in a Telegram export file</h2>
+  <div class="panel note">
+    <p>Telegram's published schema says <code>result.json</code> holds the chat's <b>name, type and ID</b>, then every message with:</p>
+    <ul>
+      <li>its <b>date</b>, the sender's <b>name</b> and their numeric <b>Telegram user ID</b>;</li>
+      <li>the full <b>text</b>, including links, mentions and formatting;</li>
+      <li>replies, edits, forwards (with who it was forwarded from) and service events such as people joining or pinned messages;</li>
+      <li>if you included media, the <b>file paths</b> of photos, videos, voice messages and files saved next to it.</li>
+    </ul>
+    <p>It's a plain file on your computer. It isn't protected by Telegram's encryption once exported, and it includes other people's messages, so share it carefully and delete it when you're done.</p>
+  </div>
+
+  <section class="cta" aria-labelledby="cta-h">
+    <h2 id="cta-h">Turn your export into shareable cards, on your device</h2>
+    <p>Group Chat Wrapped reads Telegram's <code>result.json</code> and makes cards for the top yapper, night owl, ghost and more. Free, and the chat never leaves your browser.</p>
+    <a class="btn" href="../wrapped/">Make your Group Chat Wrapped</a>
+  </section>
+
+  <h2 id="sources">Sources</h2>
+  <p class="meta">Checked Nov 2026. Apps change their menus; if a label here doesn't match what you see, the official page wins.</p>
+  <ul class="sources">
+  <li><a href="https://telegram.org/blog/export-and-more" rel="noopener">Telegram Blog: Chat Export Tool, Better Notifications and More (Aug 27, 2018)</a> (Telegram Desktop, JSON or HTML, Export chat history)</li>
+  <li><a href="https://core.telegram.org/import-export" rel="noopener">Telegram: Data Export Schema</a> (Settings > Advanced > Export Telegram data, result.json contents, public-group and media-size notes)</li>
+  <li><a href="https://bugs.telegram.org/c/86" rel="noopener">Telegram Bugs and Suggestions: Chat Export in mobile apps</a> (open request; workaround is Telegram Desktop)</li>
+  <li><a href="https://desktop.telegram.org/" rel="noopener">Telegram Desktop download</a></li>
+  </ul>
+  </main>
+  <footer>
+    <p><b>Not affiliated with Telegram.</b> This is an independent guide written by Lantern Lab. Product names are trademarks of their owners and are used only to describe how to use their own features.</p>
+    <p><a href="./">All guides</a> &middot; <a href="../wrapped/">Group Chat Wrapped</a> &middot; <a href="../">More free tools from Lantern Lab</a></p>
+  </footer>
+</div>
+</body>
+</html>
