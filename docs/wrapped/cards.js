@@ -129,12 +129,20 @@
     ctx.textAlign = 'left'; ctx.globalAlpha = 0.92;
     ctx.font = F(800, 34);
     ctx.fillText(ellipsize(ctx, info.title, 620), M, H - 104);
-    ctx.font = F(600, 28); ctx.globalAlpha = 0.75;
-    ctx.fillText(SITE, M, H - 62);
+    // "Make yours" line: the card itself carries the way back to the app.
+    ctx.font = F(700, 28); ctx.globalAlpha = 0.9;
+    var mk = 'Make yours: ' + SITE;
+    ctx.fillText(mk, M, H - 62);
+    var mw = ctx.measureText(mk).width;
     ctx.textAlign = 'right'; ctx.font = F(800, 34); ctx.globalAlpha = 0.92;
     ctx.fillText(idx + ' / ' + total, W - M, H - 104);
-    ctx.font = F(600, 28); ctx.globalAlpha = 0.75;
-    ctx.fillText('\u{1F512} made on-device', W - M, H - 62);
+    ctx.globalAlpha = 0.75;
+    // Privacy label: longest version that fits beside the "Make yours" line.
+    var opts = [[28, '\u{1F512} made on-device'], [28, '\u{1F512} on-device'], [24, '\u{1F512} on-device']];
+    for (var k = 0; k < opts.length; k++) {
+      ctx.font = F(600, opts[k][0]);
+      if (mw + ctx.measureText(opts[k][1]).width + 24 <= W - 2 * M) { ctx.fillText(opts[k][1], W - M, H - 62); break; }
+    }
     ctx.restore();
   }
 

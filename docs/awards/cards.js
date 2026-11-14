@@ -103,7 +103,7 @@
     ctx.beginPath(); ctx.moveTo(M, H - 86); ctx.lineTo(W - M, H - 86); ctx.stroke();
     ctx.fillStyle = 'rgba(255,255,255,0.85)'; ctx.font = F('700', 28); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     spacing(ctx, 1);
-    ctx.fillText(SITE, W / 2, H - 46);
+    ctx.fillText('Make yours: ' + SITE, W / 2, H - 46);
     ctx.restore();
   }
 

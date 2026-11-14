@@ -276,7 +276,7 @@
       if (se.bench) L.push('Season bench boss: ' + se.bench[0].team.name + ' (' + fmtPts(se.bench[0].bench) + ' pts on the bench)');
     }
     L.push('');
-    L.push('Made free at lanternlab2027.github.io/lab/awards');
+    L.push(opts.link ? 'All the award cards + make your own league\'s: ' + opts.link : 'Made free at lanternlab2027.github.io/lab/awards');
     return L.join('\n');
   }
 

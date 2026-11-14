@@ -98,11 +98,17 @@ input[type=date]{appearance:none;-webkit-appearance:none}
 .faq p{color:var(--muted);margin:8px 0 0;font-size:15px}
 footer{text-align:center;color:var(--muted);font-size:14px;margin-top:28px}
 footer a{color:var(--muted)}
-.made{display:block;text-align:center;margin:26px auto 0;padding:14px;border-radius:14px;border:1.5px dashed var(--line);color:var(--ink);text-decoration:none;font-size:15px;max-width:420px}
-.made b{color:var(--berry)}
-.made:hover{border-color:var(--berry)}
+.own{text-align:center;margin-top:18px}
+.own h2{font-size:21px;margin:0}
+.own .sub{margin:6px 0 14px}
+.made{text-decoration:none}
+.preview-note{text-align:center;font-size:14px;margin:0 0 12px}
 .toast{visibility:hidden;position:fixed;left:50%;bottom:20px;transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .25s ease;z-index:50;max-width:calc(100% - 32px);text-align:center}
 .toast.show{visibility:visible;transform:translate(-50%,0)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (min-width:720px){main{padding-top:32px}.card{padding:26px 28px}}
 @media (max-width:360px){.acts{grid-template-columns:repeat(2,1fr)}.row2{grid-template-columns:1fr}}
+.extras{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:0 14px;background:var(--card)}
+.extras summary{cursor:pointer;font-weight:700;padding:12px 0;min-height:44px;list-style-position:inside}
+.extras[open]{padding-bottom:14px}
+.extras[open] summary{border-bottom:1px solid var(--line);margin-bottom:4px}

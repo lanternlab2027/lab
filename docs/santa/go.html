@@ -13,7 +13,13 @@
 <meta property="og:title" content="You've got a Secret Santa link">
 <meta property="og:description" content="Tap to see who you're buying for. This link is just for you.">
 <meta property="og:image" content="https://lanternlab2027.github.io/lab/santa/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A wrapped gift: your Secret Santa link">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="You've got a Secret Santa link">
+<meta name="twitter:description" content="Tap to see who you're buying for. This link is just for you.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/santa/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='12' width='24' height='17' rx='3' fill='%23b8283a'/%3E%3Crect x='2' y='8' width='28' height='6' rx='2' fill='%23d63c4f'/%3E%3Crect x='14' y='8' width='4' height='21' fill='%23e6b85c'/%3E%3Cpath d='M16 8c-3-6-9-5-7-1 1 2 7 1 7 1zm0 0c3-6 9-5 7-1-1 2-7 1-7 1z' fill='%23e6b85c'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="santa.css">
 <style>
@@ -60,6 +66,8 @@
     <a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="12" width="24" height="17" rx="3" fill="#b8283a"/><rect x="2" y="8" width="28" height="6" rx="2" fill="#d63c4f"/><rect x="14" y="8" width="4" height="21" fill="#e6b85c"/><path d="M16 8c-3-6-9-5-7-1 1 2 7 1 7 1zm0 0c3-6 9-5 7-1-1 2-7 1-7 1z" fill="#e6b85c"/></svg>Secret Santa</a>
     <span class="pill" id="grp-pill">Private link</span>
   </div>
+
+  <div id="preview-note" class="note ok preview-note hidden">This is a preview with made-up names. Each person in your group gets their own page like this.</div>
 
   <section id="loading" class="card stage"><p class="sub">Opening your link...</p></section>
 
@@ -108,7 +116,11 @@
     <div class="wl" id="wish-body"></div>
   </section>
 
-  <a class="made" href="./">Made with <b>Lantern Lab Secret Santa</b>: start your own group &rarr;<br><span class="sub" style="font-size:13px">Free, no sign-up, no emails needed</span></a>
+  <section class="card own" id="own">
+    <h2 class="serif" id="own-h">Running another Secret Santa?</h2>
+    <p class="sub" id="own-sub">Work, friends, the other side of the family: draw names in a minute and text everyone their link. Free, no sign-up, no emails.</p>
+    <a class="made btn primary" href="./">Start your own group &rarr;</a>
+  </section>
   <footer><a href="../">A Lantern Lab project</a></footer>
 </main>
 <div id="toast" class="toast" role="status"></div>

@@ -7,6 +7,30 @@
   const hide = id => $(id).classList.add('hidden');
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // ---------- ?ref= passthrough (URL only, nothing stored) ----------
+  // The "start your own group" link keeps the ref this page was opened with; links this visitor
+  // creates (a wishlist) carry the next step: X -> share-X -> share2-X ... No ref -> share.
+  function inRef() {
+    let r = '';
+    try { r = new URLSearchParams(location.search).get('ref') || ''; } catch (e) { r = ''; }
+    return r.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+  }
+  function nextRef() {
+    const r = inRef();
+    if (!r) return 'share';
+    const m = /^share(\d*)(?:-(.+))?$/.exec(r);
+    if (m) return 'share' + ((m[1] ? +m[1] : 1) + 1) + (m[2] ? '-' + m[2] : '');
+    return 'share-' + r;
+  }
+  const preview = (() => { try { return new URLSearchParams(location.search).get('preview') === '1'; } catch (e) { return false; } })();
+  document.querySelector('a.made').href = './' + (inRef() ? '?ref=' + encodeURIComponent(inRef()) : '');
+  if (preview) {
+    $('preview-note').classList.remove('hidden');
+    $('own-h').textContent = 'Ready to draw your group?';
+    $('own-sub').textContent = 'Add names, tap Draw, and text each person their own link. Free, no sign-up, no emails.';
+    document.querySelector('a.made').textContent = 'Start your own group \u2192';
+  }
+
   function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove('show'), 1800); }
   async function copy(text) {
     try { await navigator.clipboard.writeText(text); return true; } catch (e) {
@@ -109,7 +133,7 @@
     $('wish-go').addEventListener('click', async () => {
       const w = $('wish-text').value.trim();
       if (!w) { $('wish-text').focus(); return toast('Write a wish or two first'); }
-      const url = new URL('go.html', location.href).href.split('#')[0] + '#' + await S.seal({k: 'w', g: d.g || '', n: d.n, w}, 'w1');
+      const url = new URL('go.html', location.href).href.split(/[?#]/)[0] + '?ref=' + encodeURIComponent(nextRef()) + '#' + await S.seal({k: 'w', g: d.g || '', n: d.n, w}, 'w1');
       const msg = d.n + '\'s Secret Santa wishlist' + (d.g ? ' (' + d.g + ')' : '') + ': ' + url;
       const acts = $('wish-acts'); acts.innerHTML = '';
       const mk = (tag, label) => { const b = document.createElement(tag); b.className = 'btn'; b.textContent = label; if (tag === 'button') b.type = 'button'; acts.appendChild(b); return b; };
@@ -127,6 +151,7 @@
     if (d.g) $('grp-pill').textContent = d.g;
     $('wish-kicker').textContent = d.g ? d.g + ' wishlist' : 'Secret Santa wishlist';
     $('wish-title').textContent = d.n + '\'s wishlist';
+    $('own-h').textContent = 'Want a Secret Santa like this?';
     linkify($('wish-body'), d.w);
     show('wish');
   }

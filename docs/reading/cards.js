@@ -164,12 +164,15 @@
     ctx.textAlign = 'left'; ctx.globalAlpha = 0.95;
     ctx.font = F('serif', 700, 36, true);
     ctx.fillText(ellipsize(ctx, info.title, 640), M, H - 128);
-    ctx.font = F('sans', 600, 25, false); ctx.globalAlpha = 0.72;
-    ctx.fillText(SITE, M, H - 86);
+    // "Make yours" line: the card itself carries the way back to the app.
+    ctx.font = F('sans', 700, 25, false); ctx.globalAlpha = 0.85;
+    var mk = 'Make yours: ' + SITE;
+    ctx.fillText(mk, M, H - 86);
+    var mw = ctx.measureText(mk).width;
     ctx.textAlign = 'right'; ctx.font = F('sans', 800, 30, false); ctx.globalAlpha = 0.9;
     ctx.fillText(idx + ' / ' + total, W - M, H - 128);
     ctx.font = F('sans', 600, 25, false); ctx.globalAlpha = 0.72;
-    ctx.fillText('made on-device', W - M, H - 86);
+    if (mw + ctx.measureText('made on-device').width + 32 <= W - 2 * M) ctx.fillText('made on-device', W - M, H - 86);
     ctx.restore();
   }
 

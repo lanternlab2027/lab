@@ -97,6 +97,12 @@
   .card canvas { width: 100%; height: auto; aspect-ratio: 4 / 5; border-radius: 16px; display: block; box-shadow: 0 16px 36px rgba(0,0,0,.45); background: #111; }
   .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
   .card-btns { display: flex; gap: 6px; }
+  .hero .hint .btn { margin-left: 4px; vertical-align: middle; }
+  .peek { display: block; position: relative; width: 100%; max-width: 680px; margin: 16px 0 0; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 18px; overflow: hidden; }
+  .peek img { display: block; width: 100%; height: 200px; object-fit: cover; object-position: center top; }
+  .peek span { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 12px 12px; background: linear-gradient(transparent, rgba(8,22,44,.94)); color: #fff; font: 800 16px var(--font); text-align: center; }
+  .peek:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  @media (min-width: 760px) { .peek img { height: 300px; } }
   .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
   .panel.signup { background: linear-gradient(135deg, rgba(31,157,85,.25), rgba(255,204,51,.14)); }
   form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
@@ -128,8 +134,10 @@
         <input type="text" id="q" name="q" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. your_username or 1180000000000000001" required>
         <button class="btn" type="submit" id="go">Get awards</button>
       </form>
-      <p class="hint">League ID: in the Sleeper app, open the league, then Settings &gt; General, or copy the number from the league link. <button type="button" class="linkbtn" id="sample">Or try a made-up sample league</button></p>
+      <p class="hint">Your username is enough: we'll list your leagues. <button type="button" class="btn ghost small" id="sample">See a sample league first</button></p>
+      <p class="hint">Or use the league ID: in the Sleeper app open the league, then Settings &gt; General, or paste the league link.</p>
       <div class="progress" id="progress" hidden><i></i></div>
+      <button type="button" class="peek" id="peek" aria-label="See a sample league"><img src="preview.jpg" width="720" height="413" alt="Sample award cards: highest scorer, heartbreak and power rankings"><span>Tap to see a sample league</span></button>
       <p class="status" id="status" role="status" aria-live="polite"></p>
     </header>
   </div>

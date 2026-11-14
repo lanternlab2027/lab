@@ -7,12 +7,46 @@
 
   var state = { bundle: null, teams: null, played: [], completed: [], live: null, mode: 'week', week: null, leagueId: null, demo: false, username: null, specs: [], canvases: [], recap: '' };
 
-  function say(msg, err) { var s = $('#status'); s.textContent = msg || ''; s.className = 'status' + (err ? ' err' : ''); }
+  function say(msg, err) {
+    var s = $('#status'); s.textContent = msg || ''; s.className = 'status' + (err ? ' err' : '');
+    if (err) {
+      var demo = document.createElement('button'); demo.type = 'button'; demo.className = 'linkbtn'; demo.textContent = 'See a sample league instead';
+      demo.addEventListener('click', showSample);
+      s.appendChild(document.createTextNode(' ')); s.appendChild(demo);
+    }
+  }
+
+  // ---------- share links: ?ref= passthrough (URL only, nothing stored) ----------
+  // Opened with ?ref=X -> links this visitor shares carry ?ref=share-X (then share2-X, share3-X...),
+  // so a later analytics pass can follow the chain. No ref -> ?ref=share.
+  var APP_URL = 'https://lanternlab2027.github.io/lab/awards/';
+  function inRef() {
+    var r = '';
+    try { r = new URLSearchParams(location.search).get('ref') || ''; } catch (e) { r = ''; }
+    return r.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+  }
+  function nextRef() {
+    var r = inRef();
+    if (!r) return 'share';
+    var m = /^share(\d*)(?:-(.+))?$/.exec(r);
+    if (m) return 'share' + ((m[1] ? +m[1] : 1) + 1) + (m[2] ? '-' + m[2] : '');
+    return 'share-' + r;
+  }
+  // The visitor's own address bar keeps the ref they arrived with.
+  function ownQuery() {
+    var r = inRef();
+    return '?league=' + encodeURIComponent(state.leagueId) + '&week=' + state.week + (r ? '&ref=' + encodeURIComponent(r) : '');
+  }
+  // What they send to the league: a deep link to this league and week (or the app, for the sample).
+  function shareLink() {
+    var q = state.demo || !state.leagueId ? '?' : '?league=' + encodeURIComponent(state.leagueId) + '&week=' + state.week + '&';
+    return APP_URL + q + 'ref=' + encodeURIComponent(nextRef());
+  }
   function progress(done, total) {
     var p = $('#progress'); p.hidden = !total;
     if (total) p.firstElementChild.style.width = Math.round(100 * done / total) + '%';
   }
-  function busy(on) { $('#go').disabled = on; $('#sample').disabled = on; }
+  function busy(on) { $('#go').disabled = on; $('#sample').disabled = on; $('#peek').disabled = on; }
 
   // ---------- lookup ----------
   async function lookup(raw) {
@@ -95,7 +129,7 @@
     $('#results').hidden = false; $('#pick').hidden = true;
     say(demo ? 'Showing a made-up sample league. Enter your own username or league ID to make yours.' : '');
     if (!demo) {
-      try { history.replaceState(null, '', '?league=' + encodeURIComponent(state.leagueId) + '&week=' + state.week); } catch (e) { /* file:// etc. */ }
+      try { history.replaceState(null, '', ownQuery()); } catch (e) { /* file:// etc. */ }
     }
     render();
     $('#results').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -116,8 +150,8 @@
     $('#week-wrap').hidden = !weekMode;
     $('#live-note').hidden = !(weekMode && meta.live);
     state.specs = weekMode ? C.weeklyDeck(wk, meta) : C.seasonDeck(se, meta);
-    state.recap = A.recapText({ leagueName: meta.leagueName, week: state.week, live: meta.live, weekly: weekMode ? wk : null, season: weekMode ? null : se });
-    if (!weekMode && !se) state.recap = 'No completed regular-season weeks yet.';
+    state.recap = A.recapText({ leagueName: meta.leagueName, week: state.week, live: meta.live, weekly: weekMode ? wk : null, season: weekMode ? null : se, link: shareLink() });
+    if (!weekMode && !se) state.recap = 'No completed regular-season weeks yet.\n\nWeekly award cards for your league: ' + shareLink();
     $('#recap').value = state.recap;
     var deck = $('#deck'); deck.innerHTML = ''; state.canvases = [];
     if (!state.specs.length) {
@@ -158,7 +192,7 @@
   async function saveOne(i) { download(await blobOf(i), fileName(i)); }
   async function shareFiles(files) {
     if (navigator.canShare && navigator.share && navigator.canShare({ files: files })) {
-      try { await navigator.share({ files: files, title: 'Fantasy League Awards' }); return true; }
+      try { await navigator.share({ files: files, title: 'Fantasy League Awards', text: (state.bundle && state.bundle.league.name ? state.bundle.league.name + ' awards. ' : '') + 'All the cards + make your own league\'s: ' + shareLink() }); return true; }
       catch (e) { if (e && e.name === 'AbortError') return true; }
     }
     return false;
@@ -191,11 +225,13 @@
 
   // ---------- wiring ----------
   $('#lookup').addEventListener('submit', function (e) { e.preventDefault(); lookup($('#q').value); });
-  $('#sample').addEventListener('click', function () { state.username = null; useBundle(window.AwardsDemo.build(), true); });
+  function showSample() { state.username = null; useBundle(window.AwardsDemo.build(), true); }
+  $('#sample').addEventListener('click', showSample);
+  $('#peek').addEventListener('click', showSample);
   $('#season').addEventListener('change', changeSeason);
   $('#week').addEventListener('change', function () {
     state.week = Number($('#week').value);
-    if (!state.demo) { try { history.replaceState(null, '', '?league=' + encodeURIComponent(state.leagueId) + '&week=' + state.week); } catch (e) { /* ignore */ } }
+    if (!state.demo) { try { history.replaceState(null, '', ownQuery()); } catch (e) { /* ignore */ } }
     render();
   });
   $('#tab-week').addEventListener('click', function () { state.mode = 'week'; render(); });
@@ -207,7 +243,7 @@
   sa.addEventListener('click', shareAll);
   $('#reset').addEventListener('click', function () {
     state.bundle = null; $('#results').hidden = true; $('#deck').innerHTML = ''; $('#q').value = ''; say('');
-    try { history.replaceState(null, '', location.pathname); } catch (e) { /* ignore */ }
+    try { history.replaceState(null, '', location.pathname + (inRef() ? '?ref=' + encodeURIComponent(inRef()) : '')); } catch (e) { /* ignore */ }
     $('#top').scrollIntoView({ behavior: 'smooth' }); $('#q').focus();
   });
 
