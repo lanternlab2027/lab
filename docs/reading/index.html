@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Reading Wrapped 2026: Your Goodreads Wrapped &amp; StoryGraph Year in Review</title>
+<meta name="description" content="Goodreads Wrapped for 2026: turn your Goodreads or StoryGraph export into shareable year-in-books cards. Books and pages read, your longest and top-rated reads, favorite author, genre mix, reading pace and your reader personality. Free, and your library never leaves your device.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/reading/">
+<meta name="theme-color" content="#123524">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Reading Wrapped 2026: your year in books">
+<meta property="og:description" content="Goodreads Wrapped and StoryGraph year in review in one: shareable cards for books read, pages, top-rated read, most-read author and your reader personality. Free, and 100% on your device.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/reading/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/reading/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Reading Wrapped: sample year-in-books cards for a made-up library">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reading Wrapped 2026: your year in books">
+<meta name="twitter:description" content="Turn a Goodreads or StoryGraph export into shareable year-in-books cards. Free, and 100% on your device.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/reading/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Reading Wrapped",
+ "alternateName": ["Goodreads Wrapped", "StoryGraph Year in Review"],
+ "url": "https://lanternlab2027.github.io/lab/reading/",
+ "applicationCategory": "EntertainmentApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Turn a Goodreads or StoryGraph library export into shareable year-in-books cards. Runs entirely in your browser.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #f5ecd9; --bg2: #ebdfc4; --ink: #1d2a21; --muted: #55604f; --line: rgba(29,42,33,.18);
+    --card: rgba(255,252,243,.7); --green: #17402c; --green2: #0d281c; --claret: #7d1f32; --gold: #c99a3b; --gold2: #e4bc62;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, Cambria, serif;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); background-image: radial-gradient(1000px 520px at 85% -8%, rgba(201,154,59,.28) 0%, transparent 60%), radial-gradient(900px 600px at -10% 30%, rgba(23,64,44,.12) 0%, transparent 60%); background-repeat: no-repeat; color: var(--ink); font-family: var(--font); line-height: 1.55; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--claret); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 40px 0 16px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  h1 { font-family: var(--serif); font-size: clamp(46px, 12.5vw, 96px); line-height: .95; margin: 12px 0 16px; font-weight: 700; letter-spacing: -.02em; color: var(--green); }
+  h1 em { color: var(--claret); }
+  .lede { font-size: clamp(18px, 4.6vw, 22px); color: #2c3a30; max-width: 660px; margin: 0 0 18px; }
+  .privacy { display: inline-flex; gap: 10px; align-items: center; background: var(--green); color: #f6eddb; padding: 10px 16px; border-radius: 14px; font-weight: 700; }
+  .privacy svg { flex: none; color: var(--gold2); }
+  .drop { margin: 22px 0 8px; border: 2px dashed rgba(29,42,33,.35); border-radius: 22px; padding: 26px 18px; text-align: center; background: var(--card); transition: border-color .15s, background .15s; }
+  .drop.over { border-color: var(--claret); background: rgba(125,31,50,.06); }
+  .drop p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+  .btn { appearance: none; border: 0; border-radius: 999px; font: 800 17px/1 var(--font); padding: 16px 24px; cursor: pointer; color: #fbf3e2; background: var(--claret); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 6px 16px rgba(125,31,50,.25); }
+  .btn:hover { background: #681828; }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label.upload:focus-within { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid rgba(29,42,33,.4); box-shadow: none; }
+  .btn.ghost:hover { background: rgba(29,42,33,.06); }
+  .btn.small { padding: 10px 16px; font-size: 15px; min-height: 44px; }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  label.upload { display: inline-flex; }
+  label.upload input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .linkbtn { background: none; border: 0; color: var(--claret); font: 700 16px var(--font); text-decoration: underline; cursor: pointer; padding: 12px 6px; min-height: 44px; }
+  .status { min-height: 1.5em; margin: 10px 0 0; color: var(--green); font-weight: 600; }
+  .status.err { color: #9b1c2e; }
+  section { margin: 44px 0; }
+  h2 { font-family: var(--serif); font-size: clamp(28px, 6.4vw, 40px); margin: 0 0 12px; letter-spacing: -.01em; line-height: 1.1; color: var(--green); }
+  h3 { margin: 0 0 6px; font-size: 19px; font-family: var(--serif); }
+  .controls { display: grid; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin: 14px 0 18px; }
+  .controls label.field { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+  .controls input[type=text], .controls select, form.signup input { font: 600 16px var(--font); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(29,42,33,.3); background: #fffaf0; color: var(--ink); min-height: 48px; width: 100%; }
+  .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 600; font-size: 15px; cursor: pointer; }
+  .check input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--claret); flex: none; }
+  .deckbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 0 0 12px; }
+  .deckbar .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+  .card { margin: 0; scroll-snap-align: center; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 16px; display: block; box-shadow: 0 16px 34px rgba(40,28,10,.28); background: #e9dcc0; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+  .empty { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; font-weight: 600; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .panel.dark { background: var(--green); color: #f6eddb; border-color: transparent; }
+  .panel.dark h2 { color: #f6eddb; }
+  .panel.dark .small-print { color: #cdd8c8; }
+  .panel.dark a { color: var(--gold2); }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 16px 18px; font-weight: 800; font-size: 18px; min-height: 48px; }
+  details > div { padding: 0 18px 16px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin: 6px 0; }
+  .grid2 { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } .controls { grid-template-columns: 1fr 1fr; } .controls .wide { grid-column: 1 / -1; } }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; }
+  form.signup .btn { background: var(--gold2); color: #2b1b0b; box-shadow: none; }
+  .small-print { color: var(--muted); font-size: 14px; }
+  code { font-size: 15px; background: rgba(29,42,33,.08); padding: 1px 6px; border-radius: 6px; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  footer p { margin: 6px 0; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="brand">A Lantern Lab project</div>
+    <h1>Reading <em>Wrapped</em></h1>
+    <p class="lede">Your year in books, as a deck of shareable cards: books and pages read, your longest and top-rated reads, your most-read author, your genre mix, your reading rhythm and your reader personality. Works with Goodreads and StoryGraph exports.</p>
+    <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your library never leaves your device.</span></div>
+
+    <div class="drop" id="drop">
+      <label class="upload btn" for="file">Choose your library export
+        <input id="file" type="file" accept=".csv,.zip,.txt,text/csv,application/zip,text/plain">
+      </label>
+      <p>Goodreads <b>goodreads_library_export.csv</b> or a StoryGraph export <b>.csv</b>. You can also drag the file here.</p>
+      <button type="button" class="linkbtn" id="sample">or try it with a made-up sample library</button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <p class="hint">Not sure how to get the file? <a href="#export">See how to export your library</a>.</p>
+  </header>
+
+  <section id="results" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Your cards</h2>
+    <div class="controls">
+      <label class="field">Year
+        <select id="year"></select>
+      </label>
+      <label class="field">Your name on the cards (optional)
+        <input type="text" id="name-input" maxlength="40" autocomplete="off" placeholder="e.g. Sam">
+      </label>
+      <label class="check wide" id="undated-wrap" hidden><input type="checkbox" id="undated"> <span id="undated-label">Count books marked read without a finish date, using the date you added them</span></label>
+    </div>
+    <div class="deckbar">
+      <b id="deck-count"></b>
+      <div class="acts">
+        <button type="button" class="btn small" id="share-all">Share all</button>
+        <button type="button" class="btn small ghost" id="zip-all">Download all (.zip)</button>
+        <button type="button" class="btn small ghost" id="reset">Start over</button>
+      </div>
+    </div>
+    <p class="hint">Swipe through the cards. Each one is a 1080&times;1920 image, sized for stories.</p>
+    <div id="empty" class="empty" hidden></div>
+    <div id="deck"></div>
+  </section>
+
+  <section id="export" aria-labelledby="export-h">
+    <h2 id="export-h">How to export your library</h2>
+    <p>Both sites give you a single <b>.csv</b> file. Upload it here as it is; there's no need to open or edit it first.</p>
+    <details open>
+      <summary>Goodreads (on a computer)</summary>
+      <div><ol class="steps">
+        <li>Sign in at goodreads.com in a desktop browser. The phone app has no export, but "Request desktop site" in your phone's browser works.</li>
+        <li>Click <b>My Books</b> at the top.</li>
+        <li>In the left sidebar, under <b>Tools</b>, click <b>Import and export</b>.</li>
+        <li>Click <b>Export Library</b> and wait a moment for the file to be prepared.</li>
+        <li>Click the download link that appears, then upload <b>goodreads_library_export.csv</b> here.</li>
+      </ol></div>
+    </details>
+    <details>
+      <summary>StoryGraph</summary>
+      <div><ol class="steps">
+        <li>Sign in at thestorygraph.com and open your profile menu.</li>
+        <li>Go to <b>Manage Account</b> and scroll down to the section for exporting your data.</li>
+        <li>Choose the option to export your <b>StoryGraph library</b>.</li>
+        <li>When the file is ready (StoryGraph may email you a link), download the <b>.csv</b> and upload it here.</li>
+      </ol></div>
+    </details>
+    <details>
+      <summary>Why are some cards missing?</summary>
+      <div><p>Cards only appear when your export has the data for them. StoryGraph exports don't include page counts or community ratings, so the pages, longest-book and "harsh critic" cards are Goodreads-only. StoryGraph users get a mood mix and a ratings breakdown instead. The abandoned-book card needs a DNF shelf (for Goodreads, an exclusive shelf named something like <code>dnf</code> or <code>did-not-finish</code>).</p></div>
+    </details>
+  </section>
+
+  <section id="how-we-know" aria-labelledby="hwk-h">
+    <h2 id="hwk-h">Your library never leaves your device. How we know:</h2>
+    <div class="grid2">
+      <div class="panel"><h3>There's no server to send it to</h3><p>This page is plain files on GitHub Pages. Your export is read, counted and drawn into cards by JavaScript running in this browser tab. Close the tab and it's gone.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only lets it talk to one outside address: the optional email signup below, which sends just your email. No analytics, no trackers, no third-party scripts, no web fonts.</p></div>
+      <div class="panel"><h3>It's open source</h3><p>Every line is on GitHub: <a href="https://github.com/lanternlab2027/lab/tree/main/docs/reading" rel="noopener">lanternlab2027/lab &rarr; docs/reading</a>. The zip helper (JSZip) is copied into the folder, not loaded from a CDN.</p></div>
+      <div class="panel"><h3>Try it offline</h3><p>Load this page, turn on airplane mode, then upload your export. It still works, because nothing needs the internet.</p></div>
+    </div>
+  </section>
+
+  <section id="notify" aria-labelledby="notify-h">
+    <div class="panel dark">
+      <h2 id="notify-h" style="font-size:28px">Get next year's Reading Wrapped</h2>
+      <p class="small-print">Optional. We'll email you once when the next edition is ready. We only send your email address; nothing from your library is ever included.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small-print" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Remind me</button>
+      </form>
+      <p class="small-print" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Is this made by Goodreads or StoryGraph?</summary><div><p>No. Reading Wrapped is an independent project that works with the export files those sites already let you download. It is not affiliated with or endorsed by Goodreads, Amazon or The StoryGraph.</p></div></details>
+    <details><summary>Which books count toward a year?</summary><div><p>Books on your <b>read</b> shelf whose finish date (Goodreads <b>Date Read</b>, StoryGraph <b>Dates Read</b> or <b>Last Date Read</b>) falls in that year. If some books are marked read with no date, you can tick the box above the cards to count them by the date you added them instead.</p></div></details>
+    <details><summary>How is the reader personality picked?</summary><div><p>From your numbers alone: average book length, how many books you read, how loyal you are to one author, how many genres you cover, how your ratings compare with everyone else's, how often you re-read, and how bunched-up your reading is across the year. The strongest signal wins.</p></div></details>
+    <details><summary>It says "doesn't look like a Goodreads or StoryGraph export"</summary><div><p>Upload the original <b>.csv</b> from the export page. Files re-saved from Excel or Numbers usually still work, but a file from another app (or a spreadsheet with renamed columns) won't be recognized.</p></div></details>
+    <details><summary>Is it free?</summary><div><p>Yes, completely.</p></div></details>
+  </section>
+
+  <footer>
+    <p><a href="../">A Lantern Lab project</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/reading" rel="noopener">GitHub</a></p>
+    <p id="disclaimer">Not affiliated with Goodreads or StoryGraph. Goodreads is a trademark of Goodreads, LLC; The StoryGraph is a trademark of its owners.</p>
+  </footer>
+</div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="parser.js"></script>
+<script src="stats.js"></script>
+<script src="demo.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
