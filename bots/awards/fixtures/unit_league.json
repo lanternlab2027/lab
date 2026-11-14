@@ -1,0 +1,54 @@
+{
+  "_comment": "Synthetic 4-team league shaped like Sleeper API responses (docs.sleeper.com). Expected values in test_awards.js were worked out by hand from these numbers.",
+  "league": {
+    "league_id": "1111111111111111111", "name": "Unit Test League", "season": "2026", "sport": "nfl", "status": "in_season",
+    "season_type": "regular", "total_rosters": 4, "previous_league_id": null, "draft_id": "222", "avatar": null,
+    "settings": { "playoff_week_start": 3, "num_teams": 4 }, "scoring_settings": {}, "roster_positions": ["QB", "RB", "BN"]
+  },
+  "users": [
+    { "user_id": "u1", "username": "alice", "display_name": "alice", "avatar": null, "metadata": { "team_name": "Alpha" }, "is_owner": true },
+    { "user_id": "u2", "username": "bob", "display_name": "bob", "avatar": null, "metadata": {} },
+    { "user_id": "u3", "username": "cara", "display_name": "cara", "avatar": null, "metadata": { "team_name": "Cobras" } }
+  ],
+  "rosters": [
+    { "roster_id": 1, "owner_id": "u1", "league_id": "1111111111111111111", "players": ["a1", "a2", "a3"], "starters": ["a1", "a2"], "settings": { "wins": 1, "losses": 1, "ties": 0, "fpts": 210, "fpts_decimal": 50 } },
+    { "roster_id": 2, "owner_id": "u2", "league_id": "1111111111111111111", "players": ["b1", "b2", "b3", "b4"], "starters": ["b1", "b2"], "settings": { "wins": 0, "losses": 1, "ties": 1 } },
+    { "roster_id": 3, "owner_id": "u3", "league_id": "1111111111111111111", "players": ["c1", "c2"], "starters": ["c1", "c2"], "settings": { "wins": 1, "losses": 1, "ties": 0 } },
+    { "roster_id": 4, "owner_id": null, "league_id": "1111111111111111111", "players": ["d1", "d2"], "starters": ["d1", "d2"], "settings": { "wins": 1, "losses": 0, "ties": 1 } }
+  ],
+  "matchups": {
+    "1": [
+      { "roster_id": 1, "matchup_id": 1, "points": 120.5, "custom_points": null, "starters": ["a1", "a2"], "players": ["a1", "a2", "a3"], "starters_points": [60.5, 60], "players_points": { "a1": 60.5, "a2": 60, "a3": 15 } },
+      { "roster_id": 2, "matchup_id": 1, "points": 100.25, "custom_points": null, "starters": ["b1", "b2", "0"], "players": ["b1", "b2", "b3", "b4"], "starters_points": [50.25, 50, 0], "players_points": { "b1": 50.25, "b2": 50, "b3": 30, "b4": 2.5 } },
+      { "roster_id": 3, "matchup_id": 2, "points": 99, "custom_points": null, "starters": ["c1", "c2"], "players": ["c1", "c2"] },
+      { "roster_id": 4, "matchup_id": 2, "points": 130, "custom_points": null, "starters": ["d1", "d2"], "players": ["d1", "d2"], "starters_points": [65, 65], "players_points": { "d1": 65, "d2": 65 } }
+    ],
+    "2": [
+      { "roster_id": 1, "matchup_id": 1, "points": 90, "custom_points": null, "starters": ["a1", "a2"], "players": ["a1", "a2", "a3"] },
+      { "roster_id": 3, "matchup_id": 1, "points": 110, "custom_points": 115, "starters": ["c1", "c2"], "players": ["c1", "c2"] },
+      { "roster_id": 2, "matchup_id": 2, "points": 105, "custom_points": null, "starters": ["b1", "b2"], "players": ["b1", "b2", "b3", "b4"] },
+      { "roster_id": 4, "matchup_id": 2, "points": 105, "custom_points": null, "starters": ["d1", "d2"], "players": ["d1", "d2"] }
+    ],
+    "3": [
+      { "roster_id": 1, "matchup_id": 1, "points": 140, "custom_points": null, "starters": ["a1", "a2"], "players": ["a1", "a2", "a3"] },
+      { "roster_id": 4, "matchup_id": 1, "points": 80, "custom_points": null, "starters": ["d1", "d2"], "players": ["d1", "d2"] },
+      { "roster_id": 2, "matchup_id": null, "points": 70, "custom_points": null, "starters": ["b1", "b2"], "players": ["b1", "b2", "b3", "b4"] },
+      { "roster_id": 3, "matchup_id": null, "points": 60, "custom_points": null, "starters": ["c1", "c2"], "players": ["c1", "c2"] }
+    ],
+    "4": []
+  },
+  "transactions": {
+    "1": [
+      { "transaction_id": "t1", "type": "trade", "status": "complete", "roster_ids": [1, 2], "consenter_ids": [1, 2], "creator": "u1", "adds": { "a3": 2, "b4": 1 }, "drops": { "a3": 1, "b4": 2 }, "leg": 1, "waiver_budget": [], "draft_picks": [], "settings": null, "metadata": null, "created": 1, "status_updated": 2 },
+      { "transaction_id": "t2", "type": "waiver", "status": "complete", "roster_ids": [3], "consenter_ids": [3], "creator": "u3", "adds": { "x1": 3 }, "drops": null, "leg": 1, "waiver_budget": [], "draft_picks": [], "settings": { "waiver_bid": 4 }, "metadata": null, "created": 3, "status_updated": 4 },
+      { "transaction_id": "t3", "type": "waiver", "status": "failed", "roster_ids": [3], "consenter_ids": [3], "creator": "u3", "adds": { "x2": 3 }, "drops": null, "leg": 1, "waiver_budget": [], "draft_picks": [], "settings": { "waiver_bid": 1 }, "metadata": { "notes": "Unfortunately, your roster will have too many players after this transaction." }, "created": 5, "status_updated": 6 },
+      { "transaction_id": "t4", "type": "free_agent", "status": "complete", "roster_ids": [1], "consenter_ids": [1], "creator": "u1", "adds": { "x3": 1 }, "drops": { "a2": 1 }, "leg": 1, "waiver_budget": [], "draft_picks": [], "settings": null, "metadata": null, "created": 7, "status_updated": 8 }
+    ],
+    "2": [
+      { "transaction_id": "t5", "type": "free_agent", "status": "complete", "roster_ids": [3], "consenter_ids": [3], "creator": "u3", "adds": { "x4": 3 }, "drops": null, "leg": 2, "waiver_budget": [], "draft_picks": [], "settings": null, "metadata": null, "created": 9, "status_updated": 10 },
+      { "transaction_id": "t1", "type": "trade", "status": "complete", "roster_ids": [1, 2], "consenter_ids": [1, 2], "creator": "u1", "adds": { "a3": 2, "b4": 1 }, "drops": { "a3": 1, "b4": 2 }, "leg": 1, "waiver_budget": [], "draft_picks": [], "settings": null, "metadata": null, "created": 1, "status_updated": 2 },
+      { "transaction_id": "t6", "type": "commissioner", "status": "complete", "roster_ids": [4], "consenter_ids": [4], "creator": "u1", "adds": { "x5": 4 }, "drops": null, "leg": 2, "waiver_budget": [], "draft_picks": [], "settings": null, "metadata": null, "created": 11, "status_updated": 12 }
+    ],
+    "3": [], "4": []
+  }
+}

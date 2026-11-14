@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.sleeper.app https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Sleeper League Awards: Free Fantasy Football Weekly Awards Cards</title>
+<meta name="description" content="Free fantasy football weekly awards for your Sleeper league: highest scorer, biggest blowout, heartbreak loss, bench warmer, luckiest win, all-play record and power rankings as shareable cards and a group-chat recap. No login.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/awards/">
+<meta name="theme-color" content="#0a1b33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Fantasy League Awards: weekly awards for your Sleeper league">
+<meta property="og:description" content="Highest scorer, biggest blowout, heartbreak, bench warmer, luckiest win and power rankings as shareable cards. Enter a Sleeper username or league ID. Free, no login.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/awards/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/awards/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fantasy League Awards: sample award cards for a made-up league">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fantasy League Awards: Sleeper league weekly awards">
+<meta name="twitter:description" content="Shareable fantasy football weekly awards cards for your Sleeper league. Free, no login.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/awards/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Fantasy League Awards",
+ "url": "https://lanternlab2027.github.io/lab/awards/",
+ "applicationCategory": "SportsApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Weekly and season fantasy football awards for Sleeper leagues, as shareable cards and a group-chat recap.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #0a1b33; --bg2: #0f2a4d; --ink: #fff; --muted: #b9c7dc; --line: rgba(255,255,255,.16);
+    --card: rgba(255,255,255,.06); --gold: #ffcc33; --turf: #1f9d55; --red: #ff4d5e;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); line-height: 1.5; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--gold); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+  .field-bg { background:
+      repeating-linear-gradient(90deg, transparent 0 79px, rgba(255,255,255,.07) 79px 82px),
+      repeating-linear-gradient(90deg, #17804a 0 160px, #148043 160px 320px);
+    border-bottom: 6px solid var(--gold); }
+  header.hero { padding: 34px 0 30px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: #e6ffe9; opacity: .9; }
+  h1 { font-size: clamp(42px, 11vw, 86px); line-height: .92; margin: 10px 0 14px; font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: -.02em; text-shadow: 0 4px 0 rgba(0,0,0,.25); }
+  h1 span { color: var(--gold); display: block; }
+  .lede { font-size: clamp(18px, 4.6vw, 21px); max-width: 640px; margin: 0 0 18px; color: #f2fff5; }
+  form.lookup { display: flex; flex-wrap: wrap; gap: 10px; background: rgba(5,20,40,.75); padding: 14px; border-radius: 18px; border: 1px solid rgba(255,255,255,.2); max-width: 680px; }
+  form.lookup label { flex: 1 1 100%; font-weight: 800; font-size: 15px; }
+  input[type=text], input[type=email], select { font: 600 17px var(--font); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.35); background: rgba(0,0,0,.3); color: var(--ink); min-height: 50px; width: 100%; }
+  form.lookup input { flex: 1 1 240px; width: auto; }
+  select option { color: #111; }
+  .btn { appearance: none; border: 0; border-radius: 12px; font: italic 900 18px/1 var(--font); text-transform: uppercase; letter-spacing: .02em; padding: 15px 22px; cursor: pointer; color: #111; background: var(--gold); min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 0 #b38600; }
+  .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #b38600; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid rgba(255,255,255,.45); box-shadow: none; }
+  .btn.small { padding: 10px 14px; font-size: 14px; min-height: 44px; }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, .linkbtn:focus-visible, .tabs button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .linkbtn { background: none; border: 0; color: #fff; font: 700 16px var(--font); text-decoration: underline; cursor: pointer; padding: 10px 4px; min-height: 44px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+  .hero .hint { color: #dff5e6; }
+  .status { min-height: 1.5em; margin: 12px 0 0; font-weight: 700; }
+  .status.err { color: #ffc2c8; }
+  .progress { height: 10px; background: rgba(0,0,0,.35); border-radius: 99px; overflow: hidden; max-width: 680px; margin-top: 10px; }
+  .progress > i { display: block; height: 100%; width: 0; background: var(--gold); transition: width .2s; }
+  section { margin: 40px 0; }
+  h2 { font-size: clamp(26px, 6vw, 38px); margin: 0 0 12px; line-height: 1.05; font-style: italic; font-weight: 900; text-transform: uppercase; }
+  h3 { margin: 0 0 6px; font-size: 19px; }
+  .leagues { display: grid; gap: 10px; margin-top: 12px; }
+  .leagues button { text-align: left; display: flex; justify-content: space-between; gap: 10px; align-items: center; width: 100%; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: 700 17px var(--font); cursor: pointer; min-height: 56px; }
+  .leagues button:hover { border-color: var(--gold); }
+  .leagues small { color: var(--muted); font-weight: 600; white-space: nowrap; }
+  .scorebar { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; justify-content: space-between; background: #06111f; border: 2px solid #23395a; border-radius: 16px; padding: 14px; margin-bottom: 16px; }
+  .scorebar .lg { font: italic 900 22px var(--font); text-transform: uppercase; color: var(--gold); line-height: 1.1; }
+  .scorebar .meta { color: var(--muted); font-size: 14px; }
+  .tabs { display: inline-flex; background: rgba(255,255,255,.08); border-radius: 12px; padding: 4px; }
+  .tabs button { border: 0; background: transparent; color: var(--ink); font: italic 900 16px var(--font); text-transform: uppercase; padding: 10px 16px; border-radius: 9px; cursor: pointer; min-height: 44px; }
+  .tabs button[aria-selected=true] { background: var(--gold); color: #111; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .row label { font-weight: 700; font-size: 15px; display: flex; gap: 8px; align-items: center; }
+  .row select { width: auto; min-width: 180px; }
+  .acts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 82%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+  .card { margin: 0; scroll-snap-align: center; min-width: 0; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 4 / 5; border-radius: 16px; display: block; box-shadow: 0 16px 36px rgba(0,0,0,.45); background: #111; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .panel.signup { background: linear-gradient(135deg, rgba(31,157,85,.25), rgba(255,204,51,.14)); }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; width: auto; }
+  .note { background: rgba(255,204,51,.12); border: 1px solid rgba(255,204,51,.45); border-radius: 12px; padding: 10px 14px; font-size: 15px; margin: 0 0 14px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 16px 18px; font-weight: 800; font-size: 18px; min-height: 48px; }
+  details > div { padding: 0 18px 16px; }
+  .grid2 { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+  ul.awards { margin: 0; padding-left: 20px; }
+  ul.awards li { margin: 4px 0; }
+  .small-print { color: var(--muted); font-size: 14px; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  textarea.recap { position: absolute; left: -9999px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="field-bg">
+  <div class="wrap">
+    <header class="hero" id="top">
+      <div class="brand">A Lantern Lab project &middot; free &middot; no login</div>
+      <h1>Fantasy League <span>Awards</span></h1>
+      <p class="lede">Weekly awards for your Sleeper league: highest scorer, biggest blowout, heartbreak loss, bench warmer, luckiest win, power rankings and more. Shareable cards plus a recap for the group chat.</p>
+      <form class="lookup" id="lookup" novalidate>
+        <label for="q">Sleeper username or league ID</label>
+        <input type="text" id="q" name="q" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. your_username or 1180000000000000001" required>
+        <button class="btn" type="submit" id="go">Get awards</button>
+      </form>
+      <p class="hint">League ID: in the Sleeper app, open the league, then Settings &gt; General, or copy the number from the league link. <button type="button" class="linkbtn" id="sample">Or try a made-up sample league</button></p>
+      <div class="progress" id="progress" hidden><i></i></div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="pick" hidden aria-labelledby="pick-h">
+    <h2 id="pick-h">Pick a league</h2>
+    <div class="row"><label>Season <select id="season"></select></label></div>
+    <div class="leagues" id="leagues"></div>
+  </section>
+
+  <section id="results" hidden aria-labelledby="results-h">
+    <h2 id="results-h" class="sr">Your awards</h2>
+    <div class="scorebar">
+      <div>
+        <div class="lg" id="lg-name"></div>
+        <div class="meta" id="lg-meta"></div>
+      </div>
+      <div class="row">
+        <div class="tabs" role="tablist" aria-label="Award type">
+          <button type="button" role="tab" id="tab-week" aria-selected="true">Week</button>
+          <button type="button" role="tab" id="tab-season" aria-selected="false">Season</button>
+        </div>
+        <label id="week-wrap">Week <select id="week"></select></label>
+      </div>
+    </div>
+    <p class="note" id="live-note" hidden>This week is still being played, so these awards can change. Check back after Monday night.</p>
+    <div class="acts">
+      <button type="button" class="btn" id="copy">Copy league recap text</button>
+      <button type="button" class="btn ghost small" id="share-all" hidden>Share all cards</button>
+      <button type="button" class="btn ghost small" id="zip-all">Download all (.zip)</button>
+      <button type="button" class="btn ghost small" id="reset">Another league</button>
+    </div>
+    <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+    <div id="deck"></div>
+    <textarea class="recap" id="recap" readonly tabindex="-1" aria-hidden="true"></textarea>
+
+    <div class="panel signup" id="signup">
+      <h3>Get weekly awards emailed</h3>
+      <p class="small-print" style="margin:0">Optional, and we're still testing it. We store your email and this league's ID, nothing else. Unsubscribe any time.</p>
+      <form class="signup" id="signup-form" novalidate>
+        <label for="signup-email" class="sr">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button class="btn small" type="submit">Email me the awards</button>
+      </form>
+      <p class="small-print" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="what-h">
+    <h2 id="what-h">The awards</h2>
+    <div class="grid2">
+      <div class="panel">
+        <h3>Every week</h3>
+        <ul class="awards">
+          <li><b>Highest scorer</b> and the <b>participation trophy</b> (lowest score)</li>
+          <li><b>Biggest blowout</b>: largest margin of victory</li>
+          <li><b>Heartbreak</b>: narrowest loss</li>
+          <li><b>Bench warmer</b>: most points left on the bench</li>
+          <li><b>Luckiest win</b>: lowest score that still won</li>
+          <li><b>Unluckiest loss</b>: highest score that still lost</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Season so far</h3>
+        <ul class="awards">
+          <li><b>Power rankings</b>: 50% all-play win %, 30% points per game, 20% last three weeks</li>
+          <li><b>Record vs all-play</b>: your record if you played every team every week</li>
+          <li><b>Luckiest and unluckiest manager</b>: biggest gap between the two</li>
+          <li><b>Trade &amp; waiver king</b>: most completed transactions</li>
+          <li><b>Season bench boss</b> and <b>week of the year</b></li>
+        </ul>
+        <p class="small-print">Season awards use completed regular-season weeks only.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Do I need to log in?</summary><div><p>No. Sleeper league data is public to anyone with the league ID, and this page reads it through Sleeper's public, read-only API. There's no account and no password.</p></div></details>
+    <details><summary>What happens to my data?</summary><div><p>Your browser asks Sleeper for the league directly. Nothing goes through our servers (we don't have any), and there are no analytics, cookies or trackers. The only thing ever sent to us is your email and league ID, and only if you fill in the optional email box.</p></div></details>
+    <details><summary>How is "points left on the bench" counted?</summary><div><p>It's the total points scored by players on your roster who weren't in your starting lineup that week. It doesn't check whether they could legally have started, so treat it as bragging rights, not a lineup audit.</p></div></details>
+    <details><summary>Does it work for ESPN or Yahoo?</summary><div><p>Not yet. ESPN private leagues and Yahoo need a login, so this only covers Sleeper leagues for now.</p></div></details>
+    <details><summary>Can I bookmark my league?</summary><div><p>Yes. After the awards load, the page address includes your league ID. Bookmark it or drop it in the group chat and it opens straight to your league.</p></div></details>
+  </section>
+
+  <footer>
+    <p><b>Not affiliated with Sleeper.</b> Sleeper is a trademark of its owner. League data comes from Sleeper's public API and is shown as-is. Team names are whatever your league set.</p>
+    <p><a href="../">More free tools from Lantern Lab</a></p>
+  </footer>
+</div>
+<style>.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }</style>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="awards.js"></script>
+<script src="cards.js"></script>
+<script src="sleeper.js"></script>
+<script src="demo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
