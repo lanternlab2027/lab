@@ -1,0 +1,4006 @@
+{
+ "note": "Pilot set; see NOTES.md. Re-running select merges, never drops.",
+ "restaurants": [
+  {
+   "camis": "50009471",
+   "reason": "chain:^SHAKE SHACK"
+  },
+  {
+   "camis": "50117116",
+   "reason": "chain:^SHAKE SHACK"
+  },
+  {
+   "camis": "50107858",
+   "reason": "chain:^SHAKE SHACK"
+  },
+  {
+   "camis": "50002732",
+   "reason": "chain:^SHAKE SHACK"
+  },
+  {
+   "camis": "50080342",
+   "reason": "chain:^SHAKE SHACK"
+  },
+  {
+   "camis": "50066715",
+   "reason": "chain:^JOE'?S PIZZA"
+  },
+  {
+   "camis": "50119722",
+   "reason": "chain:^JOE'?S PIZZA"
+  },
+  {
+   "camis": "50084972",
+   "reason": "chain:^JOE'?S PIZZA"
+  },
+  {
+   "camis": "40398910",
+   "reason": "chain:^JOE'?S PIZZA"
+  },
+  {
+   "camis": "50058917",
+   "reason": "chain:^STARBUCKS"
+  },
+  {
+   "camis": "50056784",
+   "reason": "chain:^STARBUCKS"
+  },
+  {
+   "camis": "40790306",
+   "reason": "chain:^STARBUCKS"
+  },
+  {
+   "camis": "50078285",
+   "reason": "chain:^STARBUCKS"
+  },
+  {
+   "camis": "50114920",
+   "reason": "chain:^STARBUCKS"
+  },
+  {
+   "camis": "50102831",
+   "reason": "chain:^MCDONALD'?S"
+  },
+  {
+   "camis": "40521343",
+   "reason": "chain:^MCDONALD'?S"
+  },
+  {
+   "camis": "50117982",
+   "reason": "chain:^MCDONALD'?S"
+  },
+  {
+   "camis": "41450629",
+   "reason": "chain:^MCDONALD'?S"
+  },
+  {
+   "camis": "50050671",
+   "reason": "chain:^MCDONALD'?S"
+  },
+  {
+   "camis": "41202725",
+   "reason": "chain:^DUNKIN"
+  },
+  {
+   "camis": "41129116",
+   "reason": "chain:^DUNKIN"
+  },
+  {
+   "camis": "50043918",
+   "reason": "chain:^DUNKIN"
+  },
+  {
+   "camis": "50071977",
+   "reason": "chain:^DUNKIN"
+  },
+  {
+   "camis": "50018338",
+   "reason": "chain:^DUNKIN"
+  },
+  {
+   "camis": "50079902",
+   "reason": "chain:^CHIPOTLE"
+  },
+  {
+   "camis": "50109493",
+   "reason": "chain:^CHIPOTLE"
+  },
+  {
+   "camis": "50041424",
+   "reason": "chain:^CHIPOTLE"
+  },
+  {
+   "camis": "50042386",
+   "reason": "chain:^CHIPOTLE"
+  },
+  {
+   "camis": "50051178",
+   "reason": "chain:^CHIPOTLE"
+  },
+  {
+   "camis": "50041812",
+   "reason": "chain:^SWEETGREEN"
+  },
+  {
+   "camis": "50017284",
+   "reason": "chain:^SWEETGREEN"
+  },
+  {
+   "camis": "50119415",
+   "reason": "chain:^SWEETGREEN"
+  },
+  {
+   "camis": "50129635",
+   "reason": "chain:^CHICK-FIL-A"
+  },
+  {
+   "camis": "50103863",
+   "reason": "chain:^CHICK-FIL-A"
+  },
+  {
+   "camis": "50098072",
+   "reason": "chain:^CHICK-FIL-A"
+  },
+  {
+   "camis": "50124825",
+   "reason": "chain:^CHICK-FIL-A"
+  },
+  {
+   "camis": "50143999",
+   "reason": "chain:^CHICK-FIL-A"
+  },
+  {
+   "camis": "50059061",
+   "reason": "chain:^POPEYES"
+  },
+  {
+   "camis": "41380710",
+   "reason": "chain:^POPEYES"
+  },
+  {
+   "camis": "41262792",
+   "reason": "chain:^POPEYES"
+  },
+  {
+   "camis": "40947038",
+   "reason": "chain:^POPEYES"
+  },
+  {
+   "camis": "41257749",
+   "reason": "chain:^POPEYES"
+  },
+  {
+   "camis": "50054635",
+   "reason": "chain:^BURGER KING"
+  },
+  {
+   "camis": "50007746",
+   "reason": "chain:^BURGER KING"
+  },
+  {
+   "camis": "50009170",
+   "reason": "chain:^BURGER KING"
+  },
+  {
+   "camis": "50014084",
+   "reason": "chain:^BURGER KING"
+  },
+  {
+   "camis": "40609677",
+   "reason": "chain:^BURGER KING"
+  },
+  {
+   "camis": "41029337",
+   "reason": "chain:^WENDY'?S"
+  },
+  {
+   "camis": "50111176",
+   "reason": "chain:^WENDY'?S"
+  },
+  {
+   "camis": "50115700",
+   "reason": "chain:^WENDY'?S"
+  },
+  {
+   "camis": "50119642",
+   "reason": "chain:^WENDY'?S"
+  },
+  {
+   "camis": "50143757",
+   "reason": "chain:^WENDY'?S"
+  },
+  {
+   "camis": "50090999",
+   "reason": "chain:^TACO BELL"
+  },
+  {
+   "camis": "50121077",
+   "reason": "chain:^TACO BELL"
+  },
+  {
+   "camis": "50130098",
+   "reason": "chain:^TACO BELL"
+  },
+  {
+   "camis": "50106243",
+   "reason": "chain:^TACO BELL"
+  },
+  {
+   "camis": "50117840",
+   "reason": "chain:^TACO BELL"
+  },
+  {
+   "camis": "41591015",
+   "reason": "chain:^KFC|^KENTUCKY FRIED"
+  },
+  {
+   "camis": "50111725",
+   "reason": "chain:^KFC|^KENTUCKY FRIED"
+  },
+  {
+   "camis": "50108315",
+   "reason": "chain:^KFC|^KENTUCKY FRIED"
+  },
+  {
+   "camis": "41440450",
+   "reason": "chain:^KFC|^KENTUCKY FRIED"
+  },
+  {
+   "camis": "50053331",
+   "reason": "chain:^KFC|^KENTUCKY FRIED"
+  },
+  {
+   "camis": "50109707",
+   "reason": "chain:^DOMINO'?S"
+  },
+  {
+   "camis": "50093645",
+   "reason": "chain:^DOMINO'?S"
+  },
+  {
+   "camis": "50091813",
+   "reason": "chain:^DOMINO'?S"
+  },
+  {
+   "camis": "50122872",
+   "reason": "chain:^DOMINO'?S"
+  },
+  {
+   "camis": "50093037",
+   "reason": "chain:^DOMINO'?S"
+  },
+  {
+   "camis": "50127841",
+   "reason": "chain:^PAPA JOHN'?S"
+  },
+  {
+   "camis": "50070932",
+   "reason": "chain:^PAPA JOHN'?S"
+  },
+  {
+   "camis": "50070439",
+   "reason": "chain:^PAPA JOHN'?S"
+  },
+  {
+   "camis": "50075726",
+   "reason": "chain:^PAPA JOHN'?S"
+  },
+  {
+   "camis": "50018322",
+   "reason": "chain:^PAPA JOHN'?S"
+  },
+  {
+   "camis": "41240596",
+   "reason": "chain:^PANERA"
+  },
+  {
+   "camis": "50128118",
+   "reason": "chain:^PANERA"
+  },
+  {
+   "camis": "50133227",
+   "reason": "chain:^PANERA"
+  },
+  {
+   "camis": "50067730",
+   "reason": "chain:^PANERA"
+  },
+  {
+   "camis": "50142276",
+   "reason": "chain:^PANERA"
+  },
+  {
+   "camis": "50001544",
+   "reason": "chain:^FIVE GUYS"
+  },
+  {
+   "camis": "41390152",
+   "reason": "chain:^FIVE GUYS"
+  },
+  {
+   "camis": "50003600",
+   "reason": "chain:^FIVE GUYS"
+  },
+  {
+   "camis": "50168988",
+   "reason": "chain:^FIVE GUYS"
+  },
+  {
+   "camis": "50168986",
+   "reason": "chain:^FIVE GUYS"
+  },
+  {
+   "camis": "50088217",
+   "reason": "chain:^CAVA\\b"
+  },
+  {
+   "camis": "50088736",
+   "reason": "chain:^CAVA\\b"
+  },
+  {
+   "camis": "50064578",
+   "reason": "chain:^JUNIOR'?S"
+  },
+  {
+   "camis": "40364581",
+   "reason": "chain:^JUNIOR'?S"
+  },
+  {
+   "camis": "50117704",
+   "reason": "chain:^XI'?AN FAMOUS"
+  },
+  {
+   "camis": "50130084",
+   "reason": "chain:^XI'?AN FAMOUS"
+  },
+  {
+   "camis": "50131182",
+   "reason": "chain:^XI'?AN FAMOUS"
+  },
+  {
+   "camis": "41415145",
+   "reason": "chain:^NATHAN'?S FAMOUS"
+  },
+  {
+   "camis": "50140282",
+   "reason": "chain:^NATHAN'?S FAMOUS"
+  },
+  {
+   "camis": "41400142",
+   "reason": "chain:^IHOP"
+  },
+  {
+   "camis": "40401445",
+   "reason": "chain:^IHOP"
+  },
+  {
+   "camis": "41606171",
+   "reason": "chain:^IHOP"
+  },
+  {
+   "camis": "50144936",
+   "reason": "chain:^IHOP"
+  },
+  {
+   "camis": "40391808",
+   "reason": "chain:^IHOP"
+  },
+  {
+   "camis": "40739412",
+   "reason": "chain:^APPLEBEE'?S"
+  },
+  {
+   "camis": "50147198",
+   "reason": "chain:^APPLEBEE'?S"
+  },
+  {
+   "camis": "50147190",
+   "reason": "chain:^APPLEBEE'?S"
+  },
+  {
+   "camis": "50147199",
+   "reason": "chain:^APPLEBEE'?S"
+  },
+  {
+   "camis": "50155986",
+   "reason": "chain:^APPLEBEE'?S"
+  },
+  {
+   "camis": "50014114",
+   "reason": "chain:^OLIVE GARDEN"
+  },
+  {
+   "camis": "40930657",
+   "reason": "chain:^OLIVE GARDEN"
+  },
+  {
+   "camis": "40399472",
+   "reason": "chain:^OLIVE GARDEN"
+  },
+  {
+   "camis": "50015549",
+   "reason": "chain:^OLIVE GARDEN"
+  },
+  {
+   "camis": "50014052",
+   "reason": "chain:^RED LOBSTER"
+  },
+  {
+   "camis": "50013473",
+   "reason": "chain:^RED LOBSTER"
+  },
+  {
+   "camis": "50012258",
+   "reason": "chain:^THE HALAL GUYS|^HALAL GUYS"
+  },
+  {
+   "camis": "50178666",
+   "reason": "chain:^THE HALAL GUYS|^HALAL GUYS"
+  },
+  {
+   "camis": "50146169",
+   "reason": "chain:^PRET A MANGER"
+  },
+  {
+   "camis": "50146122",
+   "reason": "chain:^PRET A MANGER"
+  },
+  {
+   "camis": "50178181",
+   "reason": "chain:^PRET A MANGER"
+  },
+  {
+   "camis": "50105603",
+   "reason": "chain:^LE PAIN QUOTIDIEN"
+  },
+  {
+   "camis": "50094883",
+   "reason": "chain:^LEVAIN"
+  },
+  {
+   "camis": "50104882",
+   "reason": "chain:^LEVAIN"
+  },
+  {
+   "camis": "41282506",
+   "reason": "chain:^MAGNOLIA BAKERY"
+  },
+  {
+   "camis": "40399922",
+   "reason": "chain:^WHITE CASTLE"
+  },
+  {
+   "camis": "40384575",
+   "reason": "chain:^WHITE CASTLE"
+  },
+  {
+   "camis": "40387178",
+   "reason": "chain:^WHITE CASTLE"
+  },
+  {
+   "camis": "40369675",
+   "reason": "chain:^WHITE CASTLE"
+  },
+  {
+   "camis": "40397723",
+   "reason": "chain:^WHITE CASTLE"
+  },
+  {
+   "camis": "50120134",
+   "reason": "chain:^JOLLIBEE"
+  },
+  {
+   "camis": "50107877",
+   "reason": "chain:^JOLLIBEE"
+  },
+  {
+   "camis": "50141020",
+   "reason": "chain:^JOLLIBEE"
+  },
+  {
+   "camis": "50185987",
+   "reason": "chain:^JOLLIBEE"
+  },
+  {
+   "camis": "50046427",
+   "reason": "chain:^2 BROS\\.? PIZZA"
+  },
+  {
+   "camis": "50002545",
+   "reason": "chain:^PATSY'?S PIZZERIA"
+  },
+  {
+   "camis": "41716632",
+   "reason": "chain:^PATSY'?S PIZZERIA"
+  },
+  {
+   "camis": "50038753",
+   "reason": "chain:^PATSY'?S PIZZERIA"
+  },
+  {
+   "camis": "50013618",
+   "reason": "chain:^PATSY'?S PIZZERIA"
+  },
+  {
+   "camis": "50120476",
+   "reason": "chain:^CARMINE'?S"
+  },
+  {
+   "camis": "41015170",
+   "reason": "chain:^CARMINE'?S"
+  },
+  {
+   "camis": "50166715",
+   "reason": "chain:^CARMINE'?S"
+  },
+  {
+   "camis": "41106233",
+   "reason": "chain:^ROSA MEXICANO"
+  },
+  {
+   "camis": "50101068",
+   "reason": "chain:^JOE'?S SHANGHAI"
+  },
+  {
+   "camis": "50099743",
+   "reason": "chain:^DIG\\b"
+  },
+  {
+   "camis": "50142350",
+   "reason": "chain:^DIG\\b"
+  },
+  {
+   "camis": "41710522",
+   "reason": "chain:^JUST SALAD"
+  },
+  {
+   "camis": "50035721",
+   "reason": "chain:^JUST SALAD"
+  },
+  {
+   "camis": "50147661",
+   "reason": "chain:^JUST SALAD"
+  },
+  {
+   "camis": "50109076",
+   "reason": "chain:^PIZZA HUT"
+  },
+  {
+   "camis": "50115888",
+   "reason": "chain:^PIZZA HUT"
+  },
+  {
+   "camis": "50128678",
+   "reason": "chain:^PIZZA HUT"
+  },
+  {
+   "camis": "50109071",
+   "reason": "chain:^PIZZA HUT"
+  },
+  {
+   "camis": "50067033",
+   "reason": "chain:^SUBWAY\\b"
+  },
+  {
+   "camis": "50045276",
+   "reason": "chain:^SUBWAY\\b"
+  },
+  {
+   "camis": "41007188",
+   "reason": "chain:^SUBWAY\\b"
+  },
+  {
+   "camis": "50038715",
+   "reason": "chain:^SUBWAY\\b"
+  },
+  {
+   "camis": "50040819",
+   "reason": "chain:^SUBWAY\\b"
+  },
+  {
+   "camis": "50064309",
+   "reason": "chain:^TIM HORTONS"
+  },
+  {
+   "camis": "50187536",
+   "reason": "chain:^TIM HORTONS"
+  },
+  {
+   "camis": "50066835",
+   "reason": "chain:^BLUESTONE LANE"
+  },
+  {
+   "camis": "50067688",
+   "reason": "chain:^BLUESTONE LANE"
+  },
+  {
+   "camis": "50123955",
+   "reason": "chain:^BLUE BOTTLE"
+  },
+  {
+   "camis": "50151252",
+   "reason": "chain:^BLUE BOTTLE"
+  },
+  {
+   "camis": "41316785",
+   "reason": "chain:^RALPH'?S FAMOUS ITALIAN ICES"
+  },
+  {
+   "camis": "50133329",
+   "reason": "chain:^RALPH'?S FAMOUS ITALIAN ICES"
+  },
+  {
+   "camis": "50080673",
+   "reason": "chain:^RALPH'?S FAMOUS ITALIAN ICES"
+  },
+  {
+   "camis": "50057006",
+   "reason": "chain:^ARTICHOKE BASILLE"
+  },
+  {
+   "camis": "50097395",
+   "reason": "chain:^ARTICHOKE BASILLE"
+  },
+  {
+   "camis": "50124488",
+   "reason": "chain:^PAN ?PAN|^NAN XIANG"
+  },
+  {
+   "camis": "50140837",
+   "reason": "chain:^PAN ?PAN|^NAN XIANG"
+  },
+  {
+   "camis": "50128482",
+   "reason": "chain:^PAN ?PAN|^NAN XIANG"
+  },
+  {
+   "camis": "50119670",
+   "reason": "chain:^DOS TOROS"
+  },
+  {
+   "camis": "50119696",
+   "reason": "chain:^DOS TOROS"
+  },
+  {
+   "camis": "50104764",
+   "reason": "chain:^DOS TOROS"
+  },
+  {
+   "camis": "50060330",
+   "reason": "chain:^LUKE'?S LOBSTER"
+  },
+  {
+   "camis": "50064425",
+   "reason": "chain:^LUKE'?S LOBSTER"
+  },
+  {
+   "camis": "41520610",
+   "reason": "chain:^BAREBURGER"
+  },
+  {
+   "camis": "41667359",
+   "reason": "chain:^BAREBURGER"
+  },
+  {
+   "camis": "41718673",
+   "reason": "chain:^BAREBURGER"
+  },
+  {
+   "camis": "50107787",
+   "reason": "chain:^SMASHBURGER"
+  },
+  {
+   "camis": "50116690",
+   "reason": "chain:^SMASHBURGER"
+  },
+  {
+   "camis": "50100813",
+   "reason": "chain:^SMASHBURGER"
+  },
+  {
+   "camis": "50112438",
+   "reason": "chain:^SMASHBURGER"
+  },
+  {
+   "camis": "50093960",
+   "reason": "chain:^PEET'?S"
+  },
+  {
+   "camis": "50114546",
+   "reason": "chain:^CROWN FRIED CHICKEN"
+  },
+  {
+   "camis": "50054721",
+   "reason": "chain:^CROWN FRIED CHICKEN"
+  },
+  {
+   "camis": "50070412",
+   "reason": "chain:^CROWN FRIED CHICKEN"
+  },
+  {
+   "camis": "41410925",
+   "reason": "chain:^CROWN FRIED CHICKEN"
+  },
+  {
+   "camis": "50062888",
+   "reason": "landmark:^KATZ'?S"
+  },
+  {
+   "camis": "40732665",
+   "reason": "landmark:^KATZ'?S"
+  },
+  {
+   "camis": "40364335",
+   "reason": "landmark:^PETER LUGER"
+  },
+  {
+   "camis": "50009513",
+   "reason": "landmark:^RUSS ?(&|AND) ?DAUGHTERS"
+  },
+  {
+   "camis": "50138808",
+   "reason": "landmark:^RUSS ?(&|AND) ?DAUGHTERS"
+  },
+  {
+   "camis": "50000923",
+   "reason": "landmark:^DI FARA"
+  },
+  {
+   "camis": "40402172",
+   "reason": "landmark:^LOMBARDI'?S"
+  },
+  {
+   "camis": "50088242",
+   "reason": "landmark:^GRIMALDI'?S"
+  },
+  {
+   "camis": "41700297",
+   "reason": "landmark:^JULIANA'?S"
+  },
+  {
+   "camis": "50005823",
+   "reason": "landmark:^TAVERN ON THE GREEN"
+  },
+  {
+   "camis": "40383464",
+   "reason": "landmark:^LE BERNARDIN"
+  },
+  {
+   "camis": "41664978",
+   "reason": "landmark:^GRAMERCY TAVERN"
+  },
+  {
+   "camis": "41718160",
+   "reason": "landmark:^CARBONE"
+  },
+  {
+   "camis": "50162845",
+   "reason": "landmark:^KEENS"
+  },
+  {
+   "camis": "40841272",
+   "reason": "landmark:^SYLVIA'?S"
+  },
+  {
+   "camis": "40367860",
+   "reason": "landmark:^L ?& ?B SPUMONI"
+  },
+  {
+   "camis": "50159409",
+   "reason": "landmark:^L ?& ?B SPUMONI"
+  },
+  {
+   "camis": "40561290",
+   "reason": "landmark:^TOTONNO'?S"
+  },
+  {
+   "camis": "50017760",
+   "reason": "landmark:^PETER PAN DONUT"
+  },
+  {
+   "camis": "40380517",
+   "reason": "landmark:^BARNEY GREENGRASS"
+  },
+  {
+   "camis": "50086573",
+   "reason": "landmark:^MIKE'?S DELI"
+  },
+  {
+   "camis": "50038882",
+   "reason": "landmark:^MIKE'?S DELI"
+  },
+  {
+   "camis": "50131610",
+   "reason": "landmark:^MIKE'?S DELI"
+  },
+  {
+   "camis": "40574872",
+   "reason": "landmark:^BALTHAZAR"
+  },
+  {
+   "camis": "40574871",
+   "reason": "landmark:^BALTHAZAR"
+  },
+  {
+   "camis": "50076528",
+   "reason": "landmark:^MINETTA TAVERN"
+  },
+  {
+   "camis": "50059271",
+   "reason": "landmark:^EMPELLON"
+  },
+  {
+   "camis": "50015372",
+   "reason": "landmark:^EMPELLON"
+  },
+  {
+   "camis": "50125951",
+   "reason": "landmark:^LUCALI"
+  },
+  {
+   "camis": "50106466",
+   "reason": "landmark:^ROBERTA'?S"
+  },
+  {
+   "camis": "41307383",
+   "reason": "landmark:^ROBERTA'?S"
+  },
+  {
+   "camis": "50180439",
+   "reason": "landmark:^ROBERTA'?S"
+  },
+  {
+   "camis": "41636395",
+   "reason": "landmark:^PRINCE STREET PIZZA"
+  },
+  {
+   "camis": "50184419",
+   "reason": "landmark:^PRINCE STREET PIZZA"
+  },
+  {
+   "camis": "50107443",
+   "reason": "landmark:^JOE'?S STEAM RICE"
+  },
+  {
+   "camis": "50176473",
+   "reason": "landmark:^JOE'?S STEAM RICE"
+  },
+  {
+   "camis": "50176704",
+   "reason": "landmark:^JOE'?S STEAM RICE"
+  },
+  {
+   "camis": "50154402",
+   "reason": "landmark:^CARNEGIE DELI"
+  },
+  {
+   "camis": "40368223",
+   "reason": "landmark:^OYSTER BAR|^GRAND CENTRAL OYSTER"
+  },
+  {
+   "camis": "40369608",
+   "reason": "landmark:^THE RIVER CAFE|^RIVER CAFE"
+  },
+  {
+   "camis": "50128675",
+   "reason": "landmark:^NOM WAH"
+  },
+  {
+   "camis": "50133264",
+   "reason": "landmark:^NOM WAH"
+  },
+  {
+   "camis": "50090976",
+   "reason": "landmark:^NOM WAH"
+  },
+  {
+   "camis": "50046988",
+   "reason": "landmark:^ORWASHER'?S"
+  },
+  {
+   "camis": "50064557",
+   "reason": "landmark:^VENIERO'?S"
+  },
+  {
+   "camis": "40600383",
+   "reason": "landmark:^FERRARA"
+  },
+  {
+   "camis": "41612461",
+   "reason": "landmark:^DOMINIQUE ANSEL"
+  },
+  {
+   "camis": "40365789",
+   "reason": "landmark:^PATSY'?S ITALIAN"
+  },
+  {
+   "camis": "40864277",
+   "reason": "landmark:^GALLAGHER'?S"
+  },
+  {
+   "camis": "41711530",
+   "reason": "landmark:^GALLAGHER'?S"
+  },
+  {
+   "camis": "41626762",
+   "reason": "landmark:^ELEVEN MADISON"
+  },
+  {
+   "camis": "41008641",
+   "reason": "landmark:^PER SE\\b"
+  },
+  {
+   "camis": "40562839",
+   "reason": "landmark:^JEAN[- ]GEORGES"
+  },
+  {
+   "camis": "50076500",
+   "reason": "landmark:^ATOBOY|^ATOMIX"
+  },
+  {
+   "camis": "50051129",
+   "reason": "landmark:^ATOBOY|^ATOMIX"
+  },
+  {
+   "camis": "50008323",
+   "reason": "landmark:^VIA CAROTA"
+  },
+  {
+   "camis": "50136151",
+   "reason": "landmark:^I SODI"
+  },
+  {
+   "camis": "50130304",
+   "reason": "landmark:^DON ANGIE"
+  },
+  {
+   "camis": "50069883",
+   "reason": "landmark:^DON ANGIE"
+  },
+  {
+   "camis": "41543885",
+   "reason": "landmark:^THE DUTCH\\b"
+  },
+  {
+   "camis": "41541889",
+   "reason": "landmark:^BUVETTE"
+  },
+  {
+   "camis": "41416298",
+   "reason": "landmark:^TOM'?S RESTAURANT"
+  },
+  {
+   "camis": "40389356",
+   "reason": "landmark:^TOM'?S RESTAURANT"
+  },
+  {
+   "camis": "41693226",
+   "reason": "landmark:^TOM'?S RESTAURANT"
+  },
+  {
+   "camis": "41370414",
+   "reason": "landmark:^ARTHUR AVENUE"
+  },
+  {
+   "camis": "40366132",
+   "reason": "landmark:^DENINO'?S"
+  },
+  {
+   "camis": "50094566",
+   "reason": "landmark:^DENINO'?S"
+  },
+  {
+   "camis": "50061281",
+   "reason": "landmark:^PIZZERIA GIGI|^JOE & PAT'?S"
+  },
+  {
+   "camis": "50073916",
+   "reason": "landmark:^PIZZERIA GIGI|^JOE & PAT'?S"
+  },
+  {
+   "camis": "40625346",
+   "reason": "landmark:^ROLF'?S"
+  },
+  {
+   "camis": "40755172",
+   "reason": "landmark:^PETER MCMANUS"
+  },
+  {
+   "camis": "40365075",
+   "reason": "landmark:^MCSORLEY'?S"
+  },
+  {
+   "camis": "50095038",
+   "reason": "landmark:^WHITE HORSE TAVERN"
+  },
+  {
+   "camis": "41148214",
+   "reason": "landmark:^PJ CLARKE'?S|^P\\.? ?J\\.? CLARKE'?S"
+  },
+  {
+   "camis": "41246951",
+   "reason": "landmark:^PJ CLARKE'?S|^P\\.? ?J\\.? CLARKE'?S"
+  },
+  {
+   "camis": "40931258",
+   "reason": "landmark:^PJ CLARKE'?S|^P\\.? ?J\\.? CLARKE'?S"
+  },
+  {
+   "camis": "50144074",
+   "reason": "landmark:^SAHADI'?S"
+  },
+  {
+   "camis": "41705732",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40930209",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50138270",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41031832",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50111296",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50120337",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50004933",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50091190",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50139259",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50111311",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50143546",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40398586",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41406895",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50117654",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105408",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50061188",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50078379",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41719175",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41393008",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50005517",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50002716",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50047583",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50131958",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50086356",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40365904",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50108952",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50142449",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41198518",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50144098",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50073288",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50118227",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41026692",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50046215",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41600677",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50118589",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50045716",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50044289",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50066620",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130108",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50084728",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41374209",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40863010",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50106171",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41715927",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50132255",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50040533",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50114708",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50059949",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50136226",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50071476",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50083891",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41198338",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50103384",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41668282",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50120274",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50086471",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41462643",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41629811",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50139414",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41689500",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41407999",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50066065",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50091290",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50011722",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50137032",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50065931",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50071314",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50090372",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50098348",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50084079",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50075440",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50014249",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50121215",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50090063",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50117809",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41643403",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40720599",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50085690",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50058195",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40559636",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50146922",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50107035",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41639194",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50057582",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50114980",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50070352",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50097461",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41105180",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50136482",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50001643",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50072638",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50036654",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50102945",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50121394",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41393099",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50099832",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41618541",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362527",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50000187",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50124026",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40396231",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41699964",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50037410",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50125999",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50133237",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41332873",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50134429",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50045154",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40832580",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50117963",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50077272",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41711730",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50114976",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41501822",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50115277",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50112529",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41659970",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40369521",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50129843",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50126069",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130981",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50112859",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41578677",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50120145",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50116310",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50126022",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41325638",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40741900",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50123073",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40401834",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50053975",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50094900",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50106335",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50066022",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50112310",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50076604",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50039082",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50125629",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50119210",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41711586",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50120357",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50043399",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40391979",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50100843",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50139330",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50120417",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50113613",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40372262",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50119402",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50038633",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50145402",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50069956",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50135195",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50118612",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50143154",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50126937",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50057386",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50126957",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41561516",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41337465",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50056993",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40573138",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50008021",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40801855",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50103595",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50051556",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41225222",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50060482",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50045788",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50065679",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50156335",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41371617",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50108893",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41721903",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50150633",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41543738",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41488846",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41561808",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50095943",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50057588",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50110445",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50080071",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50084799",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41300926",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50112384",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41185899",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41177892",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40709941",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50070746",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50000489",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41658103",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50073713",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50047362",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50079488",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41545743",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50088759",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41600159",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41441196",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50011690",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50070313",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50133524",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50086948",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50133729",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40364518",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50116092",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50063550",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41383631",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50057765",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50016265",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40594677",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50131212",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40898366",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50133170",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41564170",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130645",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50070540",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50140086",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50115756",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50137592",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41479185",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50120168",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50119449",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40512445",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50127174",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50107169",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50075375",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41409441",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50085189",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50035484",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50128096",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41471314",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50111795",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105379",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50126935",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50139886",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50118256",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50144305",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50098128",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50054333",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40398811",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40600516",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50084510",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40423403",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40783353",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50057374",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50057504",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41333188",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41604933",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50035662",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50054315",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130935",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50104959",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50142613",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50074465",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40973710",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50033014",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50123232",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50128465",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105033",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50080918",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50155845",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50137177",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41053236",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41408551",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41262775",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50114013",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50047418",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41362111",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50061298",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50047927",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50107980",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50088095",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50045649",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40367728",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40605319",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50038460",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50038614",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50071055",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41670288",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50110343",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50128076",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50058907",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105676",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50128561",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50068746",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50115065",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50107249",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50107381",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40763629",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41634515",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50098804",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50083682",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50138972",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50039380",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50058975",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50120421",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50066927",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50085533",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50092484",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40799991",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50141618",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50074402",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50118657",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50051353",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50106862",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50078288",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50056793",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41558768",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50132527",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50107721",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50100558",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50056803",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50033781",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50002936",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50154039",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50035268",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50132859",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50001004",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50117495",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40381551",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50001076",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41692608",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50009667",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41659910",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40536414",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50094939",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40796758",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50016018",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50081217",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50089427",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50129326",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41669157",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40763376",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50078286",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40750062",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50095083",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50092271",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50103660",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50128085",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50018819",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105653",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50118496",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50106785",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50072605",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50108458",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50074392",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40945916",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50108375",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50146853",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50124674",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40825993",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50119301",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50095055",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50076652",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105778",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50090533",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50101946",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40367005",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50144238",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50111382",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50112513",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50103090",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50148253",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50117286",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50088114",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50081307",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40954549",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50113011",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41116575",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41639187",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130904",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50125991",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50062660",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50116502",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41387345",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50016722",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50134040",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50006190",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50124769",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50112413",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50118936",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40765947",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50077905",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50086706",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50100930",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50005487",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40365546",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50101643",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105594",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50122008",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50099887",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41372518",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50009557",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50008811",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41304936",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41253389",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50066129",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41477231",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50074803",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41163019",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40745618",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50047502",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50052308",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50088407",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130385",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41535326",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50108701",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50053135",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50141709",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41712865",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50094742",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41555573",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50123411",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50069657",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50107732",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50117665",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50040939",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50118141",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50149767",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41626893",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50009013",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50111237",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50137018",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41709869",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50157272",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50091988",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41442317",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40580683",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41573961",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50056312",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50003089",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41151839",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41627202",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40970385",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50036930",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41630950",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50108645",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41699662",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41105041",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50124743",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41401775",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50111627",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50124632",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41495525",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40424410",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50115620",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50103358",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41708809",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41607908",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50002097",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50009827",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50059310",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50085170",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40692073",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50097274",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50107544",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50108895",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40537963",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50120783",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50102647",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50129944",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40513133",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50146809",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50000271",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50006959",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41627123",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40992170",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50059006",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50128532",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40617224",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50104810",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41106672",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50095410",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40551093",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41512587",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40376495",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41441583",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50077086",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50116136",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40840921",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50122265",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41100434",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50033380",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50063311",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50016526",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41514283",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41686215",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50094853",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50138021",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50078334",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50116306",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50047255",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130900",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50062821",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50009411",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50113418",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50131346",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50102559",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50041617",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41698490",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50142455",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50038063",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41459932",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50119221",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50036210",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50099512",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50109826",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362335",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50001215",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362353",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41391483",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362530",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50097045",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362427",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50042951",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362438",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50157246",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362447",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50159074",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50004473",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50107477",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41105572",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50077270",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41495887",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50134015",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50094793",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50113152",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362524",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130834",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41362561",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50126094",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41643314",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50118389",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50092783",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41701489",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50119889",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40972083",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50119908",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50097060",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41703865",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40393093",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50081016",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50010956",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50118431",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50144282",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50076225",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50116389",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50123805",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50109439",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50087348",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50070093",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50078624",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41205293",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50069329",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50133311",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50101724",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50150097",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50123964",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50082789",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41719692",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41686208",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50105035",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41696014",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50118542",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41353915",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50105757",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50002562",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40916595",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40372445",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50045209",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105701",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41074128",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40659758",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50069122",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41311804",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50107337",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50128104",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40395597",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41381879",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50073933",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50104950",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50049523",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41704440",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41646302",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50103408",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50073019",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50090419",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50100933",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50126902",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50098363",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50137954",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50119703",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50131605",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41173179",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50130561",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41629236",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41647764",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50001785",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50133691",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50128247",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41693397",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50109753",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40389819",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50050198",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50120994",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50075701",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50141424",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50011080",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50117128",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50057826",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50098400",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50104855",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50081515",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41435084",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40425000",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50126848",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40572494",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50043617",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50113257",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50063307",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50133676",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50102325",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40741534",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50049744",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50118265",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50059297",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41251802",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50113415",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50148165",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50108075",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41700146",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40364744",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41529935",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50108668",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40860032",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50088381",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50035920",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50103837",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41394169",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50118048",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41700337",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50061138",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50090040",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40574150",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50119040",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40400997",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50151670",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50148383",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50156170",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50122820",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50105027",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50103908",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50008025",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41713624",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50004057",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40396521",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50092810",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50043862",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50141844",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50034109",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50072911",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50068543",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40618281",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50087220",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50063765",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50044882",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50088048",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41368488",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40366938",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50072874",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40557901",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50087162",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50119429",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50045807",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41627341",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50051767",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41314872",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50105893",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50124738",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50042180",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40618714",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50093533",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50057474",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50126015",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50003531",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50082921",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50043384",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50127279",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41091113",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50055392",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50046567",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "40596246",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50128693",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50000228",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50121035",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50127579",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50117691",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50084085",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50120806",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50085087",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40890186",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41233053",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50131797",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50054409",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50018121",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50011380",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50111134",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50102557",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41676393",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41633967",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50002628",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50128562",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50003874",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50052226",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50128207",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50011906",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50008709",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41217591",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50101632",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50121182",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50143248",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50071901",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41593751",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41579281",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50101276",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50101337",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "41615012",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50083922",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40999249",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41086217",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40373118",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50105587",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50137051",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50109584",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50001819",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50115234",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50086817",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50127575",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "50045763",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "50085342",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40720511",
+   "reason": "most-inspection-records"
+  },
+  {
+   "camis": "41625562",
+   "reason": "longest-record"
+  },
+  {
+   "camis": "40512074",
+   "reason": "longest-record"
+  }
+ ],
+ "selected": "2026-11-13"
+}

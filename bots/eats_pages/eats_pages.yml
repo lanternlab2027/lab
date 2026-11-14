@@ -1,0 +1,52 @@
+# Draft GitHub Actions workflow. NOT installed. To enable, copy to .github/workflows/eats_pages.yml.
+# Weekly rebuild of the static restaurant pages (docs/eats/r/) from NYC Open Data 43nn-pn8j.
+# Keeps the pilot set fixed (bots/eats_pages/pilot.json) and never deletes a page: restaurants
+# that leave the data or stop being inspected are re-rendered as "Closed or no recent inspection".
+name: eats-pages
+
+on:
+  schedule:
+    - cron: "17 10 * * 2"   # Tuesdays 10:17 UTC; DOHMH refreshes the dataset daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eats-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch and render
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}   # optional
+        run: python bots/eats_pages/build.py all
+
+      - name: Sanity check before committing
+        run: |
+          n=$(ls docs/eats/r/*.html | grep -cE '/[0-9]+\.html$')
+          stale=$(grep -l 'Closed or no recent inspection.</b>' docs/eats/r/[0-9]*.html | wc -l)
+          echo "restaurant pages: $n, marked closed/no recent inspection: $stale"
+          test "$n" -ge 1000                 # pages are never dropped
+          test "$stale" -le $(( n / 4 ))     # a mass "closed" result means a bad fetch, not mass closures
+          grep -q '<loc>https://lanternlab2027.github.io/lab/eats/r/</loc>' docs/sitemap-eats.xml
+
+      - name: Commit
+        run: |
+          git config user.name  "eats-pages-bot"
+          git config user.email "eats-pages-bot@users.noreply.github.com"
+          git add -A docs/eats/r docs/sitemap-eats.xml docs/sitemap-index.xml bots/eats_pages/last_known.json.gz bots/eats_pages/pilot.json
+          git diff --cached --quiet || git commit -m "eats pages: weekly refresh $(date -u +%F)"
+          git push
