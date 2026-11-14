@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC TLC Driver License Practice Quiz</title>
+<meta name="description" content="Free NYC TLC exam practice test: 145 questions on TLC rules, fares, WAV service and NYC geography, each cited to nyc.gov, plus an 80-question, 2-hour mock exam.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="6" fill="#f5c518"/><path d="M5 17l2.2-5.2A2 2 0 0 1 9 10.5h10a2 2 0 0 1 1.8 1.3L23 17v3.5H5z" fill="#1a1a1a"/><rect x="11" y="6.5" width="6" height="3" rx="1" fill="#1a1a1a"/><circle cx="9" cy="20.5" r="2" fill="#f5c518" stroke="#1a1a1a" stroke-width="1.5"/><circle cx="19" cy="20.5" r="2" fill="#f5c518" stroke="#1a1a1a" stroke-width="1.5"/></svg>
+    <a class="site-name" href="index.html">NYC TLC Exam Practice</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1 id="title">Loading&hellip;</h1>
+  <p class="lede" id="subtitle"></p>
+  <div class="disclaimer" role="note"><strong>Not affiliated with the City of New York or the NYC Taxi & Limousine Commission (TLC); study the official material.</strong> <a href="https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf">TLC Study Guide (PDF)</a> &middot; <a href="https://www.nyc.gov/site/tlc/drivers/driver-education.page">TLC Licensing Education</a> &middot; <a href="https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf">TLC Rules Chapter 80 (PDF)</a></div>
+
+  <!-- Quiz runner -->
+  <section id="runner" class="hidden" aria-live="polite">
+    <div class="qhead"><span id="qcount"></span><span id="qmode"></span><span class="timer hidden" id="timer" role="timer"></span></div>
+    <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+    <div class="qtopic" id="qtopic"></div>
+    <p class="qtext" id="qtext"></p>
+    <ul class="opts" id="opts"></ul>
+    <div class="feedback hidden" id="feedback"></div>
+    <div class="actions">
+      <button class="btn" id="next" disabled>Next question</button>
+      <button class="btn secondary hidden" id="finishEarly">Finish exam</button>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="hidden">
+    <div class="panel">
+      <div class="small" id="resLabel">Your score</div>
+      <div class="score" id="resScore"></div>
+      <div id="resText"></div>
+    </div>
+    <div id="review" class="hidden">
+      <h2>Review</h2>
+      <ol class="review" id="reviewList"></ol>
+    </div>
+  </section>
+
+  <!-- Email gate -->
+  <section id="gate" class="panel gate hidden">
+    <h2 id="gateTitle">Unlock all questions + timed mock exam</h2>
+    <p>Enter your email to practice the full question bank and take a timed mock exam. It's free.</p>
+    <form id="gateForm" novalidate>
+      <label for="email" class="small">Email address</label>
+      <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+      <button class="btn" type="submit" id="gateBtn">Unlock now</button>
+    </form>
+    <p class="msg" id="gateMsg" role="status"></p>
+    <p class="small">We'll send occasional study tips for your exam. Unsubscribe anytime.</p>
+  </section>
+
+  <!-- Unlocked menu -->
+  <section id="unlocked" class="panel hidden">
+    <h2>Full access unlocked</h2>
+    <p id="unlockedText"></p>
+    <div class="actions">
+      <button class="btn" id="startAll">Practice all questions</button>
+    </div>
+    <div class="actions" id="mockButtons"></div>
+    <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+    <a class="btn buy" href="#buy" id="buyBtn">Get the full prep pack — $14.99</a>
+  </section>
+
+  <section id="error" class="panel hidden"></section>
+</main>
+
+<footer class="site">
+  <div class="wrap">Not affiliated with, endorsed by or approved by the City of New York or the NYC Taxi &amp; Limousine Commission (TLC), or by PSI. Questions are paraphrased from free public nyc.gov material and TLC Rules, and each one cites its source.</div>
+</footer>
+<script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+ "https://www.nyc.gov/site/tlc/drivers/get-a-tlc-drivers-license.page": "dl",
+ "https://www.nyc.gov/site/tlc/drivers/driver-education.page": "edu",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf": "psi",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf": "sg",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/universal_license_guide.pdf": "guide",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf": "ch80",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_53.pdf": "ch53",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_51.pdf": "ch51",
+ "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page": "fare",
+ "https://www.nyc.gov/site/tlc/passengers/yellow-taxi-passenger-bill-of-rights.page": "ybor",
+ "https://www.nyc.gov/site/tlc/passengers/green-taxi-passenger-bill-of-rights.page": "gbor",
+ "https://www.nyc.gov/site/tlc/passengers/passenger-frequently-asked-questions.page": "pfaq",
+ "https://www.nyc.gov/site/tlc/passengers/seat-belt-law.page": "seatbelt",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_accessibility_programs.pdf": "accprog",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/driver-ed/wav_decal_english.pdf": "wavdecal",
+ "https://www.nyc.gov/assets/tlc/downloads/pdf/driver-ed/wav-securement-howto-print-english.pdf": "wavhow",
+ "https://www.nyc.gov/site/tlc/drivers/drug-testing-requirements.page": "drug"
+}

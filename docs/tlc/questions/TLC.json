@@ -1,0 +1,2767 @@
+{
+ "exam": "TLC",
+ "title": "NYC TLC Driver License Exam",
+ "real_exam_questions": 80,
+ "real_exam_pass": 56,
+ "real_exam_minutes": 120,
+ "mock_questions": 80,
+ "mock_minutes": 120,
+ "page_numbering": "PDF page index (1 = first page of the PDF file); null for HTML pages",
+ "questions": [
+  {
+   "id": "TLC-001",
+   "topic": "The exam",
+   "question": "How many questions are on the TLC Driver License Exam?",
+   "options": [
+    "80",
+    "50",
+    "100",
+    "60"
+   ],
+   "answer": 0,
+   "explanation": "The TLC Driver License Exam has 80 multiple-choice questions.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/driver-education.page",
+    "title": "TLC: Licensing Education",
+    "page": null,
+    "quote": "The exam is made up of 80 multiple-choice questions."
+   }
+  },
+  {
+   "id": "TLC-002",
+   "topic": "The exam",
+   "question": "How many questions must you answer correctly to pass the TLC Driver License Exam?",
+   "options": [
+    "48 out of 80",
+    "64 out of 80",
+    "56 out of 80",
+    "60 out of 80"
+   ],
+   "answer": 2,
+   "explanation": "The pass mark is 70%, which is 56 of the 80 questions.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/driver-education.page",
+    "title": "TLC: Licensing Education",
+    "page": null,
+    "quote": "must answer 56 out of 80 questions correctly to pass"
+   }
+  },
+  {
+   "id": "TLC-003",
+   "topic": "The exam",
+   "question": "How much time do you have to complete the TLC Driver License Exam?",
+   "options": [
+    "2 hours",
+    "3 hours",
+    "1 hour",
+    "90 minutes"
+   ],
+   "answer": 0,
+   "explanation": "PSI's bulletin says you have 2 hours for the 80 questions.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 5,
+    "quote": "The exam is 80 questions and you will have 2 hours to complete it."
+   }
+  },
+  {
+   "id": "TLC-004",
+   "topic": "The exam",
+   "question": "Who gives the TLC Driver License Exam?",
+   "options": [
+    "OATH, in a hearing room",
+    "Your TLC-authorized school, on paper",
+    "The NYS DMV, on paper",
+    "PSI Testing Services, on a computer"
+   ],
+   "answer": 3,
+   "explanation": "TLC contracts with PSI to give the exam on a computer at PSI test centers.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/driver-education.page",
+    "title": "TLC: Licensing Education",
+    "page": null,
+    "quote": "The exam is given on a computer by PSI Testing Services."
+   }
+  },
+  {
+   "id": "TLC-005",
+   "topic": "The exam",
+   "question": "How much does each attempt at the TLC Driver License Exam cost?",
+   "options": [
+    "$49, paid to PSI",
+    "$84, paid to TLC",
+    "Nothing; it is included in the $252 fee",
+    "$25, paid to the school"
+   ],
+   "answer": 0,
+   "explanation": "Each attempt costs $49, paid to PSI. Exam fees are not refundable or transferable.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 5,
+    "quote": "The TLC Driver License exam is $49 for each exam, which you will pay to PSI."
+   }
+  },
+  {
+   "id": "TLC-006",
+   "topic": "The exam",
+   "question": "What must you finish before PSI will let you register for the TLC Driver License Exam?",
+   "options": [
+    "The Distracted Driving course",
+    "The TLC License Renewal Course",
+    "A Point Reduction Course",
+    "The New TLC Driver License Course (3-day)"
+   ],
+   "answer": 3,
+   "explanation": "PSI will not register you unless you have completed the 3-day (24-hour) course at a TLC-approved school.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/driver-education.page",
+    "title": "TLC: Licensing Education",
+    "page": null,
+    "quote": "You must complete the 3-day course at a TLC approved school before taking the TLC Driver License Exam."
+   }
+  },
+  {
+   "id": "TLC-007",
+   "topic": "The exam",
+   "question": "Which courses does the TLC Driver License Exam test?",
+   "options": [
+    "The DMV road test and written test",
+    "The renewal course and PED course",
+    "The defensive driving course only",
+    "The 3-day course and the WAV course"
+   ],
+   "answer": 3,
+   "explanation": "The exam covers what is taught in the 3-day driver license course and the Passenger Assistance and WAV training.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/driver-education.page",
+    "title": "TLC: Licensing Education",
+    "page": null,
+    "quote": "Exam covers the topics covered in the 3-day course and WAV course."
+   }
+  },
+  {
+   "id": "TLC-008",
+   "topic": "The exam",
+   "question": "You fail the TLC Driver License Exam. How soon can you take it again?",
+   "options": [
+    "Only after you reapply to TLC",
+    "After waiting 30 days",
+    "After waiting 7 days",
+    "After waiting 24 hours"
+   ],
+   "answer": 3,
+   "explanation": "You must wait 24 hours before retesting, and you pay the $49 fee again.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 6,
+    "quote": "You must wait 24 hours if you want to take the TLC Driver License Exam again."
+   }
+  },
+  {
+   "id": "TLC-009",
+   "topic": "The exam",
+   "question": "How many times may you take the TLC Driver License Exam?",
+   "options": [
+    "Twice per application",
+    "Once; a fail means a new application",
+    "As many times as needed until your application expires",
+    "Three times per year"
+   ],
+   "answer": 2,
+   "explanation": "There is no attempt limit, but you must pass before your 90-day application expires.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 6,
+    "quote": "You may take the TLC Driver License Exam as many times as you like until your TLC application expires."
+   }
+  },
+  {
+   "id": "TLC-010",
+   "topic": "The exam",
+   "question": "How early should you arrive at the PSI test center?",
+   "options": [
+    "Exactly at your appointment time",
+    "15 minutes before your appointment",
+    "5 minutes before your appointment",
+    "1 hour before your appointment"
+   ],
+   "answer": 1,
+   "explanation": "Arrive 15 minutes early to check in. If you arrive after your start time you cannot test and you lose the $49.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 6,
+    "quote": "You must arrive at the PSI test center 15 minutes before your scheduled appointment time"
+   }
+  },
+  {
+   "id": "TLC-011",
+   "topic": "The exam",
+   "question": "Up to when can you cancel or reschedule your exam appointment at no extra cost?",
+   "options": [
+    "Up until 2 days before the appointment",
+    "Up until 1 hour before the appointment",
+    "Only 2 weeks or more before the exam",
+    "Up until the morning of the exam"
+   ],
+   "answer": 0,
+   "explanation": "You can cancel or reschedule free up to 2 days before. Later than that, you lose the $49.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 6,
+    "quote": "You may cancel or reschedule your exam appointment up until 2 days before the appointment at no extra cost."
+   }
+  },
+  {
+   "id": "TLC-012",
+   "topic": "The exam",
+   "question": "Which reference does PSI give you in the exam room?",
+   "options": [
+    "A Geographia five-borough street atlas",
+    "A printed fare chart",
+    "A copy of TLC Rules Chapter 80",
+    "A GPS tablet with a map app"
+   ],
+   "answer": 0,
+   "explanation": "PSI provides a Geographia NYC Five Borough Street Atlas, a Manhattan Address Key, blank paper and a pencil or pen. Calculators are not allowed.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 7,
+    "quote": "Geographia NYC Five Borough Street Atlas"
+   }
+  },
+  {
+   "id": "TLC-013",
+   "topic": "The exam",
+   "question": "Which ID must you show to get into the TLC exam room?",
+   "options": [
+    "Your state-issued driver license",
+    "Your 3-day course certificate",
+    "Your TLC application receipt",
+    "Your Social Security card"
+   ],
+   "answer": 0,
+   "explanation": "Bring your state-issued DMV driver license. It must match your registered name, show your photo and not be expired.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/driver-education.page",
+    "title": "TLC: Licensing Education",
+    "page": null,
+    "quote": "Bring your state-issued DMV driver license to the test center to be let into the exam room."
+   }
+  },
+  {
+   "id": "TLC-014",
+   "topic": "The exam",
+   "question": "Which of these is a language you can choose for the TLC Driver License Exam?",
+   "options": [
+    "Haitian Creole",
+    "Korean",
+    "French",
+    "Bengali"
+   ],
+   "answer": 3,
+   "explanation": "PSI offers the exam in English, Bengali, Urdu, Simplified Chinese, Russian, Arabic and Spanish.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 3,
+    "quote": "English, Bengali, Urdu, Simple Chinese, Russian, Arabic or Spanish"
+   }
+  },
+  {
+   "id": "TLC-015",
+   "topic": "The exam",
+   "question": "When do you find out whether you passed the TLC Driver License Exam?",
+   "options": [
+    "When your license arrives",
+    "On the computer screen right after you submit",
+    "By mail about two weeks later",
+    "At your next TLC hearing"
+   ],
+   "answer": 1,
+   "explanation": "The pass or fail result appears on screen when you submit. PSI also emails your results within 48 hours.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_psi_candidate_information_bulletin.pdf",
+    "title": "TLC/PSI Candidate Information Bulletin (PDF)",
+    "page": 7,
+    "quote": "You will find out if you passed the TLC Driver License Exam on the computer screen after you submit your exam."
+   }
+  },
+  {
+   "id": "TLC-016",
+   "topic": "The exam",
+   "question": "An applicant is disqualified from the TLC Driver License Exam. For how long can TLC deny a new application?",
+   "options": [
+    "One year from the exam date",
+    "Six months from the exam date",
+    "Three years from the exam date",
+    "90 days from the exam date"
+   ],
+   "answer": 2,
+   "explanation": "Disqualification from the exam is grounds for a three-year ban, counted from the date of that exam.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 14,
+    "quote": "The three-year ban will be counted from the date of the examination the applicant was disqualified from."
+   }
+  },
+  {
+   "id": "TLC-017",
+   "topic": "Licensing",
+   "question": "How long is the New TLC Driver License Course (the \"24-hour course\")?",
+   "options": [
+    "4 days, 6 hours per day",
+    "3 days, 8 hours per day",
+    "1 day, 8 hours",
+    "2 days, 6 hours per day"
+   ],
+   "answer": 1,
+   "explanation": "The new driver course is 24 hours of classroom instruction: 8 hours a day over 3 days.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/driver-education.page",
+    "title": "TLC: Licensing Education",
+    "page": null,
+    "quote": "This course is 3 days (8 hours per day) of classroom instruction"
+   }
+  },
+  {
+   "id": "TLC-018",
+   "topic": "Licensing",
+   "question": "Within how many days of filing must a new applicant finish all TLC license requirements?",
+   "options": [
+    "60 days",
+    "30 days",
+    "90 days",
+    "180 days"
+   ],
+   "answer": 2,
+   "explanation": "TLC denies a new application if all requirements are not completed within 90 days of filing.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 15,
+    "quote": "has not completed all of the requirements of an Application within 90 days of the date the Application is filed."
+   }
+  },
+  {
+   "id": "TLC-019",
+   "topic": "Licensing",
+   "question": "How long is the Passenger Assistance and Wheelchair Accessible Vehicle (WAV) training?",
+   "options": [
+    "Six hours in a classroom only",
+    "At least 3 hours of class plus 1 hour hands-on",
+    "24 hours over three days",
+    "A 10-minute online video"
+   ],
+   "answer": 1,
+   "explanation": "The WAV course is at least 3 hours of classroom time with a 1-hour hands-on assessment.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/driver-education.page",
+    "title": "TLC: Licensing Education",
+    "page": null,
+    "quote": "The course is at least three (3) hours of classroom time with one (1) hour of hands -on assessment."
+   }
+  },
+  {
+   "id": "TLC-020",
+   "topic": "Licensing",
+   "question": "How old can your Defensive Driving Course certificate be when you apply for a new TLC license?",
+   "options": [
+    "No more than 3 years old",
+    "No more than 5 years old",
+    "No more than 90 days old",
+    "No more than 1 year old"
+   ],
+   "answer": 0,
+   "explanation": "The DDC certificate must have been issued no more than three years before the application date.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 7,
+    "quote": "issued no more than three years prior to the application date"
+   }
+  },
+  {
+   "id": "TLC-021",
+   "topic": "Licensing",
+   "question": "What is the minimum age to apply for a TLC Driver License?",
+   "options": [
+    "21",
+    "25",
+    "19",
+    "18"
+   ],
+   "answer": 2,
+   "explanation": "TLC Driver License applicants must be at least 19. (Paratransit and commuter van applicants can be 18.)",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 5,
+    "quote": "An Applicant for a TLC Driver License must be at least 19 years of age."
+   }
+  },
+  {
+   "id": "TLC-022",
+   "topic": "Licensing",
+   "question": "Which New York State DMV license classes qualify you to apply for a TLC Driver License?",
+   "options": [
+    "Class D or DJ only",
+    "Class M only",
+    "Class A, B, C or E",
+    "Any learner permit"
+   ],
+   "answer": 2,
+   "explanation": "You need a chauffeur's license: commercial class A, B or C, or for-hire class E.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/get-a-tlc-drivers-license.page",
+    "title": "TLC: Get a TLC Drivers License",
+    "page": null,
+    "quote": "Commercial Classes (A, B, C) or For-hire Class (E)"
+   }
+  },
+  {
+   "id": "TLC-023",
+   "topic": "Licensing",
+   "question": "To qualify, an applicant may have no more than how many DMV points within a 15-month period?",
+   "options": [
+    "5",
+    "8",
+    "3",
+    "10"
+   ],
+   "answer": 0,
+   "explanation": "TLC requires no more than 5 DMV points within 15 months, counted back from the most recent conviction.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/get-a-tlc-drivers-license.page",
+    "title": "TLC: Get a TLC Drivers License",
+    "page": null,
+    "quote": "No more than 5 points on your DMV license within a 15 month period"
+   }
+  },
+  {
+   "id": "TLC-024",
+   "topic": "Licensing",
+   "question": "A new applicant tests positive on the TLC drug test. What happens?",
+   "options": [
+    "They get a 30-day conditional license",
+    "The license is denied, and the decision is final",
+    "They pay a $200 fine and continue",
+    "They may retest the next day"
+   ],
+   "answer": 1,
+   "explanation": "A positive drug test means the application is denied and the decision is final.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 6,
+    "quote": "If an Applicant tests positive for drugs or controlled substances, the Commission will deny the Applicant's license and such decision is final."
+   }
+  },
+  {
+   "id": "TLC-025",
+   "topic": "Licensing",
+   "question": "While your application is pending, your mailing address changes. What must you do?",
+   "options": [
+    "Inform TLC of the material change",
+    "Withdraw and file a new application",
+    "Nothing until the license arrives",
+    "Tell only the DMV"
+   ],
+   "answer": 0,
+   "explanation": "Applicants must tell TLC about any material change, such as a new address, a new conviction or a change in chauffeur's license status.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 11,
+    "quote": "The Applicant must inform the Chairperson of any material change in the information submitted as part of the Application while the Application is pending."
+   }
+  },
+  {
+   "id": "TLC-026",
+   "topic": "Licensing",
+   "question": "How much is the TLC application fee for a new three-year TLC Driver License?",
+   "options": [
+    "$252",
+    "$49",
+    "$150",
+    "$84"
+   ],
+   "answer": 0,
+   "explanation": "The license fee is $84 a year, so $252 for a three-year license. It is non-refundable.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/drivers/get-a-tlc-drivers-license.page",
+    "title": "TLC: Get a TLC Drivers License",
+    "page": null,
+    "quote": "$252 – For a three (3) Year License"
+   }
+  },
+  {
+   "id": "TLC-027",
+   "topic": "Licensing",
+   "question": "How do you apply for a new TLC Driver License?",
+   "options": [
+    "In person at the Long Island City office",
+    "By mail to TLC",
+    "At any DMV office",
+    "Online through LARS"
+   ],
+   "answer": 3,
+   "explanation": "TLC's application guide says you must apply online, at nyc.gov/lars, and cannot apply in person.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/universal_license_guide.pdf",
+    "title": "TLC Driver License Application Guide (PDF)",
+    "page": 1,
+    "quote": "You must apply online. You cannot apply in-person."
+   }
+  },
+  {
+   "id": "TLC-028",
+   "topic": "Licensing",
+   "question": "How long is a new TLC Driver License valid?",
+   "options": [
+    "Five years from the date it was issued",
+    "Two years from your birthday",
+    "One year from the date it was issued",
+    "Three years from the date it was issued"
+   ],
+   "answer": 3,
+   "explanation": "A new license expires three years from its issue date. Renewals run three years from the old expiration date.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 12,
+    "quote": "A License issued to a new Applicant will expire three years from the date the License was issued."
+   }
+  },
+  {
+   "id": "TLC-029",
+   "topic": "Licensing",
+   "question": "At least how long before your license expires must you file a renewal application?",
+   "options": [
+    "90 days",
+    "180 days",
+    "7 days",
+    "30 days"
+   ],
+   "answer": 3,
+   "explanation": "File at least 30 days early. Later applications may not be reviewed before the license expires.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 12,
+    "quote": "A renewing Applicant must file a completed application at least 30 days before the expiration date of the License."
+   }
+  },
+  {
+   "id": "TLC-030",
+   "topic": "Licensing",
+   "question": "Your TLC license expired last month. Can you still renew it?",
+   "options": [
+    "Yes, within 30 days only",
+    "Yes, within 180 days, with a $25 late fee",
+    "No, you must take the 3-day course again",
+    "Yes, at any time, with no fee"
+   ],
+   "answer": 1,
+   "explanation": "You can file a late renewal up to 180 days after expiration with a $25 late fee. The license stays invalid until TLC approves it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 12,
+    "quote": "up to 180 days after the expiration date as a \"late application,\" if the Applicant pays a late fee of $25."
+   }
+  },
+  {
+   "id": "TLC-031",
+   "topic": "Licensing",
+   "question": "A driver keeps working after the TLC license expires while the renewal is still being processed. What is this?",
+   "options": [
+    "Allowed if the renewal fee is paid",
+    "Allowed for up to 30 days",
+    "Unlicensed Activity",
+    "A warning-only violation"
+   ],
+   "answer": 2,
+   "explanation": "Driving for hire after the license expires and before the renewal is issued is Unlicensed Activity.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 17,
+    "quote": "after his or her License expires and before a renewal License is issued is engaged in Unlicensed Activity."
+   }
+  },
+  {
+   "id": "TLC-032",
+   "topic": "Licensing",
+   "question": "Your TLC Driver License is lost or stolen. How quickly must you notify TLC in writing?",
+   "options": [
+    "Within 10 business days",
+    "Within 30 days",
+    "Within 72 hours, not counting weekends and holidays",
+    "Within 24 hours, including weekends"
+   ],
+   "answer": 2,
+   "explanation": "Notify TLC in writing within 72 hours (weekends and holidays not counted).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 16,
+    "quote": "within 72 hours (not counting weekends and holidays)."
+   }
+  },
+  {
+   "id": "TLC-033",
+   "topic": "Licensing",
+   "question": "You move. Within how many days must you report the new mailing address to TLC?",
+   "options": [
+    "At your next renewal",
+    "Ninety days",
+    "Ten days",
+    "Thirty days"
+   ],
+   "answer": 2,
+   "explanation": "Drivers must report a change of mailing or email address within ten days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 20,
+    "quote": "A Driver must report any change of Mailing Address and E-mail Address to the Commission in a manner prescribed by the Commission within ten days."
+   }
+  },
+  {
+   "id": "TLC-034",
+   "topic": "Licensing",
+   "question": "Which history can lead TLC to deny an application for one year?",
+   "options": [
+    "One parking ticket in the past year",
+    "Moving to a new borough",
+    "More than three collisions within a single year",
+    "Two years without driving"
+   ],
+   "answer": 2,
+   "explanation": "More than three collisions in a single year can trigger a one-year ban, counted from the last collision.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 14,
+    "quote": "More than three Collisions within a single year."
+   }
+  },
+  {
+   "id": "TLC-035",
+   "topic": "Government and fines",
+   "question": "Which City agency holds hearings and issues rulings on TLC driver violations?",
+   "options": [
+    "DOT (Department of Transportation)",
+    "OATH (Office of Administrative Trials and Hearings)",
+    "DCWP (Consumer and Worker Protection)",
+    "The Port Authority"
+   ],
+   "answer": 1,
+   "explanation": "OATH handles summonses and issues rulings on driver violations.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 6,
+    "quote": "Office of Administrative Trials and Hearings (OATH) is the city agency responsible for court proceedings, summonses, and issuing rulings for driver violations"
+   }
+  },
+  {
+   "id": "TLC-036",
+   "topic": "Government and fines",
+   "question": "You are found guilty of a TLC violation and do not appeal. When is the fine due?",
+   "options": [
+    "Within 30 days",
+    "At your next renewal",
+    "Within 10 days",
+    "Within 90 days"
+   ],
+   "answer": 0,
+   "explanation": "Fines are due within 30 days of a guilty finding. Unpaid fines lead to license suspension.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 2,
+    "quote": "Fines are due within 30 days of the day the Respondent is found guilty of the violation"
+   }
+  },
+  {
+   "id": "TLC-037",
+   "topic": "Proper conduct",
+   "question": "What is the fine for letting another person use your TLC Driver License or Technology System login?",
+   "options": [
+    "$1,000 and 30 days' suspension",
+    "$500 and a warning",
+    "$250 and 3 points",
+    "$10,000 and revocation"
+   ],
+   "answer": 3,
+   "explanation": "Letting someone use your license or login, or using someone else's, is fined $10,000 with revocation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 18,
+    "quote": "Fine: $10,000 and revocation"
+   }
+  },
+  {
+   "id": "TLC-038",
+   "topic": "Proper conduct",
+   "question": "During your shift, may someone else drive your vehicle or sit in the driver's seat?",
+   "options": [
+    "Yes, if the passenger agrees",
+    "Only in an emergency",
+    "Yes, for up to one hour",
+    "Yes, if they have a DMV license"
+   ],
+   "answer": 1,
+   "explanation": "During the work shift no one else may operate the vehicle or occupy the driver's seat, except in an emergency.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 18,
+    "quote": "must not allow another person to operate the Vehicle or occupy the Driver's seat, except in the event of an emergency."
+   }
+  },
+  {
+   "id": "TLC-039",
+   "topic": "Proper conduct",
+   "question": "May a driver tip a Port Authority dispatcher or baggage handler at the airport?",
+   "options": [
+    "No, any gift to them is prohibited",
+    "Yes, up to $20",
+    "Yes, after the passenger leaves",
+    "Yes, if it is cash"
+   ],
+   "answer": 0,
+   "explanation": "Licensees must not give any gift, gratuity or thing of value to Port Authority or terminal staff such as dispatchers, security or baggage handlers.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 18,
+    "quote": "must not offer or give any gift, gratuity, or thing of value to anyone at the Port Authority of New York and New Jersey"
+   }
+  },
+  {
+   "id": "TLC-040",
+   "topic": "Proper conduct",
+   "question": "A public servant asks you for a gift. Who must you report this to right away?",
+   "options": [
+    "TLC and the NYC Department of Investigation",
+    "Only the passenger's employer",
+    "No one, if you refuse",
+    "Only your base or garage"
+   ],
+   "answer": 0,
+   "explanation": "Any request or demand for a gift by a public servant must be reported at once to TLC and DOI.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 19,
+    "quote": "must immediately report to the Commission and the NYC Department of Investigation any request or demand for a gift"
+   }
+  },
+  {
+   "id": "TLC-041",
+   "topic": "Proper conduct",
+   "question": "What is the penalty for sexual contact with any person while working as a TLC licensee?",
+   "options": [
+    "$500 and a warning",
+    "$350 and 3 points",
+    "$2,000 and mandatory revocation",
+    "$1,000 and 5 days' suspension"
+   ],
+   "answer": 2,
+   "explanation": "Sexual contact while performing licensee duties is fined $2,000 with mandatory revocation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 21,
+    "quote": "Fine: $2,000 and mandatory revocation."
+   }
+  },
+  {
+   "id": "TLC-042",
+   "topic": "Proper conduct",
+   "question": "Which act toward a service animal is a TLC violation?",
+   "options": [
+    "Distracting or trying to distract it",
+    "Opening the rear door for it",
+    "Asking if it is a service animal",
+    "Letting it ride on the floor"
+   ],
+   "answer": 0,
+   "explanation": "Licensees must not distract, harm or use force against a service animal.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 19,
+    "quote": "must not distract or attempt to distract any Service Animal."
+   }
+  },
+  {
+   "id": "TLC-043",
+   "topic": "Traffic laws and safety",
+   "question": "When may a TLC vehicle stop and wait for passengers right in front of a fire hydrant?",
+   "options": [
+    "For up to 15 minutes",
+    "Never, under any circumstances",
+    "When the hazard lights are on",
+    "When the driver stays seated, ready to drive"
+   ],
+   "answer": 3,
+   "explanation": "Unless expressly forbidden, a vehicle may stop in front of a hydrant to wait for passengers if the driver stays seated and ready.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 22,
+    "quote": "permitted to stop and wait for Passengers in the space immediately in front of a fire hydrant on a street, provided the Driver remains seated"
+   }
+  },
+  {
+   "id": "TLC-044",
+   "topic": "Traffic laws and safety",
+   "question": "How many TLC points are given for speeding 11 to 20 mph over the posted limit?",
+   "options": [
+    "6",
+    "8",
+    "4",
+    "2"
+   ],
+   "answer": 2,
+   "explanation": "Speeding 11–20 mph over is 4 points (1–10 over is 3; 21–30 over is 5).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 23,
+    "quote": "SPEEDING 11 to 20 miles above posted speed limit 4"
+   }
+  },
+  {
+   "id": "TLC-045",
+   "topic": "Traffic laws and safety",
+   "question": "How long after drinking any alcohol must a driver wait before driving or occupying the vehicle?",
+   "options": [
+    "At least two hours",
+    "At least one hour",
+    "Until the next calendar day",
+    "At least six hours"
+   ],
+   "answer": 3,
+   "explanation": "Drivers must not drive or occupy their vehicle for at least six hours after consuming any alcohol or drugs.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 25,
+    "quote": "A Driver must not drive or occupy his or her Vehicle for at least six hours after consuming any intoxicating liquor"
+   }
+  },
+  {
+   "id": "TLC-046",
+   "topic": "Traffic laws and safety",
+   "question": "Which TLC drivers are exempt from annual drug testing?",
+   "options": [
+    "Black car and luxury limousine drivers",
+    "NYC police officers and paratransit drivers",
+    "Drivers with no violations in three years",
+    "Drivers over age 65 with a doctor's note"
+   ],
+   "answer": 1,
+   "explanation": "Every driver must pass a drug test each year except NYC police officers and paratransit drivers.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 26,
+    "quote": "All Drivers except (1) Drivers who are City of New York Police Officers or (2) Paratransit drivers, must be tested annually"
+   }
+  },
+  {
+   "id": "TLC-047",
+   "topic": "Traffic laws and safety",
+   "question": "What is the most total time a driver may transport passengers for hire in any 24-hour period?",
+   "options": [
+    "8 hours",
+    "14 hours",
+    "10 hours",
+    "12 hours"
+   ],
+   "answer": 2,
+   "explanation": "The daily limit is 10 hours of passenger time in any 24-hour period.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 27,
+    "quote": "must not transport any Passenger(s) for hire for more than 10 hours in total in any 24-hour period."
+   }
+  },
+  {
+   "id": "TLC-048",
+   "topic": "Traffic laws and safety",
+   "question": "What resets a driver's 10-hour daily count?",
+   "options": [
+    "Carrying no passengers for at least 8 consecutive hours",
+    "Logging off the Technology System for 30 minutes",
+    "Switching to a different TLC-licensed vehicle",
+    "The clock passing midnight at the end of each day"
+   ],
+   "answer": 0,
+   "explanation": "If a driver carries no passengers for at least eight consecutive hours, the 10-hour count resets.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 27,
+    "quote": "If a Driver transports no Passengers for hire for at least eight consecutive hours, the 10-hour count resets"
+   }
+  },
+  {
+   "id": "TLC-049",
+   "topic": "Traffic laws and safety",
+   "question": "What is the weekly limit on hours transporting passengers for hire?",
+   "options": [
+    "40 hours, Monday through Friday",
+    "50 hours, Sunday through Saturday",
+    "70 hours in any 7 days",
+    "60 hours, Monday through Sunday"
+   ],
+   "answer": 3,
+   "explanation": "Drivers may not carry passengers for more than 60 hours in a Monday-to-Sunday week.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 28,
+    "quote": "more than 60 hours in total in any seven-day period that begins on Monday and ends on Sunday."
+   }
+  },
+  {
+   "id": "TLC-050",
+   "topic": "Traffic laws and safety",
+   "question": "When may a TLC driver use a cell phone?",
+   "options": [
+    "While moving below 10 mph in slow traffic",
+    "While stopped at a red light in traffic",
+    "Any time, as long as it is hands-free",
+    "Only while the vehicle is lawfully standing or parked"
+   ],
+   "answer": 3,
+   "explanation": "Drivers must not use an electronic communication device while operating the vehicle; use is allowed only when lawfully stopped or parked.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 28,
+    "quote": "A Driver can Use an Electronic Communication Device only while the Vehicle is lawfully standing or parked."
+   }
+  },
+  {
+   "id": "TLC-051",
+   "topic": "Traffic laws and safety",
+   "question": "How many TLC points does a first phone-use violation carry?",
+   "options": [
+    "6",
+    "1",
+    "0",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "A first or second offense in 15 months is 3 points; a third is 4 points.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 29,
+    "quote": "Points: 3 for the first offense and for the second offense in any 15-month period;"
+   }
+  },
+  {
+   "id": "TLC-052",
+   "topic": "Traffic laws and safety",
+   "question": "What is the speed limit in New York City unless a sign says otherwise?",
+   "options": [
+    "25 mph",
+    "20 mph",
+    "30 mph",
+    "35 mph"
+   ],
+   "answer": 0,
+   "explanation": "TLC's study guide teaches the 25 mph citywide default limit.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 16,
+    "quote": "The speed limit in NYC is 25 miles per hour (mph), unless otherwise posted."
+   }
+  },
+  {
+   "id": "TLC-053",
+   "topic": "Traffic laws and safety",
+   "question": "Is turning right on a red light allowed in New York City?",
+   "options": [
+    "Only between midnight and 6 a.m.",
+    "Yes, after a full stop",
+    "Yes, outside Manhattan",
+    "No, unless a sign permits it"
+   ],
+   "answer": 3,
+   "explanation": "Turning on red is illegal in NYC unless posted otherwise.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 16,
+    "quote": "Turning at a red light is illegal in NYC, unless otherwise posted."
+   }
+  },
+  {
+   "id": "TLC-054",
+   "topic": "Traffic laws and safety",
+   "question": "How much space should you leave between your vehicle and a cyclist?",
+   "options": [
+    "At least 10 feet behind only",
+    "Half a lane",
+    "At least 1 foot",
+    "At least 3 feet in all directions"
+   ],
+   "answer": 3,
+   "explanation": "Leave at least 3 feet; cyclists need room for potholes and opening doors.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 16,
+    "quote": "Leave at least 3 feet between you and the cyclist in all directions."
+   }
+  },
+  {
+   "id": "TLC-055",
+   "topic": "Traffic laws and safety",
+   "question": "Under the NYS seat belt law, when could the driver be ticketed for an unbuckled passenger?",
+   "options": [
+    "The passenger is under 16 and has no parent or guardian",
+    "The trip is shorter than one mile",
+    "The passenger is over 65",
+    "The passenger is any adult in the back"
+   ],
+   "answer": 0,
+   "explanation": "Since November 2020 all passengers must buckle up. The driver can be ticketed if an unaccompanied passenger under 16 is not buckled.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/seat-belt-law.page",
+    "title": "TLC: Seat Belt Law",
+    "page": null,
+    "quote": "If a driver is transporting a passenger under the age of 16, and they are not accompanied by a parent or guardian"
+   }
+  },
+  {
+   "id": "TLC-056",
+   "topic": "Vehicle operation rules",
+   "question": "What is the penalty for having a weapon in your TLC vehicle without the Chairperson's written permission?",
+   "options": [
+    "Revocation",
+    "5 days' suspension",
+    "$100 fine",
+    "Warning"
+   ],
+   "answer": 0,
+   "explanation": "Possessing a weapon in the vehicle while operating it is punished by revocation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 30,
+    "quote": "Fine: Revocation"
+   }
+  },
+  {
+   "id": "TLC-057",
+   "topic": "Vehicle operation rules",
+   "question": "May a driver smoke in the vehicle between trips when no passenger is inside?",
+   "options": [
+    "Yes, e-cigarettes only",
+    "Yes, with the windows open",
+    "No, smoking in the vehicle is not allowed",
+    "Yes, if off duty"
+   ],
+   "answer": 2,
+   "explanation": "The rule is simply that a driver must not smoke in a vehicle.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 30,
+    "quote": "A Driver must not smoke in a Vehicle."
+   }
+  },
+  {
+   "id": "TLC-058",
+   "topic": "Vehicle operation rules",
+   "question": "When may a driver lock the rear doors while on duty?",
+   "options": [
+    "Only with the passenger's consent or request, or as the rules allow",
+    "Any time after dark, for the driver's safety",
+    "Whenever the meter is running and the car moves",
+    "Whenever a passenger has put luggage in the trunk"
+   ],
+   "answer": 0,
+   "explanation": "Rear doors may not be locked except with passenger consent or request, or for reasons in the rules (such as going off duty).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 30,
+    "quote": "must not lock either of the rear doors except with the consent or at the request of a Passenger"
+   }
+  },
+  {
+   "id": "TLC-059",
+   "topic": "Vehicle operation rules",
+   "question": "Four adults are in a four-passenger taxi. When must you accept one more passenger?",
+   "options": [
+    "When it is a child under 7 held on an adult's lap in the rear",
+    "Never; four is the limit with no exceptions",
+    "When the fifth adult agrees to sit in the front seat",
+    "When it is a child under 12 sitting in the front"
+   ],
+   "answer": 0,
+   "explanation": "An extra passenger must be accepted if under age seven and held on the lap of an adult in the rear.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 31,
+    "quote": "an additional Passenger must be accepted if the Passenger is under the age of seven (7) and is held on the lap"
+   }
+  },
+  {
+   "id": "TLC-060",
+   "topic": "Vehicle operation rules",
+   "question": "A passenger's wheelchair takes up the rear seat. Where may the passenger sit?",
+   "options": [
+    "Only in the trunk area",
+    "Nowhere; the trip must be refused",
+    "On the folded wheelchair",
+    "In the front passenger seat"
+   ],
+   "answer": 3,
+   "explanation": "If luggage or a mobility aid occupies the rear seats, the passenger must be allowed in the front seat.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 32,
+    "quote": "a Passenger must be permitted to occupy the front passenger seat."
+   }
+  },
+  {
+   "id": "TLC-061",
+   "topic": "Vehicle operation rules",
+   "question": "May a taxi driver sell or recommend products to passengers?",
+   "options": [
+    "Yes, during long trips only",
+    "Yes, if the passenger asks",
+    "Yes, if the item costs under $20",
+    "No, not without prior written TLC approval"
+   ],
+   "answer": 3,
+   "explanation": "Drivers must not sell, advertise or recommend services or goods without written approval. FHV and SHL drivers may promote their base's services.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 32,
+    "quote": "A Driver must not sell, advertise or recommend any service or merchandise to any Passenger without prior written Commission approval."
+   }
+  },
+  {
+   "id": "TLC-062",
+   "topic": "Vehicle operation rules",
+   "question": "How long may a TLC vehicle's engine idle?",
+   "options": [
+    "No longer than three minutes",
+    "No longer than one minute",
+    "As long as a passenger is aboard",
+    "No longer than ten minutes"
+   ],
+   "answer": 0,
+   "explanation": "Under the NYC Air Pollution Control Code, engines must not idle longer than three minutes.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 51,
+    "quote": "must not cause or permit the engine of the Vehicle to idle for longer than three minutes."
+   }
+  },
+  {
+   "id": "TLC-063",
+   "topic": "Vehicle operation rules",
+   "question": "Which equipment must a driver keep checking is in good working order?",
+   "options": [
+    "Brakes, tires, lights, signals and passenger seatbelts",
+    "Only the radio and air conditioning",
+    "Only the roof light",
+    "Only the taximeter"
+   ],
+   "answer": 0,
+   "explanation": "Drivers must continually inspect brakes, tires, lights, signals, and passenger seat and shoulder belts.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 52,
+    "quote": "including brakes, tires, lights, signals and passenger seatbelts and shoulder belts, is in good working order."
+   }
+  },
+  {
+   "id": "TLC-064",
+   "topic": "Passenger requests",
+   "question": "A passenger gives no route preference. Which route must you take?",
+   "options": [
+    "Any route you choose",
+    "The fastest highway route",
+    "The shortest reasonable route",
+    "The route your GPS prefers"
+   ],
+   "answer": 2,
+   "explanation": "Follow reasonable, lawful routing requests; otherwise take the shortest reasonable route.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 33,
+    "quote": "Unless a Passenger makes a specific request, a Driver must proceed to the Passenger's destination by the shortest reasonable route."
+   }
+  },
+  {
+   "id": "TLC-065",
+   "topic": "Passenger requests",
+   "question": "Mid-trip, a passenger asks to change the destination. What must you do?",
+   "options": [
+    "End the trip and restart the meter",
+    "Comply, unless it is impossible or unsafe",
+    "Charge a $5 change fee",
+    "Refuse; the original destination is binding"
+   ],
+   "answer": 1,
+   "explanation": "Passengers may change or end the ride during the trip; drivers must comply unless impossible or unsafe.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 33,
+    "quote": "Drivers must comply with these requests unless it is impossible or unsafe."
+   }
+  },
+  {
+   "id": "TLC-066",
+   "topic": "Passenger requests",
+   "question": "A passenger asks you to put their suitcase in the trunk. What must you do?",
+   "options": [
+    "Load it only if it is light",
+    "Let the passenger load it",
+    "Load it for a $1 charge",
+    "Load it, and unload it at the end"
+   ],
+   "answer": 3,
+   "explanation": "On request, the driver must load and unload luggage, wheelchairs, crutches or other property and close the trunk securely.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 33,
+    "quote": "Upon the request of a Passenger, the Driver must load or unload a Passenger's luggage, wheelchair, crutches or other property"
+   }
+  },
+  {
+   "id": "TLC-067",
+   "topic": "Passenger requests",
+   "question": "Which phone number must be on a taxi receipt?",
+   "options": [
+    "The garage's dispatch number",
+    "The DMV's number",
+    "The 311 complaint number",
+    "The driver's personal cell number"
+   ],
+   "answer": 2,
+   "explanation": "Taxi and SHL receipts must include the 311 complaint number along with the fare details and hack license number.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 34,
+    "quote": "the \"311\" Commission Complaint telephone number."
+   }
+  },
+  {
+   "id": "TLC-068",
+   "topic": "Passenger requests",
+   "question": "A passenger asks for your name and TLC license number. What must you do?",
+   "options": [
+    "Give only your first name",
+    "Refuse; it is private",
+    "Tell them to call 311",
+    "Provide them"
+   ],
+   "answer": 3,
+   "explanation": "Drivers must comply with reasonable requests for their name, TLC license number and the vehicle's license number.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 35,
+    "quote": "must provide comply with all reasonable Passenger requests to provide his or her name, TLC Driver License number"
+   }
+  },
+  {
+   "id": "TLC-069",
+   "topic": "Rates and fares",
+   "question": "What happens to a driver who charges or tries to charge $10 or more above the approved fare?",
+   "options": [
+    "A written warning for a first offense",
+    "The TLC Driver License is revoked",
+    "A 3-day suspension and 2 points",
+    "A $50 fine and a refund to the passenger"
+   ],
+   "answer": 1,
+   "explanation": "Overcharging by $10 or more brings mandatory revocation, and the driver may have to repay the passenger.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 3,
+    "quote": "the Taxi and Limousine Tribunal at OATH or the Chairperson will revoke the Driver License"
+   }
+  },
+  {
+   "id": "TLC-070",
+   "topic": "Rates and fares",
+   "question": "What is the fine for a first overcharge or refusal violation if the driver pleads guilty before a hearing?",
+   "options": [
+    "$500",
+    "$350",
+    "$100",
+    "$1,000"
+   ],
+   "answer": 1,
+   "explanation": "First violation: $350 if you plead guilty before a hearing, $500 if found guilty after one.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 3,
+    "quote": "First violation: $350 if plead guilty before a hearing; $500 if found guilty following a hearing."
+   }
+  },
+  {
+   "id": "TLC-071",
+   "topic": "Rates and fares",
+   "question": "A passenger travels with a service animal and a wheelchair. What extra may you charge?",
+   "options": [
+    "Double the meter",
+    "Nothing",
+    "$2 for the animal",
+    "$5 for the wheelchair"
+   ],
+   "answer": 1,
+   "explanation": "No additional charge may be imposed for a person with a disability, a service animal, or a wheelchair or other mobility aid.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 35,
+    "quote": "must not impose or attempt to impose any additional charge for transporting a person with a disability, a service animal"
+   }
+  },
+  {
+   "id": "TLC-072",
+   "topic": "Rates and fares",
+   "question": "A taxi passenger refuses to pay the fare. What should you do?",
+   "options": [
+    "Lock the doors and call your garage to come",
+    "Let them go and report it at your license renewal",
+    "Keep the passenger's bag until the fare is paid",
+    "Record the fare and go directly to the nearest police precinct"
+   ],
+   "answer": 3,
+   "explanation": "Turn the meter to vacant, record the fare, go straight to the nearest precinct and follow the police's instructions.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 36,
+    "quote": "proceed directly to the nearest police precinct, present the facts to the police and follow their instructions"
+   }
+  },
+  {
+   "id": "TLC-073",
+   "topic": "Rates and fares",
+   "question": "Your taxi's card system is down. When may you still pick up a passenger?",
+   "options": [
+    "If you tell them before starting the meter that cards won't work",
+    "Only if you take the card number by hand",
+    "Never; you must go off duty",
+    "Only for cash trips under $20"
+   ],
+   "answer": 0,
+   "explanation": "You may carry the passenger only if, before engaging the meter, you tell them they will not be able to pay by card.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 37,
+    "quote": "unless prior to engaging the Taximeter, the Driver advises the Passenger that he/she will not be able to use a credit or debit card"
+   }
+  },
+  {
+   "id": "TLC-074",
+   "topic": "Rates and fares",
+   "question": "A passenger wants to go to Connecticut in your taxi. How is the fare set?",
+   "options": [
+    "The JFK flat fare",
+    "A flat dollar amount agreed before the trip",
+    "The standard meter rate",
+    "Double the meter outside the City"
+   ],
+   "answer": 1,
+   "explanation": "For destinations outside the City other than Westchester, Nassau and Newark Airport, negotiate a flat dollar amount first. \"Double the meter\" is not a flat rate.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 38,
+    "quote": "A \"flat\" rate means a dollar amount; \"double the meter\" is NOT a flat rate."
+   }
+  },
+  {
+   "id": "TLC-075",
+   "topic": "Rates and fares",
+   "question": "How is a taxi fare to Westchester or Nassau County calculated?",
+   "options": [
+    "Double the meter for the whole trip",
+    "The standard meter for the whole trip",
+    "Meter to the City limit, then double the meter",
+    "One flat negotiated price"
+   ],
+   "answer": 2,
+   "explanation": "The meter runs the whole way; the portion beyond the City limit is charged at double (Rate #04).",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "The metered fare is double the amount from the City limit to your destination."
+   }
+  },
+  {
+   "id": "TLC-076",
+   "topic": "Rates and fares",
+   "question": "What is the surcharge for a taxi trip to Newark Airport?",
+   "options": [
+    "$20.00",
+    "$10.00",
+    "$5.00",
+    "$17.50"
+   ],
+   "answer": 0,
+   "explanation": "Newark trips are the standard meter plus a $20 Newark surcharge, plus tolls both ways.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "Plus $20.00 Newark Surcharge."
+   }
+  },
+  {
+   "id": "TLC-077",
+   "topic": "Rates and fares",
+   "question": "On a taxi trip to Newark Airport, who pays the driver's return tolls?",
+   "options": [
+    "The medallion owner",
+    "The passenger",
+    "The driver",
+    "The Port Authority"
+   ],
+   "answer": 1,
+   "explanation": "Passengers pay tolls to and from Newark, including the driver's return tolls.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "passengers are charged for the drivers' return tolls"
+   }
+  },
+  {
+   "id": "TLC-078",
+   "topic": "Rates and fares",
+   "question": "What is the flat fare between Manhattan and JFK Airport (before surcharges, tips and tolls)?",
+   "options": [
+    "$75",
+    "$52",
+    "$70",
+    "$60"
+   ],
+   "answer": 2,
+   "explanation": "Manhattan–JFK trips in either direction are a $70 flat fare plus surcharges, tip and tolls.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "Trips between Manhattan and John F. Kennedy Airport (JFK) in either direction: $70"
+   }
+  },
+  {
+   "id": "TLC-079",
+   "topic": "Rates and fares",
+   "question": "What rush-hour surcharge applies to the Manhattan–JFK flat fare on weekdays from 4 to 8 p.m.?",
+   "options": [
+    "$5.00",
+    "$4.50",
+    "$2.50",
+    "$1.00"
+   ],
+   "answer": 0,
+   "explanation": "The JFK flat fare carries a $5.00 rush-hour surcharge (4–8 p.m. weekdays, not legal holidays).",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "$5.00 rush hour surcharge (4pm to 8pm weekdays, excluding legal holidays)."
+   }
+  },
+  {
+   "id": "TLC-080",
+   "topic": "Rates and fares",
+   "question": "How is a taxi trip to or from LaGuardia Airport charged?",
+   "options": [
+    "A flat rate negotiated before the trip",
+    "A $70 flat fare in either direction",
+    "Standard meter plus a $5.00 surcharge",
+    "Double the meter from the City limit"
+   ],
+   "answer": 2,
+   "explanation": "LGA trips are the standard metered fare plus a $5 surcharge and other applicable surcharges.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "Trips to and from LaGuardia Airport (LGA) are charged the standard metered fare, plus a $5.00 surcharge"
+   }
+  },
+  {
+   "id": "TLC-081",
+   "topic": "Rates and fares",
+   "question": "What is the initial charge on the standard taxi meter?",
+   "options": [
+    "$3.00",
+    "$2.50",
+    "$3.50",
+    "$2.00"
+   ],
+   "answer": 0,
+   "explanation": "The standard metered fare starts at $3.00, plus 70 cents per 1/5 mile or per 60 seconds slow or stopped.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "$3.00 initial charge. Plus 70 cents per 1/5 mile"
+   }
+  },
+  {
+   "id": "TLC-082",
+   "topic": "Rates and fares",
+   "question": "When does the $2.50 rush-hour surcharge apply to metered taxi trips?",
+   "options": [
+    "All day Friday and Saturday evenings",
+    "4 to 8 p.m. every day, including holidays",
+    "7 to 10 a.m. on weekdays, except holidays",
+    "4 to 8 p.m. on weekdays, except holidays"
+   ],
+   "answer": 3,
+   "explanation": "The rush-hour surcharge is $2.50 from 4 p.m. to 8 p.m. on weekdays, excluding holidays.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "Plus $2.50 rush hour surcharge from 4pm to 8pm on weekdays, excluding holidays."
+   }
+  },
+  {
+   "id": "TLC-083",
+   "topic": "Rates and fares",
+   "question": "A yellow taxi trip passes through Manhattan below 96th Street. What New York State Congestion Surcharge applies?",
+   "options": [
+    "$1.00",
+    "75 cents",
+    "$2.75",
+    "$2.50"
+   ],
+   "answer": 3,
+   "explanation": "The NYS Congestion Surcharge is $2.50 for yellow taxis, $2.75 for green taxis and 75 cents for shared rides.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "Plus New York State Congestion Surcharge of $2.50 (Yellow Taxi) or $2.75 (Green Taxi) or 75 cents (any shared ride)"
+   }
+  },
+  {
+   "id": "TLC-084",
+   "topic": "Rates and fares",
+   "question": "What is the MTA Congestion Pricing toll for yellow and green taxis in the zone at and below 60th Street?",
+   "options": [
+    "$2.50",
+    "$1.50",
+    "$9.00",
+    "75 cents"
+   ],
+   "answer": 3,
+   "explanation": "Taxis pay a 75-cent congestion pricing toll for trips in Manhattan at or below 60th Street, with some highway exclusions.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "Plus MTA Congestion Pricing toll of 75 cents for Yellow and Green Taxi for the area of Manhattan south of and including 60th Street"
+   }
+  },
+  {
+   "id": "TLC-085",
+   "topic": "Rates and fares",
+   "question": "Which of these is free for taxi passengers?",
+   "options": [
+    "Using E-ZPass lanes",
+    "Trips to Newark Airport",
+    "Paying by credit card",
+    "Trips in rush hour"
+   ],
+   "answer": 2,
+   "explanation": "There is no charge for extra passengers, luggage or paying by credit card.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/taxi-fare.page",
+    "title": "TLC: Taxi Fare",
+    "page": null,
+    "quote": "There is no charge for extra passengers, luggage or bags, or paying by credit card."
+   }
+  },
+  {
+   "id": "TLC-086",
+   "topic": "Rates and fares",
+   "question": "A taxi trip starts in NYC and ends in which of these places requires the MTA Tax?",
+   "options": [
+    "Fairfield County, Connecticut",
+    "Rockland County",
+    "Bergen County, New Jersey",
+    "Pike County, Pennsylvania"
+   ],
+   "answer": 1,
+   "explanation": "The MTA Tax applies to trips from NYC ending in NYC or Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk or Westchester counties.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 39,
+    "quote": "(5) Putnam County. (6) Rockland County. (7) Suffolk County. (8) Westchester County."
+   }
+  },
+  {
+   "id": "TLC-087",
+   "topic": "Lost property",
+   "question": "What must you do right after a trip to JFK, LaGuardia or Newark Airport?",
+   "options": [
+    "Wait 10 minutes for the passenger",
+    "Refuel the vehicle",
+    "Check the interior and trunk for left property",
+    "Call 311 to report the trip"
+   ],
+   "answer": 2,
+   "explanation": "After an airport trip, inspect the interior and trunk (if used) to make sure passengers took their property.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 41,
+    "quote": "the Driver must inspect the interior of the Vehicle and the trunk compartment, if used, to ensure that Passengers have collected their property."
+   }
+  },
+  {
+   "id": "TLC-088",
+   "topic": "Lost property",
+   "question": "You find a wallet in your taxi and cannot return it to the passenger. Where must it go?",
+   "options": [
+    "A police precinct, as NYPD directs",
+    "The nearest TLC inspector",
+    "Your home until claimed",
+    "A post office"
+   ],
+   "answer": 0,
+   "explanation": "Return it to the passenger if possible; otherwise take it without delay to a police precinct as NYPD directs.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 41,
+    "quote": "otherwise, it must be taken without delay to a police precinct as directed by the NYPD."
+   }
+  },
+  {
+   "id": "TLC-089",
+   "topic": "Lost property",
+   "question": "Where else, besides a police precinct, may an FHV or SHL driver take unreturned lost property?",
+   "options": [
+    "The TLC Long Island City office",
+    "The nearest firehouse",
+    "Any post office",
+    "The vehicle's base"
+   ],
+   "answer": 3,
+   "explanation": "In an FHV or SHL, lost property can go to a police precinct or to the vehicle's base.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 41,
+    "quote": "taken without delay to a police precinct as directed by the NYPD or to the Vehicle's Base."
+   }
+  },
+  {
+   "id": "TLC-090",
+   "topic": "Passenger solicitation",
+   "question": "How close to an authorized Taxi Stand may a taxi driver cruise for passengers?",
+   "options": [
+    "No closer than 50 feet",
+    "No closer than one block",
+    "No closer than 100 feet",
+    "Any distance"
+   ],
+   "answer": 2,
+   "explanation": "Taxi drivers must not solicit or cruise within 100 feet of an authorized Taxi Stand.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 42,
+    "quote": "Within 100 feet of any authorized Taxi Stand"
+   }
+  },
+  {
+   "id": "TLC-091",
+   "topic": "Passenger solicitation",
+   "question": "You are logged off and heading to your garage. When may you pick up a passenger?",
+   "options": [
+    "Never; once logged off you cannot carry anyone",
+    "Only if they are waiting at an authorized taxi stand",
+    "If they agree in advance to a negotiated flat fare",
+    "If their destination is directly on your route and you recorded it"
+   ],
+   "answer": 3,
+   "explanation": "Logged off, you may take a passenger only if you are returning home or to the garage, have recorded it, and their destination is directly on the route.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 42,
+    "quote": "The Passenger's destination is directly on the route to the Driver's home or garage."
+   }
+  },
+  {
+   "id": "TLC-092",
+   "topic": "Passenger solicitation",
+   "question": "May a taxi driver pick up an additional passenger during a trip?",
+   "options": [
+    "Yes, at taxi stands",
+    "Yes, if going the same way",
+    "Only at the current passenger's request",
+    "Yes, during rush hour"
+   ],
+   "answer": 2,
+   "explanation": "Drivers must not pick up more passengers during a trip unless the passenger asks, and must not suggest it.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 41,
+    "quote": "must not pick up additional Passengers during a trip except at the Passenger's request."
+   }
+  },
+  {
+   "id": "TLC-093",
+   "topic": "Passenger solicitation",
+   "question": "Where may a green Street Hail Livery NOT accept street hails?",
+   "options": [
+    "Anywhere in the Bronx and on Staten Island",
+    "Anywhere in Queens and Brooklyn, except the airports",
+    "Manhattan south of E. 96th and W. 110th Streets, and the airports",
+    "Manhattan north of 125th Street and the Bronx"
+   ],
+   "answer": 2,
+   "explanation": "That area is the Hail Exclusionary Zone. SHLs may accept hails everywhere else in the City (the Hail Zone).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_51.pdf",
+    "title": "TLC Rules Chapter 51: Definitions (PDF)",
+    "page": 11,
+    "quote": "Hail Exclusionary Zone is the area in which Street Hail Liveries are NOT permitted to accept a passenger by hail."
+   }
+  },
+  {
+   "id": "TLC-094",
+   "topic": "Passenger solicitation",
+   "question": "How may a For-Hire Vehicle driver (black car, livery, app) pick up passengers?",
+   "options": [
+    "Only by prearrangement through a licensed base",
+    "At taxi stands",
+    "By street hail outside Manhattan",
+    "By street hail anywhere"
+   ],
+   "answer": 0,
+   "explanation": "FHV drivers must not solicit or pick up passengers except by prearrangement through a licensed base.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 44,
+    "quote": "must not solicit or pick up Passengers other than by prearrangement through a licensed Base"
+   }
+  },
+  {
+   "id": "TLC-095",
+   "topic": "Passenger solicitation",
+   "question": "What is the fine for an FHV driver's first street pickup in Manhattan below E. 96th/W. 110th or at an NYC airport?",
+   "options": [
+    "$100",
+    "$1,000",
+    "$500",
+    "$250"
+   ],
+   "answer": 2,
+   "explanation": "In the Hail Exclusionary Zone the enhanced penalty is $500, then $750, then revocation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 44,
+    "quote": "Fine: First Violation: $500 Second Violation in 24 months: $750 Third Violation in 120 months: Revocation"
+   }
+  },
+  {
+   "id": "TLC-096",
+   "topic": "Passenger solicitation",
+   "question": "May an FHV driver pick up passengers waiting at a Taxi Stand?",
+   "options": [
+    "Yes, after 10 p.m.",
+    "Yes, at airports only",
+    "No, never",
+    "Yes, if the stand is empty of taxis"
+   ],
+   "answer": 2,
+   "explanation": "FHV drivers must not pick up at any Taxi Stand. First violation is $350; the third in 36 months is revocation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 45,
+    "quote": "A For-Hire Driver must not pick up Passengers at any Taxi Stand."
+   }
+  },
+  {
+   "id": "TLC-097",
+   "topic": "Passenger solicitation",
+   "question": "May a green SHL take a spot at a Taxi Stand in Midtown Manhattan?",
+   "options": [
+    "Yes, at any stand",
+    "No, not in the Hail Exclusionary Zone",
+    "Yes, after midnight",
+    "Yes, if no taxis are waiting"
+   ],
+   "answer": 1,
+   "explanation": "SHL drivers may use Taxi Stands in the Hail Zone but not in the Hail Exclusionary Zone.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 44,
+    "quote": "A Driver of a Street Hail Livery does NOT have the right to take a position at a Taxi Stand in the Hail Exclusionary Zone."
+   }
+  },
+  {
+   "id": "TLC-098",
+   "topic": "Service refusal",
+   "question": "Which destinations must a taxi driver take a passenger to?",
+   "options": [
+    "Anywhere in Manhattan, plus JFK and LaGuardia only",
+    "Anywhere in NYC, Westchester, Nassau or Newark Airport",
+    "Anywhere in New York State or New Jersey",
+    "Anywhere within 25 miles of the pickup point"
+   ],
+   "answer": 1,
+   "explanation": "Mandatory transport covers any destination in NYC, Westchester or Nassau counties, or Newark Airport.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 46,
+    "quote": "to any destination within the City of New York, the counties of Westchester or Nassau, or Newark Airport."
+   }
+  },
+  {
+   "id": "TLC-099",
+   "topic": "Service refusal",
+   "question": "A taxi driver asks a person's destination before they get in, then agrees to take them. Is that a violation?",
+   "options": [
+    "Yes, asking in advance is a violation anyway",
+    "No, because the driver took the trip",
+    "No, if the trip was short",
+    "Only if the person complains"
+   ],
+   "answer": 0,
+   "explanation": "Trying to learn the destination before the passenger is seated is a violation even if the driver then takes the trip.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 47,
+    "quote": "Attempting to learn the destination in advance is a violation of this paragraph, regardless if the Driver ultimately agrees to transport the Passenger."
+   }
+  },
+  {
+   "id": "TLC-100",
+   "topic": "Service refusal",
+   "question": "A passenger has a pet cat loose in their arms. May you refuse the trip?",
+   "options": [
+    "Yes, an animal not in a suitable container is a valid reason",
+    "No, every animal must be accepted, in a carrier or not",
+    "Only if you show a doctor's note for an allergy",
+    "Only after 8 p.m., when overnight rules apply"
+   ],
+   "answer": 0,
+   "explanation": "You may refuse a passenger with an animal not properly secured in a container, but this never applies to service animals.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 49,
+    "quote": "The Passenger is accompanied by an animal that is not properly secured in a suitable container."
+   }
+  },
+  {
+   "id": "TLC-101",
+   "topic": "Service refusal",
+   "question": "A passenger keeps smoking during the trip. What must you do before making them leave?",
+   "options": [
+    "Ask them to stop at least twice",
+    "Ask them once",
+    "Call 311 first",
+    "Nothing; you may stop at once"
+   ],
+   "answer": 0,
+   "explanation": "If they refuse to stop, you may discharge them in a safe place, but only after asking at least twice.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 49,
+    "quote": "The Driver must ask the Passenger at least twice to stop smoking before requiring him or her to leave the Vehicle."
+   }
+  },
+  {
+   "id": "TLC-102",
+   "topic": "Service refusal",
+   "question": "You may refuse items you reasonably believe will damage the vehicle. Which of these may you NOT refuse?",
+   "options": [
+    "A wet, muddy mattress",
+    "A wheelchair",
+    "A sharp metal pipe",
+    "A leaking paint can"
+   ],
+   "answer": 1,
+   "explanation": "The damage exception never covers wheelchairs, crutches, service animals or other mobility aids.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 48,
+    "quote": "This does NOT include wheelchairs, crutches, a service animal or other mobility aid used by a Passenger with a Disability."
+   }
+  },
+  {
+   "id": "TLC-103",
+   "topic": "Service refusal",
+   "question": "May a driver require a passenger with a disability to bring an attendant?",
+   "options": [
+    "Yes, at night",
+    "Yes, for wheelchair users",
+    "Yes, on trips over 10 miles",
+    "No"
+   ],
+   "answer": 3,
+   "explanation": "Requiring an attendant is a refusal violation with mandatory penalties. Attendants also ride at no extra charge.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 46,
+    "quote": "A Driver must not require a person with a disability to be accompanied by an attendant."
+   }
+  },
+  {
+   "id": "TLC-104",
+   "topic": "Service refusal",
+   "question": "You accept a hail through an E-Hail app, then decide not to take the passenger. What is this?",
+   "options": [
+    "Allowed if you cancel in the app",
+    "Allowed if the pickup is far",
+    "A minor $25 violation",
+    "A refusal subject to mandatory penalties"
+   ],
+   "answer": 3,
+   "explanation": "Refusing a passenger after accepting their E-Hail is a refusal with mandatory penalties.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 47,
+    "quote": "A Driver must not refuse to transport a Passenger after accepting a Hail from that Passenger by means of an E-Hail Application."
+   }
+  },
+  {
+   "id": "TLC-105",
+   "topic": "Service refusal",
+   "question": "A passenger wants to make three stops before the final destination. May you refuse?",
+   "options": [
+    "Only stops outside Manhattan",
+    "Yes, more than one stop may be refused",
+    "Yes, unless they pay first",
+    "No; multiple stops are allowed on one meter"
+   ],
+   "answer": 3,
+   "explanation": "Drivers may not refuse passengers with more than one stop; the meter runs continuously for the whole trip.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/passenger-frequently-asked-questions.page",
+    "title": "TLC: Passenger Frequently Asked Questions",
+    "page": null,
+    "quote": "Drivers are not permitted to refuse passengers with more than one stop."
+   }
+  },
+  {
+   "id": "TLC-106",
+   "topic": "Service refusal",
+   "question": "According to the Green Taxi Passenger Bill of Rights, must a Boro Taxi passenger share a ride?",
+   "options": [
+    "Yes, on pre-arranged trips",
+    "No, not unless they want to",
+    "Yes, during rush hour",
+    "Yes, if the driver asks"
+   ],
+   "answer": 1,
+   "explanation": "Green taxi passengers have the right not to share a ride unless they want to.",
+   "source": {
+    "url": "https://www.nyc.gov/site/tlc/passengers/green-taxi-passenger-bill-of-rights.page",
+    "title": "TLC: Green Taxi Passenger Bill of Rights",
+    "page": null,
+    "quote": "Not share a ride, unless you want to;"
+   }
+  },
+  {
+   "id": "TLC-107",
+   "topic": "Accessibility and WAV",
+   "question": "Who may drive an accessible (wheelchair accessible) taxi?",
+   "options": [
+    "Only drivers with 5 years of TLC driving experience",
+    "An Approved Driver who completed WAV training or has a paratransit license",
+    "Only the owner of the medallion for that vehicle",
+    "Any TLC driver with a valid TLC Driver License"
+   ],
+   "answer": 1,
+   "explanation": "Accessible vehicles may be driven only by Approved Drivers.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_53.pdf",
+    "title": "TLC Rules Chapter 53: Accessible Taxicabs and SHLs (PDF)",
+    "page": 4,
+    "quote": "An Accessible Vehicle can only be driven by an Approved Driver"
+   }
+  },
+  {
+   "id": "TLC-108",
+   "topic": "Accessibility and WAV",
+   "question": "While operating an accessible vehicle, may you decline a trip from the Accessible Taxi Dispatcher?",
+   "options": [
+    "No, you must accept it",
+    "Yes, once per shift",
+    "Yes, if it is over 1 mile away",
+    "Yes, during rush hour"
+   ],
+   "answer": 0,
+   "explanation": "Approved Drivers must accept dispatches; not accepting is a refusal with mandatory penalties.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_53.pdf",
+    "title": "TLC Rules Chapter 53: Accessible Taxicabs and SHLs (PDF)",
+    "page": 6,
+    "quote": "While operating an Accessible Vehicle, an Approved Driver must accept a dispatch from the Accessible Taxi Dispatcher."
+   }
+  },
+  {
+   "id": "TLC-109",
+   "topic": "Accessibility and WAV",
+   "question": "You have accepted an accessible dispatch. A person hails you on the way. What do you do?",
+   "options": [
+    "Take them if they pay cash",
+    "Take them and tell the dispatcher",
+    "Take them if going the same way",
+    "Do not pick them up before the dispatched passenger"
+   ],
+   "answer": 3,
+   "explanation": "After accepting a dispatch you must not accept any other passenger, including an e-hail, before picking up the dispatched passenger.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_53.pdf",
+    "title": "TLC Rules Chapter 53: Accessible Taxicabs and SHLs (PDF)",
+    "page": 6,
+    "quote": "must not accept any other Passenger before picking up the Passenger with a mobility impairment."
+   }
+  },
+  {
+   "id": "TLC-110",
+   "topic": "Accessibility and WAV",
+   "question": "On an accessible dispatch, when may you turn on the taximeter?",
+   "options": [
+    "After the passenger is seated and secured",
+    "When you accept the dispatch",
+    "When you arrive at the pickup",
+    "When you start loading the ramp"
+   ],
+   "answer": 0,
+   "explanation": "Do not start the meter until the passenger is seated and secured.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_53.pdf",
+    "title": "TLC Rules Chapter 53: Accessible Taxicabs and SHLs (PDF)",
+    "page": 7,
+    "quote": "MUST NOT turn on the Taximeter when dispatched by the Accessible Taxi Dispatcher until the Passenger is seated and secured in the vehicle."
+   }
+  },
+  {
+   "id": "TLC-111",
+   "topic": "Accessibility and WAV",
+   "question": "After arriving for an accessible dispatch (on-demand), how long must you wait for the passenger?",
+   "options": [
+    "At least two minutes",
+    "Until the dispatcher cancels",
+    "At least thirty minutes",
+    "At least ten minutes"
+   ],
+   "answer": 3,
+   "explanation": "Wait at least ten minutes after your reported arrival (or after the scheduled time for advance reservations).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_53.pdf",
+    "title": "TLC Rules Chapter 53: Accessible Taxicabs and SHLs (PDF)",
+    "page": 8,
+    "quote": "must wait for the passenger with a disability to appear curbside at the pick up point for at least ten minutes"
+   }
+  },
+  {
+   "id": "TLC-112",
+   "topic": "Accessibility and WAV",
+   "question": "Who pays the Dispatch Fee on an Accessible Dispatch trip?",
+   "options": [
+    "The passenger, added to the fare",
+    "Never the passenger",
+    "The driver, from the fare",
+    "The passenger, in cash"
+   ],
+   "answer": 1,
+   "explanation": "Passengers pay the metered fare. The Dispatch Fee is paid to the driver and is never charged to the passenger.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_accessibility_programs.pdf",
+    "title": "TLC: Accessible and E-hail Trips: What Drivers Need to Know (PDF)",
+    "page": 2,
+    "quote": "Remember, the passenger never pays the Dispatch Fee."
+   }
+  },
+  {
+   "id": "TLC-113",
+   "topic": "Accessibility and WAV",
+   "question": "A passenger with a disability needs help getting out. When must the meter go to non-recording?",
+   "options": [
+    "Before you start helping them exit",
+    "When they are on the sidewalk",
+    "It stays on until the door closes",
+    "After they pay"
+   ],
+   "answer": 0,
+   "explanation": "Put the meter in non-recording before assisting, and leave it there until they have paid and safely exited.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 58,
+    "quote": "the Driver must place the Taximeter in a non-recording position before assisting such Passenger"
+   }
+  },
+  {
+   "id": "TLC-114",
+   "topic": "Accessibility and WAV",
+   "question": "How many securements should you always offer a passenger who uses a wheelchair?",
+   "options": [
+    "Two",
+    "Four",
+    "Three",
+    "Six"
+   ],
+   "answer": 3,
+   "explanation": "Offer all six: four floor straps plus the lap belt and shoulder belt.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver-ed/wav_decal_english.pdf",
+    "title": "TLC: Wheelchair Securement Tips decal (PDF)",
+    "page": 1,
+    "quote": "Always offer all six (6) securements to passengers."
+   }
+  },
+  {
+   "id": "TLC-115",
+   "topic": "Accessibility and WAV",
+   "question": "Where do you attach securement straps on a manual wheelchair?",
+   "options": [
+    "The wheels",
+    "The armrests",
+    "The frame, never the wheels",
+    "The push handles only"
+   ],
+   "answer": 2,
+   "explanation": "On manual chairs, secure straps on the frame; on motorized chairs, use the loops at the base.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver-ed/wav_decal_english.pdf",
+    "title": "TLC: Wheelchair Securement Tips decal (PDF)",
+    "page": 1,
+    "quote": "For manual chairs, secure straps on the frame of the chair. Do not secure straps on the wheels."
+   }
+  },
+  {
+   "id": "TLC-116",
+   "topic": "Accessibility and WAV",
+   "question": "A passenger in a wheelchair declines some of the securements. What should you do?",
+   "options": [
+    "Secure them anyway",
+    "Respect their choice",
+    "Charge a waiver fee",
+    "Refuse the trip"
+   ],
+   "answer": 1,
+   "explanation": "Offer all securements, but if a passenger declines some or all, respect their choice.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/tlc_accessibility_programs.pdf",
+    "title": "TLC: Accessible and E-hail Trips: What Drivers Need to Know (PDF)",
+    "page": 2,
+    "quote": "If a passenger declines some or all of the securements, please respect their choice."
+   }
+  },
+  {
+   "id": "TLC-117",
+   "topic": "Accessibility and WAV",
+   "question": "A WAV passenger has a service animal and three companions. Whom must you carry?",
+   "options": [
+    "The animal and all companions who can legally be seated",
+    "The passenger, the animal and one companion",
+    "The companions, but not the animal",
+    "Only the passenger and the wheelchair"
+   ],
+   "answer": 0,
+   "explanation": "Approved Drivers must carry the service animal(s) and as many companions as can legally be seated.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_53.pdf",
+    "title": "TLC Rules Chapter 53: Accessible Taxicabs and SHLs (PDF)",
+    "page": 8,
+    "quote": "for as many companions as can be legally seated in the vehicle."
+   }
+  },
+  {
+   "id": "TLC-118",
+   "topic": "Vehicle equipment",
+   "question": "Which item must a taxi or SHL have on board?",
+   "options": [
+    "A five-borough street map or GPS device",
+    "A first-aid kit and road flares",
+    "A spare taximeter and receipt roll",
+    "A fire extinguisher and spare tire"
+   ],
+   "answer": 0,
+   "explanation": "Required items include the Technology System, displayed TLC license and rate card, and a five-borough map or GPS.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 54,
+    "quote": "A New York City five (5) borough indexed street map or geographic position system device."
+   }
+  },
+  {
+   "id": "TLC-119",
+   "topic": "Vehicle equipment",
+   "question": "After sunset, which items must be lit so a rear-seat passenger can see them?",
+   "options": [
+    "The radio display and the air vents",
+    "Taximeter, TLC Driver License and Rate Card",
+    "The trunk light and the license plate light",
+    "Only the roof light and the rear dome light"
+   ],
+   "answer": 1,
+   "explanation": "After sunset the meter face, TLC license and rate card must be illuminated and visible from the rear seat.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 54,
+    "quote": "the face of the Taximeter, his or her TLC Driver License, and the Rate Card are illuminated"
+   }
+  },
+  {
+   "id": "TLC-120",
+   "topic": "Vehicle equipment",
+   "question": "The Technology System stops working during your shift. What must you do?",
+   "options": [
+    "Report it at renewal",
+    "Take cash only for the rest of the day",
+    "Fix it before accepting new trips",
+    "Keep working and write paper records"
+   ],
+   "answer": 2,
+   "explanation": "If the Technology System malfunctions, it must be fixed before you accept any new trips.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 56,
+    "quote": "the Driver must fix the Technology System before accepting any new trips to transport passengers"
+   }
+  },
+  {
+   "id": "TLC-121",
+   "topic": "Vehicle equipment",
+   "question": "The taximeter breaks during a trip. What options must you offer the passenger?",
+   "options": [
+    "Agree a reasonable fare to continue, or end and pay the meter so far",
+    "Continue free of charge to the destination",
+    "Get out right away without paying anything",
+    "Continue and pay double the last meter reading"
+   ],
+   "answer": 0,
+   "explanation": "Tell the passenger immediately and offer to continue at a mutually agreed reasonable fare, or end the trip and pay the meter to that point.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 57,
+    "quote": "Continuing the trip after mutually agreeing to a reasonable fare, or"
+   }
+  },
+  {
+   "id": "TLC-122",
+   "topic": "Vehicle equipment",
+   "question": "When must a taxi's roof light be on?",
+   "options": [
+    "When on duty, available and the meter is not in use",
+    "Whenever the engine is running, on or off duty",
+    "Only at night, from sunset to sunrise",
+    "Whenever a passenger is aboard and paying"
+   ],
+   "answer": 0,
+   "explanation": "The roof light is lit when you are on duty and available with the meter off, and off when the meter is in use or you are unavailable.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 59,
+    "quote": "The Roof Light must be illuminated when the Taximeter is not in use and the Driver is on duty and available"
+   }
+  },
+  {
+   "id": "TLC-123",
+   "topic": "Vehicle equipment",
+   "question": "Where must an FHV driver's TLC Driver License usually be displayed?",
+   "options": [
+    "In the glove compartment, shown on request",
+    "Taped to the inside of the rear window",
+    "On the dashboard, facing out the windshield",
+    "In a holder on the back of the driver's seat"
+   ],
+   "answer": 3,
+   "explanation": "FHV drivers display the license in a protective holder on the back of the driver's seat. Black cars and luxury limousines have an exception.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 55,
+    "quote": "displayed in a protective holder attached to the back of the driver's seat in the Vehicle."
+   }
+  },
+  {
+   "id": "TLC-124",
+   "topic": "Penalty programs",
+   "question": "Besides specific penalties, what may TLC impose at its discretion for a rule violation?",
+   "options": [
+    "Jail time of up to 30 days and a $500 fine",
+    "Revocation, suspension up to six months and/or a fine up to $1,000",
+    "A fine of up to $100, with no suspension",
+    "Only a written warning on the driver's record"
+   ],
+   "answer": 1,
+   "explanation": "Discretionary penalties: revocation, suspension of up to six months, and/or a fine of up to $1,000 per violation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 3,
+    "quote": "revocation, License suspension of up to six months, and/or a fine, not to exceed $1,000"
+   }
+  },
+  {
+   "id": "TLC-125",
+   "topic": "Penalty programs",
+   "question": "Under the Persistent Violator Program, what happens at 6 to 9 points within 15 months?",
+   "options": [
+    "A $1,000 fine only",
+    "Revocation",
+    "A warning letter",
+    "Suspension for up to 30 days"
+   ],
+   "answer": 3,
+   "explanation": "Six to nine combined TLC and DMV points in 15 months means suspension for up to 30 days.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 60,
+    "quote": "accumulated a total of at least six but fewer than ten TLC Points or DMV Points or both combined"
+   }
+  },
+  {
+   "id": "TLC-126",
+   "topic": "Penalty programs",
+   "question": "How many combined points within 15 months lead to revocation under the Persistent Violator Program?",
+   "options": [
+    "10 or more",
+    "12 or more",
+    "8 or more",
+    "6 or more"
+   ],
+   "answer": 0,
+   "explanation": "Ten or more TLC and/or DMV points in 15 months means revocation.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 60,
+    "quote": "accumulated a total of 10 or more TLC Points or DMV Points or both combined"
+   }
+  },
+  {
+   "id": "TLC-127",
+   "topic": "Penalty programs",
+   "question": "How many points does a Point Reduction Course remove before suspension or revocation?",
+   "options": [
+    "All points",
+    "Three TLC points",
+    "One point",
+    "Six TLC points"
+   ],
+   "answer": 1,
+   "explanation": "Completing a Point Reduction Course deducts three TLC points (a DMV Defensive Driving Course deducts three DMV points).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 61,
+    "quote": "will deduct three TLC Points from the points accumulated by any Licensee who voluntarily attends and satisfactorily completes a Point Reduction Course"
+   }
+  },
+  {
+   "id": "TLC-128",
+   "topic": "Penalty programs",
+   "question": "A driver's third parking or moving violation in 15 months brings a suspension. How can they avoid it?",
+   "options": [
+    "Wait 15 months for the points to expire",
+    "Retake the 3-day New TLC Driver License Course",
+    "Pay double the fine within 30 days",
+    "Complete the Vision Zero and Accessibility course within 60 days"
+   ],
+   "answer": 3,
+   "explanation": "The suspension is deferred 60 days and lifted if the driver completes the Vision Zero and Accessibility Remedial course in that time.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/rule_book_current_chapter_80.pdf",
+    "title": "TLC Rules Chapter 80: Drivers of Taxicabs, FHVs and SHLs (PDF)",
+    "page": 22,
+    "quote": "if the Driver completes a Vision Zero and Accessibility Remedial education course within the 60-day period, the Driver will not be suspended."
+   }
+  },
+  {
+   "id": "TLC-129",
+   "topic": "Geography",
+   "question": "Brooklyn is also which county?",
+   "options": [
+    "Kings County",
+    "Queens County",
+    "Richmond County",
+    "New York County"
+   ],
+   "answer": 0,
+   "explanation": "Brooklyn is Kings County; Manhattan is New York County; Staten Island is Richmond County.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 27,
+    "quote": "Brooklyn is a borough in New York City. The borough is also Kings County in New York State."
+   }
+  },
+  {
+   "id": "TLC-130",
+   "topic": "Geography",
+   "question": "In Manhattan, which way do avenue numbers increase?",
+   "options": [
+    "Going south",
+    "Going east",
+    "Going north",
+    "Going west"
+   ],
+   "answer": 3,
+   "explanation": "Avenues run north–south and their numbers increase as you go west (First Avenue is east, Eighth is west).",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 19,
+    "quote": "Avenues run North/South and the numbering increases as you drive West."
+   }
+  },
+  {
+   "id": "TLC-131",
+   "topic": "Geography",
+   "question": "In general, which way do even-numbered Manhattan streets run?",
+   "options": [
+    "West",
+    "East",
+    "Both ways",
+    "North"
+   ],
+   "answer": 1,
+   "explanation": "In general, even-numbered streets run east and odd-numbered streets run west.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 20,
+    "quote": "streets in Manhattan run East if even numbered, and West if odd numbered"
+   }
+  },
+  {
+   "id": "TLC-132",
+   "topic": "Geography",
+   "question": "In Midtown Manhattan, which avenue divides the East Side from the West Side?",
+   "options": [
+    "Sixth Avenue",
+    "Fifth Avenue",
+    "Park Avenue",
+    "Broadway"
+   ],
+   "answer": 1,
+   "explanation": "Fifth Avenue is the dividing line in Midtown; it runs one way downtown. Downtown, Broadway is the divider.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 20,
+    "quote": "In Midtown Manhattan, Fifth Avenue is the dividing line between the East and West side."
+   }
+  },
+  {
+   "id": "TLC-133",
+   "topic": "Geography",
+   "question": "Which street is the boundary between Uptown and Midtown Manhattan?",
+   "options": [
+    "34th Street",
+    "86th Street",
+    "59th Street",
+    "42nd Street"
+   ],
+   "answer": 2,
+   "explanation": "59th Street divides Uptown and Midtown; 14th Street divides Midtown and Downtown.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 20,
+    "quote": "59th street is the boundary between Uptown and Midtown"
+   }
+  },
+  {
+   "id": "TLC-134",
+   "topic": "Geography",
+   "question": "What does Park Avenue become below 14th Street?",
+   "options": [
+    "Bowery",
+    "Fourth Avenue",
+    "Lafayette Street",
+    "Lexington Avenue"
+   ],
+   "answer": 1,
+   "explanation": "Park Avenue becomes Fourth Avenue below 14th Street.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 19,
+    "quote": "Park Avenue becomes Fourth Avenue below 14th Street"
+   }
+  },
+  {
+   "id": "TLC-135",
+   "topic": "Geography",
+   "question": "What does Eighth Avenue become at Columbus Circle?",
+   "options": [
+    "Central Park West",
+    "Broadway",
+    "West End Avenue",
+    "Amsterdam Avenue"
+   ],
+   "answer": 0,
+   "explanation": "Eighth Avenue becomes Central Park West at Columbus Circle, then Frederick Douglass Boulevard at 110th Street.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 19,
+    "quote": "8th Avenue becomes Central Park West at Columbus Circle"
+   }
+  },
+  {
+   "id": "TLC-136",
+   "topic": "Geography",
+   "question": "At what street does the FDR Drive become the Harlem River Drive?",
+   "options": [
+    "135th Street",
+    "96th Street",
+    "155th Street",
+    "120th Street"
+   ],
+   "answer": 3,
+   "explanation": "The FDR Drive's name changes to Harlem River Drive at 120th Street.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 21,
+    "quote": "The name changes to Harlem River Drive at 120th Street."
+   }
+  },
+  {
+   "id": "TLC-137",
+   "topic": "Geography",
+   "question": "Where is Grand Central Terminal?",
+   "options": [
+    "Seventh Avenue at West 32nd Street",
+    "Broadway at Fulton Street",
+    "Park Avenue at East 42nd Street",
+    "Eighth Avenue at West 42nd Street"
+   ],
+   "answer": 2,
+   "explanation": "Grand Central is at Park Avenue and East 42nd Street. Penn Station is at Seventh Avenue and West 32nd Street.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 37,
+    "quote": "Grand Central Terminal - Park Avenue at East 42nd Street, Manhattan"
+   }
+  },
+  {
+   "id": "TLC-138",
+   "topic": "Geography",
+   "question": "JFK Airport is at the end of which highway?",
+   "options": [
+    "Bruckner Expressway",
+    "Van Wyck Expressway",
+    "Major Deegan Expressway",
+    "Grand Central Parkway"
+   ],
+   "answer": 1,
+   "explanation": "JFK sits at the end of the Van Wyck Expressway in Queens. LaGuardia is near the Grand Central Parkway.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 37,
+    "quote": "Kennedy (JFK) Airport - At the end of the Van Wyck Expressway, Queens"
+   }
+  },
+  {
+   "id": "TLC-139",
+   "topic": "Geography",
+   "question": "The Verrazzano-Narrows Bridge connects which two boroughs?",
+   "options": [
+    "Staten Island and Manhattan",
+    "Queens and the Bronx",
+    "Brooklyn and Staten Island",
+    "Manhattan and Brooklyn"
+   ],
+   "answer": 2,
+   "explanation": "The Verrazzano-Narrows is a toll bridge over New York Harbor between Brooklyn and Staten Island.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 32,
+    "quote": "Verrazano-Narrows Bridge Toll New York Harbor Brooklyn - Staten Island"
+   }
+  },
+  {
+   "id": "TLC-140",
+   "topic": "Geography",
+   "question": "The Goethals Bridge crosses the Arthur Kill between Staten Island and where?",
+   "options": [
+    "Manhattan",
+    "New Jersey",
+    "Queens",
+    "Brooklyn"
+   ],
+   "answer": 1,
+   "explanation": "The Goethals Bridge (toll) links Staten Island and New Jersey, as do the Outerbridge Crossing and the Bayonne Bridge.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 32,
+    "quote": "Goethals Bridge Toll Arthur Kill Staten Island - New Jersey"
+   }
+  },
+  {
+   "id": "TLC-141",
+   "topic": "Geography",
+   "question": "Which toll crossing connects Manhattan and the Bronx over Spuyten Duyvil Creek?",
+   "options": [
+    "Throgs Neck Bridge",
+    "Macombs Dam Bridge",
+    "George Washington Bridge",
+    "Henry Hudson Bridge"
+   ],
+   "answer": 3,
+   "explanation": "The Henry Hudson Bridge is a toll bridge over Spuyten Duyvil Creek; the nearby Broadway Bridge is free.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 32,
+    "quote": "Henry Hudson Bridge Toll Spuyten-Duyvil Creek Manhattan - Bronx"
+   }
+  },
+  {
+   "id": "TLC-142",
+   "topic": "Geography",
+   "question": "Which crossing between Manhattan and Queens is free?",
+   "options": [
+    "Robert F. Kennedy Bridge",
+    "Ed Koch Queensboro Bridge",
+    "Throgs Neck Bridge",
+    "Queens-Midtown Tunnel"
+   ],
+   "answer": 1,
+   "explanation": "The Ed Koch Queensboro Bridge over the East River is toll-free. The Queens-Midtown Tunnel and RFK Bridge charge tolls.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 32,
+    "quote": "Ed Koch Queensboro Bridge Free East River Manhattan - Queens"
+   }
+  },
+  {
+   "id": "TLC-143",
+   "topic": "Geography",
+   "question": "The Holland Tunnel connects Manhattan with what?",
+   "options": [
+    "New Jersey",
+    "Queens",
+    "Brooklyn",
+    "Staten Island"
+   ],
+   "answer": 0,
+   "explanation": "The Holland and Lincoln Tunnels are Hudson River toll crossings between Manhattan and New Jersey.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 32,
+    "quote": "Holland Tunnel Toll Hudson River Manhattan - New Jersey"
+   }
+  },
+  {
+   "id": "TLC-144",
+   "topic": "Geography",
+   "question": "Where is Yankee Stadium?",
+   "options": [
+    "Atlantic Avenue, Brooklyn",
+    "Roosevelt Avenue, Queens",
+    "East 161st Street at River Avenue, the Bronx",
+    "West 125th Street, Manhattan"
+   ],
+   "answer": 2,
+   "explanation": "Yankee Stadium is at 1 E 161st St at River Ave in the Bronx. Citi Field is on Roosevelt Avenue in Queens.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 25,
+    "quote": "Yankee Stadium - 1 E 161st St at River Ave"
+   }
+  },
+  {
+   "id": "TLC-145",
+   "topic": "Geography",
+   "question": "Where is the Jacob K. Javits Center?",
+   "options": [
+    "Columbus Avenue at West 63rd Street",
+    "Fifth Avenue at 82nd Street",
+    "West 34th Street at 11th Avenue",
+    "East 42nd Street at First Avenue"
+   ],
+   "answer": 2,
+   "explanation": "The Javits Center is at 655 W 34th St at 11th Avenue, on Manhattan's far west side.",
+   "source": {
+    "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/driver_education_study_guide.pdf",
+    "title": "TLC Driver Education Course & Exam Study Guide (PDF)",
+    "page": 23,
+    "quote": "Jacob K. Javits Center - 655 W 34th St at 11th Ave"
+   }
+  }
+ ]
+}
