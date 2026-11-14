@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Secret Santa</title>
+<meta name="description" content="Open your private Secret Santa link to see who you're buying for. Made with Lantern Lab's free, no-sign-up Secret Santa generator.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0f4a37">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="You've got a Secret Santa link">
+<meta property="og:description" content="Tap to see who you're buying for. This link is just for you.">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/santa/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='12' width='24' height='17' rx='3' fill='%23b8283a'/%3E%3Crect x='2' y='8' width='28' height='6' rx='2' fill='%23d63c4f'/%3E%3Crect x='14' y='8' width='4' height='21' fill='%23e6b85c'/%3E%3Cpath d='M16 8c-3-6-9-5-7-1 1 2 7 1 7 1zm0 0c3-6 9-5 7-1-1 2-7 1-7 1z' fill='%23e6b85c'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="santa.css">
+<style>
+.stage{text-align:center}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.forwho{font-size:clamp(26px,7vw,36px);margin:6px 0 4px}
+.gift{position:relative;width:180px;height:190px;margin:26px auto 14px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.gift .box{position:absolute;left:14px;right:14px;bottom:0;height:120px;border-radius:10px;background:linear-gradient(160deg,#d33447,#9e1c2e);box-shadow:inset 0 -10px 0 rgba(0,0,0,.12),0 14px 24px rgba(120,20,30,.25)}
+.gift .lid{position:absolute;left:4px;right:4px;top:46px;height:34px;border-radius:8px;background:linear-gradient(160deg,#e2475a,#b8283a);box-shadow:0 4px 0 rgba(0,0,0,.12);transform-origin:20% 100%;z-index:2}
+.gift .rib-v{position:absolute;left:50%;width:24px;margin-left:-12px;top:0;bottom:0;background:linear-gradient(90deg,#e7b54f,#f6d27e,#e0a93e)}
+.gift .bow{position:absolute;left:50%;top:-30px;width:0;height:0}
+.gift .bow i{position:absolute;width:44px;height:30px;border:9px solid #e7b54f;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;top:0}
+.gift .bow i:first-child{right:2px;transform:rotate(-22deg)}
+.gift .bow i:last-child{left:2px;transform:rotate(22deg)}
+.gift .bow b{position:absolute;left:-10px;top:12px;width:20px;height:18px;border-radius:6px;background:#f2c561}
+.gift.idle{animation:bob 2.6s ease-in-out infinite}
+.gift.shake{animation:shake .55s ease-in-out}
+.gift.open .lid{animation:lidoff .7s cubic-bezier(.2,.8,.3,1) forwards}
+.gift.open .box{animation:sink .6s .25s ease-in forwards}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes shake{0%,100%{transform:rotate(0)}20%{transform:rotate(-7deg)}40%{transform:rotate(6deg)}60%{transform:rotate(-5deg)}80%{transform:rotate(3deg)}}
+@keyframes lidoff{to{transform:translate(-40px,-150px) rotate(-38deg);opacity:0}}
+@keyframes sink{to{transform:translateY(30px) scale(.85);opacity:0}}
+.reveal{display:none}
+.reveal.show{display:block;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{transform:scale(.6) translateY(20px);opacity:0}to{transform:none;opacity:1}}
+.target{font-size:clamp(40px,13vw,64px);color:var(--berry);margin:8px 0 2px;overflow-wrap:anywhere;line-height:1.05}
+.shh{color:var(--muted);font-size:14px;margin:6px 0 0}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 0;text-align:left}
+.fact{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.fact.wide{grid-column:1/-1}
+.fact small{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fact span{font-weight:600;font-size:17px;white-space:pre-wrap;overflow-wrap:anywhere}
+.fact.wide span{font-weight:400;font-size:16px}
+.wl{white-space:pre-wrap;overflow-wrap:anywhere;text-align:left;font-size:17px;line-height:1.6;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:14px}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
+@media (prefers-reduced-motion:reduce){.gift.idle,.gift.shake{animation:none}.reveal.show{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<main>
+  <div class="top">
+    <a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="12" width="24" height="17" rx="3" fill="#b8283a"/><rect x="2" y="8" width="28" height="6" rx="2" fill="#d63c4f"/><rect x="14" y="8" width="4" height="21" fill="#e6b85c"/><path d="M16 8c-3-6-9-5-7-1 1 2 7 1 7 1zm0 0c3-6 9-5 7-1-1 2-7 1-7 1z" fill="#e6b85c"/></svg>Secret Santa</a>
+    <span class="pill" id="grp-pill">Private link</span>
+  </div>
+
+  <section id="loading" class="card stage"><p class="sub">Opening your link...</p></section>
+
+  <section id="bad" class="card ribbon stage hidden">
+    <h1 class="serif forwho">Hmm, this link didn't open</h1>
+    <p class="sub" id="bad-why"></p>
+    <p class="sub">Some apps cut long links short. Try copying the whole link again, or ask your organizer to resend it.</p>
+  </section>
+
+  <section id="secret" class="card ribbon stage hidden">
+    <div id="gate">
+      <div class="kicker">This link is for</div>
+      <h1 class="serif forwho" id="who"></h1>
+      <div class="gift idle" id="gift" role="button" tabindex="0" aria-label="Unwrap your gift">
+        <div class="box"><div class="rib-v"></div></div>
+        <div class="lid"><div class="rib-v"></div><div class="bow"><i></i><i></i><b></b></div></div>
+      </div>
+      <button type="button" class="btn primary" id="unwrap"></button>
+      <p class="shh" id="notyou"></p>
+    </div>
+    <div class="reveal" id="reveal">
+      <div class="kicker">You're buying for</div>
+      <div class="serif target" id="target"></div>
+      <p class="shh">Shh. Keep it secret!</p>
+      <div class="facts" id="facts"></div>
+      <div class="bar" id="cal-bar"><button type="button" class="btn pine" id="cal">Add to calendar</button></div>
+    </div>
+  </section>
+
+  <section id="wish-make" class="card hidden">
+    <h2 class="serif" style="font-size:19px">Tell your Santa what you'd like</h2>
+    <p class="sub">Write a wishlist and send the link to the group chat or to your organizer to pass along. Your Santa will see it, and nobody learns who has whom.</p>
+    <label for="wish-text" class="sr">Your wishlist</label>
+    <textarea id="wish-text" maxlength="600" placeholder="Cozy socks (size L)&#10;Anything from the Ghibli shop&#10;Dark chocolate, never milk"></textarea>
+    <button type="button" class="btn pine" id="wish-go" style="width:100%;margin-top:10px">Create wishlist link</button>
+    <div id="wish-out" class="hidden">
+      <div class="note ok">Your wishlist link is ready. It only contains your wishlist, not your match.</div>
+      <div class="acts three" id="wish-acts" style="margin-top:10px"></div>
+    </div>
+  </section>
+
+  <section id="wish" class="card ribbon stage hidden">
+    <div class="kicker" id="wish-kicker">Wishlist</div>
+    <h1 class="serif forwho" id="wish-title"></h1>
+    <p class="sub" id="wish-sub">If you're their Secret Santa, here's what they'd love.</p>
+    <div class="wl" id="wish-body"></div>
+  </section>
+
+  <a class="made" href="./">Made with <b>Lantern Lab Secret Santa</b>: start your own group &rarr;<br><span class="sub" style="font-size:13px">Free, no sign-up, no emails needed</span></a>
+  <footer><a href="../">A Lantern Lab project</a></footer>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script src="santa.js"></script>
+<script src="go.js"></script>
+</body>
+</html>

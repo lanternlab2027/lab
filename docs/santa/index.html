@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secret Santa Generator: No Sign-Up, No Email Needed (Free)</title>
+<meta name="description" content="Free Secret Santa generator with no sign-up and no email addresses. Add names, set couples who can't draw each other, and text everyone a private link. Nothing is stored on a server.">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0f4a37">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/santa/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Secret Santa Generator: No Sign-Up, No Email Needed">
+<meta property="og:description" content="Draw names in seconds. Everyone gets a private link that shows only who they're buying for. No accounts, no emails, nothing stored.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/santa/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/santa/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lantern Lab Secret Santa: draw names without signing up">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Secret Santa Generator: No Sign-Up, No Email Needed">
+<meta name="twitter:description" content="Draw names in seconds. Everyone gets a private link that shows only who they're buying for.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/santa/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='12' width='24' height='17' rx='3' fill='%23b8283a'/%3E%3Crect x='2' y='8' width='28' height='6' rx='2' fill='%23d63c4f'/%3E%3Crect x='14' y='8' width='4' height='21' fill='%23e6b85c'/%3E%3Cpath d='M16 8c-3-6-9-5-7-1 1 2 7 1 7 1zm0 0c3-6 9-5 7-1-1 2-7 1-7 1z' fill='%23e6b85c'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="santa.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebApplication","name":"Lantern Lab Secret Santa","url":"https://lanternlab2027.github.io/lab/santa/",
+  "description":"Free Secret Santa generator with no sign-up and no email addresses. Each person gets a private link showing only who they're buying for.",
+  "applicationCategory":"LifestyleApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true,
+  "provider":{"@type":"Organization","name":"Lantern Lab","url":"https://lanternlab2027.github.io/lab/"}},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Do I need to sign up or collect everyone's email?","acceptedAnswer":{"@type":"Answer","text":"No. You type first names, and the app gives you one private link per person. Send each link by text, chat or email, however your group talks."}},
+  {"@type":"Question","name":"Can the organizer see who got whom?","acceptedAnswer":{"@type":"Answer","text":"The organizer page never shows the matches, and each match is scrambled inside its link. But anyone who opens a link sees what's in it, so the organizer should only open their own."}},
+  {"@type":"Question","name":"Is anything stored on a server?","acceptedAnswer":{"@type":"Answer","text":"No. The draw happens in your browser, and each match lives only in the part of the link after the # sign, which browsers never send to a server."}}
+ ]}
+]}
+</script>
+</head>
+<body>
+<main>
+  <div class="top">
+    <a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="12" width="24" height="17" rx="3" fill="#b8283a"/><rect x="2" y="8" width="28" height="6" rx="2" fill="#d63c4f"/><rect x="14" y="8" width="4" height="21" fill="#e6b85c"/><path d="M16 8c-3-6-9-5-7-1 1 2 7 1 7 1zm0 0c3-6 9-5 7-1-1 2-7 1-7 1z" fill="#e6b85c"/></svg>Secret Santa</a>
+    <span class="pill">Free &middot; no sign-up</span>
+  </div>
+
+  <section class="hero">
+    <h1 class="serif">Draw names. <em>No sign-up.</em></h1>
+    <p>A Secret Santa generator without email addresses or accounts. Everyone gets a private link that shows only who they're buying for.</p>
+    <ol class="steps"><li><b>1</b> Add names</li><li><b>2</b> Draw</li><li><b>3</b> Text each person their link</li></ol>
+  </section>
+
+  <form id="setup" class="card ribbon" novalidate autocomplete="off">
+    <h2 class="serif">Your group</h2>
+    <label for="group">Group name</label>
+    <input type="text" id="group" maxlength="60" placeholder="Smith family 2026">
+
+    <label>Who's in? <span class="opt">(at least 3)</span></label>
+    <div id="people" class="people"></div>
+    <button type="button" id="add-person" class="btn link">+ Add person</button>
+
+    <label class="check"><input type="checkbox" id="me-too"><span>I'm in the draw too <span class="opt" style="font-weight:400;color:var(--muted)">&ndash; I'll only open my own link</span></span></label>
+    <div id="me-wrap" class="hidden">
+      <label for="me">Which one is you?</label>
+      <select id="me"></select>
+    </div>
+
+    <label>Couples &amp; can't-draw pairs <span class="opt">(optional)</span></label>
+    <p class="sub" style="margin:0">People in a pair won't draw each other, in either direction.</p>
+    <div id="excls"></div>
+    <button type="button" id="add-excl" class="btn link">+ Add a pair</button>
+
+    <div class="row2">
+      <div><label for="budget">Budget <span class="opt">(optional)</span></label><input type="text" id="budget" maxlength="20" placeholder="$30"></div>
+      <div><label for="date">Exchange date <span class="opt">(optional)</span></label><input type="date" id="date"></div>
+    </div>
+    <label for="note">Note for everyone <span class="opt">(optional)</span></label>
+    <textarea id="note" maxlength="200" placeholder="We'll swap at Grandma's after dinner. Wrapped, please!"></textarea>
+
+    <div id="err" class="note err hidden" role="alert"></div>
+    <button type="submit" class="btn primary" style="margin-top:18px">Draw names</button>
+    <p class="sub" style="text-align:center;margin:10px 0 0">The draw happens on this device. Nothing is sent anywhere.</p>
+  </form>
+
+  <section id="results" class="card ribbon hidden" aria-live="polite">
+    <h2 class="serif" id="res-title">Names drawn!</h2>
+    <p class="sub" id="res-sub"></p>
+    <div class="note warn"><b>Please don't open anyone else's link.</b> We hid every match inside its link and never show them here, but whoever opens a link sees what's in it. That includes you.</div>
+    <div id="my-link" class="hidden"></div>
+    <ul id="links" class="links"></ul>
+    <div class="bar">
+      <button type="button" id="copy-all" class="btn ghost small">Copy all links</button>
+      <button type="button" id="redraw" class="btn ghost small">Start over</button>
+    </div>
+    <p class="sub" style="margin:12px 0 0">We don't keep a copy. Keep this tab open, or tap <b>Copy all links</b> and paste them somewhere safe, until everyone has theirs. The list shows names and links only, not matches.</p>
+  </section>
+
+  <section id="remind" class="card hidden">
+    <h2 class="serif" style="font-size:18px">Remind me a week before</h2>
+    <p class="sub">Optional. We'll email you once, a week before your exchange. We only send your email address and the date, never names.</p>
+    <form id="signup-form" class="excl" style="margin-top:0">
+      <label for="signup-email" class="sr">Email</label>
+      <input type="email" id="signup-email" required placeholder="you@example.com" autocomplete="email">
+      <button class="btn pine" type="submit" style="flex:none">Remind me</button>
+    </form>
+    <div id="signup-msg" class="sub" style="margin:8px 0 0"></div>
+  </section>
+
+  <section class="card faq">
+    <h2 class="serif" style="margin-bottom:8px">Questions</h2>
+    <details><summary>Do I need to sign up or collect emails?</summary><p>No. Type first names and you get one private link per person. Send each one by text, WhatsApp, email or carrier pigeon. Nobody makes an account.</p></details>
+    <details><summary>Can the organizer peek?</summary><p>This page never shows the matches, and each match is scrambled inside its link, so glancing at a link or a chat preview gives nothing away. But a link is a key: whoever opens it sees what it says. So we're honest about it: if you're organizing, open only your own link. Tick "I'm in the draw too" and we'll point you to yours.</p></details>
+    <details><summary>Is anything stored on a server?</summary><p>No. The draw runs in your browser using its secure random number generator. Each match lives only in the part of the link after the <code>#</code>, which browsers never send to any server. There's no database, no tracking and no ads.</p></details>
+    <details><summary>Can couples be kept from drawing each other?</summary><p>Yes. Add them as a pair. If your pairs make a draw impossible (say, 3 people where 2 are a couple), we'll tell you instead of guessing.</p></details>
+    <details><summary>What if someone loses their link?</summary><p>Resend it from this page if it's still open, or from the list you copied. If the list is gone, start over and send everyone new links, and ask them to ignore the old ones.</p></details>
+    <details><summary>Can people share a wishlist?</summary><p>Yes. On their reveal page, anyone can write a wishlist and get a link to drop in the group chat. Their Santa sees it, and nobody learns who has whom.</p></details>
+  </section>
+
+  <footer><a href="../">A Lantern Lab project</a> &middot; free, no ads, no tracking</footer>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script src="santa.js"></script>
+<script src="app.js"></script>
+<script>
+(function(){
+  // Optional reminder signup (Kit). Sends only the email and the exchange date, never names.
+  var KIT_KEY = "9OgTfHEbtX6FB0NWVjkgyg"; var TAG = "TAGID_SANTA";
+  var box = document.getElementById('remind');
+  if (!/^\d+$/.test(TAG)) { box.setAttribute('data-disabled', '1'); return; } // not configured yet: keep hidden
+  var f = document.getElementById('signup-form'), msg = document.getElementById('signup-msg');
+  f.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var email = document.getElementById('signup-email').value.trim();
+    var date = document.getElementById('date').value || '';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.textContent = 'Please enter a valid email.'; return; }
+    var btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Saving...';
+    try {
+      var r = await fetch('https://api.convertkit.com/v3/tags/' + TAG + '/subscribe', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({api_key: KIT_KEY, email: email, fields: {santa_exchange_date: date}})
+      });
+      if (!r.ok) throw new Error('status ' + r.status);
+      f.outerHTML = '<div class="note ok" style="margin:0"><b>You\'re set.</b> We\'ll nudge you a week before the exchange.</div>';
+      msg.textContent = '';
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Remind me';
+      msg.textContent = "Sorry, that didn't go through. Please try again in a moment.";
+    }
+  });
+})();
+</script>
+</body>
+</html>

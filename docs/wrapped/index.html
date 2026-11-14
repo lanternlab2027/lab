@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Group Chat Wrapped: WhatsApp Group Chat Wrapped, Free &amp; Private</title>
+<meta name="description" content="Your WhatsApp group chat wrapped: top yapper, night owl, ghost, emoji royalty and more as shareable cards. Works with WhatsApp and Telegram exports. Free, and your chat never leaves your device.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/wrapped/">
+<meta name="theme-color" content="#1b0b4d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Group Chat Wrapped: your WhatsApp group, wrapped">
+<meta property="og:description" content="Top yapper, night owl, the ghost, emoji royalty. Turn a WhatsApp or Telegram group export into shareable cards. Free, and 100% on your device.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/wrapped/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/wrapped/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Group Chat Wrapped: sample cards for a made-up group chat">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Group Chat Wrapped: your WhatsApp group, wrapped">
+<meta name="twitter:description" content="Turn a WhatsApp or Telegram group export into shareable Wrapped-style cards. Free, and 100% on your device.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/wrapped/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Group Chat Wrapped",
+ "url": "https://lanternlab2027.github.io/lab/wrapped/",
+ "applicationCategory": "EntertainmentApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Turn a WhatsApp or Telegram group chat export into shareable Wrapped-style cards. Runs entirely in your browser.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #12082e; --bg2: #1d0b4d; --ink: #fff; --muted: #c9c2e8; --line: rgba(255,255,255,.16);
+    --card: rgba(255,255,255,.07); --pink: #ff3d77; --violet: #8a3dff; --yellow: #ffe066; --green: #4dffb0;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); background-image: radial-gradient(1200px 600px at 10% -10%, #5b1fd6 0%, transparent 60%), radial-gradient(900px 500px at 110% 10%, #ff2e63 0%, transparent 55%); background-repeat: no-repeat; color: var(--ink); font-family: var(--font); line-height: 1.5; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--yellow); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 40px 0 16px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  h1 { font-size: clamp(44px, 12vw, 92px); line-height: .95; margin: 12px 0 14px; font-weight: 900; letter-spacing: -.03em; }
+  h1 .grad { background: linear-gradient(95deg, var(--yellow), var(--pink) 45%, #a77bff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lede { font-size: clamp(18px, 4.6vw, 22px); color: #ece8ff; max-width: 640px; margin: 0 0 18px; }
+  .privacy { display: inline-flex; gap: 10px; align-items: center; background: rgba(77,255,176,.12); border: 1px solid rgba(77,255,176,.5); color: #d6ffe9; padding: 10px 14px; border-radius: 14px; font-weight: 700; }
+  .privacy svg { flex: none; }
+  .drop { margin: 22px 0 8px; border: 2px dashed rgba(255,255,255,.35); border-radius: 22px; padding: 26px 18px; text-align: center; background: var(--card); transition: border-color .15s, background .15s; }
+  .drop.over { border-color: var(--yellow); background: rgba(255,224,102,.08); }
+  .drop p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+  .btn { appearance: none; border: 0; border-radius: 999px; font: 800 17px/1 var(--font); padding: 16px 24px; cursor: pointer; color: #1a0630; background: linear-gradient(95deg, var(--yellow), #ff9f6b 50%, var(--pink)); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label.upload:focus-within { outline: 3px solid var(--yellow); outline-offset: 3px; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid rgba(255,255,255,.4); }
+  .btn.small { padding: 10px 16px; font-size: 15px; min-height: 44px; }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  label.upload { display: inline-flex; }
+  label.upload input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .linkbtn { background: none; border: 0; color: var(--yellow); font: 700 16px var(--font); text-decoration: underline; cursor: pointer; padding: 12px 6px; min-height: 44px; }
+  .status { min-height: 1.5em; margin: 10px 0 0; color: #d6ffe9; font-weight: 600; }
+  .status.err { color: #ffb4c4; }
+  section { margin: 44px 0; }
+  h2 { font-size: clamp(26px, 6vw, 36px); margin: 0 0 12px; letter-spacing: -.02em; line-height: 1.1; }
+  h3 { margin: 0 0 6px; font-size: 19px; }
+  .controls { display: grid; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin: 14px 0 18px; }
+  .controls label.field { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+  .controls input[type=text], .controls select, form.signup input { font: 600 16px var(--font); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.3); background: rgba(0,0,0,.25); color: var(--ink); min-height: 48px; width: 100%; }
+  select option { color: #111; }
+  fieldset { border: 0; padding: 0; margin: 0; }
+  legend { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+  .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+  .seg label { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); cursor: pointer; font-weight: 700; font-size: 15px; min-height: 44px; }
+  .seg input { accent-color: var(--pink); width: 18px; height: 18px; margin: 0; }
+  .seg label:has(input:checked) { background: rgba(255,255,255,.16); border-color: var(--yellow); }
+  .deckbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 0 0 12px; }
+  .deckbar .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+  .card { margin: 0; scroll-snap-align: center; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 18px; display: block; box-shadow: 0 18px 40px rgba(0,0,0,.4); background: #222; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .bonus { display: grid; gap: 12px; background: linear-gradient(135deg, rgba(255,61,119,.22), rgba(138,61,255,.22)); }
+  .bonus ul { margin: 0; padding-left: 20px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 16px 18px; font-weight: 800; font-size: 18px; min-height: 48px; }
+  details > div { padding: 0 18px 16px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin: 6px 0; }
+  .grid2 { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } .controls { grid-template-columns: 1fr 1fr; } .controls .wide { grid-column: 1 / -1; } }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; }
+  .small-print { color: var(--muted); font-size: 14px; }
+  kbd { font: 700 14px var(--font); background: rgba(255,255,255,.14); padding: 1px 6px; border-radius: 6px; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="brand">A Lantern Lab project</div>
+    <h1>Group Chat <span class="grad">Wrapped</span></h1>
+    <p class="lede">Drop in your group chat export and get a deck of shareable cards: the top yapper, the night owl, the ghost, emoji royalty and more. Works with WhatsApp and Telegram exports.</p>
+    <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your chat never leaves your device.</span></div>
+
+    <div class="drop" id="drop">
+      <label class="upload btn" for="file">Choose your chat export
+        <input id="file" type="file" accept=".txt,.zip,.json,text/plain,application/zip,application/json">
+      </label>
+      <p>WhatsApp <b>.txt</b> or <b>.zip</b>, or Telegram <b>result.json</b>. You can also drag the file here.</p>
+      <button type="button" class="linkbtn" id="sample">or try it with a made-up sample chat</button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <p class="hint">Not sure how to get the file? <a href="#export">See how to export your chat</a>.</p>
+  </header>
+
+  <section id="results" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Your cards</h2>
+    <div class="controls">
+      <label class="field">Group name on the cards
+        <input type="text" id="title-input" maxlength="60" autocomplete="off">
+      </label>
+      <label class="field">Period
+        <select id="period"></select>
+      </label>
+      <fieldset class="wide">
+        <legend>Names on the cards</legend>
+        <div class="seg">
+          <label><input type="radio" name="names" value="full" checked> As in the chat</label>
+          <label><input type="radio" name="names" value="first"> First names only</label>
+          <label><input type="radio" name="names" value="initials"> Hide names (initials)</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="deckbar">
+      <b id="deck-count"></b>
+      <div class="acts">
+        <button type="button" class="btn small" id="share-all">Share all</button>
+        <button type="button" class="btn small ghost" id="zip-all">Download all (.zip)</button>
+        <button type="button" class="btn small ghost" id="reset">Start over</button>
+      </div>
+    </div>
+    <p class="hint">Swipe through the cards. Each one is a 1080&times;1920 image, sized for stories and for posting back in the group.</p>
+    <div id="deck"></div>
+
+    <div class="panel bonus" style="margin-top:22px">
+      <h3>Bonus card pack</h3>
+      <ul>
+        <li>An award card for every single member</li>
+        <li>Longest streak, double-texter, most-left-on-read</li>
+        <li>Roast mode and best-friend pairs</li>
+      </ul>
+      <div><button type="button" class="btn" id="unlock" disabled aria-disabled="true">Unlock bonus cards ($2.99) &middot; Coming soon</button></div>
+    </div>
+  </section>
+
+  <section id="export" aria-labelledby="export-h">
+    <h2 id="export-h">How to export your chat</h2>
+    <p>Export the chat <b>without media</b>. It's faster and the cards only need the text.</p>
+    <details open>
+      <summary>WhatsApp on iPhone</summary>
+      <div><ol class="steps">
+        <li>Open WhatsApp and go into the group chat.</li>
+        <li>Tap the <b>group name</b> at the top of the screen.</li>
+        <li>Scroll down and tap <b>Export chat</b>.</li>
+        <li>Choose <b>Without media</b>.</li>
+        <li>Pick <b>Save to Files</b>, then come back here, tap <b>Choose your chat export</b> and pick the <b>.zip</b> file.</li>
+      </ol></div>
+    </details>
+    <details>
+      <summary>WhatsApp on Android</summary>
+      <div><ol class="steps">
+        <li>Open WhatsApp and go into the group chat.</li>
+        <li>Tap the <b>&#8942;</b> menu (three dots, top right).</li>
+        <li>Tap <b>More</b>, then <b>Export chat</b>.</li>
+        <li>Choose <b>Without media</b>.</li>
+        <li>Save it to your phone (for example to <b>Drive</b> or <b>Files</b>), then upload the <b>.txt</b> or <b>.zip</b> here.</li>
+      </ol></div>
+    </details>
+    <details>
+      <summary>Telegram (Desktop app)</summary>
+      <div><ol class="steps">
+        <li>Telegram's phone apps can't export chats, so use Telegram Desktop on a computer.</li>
+        <li>Open the group, click the <b>&#8942;</b> menu, then <b>Export chat history</b>.</li>
+        <li>Untick photos, videos and files. Set <b>Format</b> to <b>Machine-readable JSON</b>.</li>
+        <li>Click <b>Export</b>, then upload the <b>result.json</b> file from the export folder.</li>
+      </ol></div>
+    </details>
+  </section>
+
+  <section id="how-we-know" aria-labelledby="hwk-h">
+    <h2 id="hwk-h">Your chat never leaves your device. How we know:</h2>
+    <div class="grid2">
+      <div class="panel"><h3>There's no server to send it to</h3><p>This page is plain files on GitHub Pages. Your export is read, counted and drawn into cards by JavaScript running in this browser tab. Close the tab and it's gone.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only lets it talk to one outside address: the optional email signup below, which sends just your email. No analytics, no trackers, no third-party scripts, no web fonts.</p></div>
+      <div class="panel"><h3>It's open source</h3><p>Every line is on GitHub: <a href="https://github.com/lanternlab2027/lab/tree/main/docs/wrapped" rel="noopener">lanternlab2027/lab &rarr; docs/wrapped</a>. The zip reader (JSZip) is copied into the folder, not loaded from a CDN.</p></div>
+      <div class="panel"><h3>Try it offline</h3><p>Load this page, turn on airplane mode, then upload your chat. It still works, because nothing needs the internet.</p></div>
+    </div>
+  </section>
+
+  <section id="notify" aria-labelledby="notify-h">
+    <div class="panel">
+      <h2 id="notify-h" style="font-size:26px">Get notified about new card packs</h2>
+      <p class="small-print">Optional. We only send your email address. Nothing from your chat is ever included.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small-print" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Notify me</button>
+      </form>
+      <p class="small-print" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Is this made by WhatsApp or Telegram?</summary><div><p>No. Group Chat Wrapped is an independent project that works with the export files those apps already let you make. It is not affiliated with or endorsed by WhatsApp, Meta or Telegram.</p></div></details>
+    <details><summary>Does it work with one-on-one chats?</summary><div><p>Yes, though a few cards (like the ghost) only appear in groups of three or more.</p></div></details>
+    <details><summary>My file says "couldn't find any messages"</summary><div><p>Make sure you uploaded the chat export itself: the <b>.txt</b> (or the <b>.zip</b> it came in) from WhatsApp, or <b>result.json</b> from Telegram Desktop with the JSON format selected. Exports from every phone language we know of are supported; if yours isn't, the open-source code is easy to fix.</p></div></details>
+    <details><summary>Is it free?</summary><div><p>Yes. The main deck is free. A bonus card pack is coming later.</p></div></details>
+  </section>
+
+  <footer>
+    <a href="../">A Lantern Lab project</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/wrapped" rel="noopener">GitHub</a>
+  </footer>
+</div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="parser.js"></script>
+<script src="stats.js"></script>
+<script src="demo.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
