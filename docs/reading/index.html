@@ -89,6 +89,15 @@
   .card-btns { display: flex; gap: 6px; }
   .hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
   .empty { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; font-weight: 600; }
+  .peek { display: block; position: relative; width: 100%; margin: 18px 0 0; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 18px; overflow: hidden; }
+  .peek img { display: block; width: 100%; height: 210px; object-fit: cover; object-position: center top; }
+  .peek span { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 12px 12px; background: linear-gradient(transparent, rgba(13,40,28,.94)); color: #f6eddb; font: 800 16px var(--font); text-align: center; }
+  .peek:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  @media (min-width: 760px) { .peek { max-width: 520px; } .peek img { height: 300px; } }
+  .pass { display: grid; gap: 10px; margin: 18px 0; }
+  .pass h3 { margin: 0; }
+  .pass .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pass-text { margin: 0; padding: 10px 12px; border-radius: 12px; background: rgba(29,42,33,.07); font-size: 15px; word-break: break-word; }
   .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
   .panel.dark { background: var(--green); color: #f6eddb; border-color: transparent; }
   .panel.dark h2 { color: #f6eddb; }
@@ -117,7 +126,7 @@
   <header class="hero">
     <div class="brand">A Lantern Lab project</div>
     <h1>Reading <em>Wrapped</em></h1>
-    <p class="lede">Your year in books, as a deck of shareable cards: books and pages read, your longest and top-rated reads, your most-read author, your genre mix, your reading rhythm and your reader personality. Works with Goodreads and StoryGraph exports.</p>
+    <p class="lede">Your year in books as shareable cards: books and pages read, your top-rated read, most-read author, genre mix and reader personality. Free, for Goodreads and StoryGraph.</p>
     <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your library never leaves your device.</span></div>
 
     <div class="drop" id="drop">
@@ -125,23 +134,15 @@
         <input id="file" type="file" accept=".csv,.zip,.txt,text/csv,application/zip,text/plain">
       </label>
       <p>Goodreads <b>goodreads_library_export.csv</b> or a StoryGraph export <b>.csv</b>. You can also drag the file here.</p>
-      <button type="button" class="linkbtn" id="sample">or try it with a made-up sample library</button>
+      <button type="button" class="btn ghost small" id="sample">See a sample deck first</button>
     </div>
     <p class="status" id="status" role="status" aria-live="polite"></p>
-    <p class="hint">Not sure how to get the file? <a href="#export">See how to export your library</a>.</p>
+    <p class="hint">Goodreads: open <a href="https://www.goodreads.com/review/import" rel="noopener">goodreads.com/review/import</a> and tap <b>Export Library</b> (on a phone, switch your browser to the desktop site first). <a href="#export">Steps for Goodreads and StoryGraph</a>.</p>
+    <button type="button" class="peek" id="peek" aria-label="See a sample deck"><img src="preview.jpg" width="720" height="491" alt="Sample cards: books finished, top-rated read and how you rate"><span>Tap to see a sample deck</span></button>
   </header>
 
   <section id="results" hidden aria-labelledby="results-h">
     <h2 id="results-h">Your cards</h2>
-    <div class="controls">
-      <label class="field">Year
-        <select id="year"></select>
-      </label>
-      <label class="field">Your name on the cards (optional)
-        <input type="text" id="name-input" maxlength="40" autocomplete="off" placeholder="e.g. Sam">
-      </label>
-      <label class="check wide" id="undated-wrap" hidden><input type="checkbox" id="undated"> <span id="undated-label">Count books marked read without a finish date, using the date you added them</span></label>
-    </div>
     <div class="deckbar">
       <b id="deck-count"></b>
       <div class="acts">
@@ -150,9 +151,28 @@
         <button type="button" class="btn small ghost" id="reset">Start over</button>
       </div>
     </div>
-    <p class="hint">Swipe through the cards. Each one is a 1080&times;1920 image, sized for stories.</p>
+    <p class="hint">Swipe through the cards (1080&times;1920, sized for stories). Want a different year, or your name on them? <a href="#controls">Adjust the cards</a>.</p>
     <div id="empty" class="empty" hidden></div>
     <div id="deck"></div>
+
+    <div class="panel pass" id="pass">
+      <h3>Pass it on</h3>
+      <p class="small-print" style="margin:0">Posting the cards? Add this so your reading friends can make their own:</p>
+      <p class="pass-text" id="pass-text"></p>
+      <div class="acts"><button type="button" class="btn small" id="pass-share">Share the link</button><button type="button" class="btn small ghost" id="pass-copy">Copy text + link</button></div>
+      <p class="small-print" id="pass-msg" role="status" aria-live="polite" style="margin:0"></p>
+    </div>
+
+    <div class="controls" id="controls">
+      <h3 class="wide" style="margin:0">Adjust the cards</h3>
+      <label class="field">Year
+        <select id="year"></select>
+      </label>
+      <label class="field">Your name on the cards (optional)
+        <input type="text" id="name-input" maxlength="40" autocomplete="off" placeholder="e.g. Sam">
+      </label>
+      <label class="check wide" id="undated-wrap" hidden><input type="checkbox" id="undated"> <span id="undated-label">Count books marked read without a finish date, using the date you added them</span></label>
+    </div>
   </section>
 
   <section id="export" aria-labelledby="export-h">

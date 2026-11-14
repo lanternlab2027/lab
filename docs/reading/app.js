@@ -15,7 +15,31 @@
   function say(msg, isError) {
     status.textContent = msg || '';
     status.className = 'status' + (isError ? ' err' : '');
+    if (isError) {
+      var help = document.createElement('a'); help.href = '#export'; help.textContent = 'How to export your library';
+      var demo = document.createElement('button'); demo.type = 'button'; demo.className = 'linkbtn'; demo.textContent = 'see a sample deck';
+      demo.addEventListener('click', showSample);
+      status.appendChild(document.createTextNode(' ')); status.appendChild(help);
+      status.appendChild(document.createTextNode(' or ')); status.appendChild(demo); status.appendChild(document.createTextNode('.'));
+    }
   }
+
+  // ---------- share links: ?ref= passthrough (URL only, nothing stored) ----------
+  // Opened with ?ref=X -> links this visitor shares carry ?ref=share-X (then share2-X, share3-X...),
+  // so a later analytics pass can follow the chain. No ref -> ?ref=share.
+  var APP_URL = 'https://lanternlab2027.github.io/lab/reading/';
+  function nextRef() {
+    var r = '';
+    try { r = new URLSearchParams(location.search).get('ref') || ''; } catch (e) { r = ''; }
+    r = r.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+    if (!r) return 'share';
+    var m = /^share(\d*)(?:-(.+))?$/.exec(r);
+    if (m) return 'share' + ((m[1] ? +m[1] : 1) + 1) + (m[2] ? '-' + m[2] : '');
+    return 'share-' + r;
+  }
+  var SHARE_URL = APP_URL + '?ref=' + encodeURIComponent(nextRef());
+  var SHARE_LEAD = 'My year in books, Wrapped. Make yours from your Goodreads or StoryGraph export (free, nothing uploaded):';
+  function shareText() { return SHARE_LEAD + ' ' + SHARE_URL; }
 
   // ---------- reading files ----------
   async function readFile(file) {
@@ -135,7 +159,7 @@
 
   async function shareFiles(files) {
     if (navigator.canShare && navigator.share && navigator.canShare({ files: files })) {
-      try { await navigator.share({ files: files, title: 'Reading Wrapped' }); return true; }
+      try { await navigator.share({ files: files, title: 'Reading Wrapped', text: shareText() }); return true; }
       catch (e) { if (e && e.name === 'AbortError') return true; }
     }
     return false;
@@ -167,9 +191,28 @@
   ['dragenter', 'dragover'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('over'); }); });
   ['dragleave', 'drop'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove('over'); }); });
   drop.addEventListener('drop', function (e) { var f = e.dataTransfer && e.dataTransfer.files[0]; handleFile(f); });
-  $('#sample').addEventListener('click', function () {
+  function showSample() {
     load(P.parseAny(window.ReadingDemo.goodreadsCSV(), 'sample.csv'));
     say('Showing a made-up sample library. Upload your own export to make yours.');
+  }
+  $('#sample').addEventListener('click', showSample);
+  $('#peek').addEventListener('click', showSample);
+
+  // ---------- pass it on ----------
+  $('#pass-text').textContent = shareText();
+  async function copyText(t) {
+    try { await navigator.clipboard.writeText(t); return true; } catch (e) {
+      var ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); var ok = false; try { ok = document.execCommand('copy'); } catch (e2) { ok = false; } ta.remove(); return ok;
+    }
+  }
+  $('#pass-copy').addEventListener('click', async function () {
+    $('#pass-msg').textContent = (await copyText(shareText())) ? 'Copied. Paste it with your cards.' : 'Couldn\u2019t copy. Press and hold the text above to copy it.';
+  });
+  var ps = $('#pass-share');
+  if (!navigator.share) ps.hidden = true;
+  ps.addEventListener('click', function () {
+    navigator.share({ title: 'Reading Wrapped', text: SHARE_LEAD, url: SHARE_URL }).catch(function () {});
   });
   yearSel.addEventListener('change', function () { state.year = yearSel.value === 'all' ? null : +yearSel.value; render(); });
   $('#undated').addEventListener('change', function () {

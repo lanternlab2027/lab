@@ -15,7 +15,30 @@
   function say(msg, isError) {
     status.textContent = msg || '';
     status.className = 'status' + (isError ? ' err' : '');
+    if (isError) {
+      var help = document.createElement('a'); help.href = '#export'; help.textContent = 'How to export your chat';
+      var demo = document.createElement('button'); demo.type = 'button'; demo.className = 'linkbtn'; demo.textContent = 'see a sample deck';
+      demo.addEventListener('click', showSample);
+      status.appendChild(document.createTextNode(' ')); status.appendChild(help);
+      status.appendChild(document.createTextNode(' or ')); status.appendChild(demo); status.appendChild(document.createTextNode('.'));
+    }
   }
+
+  // ---------- share links: ?ref= passthrough (URL only, nothing stored) ----------
+  // Opened with ?ref=X -> links this visitor shares carry ?ref=share-X (then share2-X, share3-X...),
+  // so a later analytics pass can follow the chain. No ref -> ?ref=share.
+  var APP_URL = 'https://lanternlab2027.github.io/lab/wrapped/';
+  function nextRef() {
+    var r = '';
+    try { r = new URLSearchParams(location.search).get('ref') || ''; } catch (e) { r = ''; }
+    r = r.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+    if (!r) return 'share';
+    var m = /^share(\d*)(?:-(.+))?$/.exec(r);
+    if (m) return 'share' + ((m[1] ? +m[1] : 1) + 1) + (m[2] ? '-' + m[2] : '');
+    return 'share-' + r;
+  }
+  var SHARE_URL = APP_URL + '?ref=' + encodeURIComponent(nextRef());
+  function shareText() { return 'Our group chat, Wrapped. Make one for your group (free, the chat never leaves your phone): ' + SHARE_URL; }
 
   // ---------- reading files ----------
   async function readFile(file) {
@@ -152,7 +175,7 @@
 
   async function shareFiles(files) {
     if (navigator.canShare && navigator.share && navigator.canShare({ files: files })) {
-      try { await navigator.share({ files: files, title: 'Group Chat Wrapped' }); return true; }
+      try { await navigator.share({ files: files, title: 'Group Chat Wrapped', text: shareText() }); return true; }
       catch (e) { if (e && e.name === 'AbortError') return true; }
     }
     return false;
@@ -184,10 +207,29 @@
   ['dragenter', 'dragover'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('over'); }); });
   ['dragleave', 'drop'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove('over'); }); });
   drop.addEventListener('drop', function (e) { var f = e.dataTransfer && e.dataTransfer.files[0]; handleFile(f); });
-  $('#sample').addEventListener('click', function () {
+  function showSample() {
     var parsed = P.parseAny(window.WrappedDemo.whatsappText(7), 'WhatsApp Chat with Weekend Crew.txt');
     load(parsed);
     say('Showing a made-up sample chat. Upload your own export to make yours.');
+  }
+  $('#sample').addEventListener('click', showSample);
+  $('#peek').addEventListener('click', showSample);
+
+  // ---------- pass it on ----------
+  $('#pass-text').textContent = shareText();
+  async function copyText(t) {
+    try { await navigator.clipboard.writeText(t); return true; } catch (e) {
+      var ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); var ok = false; try { ok = document.execCommand('copy'); } catch (e2) { ok = false; } ta.remove(); return ok;
+    }
+  }
+  $('#pass-copy').addEventListener('click', async function () {
+    $('#pass-msg').textContent = (await copyText(shareText())) ? 'Copied. Paste it with your cards.' : 'Couldn\u2019t copy. Press and hold the text above to copy it.';
+  });
+  var ps = $('#pass-share');
+  if (!navigator.share) ps.hidden = true;
+  ps.addEventListener('click', function () {
+    navigator.share({ title: 'Group Chat Wrapped', text: 'Our group chat, Wrapped. Make one for your group (free, the chat never leaves your phone):', url: SHARE_URL }).catch(function () {});
   });
   periodSel.addEventListener('change', function () { state.year = periodSel.value ? +periodSel.value : null; render(); });
   document.querySelectorAll('input[name="names"]').forEach(function (r) {

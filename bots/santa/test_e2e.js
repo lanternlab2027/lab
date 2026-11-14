@@ -35,13 +35,24 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
       await route.fulfill({status: 200, contentType: 'application/json', body: '{"subscription":{"id":1}}'});
     });
     const page = await ctx.newPage();
-    await page.goto(ORIGIN + '/santa/');
+    await page.goto(ORIGIN + '/santa/?ref=tiktok');
     check(await noHScroll(page), 'organizer page: no horizontal scroll');
     await page.screenshot({path: `${OUT}/santa-${w}-organizer-empty.png`, fullPage: true});
+
+    // "See what each person gets": sealed sample link, opens a preview reveal.
+    await page.waitForSelector('#preview:not(.hidden)');
+    const pv = await page.getAttribute('#preview', 'href');
+    check(/\/santa\/go\.html\?preview=1&ref=tiktok#s1\./.test(pv), 'preview link is a sealed sample that keeps ?ref');
+    { const pp = await ctx.newPage(); await pp.goto(pv); await pp.waitForSelector('#secret:not(.hidden)');
+      await pp.click('#unwrap'); await pp.waitForSelector('#reveal.show');
+      check(await pp.isVisible('#preview-note') && await pp.textContent('#target') === 'Sam' && await pp.getAttribute('a.made', 'href') === './?ref=tiktok', 'preview reveal shows the sample + preview note + start-your-own link');
+      if (w === 390) { await pp.waitForTimeout(3300); await pp.screenshot({path: `${OUT}/santa-${w}-preview.png`, fullPage: true}); }
+      await pp.close(); }
 
     // Impossible draw: 3 people, one couple.
     const inputs = () => page.locator('#people input');
     await inputs().nth(0).fill('Ann'); await inputs().nth(1).fill('Ben'); await inputs().nth(2).fill('Cy');
+    await page.click('#extras summary');
     await page.click('#add-excl');
     await page.locator('#excls .excl').nth(0).locator('select').nth(0).selectOption('Ann');
     await page.locator('#excls .excl').nth(0).locator('select').nth(1).selectOption('Ben');
@@ -81,7 +92,7 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
     check(!/buying for|→|->/i.test(resText), 'results page shows no matches');
     check(await page.isVisible('#remind'), 'reminder box shown (date set)');
     const myHref = await page.getAttribute('#my-link a', 'href');
-    check(/\/santa\/go\.html#s1\./.test(myHref) && await page.locator('#links .link-row').count() === 5, 'organizer gets own "Open my link" + 5 rows for others');
+    check(/\/santa\/go\.html\?ref=share-tiktok#s1\./.test(myHref) && await page.locator('#links .link-row').count() === 5, 'organizer gets own "Open my link" + 5 rows for others');
     const links = {Alex: myHref};
     for (const rowEl of await page.locator('#links .link-row').all()) {
       const name = await rowEl.locator('b').textContent();
@@ -124,6 +135,7 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
         await p.click('#wish-go');
         await p.waitForSelector('#wish-out:not(.hidden)');
         const wurl = await p.getAttribute('#wish-acts', 'data-url');
+        check(/\/santa\/go\.html\?ref=share2-tiktok#w1\./.test(wurl), 'wishlist link carries the next ref step (share2-tiktok)');
         await p.screenshot({path: `${OUT}/santa-${w}-wishlist-made.png`, fullPage: true});
         const wp = await ctx.newPage(); await wp.goto(wurl); await wp.waitForSelector('#wish:not(.hidden)');
         const wt = await wp.innerText('#wish');
@@ -132,7 +144,7 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
         await wp.screenshot({path: `${OUT}/santa-${w}-wishlist-view.png`, fullPage: true}); await wp.close();
       }
       const made = await p.getAttribute('a.made', 'href');
-      check(made === './' && /start your own group/.test(await p.textContent('a.made')), `${name}: viral footer links to /santa/`);
+      check(made === './?ref=share-tiktok' && /start your own group/i.test(await p.textContent('a.made')), `${name}: "start your own group" links to /santa/ and keeps ?ref`);
       await p.close();
     }
     const receivers = Object.values(revealed);

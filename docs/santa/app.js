@@ -79,7 +79,32 @@
     }
   }
   function save() { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) { /* private mode: fine */ } }
-  const linkBase = () => new URL('go.html', location.href).href.split('#')[0];
+  // ?ref= passthrough (URL only): opened with ?ref=X, the links we generate carry ?ref=share-X
+  // (then share2-X, share3-X...) so a later analytics pass can follow the chain. No ref -> share.
+  function inRef() {
+    let r = '';
+    try { r = new URLSearchParams(location.search).get('ref') || ''; } catch (e) { r = ''; }
+    return r.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+  }
+  function nextRef() {
+    const r = inRef();
+    if (!r) return 'share';
+    const m = /^share(\d*)(?:-(.+))?$/.exec(r);
+    if (m) return 'share' + ((m[1] ? +m[1] : 1) + 1) + (m[2] ? '-' + m[2] : '');
+    return 'share-' + r;
+  }
+  const pageBase = () => new URL('go.html', location.href).href.split(/[?#]/)[0];
+  const linkBase = () => pageBase() + '?ref=' + encodeURIComponent(nextRef());
+
+  // "See what each person gets": a sealed sample link with made-up names, opened in a new tab.
+  (async () => {
+    const a = $('preview'); if (!a) return;
+    const d = new Date(); d.setDate(d.getDate() + 21);
+    const iso = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    const frag = await S.seal({k: 's', g: 'Sample group', n: 'Alex', t: 'Sam', b: '$30', d: iso, m: 'Wrapped, please! (This is a made-up example.)'}, 's1');
+    a.href = pageBase() + '?preview=1' + (inRef() ? '&ref=' + encodeURIComponent(inRef()) : '') + '#' + frag;
+    a.classList.remove('hidden');
+  })();
   function message(l) {
     const g = state.group ? ' "' + state.group + '"' : '';
     return 'Hi ' + l.name + '! You\'re in our' + g + ' Secret Santa. Open your private link to see who you\'re buying for (it\'s only for you, so don\'t share it): ' + l.url;
