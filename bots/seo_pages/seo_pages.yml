@@ -1,0 +1,54 @@
+# Draft GitHub Actions workflow. NOT installed. To enable, copy to .github/workflows/seo_pages.yml.
+# Rebuilds the static building pages (docs/b/*.html) and docs/sitemap-buildings.xml once a week
+# from NYC Open Data, then commits the result so GitHub Pages republishes it.
+name: building-pages
+
+on:
+  schedule:
+    - cron: "43 9 * * 1"   # Mondays 09:43 UTC (off the hour to avoid queue delays)
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Number of buildings in the set"
+        required: false
+        default: "500"
+
+permissions:
+  contents: write   # to commit the regenerated pages
+
+concurrency:
+  group: building-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch NYC Open Data and render pages
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}   # optional; raises rate limits
+        run: python bots/seo_pages/build.py all --limit "${{ github.event.inputs.limit || '500' }}"
+
+      - name: Sanity check before committing
+        run: |
+          n=$(ls docs/b/*.html | grep -cE '/[0-9]{10}\.html$')
+          echo "building pages: $n"
+          # Refuse to publish a broken or near-empty build (e.g. an API outage).
+          test "$n" -ge 400
+          # Privacy guard: no apartment references may appear in published pages.
+          ! grep -lE '\bAPT\.? ?[0-9A-Z]{1,4}\b' docs/b/*.html docs/b/n/*.html
+
+      - name: Commit regenerated pages
+        run: |
+          git config user.name  "building-pages-bot"
+          git config user.email "building-pages-bot@users.noreply.github.com"
+          git add -A docs/b docs/sitemap-buildings.xml docs/sitemap-index.xml
+          git diff --cached --quiet || git commit -m "building pages: weekly refresh $(date -u +%F)"
+          git push
