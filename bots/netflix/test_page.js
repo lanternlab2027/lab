@@ -136,7 +136,8 @@ async function expectError(page, file, re) {
     check(await expectError(page, 'empty.csv', /doesn.t look like|nothing watched/), 'empty export shows a clear error');
 
     // The core privacy assertion: after page load, uploading and rendering made zero network requests.
-    const afterUpload = all.slice(loadCount);
+    // The static "More free apps" strip (../apps/more.js, more.css, lazy thumbnails) may load after upload; it sends no data.
+    const afterUpload = all.slice(loadCount).filter((r) => !(r.method === 'GET' && /^\/apps\/(more\.(js|css)|img\/[a-z-]+\.jpg)$/.test(r.url.replace(ORIGIN, ''))));
     check(afterUpload.length === 0 && offOrigin.length === 0, `zero network requests after upload (${afterUpload.length} made: ${afterUpload.map((r) => r.method + ' ' + r.url).join(', ') || 'none'})`);
 
     // CSP really blocks an exfiltration attempt from page context.

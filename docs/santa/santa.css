@@ -52,7 +52,7 @@ input[type=date]{appearance:none;-webkit-appearance:none}
 .person{display:flex;gap:8px;align-items:center}
 .person .num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--gold-soft);color:var(--warn);font-size:13px;font-weight:700;display:grid;place-items:center}
 .person input{flex:1;min-width:0}
-.x{flex:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--muted);font-size:20px;line-height:1;cursor:pointer}
+.x{flex:none;width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--muted);font-size:20px;line-height:1;cursor:pointer}
 .x:hover{color:var(--berry);border-color:var(--berry)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:700;font-size:16px;border-radius:12px;border:1.5px solid transparent;padding:12px 18px;cursor:pointer;text-decoration:none;min-height:46px;transition:transform .08s ease,background .15s}
 .btn:active{transform:scale(.98)}
@@ -61,8 +61,8 @@ input[type=date]{appearance:none;-webkit-appearance:none}
 .btn.pine{background:var(--pine);color:var(--pine-ink)}
 .btn.ghost{background:transparent;border-color:var(--line);color:var(--ink)}
 .btn.ghost:hover{border-color:var(--pine)}
-.btn.small{font-size:14px;padding:8px 12px;min-height:38px;border-radius:10px}
-.btn.link{background:none;border:none;color:var(--pine);padding:8px 0;font-weight:600;min-height:0}
+.btn.small{font-size:14px;padding:8px 12px;min-height:44px;border-radius:10px}
+.btn.link{background:none;border:none;color:var(--pine);padding:8px 0;font-weight:600;min-height:44px}
 .btn[disabled]{opacity:.55;cursor:default}
 .check{display:flex;gap:10px;align-items:flex-start;font-weight:500;margin:16px 0 0;cursor:pointer}
 .check input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--pine);flex:none}
@@ -85,7 +85,7 @@ input[type=date]{appearance:none;-webkit-appearance:none}
 .status{font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap}
 .sent .status{color:var(--ok)}
 .acts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
-.acts .btn{padding:8px 4px;font-size:13px;min-height:40px;border-radius:10px;background:var(--card);border-color:var(--line);color:var(--ink);font-weight:600}
+.acts .btn{padding:8px 4px;font-size:13px;min-height:44px;border-radius:10px;background:var(--card);border-color:var(--line);color:var(--ink);font-weight:600}
 .acts .btn:hover{border-color:var(--pine)}
 .acts.three{grid-template-columns:repeat(3,1fr)}
 .bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
