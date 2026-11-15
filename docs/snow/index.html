@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.weather.gov https://geocoding-api.open-meteo.com https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Snow Day Calculator: Snow Day Predictor 2026 for Your ZIP (Free)</title>
+<meta name="description" content="Free snow day calculator: enter a ZIP or town to see tomorrow's snow-day chance from National Weather Service forecast snow, ice, timing, wind chill and winter alerts. A snow day predictor for 2026-27 with a card to share.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/snow/">
+<meta name="theme-color" content="#0b1a33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Snow Day Odds: tomorrow's snow-day chance for your ZIP">
+<meta property="og:description" content="Snow day calculator from National Weather Service forecast data: overnight snow, ice, timing, cold and winter alerts. Free, just for fun.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/snow/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/snow/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Snow Day Odds: will school be canceled tomorrow? A snow-day chance meter.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Snow Day Odds: tomorrow's snow-day chance for your ZIP">
+<meta name="twitter:description" content="Snow day predictor from NWS forecast snow, ice, timing and alerts. Free, just for fun.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/snow/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Snow Day Odds",
+ "alternateName": "Snow Day Calculator",
+ "url": "https://lanternlab2027.github.io/lab/snow/",
+ "applicationCategory": "UtilitiesApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "A snow day calculator and predictor: tomorrow's snow-day chance for a US ZIP or town, from National Weather Service forecast data, with a transparent formula.",
+ "isAccessibleForFree": true,
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #eef4fb; --sheet: #ffffff; --ink: #0f1d33; --muted: #4e5d75; --line: #d3deec;
+    --night: #0b1a33; --night2: #1d3a66; --ice: #2f7fd0; --hot: #b26a00; --hot-bg: #fff3d6;
+    --accent: #0f1d33; --accent-ink: #ffffff; --focus: #2a62c9; --err: #a33a2a;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #08121f; --sheet: #0f1d30; --ink: #eaf2ff; --muted: #a7b6cc; --line: #233650;
+      --ice: #8cc8ff; --hot: #ffd166; --hot-bg: #3a2e12; --accent: #eaf2ff; --accent-ink: #08121f; --focus: #8fb0ff; --err: #ffb4a3;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #08121f; --sheet: #0f1d30; --ink: #eaf2ff; --muted: #a7b6cc; --line: #233650;
+    --ice: #8cc8ff; --hot: #ffd166; --hot-bg: #3a2e12; --accent: #eaf2ff; --accent-ink: #08121f; --focus: #8fb0ff; --err: #ffb4a3;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+  header.hero { background: linear-gradient(180deg, var(--night), var(--night2)); color: #fff; padding: 26px 0 30px; position: relative; overflow: hidden; }
+  header.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+    background-image: radial-gradient(circle, #fff 1.5px, transparent 2px), radial-gradient(circle, #fff 1px, transparent 1.5px);
+    background-size: 90px 90px, 53px 53px; background-position: 10px 20px, 30px 5px; }
+  header.hero .wrap { position: relative; }
+  .brand { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: #b9c8e0; text-decoration: none; }
+  h1 { font-size: clamp(36px, 10vw, 62px); line-height: 1; letter-spacing: -.03em; margin: 10px 0 12px; font-weight: 900; }
+  .lede { margin: 0 0 18px; color: #d4e0f2; font-size: 18px; max-width: 600px; }
+
+  form.find { background: var(--sheet); color: var(--ink); border-radius: 18px; padding: 14px; display: grid; gap: 12px; box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+  form.find label.lab { display: block; font-weight: 800; font-size: 14px; margin-bottom: 4px; }
+  .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+  input[type=text], input[type=email] { width: 100%; font: 600 17px var(--font); padding: 12px; min-height: 48px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+  .btn { appearance: none; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font: 800 17px var(--font); padding: 12px 18px; min-height: 48px; cursor: pointer; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn[disabled] { opacity: .55; cursor: progress; }
+  .linkbtn { background: none; border: 0; padding: 6px 0; min-height: 40px; font: 700 15px var(--font); color: var(--ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  fieldset.region { border: 0; margin: 0; padding: 0; }
+  fieldset.region legend { font-weight: 800; font-size: 14px; margin-bottom: 4px; padding: 0; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .seg label { display: block; cursor: pointer; }
+  .seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .seg span { display: block; text-align: center; padding: 10px 8px; min-height: 48px; border-radius: 10px; border: 1px solid var(--line); font-weight: 800; font-size: 15px; line-height: 1.2; }
+  .seg span small { display: block; font-weight: 600; color: var(--muted); font-size: 12.5px; }
+  .seg input:checked + span { border: 2px solid var(--ink); background: var(--bg); }
+  .seg input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .status { min-height: 1.5em; margin: 14px 0 0; font-weight: 700; color: #fff; }
+  .status.err { color: #ffd0c4; }
+
+  section { margin: 28px 0; }
+  h2 { font-size: 26px; line-height: 1.15; margin: 0 0 10px; letter-spacing: -.01em; }
+  h3 { font-size: 19px; margin: 16px 0 6px; }
+  .sheet { background: var(--sheet); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+
+  .result-head { display: grid; gap: 16px; align-items: center; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .result-head { grid-template-columns: 220px 1fr; } }
+  .gauge { position: relative; width: 200px; height: 200px; margin: 0 auto; }
+  .gauge svg { width: 100%; height: 100%; display: block; }
+  .gauge .num { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; }
+  .gauge b { font-size: 64px; font-weight: 900; line-height: 1; letter-spacing: -.03em; }
+  .gauge b small { font-size: 30px; }
+  .gauge i { display: block; font-style: normal; font-size: 13px; color: var(--muted); font-weight: 700; margin-top: 4px; }
+  .place { font-size: clamp(26px, 7vw, 36px); line-height: 1.1; margin: 0 0 4px; letter-spacing: -.015em; }
+  .when { color: var(--muted); margin: 0; }
+  .verdict { font-weight: 900; font-size: 22px; margin: 8px 0 0; }
+  .verdict.hi { color: var(--hot); }
+  ul.reasons { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
+  ul.reasons li { background: var(--bg); border-radius: 12px; padding: 10px 12px 10px 34px; position: relative; font-weight: 700; }
+  ul.reasons li::before { content: ""; position: absolute; left: 13px; top: 18px; width: 9px; height: 9px; border-radius: 50%; background: var(--ice); }
+  .note { border-left: 4px solid var(--ice); background: var(--bg); padding: 10px 12px; border-radius: 0 10px 10px 0; margin: 12px 0 0; font-size: 15px; }
+  .disclaimer { background: var(--hot-bg); border-radius: 12px; padding: 10px 12px; font-size: 15px; margin: 14px 0 0; font-weight: 600; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin: 14px 0 0; }
+  .facts div { background: var(--bg); border-radius: 12px; padding: 8px 12px; }
+  .facts dt { font-size: 13px; color: var(--muted); font-weight: 700; }
+  .facts dd { margin: 0; font-weight: 800; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+  .cardwrap { margin: 16px 0 0; }
+  .cardwrap canvas { width: 100%; max-width: 360px; height: auto; aspect-ratio: 4 / 5; display: block; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+
+  .signup form { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .signup input[type=email] { flex: 1 1 220px; width: auto; }
+  .signup input.zip { flex: 0 0 110px; width: 110px; }
+  .small { font-size: 14px; color: var(--muted); }
+
+  .how table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 6px 0; }
+  .how th, .how td { text-align: left; border-bottom: 1px solid var(--line); padding: 7px 6px; vertical-align: top; }
+  .how code { font: 700 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--bg); border-radius: 6px; padding: 1px 6px; }
+  .tablewrap { overflow-x: auto; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  .makeyours { font-size: 16px; color: var(--ink); margin-bottom: 10px; }
+  .makeyours code { font: 700 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-weight: 700; opacity: 0; pointer-events: none; transition: opacity .2s; max-width: calc(100% - 32px); }
+  .toast.on { opacity: 1; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="brand" href="../">Lantern Lab</a>
+    <h1>Snow Day Odds</h1>
+    <p class="lede">Will school be canceled tomorrow? Enter your ZIP or town to see a snow-day chance built from the National Weather Service forecast: overnight snow, ice, timing, cold and winter alerts.</p>
+    <form class="find" id="find" novalidate>
+      <div>
+        <label class="lab" for="q">ZIP code or town</label>
+        <div class="row">
+          <input id="q" name="q" type="text" autocomplete="postal-code" autocapitalize="words" enterkeyhint="go" placeholder="14201 or Buffalo, NY" required>
+          <button class="btn" id="go" type="submit">Check</button>
+        </div>
+        <button class="linkbtn" id="geo" type="button">Use my location</button>
+      </div>
+      <fieldset class="region">
+        <legend>Where you live</legend>
+        <div class="seg">
+          <label><input type="radio" name="region" value="used" checked><span>Snow-used<small>Plows ready, e.g. Buffalo</small></span></label>
+          <label><input type="radio" name="region" value="rare"><span>Rarely sees snow<small>An inch is news, e.g. Atlanta</small></span></label>
+        </div>
+      </fieldset>
+    </form>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="result" hidden aria-labelledby="place">
+    <article class="sheet">
+      <div class="result-head">
+        <div class="gauge" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="84" fill="none" stroke="var(--line)" stroke-width="16" stroke-dasharray="395.8 527.8" stroke-linecap="round" transform="rotate(135 100 100)"/><circle id="arc" cx="100" cy="100" r="84" fill="none" stroke="var(--ice)" stroke-width="16" stroke-dasharray="0 527.8" stroke-linecap="round" transform="rotate(135 100 100)"/></svg>
+          <div class="num"><div><b id="pct">0<small>%</small></b><i>snow-day chance</i></div></div>
+        </div>
+        <div>
+          <h2 class="place" id="place"></h2>
+          <p class="when" id="when"></p>
+          <p class="verdict" id="verdict"></p>
+          <p class="sr" id="sr-chance"></p>
+        </div>
+      </div>
+      <ul class="reasons" id="reasons"></ul>
+      <div id="notes"></div>
+      <dl class="facts" id="facts"></dl>
+      <p class="disclaimer">Just for fun. Only your school district decides; check their official announcements.</p>
+      <div class="actions">
+        <button class="btn" id="share" type="button">Make a share card</button>
+        <button class="btn ghost" id="copy" type="button">Copy link</button>
+      </div>
+      <div class="cardwrap" id="cardwrap" hidden>
+        <canvas id="card" width="1080" height="1350" role="img" aria-label="Shareable snow-day odds card"></canvas>
+        <div class="actions">
+          <button class="btn" id="card-share" type="button">Share image</button>
+          <button class="btn ghost" id="card-save" type="button">Save image</button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="sheet signup" id="alert" aria-labelledby="alert-h" hidden>
+    <h2 id="alert-h" style="font-size:22px">Get a free email when odds look high</h2>
+    <p class="small" style="margin:0">Optional. Just your email and ZIP; no texts, no name. If you're under 13, ask a parent or guardian to sign up instead. Unsubscribe anytime.</p>
+    <form id="signup-form" novalidate>
+      <label class="sr" for="signup-email">Email</label>
+      <input id="signup-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      <label class="sr" for="signup-zip">ZIP code</label>
+      <input id="signup-zip" class="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" placeholder="ZIP" required>
+      <button class="btn" type="submit">Email me</button>
+    </form>
+    <p class="small" id="signup-msg" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-h">
+    <h2 id="how-h">How we estimate</h2>
+    <p>This is a simple points table, not artificial intelligence. Everything it uses comes from the National Weather Service forecast for the 2.5 km grid square around your location, and every number is below so you can check our math.</p>
+    <h3>1. The window: 6pm tonight to 8am tomorrow</h3>
+    <p>We add up the NWS forecast for snow and ice from 6pm the evening before until 8am on the school morning, in your local time. After midnight and before 5am, &ldquo;tomorrow&rdquo; means the morning that's coming up.</p>
+    <h3>2. Points</h3>
+    <div class="tablewrap">
+    <table>
+      <thead><tr><th>Input</th><th>Snow-used area</th><th>Rarely sees snow</th></tr></thead>
+      <tbody>
+        <tr><td>Snow: <code>50 &times; inches &divide; T</code>, up to 75</td><td>T = 6 in.</td><td>T = 1.5 in.</td></tr>
+        <tr><td>Ice: <code>50 &times; inches &divide; T</code>, up to 60</td><td>T = 0.25 in.</td><td>T = 0.1 in.</td></tr>
+        <tr><td>Coldest wind chill (or low) overnight</td><td>&minus;25&deg;F or colder: 25; &minus;15&deg;F: 10</td><td>0&deg;F or colder: 20; 10&deg;F: 10</td></tr>
+        <tr><td>Winter Weather Advisory</td><td>8</td><td>15</td></tr>
+        <tr><td>Blizzard or Ice Storm Warning</td><td colspan="2">25</td></tr>
+        <tr><td>Winter Storm Warning</td><td colspan="2">20</td></tr>
+        <tr><td>Extreme Cold or Wind Chill Warning</td><td colspan="2">15</td></tr>
+        <tr><td>Winter Storm Watch</td><td colspan="2">6</td></tr>
+        <tr><td>Cold Weather or Wind Chill Advisory</td><td colspan="2">5</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">Alert points are added together but capped at 30. Alerts count if they're active for your point and haven't ended before tonight.</p>
+    <h3>3. Adjustments</h3>
+    <ul>
+      <li><b>Timing.</b> If the snow stops before 5am (less than 0.1 in. falls from 5am to 8am), the overnight snow counts at 60%, because crews have time to plow before buses run.</li>
+      <li><b>Confidence.</b> Snow and ice points are multiplied by <code>0.6 + 0.4 &times; min(1, rain-or-snow chance &divide; 70%)</code>, using the highest NWS chance of precipitation in the window.</li>
+    </ul>
+    <h3>4. The chance</h3>
+    <p><code>chance = snow + ice + cold + alerts</code>, rounded and kept between 1% and 99%. We never say 0% or 100%: districts surprise everyone.</p>
+    <p>Example: 6 in. of snow still falling at 6am in a snow-used town with a Winter Storm Warning is 50 + 20 = <b>70%</b>. The same 6 in. near Atlanta maxes out the snow points (75) for <b>95%</b>.</p>
+    <h3>Why you pick &ldquo;where you live&rdquo;</h3>
+    <p>The same 3 inches means different things in Buffalo and Atlanta. Places that get snow every winter have the plows, salt and habits to keep going; places that rarely see it often close for an inch or a glaze of ice. We pre-select a guess based on how far north you are, but you know your town better.</p>
+    <h3>What it doesn't know</h3>
+    <p>Your district's road crews, bus routes, rural vs. city roads, how many snow days are left in the calendar, and holidays. Forecasts also change; check again in the evening and the morning.</p>
+    <p class="disclaimer">Just for fun. Only your school district decides; check their official announcements.</p>
+    <h3>Data</h3>
+    <ul class="small">
+      <li>Forecast and alerts: <a href="https://www.weather.gov/documentation/services-web-api" rel="noopener">National Weather Service API</a> (api.weather.gov): gridded forecast <code>snowfallAmount</code>, <code>iceAccumulation</code>, <code>temperature</code>, <code>windChill</code>, <code>probabilityOfPrecipitation</code>, and active alerts. Public domain.</li>
+      <li>ZIP locations: U.S. Census Bureau 2026 Gazetteer Files, ZIP Code Tabulation Areas (internal points). Public domain. Loaded from this site.</li>
+      <li>Town names you type: <a href="https://open-meteo.com/en/docs/geocoding-api" rel="noopener">Open-Meteo geocoding</a>; location data based on <a href="https://www.geonames.org/" rel="noopener">GeoNames</a> (CC BY 4.0).</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="makeyours"><b>Make yours:</b> <code>lanternlab2027.github.io/lab/snow</code> <button type="button" class="btn ghost" id="share-tool" style="min-height:40px;padding:6px 12px;font-size:15px">Share this tool</button></div>
+  <p><b>Not affiliated with the National Weather Service</b> or NOAA. Forecast and alert data come from the NWS API, used as published; we turn it into a for-fun estimate. For official forecasts, visit <a href="https://www.weather.gov/" rel="noopener">weather.gov</a>.</p>
+  <p>No tracking, no ads, no login. Your location goes straight from your browser to the National Weather Service (and to Open-Meteo only if you type a town name). &ldquo;Use my location&rdquo; asks first and isn't saved or shared.</p>
+  <p><a href="../">A Lantern Lab project</a> &middot; <a href="../apps/">More free apps &rarr;</a></p>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="model.js"></script>
+<script src="nws.js"></script>
+<script src="card.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>
