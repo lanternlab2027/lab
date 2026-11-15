@@ -184,12 +184,42 @@
       rr(x, b.x, b.y, b.w, b.w, rad); x.fillStyle = i === m ? t.freeBg : t.cell; x.fill();
       if (inBingo[i] && i !== m) { x.save(); rr(x, b.x + gap * 0.6, b.y + gap * 0.6, b.w - gap * 1.2, b.w - gap * 1.2, rad * 0.8); x.lineWidth = gap * 1.1; x.strokeStyle = t.accent; x.stroke(); x.restore(); }
       if (card.checked[i] && i !== m) {
-        x.save(); x.globalAlpha = t.stamp ? 1 : 0.22; x.fillStyle = t.stamp || t.accent; x.beginPath(); x.arc(b.x + b.w / 2, b.y + b.w / 2, b.w * 0.4, 0, 7); x.fill();
-        x.globalAlpha = 0.9; x.lineWidth = b.w * 0.03; x.strokeStyle = t.accent; x.stroke(); x.restore();
+        // stamp: a rounded rectangle covering most of the square, so any goal text fits inside it
+        var si = b.w * 0.075;
+        x.save(); x.globalAlpha = t.stamp ? 1 : 0.22; x.fillStyle = t.stamp || t.accent; rr(x, b.x + si, b.y + si, b.w - si * 2, b.w - si * 2, rad * 0.8); x.fill();
+        x.globalAlpha = 0.9; x.lineWidth = b.w * 0.02; x.strokeStyle = t.accent; x.stroke(); x.restore();
       }
     }
-    // pass 2: bingo lines, under the text
-    x.save(); x.strokeStyle = t.accent; x.globalAlpha = 0.3; x.lineCap = 'round'; x.lineWidth = cell * 0.06;
+    // text layout first, so the bingo line can be kept out of the text
+    var lay = [], holes = [];
+    for (i = 0; i < n * n; i++) {
+      var p = box(i), txt = card.goals[i];
+      if (i === m) {
+        var ff = fit(x, txt || 'FREE', p.w * 0.84, p.w * 0.32, p.w * 0.17, p.w * 0.075, SANS, 900);
+        lay[i] = { f: ff, weight: 900, lh: ff.size * 1.12, top: p.y + p.w * 0.7 - (ff.lines.length - 1) * ff.size * 1.12 / 2 };
+      } else if (txt) {
+        var on = card.checked[i];
+        // checked: text stays inside the stamp and below the check badge (top band reserved)
+        var bw = p.w * (on ? 0.78 : 0.84), bt = p.w * (on ? 0.25 : 0.1), bh = p.w * (on ? 0.66 : 0.8);
+        var f = fit(x, txt, bw, bh, Math.round(p.w * 0.16), Math.max(8, Math.round(p.w * (on ? 0.07 : 0.075))), SANS, 700);
+        var lh = f.size * 1.15, blockH = f.lines.length * lh;
+        var topY = Math.max(p.w / 2 - blockH / 2, bt);  // centred, unless that would reach the badge band
+        lay[i] = { f: f, weight: 700, lh: lh, top: p.y + topY + lh / 2 };
+      } else continue;
+      var Lz = lay[i]; x.font = Lz.weight + ' ' + Lz.f.size + 'px ' + SANS;
+      Lz.f.lines.forEach(function (l, k) {
+        var lw = x.measureText(l).width + Lz.f.size * 0.4, ly = Lz.top + k * Lz.lh;
+        holes.push([p.x + p.w / 2 - lw / 2, ly - Lz.lh / 2, lw, Lz.lh]);
+      });
+    }
+    // pass 2: bingo lines, under the text and clipped out of it so goals stay readable
+    x.save();
+    if (prog.lines.length) {
+      x.beginPath(); x.rect(0, 0, W, H);
+      holes.forEach(function (h) { x.rect(h[0], h[1], h[2], h[3]); });
+      x.clip('evenodd');
+    }
+    x.strokeStyle = t.accent; x.globalAlpha = 0.28; x.lineCap = 'round'; x.lineWidth = cell * 0.05;
     prog.lines.forEach(function (ln) {
       var a = ln[0], e = ln[ln.length - 1];
       var ax = gx + (a % n + 0.5) * cell, ay = gy + (Math.floor(a / n) + 0.5) * cell, bx = gx + (e % n + 0.5) * cell, by = gy + (Math.floor(e / n) + 0.5) * cell;
@@ -199,25 +229,17 @@
     x.restore();
     // pass 3: text and check badges
     for (i = 0; i < n * n; i++) {
-      var q = box(i), cx = q.x, cy = q.y, cw = q.w, text = card.goals[i];
-      if (i === m) {
-        star(x, cx + cw / 2, cy + cw * 0.36, cw * 0.17, t.freeInk);
-        x.fillStyle = t.freeInk; x.textBaseline = 'middle';
-        var ft = fit(x, text || 'FREE', cw * 0.84, cw * 0.32, cw * 0.17, cw * 0.075, SANS, 900);
-        x.font = '900 ' + ft.size + 'px ' + SANS;
-        ft.lines.forEach(function (l, k) { x.fillText(l, cx + cw / 2, cy + cw * 0.7 + (k - (ft.lines.length - 1) / 2) * ft.size * 1.12); });
-        continue;
+      var q = box(i), cx = q.x, cy = q.y, cw = q.w, Q = lay[i];
+      if (i === m) star(x, cx + cw / 2, cy + cw * 0.36, cw * 0.17, t.freeInk);
+      if (Q) {
+        x.fillStyle = i === m ? t.freeInk : t.cellInk; x.font = Q.weight + ' ' + Q.f.size + 'px ' + SANS; x.textBaseline = 'middle';
+        Q.f.lines.forEach(function (l, k) { x.fillText(l, cx + cw / 2, Q.top + k * Q.lh); });
       }
-      if (text) {
-        var on = card.checked[i];
-        var f = fit(x, text, cw * (on ? 0.76 : 0.84), cw * (on ? 0.7 : 0.8), Math.round(cw * 0.16), Math.max(8, Math.round(cw * 0.075)), SANS, 700);
-        x.fillStyle = t.cellInk; x.font = '700 ' + f.size + 'px ' + SANS; x.textBaseline = 'middle';
-        var lh = f.size * 1.15, top = cy + cw / 2 - (f.lines.length - 1) * lh / 2;
-        f.lines.forEach(function (l, k) { x.fillText(l, cx + cw / 2, top + k * lh); });
-      }
+      if (i === m) continue;
       if (card.checked[i]) {
-        x.save(); x.fillStyle = t.accent; x.beginPath(); x.arc(cx + cw * 0.86, cy + cw * 0.14, cw * 0.095, 0, 7); x.fill();
-        check(x, cx + cw * 0.86, cy + cw * 0.145, cw * 0.095, t.onAccent || '#ffffff'); x.restore();
+        // badge sits in the reserved top band (ends at 0.21 of the square; text starts at 0.25)
+        x.save(); x.fillStyle = t.accent; x.beginPath(); x.arc(cx + cw * 0.875, cy + cw * 0.125, cw * 0.085, 0, 7); x.fill();
+        check(x, cx + cw * 0.875, cy + cw * 0.13, cw * 0.085, t.onAccent || '#ffffff'); x.restore();
       }
     }
     y = gy + gridW + gap;

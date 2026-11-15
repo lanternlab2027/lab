@@ -117,12 +117,33 @@
     applyTheme(); refreshBoard();
   }
 
-  function fontFor(text, n) {
+  function fontFor(text, n, on) {
     var len = Array.from(text || '').length, k = len <= 12 ? 0.15 : len <= 24 ? 0.13 : len <= 40 ? 0.112 : 0.098;
     var longest = Math.max.apply(null, String(text || '').split(' ').map(function (w) { return Array.from(w).length; }).concat([1]));
     k = Math.min(k, 1.32 / longest);
     if (n === 3) k *= 0.85;
+    if (on) k *= 0.82; // checked squares have a smaller text box (inside the stamp, below the badge)
     return 'max(9px, calc(' + (92 / n * k).toFixed(2) + 'cqi))';
+  }
+
+  // Shrink each square's font until its text fits the box (inside the stamp and below the check badge
+  // on checked squares) without breaking words; break-word stays as the last resort at the minimum size.
+  function fitSquares() {
+    document.querySelectorAll('#grid .sq').forEach(function (b) {
+      var tx = b.querySelector('.tx');
+      b.style.setProperty('--fs', b.dataset.fs || '12px');
+      if (!tx.textContent || !b.clientHeight) return;
+      var cs = getComputedStyle(b), size = parseFloat(cs.fontSize), minS = 7;
+      var availH = b.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+      tx.style.overflowWrap = 'normal';
+      var fits = function () { return tx.scrollHeight <= Math.min(tx.clientHeight, availH) + 1 && tx.scrollWidth <= tx.clientWidth; };
+      while (!fits() && size > minS) { size = Math.max(minS, size - 0.5); b.style.setProperty('--fs', size + 'px'); }
+      tx.style.overflowWrap = '';
+    });
+  }
+  if (window.ResizeObserver) {
+    var lastW = 0;
+    new ResizeObserver(function (es) { var w = Math.round(es[0].contentRect.width); if (w !== lastW) { lastW = w; fitSquares(); } }).observe($('grid'));
   }
 
   function refreshBoard() {
@@ -137,12 +158,13 @@
       b.classList.toggle('bingo', !!inBingo[i] && !free);
       b.classList.toggle('sel', state.mode === 'edit' && i === state.sel);
       b.querySelector('.tx').textContent = free ? '★ ' + (g || 'FREE') : (g || (state.mode === 'edit' ? '+' : ''));
-      b.style.setProperty('--fs', fontFor(free ? (g || 'FREE') : g, card.size));
+      b.dataset.fs = fontFor(free ? (g || 'FREE') : g, card.size, !free && card.checked[i]);
       var label = free ? 'Free space' + (g ? ': ' + g : '') : (g || 'Empty square ' + (i + 1));
       if (!free && card.checked[i]) label += ', done';
       b.setAttribute('aria-label', label);
       if (state.mode === 'check' && !free) b.setAttribute('aria-pressed', card.checked[i] ? 'true' : 'false'); else b.removeAttribute('aria-pressed');
     });
+    fitSquares();
     $('b-title').textContent = card.title || 'My 2027 Goal Bingo';
     $('b-name').textContent = card.name;
     $('b-name').hidden = !card.name;

@@ -97,8 +97,10 @@
   .sq.empty .tx { color: var(--t-cellink); opacity: .35; font-weight: 600; }
   .sq.sel { box-shadow: inset 0 0 0 3px var(--t-accent); }
   .sq.free { background: var(--t-free); color: var(--t-freeink); font-weight: 900; }
-  .sq.on::before { content: ""; position: absolute; inset: 8%; border-radius: 50%; background: var(--t-stamp, color-mix(in srgb, var(--t-accent) 22%, transparent)); box-shadow: inset 0 0 0 3px var(--t-accent); }
-  .sq.on::after { content: "\2713"; position: absolute; top: 4%; right: 5%; width: 24%; aspect-ratio: 1; border-radius: 50%; background: var(--t-accent); color: var(--t-onaccent); font-size: max(9px, 60%); display: flex; align-items: center; justify-content: center; font-weight: 900; z-index: 2; line-height: 1; }
+  /* checked: a rounded-rectangle stamp covering the square; the top band is kept clear for the badge so text never sits under it */
+  .sq.on { padding: 25% 10% 8%; }
+  .sq.on::before { content: ""; position: absolute; inset: 7%; border-radius: 8px; background: var(--t-stamp, color-mix(in srgb, var(--t-accent) 22%, transparent)); box-shadow: inset 0 0 0 2px var(--t-accent); }
+  .sq.on::after { content: "\2713"; position: absolute; top: 4%; right: 4%; width: 18%; aspect-ratio: 1; border-radius: 50%; background: var(--t-accent); color: var(--t-onaccent); font-size: max(8px, 55%); display: flex; align-items: center; justify-content: center; font-weight: 900; z-index: 2; line-height: 1; }
   .sq.inline { border-radius: 11px; }
   .sq.bingo { box-shadow: inset 0 0 0 3px var(--t-accent); }
   .board.checking .sq:not(.free) { cursor: pointer; }
