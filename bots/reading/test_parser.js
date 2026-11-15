@@ -134,7 +134,7 @@ test('StoryGraph oddities: reordered subset, multi-author, partial dates, paused
 });
 
 test('rejects files that are not exports, and exports with no books', () => {
-  assert.throws(() => P.parseAny(read('not_an_export.csv')), /doesn.t look like a Goodreads or StoryGraph export/);
+  assert.throws(() => P.parseAny(read('not_an_export.csv')), /doesn.t look like a Goodreads, StoryGraph or Libby export/);
   assert.throws(() => P.parseAny(read('empty_goodreads.csv')), /no books/);
   assert.throws(() => P.parseAny(''), /doesn.t look like/);
 });
@@ -207,7 +207,133 @@ test('card deck: 8-10 cards for a full year, capped at 10, longest folds into pa
   assert.ok(sgc.length >= 8 && sgc.length <= 10 && !sgc.includes('pages') && !sgc.includes('longest'), sgc.join());
 });
 
+// ---------- Libby ----------
+const LOPT = { now: NOW };
+
+test('Libby timestamps: ISO with zone, epoch ms, M/D/YY h:mm, long month with AM/PM', () => {
+  const day = (v) => P.dateKey(P.libbyTime(v).date);
+  const z = new Date('2026-05-01T12:00:00Z'); // an instant: shown as the reader's local date
+  assert.equal(day('2026-05-01T12:00:00Z'), z.getFullYear() * 10000 + (z.getMonth() + 1) * 100 + z.getDate());
+  assert.equal(day(new Date(2026, 4, 1, 12).getTime()), 20260501);
+  assert.equal(day(String(new Date(2026, 4, 1, 12).getTime())), 20260501);
+  assert.equal(day('3/14/26 19:05'), 20260314);
+  assert.equal(day('July 1, 2026 9:41 PM'), 20260701);
+  assert.equal(day('Thursday, July 2, 2026 at 9:41 AM'), 20260702);
+  assert.equal(day('2026-07-03 08:00'), 20260703);
+  const pm = P.libbyTime('July 1, 2026 9:41 PM'), am = P.libbyTime('July 1, 2026 9:41 AM');
+  assert.ok(pm.t - am.t === 12 * 3600e3, 'PM sorts after AM');
+  assert.equal(P.libbyTime('someday'), null);
+  assert.equal(P.libbyTime(''), null);
+});
+
+test('Libby activities and formats', () => {
+  assert.equal(P.libbyKind('Borrowed'), 'borrow');
+  assert.equal(P.libbyKind('Returned'), 'return');
+  assert.equal(P.libbyKind('Placed on hold'), 'hold');
+  assert.equal(P.libbyKind('Hold cancelled'), 'other');
+  assert.equal(P.libbyKind('Finished'), 'finish');
+  assert.equal(P.libbyFormat('audiobook'), 'audio');
+  assert.equal(P.libbyFormat('ebook'), 'ebook');
+  assert.equal(P.libbyFormat('magazine'), 'magazine');
+  assert.equal(P.libbyFormat('', 'Brightwater Audio', '', 'Nadia Sol', '978'), 'audio');
+  assert.equal(P.libbyFormat('', 'Recorded Books', '', 'Nadia Sol', '978'), 'audio');
+  assert.equal(P.libbyFormat('', 'Lantern House', '', 'Nadia Sol', '978'), 'ebook');
+  assert.equal(P.libbyFormat('', 'Lantern Press', '', 'Lantern Press', ''), 'magazine');
+});
+
+test('Libby spreadsheet (CSV): detected, events grouped into books, read = returned', () => {
+  const r = P.parseAny(read('libbytimeline-activities.csv'), 'libbytimeline-activities.csv', LOPT);
+  assert.equal(r.source, 'libby');
+  assert.equal(r.skipped, 0);
+  assert.ok(r.books.every((b) => b.pages === null && b.myRating === null && b.avgRating === null));
+  const v = byTitle(r, 'The Velvet Almanac');
+  assert.equal(v.loans.length, 2); // borrowed twice
+  assert.equal(v.shelf, 'read');
+  assert.equal(v.reads.length, 1); // one finish: the latest return
+  const series = r.books.find((b) => /Lantern Coast/.test(b.series));
+  assert.ok(series && !/\(/.test(series.title));
+  assert.equal(r.books.filter((b) => b.shelf === 'currently-reading').length, 2); // borrowed Nov 2026, still on loan
+  assert.equal(r.books.filter((b) => b.shelf === 'magazine').length, 2); // Lantern Monthly, Harbor Gardener
+  const engine = byTitle(r, 'The Patient Engine'); // borrowed, never returned, loan ran out
+  assert.equal(engine.shelf, 'read');
+  assert.deepEqual(engine.reads, []);
+  assert.ok(engine.dateAdded, 'dated by when the loan ended');
+  assert.ok(r.books.some((b) => b.format === 'audio') && r.books.some((b) => b.format === 'ebook'));
+  assert.ok(r.books.some((b) => b.shelf === 'to-read' && b.holds.length && !b.loans.length), 'holds alone are to-read');
+});
+
+test('Libby data (JSON) export matches the spreadsheet; zip-free Reading Journey JSON works too', () => {
+  const c = P.parseAny(read('libbytimeline-activities.csv'), 'a.csv', LOPT);
+  const j = P.parseAny(read('libbytimeline-activities.json'), 'a.json', LOPT);
+  assert.equal(j.source, 'libby');
+  assert.equal(j.books.length, c.books.length);
+  const sum = (r) => JSON.stringify(r.books.map((b) => [b.title, b.shelf, b.format, b.reads.map(P.dateKey), b.loans.length]));
+  assert.equal(sum(j), sum(c));
+  const journey = JSON.stringify({ readingJourney: { cover: { title: 'Glass Tide', format: 'audiobook' }, title: 'Glass Tide', author: 'Cora Lindqvist', publisher: 'Lantern House' },
+    circulation: [{ activity: 'Borrowed', timestamp: new Date(2026, 2, 1, 12).getTime(), details: '21 days', library: { text: 'Harbor County Library' } }, { activity: 'Returned', timestamp: new Date(2026, 2, 9, 12).getTime() }] });
+  const rj = P.parseAny(journey, 'libbyjourney.json', LOPT);
+  assert.equal(rj.books.length, 1);
+  assert.equal(rj.books[0].format, 'audio');
+  assert.deepEqual(rj.books[0].reads[0], { y: 2026, mo: 3, d: 9 });
+  assert.equal(rj.books[0].loans[0].library, 'Harbor County Library');
+});
+
+test('Libby oddities: BOM/CRLF, extra column, mixed timestamps, return-only, finished marker, renewal, re-borrow, junk rows', () => {
+  const r = P.parseAny(read('libby_odd.csv'), 'libby_odd.csv', LOPT);
+  assert.equal(r.source, 'libby');
+  assert.equal(r.skipped, 2); // no title; bad date
+  assert.equal(r.books.length, 7);
+  const q = byTitle(r, 'The Quiet Harbor');
+  assert.equal(q.series, 'Lantern Coast, #2');
+  assert.deepEqual(q.reads, [{ y: 2026, mo: 3, d: 14 }]);
+  assert.equal(q.holds.length, 1);
+  assert.equal(byTitle(r, 'Paper Lanterns').format, 'audio');
+  assert.deepEqual(byTitle(r, 'Paper Lanterns').reads, [{ y: 2026, mo: 7, d: 1 }]);
+  assert.equal(byTitle(r, 'The Copper Ferry').shelf, 'read'); // a return with no borrow in the export
+  assert.equal(byTitle(r, 'Short Row Book').shelf, 'read'); // finished marker
+  const ua = byTitle(r, 'Undated Atlas');
+  assert.equal(ua.shelf, 'read');
+  assert.deepEqual(ua.reads, []);
+  assert.deepEqual(ua.dateAdded, { y: 2026, mo: 4, d: 23 }); // renewed Apr 2 + 21 days
+  assert.deepEqual(byTitle(r, 'The Velvet Almanac').reads, [{ y: 2026, mo: 2, d: 12 }]); // re-borrow after a return
+  assert.equal(byTitle(r, 'Somewhere Next').shelf, 'to-read'); // cancelled hold
+});
+
+test('Libby: rejects an empty timeline and a JSON file that is not Libby', () => {
+  assert.throws(() => P.parseAny(read('libby_empty.csv'), '', LOPT), /no loans/);
+  assert.throws(() => P.parseAny(read('not_libby.json'), '', LOPT), /doesn.t look like a Libby timeline/);
+  assert.throws(() => P.parseAny('{not json', '', LOPT), /doesn.t look like a Libby timeline/);
+});
+
+test('stats + cards (Libby, 2026): books returned, library love, no pages/ratings cards', () => {
+  const r = P.parseAny(read('libbytimeline-activities.csv'), '', LOPT);
+  assert.deepEqual(S.years(r.books), [{ year: 2024, count: 31 }, { year: 2025, count: 38 }, { year: 2026, count: 51 }]);
+  const s = S.compute(r.books, { year: 2026, now: NOW, source: 'libby' });
+  assert.equal(s.count, 51);
+  assert.equal(s.pagesKnown, 0);
+  assert.equal(s.topRated, null);
+  assert.equal(s.critic, null);
+  assert.equal(s.topAuthor.name, 'Imogen Vale');
+  const L = s.library;
+  assert.equal(L.loans, 56); // 51 returned + 2 still out + 1 ran out + 2 magazines (by borrow date)
+  assert.equal(L.favorite.name, 'Lantern Valley Public Library');
+  assert.equal(L.libraryCount, 2);
+  assert.deepEqual(L.formats, { ebook: 46, audio: 7, magazine: 3 });
+  assert.ok(L.holds > 0 && L.longestWait && L.longestWait.wait > 0);
+  assert.equal(L.stamps.length, 6);
+  assert.equal(S.compute(r.books, { year: 2026, now: NOW, undated: true, source: 'libby' }).count, 52); // + The Patient Engine
+  const all = S.compute(r.books, { year: null, now: NOW, source: 'libby' });
+  assert.equal(all.library.mostBorrowed.book.title, 'The Velvet Almanac');
+  const ids = C.build(s, { title: 'My 2026 in books', year: 2026, periodShort: '2026' }).map((c) => c.id);
+  assert.deepEqual(ids, ['books', 'rhythm', 'author', 'library', 'persona']);
+  // Goodreads/StoryGraph decks never get the library card
+  const gr = P.parseAny(read('goodreads_library_export.csv'));
+  assert.equal(S.compute(gr.books, { year: 2026, now: NOW }).library, null);
+});
+
 test('demo library is deterministic and synthetic', () => {
   assert.equal(D.goodreadsCSV({ year: 2026, month: 11 }), D.goodreadsCSV({ year: 2026, month: 11 }));
   assert.equal(D.goodreadsCSV({ year: 2026, month: 11 }), read('goodreads_library_export.csv'));
+  assert.equal(D.libbyCSV({ year: 2026, month: 11 }), read('libbytimeline-activities.csv'));
+  assert.ok(!/\.(com|org|net)\//.test(D.libbyJSON({ year: 2026, month: 11 })), 'only .invalid URLs in the synthetic Libby data');
 });

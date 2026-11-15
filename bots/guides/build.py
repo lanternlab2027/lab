@@ -468,6 +468,97 @@ STORYGRAPH = dict(
     disclaimer="Not affiliated with The StoryGraph.",
 )
 
+# ---------------------------------------------------------------- Libby
+LB_HELP = "https://help.libbyapp.com/en-us/6207.htm"
+LB_JOURNEY = "https://help.libbyapp.com/6151.htm"
+LB_LIBANSWERS = "https://carlsbadca.libanswers.com/faq/332573"
+LB_PARSER = "https://github.com/clockworkcoding/LibbyGraph"
+LB_PARSER2 = "https://github.com/drmowinckels/storywell"
+LB_JSON = "https://github.com/jwmccay/libby-bracket"
+
+lb_steps = [
+    ("Open Libby and tap <b>Shelf</b>.", "It's in the navigation bar at the bottom of the app (or the bottom of libbyapp.com in a browser)."),
+    ("Tap <b>Timeline</b>.", "It's at the top of the Shelf screen. Your timeline lists the titles you've borrowed, returned and placed on hold."),
+    ("Clear any filters you don't want.",
+     "Libby's help says any active filters are applied when you export. For a whole year in books, export everything; you can pick the year later."),
+    ("Tap <b>Actions</b>, then <b>Export Timeline</b>.", "Libby asks which format you want."),
+    ("Choose <b>Spreadsheet</b>.",
+     "Libby saves the timeline to your device as a file you can open in a spreadsheet app. Tools we checked find it named <code>libbytimeline-activities.csv</code>. <b>Table</b> makes a shareable web page instead of a file."),
+]
+
+LB_BODY = f"""
+  <div class="panel quick">
+    <b class="label">Quick answer</b>
+    <p>In Libby: <b>Shelf</b> &rarr; <b>Timeline</b> &rarr; <b>Actions</b> &rarr; <b>Export Timeline</b> &rarr; <b>Spreadsheet</b>. You get a <code>.csv</code> file of every borrow, return and hold.</p>
+  </div>
+
+  <h2 id="steps">Export your Libby timeline</h2>
+{steps_html(lb_steps)}
+
+  <h2 id="formats">Table or Spreadsheet: which to pick</h2>
+  <ul>
+    <li><b>Spreadsheet</b> saves a file to your device so you can review or edit it. Pick this one for other tools, including Reading Wrapped.</li>
+    <li><b>Table</b> shows your timeline on a web page you can bookmark or share with friends. Anyone with that link can see the page, so share it with care.</li>
+  </ul>
+  <div class="panel warn">
+    <p><b>About our check:</b> Libby's help article (last updated September 2026) lists exactly two formats, <b>Table</b> and <b>Spreadsheet</b>. Older open-source tools describe a <b>Data</b> (JSON) option and links ending in <code>libbytimeline-&hellip;.json</code>; we couldn't find that option in Libby's current help, so it may have been removed or renamed. Libby doesn't publish the spreadsheet's columns. The ones below come from open-source tools that read real exports, not from OverDrive.</p>
+  </div>
+
+  <h2 id="whats-inside">What's in the spreadsheet</h2>
+  <p>One row per event, newest first. Open-source tools that read real exports find these columns: <code>Cover</code>, <code>Title</code>, <code>Author</code>, <code>Publisher</code>, <code>ISBN</code>, <code>Timestamp</code>, <code>Activity</code>, <code>Details</code>, <code>Library</code>. <b>Activity</b> is the event, such as <b>Borrowed</b>, <b>Returned</b> or <b>Placed on hold</b>; for a loan, <b>Details</b> holds the loan length (for example "21 days").</p>
+  <p>A book you borrowed and returned shows up on two rows (more if you held it or borrowed it again). There's no rating, page count or "finished" flag: Libby records loans, not reading.</p>
+
+  <h2 id="troubleshooting">Troubleshooting</h2>
+  <details><summary>My timeline is missing older loans</summary><div>
+    <p>First check that no filter is on (see the next answer). Beyond that, Libby's help pages we checked don't say how far back the timeline goes or how it moves to a new phone, so we can't promise older loans are recoverable. If you've switched devices, make sure you're using the same Libby setup and library cards, and ask your library if something is still missing.</p>
+  </div></details>
+  <details><summary>The export only has some of my books</summary><div>
+    <p>A filter was probably on. Go back to <b>Timeline</b>, clear the filters, and export again: Libby applies active filters to the export.</p>
+  </div></details>
+  <details><summary>I tapped Table and got a link, not a file</summary><div>
+    <p>That's the shareable web page. Go back to <b>Actions &rarr; Export Timeline</b> and choose <b>Spreadsheet</b> to save a file instead.</p>
+  </div></details>
+  <details><summary>Can I import this into Goodreads or StoryGraph?</summary><div>
+    <p>Some library help pages say the spreadsheet can be imported into Goodreads, and community tools convert it for StoryGraph. The columns don't match Goodreads' own export, so expect to tidy it up. Reading Wrapped reads the Libby file directly, no conversion needed.</p>
+  </div></details>
+
+  <h2 id="privacy">Privacy: what's in a Libby timeline export</h2>
+  <div class="panel note">
+    <p>The file is your library borrowing history. It contains:</p>
+    <ul>
+      <li>the <b>title, author, publisher and ISBN</b> of every book, audiobook and magazine you borrowed or held;</li>
+      <li>the <b>date and time</b> of each borrow, return and hold;</li>
+      <li>the <b>name of the library</b> each loan came from, which can hint at where you live.</li>
+    </ul>
+    <p>Libraries treat borrowing records as private for good reason. Keep the file to yourself, and delete copies from email or cloud storage when you're done. A <b>Table</b> link shows the same history to anyone who opens it.</p>
+  </div>
+"""
+
+LIBBY = dict(
+    slug="how-to-export-libby-timeline.html", app="reading", app_name="Reading Wrapped", theme_color="#123524",
+    title="How to Export Your Libby Timeline to a Spreadsheet (2026)",
+    og_title="How to export your Libby timeline",
+    description="Export your Libby reading history: Shelf, Timeline, Actions, Export Timeline, then Spreadsheet. What Table and Spreadsheet do, what's in the file, and fixes.",
+    h1="How to export your Libby timeline",
+    lede="Get every library ebook and audiobook you've borrowed out of Libby as one spreadsheet file, straight from the app.",
+    howto_name="How to export your Libby timeline as a spreadsheet",
+    tools=["The Libby app (or libbyapp.com)"],
+    steps=lb_steps,
+    body=LB_BODY,
+    cta_h="Turn your Libby history into shareable cards, on your device",
+    cta_p="Reading Wrapped reads <code>libbytimeline-activities.csv</code> and makes year-in-books cards: books borrowed and returned, your reading rhythm, favorite author and a Library love card with your loans, favorite library and ebook vs audiobook split. Free, and your history never leaves your browser.",
+    cta_btn="Make your Reading Wrapped",
+    sources=[
+        ("Libby Help: Exporting and sharing your timeline activity (updated Sep 3, 2026)", LB_HELP, "(official; steps, filters, Table and Spreadsheet)"),
+        ("Libby Help: Exporting Reading Journey data (updated Sep 3, 2026)", LB_JOURNEY, "(official; the same Table and Spreadsheet choices for one title)"),
+        ("Carlsbad City Library: What is my timeline in Libby? (updated Sep 26, 2025)", LB_LIBANSWERS, "(library FAQ; Table and Spreadsheet, Goodreads import)"),
+        ("LibbyGraph (open source)", LB_PARSER, "(reads libbytimeline-activities; Borrowed and Returned activities)"),
+        ("storywell (open source)", LB_PARSER2, "(spreadsheet columns: Cover, Title, Author, Publisher, ISBN, Timestamp, Activity, Details, Library)"),
+        ("libby-bracket (open source)", LB_JSON, "(older JSON data export: timeline, activity, details, library)"),
+    ],
+    disclaimer="Not affiliated with Libby or OverDrive.",
+)
+
 # ---------------------------------------------------------------- Sleeper
 SL_HELP = "https://support.sleeper.com/en/articles/4121798-how-to-find-your-league-id"
 SL_API = "https://docs.sleeper.com/"
@@ -547,13 +638,13 @@ SLEEPER = dict(
     disclaimer="Not affiliated with Sleeper.",
 )
 
-GUIDES = [WHATSAPP, TELEGRAM, GOODREADS, STORYGRAPH, SLEEPER]
+GUIDES = [WHATSAPP, TELEGRAM, GOODREADS, STORYGRAPH, LIBBY, SLEEPER]
 
 
 def index_page():
     groups = [
         ("Group chats", "Group Chat Wrapped", "wrapped", [WHATSAPP, TELEGRAM]),
-        ("Reading", "Reading Wrapped", "reading", [GOODREADS, STORYGRAPH]),
+        ("Reading", "Reading Wrapped", "reading", [GOODREADS, STORYGRAPH, LIBBY]),
         ("Fantasy football", "Fantasy League Awards", "awards", [SLEEPER]),
     ]
     blocks = []
@@ -565,7 +656,7 @@ def index_page():
     </ul>
     <p>Then use it in <a href="../{app}/">{app_name}</a>.</p>""")
     title = "How-to Guides: Export WhatsApp, Telegram, Goodreads & More"
-    desc = "Plain, checked how-to guides: export a WhatsApp or Telegram chat, export your Goodreads or StoryGraph library, and find your Sleeper league ID."
+    desc = "Plain, checked how-to guides: export a WhatsApp or Telegram chat, export your Goodreads, StoryGraph or Libby history, and find your Sleeper league ID."
     ld = json.dumps({"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "description": desc,
                      "url": BASE + "guides/",
                      "hasPart": [{"@type": "HowTo", "name": g["howto_name"], "url": BASE + "guides/" + g["slug"]} for g in GUIDES]},
@@ -606,7 +697,7 @@ def index_page():
 {body}
   </main>
   <footer>
-    <p><b>Not affiliated with WhatsApp, Meta, Telegram, Goodreads, Amazon, The StoryGraph or Sleeper.</b> These are independent guides; product names are trademarks of their owners.</p>
+    <p><b>Not affiliated with WhatsApp, Meta, Telegram, Goodreads, Amazon, The StoryGraph, Libby, OverDrive or Sleeper.</b> These are independent guides; product names are trademarks of their owners.</p>
     <p><a href="../">More free tools from Lantern Lab</a></p>
   </footer>
 </div>

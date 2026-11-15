@@ -322,11 +322,13 @@
       if (s.prevCount != null && s.prevCount > 0) {
         var d = s.count - s.prevCount;
         sub = d > 0 ? fmt(d) + ' more than ' + (Y - 1) + '. Look at you.' : d < 0 ? fmt(-d) + ' fewer than ' + (Y - 1) + ', and that\u2019s fine.' : 'Exactly the same as ' + (Y - 1) + '. Consistent.';
-      } else sub = pick(['Every one of them counted.', 'One page at a time.', 'Here\u2019s the whole shelf.'], key + 'b');
+      } else if (s.library) sub = pick(['Borrowed, read and returned.', 'Every loan you brought back, counted.'], key + 'b');
+      else sub = pick(['Every one of them counted.', 'One page at a time.', 'Here\u2019s the whole shelf.'], key + 'b');
       txt(ctx, th, sub, M, 866, 'serif', 400, 46, { italic: true, alpha: 0.88, width: CW });
       shelf(ctx, th, s.list, 930, 2, 230);
       var chips = [];
       if (s.pagesKnown) chips.push([fmt(s.pages), 'pages']);
+      if (s.library) chips.push([fmt(s.library.loans), plural(s.library.loans, 'library loan')]);
       chips.push([fmt(s.authorCount), plural(s.authorCount, 'author')]);
       if (s.myAvg) chips.push([fmt2(s.myAvg), 'avg rating']);
       chips.push([fmt1(s.booksPerMonth), 'books a month']);
@@ -624,7 +626,73 @@
       chipRow(ctx, th, Math.max(y + 90, 1500), [[fmt(s.dnf.count), plural(s.dnf.count, 'book') + ' left unfinished'], [Math.round(s.count / started * 100) + '%', 'of the books you started, you finished']], 210);
     });
 
-    if (s.formatKnown >= 3) add('formats', 'How you read', 'paper', function (ctx, th) {
+    if (s.library) add('library', 'Library love', 'claret', function (ctx, th) {
+      var L = s.library, f = L.formats;
+      kicker(ctx, th, 'LIBRARY LOVE', 300);
+      bigNumber(ctx, th, fmt(L.loans), 590, 300);
+      txt(ctx, th, plural(L.loans, 'library loan'), M, 676, 'serif', 700, 64);
+      var sub = L.libraryCount > 1 ? 'Borrowed from ' + L.libraryCount + ' different libraries.' : pick(['Free books, every one of them.', 'Your library card earned its keep.', 'Every one of them borrowed, not bought.'], key + 'lib');
+      txt(ctx, th, sub, M, 750, 'serif', 400, 46, { italic: true, alpha: 0.88, width: CW });
+
+      // A due-date slip: favorite library on top, the latest borrow dates stamped below.
+      var sx = M, sy = 820, sw = CW, slipRows = Math.max(1, Math.ceil(L.stamps.length / 3)), sh = 196 + slipRows * 76 + 30;
+      ctx.save();
+      ctx.translate(W / 2, sy + sh / 2); ctx.rotate(-0.012); ctx.translate(-W / 2, -(sy + sh / 2));
+      ctx.shadowColor = 'rgba(0,0,0,0.3)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 10;
+      rr(ctx, sx, sy, sw, sh, 10); ctx.fillStyle = '#f7eed6'; ctx.fill();
+      ctx.shadowColor = 'transparent';
+      ctx.fillStyle = '#b8323f'; ctx.fillRect(sx, sy + 118, sw, 3);
+      ctx.strokeStyle = '#7c9cc2'; ctx.globalAlpha = 0.55; ctx.lineWidth = 1.5;
+      for (var ly = sy + 196; ly < sy + sh - 10; ly += 76) { ctx.beginPath(); ctx.moveTo(sx + 20, ly); ctx.lineTo(sx + sw - 20, ly); ctx.stroke(); }
+      ctx.globalAlpha = 1;
+      var slipInk = { ink: '#2a2118' };
+      txt(ctx, slipInk, L.favorite ? 'FAVORITE LIBRARY' : 'YOUR LIBRARY', sx + 34, sy + 48, 'sans', 800, 24, { spacing: 5, alpha: 0.65 });
+      if (L.favorite) {
+        ctx.save(); var ns = fitSize(ctx, L.favorite.name, 'serif', 700, 54, 30, sw - 68, false); ctx.restore();
+        txt(ctx, slipInk, L.favorite.name, sx + 34, sy + 100, 'serif', 700, ns, { width: sw - 68 });
+      } else txt(ctx, slipInk, 'Your local library', sx + 34, sy + 100, 'serif', 700, 54);
+      txt(ctx, slipInk, 'DATE BORROWED', sx + 34, sy + 160, 'sans', 800, 22, { spacing: 4, alpha: 0.55 });
+      if (L.favorite && L.libraryCount > 1) txt(ctx, slipInk, fmt(L.favorite.count) + ' of ' + fmt(L.loans) + ' loans', sx + sw - 34, sy + 160, 'sans', 800, 22, { align: 'right', spacing: 2, alpha: 0.55 });
+      var r = rngFrom(hash(key + 'stamp')), colW = (sw - 68) / 3;
+      L.stamps.forEach(function (d, i) {
+        var cx = sx + 34 + (i % 3) * colW + colW / 2, cy = sy + 240 + Math.floor(i / 3) * 76;
+        ctx.save(); ctx.translate(cx, cy); ctx.rotate((r() - 0.5) * 0.14);
+        ctx.globalAlpha = 0.72 + r() * 0.2; ctx.fillStyle = '#5b3f8c'; ctx.textAlign = 'center';
+        ctx.font = F('sans', 800, 36, false); spacing(ctx, 2);
+        ctx.fillText((MONTHS[d.mo - 1] || '').toUpperCase() + ' ' + (d.d || '') + (Y ? '' : ' \u2019' + String(d.y).slice(2)), 0, 12);
+        ctx.restore();
+      });
+      ctx.restore();
+
+      // ebook vs audiobook (and magazines, when there are any)
+      var parts = [['ebook', 'Ebooks', '#e4bc62'], ['audio', 'Audiobooks', '#9fc2a6']];
+      if (f.magazine) parts.push(['magazine', 'Magazines', '#e7a3ad']);
+      var tot = parts.reduce(function (a, p) { return a + f[p[0]]; }, 0) || 1;
+      var lead = parts.slice().sort(function (a, b) { return f[b[0]] - f[a[0]]; })[0];
+      var by = sy + sh + 80;
+      txt(ctx, th, f.audio && f.ebook ? (f[lead[0]] / tot >= 0.6 ? (lead[0] === 'audio' ? 'Mostly ears' : 'Mostly eyes') + ': ' + Math.round(f[lead[0]] / tot * 100) + '% ' + lead[1].toLowerCase() : 'A true format mixer') : (f.audio ? 'All audiobooks' : 'All ebooks'), M, by, 'serif', 700, 52, { width: CW });
+      ctx.save(); var x = M;
+      parts.forEach(function (p) { var w = CW * f[p[0]] / tot; if (!w) return; rr(ctx, x, by + 34, Math.max(w - 6, 10), 56, 14); ctx.fillStyle = p[2]; ctx.fill(); x += w; });
+      ctx.restore();
+      var lx = M;
+      parts.forEach(function (p) {
+        if (!f[p[0]]) return;
+        var label = fmt(f[p[0]]) + ' ' + p[1].toLowerCase().replace(/s$/, f[p[0]] === 1 ? '' : 's');
+        ctx.save(); ctx.fillStyle = p[2]; ctx.beginPath(); ctx.arc(lx + 12, by + 134, 12, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+        txt(ctx, th, label, lx + 34, by + 145, 'sans', 700, 30, { alpha: 0.88 });
+        ctx.save(); ctx.font = F('sans', 700, 30, false); lx += ctx.measureText(label).width + 80; ctx.restore();
+      });
+
+      var chips = [];
+      if (L.holds) chips.push([fmt(L.holds), plural(L.holds, 'hold') + ' placed']);
+      if (L.longestWait && L.longestWait.wait >= 7) chips.push([fmt(L.longestWait.wait) + 'd', 'longest wait: ' + L.longestWait.book.title]);
+      else if (L.avgWait != null && L.holds) chips.push([fmt(L.avgWait) + 'd', 'average wait for a hold']);
+      if (L.mostBorrowed && chips.length < 2) chips.push([L.mostBorrowed.n + '\u00d7', 'borrowed: ' + L.mostBorrowed.book.title]);
+      if (chips.length < 2) chips.push([fmt(s.count), plural(s.count, 'book') + ' returned']);
+      chipRow(ctx, th, Math.min(1540, by + 240), chips.slice(0, 2), 190);
+    });
+
+    if (s.formatKnown >= 3 && !s.library) add('formats', 'How you read', 'paper', function (ctx, th) {
       var f = s.formats, tot = s.formatKnown;
       kicker(ctx, th, 'HOW YOU READ', 300);
       var order = [['print', 'Print', 'paper and ink'], ['ebook', 'Ebook', 'on a screen'], ['audio', 'Audio', 'listened to']];
@@ -670,6 +738,8 @@
       tiles.push(s.avgPages ? [fmt(s.avgPages), 'pages per book'] : [fmt1(s.booksPerMonth), 'books a month']);
       tiles.push(s.mix ? [s.mix.items[0][0], s.mix.kind === 'moods' ? 'top mood' : 'top shelf'] : [fmt1(s.booksPerMonth), 'books a month']);
       if (tiles[2][1] === tiles[3][1]) tiles[3] = [fmt(s.authorCount), plural(s.authorCount, 'author')];
+      // Decks without ratings, pages or a mix (Libby, sparse exports) would repeat a tile: swap in something new.
+      if (tiles[3][1] === tiles[1][1]) tiles[3] = s.library ? [fmt(s.library.loans), plural(s.library.loans, 'library loan')] : Y ? [s.activeMonths + ' of 12', 'months with a finished book'] : [fmt(Object.keys(s.byYear).length), 'years of reading'];
       tiles.forEach(function (t, i) { chip(ctx, th, M + (i % 2) * (gw + 24), gy + Math.floor(i / 2) * (gh + 24), gw, gh, t[0], t[1]); });
     });
 

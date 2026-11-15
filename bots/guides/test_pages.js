@@ -25,15 +25,16 @@ const check = (c, m) => { console.log((c ? '  ok   ' : '  FAIL ') + m); if (!c) 
 const status = (u) => new Promise((r) => http.get(u, (res) => { res.resume(); r(res.statusCode); }).on('error', () => r(0)));
 
 const GUIDES = ['index.html', 'how-to-export-whatsapp-chat.html', 'how-to-export-telegram-chat-history.html',
-  'how-to-export-goodreads-library.html', 'how-to-export-storygraph-data.html', 'how-to-find-sleeper-league-id.html'];
+  'how-to-export-goodreads-library.html', 'how-to-export-storygraph-data.html', 'how-to-export-libby-timeline.html', 'how-to-find-sleeper-league-id.html'];
 const PAGES = GUIDES.map((g) => '/lab/guides/' + g).concat(['/lab/wrapped/', '/lab/reading/', '/lab/awards/']);
 const DISCLAIMER = {
   'how-to-export-whatsapp-chat.html': /Not affiliated with WhatsApp or Meta/,
   'how-to-export-telegram-chat-history.html': /Not affiliated with Telegram/,
   'how-to-export-goodreads-library.html': /Not affiliated with Goodreads or Amazon/,
   'how-to-export-storygraph-data.html': /Not affiliated with The StoryGraph/,
+  'how-to-export-libby-timeline.html': /Not affiliated with Libby or OverDrive/,
   'how-to-find-sleeper-league-id.html': /Not affiliated with Sleeper/,
-  'index.html': /Not affiliated with WhatsApp, Meta, Telegram, Goodreads, Amazon, The StoryGraph or Sleeper/,
+  'index.html': /Not affiliated with WhatsApp, Meta, Telegram, Goodreads, Amazon, The StoryGraph, Libby, OverDrive or Sleeper/,
 };
 
 (async () => {
@@ -79,7 +80,7 @@ const DISCLAIMER = {
         check(how && n === info.steps, 'HowTo JSON-LD steps (' + n + ') match visible steps (' + info.steps + ')');
         check(/Privacy:/.test(info.text) && /Troubleshooting/.test(info.text) && /Sources/.test(info.text), 'privacy, troubleshooting, sources sections');
         check(info.links.filter((u) => /\/lab\/(wrapped|reading|awards)\/$/.test(u)).length >= 1, 'CTA links to app');
-        if (g === 'how-to-export-whatsapp-chat.html') await page.screenshot({ path: path.join(OUT, 'guide-whatsapp-390.png'), fullPage: true });
+        if (g === 'how-to-export-whatsapp-chat.html' || g === 'how-to-export-libby-timeline.html') await page.screenshot({ path: path.join(OUT, 'guide-' + g.split('-')[3] + '-390.png'), fullPage: true });
       }
     } else {
       check(info.links.some((u) => u.includes('/lab/guides/')), 'app page links to a guide');

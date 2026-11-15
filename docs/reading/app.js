@@ -38,7 +38,7 @@
     return 'share-' + r;
   }
   var SHARE_URL = APP_URL + '?ref=' + encodeURIComponent(nextRef());
-  var SHARE_LEAD = 'My year in books, Wrapped. Make yours from your Goodreads or StoryGraph export (free, nothing uploaded):';
+  var SHARE_LEAD = 'My year in books, Wrapped. Make yours from your Goodreads, StoryGraph or Libby export (free, nothing uploaded):';
   function shareText() { return SHARE_LEAD + ' ' + SHARE_URL; }
 
   // ---------- reading files ----------
@@ -48,9 +48,10 @@
       if (!window.JSZip) throw new Error('Zip support failed to load. Unzip the file and upload the .csv inside.');
       var zip = await window.JSZip.loadAsync(file);
       var entries = [];
-      zip.forEach(function (path, entry) { if (!entry.dir && /\.csv$/i.test(path) && !/(^|\/)(__MACOSX|\.)/.test(path)) entries.push(entry); });
-      if (!entries.length) throw new Error('That zip has no .csv file inside. Upload the .csv from your Goodreads or StoryGraph export.');
-      entries.sort(function (a, b) { return (/goodreads|storygraph|library/i.test(b.name) ? 1 : 0) - (/goodreads|storygraph|library/i.test(a.name) ? 1 : 0); });
+      zip.forEach(function (path, entry) { if (!entry.dir && /\.(csv|json)$/i.test(path) && !/(^|\/)(__MACOSX|\.)/.test(path)) entries.push(entry); });
+      if (!entries.length) throw new Error('That zip has no .csv or .json file inside. Upload the file from your Goodreads, StoryGraph or Libby export.');
+      var pref = /goodreads|storygraph|libbytimeline|library/i;
+      entries.sort(function (a, b) { return (pref.test(b.name) ? 1 : 0) - (pref.test(a.name) ? 1 : 0); });
       return { text: await entries[0].async('string'), filename: entries[0].name };
     }
     if (file.size > 60 * 1024 * 1024) throw new Error('That file is too big to be a library export.');
@@ -83,15 +84,21 @@
     $('#undated').checked = false;
     var undatedN = parsed.books.filter(function (b) { return b.shelf === 'read' && !b.reads.length; }).length;
     $('#undated-wrap').hidden = !undatedN;
-    $('#undated-label').textContent = 'Count ' + undatedN + (undatedN === 1 ? ' book' : ' books') + ' marked read without a finish date, using the date you added ' + (undatedN === 1 ? 'it' : 'them');
+    $('#undated-label').textContent = parsed.source === 'libby'
+      ? 'Also count ' + undatedN + (undatedN === 1 ? ' loan' : ' loans') + ' that ended without a "Returned" entry (the loan ran out, or your export only lists borrows), dated by when ' + (undatedN === 1 ? 'it' : 'they') + ' ended'
+      : 'Count ' + undatedN + (undatedN === 1 ? ' book' : ' books') + ' marked read without a finish date, using the date you added ' + (undatedN === 1 ? 'it' : 'them');
     var ys = yearOptions();
     var cur = ys.filter(function (y) { return y.year === CURRENT; })[0];
     var latest = ys.filter(function (y) { return y.count > 0; })[0];
     state.year = cur && cur.count ? CURRENT : latest ? latest.year : CURRENT;
     yearSel.value = String(state.year);
-    var srcName = parsed.source === 'storygraph' ? 'StoryGraph' : 'Goodreads';
-    var readN = parsed.books.filter(function (b) { return b.shelf === 'read'; }).length;
+    var srcName = parsed.source === 'storygraph' ? 'StoryGraph' : parsed.source === 'libby' ? 'Libby' : 'Goodreads';
+    var readN = parsed.books.filter(function (b) { return b.shelf === 'read' && (parsed.source !== 'libby' || b.reads.length); }).length;
     var msg = 'Found ' + parsed.books.length.toLocaleString('en-US') + ' books in your ' + srcName + ' library (' + readN.toLocaleString('en-US') + ' read). Nothing was uploaded.';
+    if (parsed.source === 'libby') {
+      var loanN = parsed.books.reduce(function (a, b) { return a + (b.loans ? b.loans.length : 0); }, 0);
+      msg = 'Found ' + loanN.toLocaleString('en-US') + (loanN === 1 ? ' loan' : ' loans') + ' of ' + parsed.books.length.toLocaleString('en-US') + ' titles in your Libby timeline (' + readN.toLocaleString('en-US') + ' returned, so counted as read). Nothing was uploaded.';
+    }
     if (state.year !== CURRENT) msg += ' No finished books in ' + CURRENT + ' yet, so we\u2019re showing ' + state.year + '.';
     say(msg);
     render();

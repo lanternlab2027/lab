@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Reading Wrapped 2026: Your Goodreads Wrapped &amp; StoryGraph Year in Review</title>
-<meta name="description" content="Goodreads Wrapped for 2026: turn your Goodreads or StoryGraph export into shareable year-in-books cards. Books and pages read, your longest and top-rated reads, favorite author, genre mix, reading pace and your reader personality. Free, and your library never leaves your device.">
+<meta name="description" content="Goodreads Wrapped for 2026: turn your Goodreads, StoryGraph or Libby export into shareable year-in-books cards. Books and pages read, your longest and top-rated reads, favorite author, genre mix, reading pace and your reader personality. Free, and your library never leaves your device.">
 <link rel="canonical" href="https://lanternlab2027.github.io/lab/reading/">
 <meta name="theme-color" content="#123524">
 <meta property="og:type" content="website">
@@ -20,18 +20,18 @@
 <meta property="og:image:alt" content="Reading Wrapped: sample year-in-books cards for a made-up library">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Reading Wrapped 2026: your year in books">
-<meta name="twitter:description" content="Turn a Goodreads or StoryGraph export into shareable year-in-books cards. Free, and 100% on your device.">
+<meta name="twitter:description" content="Turn a Goodreads, StoryGraph or Libby export into shareable year-in-books cards. Free, and 100% on your device.">
 <meta name="twitter:image" content="https://lanternlab2027.github.io/lab/reading/og.png">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "WebApplication",
  "name": "Reading Wrapped",
- "alternateName": ["Goodreads Wrapped", "StoryGraph Year in Review"],
+ "alternateName": ["Goodreads Wrapped", "StoryGraph Year in Review", "Libby Wrapped"],
  "url": "https://lanternlab2027.github.io/lab/reading/",
  "applicationCategory": "EntertainmentApplication",
  "operatingSystem": "Any (web browser)",
- "description": "Turn a Goodreads or StoryGraph library export into shareable year-in-books cards. Runs entirely in your browser.",
+ "description": "Turn a Goodreads or StoryGraph library export, or a Libby reading timeline, into shareable year-in-books cards. Runs entirely in your browser.",
  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
  "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
 }
@@ -126,18 +126,18 @@
   <header class="hero">
     <div class="brand">A Lantern Lab project</div>
     <h1>Reading <em>Wrapped</em></h1>
-    <p class="lede">Your year in books as shareable cards: books and pages read, your top-rated read, most-read author, genre mix and reader personality. Free, for Goodreads and StoryGraph.</p>
+    <p class="lede">Your year in books as shareable cards: books and pages read, your top-rated read, most-read author, genre mix and reader personality. Free, for Goodreads, StoryGraph and Libby.</p>
     <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your library never leaves your device.</span></div>
 
     <div class="drop" id="drop">
       <label class="upload btn" for="file">Choose your library export
-        <input id="file" type="file" accept=".csv,.zip,.txt,text/csv,application/zip,text/plain">
+        <input id="file" type="file" accept=".csv,.json,.zip,.txt,text/csv,application/json,application/zip,text/plain">
       </label>
-      <p>Goodreads <b>goodreads_library_export.csv</b> or a StoryGraph export <b>.csv</b>. You can also drag the file here.</p>
+      <p>Goodreads <b>goodreads_library_export.csv</b>, a StoryGraph export <b>.csv</b>, or a Libby timeline (<b>libbytimeline-activities.csv</b> or <b>.json</b>). You can also drag the file here.</p>
       <button type="button" class="btn ghost small" id="sample">See a sample deck first</button>
     </div>
     <p class="status" id="status" role="status" aria-live="polite"></p>
-    <p class="hint">Goodreads: open <a href="https://www.goodreads.com/review/import" rel="noopener">goodreads.com/review/import</a> and tap <b>Export Library</b> (on a phone, switch your browser to the desktop site first). <a href="#export">Steps for Goodreads and StoryGraph</a>.</p>
+    <p class="hint">Goodreads: open <a href="https://www.goodreads.com/review/import" rel="noopener">goodreads.com/review/import</a> and tap <b>Export Library</b> (on a phone, switch your browser to the desktop site first). Libby: <b>Shelf &rarr; Timeline &rarr; Actions &rarr; Export Timeline &rarr; Spreadsheet</b>. <a href="#export">Steps for Goodreads, StoryGraph and Libby</a>.</p>
     <button type="button" class="peek" id="peek" aria-label="See a sample deck"><img src="preview.jpg" width="720" height="491" alt="Sample cards: books finished, top-rated read and how you rate"><span>Tap to see a sample deck</span></button>
   </header>
 
@@ -177,7 +177,7 @@
 
   <section id="export" aria-labelledby="export-h">
     <h2 id="export-h">How to export your library</h2>
-    <p>Both sites give you a single <b>.csv</b> file. Upload it here as it is; there's no need to open or edit it first.</p>
+    <p>Each one gives you a single file. Upload it here as it is; there's no need to open or edit it first.</p>
     <details open>
       <summary>Goodreads (on a computer)</summary>
       <div><ol class="steps">
@@ -197,9 +197,22 @@
         <li>When the file is ready (StoryGraph may email you a link), download the <b>.csv</b> and upload it here.</li>
       </ol></div>
     </details>
+    <details id="libby">
+      <summary>Libby (library ebooks and audiobooks)</summary>
+      <div><ol class="steps">
+        <li>In the Libby app, tap <b>Shelf</b> at the bottom of the screen.</li>
+        <li>Tap <b>Timeline</b> at the top. If you've set a filter, clear it so the export has your whole history (Libby applies active filters to the export).</li>
+        <li>Tap <b>Actions</b>, then <b>Export Timeline</b>.</li>
+        <li>Choose <b>Spreadsheet</b>. It saves a file (usually <b>libbytimeline-activities.csv</b>) to your device; upload that here. If your Libby offers a data/JSON option instead, that file works too.</li>
+      </ol>
+      <p class="small-print">The <b>Table</b> option makes a web page link instead of a file. This page never fetches links (it makes no network requests with your data), so please use the Spreadsheet file. <a href="../guides/how-to-export-libby-timeline.html">Full Libby export guide</a>.</p>
+      <h3 style="margin-top:14px">How we count Libby books</h3>
+      <p>Libby's timeline is a list of loans, not a reading log: it has no ratings, page counts or "finished" button. So we count a book as <b>read</b> when you <b>returned</b> it (or when the timeline has a finished marker), dated by that return. A loan you borrowed and never returned (it just ran out, or your export only lists borrows) isn't counted unless you tick the box above the cards. A loan that's still running is "currently reading", holds alone are "want to read", and magazines count as loans but not books. Returning a book early doesn't mean you finished it, so treat the total as "books borrowed and brought back".</p>
+      <p>The <b>Library love</b> card counts loans (by the day you borrowed), your most-used library, and ebooks vs audiobooks. The spreadsheet has no format column, so audiobooks are spotted by their publisher (audio imprints like "&hellip; Audio" or Recorded Books); a JSON export says the format directly.</p></div>
+    </details>
     <details>
       <summary>Why are some cards missing?</summary>
-      <div><p>Cards only appear when your export has the data for them. StoryGraph exports don't include page counts or community ratings, so the pages, longest-book and "harsh critic" cards are Goodreads-only. StoryGraph users get a mood mix and a ratings breakdown instead. The abandoned-book card needs a DNF shelf (for Goodreads, an exclusive shelf named something like <code>dnf</code> or <code>did-not-finish</code>).</p></div>
+      <div><p>Cards only appear when your export has the data for them. StoryGraph exports don't include page counts or community ratings, so the pages, longest-book and "harsh critic" cards are Goodreads-only. StoryGraph users get a mood mix and a ratings breakdown instead. Libby has no ratings, pages or genres, so Libby users get the books, rhythm, author and personality cards plus a <b>Library love</b> card. The abandoned-book card needs a DNF shelf (for Goodreads, an exclusive shelf named something like <code>dnf</code> or <code>did-not-finish</code>).</p></div>
     </details>
   </section>
 
@@ -228,17 +241,17 @@
 
   <section aria-labelledby="faq-h">
     <h2 id="faq-h">Questions</h2>
-    <details><summary>Is this made by Goodreads or StoryGraph?</summary><div><p>No. Reading Wrapped is an independent project that works with the export files those sites already let you download. It is not affiliated with or endorsed by Goodreads, Amazon or The StoryGraph.</p></div></details>
-    <details><summary>Which books count toward a year?</summary><div><p>Books on your <b>read</b> shelf whose finish date (Goodreads <b>Date Read</b>, StoryGraph <b>Dates Read</b> or <b>Last Date Read</b>) falls in that year. If some books are marked read with no date, you can tick the box above the cards to count them by the date you added them instead.</p></div></details>
+    <details><summary>Is this made by Goodreads, StoryGraph or Libby?</summary><div><p>No. Reading Wrapped is an independent project that works with the export files those apps already let you download. It is not affiliated with or endorsed by Goodreads, Amazon, The StoryGraph, Libby or OverDrive.</p></div></details>
+    <details><summary>Which books count toward a year?</summary><div><p>Books on your <b>read</b> shelf whose finish date (Goodreads <b>Date Read</b>, StoryGraph <b>Dates Read</b> or <b>Last Date Read</b>) falls in that year. For Libby, it's books you returned that year (see <a href="#libby">how we count Libby books</a>). If some books are marked read with no date, you can tick the box above the cards to count them by the date you added them instead.</p></div></details>
     <details><summary>How is the reader personality picked?</summary><div><p>From your numbers alone: average book length, how many books you read, how loyal you are to one author, how many genres you cover, how your ratings compare with everyone else's, how often you re-read, and how bunched-up your reading is across the year. The strongest signal wins.</p></div></details>
-    <details><summary>It says "doesn't look like a Goodreads or StoryGraph export"</summary><div><p>Upload the original <b>.csv</b> from the export page. Files re-saved from Excel or Numbers usually still work, but a file from another app (or a spreadsheet with renamed columns) won't be recognized.</p></div></details>
+    <details><summary>It says "doesn't look like a Goodreads, StoryGraph or Libby export"</summary><div><p>Upload the original <b>.csv</b> from the export page. Files re-saved from Excel or Numbers usually still work, but a file from another app (or a spreadsheet with renamed columns) won't be recognized.</p></div></details>
     <details><summary>Is it free?</summary><div><p>Yes, completely.</p></div></details>
   </section>
 
   <footer>
     <p><a href="../">A Lantern Lab project</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/reading" rel="noopener">GitHub</a> &middot; <a href="../apps/">More free apps &rarr;</a></p>
-    <p>Export help: <a href="../guides/how-to-export-goodreads-library.html">How to export your Goodreads library</a> &middot; <a href="../guides/how-to-export-storygraph-data.html">How to export your StoryGraph data</a></p>
-    <p id="disclaimer">Not affiliated with Goodreads or StoryGraph. Goodreads is a trademark of Goodreads, LLC; The StoryGraph is a trademark of its owners.</p>
+    <p>Export help: <a href="../guides/how-to-export-goodreads-library.html">How to export your Goodreads library</a> &middot; <a href="../guides/how-to-export-storygraph-data.html">How to export your StoryGraph data</a> &middot; <a href="../guides/how-to-export-libby-timeline.html">How to export your Libby timeline</a></p>
+    <p id="disclaimer">Not affiliated with Goodreads, StoryGraph, Libby or OverDrive. Goodreads is a trademark of Goodreads, LLC; The StoryGraph is a trademark of its owners; Libby and OverDrive are trademarks of OverDrive, Inc.</p>
   </footer>
 </div>
 <script src="vendor/jszip-3.10.1.min.js"></script>

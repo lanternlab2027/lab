@@ -1,4 +1,4 @@
-/* Reading Wrapped: Goodreads + StoryGraph CSV parser. Pure functions; no network, no storage.
+/* Reading Wrapped: Goodreads + StoryGraph CSV and Libby timeline (CSV/JSON) parser. Pure functions; no network, no storage.
  *
  * Goodreads "Export Library" header (current, 24 columns):
  *   Book Id, Title, Author, Author l-f, Additional Authors, ISBN, ISBN13, My Rating, Average Rating, Publisher,
@@ -243,10 +243,176 @@
     };
   }
 
-  function parseAny(text, filename) {
+  // ---------- Libby (OverDrive) timeline ----------
+  // Libby's timeline is a log of events, not a shelf: one row per Borrowed / Returned / Placed on hold.
+  // Spreadsheet export (libbytimeline-activities.csv), columns per open-source parsers:
+  //   Cover, Title, Author, Publisher, ISBN, Timestamp, Activity, Details, Library
+  // Data export (JSON): { version: 1, timeline: [ { cover: { url, title, color, format }, title: { text, url, titleId },
+  //   author, publisher, isbn, timestamp (epoch ms), activity, details (" 21 days "), library: { text, url, key } } ] }
+  // A single-title "Reading Journey" export ({ readingJourney: {...}, circulation: [...] }) is accepted too.
+  // There are no ratings, page counts or shelves. The heuristic (explained on the page):
+  //   - a "Returned" (or any finished/completed marker) counts the book as read, dated by the latest one;
+  //   - a borrow with no return that is still inside its loan period is "currently reading";
+  //   - an older borrow with no return (the loan ran out, or the export only had borrows) is read-but-undated,
+  //     dated by when the loan ended; it only counts if the reader ticks the box;
+  //   - holds alone are "to-read"; magazines are counted as loans but never as books.
+  var AUDIO_PUB = /audio|audible|recorded books|books on tape|blackstone|brilliance|tantor|podium|dreamscape|highbridge|oasis|listening library|naxos|w\.? ?f\.? howes|isis|bolinda|rbmedia|spoken|soundings/i;
+
+  function libbyFormat(raw, publisher, details, author, isbn) {
+    var f = clean(raw).toLowerCase();
+    if (/magazine|periodical/.test(f)) return 'magazine';
+    if (/audio/.test(f)) return 'audio';
+    if (/book|epub|kindle|pdf|read/.test(f)) return 'ebook';
+    if (/audiobook/i.test(details || '')) return 'audio';
+    if (/magazine/i.test(details || '')) return 'magazine';
+    // Magazines carry no ISBN and are credited to their publisher (or to no one).
+    if (!f && !clean(isbn) && (!clean(author) || clean(author).toLowerCase() === clean(publisher).toLowerCase())) return 'magazine';
+    // The spreadsheet has no format column: Libby only lends ebooks, audiobooks and magazines, so a
+    // publisher that is an audio imprint means audiobook and anything else is read as an ebook.
+    return AUDIO_PUB.test(publisher || '') ? 'audio' : 'ebook';
+  }
+
+  // Epoch ms/s, ISO (any zone -> the reader's local date), M/D/YY h:mm, "Feb 5, 2026 10:21 AM", etc.
+  function libbyTime(v) {
+    var dt = null;
+    if (typeof v === 'number' || /^\s*\d{10,13}\s*$/.test(String(v))) {
+      var n = +v; if (n < 1e12) n *= 1000; dt = new Date(n);
+    } else {
+      var s = clean(v);
+      if (!s) return null;
+      if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(s) && /(Z|[+\-]\d{2}:?\d{2})$/.test(s)) dt = new Date(s);
+      if (!dt || isNaN(dt)) {
+        var tm = s.match(/(\d{1,2}):(\d{2})(?::(\d{2}))?\s*([AaPp][Mm])?/), hh = 0, mi = 0;
+        if (tm) { hh = +tm[1] % 12 + (/p/i.test(tm[4] || '') ? 12 : 0); if (!tm[4]) hh = +tm[1]; mi = +tm[2]; }
+        var ds = s.replace(/(?:,?\s+at)?,?\s*T?\d{1,2}:\d{2}(?::\d{2}(?:\.\d+)?)?\s*([AaPp][Mm])?.*$/, '').replace(/^[A-Za-z]{3,9},\s+(?=[A-Za-z])/, '').trim();
+        var d = parseDate(ds);
+        if (!d || !d.mo) return null;
+        return { date: { y: d.y, mo: d.mo, d: d.d || 1 }, t: new Date(d.y, d.mo - 1, d.d || 1, hh, mi).getTime() };
+      }
+    }
+    if (!dt || isNaN(dt)) return null;
+    return { date: { y: dt.getFullYear(), mo: dt.getMonth() + 1, d: dt.getDate() }, t: dt.getTime() };
+  }
+
+  function libbyKind(a) {
+    a = clean(a).toLowerCase();
+    if (/^borrow|checked out|^loan/.test(a)) return 'borrow';
+    if (/^return/.test(a)) return 'return';
+    if (/finish|complet|marked (as )?read/.test(a)) return 'finish';
+    if (/hold/.test(a) && !/cancel/.test(a)) return 'hold';
+    if (/expir/.test(a)) return 'expire';
+    if (/renew/.test(a)) return 'renew';
+    return 'other';
+  }
+
+  function txtOf(v) { return v && typeof v === 'object' ? (v.text || v.name || v.title || '') : (v == null ? '' : String(v)); }
+
+  // Normalized events from either export shape.
+  function libbyEventsFromJSON(data) {
+    var list = Array.isArray(data) ? data : data && (data.timeline || data.activities || data.items);
+    var journey = data && data.readingJourney;
+    if (!list && journey && Array.isArray(data.circulation)) {
+      list = data.circulation.map(function (c) {
+        return { title: journey.title || (journey.cover && journey.cover.title), author: journey.author, publisher: journey.publisher, isbn: journey.isbn,
+          cover: journey.cover, timestamp: c.timestamp, activity: c.activity, details: c.details, library: c.library };
+      });
+    }
+    if (!Array.isArray(list)) return null;
+    return list.filter(function (e) { return e && typeof e === 'object'; }).map(function (e) {
+      var cover = e.cover && typeof e.cover === 'object' ? e.cover : {};
+      return {
+        title: txtOf(e.title) || cover.title || '', author: txtOf(e.author) || txtOf(e.creator), publisher: txtOf(e.publisher),
+        isbn: txtOf(e.isbn), timestamp: e.timestamp, activity: txtOf(e.activity), details: txtOf(e.details),
+        library: txtOf(e.library), format: txtOf(e.format) || cover.format || txtOf(e.type) || ''
+      };
+    });
+  }
+
+  function libbyEventsFromCSV(records) {
+    return records.map(function (o) {
+      return {
+        title: get(o, ['title']), author: get(o, ['author', 'authors', 'creator']), publisher: get(o, ['publisher']),
+        isbn: get(o, ['isbn']), timestamp: get(o, ['timestamp', 'date', 'time']), activity: get(o, ['activity', 'event']),
+        details: get(o, ['details']), library: get(o, ['library']), format: get(o, ['format', 'type', 'media type'])
+      };
+    });
+  }
+
+  function libbyBooks(events, now) {
+    now = now || new Date();
+    var byKey = {}, order = [], skipped = 0;
+    events.forEach(function (e) {
+      var t = splitTitle(e.title), when = libbyTime(e.timestamp), kind = libbyKind(e.activity);
+      if (!t.title || !when) { skipped++; return; }
+      var author = clean(e.author).replace(/\s*;\s*.*$/, '');
+      var key = (t.title + '|' + author).toLowerCase().replace(/[^a-z0-9|]+/g, ' ').trim();
+      var b = byKey[key];
+      if (!b) {
+        b = byKey[key] = { title: t.title, series: t.series, author: author || 'Unknown author', events: [], fmt: {}, publisher: '' };
+        order.push(key);
+      }
+      var fmt = libbyFormat(e.format, e.publisher, e.details, e.author, e.isbn);
+      if (kind === 'borrow') b.fmt[fmt] = (b.fmt[fmt] || 0) + 1;
+      if (!b.publisher) b.publisher = clean(e.publisher);
+      var days = (clean(e.details).match(/(\d{1,3})\s*day/i) || [])[1];
+      b.events.push({ kind: kind, date: when.date, t: when.t, library: clean(e.library), format: fmt, days: days ? +days : null });
+    });
+    var books = order.map(function (k) {
+      var b = byKey[k], ev = b.events.sort(function (x, y) { return x.t - y.t; });
+      var fmts = Object.keys(b.fmt).sort(function (x, y) { return b.fmt[y] - b.fmt[x]; });
+      var format = fmts[0] || (ev[0] && ev[0].format) || 'ebook';
+      var loans = ev.filter(function (e) { return e.kind === 'borrow'; }).map(function (e) { return { date: e.date, t: e.t, library: e.library, format: e.format }; });
+      var holds = ev.filter(function (e) { return e.kind === 'hold'; }).map(function (e) { return { date: e.date, t: e.t, library: e.library }; });
+      var ends = ev.filter(function (e) { return e.kind === 'return' || e.kind === 'finish'; });
+      var lastBorrow = null; ev.forEach(function (e) { if (e.kind === 'borrow') lastBorrow = e; });
+      var lastEnd = ends[ends.length - 1] || null;
+      var shelf = 'to-read', reads = [], dateAdded = (ev[0] && ev[0].date) || null, lastRead = null;
+      if (format === 'magazine') shelf = 'magazine';
+      else if (lastEnd) { shelf = 'read'; reads = [lastEnd.date]; lastRead = lastEnd.date; }
+      if (format !== 'magazine' && lastBorrow && (!lastEnd || lastBorrow.t > lastEnd.t)) {
+        var expired = ev.filter(function (e) { return e.kind === 'expire' && e.t > lastBorrow.t; })[0];
+        var renew = ev.filter(function (e) { return e.kind === 'renew' && e.t > lastBorrow.t; }).pop();
+        var base = renew || lastBorrow;
+        var due = expired ? expired.t : base.t + (base.days || lastBorrow.days || 21) * 864e5;
+        if (!lastEnd && !expired && due >= now.getTime()) shelf = 'currently-reading';
+        else if (!lastEnd) { shelf = 'read'; var dd = new Date(due); dateAdded = { y: dd.getFullYear(), mo: dd.getMonth() + 1, d: dd.getDate() }; }
+        // a re-borrow after an earlier return stays read (dated by that return)
+      }
+      return {
+        title: b.title, series: b.series, author: b.author,
+        pages: null, myRating: null, avgRating: null,
+        shelf: shelf, shelves: [], tags: [], moods: [], pace: '',
+        format: format === 'magazine' ? '' : format, formatRaw: format, libbyFormat: format,
+        reads: reads, lastRead: lastRead, dateAdded: dateAdded,
+        readCount: reads.length, pubYear: null,
+        publisher: b.publisher, loans: loans, holds: holds
+      };
+    });
+    return { books: books, skipped: skipped };
+  }
+
+  function libbyResult(events, filename, now) {
+    if (!events) return null;
+    var r = libbyBooks(events, now);
+    if (!r.books.length) throw new Error('We found a Libby timeline but no loans in it. If you filtered your timeline before exporting, clear the filter and export again.');
+    return { source: 'libby', books: r.books, skipped: r.skipped, filename: filename || '' };
+  }
+
+  function parseAny(text, filename, opts) {
+    opts = opts || {};
+    var trimmed = String(text || '').replace(/^\ufeff/, '').trim();
+    if (/^[\[{]/.test(trimmed)) {
+      var data = null;
+      try { data = JSON.parse(trimmed); } catch (e) { data = null; }
+      var evs = data && libbyEventsFromJSON(data);
+      if (evs) return libbyResult(evs, filename, opts.now);
+      throw new Error('That JSON file doesn\u2019t look like a Libby timeline export. In Libby, open Shelf \u2192 Timeline \u2192 Actions \u2192 Export Timeline and upload the file it saves.');
+    }
     var tb = table(text);
+    var hh = {}; tb.header.forEach(function (k) { hh[k] = 1; });
+    if (hh.activity && hh.timestamp && hh.title) return libbyResult(libbyEventsFromCSV(tb.records), filename, opts.now);
     var source = detect(tb.header);
-    if (!source) throw new Error('This doesn\u2019t look like a Goodreads or StoryGraph export. Upload the .csv file the site gives you (for Goodreads it\u2019s usually goodreads_library_export.csv).');
+    if (!source) throw new Error('This doesn\u2019t look like a Goodreads, StoryGraph or Libby export. Upload the file the site or app gives you (for Goodreads it\u2019s usually goodreads_library_export.csv; for Libby, libbytimeline-activities.csv).');
     var mk = source === 'goodreads' ? goodreadsBook : storygraphBook;
     var books = [], skipped = 0;
     tb.records.forEach(function (o) {
@@ -258,7 +424,7 @@
     return { source: source, books: books, skipped: skipped, filename: filename || '' };
   }
 
-  var api = { parseCSV: parseCSV, parseAny: parseAny, parseDate: parseDate, datesIn: datesIn, splitTitle: splitTitle, normShelf: normShelf, detect: detect, dateKey: dateKey, formatKind: formatKind, DNF_RE: DNF_RE };
+  var api = { parseCSV: parseCSV, parseAny: parseAny, libbyTime: libbyTime, libbyFormat: libbyFormat, libbyKind: libbyKind, parseDate: parseDate, datesIn: datesIn, splitTitle: splitTitle, normShelf: normShelf, detect: detect, dateKey: dateKey, formatKind: formatKind, DNF_RE: DNF_RE };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.ReadingParser = api;
 })(typeof self !== 'undefined' ? self : this);

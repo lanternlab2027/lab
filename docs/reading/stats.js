@@ -162,6 +162,41 @@
     var refYear = year || now.getFullYear();
     var newShare = pubs.length >= 4 ? pubs.filter(function (b) { return b.pubYear >= refYear - 1; }).length / pubs.length : 0;
 
+    // Libby: loans, libraries, ebook vs audiobook, holds (all by borrow/hold date, in the period)
+    var library = null;
+    if (books.some(function (b) { return b.loans; })) {
+      var loans = [], holds = [], libs = {}, lf = { ebook: 0, audio: 0, magazine: 0 }, perBook = [];
+      books.forEach(function (b) {
+        var mine = (b.loans || []).filter(function (l) { return inPeriod(l.date, year); });
+        mine.forEach(function (l) {
+          loans.push(l);
+          if (l.library) libs[l.library] = (libs[l.library] || 0) + 1;
+          var f = b.libbyFormat === 'magazine' ? 'magazine' : (l.format === 'audio' || l.format === 'magazine' ? l.format : 'ebook');
+          lf[f]++;
+        });
+        if (mine.length && b.libbyFormat !== 'magazine') perBook.push({ book: b, n: mine.length });
+        // hold -> next borrow of the same title = days waited
+        (b.holds || []).filter(function (h) { return inPeriod(h.date, year); }).forEach(function (h) {
+          var next = (b.loans || []).filter(function (l) { return l.t >= h.t; })[0];
+          holds.push({ book: b, wait: next ? Math.max(0, Math.round((next.t - h.t) / 864e5)) : null });
+        });
+      });
+      if (loans.length) {
+        var libList = top(libs, 5);
+        var waits = holds.filter(function (h) { return h.wait != null; }).sort(function (a, b) { return b.wait - a.wait; });
+        perBook.sort(function (a, b) { return b.n - a.n || (a.book.title < b.book.title ? -1 : 1); });
+        library = {
+          loans: loans.length, libraries: libList, libraryCount: Object.keys(libs).length,
+          favorite: libList[0] ? { name: libList[0][0], count: libList[0][1] } : null,
+          formats: lf, holds: holds.length,
+          longestWait: waits[0] && waits[0].wait >= 1 ? waits[0] : null,
+          avgWait: waits.length ? mean(waits.map(function (w) { return w.wait; })) : null,
+          mostBorrowed: perBook[0] && perBook[0].n >= 2 ? perBook[0] : null,
+          stamps: loans.filter(function (l) { return !libList[0] || l.library === libList[0][0]; }).sort(function (a, b) { return b.t - a.t; }).slice(0, 6).map(function (l) { return l.date; })
+        };
+      }
+    }
+
     var prevCount = year != null ? (years(books, undated).filter(function (y) { return y.year === year - 1; })[0] || { count: 0 }).count : null;
 
     var s = {
@@ -175,7 +210,7 @@
       mix: mix, dnf: dnf, rereads: rereads,
       formats: formats, formatKnown: formatKnown, paces: paces,
       oldest: oldest, medianPub: median(pubs.map(function (b) { return b.pubYear; })), newShare: newShare,
-      prevCount: prevCount, undatedCount: undatedCount,
+      prevCount: prevCount, undatedCount: undatedCount, library: library,
       currentlyReading: books.filter(function (b) { return b.shelf === 'currently-reading'; }).length
     };
     s.personality = personality(s);

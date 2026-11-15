@@ -122,7 +122,57 @@
     return SG_HEAD + '\n' + rows.join('\n') + '\n';
   }
 
-  var api = { library: library, goodreadsCSV: goodreadsCSV, storygraphCSV: storygraphCSV, GR_HEAD: GR_HEAD, SG_HEAD: SG_HEAD };
+  // Libby timeline events from the same made-up library: holds, borrows and returns at two invented libraries.
+  var LIBS = ['Lantern Valley Public Library', 'Harbor County Library'];
+  var AUDIO_PUBS = ['Lantern House Audio', 'Brightwater Audio'];
+  function libbyEvents(opts) {
+    var books = library(opts), r = rng(31), Y = (opts && opts.year) || new Date().getFullYear(), ev = [];
+    function at(d, h) { return Date.UTC(d.y, d.mo - 1, d.d, 11 + Math.min(2, Math.max(0, ((h == null ? 12 : h) - 9) / 5.5)), Math.floor(r() * 50)); } // 11:00-13:00 UTC: same calendar day from UTC-11 to UTC+11
+    function shift(d, days) { var x = new Date(Date.UTC(d.y, d.mo - 1, d.d) + days * 864e5); return { y: x.getUTCFullYear(), mo: x.getUTCMonth() + 1, d: x.getUTCDate() }; }
+    function push(b, kind, d, h, details, lib, fmt) {
+      ev.push({ title: b.series ? b.title + ' (' + b.series + ')' : b.title, author: b.author, publisher: fmt === 'audio' ? AUDIO_PUBS[b.isbn.charCodeAt(5) % 2] : 'Lantern House', isbn: b.isbn, t: at(d, h), activity: kind, details: details || '', library: lib, format: fmt });
+    }
+    books.forEach(function (b, i) {
+      var fmt = /audi/i.test(b.binding) ? 'audio' : 'ebook', lib = LIBS[i % 5 === 0 ? 1 : 0], loan = r() < 0.25 ? 14 : 21;
+      if (b.shelf === 'read' && b.reads[0]) {
+        var ret = b.reads[0], bor = shift(ret, -(4 + Math.floor(r() * 15)));
+        if (r() < 0.35) push(b, 'Placed on hold', shift(bor, -(3 + Math.floor(r() * 60))), 9, '', lib, fmt);
+        push(b, 'Borrowed', bor, 10, ' ' + loan + ' days ', lib, fmt);
+        push(b, 'Returned', ret, 20, '', lib, fmt);
+        if (b.title === 'The Velvet Almanac') { // borrowed twice: once last year, gave it back unread, then again
+          var e1 = { y: Y - 1, mo: 11, d: 3 };
+          push(b, 'Borrowed', e1, 10, ' 21 days ', lib, fmt); push(b, 'Returned', shift(e1, 5), 20, '', lib, fmt);
+        }
+      } else if (b.shelf === 'currently-reading') {
+        push(b, 'Borrowed', { y: Y, mo: 11, d: 8 + i % 4 }, 10, ' 21 days ', lib, fmt);
+      } else if (b.shelf === 'to-read' && i % 3 === 0) {
+        push(b, 'Placed on hold', { y: Y, mo: 1 + i % 10, d: 5 }, 9, '', lib, fmt);
+      } else if (b.dnf) { // borrowed, never returned: the loan just ran out
+        push(b, 'Borrowed', b.dnf, 10, ' 21 days ', lib, fmt);
+      }
+    });
+    [['Lantern Monthly', 2], ['Lantern Monthly', 6], ['Harbor Gardener', 9]].forEach(function (m, k) {
+      ev.push({ title: m[0], author: 'Lantern Press', publisher: 'Lantern Press', isbn: '', t: at({ y: Y, mo: m[1], d: 12 }, 11), activity: 'Borrowed', details: ' 7 days ', library: LIBS[k % 2], format: 'magazine' });
+    });
+    ev.sort(function (a, b) { return b.t - a.t; }); // Libby lists the newest first
+    return ev;
+  }
+  var LIBBY_HEAD = 'Cover,Title,Author,Publisher,ISBN,Timestamp,Activity,Details,Library';
+  function libbyCSV(opts) {
+    return LIBBY_HEAD + '\n' + libbyEvents(opts).map(function (e, i) {
+      return ['https://covers.example.invalid/' + (i % 97) + '.jpg', q(e.title), q(e.author), q(e.publisher), e.isbn, new Date(e.t).toISOString().replace(/\.\d{3}Z$/, 'Z'), e.activity, q(e.details), q(e.library)].join(',');
+    }).join('\n') + '\n';
+  }
+  function libbyJSON(opts) {
+    return JSON.stringify({ version: 1, timeline: libbyEvents(opts).map(function (e, i) {
+      return { cover: { contentType: 'image/jpeg', url: 'https://covers.example.invalid/' + (i % 97) + '.jpg', title: e.title, color: '#463C3A', format: e.format === 'audio' ? 'audiobook' : e.format },
+        title: { text: e.title, url: 'https://libby.example.invalid/title/' + i, titleId: String(100000 + i) },
+        author: e.author, publisher: e.publisher, isbn: e.isbn, timestamp: e.t, activity: e.activity, details: e.details,
+        library: { text: e.library, url: 'https://libby.example.invalid/library/' + (e.library === LIBS[0] ? 'lanternvalley' : 'harborcounty'), key: e.library === LIBS[0] ? 'lanternvalley' : 'harborcounty' } };
+    }) }, null, 1);
+  }
+
+  var api = { library: library, goodreadsCSV: goodreadsCSV, storygraphCSV: storygraphCSV, libbyEvents: libbyEvents, libbyCSV: libbyCSV, libbyJSON: libbyJSON, GR_HEAD: GR_HEAD, SG_HEAD: SG_HEAD, LIBBY_HEAD: LIBBY_HEAD };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.ReadingDemo = api;
 })(typeof self !== 'undefined' ? self : this);

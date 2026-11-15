@@ -61,9 +61,45 @@ w('tiny_goodreads.csv', [D.GR_HEAD,
   '1,Only Two,Ada Okonkwo-Reyes,"Okonkwo-Reyes, Ada",,,,4,4.0,,Paperback,220,2026,2026,2026/02/02,2026/01/01,,,read,,,,1,1',
   '2,Books Here,Priya Castellan,"Castellan, Priya",,,,5,4.4,,Paperback,330,2026,2026,2026/03/03,2026/01/01,,,read,,,,1,1'].join('\n') + '\n');
 
-// 9. The Goodreads export inside a zip.
+// 9-10. Libby timeline, Spreadsheet (CSV) and Data (JSON) shapes, built from the same made-up library.
+//       Columns/keys follow open-source Libby parsers (see bots/reading/NOTES.md); every value is invented.
+const lb = D.libbyCSV({ year: 2026, month: 11 });
+w('libbytimeline-activities.csv', lb);
+w('libbytimeline-activities.json', D.libbyJSON({ year: 2026, month: 11 }));
+
+// 11. Libby oddities: BOM + CRLF, an extra column, the three timestamp styles seen in the wild
+//     (M/D/YY h:mm, "Month D, YYYY h:mm AM", epoch ms, ISO with and without a zone), a return with no borrow in the export, a finished marker,
+//     a renewal, a re-borrow after a return, an expired loan, a cancelled hold, a blank line and junk rows.
+w('libby_odd.csv', '﻿' + [
+  'Cover,Title,Author,Publisher,ISBN,Timestamp,Activity,Details,Library,Color',
+  ',"The Quiet Harbor (Lantern Coast, #2)",Imogen Vale,Lantern House,9780000000001,3/14/26 19:05,Returned,,Lantern Valley Public Library,#123456',
+  ',"The Quiet Harbor (Lantern Coast, #2)",Imogen Vale,Lantern House,9780000000001,2/28/26 08:15,Borrowed, 21 days ,Lantern Valley Public Library,#123456',
+  ',"The Quiet Harbor (Lantern Coast, #2)",Imogen Vale,Lantern House,9780000000001,1/02/26 08:15,Placed on hold,,Lantern Valley Public Library,#123456',
+  ',Paper Lanterns,Nadia Sol,Brightwater Audio,,"July 1, 2026 9:41 PM",Returned,,Harbor County Library,',
+  ',Paper Lanterns,Nadia Sol,Brightwater Audio,,"June 20, 2026 7:02 AM",Borrowed, 14 days ,Harbor County Library,',
+  ',The Copper Ferry,Rowan Ashby,Lantern House,,1786262400000,Returned,,Lantern Valley Public Library,',
+  ',Short Row Book,Tomas Arroyo,Lantern House Audio,,2026-09-30T12:00:00Z,Finished,,Lantern Valley Public Library,',
+  ',Undated Atlas,Silas Wren,Lantern House,,2026-04-02 12:00,Renewed, 21 days ,Lantern Valley Public Library,',
+  ',Undated Atlas,Silas Wren,Lantern House,,2026-03-12 12:00,Borrowed, 21 days ,Lantern Valley Public Library,',
+  ',The Velvet Almanac,Silas Wren,Lantern House,,2026-08-20 12:00,Borrowed, 21 days ,Lantern Valley Public Library,',
+  ',The Velvet Almanac,Silas Wren,Lantern House,,2026-02-12 12:00,Returned,,Lantern Valley Public Library,',
+  ',The Velvet Almanac,Silas Wren,Lantern House,,2026-02-01 12:00,Borrowed, 21 days ,Lantern Valley Public Library,',
+  ',Somewhere Next,Bea Kowalczyk,Lantern House,,2026-10-01 12:00,Hold cancelled,,Lantern Valley Public Library,',
+  '',
+  ',,No Title Row,Lantern House,,2026-05-05 12:00,Borrowed,,Lantern Valley Public Library,',
+  ',Bad Date Row,Wren Delacroix,Lantern House,,someday,Borrowed,,Lantern Valley Public Library,',
+].join('\r\n') + '\r\n');
+
+// 12. A filtered timeline with nothing in it; a JSON file that isn't Libby's.
+w('libby_empty.csv', D.LIBBY_HEAD + '\n');
+w('not_libby.json', JSON.stringify({ hello: 'world', items: 3 }) + '\n');
+
+// 13. The Goodreads export inside a zip; the Libby JSON inside a zip.
 (async () => {
   const z = new JSZip();
   z.file('goodreads_library_export.csv', gr);
   w('goodreads_export.zip', await z.generateAsync({ type: 'nodebuffer' }));
+  const z2 = new JSZip();
+  z2.file('libbytimeline-activities.json', D.libbyJSON({ year: 2026, month: 11 }));
+  w('libby_export.zip', await z2.generateAsync({ type: 'nodebuffer' }));
 })();

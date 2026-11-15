@@ -32,7 +32,7 @@ async function cardInfo(page) {
 }
 
 async function upload(page, file) {
-  await page.evaluate(() => { document.querySelector('#deck').innerHTML = ''; });
+  await page.evaluate(() => { document.querySelector('#deck').innerHTML = ''; document.querySelector('#file').value = ''; });
   await page.setInputFiles('#file', path.join(FX, file));
   await page.waitForFunction(() => document.querySelectorAll('#deck canvas').length > 0, null, { timeout: 30000 });
   return cardInfo(page);
@@ -66,10 +66,11 @@ async function expectError(page, file, re) {
     await page.waitForLoadState('networkidle');
     check(offOrigin.length === 0, `page load makes no off-origin requests (${offOrigin.join(', ') || 'none'})`);
     check(/Your library never leaves your device\./.test(await page.textContent('#privacy-badge')), 'privacy promise visible');
-    check(/Not affiliated with Goodreads or StoryGraph/.test(await page.textContent('footer')), 'footer disclaimer present');
+    check(/Not affiliated with Goodreads, StoryGraph, Libby or OverDrive/.test(await page.textContent('footer')), 'footer disclaimer present');
+    check(await page.locator('footer a[href="../guides/how-to-export-libby-timeline.html"]').count() === 1 && await page.locator('#libby').count() === 1, 'Libby export steps + guide link on the page');
     check(await page.locator('footer a[href="../"]').count() === 1, 'footer links to ../');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit only');
+    check(csp === "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'", 'CSP unchanged: scripts self-only, connections to Kit only');
     check(/goodreads wrapped/i.test(await page.title()) && /reading wrapped 2026/i.test(await page.title()), 'SEO title targets "goodreads wrapped" / "reading wrapped 2026"');
     check(/storygraph/i.test(await page.getAttribute('meta[name="description"]', 'content')), 'meta description mentions StoryGraph');
     check(/og\.png$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
@@ -130,7 +131,29 @@ async function expectError(page, file, re) {
     check(cards.length >= 3, `spreadsheet re-save -> ${cards.length} cards`);
     cards = await upload(page, 'tiny_goodreads.csv');
     check(cards.length >= 3 && cards.every((c) => c.spread > 200), `tiny library -> ${cards.length} cards`);
-    check(await expectError(page, 'not_an_export.csv', /doesn.t look like a Goodreads or StoryGraph export/), 'non-export CSV shows a clear error');
+    // Libby: spreadsheet, JSON, zipped JSON, oddities.
+    cards = await upload(page, 'libbytimeline-activities.csv');
+    let lab = cards.map((c) => c.label).join(' | ');
+    check(cards.length >= 4 && cards.every((c) => c.spread > 200), `Libby CSV -> ${cards.length} cards (${lab})`);
+    check(/Library love/.test(lab) && !/Pages read|Top-rated|longest|Harsh|Easy grader|Fair judge|How you rate|How you read/.test(lab), 'Libby deck has Library love and skips pages, ratings and formats cards');
+    check(/Libby timeline/.test(await page.textContent('#status')) && /returned, so counted as read/.test(await page.textContent('#status')), 'status explains Libby counting');
+    check((await page.inputValue('#year')) === '2026', 'Libby year defaults to 2026');
+    check(!(await page.isHidden('#undated-wrap')) && /ended without a "Returned" entry/.test(await page.textContent('#undated-label')), 'Libby: expired-loan checkbox shown with Libby wording');
+    const lb0 = await page.$eval('#year option[value="2026"]', (o) => o.textContent);
+    await page.check('#undated'); await page.waitForTimeout(150);
+    check(lb0 !== await page.$eval('#year option[value="2026"]', (o) => o.textContent), 'ticking it counts expired loans');
+    await page.screenshot({ path: path.join(OUT, `page-${width}-libby.png`) });
+    const lbj = await upload(page, 'libbytimeline-activities.json');
+    check(lbj.length === cards.length && /Library love/.test(lbj.map((c) => c.label).join()), `Libby JSON -> ${lbj.length} cards`);
+    check((await upload(page, 'libby_export.zip')).length === cards.length, 'Libby JSON inside a .zip');
+    cards = await upload(page, 'libby_odd.csv');
+    check(cards.length >= 3 && cards.every((c) => c.spread > 200), `Libby odd -> ${cards.length} cards`);
+    await page.selectOption('#year', 'all');
+    c2 = await cardInfo(page);
+    check(c2.length >= 3 && c2.every((c) => c.spread > 200), `Libby all time renders (${c2.length} cards)`);
+    check(await expectError(page, 'not_libby.json', /doesn.t look like a Libby timeline/), 'non-Libby JSON shows a clear error');
+    check(await expectError(page, 'libby_empty.csv', /no loans/), 'empty Libby timeline shows a clear error');
+    check(await expectError(page, 'not_an_export.csv', /doesn.t look like a Goodreads, StoryGraph or Libby export/), 'non-export CSV shows a clear error');
     check(await expectError(page, 'empty_goodreads.csv', /no books/), 'empty export shows a clear error');
 
     // The core privacy assertion: after page load, uploading and rendering made zero network requests.
@@ -187,8 +210,9 @@ async function expectError(page, file, re) {
   const page = await ctx.newPage();
   await page.clock.install({ time: new Date('2026-11-14T12:00:00') });
   await page.goto(ORIGIN + '/reading/');
-  for (const [fx, tag] of [['goodreads_library_export.csv', 'goodreads'], ['storygraph_export.csv', 'storygraph']]) {
+  for (const [fx, tag, year] of [['goodreads_library_export.csv', 'goodreads'], ['storygraph_export.csv', 'storygraph'], ['libbytimeline-activities.csv', 'libby'], ['libbytimeline-activities.csv', 'libby-all', 'all'], ['libby_odd.csv', 'libby-odd']]) {
     await upload(page, fx);
+    if (year) { await page.selectOption('#year', year); await page.waitForTimeout(200); }
     const urls = await page.evaluate(() => [...document.querySelectorAll('#deck canvas')].map((c) => c.toDataURL('image/png')));
     urls.forEach((u, i) => fs.writeFileSync(path.join(OUT, `card-${tag}-${String(i + 1).padStart(2, '0')}.png`), Buffer.from(u.split(',')[1], 'base64')));
   }
