@@ -137,3 +137,44 @@ test('Stats helpers', () => {
   assert.deepEqual(S.emojisIn('hi \u{1F44B}\u{1F3FD} ❤️ \u{1F1FA}\u{1F1F8} \u{1F468}‍\u{1F469}‍\u{1F467}'), ['\u{1F44B}\u{1F3FD}', '❤️', '\u{1F1FA}\u{1F1F8}', '\u{1F468}‍\u{1F469}‍\u{1F467}']);
   assert.equal(S.median([5, 1, 3]), 3);
 });
+
+// ---- QA Nov 15 2026 ----
+test('iOS 1:1 chat keeps the contact even though their name carries the system lines', () => {
+  const r = P.parseAny(read('ios_1to1_us.txt'), '_chat.txt');
+  assert.deepEqual(senders(r), ['Priya Shah', 'Tom Reyes']);
+  assert.equal(r.title, 'Priya Shah');
+  // encryption notice, missed call and poll are dropped as system lines; the image counts as media
+  assert.equal(r.messages.length, 5);
+  assert.equal(r.messages.filter((m) => m.kind === 'media').length, 1);
+  const r2 = P.parseAny(read('ios_1to1_us.txt'), 'WhatsApp Chat - Priya Shah.zip');
+  assert.deepEqual(senders(r2), ['Priya Shah', 'Tom Reyes']);
+});
+
+test('Korean, Chinese, Finnish, Czech and Arabic Android exports', () => {
+  const hm = (r) => r.messages.map((m) => `${m.y}-${m.mo}-${m.d} ${m.h}:${m.mi}`);
+  const ko = P.parseAny(read('android_ko.txt'));
+  assert.deepEqual(hm(ko), ['2026-1-15 21:5', '2026-1-15 21:7', '2026-1-16 7:30', '2026-1-16 12:15']);
+  const zh = P.parseAny(read('android_zh.txt'));
+  assert.deepEqual(hm(zh), ['2026-1-15 21:5', '2026-1-15 21:6', '2026-1-16 8:0']);
+  const fi = P.parseAny(read('android_fi_klo.txt'));
+  assert.deepEqual(hm(fi), ['2026-1-15 21:5', '2026-1-15 21:6', '2026-1-16 7:45']);
+  const cs = P.parseAny(read('android_cs_spaced.txt'));
+  assert.equal(cs.dateOrder, 'DMY');
+  assert.deepEqual(hm(cs), ['2026-1-15 21:5', '2026-1-15 21:6', '2026-1-16 7:45']);
+  assert.equal(cs.messages[1].kind, 'media');
+  const ar = P.parseAny(read('android_ar_digits.txt'));
+  assert.deepEqual(hm(ar), ['2026-1-15 21:5', '2026-1-15 21:6', '2026-1-16 7:45']);
+  assert.deepEqual(senders(ar), ['Omar', 'Sam']);
+});
+
+test('Localized "(file attached)" lines count as media, not words', () => {
+  const r = P.parseAny(read('android_de_attached.txt'));
+  assert.deepEqual(r.messages.map((m) => m.kind), ['text', 'media', 'media', 'text']);
+  assert.equal(P.parseAny('[1/5/25, 8:19 PM] Ana: 2015-08-04-PHOTO-00004762.jpg <‎attached>').messages[0].kind, 'media');
+  // an ordinary sentence ending in brackets is still text
+  assert.equal(P.parseAny('1/5/25, 8:19 PM - Ana: see notes.txt (the long one)').messages[0].kind, 'text');
+});
+
+test('Telegram HTML export gets a "choose JSON" hint', () => {
+  assert.throws(() => P.parseAny(read('telegram_messages.html'), 'messages.html'), /Machine-readable JSON/);
+});

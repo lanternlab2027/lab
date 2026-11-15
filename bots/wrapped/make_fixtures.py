@@ -103,4 +103,59 @@ subprocess.run(['node', '-e', js, os.path.join(root, 'docs/wrapped/demo.js'),
                 os.path.join(D, 'WhatsApp Chat with Weekend Crew.txt'), os.path.join(D, 'result.json')], check=True)
 with zipfile.ZipFile(os.path.join(D, 'WhatsApp Chat - Weekend Crew.zip'), 'w', zipfile.ZIP_DEFLATED) as z:
     z.write(os.path.join(D, 'WhatsApp Chat with Weekend Crew.txt'), '_chat.txt')
+# ---- QA Nov 15 2026: locale and iOS 1:1 gaps ----
+L = '‎'
+# iOS 1:1 chat: the contact's own name carries the system lines (encryption notice, missed calls).
+w('ios_1to1_us.txt', '\n'.join([
+    f'[1/15/26, 9:00:00 PM] Priya Shah: {L}Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them.',
+    '[1/15/26, 9:05:12 PM] Priya Shah: are we still on for friday',
+    '[1/15/26, 9:06:40 PM] Tom Reyes: yes!! 7pm',
+    f'[1/15/26, 9:30:02 PM] Priya Shah: {L}Missed voice call, {L}Tap to call back',
+    f'[1/15/26, 9:31:15 PM] Tom Reyes: {L}POLL:\nWhich place?\n{L}OPTION: Thai (1 vote)\n{L}OPTION: Pizza (1 vote)',
+    f'[1/15/26, 9:32:00 PM] Priya Shah: {L}image omitted',
+    '[1/16/26, 8:01:44 AM] Priya Shah: morning ☀️',
+    '[1/16/26, 8:02:10 AM] Tom Reyes: hahaha morning',
+]) + '\n')
+# Korean Android: "2026. 1. 15. 오후 9:05 - " (spaces after dots, AM/PM word before the time).
+w('android_ko.txt', '\n'.join([
+    '2026. 1. 15. 오후 9:05 - 지민: 안녕',
+    '2026. 1. 15. 오후 9:07 - Sam: hi!',
+    '2026. 1. 16. 오전 7:30 - 지민: 좋은 아침',
+    '2026. 1. 16. 오후 12:15 - Sam: lunch',
+]) + '\n')
+# Chinese Android: "2026/1/15 下午9:05 - ".
+w('android_zh.txt', '\n'.join([
+    '2026/1/15 下午9:05 - 小明: 你好',
+    '2026/1/15 下午9:06 - Sam: hello',
+    '2026/1/16 上午8:00 - 小明: 早',
+]) + '\n')
+# Finnish Android: "15.1.2026 klo 21.05 - ".
+w('android_fi_klo.txt', '\n'.join([
+    '15.1.2026 klo 21.05 - Aino: moi',
+    '15.1.2026 klo 21.06 - Sam: hei',
+    '16.1.2026 klo 7.45 - Aino: huomenta',
+]) + '\n')
+# Czech Android: "15. 1. 2026 21:05 - ", plus German-style localized attachment line.
+w('android_cs_spaced.txt', '\n'.join([
+    '15. 1. 2026 21:05 - Petra: ahoj',
+    '15. 1. 2026 21:06 - Sam: IMG-20260115-WA0001.jpg (soubor připojen)',
+    '16. 1. 2026 7:45 - Petra: dobré ráno',
+]) + '\n')
+w('android_de_attached.txt', '\n'.join([
+    '15.01.26, 21:05 - Lena: Hallo',
+    '15.01.26, 21:06 - Sam: IMG-20260115-WA0001.jpg (Datei angehängt)',
+    '15.01.26, 21:07 - Lena: PTT-20260115-WA0002.opus (Datei angehängt)',
+    '16.01.26, 07:45 - Sam: Guten Morgen',
+]) + '\n')
+# Arabic Android: Arabic-Indic digits, RLM marks, Arabic comma and ص/م for AM/PM.
+w('android_ar_digits.txt', '\n'.join([
+    '١٥‏/١‏/٢٠٢٦، ٩:٠٥ م - Omar: hi',
+    '١٥‏/١‏/٢٠٢٦، ٩:٠٦ م - Sam: hello',
+    '١٦‏/١‏/٢٠٢٦، ٧:٤٥ ص - Omar: morning',
+]) + '\n')
+# Telegram Desktop's default export is HTML, not JSON.
+w('telegram_messages.html', '<!DOCTYPE html>\n<html>\n<head><meta charset="utf-8"/><title>Exported Data</title></head>\n'
+  '<body><div class="page_wrap"><div class="page_header"><div class="text bold">Book Swap</div></div>'
+  '<div class="message default clearfix" id="message1"><div class="from_name">Ana</div><div class="text">hi</div></div></div></body>\n</html>\n')
+
 print('fixtures written to', D)
