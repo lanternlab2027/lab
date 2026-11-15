@@ -213,7 +213,8 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
     check(await expectError(page, 'empty_orders.csv', /no orders we could read/), 'empty order file shows a clear error');
 
     // Privacy: after page load, nothing went over the network; CSP blocks exfiltration.
-    const after = all.slice(loadCount).filter((r) => !/\/amazon\/(\?|$|index\.html|[a-z]+\.js|vendor\/|og\.png)/.test(r.url.replace(ORIGIN, '')));
+    // The static "More free apps" strip (../apps/more.js, more.css, lazy thumbnails) may load after upload; it sends no data.
+    const after = all.slice(loadCount).filter((r) => !/\/amazon\/(\?|$|index\.html|[a-z]+\.js|vendor\/|og\.png)/.test(r.url.replace(ORIGIN, '')) && !(r.method === 'GET' && /^\/apps\/(more\.(js|css)|img\/[a-z-]+\.jpg)$/.test(r.url.replace(ORIGIN, ''))));
     check(after.length === 0 && offOrigin.length === 0, `zero network requests from uploads (${after.map((r) => r.method + ' ' + r.url).join(', ') || 'none'})`);
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));
     check(blocked, 'CSP blocks fetch to a third-party origin');

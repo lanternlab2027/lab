@@ -154,7 +154,8 @@ const CORE = ['The year in swipes', 'Match rate', 'Peak season', 'Busiest day', 
     check(await expectError(page, 'tinder_empty_usage.json', /no usage history/), 'empty Tinder usage shows a clear error');
 
     // The core privacy assertion: after page load, uploads and rendering made zero network requests.
-    const afterUpload = all.slice(loadCount);
+    // The static "More free apps" strip (../apps/more.js, more.css, lazy thumbnails) may load after upload; it sends no data.
+    const afterUpload = all.slice(loadCount).filter((r) => !(r.method === 'GET' && /^\/apps\/(more\.(js|css)|img\/[a-z-]+\.jpg)$/.test(r.url.replace(ORIGIN, ''))));
     check(afterUpload.length === 0 && offOrigin.length === 0, `zero network requests after upload (${afterUpload.length} made: ${afterUpload.map((r) => r.method + ' ' + r.url).join(', ') || 'none'})`);
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));
     check(blocked, 'CSP blocks fetch to a third-party origin');

@@ -1,0 +1,23 @@
+/* "More free apps" strip (see more.js). Inherits each page's font and text color,
+   so it follows the page's own light/dark theme. Heights are fixed and reserved up front:
+   heading 20 + 10 gap + 3 rows of 60px with 8px gaps = 226px, at every width. */
+#more-apps { display:block; margin-top:40px; margin-bottom:24px; padding-top:0; padding-bottom:0; min-height:226px; text-align:left; font-size:16px; }
+#more-apps .llm-h { margin:0 0 10px; padding:0; border:0; height:20px; font-size:15px; line-height:20px; font-weight:600; letter-spacing:normal; text-transform:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-family:inherit; }
+#more-apps .llm-h::before, #more-apps .llm-h::after { content:none; }
+#more-apps .llm-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:8px; max-width:560px; }
+#more-apps .llm-list li { margin:0; padding:0; min-width:0; }
+#more-apps .llm-list li::before, #more-apps .llm-list li::marker { content:none; }
+#more-apps .llm-a { box-sizing:border-box; display:flex; align-items:center; gap:12px; height:60px; min-height:44px; padding:0 12px 0 8px; border-radius:12px;
+  color:inherit; text-decoration:none; background:transparent;
+  border:1px solid rgba(128,128,128,.3); border:1px solid color-mix(in srgb, currentColor 16%, transparent); }
+#more-apps .llm-a:hover { background:rgba(128,128,128,.08); background:color-mix(in srgb, currentColor 6%, transparent); border-color:color-mix(in srgb, currentColor 30%, transparent); }
+#more-apps .llm-a:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
+#more-apps .llm-thumb { flex:none; display:block; width:64px; height:40px; max-width:none; margin:0; border:0; border-radius:8px; object-fit:cover; box-shadow:none;
+  background:rgba(128,128,128,.15); background:color-mix(in srgb, currentColor 10%, transparent); }
+#more-apps .llm-hub { display:grid; grid-template-columns:1fr 1fr; gap:3px; padding:6px 14px; box-sizing:border-box; }
+#more-apps .llm-hub span { border-radius:3px; background:currentColor; opacity:.35; }
+#more-apps .llm-txt { min-width:0; display:flex; flex-direction:column; gap:2px; }
+#more-apps .llm-t, #more-apps .llm-s { display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#more-apps .llm-t { font-size:15px; line-height:20px; font-weight:600; }
+#more-apps .llm-s { font-size:13px; line-height:18px; opacity:.78; }
+@media print { #more-apps { display:none; } }

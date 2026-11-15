@@ -158,7 +158,8 @@ const ALL = ['Videos watched', 'Time estimate', 'Busiest day', 'Scroll clock', '
     check(await expectError(page, 'not_tiktok.json', /doesn.t look like a TikTok data export/), 'non-TikTok JSON shows a clear error');
     check(await expectError(page, 'empty_sections.json', /watch history is empty/), 'export with empty sections shows a clear error');
 
-    const afterUpload = all.slice(loadCount);
+    // The static "More free apps" strip (../apps/more.js, more.css, lazy thumbnails) may load after upload; it sends no data.
+    const afterUpload = all.slice(loadCount).filter((r) => !(r.method === 'GET' && /^\/apps\/(more\.(js|css)|img\/[a-z-]+\.jpg)$/.test(r.url.replace(ORIGIN, ''))));
     check(afterUpload.length === 0 && offOrigin.length === 0, `zero network requests after upload (${afterUpload.length} made: ${afterUpload.map((r) => r.method + ' ' + r.url).join(', ') || 'none'})`);
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));
     check(blocked, 'CSP blocks fetch to a third-party origin');
