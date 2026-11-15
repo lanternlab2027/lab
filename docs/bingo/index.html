@@ -75,7 +75,7 @@
   .hint { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
 
   /* maker layout */
-  .maker { display: grid; gap: 16px; margin-top: 18px; }
+  .maker { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin-top: 18px; }
   @media (min-width: 900px) { .maker { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: start; } .boardcol { position: sticky; top: 12px; } }
   .modebar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
   .seg { display: inline-flex; background: #fff; border: 2px solid var(--ink); border-radius: 999px; padding: 3px; }
