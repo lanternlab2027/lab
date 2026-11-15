@@ -4,3 +4,4 @@ bots/buildingwatch/outbox/
 /*.png
 bots/chi-eats/*.png
 bots/mileage/fixtures/
+bots/*/*.png
