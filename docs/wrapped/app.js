@@ -62,7 +62,7 @@
 
   async function handleFile(file) {
     if (!file) return;
-    say('Reading your chat on this device\u2026');
+    say('Reading your chat on this device\u2026' + (file.size > 8e6 ? ' Big chat: this can take up to a minute on a phone. Keep this tab open.' : ''));
     try {
       var r = await readFile(file);
       await new Promise(function (res) { setTimeout(res, 20); });
@@ -81,7 +81,8 @@
     var latest = ys[ys.length - 1];
     state.year = ys.length > 1 && latest.count >= 100 ? latest.year : null;
     periodSel.value = state.year ? String(state.year) : '';
-    say('Found ' + parsed.messages.length.toLocaleString('en-US') + ' messages from ' + new Set(parsed.messages.map(function (m) { return m.sender; })).size + ' people. Nothing was uploaded.');
+    var nPeople = new Set(parsed.messages.map(function (m) { return m.sender; })).size;
+    say('Found ' + parsed.messages.length.toLocaleString('en-US') + (parsed.messages.length === 1 ? ' message' : ' messages') + ' from ' + nPeople + (nPeople === 1 ? ' person' : ' people') + '. Nothing was uploaded.');
     render();
     deckWrap.hidden = false;
     deckWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -269,6 +270,11 @@
       }
     });
   })();
+
+  // In-app browsers (Instagram, TikTok, Facebook, Snapchat...) often block downloads and the share sheet.
+  if (/Instagram|FBAN|FBAV|FB_IAB|musical_ly|TikTok|BytedanceWebview|Snapchat|LinkedInApp/i.test(navigator.userAgent || '') && !status.textContent) {
+    say('Opened inside an app? If saving the cards doesn\u2019t work here, open this page in Safari or Chrome (\u22ef menu \u2192 Open in browser).');
+  }
 
   Object.defineProperty(window, '__wrappedState', { get: function () { return state; } });
 })();

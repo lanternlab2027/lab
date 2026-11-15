@@ -9,19 +9,25 @@
   var MARKS = /[\u200e\u200f\u202a-\u202e\u2066-\u2069\ufeff]/g;
   var SPACES = /[\u202f\u00a0\u2007\u2009]/g;
 
-  var DATE = '(\\d{1,4})([\\/.\\-])(\\d{1,2})\\2(\\d{1,4})\\.?';
-  var TIME = '(\\d{1,2})[:.](\\d{2})(?:[:.](\\d{2}))?(?:\\s*([aApP])\\.?\\s*[mM]\\.?)?';
+  // "13. 6. 2018" (Czech/Croatian) and "2024. 1. 15." (Korean) put a space after each separator.
+  var DATE = '(\\d{1,4})([\\/.\\-])\\s?(\\d{1,2})\\2\\s?(\\d{1,4})\\.?';
+  // Optional word before the time: Finnish "klo", or a CJK AM/PM marker (Korean, Chinese, Japanese).
+  var PRE = '(?:(?:klo|kl\\.)\\s*|(\uc624\uc804|\uc624\ud6c4|\u4e0a\u5348|\u4e0b\u5348|\u5348\u524d|\u5348\u5f8c)\\s*)?';
+  // AM/PM after the time: "PM", "p. m.", or Arabic \u0635 (AM) / \u0645 (PM).
+  var TIME = '(\\d{1,2})[:.](\\d{2})(?:[:.](\\d{2}))?(?:\\s*(?:([aApP])\\.?\\s*[mM]\\.?|(\u0635|\u0645)(?![\\w\u0600-\u06ff])))?';
   // iOS:     [1/15/24, 9:05:12 PM] Name: msg
-  var RE_BRACKET = new RegExp('^\\[' + DATE + ',?\\s*' + TIME + '\\]\\s*(.*)$');
+  var RE_BRACKET = new RegExp('^\\[' + DATE + ',?\\s*' + PRE + TIME + '\\]\\s*(.*)$');
   // Android: 1/15/24, 9:05 PM - Name: msg
-  var RE_DASH = new RegExp('^' + DATE + ',?\\s*' + TIME + '\\s*[-\\u2013\\u2014]\\s(.*)$');
+  var RE_DASH = new RegExp('^' + DATE + ',?\\s*' + PRE + TIME + '\\s*[-\\u2013\\u2014]\\s(.*)$');
+  var PM_WORDS = /\uc624\ud6c4|\u4e0b\u5348|\u5348\u5f8c|\u0645/;
 
   var RE_MEDIA = [
     /^<?\s*media omitted\s*>?$/i,
     /^<?\s*(image|video|audio|sticker|gif|document|contact card|file|photo|voice message) omitted\s*>?$/i,
     /\b(image|video|audio|sticker|gif|document|contact card) omitted$/i,
     /^<attached: [^>]+>$/i,
-    /^.+\.(jpe?g|png|gif|webp|mp4|mov|opus|ogg|m4a|pdf|vcf|webm) \(file attached\)$/i,
+    // "IMG-20240101-WA0001.jpg (file attached)" in any language: "(Datei angeh\u00e4ngt)", "(archivo adjunto)"...
+    /^\S+\.(jpe?g|png|gif|webp|heic|mp4|mov|3gp|opus|ogg|m4a|aac|mp3|pdf|vcf|webm|docx?|xlsx?|pptx?|zip|txt) [(<][^()<>]{2,40}[)>]$/i,
     /^<?(medien ausgeschlossen|media weggelaten|multimedia omitido|archivo omitido|m[\u00e9e]dias? omis|m[\u00edi]dia oculta|media omessi|immagine omessa)>?$/i,
     /^(bild|video|audio|sticker|gif|dokument) weggelassen$/i,
     /^(imagen|video|audio|sticker|gif|documento) omitid[oa]$/i,
@@ -32,7 +38,11 @@
   var RE_DELETED = /^(this message was deleted\.?|you deleted this message\.?|diese nachricht wurde gel[\u00f6o]scht\.?|du hast diese nachricht gel[\u00f6o]scht\.?|se elimin[\u00f3o] este mensaje\.?|eliminaste este mensaje\.?|ce message a [\u00e9e]t[\u00e9e] supprim[\u00e9e]\.?|vous avez supprim[\u00e9e] ce message\.?|questo messaggio [\u00e8e] stato eliminato\.?|essa mensagem foi apagada\.?|mensagem apagada)$/i;
   var RE_EDITED = /\s*<\s*(this message was edited|diese nachricht wurde bearbeitet|se edit[\u00f3o] este mensaje|ce message a [\u00e9e]t[\u00e9e] modifi[\u00e9e])\s*>\s*$/i;
 
-  function norm(s) { return s.replace(SPACES, ' ').replace(MARKS, ''); }
+  // Arabic-Indic and Persian digits become ASCII; the Arabic comma becomes ",".
+  function digits(s) {
+    return s.replace(/[\u0660-\u0669\u06f0-\u06f9]/g, function (c) { var n = c.charCodeAt(0); return String(n >= 0x6f0 ? n - 0x6f0 : n - 0x660); }).replace(/\u060c/g, ',');
+  }
+  function norm(s) { return digits(s.replace(SPACES, ' ').replace(MARKS, '')); }
 
   function classify(text) {
     var t = text.trim();
@@ -59,9 +69,9 @@
       if (m) {
         cur = {
           p: [m[1], m[3], m[4]], sep: m[2],
-          h: +m[5], mi: +m[6], s: m[7] ? +m[7] : 0,
-          ap: m[8] ? m[8].toLowerCase() : null,
-          rest: m[9], ios: ios,
+          h: +m[6], mi: +m[7], s: m[8] ? +m[8] : 0,
+          ap: m[9] ? m[9].toLowerCase() : (m[5] || m[10]) ? (PM_WORDS.test(m[5] || m[10]) ? 'p' : 'a') : null,
+          rest: m[11], ios: ios,
           // iOS marks system lines (and media) with a left-to-right mark right after "Name: "
           mark: /:\s[\u200e\u200f]/.test(raw.replace(SPACES, ' '))
         };
@@ -179,7 +189,11 @@
       });
     }
     // A "sender" that only ever posted iOS system lines is the group itself, not a member.
-    out = out.filter(function (m) { return !(systemSenders[m.sender] && m.sender === title); });
+    // In a 1:1 iOS chat the contact's own name carries the system lines (and is the title),
+    // so never drop a sender who also wrote real text.
+    var wroteText = {};
+    out.forEach(function (m) { if (m.kind === 'text') wroteText[m.sender] = 1; });
+    out = out.filter(function (m) { return !(systemSenders[m.sender] && m.sender === title && !wroteText[m.sender]); });
     return { source: 'whatsapp', title: title, dateOrder: order, messages: out };
   }
 
@@ -229,6 +243,10 @@
   function parseAny(text, filename) {
     var trimmed = text.replace(/^\ufeff/, '').trimStart();
     var res;
+    if (!trimmed) throw new Error("That file is empty. Export the chat again (WhatsApp: Export chat \u2192 Without media) and upload the new file.");
+    if (/^<(!doctype|html)/i.test(trimmed)) {
+      throw new Error("That's an HTML export. In Telegram Desktop, export the chat again and set Format to Machine-readable JSON, then upload result.json.");
+    }
     if (trimmed.charAt(0) === '{') {
       var obj;
       try { obj = JSON.parse(trimmed); } catch (e) { throw new Error("That JSON file couldn't be read. Export it again from Telegram Desktop as JSON."); }

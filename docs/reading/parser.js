@@ -341,8 +341,15 @@
   function libbyBooks(events, now) {
     now = now || new Date();
     var byKey = {}, order = [], skipped = 0;
+    // Spreadsheet dates follow the phone's locale. If any "a/b/yyyy" has a > 12 and none has b > 12,
+    // the whole file is day-first (UK/AU/NZ), so read "03/04/2026" as 3 April, not March 4.
+    var SLASH = /^\s*(\d{1,2})([\/.\-])(\d{1,2})\2(\d{2,4})\b/, aBig = false, bBig = false;
+    events.forEach(function (e) { var m = typeof e.timestamp === 'string' && SLASH.exec(e.timestamp); if (m) { if (+m[1] > 12) aBig = true; if (+m[3] > 12) bBig = true; } });
+    var dayFirst = aBig && !bBig;
     events.forEach(function (e) {
-      var t = splitTitle(e.title), when = libbyTime(e.timestamp), kind = libbyKind(e.activity);
+      var ts = e.timestamp;
+      if (dayFirst && typeof ts === 'string') ts = ts.replace(SLASH, function (all, a, sep, b, y) { return b + '/' + a + '/' + y; });
+      var t = splitTitle(e.title), when = libbyTime(ts), kind = libbyKind(e.activity);
       if (!t.title || !when) { skipped++; return; }
       var author = clean(e.author).replace(/\s*;\s*.*$/, '');
       var key = (t.title + '|' + author).toLowerCase().replace(/[^a-z0-9|]+/g, ' ').trim();

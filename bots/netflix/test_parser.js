@@ -173,3 +173,16 @@ test('demo deck uses only invented titles', () => {
   const real = /^(stranger things|the crown|wednesday|squid game|bridgerton|ozark|narcos|you|dark|lupin|money heist|the witcher|breaking bad|friends|the office|black mirror|cobra kai|emily in paris|outer banks|the queen's gambit)$/i;
   assert.ok(!titles.some((t) => real.test(t)));
 });
+
+// ---- QA Nov 15 2026 ----
+test('Korean, Hungarian and Czech account locales (spaced dotted dates) parse to the same days', () => {
+  const keys = (f) => P.parseAny(fs.readFileSync(path.join(__dirname, 'fixtures', f), 'utf8'), f).entries.map((e) => P.dateKey(e.date));
+  const ko = keys('NetflixViewingHistory_ko.csv'), hu = keys('NetflixViewingHistory_hu.csv'), cs = keys('NetflixViewingHistory_cs.csv');
+  assert.ok(ko.length > 30);
+  assert.deepEqual(hu, ko);
+  assert.deepEqual(cs, ko);
+  assert.ok(ko.every((k) => k >= 20250101 && k <= 20261113));
+  assert.deepEqual(P.parseDate('26. 1. 2.'), { y: 2026, mo: 1, d: 2 });
+  assert.deepEqual(P.parseDate('2026. 01. 02.'), { y: 2026, mo: 1, d: 2 });
+  assert.deepEqual(P.parseDate('2. 1. 2026'), { y: 2026, mo: 1, d: 2 });
+});

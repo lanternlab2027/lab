@@ -337,3 +337,18 @@ test('demo library is deterministic and synthetic', () => {
   assert.equal(D.libbyCSV({ year: 2026, month: 11 }), read('libbytimeline-activities.csv'));
   assert.ok(!/\.(com|org|net)\//.test(D.libbyJSON({ year: 2026, month: 11 })), 'only .invalid URLs in the synthetic Libby data');
 });
+
+// ---- QA Nov 15 2026 ----
+test('Libby spreadsheet in a day-first locale (UK/AU) reads every row day-first', () => {
+  const r = P.parseAny(read('libby_uk_dayfirst.csv'), 'libbytimeline-activities.csv', { now: new Date(2026, 10, 15) });
+  assert.equal(r.source, 'libby');
+  const byTitle = Object.fromEntries(r.books.map((b) => [b.title, b]));
+  // "03/04/2026" is 3 April and "10/04/2026" is 10 April, not March 4 / October 4.
+  assert.deepEqual(byTitle['The Quiet Ferry'].loans[0].date, { y: 2026, mo: 4, d: 3 });
+  assert.deepEqual(byTitle['The Quiet Ferry'].reads[0], { y: 2026, mo: 4, d: 10 });
+  assert.deepEqual(byTitle['Salt and Signal'].loans[0].date, { y: 2026, mo: 2, d: 1 });
+  assert.deepEqual(byTitle['Salt and Signal'].reads[0], { y: 2026, mo: 2, d: 19 });
+  // US files are untouched
+  const us = P.parseAny('Title,Author,Publisher,ISBN,Timestamp,Activity,Details,Library\nA,B,C,1,03/04/2026 09:15,Borrowed,,L\nA,B,C,1,03/20/2026 09:15,Returned,,L\n', 'x.csv', { now: new Date(2026, 10, 15) });
+  assert.deepEqual(us.books[0].loans[0].date, { y: 2026, mo: 3, d: 4 });
+});

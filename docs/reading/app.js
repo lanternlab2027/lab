@@ -261,5 +261,10 @@
     });
   })();
 
+  // In-app browsers (Instagram, TikTok, Facebook, Snapchat...) often block downloads and the share sheet.
+  if (/Instagram|FBAN|FBAV|FB_IAB|musical_ly|TikTok|BytedanceWebview|Snapchat|LinkedInApp/i.test(navigator.userAgent || '') && !status.textContent) {
+    say('Opened inside an app? If saving the cards doesn\u2019t work here, open this page in Safari or Chrome (\u22ef menu \u2192 Open in browser).');
+  }
+
   Object.defineProperty(window, '__readingState', { get: function () { return state; } });
 })();

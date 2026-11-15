@@ -199,3 +199,15 @@ test('safe share: no absolute volume counts in any chip text', () => {
   C.build(st, full).forEach((c, i, a) => C.render(canvas, c, st, full, i + 1, a.length));
   assert.ok(texts.some((t) => t.includes(st.busiest.count.toLocaleString('en-US'))));
 });
+
+// ---- QA Nov 15 2026 ----
+test('Tinder Usage key aliases are used only when the usual key is missing (no double count)', () => {
+  const base = { Usage: { app_opens: { '2026-03-01': 2 }, swipe_likes: { '2026-03-01': 5 }, swipe_passes: { '2026-03-01': 7 }, swipes_superlikes: { '2026-03-01': 1 }, matches: { '2026-03-01': 1 } }, Messages: [] };
+  const r = P.parseFiles([{ name: 'data.json', text: JSON.stringify(base) }]);
+  const src = r.sources[0];
+  const tot = (k) => Object.values(src.days).reduce((a, d) => a + d[['opens', 'likes', 'passes', 'supers'].indexOf(k)], 0);
+  assert.equal(tot('likes'), 5); assert.equal(tot('passes'), 7); assert.equal(tot('supers'), 1);
+  base.Usage.superlikes = { '2026-03-01': 3 };
+  const r2 = P.parseFiles([{ name: 'data.json', text: JSON.stringify(base) }]);
+  assert.equal(Object.values(r2.sources[0].days).reduce((a, d) => a + d[3], 0), 3);
+});

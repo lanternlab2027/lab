@@ -84,15 +84,18 @@
   // ---------- Tinder data.json ----------
   function isTinder(o) {
     return o && typeof o === 'object' && !Array.isArray(o) && o.Usage && typeof o.Usage === 'object' &&
-      ['app_opens', 'swipes_likes', 'swipes_passes', 'matches', 'messages_sent'].some(function (k) { return k in o.Usage; });
+      ['app_opens', 'swipes_likes', 'swipes_passes', 'swipe_likes', 'swipe_passes', 'matches', 'messages_sent'].some(function (k) { return k in o.Usage; });
   }
 
   function parseTinder(o) {
     var src = newSource('tinder', 'tinder-json');
     var U = o.Usage;
     var map = { app_opens: ['opens'], swipes_likes: ['likes'], swipes_passes: ['passes'], superlikes: ['supers'], matches: ['matches', 'lmatch'], messages_sent: ['sent'], messages_received: ['recv'] };
+    // Fallback names seen in some third-party descriptions; used only when the usual key is absent.
+    var ALIAS = { superlikes: ['swipes_superlikes', 'super_likes'], swipes_likes: ['swipe_likes'], swipes_passes: ['swipe_passes'] };
     Object.keys(map).forEach(function (uk) {
       var series = U[uk];
+      if (series == null && ALIAS[uk]) ALIAS[uk].some(function (k) { series = U[k]; return series != null; });
       if (!series || typeof series !== 'object' || Array.isArray(series)) return;
       var any = false;
       Object.keys(series).forEach(function (k) {

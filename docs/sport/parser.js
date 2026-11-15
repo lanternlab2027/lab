@@ -131,6 +131,8 @@
    ['nov november novembre noviembre novembro', 11],
    ['dec december decembre dez dezember dic diciembre dicembre dezembro', 12]
   ].forEach(function (m) { m[0].split(' ').forEach(function (k) { MONTHS[k] = m[1]; }); });
+  // Polish abbreviations (Strava pl): sty lut mar kwi maj cze lip sie wrz paz lis gru.
+  'sty lut mar kwi maj cze lip sie wrz paz lis gru'.split(' ').forEach(function (k, i) { if (!MONTHS[k]) MONTHS[k] = i + 1; });
 
   function deaccent(s) { return s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s; }
 
@@ -166,6 +168,16 @@
       rest = low.slice(0, tm.index) + ' ' + low.slice(tm.index + tm[0].length);
     }
     var zone = /\b(utc|gmt|z)\b/.test(rest);
+    // CJK: "2024\u5e748\u670824\u65e5 10:47:26", Korean "2024. 8. 24. \uc624\ud6c4 10:47:26" (AM/PM as a word).
+    var cj = /(\d{4})\s*[\u5e74.]\s*(\d{1,2})\s*[\u6708.]\s*(\d{1,2})/.exec(rest);
+    if (cj && (/[\u5e74\u6708]/.test(rest) || /\d{4}\.\s+\d/.test(rest))) {
+      // test the original string: deaccent's NFD splits Hangul syllables into jamo
+      if (/\uc624\ud6c4|\u5348\u5f8c|\u4e0b\u5348/.test(s) && h < 12) h += 12;
+      if (/\uc624\uc804|\u5348\u524d|\u4e0a\u5348/.test(s) && h === 12) h = 0;
+      o = valid({ y: +cj[1], mo: +cj[2], d: +cj[3], h: h, mi: mi, s: sec });
+      if (o && zone) o.utcMs = Date.UTC(o.y, o.mo - 1, o.d, o.h, o.mi, o.s);
+      return o;
+    }
     // Month-name forms: "Aug 24, 2024", "24 Aug 2024", "24. Aug. 2024", "24 de ago. de 2024"
     var words = rest.match(/[a-z]+/g) || [], mo = null;
     for (var i = 0; i < words.length && !mo; i++) if (MONTHS[words[i]]) mo = MONTHS[words[i]];

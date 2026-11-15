@@ -278,3 +278,16 @@ test('card selection: 8-10 cards, route art only with routes, PR card only when 
   const ny = C.PAIRS.find((p) => p.a === 'New York' && p.b === 'Chicago');
   near(ny.km, 1145, 0.01, 'NYC-Chicago great-circle km');
 });
+
+// ---- QA Nov 15 2026 ----
+test('Strava CSV in Japanese and Korean display locales (CJK dates, AM/PM words)', () => {
+  for (const f of ['strava_ja.csv', 'strava_ko.csv']) {
+    const r = P.parseActivitiesCSV(txt(f));
+    assert.equal(r.source, 'strava', f); assert.equal(r.acts.length, 40, f);
+    // same instants as the generator's UTC times (to the second)
+    r.acts.forEach((a, i) => assert.equal(a.utc, Math.floor(ACTS[i].utc / 1000) * 1000, f + ' row ' + i));
+  }
+  assert.deepEqual(P.parseDateTime('2026. 1. 2. 오전 12:05:00'), { y: 2026, mo: 1, d: 2, h: 0, mi: 5, s: 0 });
+  assert.deepEqual(P.parseDateTime('2026年1月2日 下午3:00:00'), { y: 2026, mo: 1, d: 2, h: 15, mi: 0, s: 0 });
+  assert.equal(P.parseDateTime('24 paź 2026, 10:47:26').mo, 10);
+});

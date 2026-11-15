@@ -79,6 +79,11 @@ const FIT_SPORT = { Run: 1, Ride: 2, Walk: 11, Hike: 17 };
   const MES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic'];
   acts.slice(0, 80).forEach((a) => { const d = new Date(a.utc); loc.push([a.id, d.getUTCDate() + ' ' + MES[d.getUTCMonth()] + ' ' + d.getUTCFullYear() + ', ' + d.toISOString().slice(11, 19), a.name, a.type, '', a.elapsed, (a.dist / 1000).toFixed(2).replace('.', ','), '', '', 'false', '', '', a.file].join(';')); });
   w('strava_localized.csv', '﻿' + loc.join('\r\n') + '\r\n');
+  // QA Nov 15 2026: CJK display locales. Japanese "2026\u5e7411\u670810\u65e5 11:12:07";
+  // Korean "2026. 11. 10. \uc624\ud6c4 3:12:07" (AM/PM as a word before a 12-hour time). Same column order.
+  const cjk = (fmt) => [loc[0]].concat(acts.slice(0, 40).map((a) => { const d = new Date(a.utc); return [a.id, fmt(d), a.name, a.type, '', a.elapsed, (a.dist / 1000).toFixed(2), '', '', 'false', '', '', a.file].join(';'); })).join('\r\n') + '\r\n';
+  w('strava_ja.csv', cjk((d) => d.getUTCFullYear() + '\u5e74' + (d.getUTCMonth() + 1) + '\u6708' + d.getUTCDate() + '\u65e5 ' + d.toISOString().slice(11, 19)));
+  w('strava_ko.csv', cjk((d) => { const h = d.getUTCHours(); return d.getUTCFullYear() + '. ' + (d.getUTCMonth() + 1) + '. ' + d.getUTCDate() + '. ' + (h >= 12 ? '\uc624\ud6c4 ' : '\uc624\uc804 ') + ((h % 12) || 12) + d.toISOString().slice(13, 19); }));
 
   // Garmin Connect "Export CSV" (metric account and imperial account)
   const GT = { Run: 'Running', Ride: 'Cycling', Swim: 'Pool Swim', 'Weight Training': 'Strength Training', Hike: 'Hiking', Walk: 'Walking', Yoga: 'Yoga' };

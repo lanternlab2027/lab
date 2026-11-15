@@ -94,6 +94,16 @@ w('libby_odd.csv', '﻿' + [
 w('libby_empty.csv', D.LIBBY_HEAD + '\n');
 w('not_libby.json', JSON.stringify({ hello: 'world', items: 3 }) + '\n');
 
+// 14. QA Nov 15 2026: a UK-locale Libby spreadsheet with day-first "DD/MM/YYYY HH:MM" timestamps.
+//     Only one row has a day > 12, so per-row parsing alone would put the rest in the wrong month.
+w('libby_uk_dayfirst.csv', [
+  'Cover,Title,Author,Publisher,ISBN,Timestamp,Activity,Details,Library',
+  'https://covers.example.invalid/a.jpg,The Quiet Ferry,Mara Ellison,Lantern House,9780000000011,03/04/2026 09:15,Borrowed, 14 days ,Lantern Valley Libraries',
+  'https://covers.example.invalid/a.jpg,The Quiet Ferry,Mara Ellison,Lantern House,9780000000011,10/04/2026 21:40,Returned,,Lantern Valley Libraries',
+  'https://covers.example.invalid/b.jpg,Salt and Signal,Ivo Brandt,Harbor Audio,9780000000028,01/02/2026 18:05,Borrowed, 21 days ,Lantern Valley Libraries',
+  'https://covers.example.invalid/b.jpg,Salt and Signal,Ivo Brandt,Harbor Audio,9780000000028,19/02/2026 07:30,Returned,,Lantern Valley Libraries',
+].join('\r\n') + '\r\n');
+
 // 13. The Goodreads export inside a zip; the Libby JSON inside a zip.
 (async () => {
   const z = new JSZip();

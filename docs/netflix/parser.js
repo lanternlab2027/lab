@@ -73,9 +73,19 @@
     return { y: y, mo: mo, d: d };
   }
 
+  // Spaced dotted dates. "2026. 11. 14." (Hungarian) and "26. 11. 14." (Korean) are year-first with a
+  // trailing dot, so they become ISO. "14. 11. 2026" (Czech, Slovak) becomes "14.11.2026".
+  function unspace(s) {
+    var m = s.match(/^(\d{2}|\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.$/);
+    if (m) { var y = +m[1]; return (y < 100 ? y + 2000 : y) + '-' + m[2] + '-' + m[3]; }
+    m = s.match(/^(\d{1,2})\.\s+(\d{1,2})\.\s+(\d{4})\.?$/);
+    if (m) return m[1] + '.' + m[2] + '.' + m[3];
+    return s;
+  }
+
   // order: 'mdy' or 'dmy', only used for the ambiguous a/b/yy form.
   function parseDate(s, order) {
-    s = clean(s);
+    s = unspace(clean(s));
     if (!s) return null;
     var m;
     if ((m = s.match(/^(\d{4})[\/\-.](\d{1,2})[\/\-.](\d{1,2})(?:[ T].*)?$/))) return validDate(+m[1], +m[2], +m[3]);
@@ -100,7 +110,7 @@
   function detectOrder(strings) {
     var dm = 0, md = 0, dotted = 0, nums = [];
     strings.forEach(function (s) {
-      var m = clean(s).match(NUMERIC);
+      var m = unspace(clean(s)).match(NUMERIC);
       if (!m) return;
       nums.push(s);
       if (m[2] === '.') dotted++;

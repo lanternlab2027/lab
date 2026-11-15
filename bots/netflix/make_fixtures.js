@@ -46,6 +46,13 @@ w('tricky_titles.csv', 'Title,Date\n' + tricky.map((r) => q(r[0]) + ',' + q(r[1]
 // 8. Tiny, empty, and not an export.
 w('tiny.csv', 'Title,Date\n"Paper Satellites","11/2/26"\n"Saltmarsh Inspectors: Season 1: Ignition","3/1/26"\n');
 w('empty.csv', 'Title,Date\n');
+// QA Nov 15 2026: account locales with spaced dotted dates. Korean "26. 11. 14." and Hungarian
+// "2026. 11. 14." are year-first with a trailing dot; Czech "14. 11. 2026" is day-first.
+const loc = (head, fmt) => head + '\n' + rows.slice(0, 60).map((r) => q(r[0]) + ',' + q(fmt(r[1]))).join('\n') + '\n';
+const ymd = (s) => { const d = new Date(D.fmtDate(s, 'iso') + 'T12:00:00Z'); return [d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate()]; };
+w('NetflixViewingHistory_ko.csv', loc('\uc81c\ubaa9,\ub0a0\uc9dc', (s) => { const [y, m, d] = ymd(s); return `${String(y).slice(2)}. ${m}. ${d}.`; }));
+w('NetflixViewingHistory_hu.csv', loc('C\u00edm,D\u00e1tum', (s) => { const [y, m, d] = ymd(s); return `${y}. ${String(m).padStart(2, '0')}. ${String(d).padStart(2, '0')}.`; }));
+w('NetflixViewingHistory_cs.csv', loc('N\u00e1zev,Datum', (s) => { const [y, m, d] = ymd(s); return `${d}. ${m}. ${y}`; }));
 w('not_netflix.csv', 'Book Id,Title,Author,My Rating\n1,The Glass Orchard,Imogen Vale,4\n2,Salt Tide,Silas Wren,5\n');
 
 // 9. Full data-request archive: ViewingActivity.csv with two profiles, trailers and short sessions.
