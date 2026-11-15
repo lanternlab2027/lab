@@ -5,3 +5,4 @@ bots/buildingwatch/outbox/
 bots/chi-eats/*.png
 bots/mileage/fixtures/
 bots/*/*.png
+bots/*/*.pdf
