@@ -7,3 +7,4 @@ Allow: /
 Sitemap: https://lanternlab2027.github.io/lab/sitemap.xml
 Sitemap: https://lanternlab2027.github.io/lab/sitemap-buildings.xml
 Sitemap: https://lanternlab2027.github.io/lab/sitemap-eats.xml
+Sitemap: https://lanternlab2027.github.io/lab/sitemap-names.xml

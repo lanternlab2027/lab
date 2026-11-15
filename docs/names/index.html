@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Baby Name Report Card: Popularity, Rank &amp; Trend Since 1880</title>
+<meta name="description" content="Look up any baby name and get its report card from official Social Security data: 2025 rank and count, a popularity chart since 1880, peak year, rising or falling trend, boy/girl split and similar names on the rise. Compare two names. Free.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/names/">
+<meta name="theme-color" content="#23345c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Baby Name Report Card: when did your name peak?">
+<meta property="og:description" content="Rank, popularity since 1880, peak year and trend for any U.S. baby name, from Social Security data. Compare two names and share your card.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/names/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/names/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Baby Name Report Card: a sample name's popularity chart and rank">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Baby Name Report Card: when did your name peak?">
+<meta name="twitter:description" content="Rank, popularity since 1880, peak year and trend for any U.S. baby name. Free.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/names/og.png">
+<link rel="stylesheet" href="names.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Baby Name Report Card",
+ "url": "https://lanternlab2027.github.io/lab/names/",
+ "applicationCategory": "ReferenceApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Popularity, rank, peak year and trend for U.S. baby names since 1880, from Social Security Administration data.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <a class="brand" href="../">Lantern Lab</a>
+    <h1>Baby Name <em>Report Card</em></h1>
+    <p class="lede">Type a name. See how many babies got it last year, when it peaked, whether it's rising or fading, and which similar names are on the way up. Every U.S. birth year from 1880 to <span class="latest">2025</span>.</p>
+  </header>
+
+  <section class="sheet" aria-label="Look up a name">
+    <form class="search" id="search" autocomplete="off">
+      <div class="row">
+        <div><label for="q">First name</label><input type="text" id="q" name="q" list="suggest" placeholder="e.g. Hazel" maxlength="15" autocapitalize="words" spellcheck="false" required></div>
+        <div><label for="yr">Born in (optional)</label><input type="number" id="yr" name="yr" inputmode="numeric" min="1880" max="2025" placeholder="1990"></div>
+        <button class="btn" type="submit">Get report card</button>
+      </div>
+      <div id="vs-row" hidden>
+        <label for="q2">Compare with</label><input type="text" id="q2" name="q2" list="suggest" placeholder="e.g. Violet" maxlength="15" autocapitalize="words" spellcheck="false">
+      </div>
+      <p class="small" style="margin:0"><button type="button" class="linkbtn" id="vs-toggle">Compare two names</button> &middot; <a href="n/">Browse names A&ndash;Z</a></p>
+    </form>
+    <datalist id="suggest"></datalist>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </section>
+
+  <div id="result" hidden></div>
+
+  <section id="share" hidden aria-labelledby="share-h">
+    <h2 id="share-h">Share the card</h2>
+    <div class="sheet cardwrap">
+      <canvas id="card" width="1080" height="1350" aria-label="Shareable report card image"></canvas>
+      <div class="actions">
+        <button class="btn" type="button" id="card-share">Share image</button>
+        <button class="btn alt" type="button" id="card-save">Save PNG</button>
+        <button class="btn alt" type="button" id="card-copy">Copy link + text</button>
+      </div>
+      <p class="pass" id="pass-text"></p>
+      <p class="small" id="pass-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="how-h">
+    <h2 id="how-h">How the report card works</h2>
+    <details><summary>Where do the numbers come from?</summary><div><p>From the U.S. Social Security Administration's national baby-name files, which count first names on Social Security card applications for babies born in the U.S., by year and sex, from 1880 to <span class="latest">2025</span>. SSA only lists a name in a year when <b>at least 5 babies of one sex</b> got it, so very rare names and spellings are missing, and the totals here are sums of the published names, not all births. This tool includes every name given in <span class="latest">2025</span> plus any name with 200+ babies since 1880.</p></div></details>
+    <details><summary>How is "rank" counted?</summary><div><p>Rank is within one sex for one year, exactly as SSA orders its files: most babies first, ties broken alphabetically. A name used for both boys and girls has two ranks; the card shows the sex it's given to more often.</p></div></details>
+    <details><summary>Why "share of births" instead of raw counts?</summary><div><p>Far more babies are born now than in 1880, so raw counts flatter recent years. The chart and the peak year use babies per million births of that sex. "1 in 105 girls" means that share in that year.</p></div></details>
+    <details><summary>How are Rising, Falling, Classic and Vintage revival decided?</summary><div>
+      <p>All on share of births, in this order:</p>
+      <ul>
+        <li><b>Vintage revival:</b> some decade from the 1880s to the 1940s averaged 300+ per million, a decade from the 1950s to the 2000s dropped to a quarter of that or less, and the last five years are back to at least 3x that low point (and 100+ per million).</li>
+        <li><b>Classic:</b> given every year since 1880, still 300+ per million, and its busiest decade was no more than 8x its quietest (16x for names still in roughly the top 150).</li>
+        <li><b>Rising / Falling:</b> the last five years vs the same five years a decade earlier, up 25%+ or down 20%+.</li>
+        <li><b>Falling (long-term):</b> level lately, but under a tenth of its best decade.</li>
+        <li><b>Steady:</b> everything else.</li>
+      </ul></div></details>
+    <details><summary>How are "similar names on the rise" picked?</summary><div><p>A simple spelling rule, not a pronunciation dictionary: names one letter away from yours (add, drop or change one letter), two letters away if they start with the same letter and both have 5+ letters, or names that share your first two and last two letters. Only names given to 100+ babies in <span class="latest">2025</span> whose share of births grew 30%+ over the last five years qualify. Same-sex names come first, then the closest spellings, then the fastest growers.</p></div></details>
+    <details><summary>Does this track me?</summary><div><p>No. No analytics, no cookies, no third-party scripts or fonts. Name lookups load small data files from this site. The only outside address the page may contact is the optional email signup below, which sends just your email.</p></div></details>
+  </section>
+
+  <section aria-labelledby="signup-h">
+    <h2 id="signup-h">Get the new rankings</h2>
+    <div class="sheet">
+      <p style="margin:0">SSA publishes each year's names once a year, usually in May. Get one email when the <span class="next">2026</span> rankings are in the report card.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Email me in May</button>
+      </form>
+      <p class="small" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="../">A Lantern Lab project</a> &middot; <a href="../apps/">More free apps &rarr;</a> &middot; <a href="n/">All name pages A&ndash;Z</a></p>
+    <p id="data-note">Source: U.S. Social Security Administration. Not affiliated. Names given to fewer than 5 babies of one sex in a year are not published by SSA.</p>
+  </footer>
+</div>
+<script src="stats.js"></script>
+<script src="card.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
