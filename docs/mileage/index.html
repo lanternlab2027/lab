@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Google Maps Timeline Mileage Log: Free Mileage Tracker From Your Timeline Export</title>
+<meta name="description" content="A free Google Maps Timeline mileage tracker: turn your Timeline export into a business mileage log. Drop in Timeline.json (Android), location-history.json (iPhone) or old Takeout files, tag trips business or personal, name your places and download a CSV with totals and the IRS standard mileage rate. Runs entirely on your device; nothing is uploaded.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/mileage/">
+<meta name="theme-color" content="#f4efe2">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Google Maps Timeline mileage log: free, private, on your device">
+<meta property="og:description" content="Drop in your Google Maps Timeline export and get a business mileage log with a CSV, totals and an IRS-rate estimate. Nothing is uploaded.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/mileage/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/mileage/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Timeline Mileage Log: a mileage logbook made from a sample Google Maps Timeline export">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Maps Timeline mileage log">
+<meta name="twitter:description" content="Turn your Timeline export into a business mileage log and CSV. Free, and 100% on your device.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/mileage/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Timeline Mileage Log",
+ "alternateName": ["Google Maps Timeline mileage log", "Google Maps Timeline mileage tracker"],
+ "url": "https://lanternlab2027.github.io/lab/mileage/",
+ "applicationCategory": "FinanceApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Turns a Google Maps Timeline export into a business mileage log with a CSV download. Runs entirely in your browser; not affiliated with Google.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #f4efe2; --paper: #fffdf6; --ink: #1d2733; --muted: #5d6670; --line: #d9d1bd; --rule: #e9e2cf;
+    --green: #0d6b4e; --green-ink: #ffffff; --green-soft: #e1efe7; --amber: #f2b33d; --amber-soft: #fdf0d2; --red: #b3412e; --blue: #2f5d8a;
+    --field: #ffffff;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --display: "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed", "DejaVu Sans Condensed", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12171c; --paper: #1a2128; --ink: #ece6d6; --muted: #a2abb3; --line: #33404b; --rule: #26313a;
+      --green: #3fbf8f; --green-ink: #06231a; --green-soft: #183a2e; --amber: #f2b33d; --amber-soft: #3b2f17; --red: #ff8f7a; --blue: #8cb8e6;
+      --field: #10161b; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12171c; --paper: #1a2128; --ink: #ece6d6; --muted: #a2abb3; --line: #33404b; --rule: #26313a;
+    --green: #3fbf8f; --green-ink: #06231a; --green-soft: #183a2e; --amber: #f2b33d; --amber-soft: #3b2f17; --red: #ff8f7a; --blue: #8cb8e6;
+    --field: #10161b; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.55; overflow-x: hidden; }
+  a { color: var(--blue); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 36px 0 8px; }
+  .brand { font-weight: 800; letter-spacing: .16em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  .brand a { color: inherit; text-decoration: none; }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 10.5vw, 84px); line-height: .95; margin: 12px 0 14px; letter-spacing: -.01em; }
+  h1 .sign { display: inline-block; background: var(--green); color: var(--green-ink); padding: 2px 14px 4px; border-radius: 10px; box-shadow: inset 0 0 0 3px var(--green), inset 0 0 0 5px rgba(255,255,255,.75); }
+  .lede { font-size: clamp(18px, 4.4vw, 21px); max-width: 720px; margin: 0 0 16px; }
+  .privacy { display: inline-flex; gap: 10px; align-items: center; background: var(--green-soft); border: 1px solid var(--green); padding: 9px 14px; border-radius: 12px; font-weight: 700; font-size: 15px; }
+  .privacy svg { flex: none; color: var(--green); }
+  .drop { margin: 22px 0 6px; border: 2px dashed var(--line); border-radius: 18px; padding: 24px 16px; text-align: center; background: var(--paper); transition: border-color .15s, background .15s; }
+  .drop.over { border-color: var(--green); background: var(--green-soft); }
+  .drop p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+  .drop .row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; }
+  .btn { appearance: none; border: 0; border-radius: 999px; font: 800 16px/1 var(--font); padding: 15px 22px; min-height: 48px; cursor: pointer; background: var(--green); color: var(--green-ink); display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; }
+  .btn:hover { filter: brightness(1.08); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid var(--line); }
+  .btn.small { padding: 10px 14px; min-height: 44px; font-size: 14px; }
+  .btn[disabled] { opacity: .5; cursor: not-allowed; }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label.upload:focus-within { outline: 3px solid var(--amber); outline-offset: 2px; }
+  label.upload { display: inline-flex; position: relative; }
+  label.upload input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .status { min-height: 1.5em; margin: 10px 0 0; font-weight: 600; color: var(--green); }
+  .status.err { color: var(--red); }
+  section { margin: 40px 0; }
+  h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 6.6vw, 40px); line-height: 1.05; margin: 0 0 12px; }
+  h3 { font-size: 18px; margin: 18px 0 6px; }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+  .controls { display: grid; gap: 14px; }
+  @media (min-width: 760px) { .controls { grid-template-columns: 1fr 1fr; } .controls .wide { grid-column: 1 / -1; } }
+  label.field { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+  select, input[type=text], input[type=date], input[type=email] { font: 600 16px var(--font); color: var(--ink); background: var(--field); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-height: 46px; width: 100%; }
+  .dates { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .types { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; min-height: 44px; font-size: 15px; font-weight: 600; background: var(--field); cursor: pointer; }
+  .chip input { width: 18px; height: 18px; accent-color: var(--green); }
+  .chip small { color: var(--muted); font-weight: 600; }
+  .hint { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+  /* odometer totals */
+  .odo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 14px 0; }
+  @media (min-width: 760px) { .odo { grid-template-columns: repeat(4, 1fr); } }
+  .odo .t { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+  .odo .t b { display: block; font: 800 clamp(24px, 6.4vw, 34px)/1.1 var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+  .odo .t span { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .odo .t.biz { background: var(--green); border-color: var(--green); color: var(--green-ink); }
+  .odo .t.biz span { color: inherit; opacity: .85; }
+  .estimate { background: var(--amber-soft); border: 1px solid var(--amber); border-radius: 14px; padding: 14px 16px; }
+  .estimate .amt { font: 800 clamp(26px, 7vw, 38px)/1.1 var(--mono); font-variant-numeric: tabular-nums; }
+  .estimate ul { margin: 8px 0 0; padding-left: 20px; font-size: 15px; }
+  .estimate p { margin: 6px 0 0; font-size: 14px; }
+  .warn { border-left: 5px solid var(--red); background: var(--paper); border-radius: 0 12px 12px 0; padding: 12px 14px; font-size: 15px; margin: 14px 0; }
+  .warn b { color: var(--red); }
+  /* places */
+  .places { display: grid; gap: 8px; margin-top: 10px; }
+  .place { display: grid; grid-template-columns: 1fr; gap: 8px; border-top: 1px solid var(--rule); padding: 10px 0 2px; }
+  .place:first-child { border-top: 0; }
+  .place .meta { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
+  .place .acts { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 14px; margin-top: 4px; }
+  .place .acts > span { flex: 1 1 100%; }
+  @media (min-width: 760px) { .place .acts > span { flex: 0 1 auto; } }
+  .chip.wide { border-radius: 12px; }
+  @media (min-width: 760px) { .place { grid-template-columns: minmax(220px, 1.2fr) 1fr; align-items: center; } .place .acts { justify-content: flex-end; } }
+  .more { margin-top: 10px; }
+  /* log table */
+  .logbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; justify-content: space-between; margin: 0 0 10px; }
+  .logbar .left { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .logbar select { width: auto; }
+  table.log { width: 100%; border-collapse: collapse; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; font-size: 15px; }
+  table.log th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); padding: 10px 8px; border-bottom: 2px solid var(--line); background: var(--paper); }
+  table.log td { padding: 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  table.log td.mi, table.log th.mi { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  table.log td.d { font-family: var(--mono); font-size: 14px; white-space: nowrap; }
+  table.log td.d small { display: block; color: var(--muted); }
+  table.log td.rt { min-width: 0; }
+  table.log td.rt .arrow { color: var(--muted); padding: 0 4px; }
+  table.log td.rt small { color: var(--muted); }
+  table.log select, table.log input { min-height: 40px; padding: 6px 8px; font-size: 15px; }
+  table.log select.business { border-color: var(--green); background: var(--green-soft); }
+  table.log select.personal { border-color: var(--line); }
+  table.log tfoot td { font-weight: 800; border-bottom: 0; }
+  @media (max-width: 759px) {
+    table.log, table.log tbody, table.log tfoot { display: block; border: 0; background: none; }
+    table.log thead { display: none; }
+    table.log tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 6px 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; }
+    table.log td { border: 0; padding: 0; }
+    table.log td.d { grid-column: 1; }
+    table.log td.mi { grid-column: 2; grid-row: 1; font-size: 18px; font-weight: 800; justify-self: end; }
+    table.log td.rt { grid-column: 1 / -1; }
+    table.log td.pu { grid-column: 1; }
+    table.log td.no { grid-column: 2; }
+    table.log td.no input { width: 100%; }
+    table.log td.pu select { width: 100%; }
+    table.log tfoot tr { background: var(--green-soft); }
+    table.log tfoot td:empty { display: none; }
+  }
+  .pager { display: flex; gap: 10px; align-items: center; justify-content: center; margin: 12px 0; flex-wrap: wrap; }
+  .exportbar { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 0; }
+  ol.steps { padding-left: 22px; } ol.steps li { margin: 4px 0; }
+  .guide { display: grid; gap: 14px; }
+  @media (min-width: 760px) { .guide { grid-template-columns: 1fr 1fr; } }
+  details.faq { border-top: 1px solid var(--line); padding: 10px 0; }
+  details.faq summary { font-weight: 700; cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  form.signup input { flex: 1 1 220px; }
+  .cite { font-size: 13px; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  footer p { margin: 6px 0; }
+  .makeyours { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 12px; font-size: 15px; color: var(--ink); }
+  .makeyours code { font-family: var(--mono); background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; overflow-wrap: anywhere; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media print {
+    body { background: #fff; color: #000; font-size: 11px; }
+    header.hero, .noprint, footer, #guide, #faq, #how, #signup, .logbar, .pager, .exportbar, #places-panel, #controls-panel { display: none !important; }
+    .wrap { max-width: none; }
+    table.log select, table.log input { border: 0; background: none; padding: 0; min-height: 0; appearance: none; -webkit-appearance: none; font-size: 11px; }
+    #print-head { display: block !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="brand"><a href="../">A Lantern Lab project</a></div>
+    <h1>Google Maps Timeline <span class="sign">mileage log</span></h1>
+    <p class="lede">Turn your Google Maps Timeline export into a <b>business mileage log</b>: every drive with date, start, end and miles. Tag trips business or personal, name the places you go often, and download a CSV with totals.</p>
+    <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your location history never leaves your device. No uploads, no account.</span></div>
+
+    <div class="drop" id="drop">
+      <div class="row">
+        <label class="upload btn" for="file">Choose your Timeline file<input type="file" id="file" accept=".json,application/json,.zip,application/zip" multiple></label>
+        <button type="button" class="btn ghost" id="sample">Try a sample</button>
+      </div>
+      <p>Drop <b>Timeline.json</b> (Android), <b>location-history.json</b> (iPhone), or older Takeout <b>Semantic Location History</b> month files or .zip here.</p>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </header>
+
+  <div id="results" hidden>
+    <div id="print-head" hidden><h2>Mileage log</h2><p id="print-period"></p></div>
+    <section id="controls-panel" aria-labelledby="h-period" style="margin-top:12px">
+      <h2 id="h-period">1. Pick the period and trip types</h2>
+      <div class="panel controls">
+        <label class="field">Tax year or period
+          <select id="period"></select>
+        </label>
+        <div class="dates" id="custom-dates" hidden>
+          <label class="field">From <input type="date" id="from"></label>
+          <label class="field">To <input type="date" id="to"></label>
+        </div>
+        <div class="wide">
+          <div class="field" style="font-weight:700;font-size:15px">Count these trip types</div>
+          <div class="types" id="types"></div>
+          <p class="hint">Google guesses how you traveled. Driving types are on by default. Check your log for rides you took as a passenger.</p>
+        </div>
+        <label class="chip wide" style="justify-self:start"><input type="checkbox" id="remember"> Remember my place names and tags in this browser</label>
+      </div>
+    </section>
+
+    <section id="totals-panel" aria-labelledby="h-totals">
+      <h2 id="h-totals">Totals</h2>
+      <div class="odo" id="odo"></div>
+      <div class="estimate" id="estimate"></div>
+      <div class="warn" id="warn-records"><b>Not tax advice.</b> This log is reconstructed from location history after the fact. The IRS asks for records made <i>at or near the time</i> of each trip, with the mileage, date, destination and business purpose (<a href="https://www.irs.gov/publications/p463" rel="noopener">IRS Publication 463</a>, chapter 5, "Timely kept records" and Table 5-1). A reconstructed log may not meet that standard on its own. Check every trip against your calendar, invoices or receipts, add the business purpose, and ask a tax professional if you're unsure.</div>
+    </section>
+
+    <section id="places-panel" aria-labelledby="h-places">
+      <h2 id="h-places">2. Name your frequent places</h2>
+      <div class="panel">
+        <p class="hint" style="margin-top:0">Trip ends within about 150 m (500 ft) of each other are grouped as one place. Names you type here show up in the log and the CSV. Driving between home and your regular workplace is commuting, which is personal (<a href="https://www.irs.gov/publications/p463" rel="noopener">Pub 463</a>, chapter 4).</p>
+        <div class="places" id="places"></div>
+        <button type="button" class="linkbtn btn ghost small more" id="more-places" hidden>Show more places</button>
+      </div>
+    </section>
+
+    <section id="log-panel" aria-labelledby="h-log">
+      <h2 id="h-log">3. Tag your trips</h2>
+      <div class="logbar">
+        <div class="left">
+          <label class="sr" for="show">Show</label>
+          <select id="show">
+            <option value="all">All trips</option>
+            <option value="untagged">Untagged</option>
+            <option value="business">Business</option>
+            <option value="personal">Personal</option>
+          </select>
+          <span class="hint" id="count" style="margin:0"></span>
+        </div>
+        <div class="left">
+          <button type="button" class="btn ghost small" id="bulk-business">Mark shown as business</button>
+          <button type="button" class="btn ghost small" id="bulk-personal">Mark shown as personal</button>
+        </div>
+      </div>
+      <table class="log" id="log">
+        <thead><tr><th>Date</th><th>From &rarr; To</th><th class="mi">Miles</th><th>Purpose</th><th>Business purpose / note</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="pager" id="pager"></div>
+      <div class="exportbar">
+        <button type="button" class="btn" id="csv">Download CSV</button>
+        <button type="button" class="btn ghost" id="print">Print log</button>
+      </div>
+      <p class="hint">The CSV lists every trip in the period you picked (not only the ones shown), with notes, the IRS rate for each business trip and totals at the bottom. Miles marked "path" or "straight line" were estimated because the file had no distance for that trip.</p>
+    </section>
+  </div>
+
+  <section id="guide" aria-labelledby="h-guide">
+    <h2 id="h-guide">How to export your Google Maps Timeline</h2>
+    <p>Google now keeps Timeline on your phone, so the export comes from the phone. These steps are from Google's help page, <a href="https://support.google.com/maps/answer/6258979" rel="noopener">Manage your Google Maps Timeline</a> ("Export your Timeline data").</p>
+    <div class="guide">
+      <div class="panel">
+        <h3 style="margin-top:0">Android</h3>
+        <ol class="steps">
+          <li>Open your phone's <b>Settings</b> app.</li>
+          <li>Tap <b>Location</b> &rarr; <b>Location services</b> &rarr; <b>Timeline</b>.</li>
+          <li>Under "Timeline," tap <b>Export Timeline data</b>, then <b>Continue</b>.</li>
+          <li>Pick where to save it and tap <b>Save</b>. The file is usually called <b>Timeline.json</b>.</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3 style="margin-top:0">iPhone and iPad</h3>
+        <ol class="steps">
+          <li>Open the <b>Google Maps</b> app.</li>
+          <li>Tap your profile picture or initial &rarr; <b>Settings</b> &rarr; <b>Location &amp; Privacy</b>.</li>
+          <li>Tap <b>Export Timeline data</b>.</li>
+          <li>On the share sheet, tap <b>Save to Files</b>, pick a folder and tap <b>Save</b>. The file is <b>location-history.json</b>.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="hint">Then open this page on the same phone and choose the file, or move it to a computer. Older Google Takeout downloads also work: use the month files in <i>Location History (Timeline) &rarr; Semantic Location History</i>, or the whole .zip. Records.json alone has no trips in it. Timeline only has trips if it was turned on at the time, and auto-delete (3, 18 or 36 months) can remove old ones, so export before tax season.</p>
+  </section>
+
+  <section id="how" aria-labelledby="h-how">
+    <h2 id="h-how">How it works</h2>
+    <ul>
+      <li><b>On your device.</b> The file is read by this page in your browser. There's no server and no upload. You can turn on airplane mode after the page loads and it still works.</li>
+      <li><b>Drives only.</b> Google labels each movement with a guess (driving, walking, cycling, bus&hellip;). You choose which types count.</li>
+      <li><b>Miles.</b> Google's own distance for each trip is used. If a trip has none, the miles are estimated from the path points recorded during it, or as a straight line between the ends (which undercounts). Those trips are marked in the CSV.</li>
+      <li><b>IRS rate.</b> The estimate uses the IRS business standard mileage rate for each trip's date. For 2026 that's 72.5&cent; a mile through June 30 and 76&cent; from July 1 (<a href="https://www.irs.gov/tax-professionals/standard-mileage-rates" rel="noopener">IRS: Standard mileage rates</a>).</li>
+    </ul>
+  </section>
+
+  <section id="faq" aria-labelledby="h-faq">
+    <h2 id="h-faq">Questions</h2>
+    <details class="faq"><summary>Is a Google Maps Timeline mileage log enough for the IRS?</summary><p>Maybe not on its own. IRS Publication 463 says a record made at or near the time of the trip carries more weight than one prepared later, and the log needs the business purpose of each trip. Use this as a starting point, check it against your calendar and receipts, and talk to a tax professional. This page is not tax advice.</p></details>
+    <details class="faq"><summary>Why are some trips missing or wrong?</summary><p>Timeline is a guess built from your phone's location. Trips can be split, merged, mislabeled as walking, or missing if location was off. Turn on more trip types above, and fix what you find before you rely on the totals.</p></details>
+    <details class="faq"><summary>Does it work with the new on-device Timeline?</summary><p>Yes. It reads the Android export (Timeline.json, with <code>semanticSegments</code>), the iPhone export (location-history.json) and the older Takeout Semantic Location History month files.</p></details>
+    <details class="faq"><summary>Is anything saved?</summary><p>Nothing leaves your device. Only if you tick "Remember my place names and tags," your names and tags (not your location history) are kept in this browser's storage so you can pick up later. Untick it to erase them.</p></details>
+  </section>
+
+  <section id="signup" class="panel" aria-labelledby="h-signup" hidden>
+    <h2 id="h-signup" style="font-size:26px">Get a tax-season reminder</h2>
+    <p style="margin:0">One email in January to export your Timeline and build your log. Only your email is sent; never your trips.</p>
+    <form class="signup" id="signup-form">
+      <label class="sr" for="signup-email">Email</label>
+      <input type="email" id="signup-email" placeholder="you@example.com" autocomplete="email" required>
+      <button type="submit" class="btn">Remind me</button>
+    </form>
+    <p id="signup-msg" class="hint" role="status"></p>
+  </section>
+
+  <footer>
+    <div class="makeyours"><b>Make yours:</b> <code id="share-url">lanternlab2027.github.io/lab/mileage</code> <button type="button" class="btn ghost small" id="share">Share this tool</button></div>
+    <p><a href="../">A Lantern Lab project</a> &middot; <a href="../apps/">More free apps &rarr;</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/mileage" rel="noopener">GitHub</a></p>
+    <p id="disclaimer">Not tax, legal or accounting advice. Mileage, rates and estimates may be wrong; verify every trip and consult a tax professional. Not affiliated with Google. Google Maps is a trademark of Google LLC, used here only to describe the file this tool reads. The sample uses invented places.</p>
+  </footer>
+</div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="parser.js"></script>
+<script src="stats.js"></script>
+<script src="demo.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>
