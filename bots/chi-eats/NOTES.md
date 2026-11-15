@@ -60,3 +60,6 @@ STATUS: done. Unit tests (17) and Playwright fixture tests at 390px and 1280px p
 - **Fairness.** No rankings or lists. A snapshot caveat appears on the page and the card. The footer disclaimer says "nothing here is a ranking".
 - **ZIP filter dropped.** The zip field's type was unverifiable, so search uses name or address only.
 - **"Data through"** comes from `max(inspection_date)` over the dataset, because Chicago has no record_date.
+
+## Live check (Nov 15, 2026)
+Verified from the published page in a real browser: CORS works from lanternlab2027.github.io, field names match (license_ is text), violations use `NN. TITLE - Comments: …` joined by ` | `. Search "lou mitchell" and the detail for license 30743 render correctly; the dataset reports inspections through Nov 13, 2026. Kit tag chi-eats = 25916705, custom field restaurant_license created.
