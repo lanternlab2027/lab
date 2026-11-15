@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>2027 Goal Bingo Card Maker: Free New Year Resolution Bingo Card</title>
+<meta name="description" content="Make a 2027 goal bingo card in a minute: a free new year resolution bingo card maker with 5x5, 4x4 and 3x3 cards, a free space, goal ideas, themes and printable PDF and phone wallpaper downloads. Check off goals all year from a private link. No sign-up.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/bingo/">
+<meta name="theme-color" content="#fff6e9">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="2027 Goal Bingo: make your new year bingo card">
+<meta property="og:description" content="A free goal bingo card maker for 2027. Pick your goals (or tap for ideas), choose a theme, print it or set it as your wallpaper, and check off squares all year.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/bingo/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/bingo/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sample 2027 goal bingo cards in three themes">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="2027 Goal Bingo: make your new year bingo card">
+<meta name="twitter:description" content="Free goal bingo card maker: ideas, themes, printable PDF and phone wallpaper. Check off goals all year.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/bingo/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "2027 Goal Bingo",
+ "alternateName": ["Goal bingo card maker", "New year resolution bingo card"],
+ "url": "https://lanternlab2027.github.io/lab/bingo/",
+ "applicationCategory": "LifestyleApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Make a 2027 goal bingo card with ideas and themes, download it as a printable PDF or phone wallpaper, and check off goals all year from a private link.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #fff6e9; --ink: #2b1d3d; --muted: #6b5a7a; --line: rgba(43,29,61,.16); --panel: #ffffff;
+    --pink: #ff4f6d; --pink2: #e23a58; --yellow: #ffd84d; --green: #22b07d; --blue: #3a86ff; --violet: #9b5de5;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --round: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    /* themed board variables (set by app.js) */
+    --t-bg: #fff6e9; --t-ink: #2b1d3d; --t-muted: #6b5a7a; --t-cell: #fff; --t-cellink: #2b1d3d; --t-line: #2b1d3d; --t-accent: #ff4f6d; --t-free: #ffd84d; --t-freeink: #2b1d3d; --t-onaccent: #fff;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); line-height: 1.5; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--pink2); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  header.hero { padding: 28px 0 8px; }
+  h1 { font-family: var(--round); font-weight: 900; font-size: clamp(40px, 11vw, 76px); line-height: .98; margin: 10px 0 12px; letter-spacing: -.02em; }
+  h1 .b { color: var(--pink); } h1 .i { color: #f0a000; } h1 .n { color: var(--green); } h1 .g { color: var(--blue); } h1 .o { color: var(--violet); }
+  .lede { font-size: clamp(17px, 4.4vw, 21px); max-width: 640px; margin: 0 0 10px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: 14px; font-weight: 700; }
+  .pills li { background: #fff; border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px; }
+  .banner { margin: 16px 0 0; padding: 14px 16px; border-radius: 16px; background: var(--ink); color: #fff; font-weight: 600; }
+  .banner a, .banner button.linkbtn { color: var(--yellow); }
+  .btn { appearance: none; border: 0; border-radius: 999px; font: 800 16px/1 var(--font); padding: 14px 20px; cursor: pointer; color: #fff; background: var(--pink); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 5px 14px rgba(226,58,88,.25); }
+  .btn:hover { background: var(--pink2); }
+  .btn.ghost { background: #fff; color: var(--ink); border: 2px solid rgba(43,29,61,.25); box-shadow: none; }
+  .btn.ghost:hover { background: #fff3f5; }
+  .btn.small { padding: 10px 14px; font-size: 15px; min-height: 44px; }
+  .btn[disabled] { opacity: .5; cursor: not-allowed; }
+  .btn:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .linkbtn { background: none; border: 0; color: var(--pink2); font: 700 inherit var(--font); font-size: inherit; text-decoration: underline; cursor: pointer; padding: 6px 2px; }
+  h2 { font-family: var(--round); font-weight: 900; font-size: clamp(26px, 6vw, 36px); line-height: 1.1; margin: 0 0 10px; letter-spacing: -.01em; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  section { margin: 36px 0; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 16px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+
+  /* maker layout */
+  .maker { display: grid; gap: 16px; margin-top: 18px; }
+  @media (min-width: 900px) { .maker { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: start; } .boardcol { position: sticky; top: 12px; } }
+  .modebar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .seg { display: inline-flex; background: #fff; border: 2px solid var(--ink); border-radius: 999px; padding: 3px; }
+  .seg button { appearance: none; border: 0; background: none; font: 800 15px var(--font); color: var(--ink); padding: 9px 16px; border-radius: 999px; cursor: pointer; min-height: 40px; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .progress { font-weight: 800; font-size: 15px; }
+  .progress .bingo { color: var(--pink2); }
+
+  /* the board (themed) */
+  .board { background: var(--t-bg); color: var(--t-ink); border-radius: 22px; padding: 18px 14px 14px; box-shadow: 0 18px 40px rgba(43,29,61,.18); container-type: inline-size; position: relative; overflow: hidden; }
+  .board .lbl { text-align: center; font-weight: 800; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--t-muted); }
+  .board .ttl { text-align: center; font-family: var(--t-head, var(--round)); font-style: var(--t-italic, normal); font-weight: 900; font-size: clamp(22px, 7.5cqi, 40px); line-height: 1.1; margin: 4px 0 2px; overflow-wrap: anywhere; }
+  .board .nm { text-align: center; color: var(--t-muted); font-weight: 600; font-size: 14px; min-height: 0; }
+  .letters { display: grid; grid-template-columns: repeat(var(--n), 1fr); margin: 8px 0 4px; text-align: center; font-family: var(--t-head, var(--round)); font-weight: 900; font-size: clamp(22px, 9cqi, 46px); line-height: 1; }
+  .grid { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 4px; background: var(--t-line); padding: 4px; border-radius: 16px; }
+  .sq { position: relative; aspect-ratio: 1; border: 0; margin: 0; background: var(--t-cell); color: var(--t-cellink); border-radius: 11px; font: 700 var(--fs, 12px)/1.15 var(--font); display: flex; align-items: center; justify-content: center; text-align: center; padding: 6%; cursor: pointer; overflow: hidden; overflow-wrap: break-word; word-break: normal; hyphens: manual; -webkit-tap-highlight-color: transparent; transition: transform .08s; }
+  .sq:active { transform: scale(.96); }
+  .sq .tx { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; position: relative; z-index: 1; }
+  .sq.empty .tx { color: var(--t-cellink); opacity: .35; font-weight: 600; }
+  .sq.sel { box-shadow: inset 0 0 0 3px var(--t-accent); }
+  .sq.free { background: var(--t-free); color: var(--t-freeink); font-weight: 900; }
+  .sq.on::before { content: ""; position: absolute; inset: 8%; border-radius: 50%; background: var(--t-stamp, color-mix(in srgb, var(--t-accent) 22%, transparent)); box-shadow: inset 0 0 0 3px var(--t-accent); }
+  .sq.on::after { content: "\2713"; position: absolute; top: 4%; right: 5%; width: 24%; aspect-ratio: 1; border-radius: 50%; background: var(--t-accent); color: var(--t-onaccent); font-size: max(9px, 60%); display: flex; align-items: center; justify-content: center; font-weight: 900; z-index: 2; line-height: 1; }
+  .sq.inline { border-radius: 11px; }
+  .sq.bingo { box-shadow: inset 0 0 0 3px var(--t-accent); }
+  .board.checking .sq:not(.free) { cursor: pointer; }
+  .boardfoot { text-align: center; color: var(--t-muted); font-size: 12px; font-weight: 700; margin-top: 10px; }
+  @keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.08); } 100% { transform: scale(1); } }
+  .sq.pop { animation: pop .25s ease-out; }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 12px 18px; border-radius: 999px; font-weight: 800; z-index: 20; box-shadow: 0 10px 30px rgba(0,0,0,.25); max-width: calc(100vw - 32px); text-align: center; }
+
+  /* editor */
+  .editor label.field, .settings label.field { display: grid; gap: 6px; font-weight: 800; font-size: 15px; }
+  textarea, input[type=text], input[type=email] { font: 600 17px var(--font); padding: 12px 14px; border-radius: 12px; border: 2px solid rgba(43,29,61,.22); background: #fff; color: var(--ink); width: 100%; min-height: 48px; }
+  textarea { resize: none; height: 76px; }
+  .edrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; align-items: center; }
+  .count { margin-left: auto; color: var(--muted); font-size: 13px; font-weight: 700; }
+  .cats { display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 8px; margin: 12px -2px 0; scrollbar-width: thin; }
+  .chip { flex: none; appearance: none; border: 2px solid rgba(43,29,61,.18); background: #fff; color: var(--ink); border-radius: 999px; padding: 8px 14px; font: 700 15px var(--font); cursor: pointer; min-height: 40px; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .ideas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .idea { appearance: none; border: 1px dashed rgba(43,29,61,.35); background: #fffaf2; color: var(--ink); border-radius: 10px; padding: 8px 12px; font: 600 15px var(--font); cursor: pointer; text-align: left; min-height: 40px; }
+  .idea:hover { background: #fff0d6; }
+  .idea.used { opacity: .45; text-decoration: line-through; }
+  .settings { display: grid; gap: 14px; }
+  @media (min-width: 560px) { .settings .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; } }
+  .settings .two { display: grid; gap: 12px; }
+  .check { display: flex; gap: 10px; align-items: center; font-weight: 700; font-size: 15px; cursor: pointer; min-height: 32px; }
+  .check input { width: 22px; height: 22px; accent-color: var(--pink); }
+  .swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  @media (min-width: 560px) { .swatches { grid-template-columns: repeat(6, 1fr); } }
+  .sw { appearance: none; border: 3px solid transparent; border-radius: 14px; padding: 0; cursor: pointer; background: none; display: grid; gap: 4px; font: 700 12px var(--font); color: var(--ink); text-align: center; }
+  .sw span.prev { display: block; height: 46px; border-radius: 11px; border: 1px solid var(--line); }
+  .sw[aria-pressed="true"] { border-color: var(--ink); }
+  .sw-confetti .prev { background: radial-gradient(circle at 20% 30%, #ff4f6d 0 4px, transparent 5px), radial-gradient(circle at 70% 60%, #3a86ff 0 4px, transparent 5px), radial-gradient(circle at 45% 80%, #22b07d 0 3px, transparent 4px), #fff6e9; }
+  .sw-midnight .prev { background: radial-gradient(circle at 70% 30%, #e9c46a 0 2px, transparent 3px), radial-gradient(circle at 30% 70%, #fff 0 1px, transparent 2px), linear-gradient(#16204a, #0b0f26); }
+  .sw-sage .prev { background: linear-gradient(135deg, #eef2e6, #cfdcc6); }
+  .sw-sunset .prev { background: linear-gradient(160deg, #ffb489, #ff6f91, #8b5cf6); }
+  .sw-mono .prev { background: repeating-linear-gradient(90deg, #111 0 2px, #fff 2px 14px); }
+  .sw-lantern .prev { background: linear-gradient(135deg, #f5ecd9 50%, #17402c 50% 75%, #7d1f32 75%); }
+  .size-seg button { min-width: 64px; }
+
+  /* save / share */
+  .savegrid { display: grid; gap: 16px; }
+  @media (min-width: 900px) { .savegrid { grid-template-columns: 1fr 1fr; align-items: start; } }
+  .linkbox { display: flex; gap: 8px; flex-wrap: wrap; }
+  .linkbox input { flex: 1 1 200px; font-size: 14px; font-family: ui-monospace, Menlo, Consolas, monospace; }
+  .dl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+  .dl .btn { width: 100%; }
+  .thumbs { display: flex; gap: 10px; align-items: flex-end; margin-top: 8px; }
+  .thumbs canvas { border-radius: 8px; box-shadow: 0 6px 18px rgba(43,29,61,.2); height: auto; background: #eee; }
+  #thumb-letter { width: 46%; } #thumb-wall { width: 24%; }
+  .dark { background: var(--ink); color: #fff; border: 0; }
+  .dark .hint { color: #d8cfe4; }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; }
+  form.signup .btn { background: var(--yellow); color: var(--ink); box-shadow: none; }
+  details { background: #fff; border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 14px 16px; font-weight: 800; font-size: 17px; min-height: 48px; }
+  details > div { padding: 0 16px 14px; }
+  .idealist { columns: 2 180px; margin: 0; padding-left: 20px; }
+  footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  footer p { margin: 6px 0; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="brand">A Lantern Lab project</div>
+    <h1><span class="b">2027</span> Goal <span class="g">Bingo</span></h1>
+    <p class="lede">Turn your new year resolutions into a bingo card. Fill the squares with goals (or tap for ideas), pick a theme, print it or make it your lock screen, then check squares off all year.</p>
+    <ul class="pills"><li>Free</li><li>No sign-up</li><li>Your card is a private link</li></ul>
+    <div class="banner" id="group-banner" hidden></div>
+    <div class="banner" id="notice" hidden></div>
+  </header>
+
+  <div class="maker" id="maker">
+    <div class="boardcol">
+      <div class="modebar">
+        <div class="seg" role="group" aria-label="Mode">
+          <button type="button" id="mode-edit" aria-pressed="true">Edit goals</button>
+          <button type="button" id="mode-check" aria-pressed="false">Check off</button>
+        </div>
+        <span class="progress" id="progress" role="status" aria-live="polite"></span>
+      </div>
+      <div class="board" id="board">
+        <div class="lbl" id="b-label">2027 Goal Bingo</div>
+        <div class="ttl" id="b-title">My 2027 Goal Bingo</div>
+        <div class="nm" id="b-name"></div>
+        <div class="letters" id="b-letters" aria-hidden="true"></div>
+        <div class="grid" id="grid" role="grid" aria-label="Bingo card"></div>
+        <div class="boardfoot">Make yours: lanternlab2027.github.io/lab/bingo</div>
+      </div>
+      <p class="hint" id="mode-hint">Tap a square to write a goal. Switch to <b>Check off</b> when you've done one.</p>
+    </div>
+
+    <div class="sidecol">
+      <div class="panel editor" id="editor">
+        <label class="field" for="goal-input"><span id="goal-label">Square 1</span>
+          <textarea id="goal-input" maxlength="70" rows="2" placeholder="e.g. Run a 5K" enterkeyhint="next"></textarea>
+        </label>
+        <div class="edrow">
+          <button type="button" class="btn small ghost" id="prev" aria-label="Previous square">&larr; Prev</button>
+          <button type="button" class="btn small ghost" id="next" aria-label="Next square">Next &rarr;</button>
+          <button type="button" class="linkbtn" id="clear-goal">Clear</button>
+          <span class="count" id="goal-count">0/70</span>
+        </div>
+        <h3 style="margin:16px 0 0">Need ideas? Tap one to add it</h3>
+        <div class="cats" id="cats" role="group" aria-label="Idea categories"></div>
+        <div class="ideas" id="ideas"></div>
+        <div class="edrow">
+          <button type="button" class="btn small ghost" id="fill-empty">Fill empty squares with ideas</button>
+          <button type="button" class="btn small ghost" id="shuffle">Shuffle squares</button>
+        </div>
+      </div>
+
+      <div class="panel settings" id="settings" style="margin-top:16px">
+        <h3 style="margin:0">Card settings</h3>
+        <div class="two">
+          <label class="field" for="title-input">Title
+            <input type="text" id="title-input" maxlength="48" autocomplete="off" placeholder="My 2027 Goal Bingo">
+          </label>
+          <label class="field" for="name-input">Your name (optional)
+            <input type="text" id="name-input" maxlength="30" autocomplete="off" placeholder="e.g. Sam">
+          </label>
+        </div>
+        <div>
+          <div style="font-weight:800;font-size:15px;margin-bottom:6px">Card size</div>
+          <div class="seg size-seg" role="group" aria-label="Card size" id="size-seg">
+            <button type="button" data-size="5" aria-pressed="true">5&times;5</button>
+            <button type="button" data-size="4" aria-pressed="false">4&times;4</button>
+            <button type="button" data-size="3" aria-pressed="false">3&times;3</button>
+          </div>
+        </div>
+        <label class="check" id="free-wrap"><input type="checkbox" id="free" checked> Free space in the center</label>
+        <div>
+          <div style="font-weight:800;font-size:15px;margin-bottom:6px">Theme</div>
+          <div class="swatches" id="swatches" role="group" aria-label="Theme"></div>
+        </div>
+        <button type="button" class="linkbtn" id="new-card" style="justify-self:start">Start a new blank card</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="save" aria-labelledby="save-h">
+    <h2 id="save-h">Save, print and share</h2>
+    <div class="savegrid">
+      <div class="panel">
+        <h3>Your private link</h3>
+        <p class="hint" style="margin-top:0">This link <b>is</b> your card: goals, checks and theme are stored in it, not on a server. Bookmark it, or email it to yourself, and open it whenever you finish a goal. Anyone you give it to can see your goals.</p>
+        <div class="linkbox">
+          <input type="text" id="card-link" readonly aria-label="Your card link">
+          <button type="button" class="btn small" id="copy-link">Copy link</button>
+        </div>
+        <div class="edrow">
+          <a class="btn small ghost" id="email-link" href="#">Email it to myself</a>
+          <button type="button" class="linkbtn" id="prev-card" hidden>Open your previous card</button>
+        </div>
+        <p class="hint">This device also remembers your card, so coming back to this page opens it.</p>
+      </div>
+      <div class="panel">
+        <h3>Download</h3>
+        <div class="thumbs" aria-hidden="true"><canvas id="thumb-letter" width="425" height="550"></canvas><canvas id="thumb-wall" width="195" height="422"></canvas></div>
+        <div class="dl">
+          <button type="button" class="btn small" id="dl-pdf">Print PDF (Letter)</button>
+          <button type="button" class="btn small ghost" id="dl-letter">Letter PNG</button>
+          <button type="button" class="btn small ghost" id="dl-wall">Phone wallpaper</button>
+          <button type="button" class="btn small ghost" id="dl-story">Story image</button>
+        </div>
+        <div class="edrow"><button type="button" class="btn small" id="share-img">Share my card</button></div>
+        <p class="hint" id="dl-msg" role="status" aria-live="polite"></p>
+      </div>
+      <div class="panel">
+        <h3>Group bingo</h3>
+        <p class="hint" style="margin-top:0">Doing this with friends, family or a team? Send a group link. Everyone gets a blank card in your theme and size, with the group name on top. Your own goals are never included.</p>
+        <label class="field" for="group-input" style="display:grid;gap:6px;font-weight:800;font-size:15px">Group name
+          <input type="text" id="group-input" maxlength="40" autocomplete="off" placeholder="e.g. Book club, The Smiths">
+        </label>
+        <div class="edrow">
+          <button type="button" class="btn small" id="share-group">Share group link</button>
+          <button type="button" class="btn small ghost" id="copy-group">Copy group link</button>
+        </div>
+      </div>
+      <div class="panel dark" id="notify">
+        <h3>Remind me monthly to update my bingo</h3>
+        <p class="hint" style="margin-top:0">Optional. One short email a month in 2027 to nudge you to check off squares. We only send your email address; your card and goals are never included. Unsubscribe any time.</p>
+        <form class="signup" id="signup-form">
+          <label for="signup-email" class="hint" style="flex-basis:100%;margin:0">Email</label>
+          <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+          <button type="submit" class="btn">Remind me</button>
+        </form>
+        <p class="hint" id="signup-msg" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="how-h">
+    <h2 id="how-h">How to make a 2027 goal bingo card</h2>
+    <div class="panel">
+      <ol style="margin:0;padding-left:22px">
+        <li><b>Pick a size.</b> 5&times;5 is the classic (24 goals plus a free space). 4&times;4 and 3&times;3 are easier to finish.</li>
+        <li><b>Fill the squares.</b> Mix a few big goals with lots of small, fun ones. Tap the idea categories for inspiration.</li>
+        <li><b>Choose a theme</b> and download a printable PDF for the fridge, or a phone wallpaper so you see it every day.</li>
+        <li><b>Bookmark your link.</b> Each time you finish a goal, open it, switch to <b>Check off</b> and tap the square. Five in a row is a bingo.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>What is goal bingo?</summary><div><p>Goal bingo (or resolution bingo) swaps one big new year resolution for a grid of smaller goals. Instead of "get healthy", you get 24 concrete things like "run a 5K", "cook a new vegetable" and "call grandma monthly". Finishing a row, column or diagonal is a bingo, and filling the whole card is a blackout.</p></div></details>
+    <details><summary>Where is my card saved?</summary><div><p>In the link itself (the part after the <code>#</code>), and in this browser's storage. The part after <code>#</code> is never sent to any server, including ours, and there's no account or database. That's why you should bookmark the link or email it to yourself: if you clear your browser and lose the link, the card is gone.</p></div></details>
+    <details><summary>How does group bingo work?</summary><div><p>The group link only carries a group name, theme and card size. Each friend makes their own card and gets their own private link. If you want to see each other's progress, share your card images (they show "7 of 24 done").</p></div></details>
+    <details><summary>Can I print it?</summary><div><p>Yes. "Print PDF" makes a US Letter page that fills the sheet. For the least ink, choose the Mono theme.</p></div></details>
+    <details><summary>Goal bingo ideas</summary><div>
+      <p>A few favorites from the idea lists above:</p>
+      <ul class="idealist">
+        <li>Run a 5K</li><li>Read 12 books</li><li>Visit a new country</li><li>Host a dinner party</li><li>Build a 3-month emergency fund</li><li>Keep a plant alive all year</li><li>See a live concert</li><li>Learn 3 songs on an instrument</li><li>Take a solo trip</li><li>Write 5 thank-you notes</li><li>Cancel 3 subscriptions</li><li>Go stargazing</li>
+      </ul>
+    </div></details>
+    <details><summary>Is it free?</summary><div><p>Yes, completely. No ads, no tracking, no sign-up.</p></div></details>
+  </section>
+
+  <footer>
+    <p><a href="../">A Lantern Lab project</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/bingo" rel="noopener">GitHub</a></p>
+    <p>No analytics or trackers. Your goals stay in your link and your browser.</p>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="codec.js"></script>
+<script src="ideas.js"></script>
+<script src="render.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
