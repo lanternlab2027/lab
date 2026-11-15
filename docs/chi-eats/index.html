@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://data.cityofchicago.org https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Chicago Restaurant Inspection Lookup: Health Inspection Results (Free)</title>
+<meta name="description" content="Chicago restaurant inspection lookup: search any Chicago restaurant to see its latest health inspection result (Pass, Pass with Conditions or Fail), risk category, inspection history and violations in plain English, from official CDPH data.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/chi-eats/">
+<meta name="theme-color" content="#f6f3ec">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Chicago Restaurant Report Card: inspection results in plain English">
+<meta property="og:description" content="Look up any Chicago restaurant's latest health inspection result, risk category, history and violations explained simply. Free, no login.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/chi-eats/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/chi-eats/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chicago Restaurant Report Card: a sample card for a made-up restaurant">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chicago Restaurant Report Card: inspection results in plain English">
+<meta name="twitter:description" content="Latest CDPH inspection result, risk category, history and plain-English violations for any Chicago restaurant. Free, no login.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/chi-eats/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Chicago Restaurant Report Card",
+ "url": "https://lanternlab2027.github.io/lab/chi-eats/",
+ "applicationCategory": "UtilitiesApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Chicago restaurant inspection lookup: latest health inspection result, risk category, inspection history and violations in plain English, from City of Chicago open data.",
+ "isAccessibleForFree": true,
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --paper: #f6f3ec; --paper2: #ebe6db; --sheet: #fffdf8; --ink: #16191d; --muted: #565b62; --line: #d6d0c4;
+    --pass: #1f6b4a; --cond: #8a5a0f; --fail: #a23a28; --other: #565b62; --star: #b8322a; --sky: #2b6c9e;
+    --accent: #16191d; --accent-ink: #f6f3ec; --focus: #2a62c9; --pass-bg: #e3efe7; --cond-bg: #f6ead2; --fail-bg: #f6e0da; --other-bg: #e9e7e2;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #121417; --paper2: #1c1f23; --sheet: #191c20; --ink: #eef0f2; --muted: #a9afb7; --line: #33383e;
+      --pass: #5fbf8f; --cond: #e0a44a; --fail: #ef8a74; --other: #a9afb7; --star: #ef7b72; --sky: #8cc4ee;
+      --accent: #eef0f2; --accent-ink: #121417; --focus: #8fb0ff; --pass-bg: #1b2b22; --cond-bg: #33280f; --fail-bg: #3a221c; --other-bg: #24272b;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #121417; --paper2: #1c1f23; --sheet: #191c20; --ink: #eef0f2; --muted: #a9afb7; --line: #33383e;
+    --pass: #5fbf8f; --cond: #e0a44a; --fail: #ef8a74; --other: #a9afb7; --star: #ef7b72; --sky: #8cc4ee;
+    --accent: #eef0f2; --accent-ink: #121417; --focus: #8fb0ff; --pass-bg: #1b2b22; --cond-bg: #33280f; --fail-bg: #3a221c; --other-bg: #24272b;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+  header.top { padding: 28px 0 8px; }
+  .brand { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+  .flagbar { display: flex; gap: 6px; align-items: center; margin: 14px 0 0; }
+  .flagbar i { display: block; height: 6px; width: 34px; border-radius: 3px; background: var(--sky); }
+  .flagbar b { color: var(--star); font-size: 15px; line-height: 1; letter-spacing: 2px; }
+  h1 { font-size: clamp(34px, 9vw, 58px); line-height: 1; letter-spacing: -.025em; margin: 10px 0 12px; font-weight: 900; }
+  .lede { margin: 0 0 18px; color: var(--muted); font-size: 18px; max-width: 640px; }
+
+  form.search { background: var(--sheet); border: 1px solid var(--line); border-radius: 16px; padding: 14px; display: grid; gap: 10px; grid-template-columns: 1fr; box-shadow: 0 1px 0 var(--line); }
+  form.search label { display: block; font-weight: 800; font-size: 14px; margin-bottom: 4px; }
+  input { width: 100%; font: 600 17px var(--font); padding: 12px; min-height: 48px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+  .btn { appearance: none; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font: 800 17px var(--font); padding: 12px 18px; min-height: 48px; cursor: pointer; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn[disabled] { opacity: .55; cursor: progress; }
+  @media (min-width: 720px) { form.search { grid-template-columns: 1fr auto; align-items: end; } }
+  .status { min-height: 1.5em; margin: 14px 0 0; font-weight: 700; }
+  .status.err { color: var(--fail); }
+
+  section { margin: 28px 0; }
+  h2 { font-size: 26px; line-height: 1.15; margin: 0 0 10px; letter-spacing: -.01em; }
+  h3 { font-size: 19px; margin: 0 0 6px; }
+
+  ul.results { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  ul.results button { width: 100%; text-align: left; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--sheet); color: var(--ink); font: inherit; cursor: pointer; }
+  ul.results button:hover { border-color: var(--ink); }
+  ul.results b { font-size: 18px; line-height: 1.25; }
+  ul.results .aka { font-weight: 600; color: var(--muted); font-size: 15px; }
+  ul.results small { grid-column: 1; color: var(--muted); font-size: 14px; }
+  ul.results .pill { grid-row: 1 / span 3; grid-column: 2; }
+  .pill { display: inline-block; font-size: 13px; font-weight: 800; border-radius: 99px; padding: 4px 10px; white-space: nowrap; text-align: center; max-width: 9.5em; white-space: normal; line-height: 1.2; }
+  .r-pass { color: var(--pass); } .r-cond { color: var(--cond); } .r-fail { color: var(--fail); }
+  .r-oob, .r-noentry, .r-notready, .r-notlocated, .r-other { color: var(--other); }
+  .pill.r-pass { background: var(--pass-bg); } .pill.r-cond { background: var(--cond-bg); } .pill.r-fail { background: var(--fail-bg); }
+  .pill.r-oob, .pill.r-noentry, .pill.r-notready, .pill.r-notlocated, .pill.r-other { background: var(--other-bg); }
+
+  .sheet { background: var(--sheet); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .back { background: none; border: 0; color: var(--ink); font: 700 16px var(--font); padding: 10px 0; min-height: 44px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .rc-head { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 640px) { .rc-head { grid-template-columns: auto 1fr; align-items: center; } }
+  .badge { width: 148px; height: 148px; border-radius: 50%; border: 10px solid currentColor; display: grid; place-items: center; font-weight: 900; font-size: 40px; line-height: 1; background: var(--paper); text-align: center; }
+  .badge.word { font-size: 22px; line-height: 1.1; padding: 10px; }
+  .rc-name { font-size: clamp(26px, 7vw, 38px); line-height: 1.1; margin: 0 0 4px; letter-spacing: -.015em; overflow-wrap: anywhere; }
+  .rc-meta { color: var(--muted); margin: 0; }
+  .rsentence { font-weight: 900; font-size: 21px; line-height: 1.25; margin: 10px 0 4px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0 0; }
+  .facts div { background: var(--paper); border-radius: 12px; padding: 10px 12px; }
+  .facts dt { font-size: 13px; color: var(--muted); font-weight: 700; }
+  .facts dd { margin: 0; font-weight: 800; overflow-wrap: anywhere; }
+  .note { border-left: 4px solid var(--sky); background: var(--paper); padding: 10px 12px; border-radius: 0 10px 10px 0; margin: 12px 0 0; font-size: 15px; }
+  .snap { font-size: 15px; color: var(--muted); margin: 14px 0 0; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+  .cardwrap { margin: 16px 0 0; }
+  .cardwrap canvas { width: 100%; max-width: 360px; height: auto; aspect-ratio: 4 / 5; display: block; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+
+  .chart { width: 100%; height: auto; display: block; }
+  .chart text { font-family: var(--font); fill: var(--muted); }
+
+  details.ins { border: 1px solid var(--line); border-radius: 14px; background: var(--sheet); margin: 10px 0; }
+  details.ins > summary { list-style: none; cursor: pointer; padding: 14px; display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; min-height: 48px; align-items: center; }
+  details.ins > summary::-webkit-details-marker { display: none; }
+  details.ins > summary b { font-size: 17px; }
+  details.ins > summary small { color: var(--muted); font-size: 14px; grid-column: 1; }
+  details.ins > summary .pill { grid-row: 1 / span 3; grid-column: 2; }
+  details.ins > div { padding: 0 14px 14px; }
+  .action { font-size: 15px; color: var(--muted); margin: 0 0 8px; }
+  ul.viol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  ul.viol li { border-top: 1px solid var(--line); padding-top: 10px; }
+  .vhead { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin-bottom: 2px; }
+  .code { font: 800 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--paper2); border-radius: 6px; padding: 2px 7px; }
+  .flag { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; border-radius: 99px; padding: 3px 9px; }
+  .flag.sev-p { background: var(--fail-bg); color: var(--fail); }
+  .flag.sev-pf { background: var(--cond-bg); color: var(--cond); }
+  .flag.sev-core { background: var(--other-bg); color: var(--muted); }
+  .plain { margin: 4px 0 2px; font-weight: 700; }
+  .official { margin: 0; font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+  .olabel { font-weight: 700; }
+  details.cmt { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+  details.cmt summary { cursor: pointer; font-weight: 700; min-height: 32px; padding: 4px 0; }
+  details.cmt p { margin: 2px 0 0; overflow-wrap: anywhere; }
+
+  .signup { background: var(--paper2); }
+  form.kit { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.kit input { flex: 1 1 220px; width: auto; }
+  .small { font-size: 14px; color: var(--muted); }
+
+  .how dl { margin: 0; }
+  .how dt { font-weight: 800; margin-top: 12px; }
+  .how dd { margin: 2px 0 0; }
+  table.bands { border-collapse: collapse; width: 100%; margin: 6px 0 4px; font-size: 16px; }
+  table.bands th, table.bands td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 6px; vertical-align: top; }
+  ol.src { padding-left: 20px; font-size: 15px; }
+  ol.src li { margin: 4px 0; overflow-wrap: anywhere; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  .toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 10px 16px; border-radius: 10px; font-weight: 700; opacity: 0; pointer-events: none; transition: opacity .2s; max-width: calc(100% - 32px); }
+  .toast.on { opacity: 1; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="top wrap">
+  <a class="brand" href="../">Lantern Lab</a>
+  <div class="flagbar" aria-hidden="true"><i></i><b>&#10038;&#10038;&#10038;&#10038;</b><i></i></div>
+  <h1>Chicago Restaurant Report Card</h1>
+  <p class="lede">Look up a Chicago restaurant's health inspections before you go: the latest result, its risk category, the full inspection history, and every violation in plain English. Straight from the city's open data.</p>
+  <form class="search" id="search" role="search" novalidate>
+    <div>
+      <label for="q">Restaurant name or street address</label>
+      <input id="q" name="q" type="text" autocomplete="off" autocapitalize="words" enterkeyhint="search" placeholder="e.g. Lou's Diner or 1234 N Clark St" required>
+    </div>
+    <button class="btn" id="go" type="submit">Search</button>
+  </form>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+</header>
+
+<main class="wrap">
+  <section id="results-sec" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Results</h2>
+    <p class="small" id="results-note"></p>
+    <ul class="results" id="results"></ul>
+  </section>
+
+  <section id="detail" hidden aria-labelledby="rc-name">
+    <button class="back" id="back" type="button">&larr; Back to results</button>
+    <article class="sheet">
+      <div class="rc-head">
+        <div class="badge" id="badge" aria-hidden="true"></div>
+        <div>
+          <h2 class="rc-name" id="rc-name"></h2>
+          <p class="rc-meta" id="rc-meta"></p>
+          <p class="rsentence" id="rsentence"></p>
+          <p class="small" id="rexplain" style="margin:0"></p>
+        </div>
+      </div>
+      <dl class="facts" id="facts"></dl>
+      <p class="small" id="risk-explain" style="margin:10px 0 0"></p>
+      <div id="notes"></div>
+      <p class="snap">An inspection result reflects what the inspector found on one day. Conditions can change in either direction, and violations can be contested at the city's Department of Administrative Hearings. Read the full history below before drawing conclusions.</p>
+      <div class="actions">
+        <button class="btn" id="share" type="button">Make a &ldquo;Before you go&rdquo; card</button>
+        <button class="btn ghost" id="copy" type="button">Copy link</button>
+      </div>
+      <div class="cardwrap" id="cardwrap" hidden>
+        <canvas id="card" width="1080" height="1350" role="img" aria-label="Shareable Before you go card image"></canvas>
+        <div class="actions">
+          <button class="btn" id="card-share" type="button">Share image</button>
+          <button class="btn ghost" id="card-save" type="button">Save image</button>
+        </div>
+      </div>
+    </article>
+
+    <section aria-labelledby="tl-h">
+      <h2 id="tl-h">Results over time</h2>
+      <p class="small" style="margin-top:0" id="counts"></p>
+      <div id="strip"></div>
+    </section>
+
+    <section aria-labelledby="hist-h">
+      <h2 id="hist-h">Inspection history</h2>
+      <p class="small" style="margin-top:0" id="asof"></p>
+      <div id="history"></div>
+    </section>
+
+    <section class="sheet signup" id="alert" aria-labelledby="alert-h" hidden>
+      <h2 id="alert-h" style="font-size:22px">Alert me about new inspections</h2>
+      <p class="small" style="margin:0">Optional. We'll email you when a new inspection for <b id="alert-name"></b> shows up in the city's data. Unsubscribe anytime.</p>
+      <form class="kit" id="signup-form" novalidate>
+        <label class="sr" for="signup-email">Email</label>
+        <input id="signup-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <input id="signup-license" type="hidden" value="">
+        <button class="btn" type="submit">Alert me</button>
+      </form>
+      <p class="small" id="signup-msg" role="status" aria-live="polite"></p>
+    </section>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-h">
+    <h2 id="how-h">How Chicago restaurant inspections work</h2>
+    <p>Chicago does <b>not</b> give restaurants letter grades. Inspectors from the Chicago Department of Public Health (CDPH) Food Protection Program record a <b>result</b> for each inspection, and each establishment has a <b>risk category</b>.</p>
+    <h3>Inspection results</h3>
+    <table class="bands">
+      <thead><tr><th>Result</th><th>What CDPH says it means</th></tr></thead>
+      <tbody>
+        <tr><td><b class="r-pass">Pass</b></td><td>No priority or priority foundation violations were noted during the inspection.<sup><a href="#s1">1</a>,<a href="#s2">2</a></sup></td></tr>
+        <tr><td><b class="r-cond">Pass with Conditions</b><br><span class="small">(&ldquo;Pass w/ Conditions&rdquo; in the data)</span></td><td>One or more priority or priority foundation violations were found but were corrected on site during the inspection.<sup><a href="#s1">1</a>,<a href="#s2">2</a></sup></td></tr>
+        <tr><td><b class="r-fail">Fail</b></td><td>One or more priority or priority foundation violations were found that could not be corrected during the inspection.<sup><a href="#s1">1</a>,<a href="#s2">2</a></sup> CDPH re-inspects after the establishment has had time to correct them.<sup><a href="#s2">2</a></sup></td></tr>
+      </tbody>
+    </table>
+    <p class="small">The data also contains records labeled <b>Out of Business</b>, <b>No Entry</b>, <b>Not Ready</b> and <b>Business Not Located</b>. These are not inspection results, and we couldn't find an official CDPH definition for them, so we show them by their labels only and point to the last completed inspection.</p>
+    <dl>
+      <dt>Risk categories 1, 2 and 3</dt>
+      <dd>CDPH assigns each establishment a risk level of 1 (High), 2 (Medium) or 3 (Low).<sup><a href="#s3">3</a></sup> It's based on the type of food and how it is prepared (an FDA model), and it is reassessed at every full annual inspection.<sup><a href="#s2">2</a></sup> <b>It's about the kind of food, not how the place performed.</b> CDPH says risk 1 establishments are inspected twice a year, risk 2 once a year, and risk 3 every other year.<sup><a href="#s3">3</a></sup></dd>
+      <dt>Priority, priority foundation and core violations</dt>
+      <dd>Priority (critical) violations can lead directly to foodborne illness; priority foundation (serious) violations support or make possible things that can lead to it; core (minor) violations are usually general sanitation or minor repair issues.<sup><a href="#s2">2</a></sup> The data doesn't label each violation's level, so we only show one when the inspector's own comment names it.</dd>
+      <dt>Inspection types</dt>
+      <dd>Canvass (routine, generally unannounced), complaint, re-inspection (follow-up) and license inspections, among others.<sup><a href="#s2">2</a></sup> Complaints can come in through 311; a complaint being filed doesn't mean the condition exists.<sup><a href="#s2">2</a></sup></dd>
+      <dt>Results are a snapshot</dt>
+      <dd>Results reflect the findings at the time of the inspection. Violations are allegations that can be disputed at the Department of Administrative Hearings.<sup><a href="#s4">4</a></sup> Results are usually posted within 2&ndash;3 weeks of an inspection.<sup><a href="#s1">1</a></sup></dd>
+      <dt>July 2018 rule change</dt>
+      <dd>Chicago changed its food inspection procedures on July 1, 2018, including the violation list, so older inspections use different violation numbers.<sup><a href="#s5">5</a></sup></dd>
+    </dl>
+    <h3 style="margin-top:18px">Sources</h3>
+    <ol class="src">
+      <li id="s1">CDPH, &ldquo;Food Protection Program Frequently Asked Questions&rdquo; (PDF): <a href="https://www.chicago.gov/content/dam/city/depts/cdph/food_env/general/Food_Protection/Inspection_FAQ_2019.pdf" rel="noopener">chicago.gov/&hellip;/Inspection_FAQ_2019.pdf</a>.</li>
+      <li id="s2">CDPH, &ldquo;Food Protection Services and Health Code Enforcement&rdquo; (presentation, PDF, 2021): <a href="https://www.chicago.gov/content/dam/city/depts/cdph/policy_planning/FoodProtServices-HlthCodeEnforcement-Oct2021.pdf" rel="noopener">chicago.gov/&hellip;/FoodProtServices-HlthCodeEnforcement-Oct2021.pdf</a>.</li>
+      <li id="s3">CDPH, &ldquo;Understand Health Code Requirements for Food Establishments&rdquo;: <a href="https://www.chicago.gov/city/en/depts/cdph/provdrs/food_safety/svcs/understand_healthcoderequirementsforfoodestablishments.html" rel="noopener">chicago.gov</a>.</li>
+      <li id="s4">CDPH, &ldquo;Restaurant and Food Service Inspection Reports&rdquo;: <a href="https://www.chicago.gov/city/en/depts/cdph/provdrs/food_safety/svcs/restaurant_food_inspection.html" rel="noopener">chicago.gov</a>.</li>
+      <li id="s5">City of Chicago Data Portal, &ldquo;Food Inspections&rdquo; (dataset 4ijn-s7e5), description: <a href="https://data.cityofchicago.org/d/4ijn-s7e5" rel="noopener">data.cityofchicago.org/d/4ijn-s7e5</a>.</li>
+    </ol>
+    <p class="small">Plain-English summaries are our own paraphrases of the official violation titles, which are always shown with the inspector's comments. Rules checked on chicago.gov on November 15, 2026.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p><b>Not affiliated with the City of Chicago</b> or the Chicago Department of Public Health. This is an independent, free tool that displays official open data as published. It may lag the city's own records, the dataset can contain duplicates or errors, and nothing here is a ranking. For the official record, use the <a href="https://data.cityofchicago.org/d/4ijn-s7e5" rel="noopener">Food Inspections dataset</a> or the inspection report posted at the restaurant.</p>
+  <p>No tracking, no ads, no login. Searches go directly from your browser to the City of Chicago Data Portal.</p>
+  <p>In New York? Try the <a href="../eats/">NYC Restaurant Report Card</a> (letter grades).</p>
+  <p><a href="../">More free tools from Lantern Lab</a> &middot; <a href="../apps/">More free apps &rarr;</a></p>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="violations.js"></script>
+<script src="results.js"></script>
+<script src="soda.js"></script>
+<script src="card.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>
