@@ -25,6 +25,7 @@
     names:          ['Baby Name Report Card', "Any name's rank since 1880"],
     mileage:        ['Timeline Mileage Log', 'Business miles from Google Maps'],
     dogs:           ['NYC Dog Name Report Card', "How many NYC dogs share a name"],
+    snow:           ['Snow Day Odds', "Tomorrow's snow-day chance"],
     hub:            ['All free apps', 'Wrapped apps, games and tools']
   };
 
@@ -48,8 +49,8 @@
 
   // Everything else: the seasonal picks (by month, 0 = Jan) plus the hub.
   var SEASON = {
-    10: ['wrapped', 'santa'],             // Nov: Wrapped season starts
-    11: ['wrapped', 'santa'],             // Dec
+    10: ['santa', 'snow'],             // Nov: Wrapped season starts
+    11: ['santa', 'snow'],             // Dec
     0:  ['bingo', 'amazon', 'mileage'],   // Jan
     1:  ['couples', 'partybingo']         // Feb
   };
