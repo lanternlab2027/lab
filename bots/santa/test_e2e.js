@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
   fs.readFile(path.join(ROOT, p), (e, b) => {
     if (e) { res.writeHead(404); return res.end(); }
     // Simulate a configured Kit tag so the reminder box is exercised (the real file keeps the placeholder).
-    if (p === '/santa/index.html') b = Buffer.from(b.toString().replace('"TAGID_SANTA"', '"12345"'));
+    if (p === '/santa/index.html') b = Buffer.from(b.toString());
     res.writeHead(200, {'Content-Type': TYPES[path.extname(p)] || 'application/octet-stream'}); res.end(b);
   });
 }).listen(PORT);
@@ -165,7 +165,7 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
       await page.fill('#signup-email', 'test@example.com'); await page.click('#signup-form button');
       await page.waitForSelector('#remind .note.ok');
       const k = kitCalls[0], body = k && JSON.stringify(k.body);
-      check(kitCalls.length === 1 && /\/v3\/tags\/12345\/subscribe$/.test(k.url) && k.body.api_key && k.body.email === 'test@example.com'
+      check(kitCalls.length === 1 && /\/v3\/tags\/25924128\/subscribe$/.test(k.url) && k.body.api_key && k.body.email === 'test@example.com'
         && JSON.stringify(Object.keys(k.body).sort()) === '["api_key","email","fields"]' && k.body.fields.santa_exchange_date === '2026-12-19'
         && JSON.stringify(Object.keys(k.body.fields)) === '["santa_exchange_date"]' && !PEOPLE.concat('Smith').some(n => body.includes(n)),
         'reminder: Kit gets only api_key, email and the date (no names)');
@@ -179,7 +179,7 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
   // Placeholder tag: reminder stays hidden in the real file.
   const ctx = await browser.newContext(); const p = await ctx.newPage();
   await p.goto('file://' + ROOT + '/santa/index.html');
-  check(/TAGID_SANTA/.test(await p.content()) && await p.getAttribute('#remind', 'data-disabled') === '1', 'unconfigured Kit tag keeps reminder hidden');
+  check(/"25924128"/.test(await p.content()) && await p.getAttribute('#remind', 'data-disabled') !== '1', 'real Kit tag enables the reminder');
   await browser.close(); server.close();
   console.log(fails ? `\n${fails} FAILED` : '\nALL PASS');
   process.exit(fails ? 1 : 0);
