@@ -51,6 +51,12 @@
   a.card b { display:block; font-size:18px; margin-bottom:4px; }
   a.card span { color:var(--muted); font-size:15px; }
   footer { color:var(--muted); font-size:13px; margin:40px 0 32px; }
+  a.apps-promo { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin:24px 0 0; padding:18px 20px; border-radius:14px; text-decoration:none; color:#fff; background:linear-gradient(110deg,#ff9f1c,#ff3d7f 55%,#7b5cff); box-shadow:0 8px 24px rgba(255,61,127,.25); }
+  a.apps-promo b { display:block; font-size:19px; }
+  a.apps-promo span { font-size:15px; opacity:.92; }
+  a.apps-promo em { font-style:normal; font-weight:700; white-space:nowrap; background:rgba(255,255,255,.2); padding:8px 14px; border-radius:99px; }
+  a.apps-promo:hover em { background:rgba(255,255,255,.32); }
+  h2 a.more { float:right; text-transform:none; letter-spacing:0; font-size:14px; color:var(--ink); }
 </style>
 </head>
 <body>
@@ -59,6 +65,7 @@
   <p>Free tools for NYC building owners and city license exam takers.</p>
 </div></header>
 <main class="wrap">
+  <a class="apps-promo" href="apps/"><div><b>Free apps: Wrapped season is here</b><span>Group chat, books, Netflix, workouts and dating, made on your device. No sign-up.</span></div><em>See all apps &rarr;</em></a>
   <h2>For building owners</h2>
   <div class="grid">
     <a class="card" href="calendar/"><b>2027 Owner Compliance Calendar</b><span>Free printable PDF of NYC deadlines for 1–20 unit buildings, month by month, with official sources.</span></a>
@@ -78,9 +85,10 @@
     <a class="card" href="tlc/"><b>NYC TLC Driver Exam</b><span>145 practice questions and a timed 80-question mock for the TLC driver license exam.</span></a>
     <a class="card" href="food/"><b>NYC Food Protection</b><span>Practice questions and a timed 50-question mock for the DOHMH food protection exam.</span></a>
   </div>
-  <h2>Apps</h2>
+  <h2>Apps <a class="more" href="apps/">All free apps &rarr;</a></h2>
   <div class="grid">
     <a class="card" href="wrapped/"><b>Group Chat Wrapped</b><span>Turn a WhatsApp or Telegram group export into shareable year-in-review cards. Runs entirely on your device.</span></a>
+    <a class="card" href="chicago-then/"><b>Chicago Then: daily game</b><span>One historic Chicago photo a day. Guess the year in five tries.</span></a>
     <a class="card" href="then/"><b>NYC Then: daily game</b><span>One historic New York photo a day. Guess the year in five tries and share your score.</span></a>
     <a class="card" href="reading/"><b>Reading Wrapped</b><span>Your year in books from a Goodreads or StoryGraph export: shareable cards, made on your device.</span></a>
     <a class="card" href="sport/"><b>Year in Motion</b><span>A free Year in Sport from your Strava, Garmin or GPX export, with route art and streaks, made on your device.</span></a>

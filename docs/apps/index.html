@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Free Wrapped Apps: Spotify Wrapped Alternatives for Your Other Apps</title>
+<meta name="description" content="Free wrapped apps for your group chat, books, Netflix, workouts and dating apps: Spotify Wrapped alternatives for your other apps. On your device, no sign-up.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/apps/">
+<meta name="theme-color" content="#15111f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Free Wrapped Apps: Spotify Wrapped alternatives for your other apps">
+<meta property="og:description" content="Group chat, books, Netflix, workouts, dating, fantasy football and more. Free, no sign-up, and your files never leave your device.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/apps/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/apps/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A collage of free Wrapped cards: group chat, reading, streaming, sport, dating and fantasy league awards">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Wrapped Apps: Spotify Wrapped alternatives for your other apps">
+<meta name="twitter:description" content="Group chat, books, Netflix, workouts, dating, fantasy football and more. Free, no sign-up, and your files never leave your device.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/apps/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Free Wrapped Apps",
+ "url": "https://lanternlab2027.github.io/lab/apps/",
+ "description": "Free wrapped apps for your group chat, books, Netflix, workouts and dating apps: Spotify Wrapped alternatives for your other apps. On your device, no sign-up.",
+ "isPartOf": { "@type": "WebSite", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" },
+ "mainEntity": {
+  "@type": "ItemList",
+  "itemListElement": [
+   { "@type": "ListItem", "position": 1, "name": "Group Chat Wrapped", "url": "https://lanternlab2027.github.io/lab/wrapped/" },
+   { "@type": "ListItem", "position": 2, "name": "Reading Wrapped", "url": "https://lanternlab2027.github.io/lab/reading/" },
+   { "@type": "ListItem", "position": 3, "name": "Streaming Wrapped", "url": "https://lanternlab2027.github.io/lab/netflix/" },
+   { "@type": "ListItem", "position": 4, "name": "Year in Motion", "url": "https://lanternlab2027.github.io/lab/sport/" },
+   { "@type": "ListItem", "position": 5, "name": "Dating Wrapped", "url": "https://lanternlab2027.github.io/lab/dating/" },
+   { "@type": "ListItem", "position": 6, "name": "NYC Then", "url": "https://lanternlab2027.github.io/lab/then/" },
+   { "@type": "ListItem", "position": 7, "name": "Fantasy League Awards", "url": "https://lanternlab2027.github.io/lab/awards/" },
+   { "@type": "ListItem", "position": 8, "name": "NYC Restaurant Report Card", "url": "https://lanternlab2027.github.io/lab/eats/" },
+   { "@type": "ListItem", "position": 9, "name": "Secret Santa", "url": "https://lanternlab2027.github.io/lab/santa/" },
+   { "@type": "ListItem", "position": 10, "name": "2027 Goal Bingo", "url": "https://lanternlab2027.github.io/lab/bingo/" }
+  ]
+ }
+}
+</script>
+<style>
+  :root {
+    --bg:#faf8f5; --ink:#15111f; --muted:#5e5a6b; --card:#fff; --line:#ebe6df;
+    --hero:#15111f; --pink:#ff3d7f; --orange:#ff9f1c; --violet:#7b5cff; --teal:#14c3a2;
+    --shadow:0 1px 2px rgba(21,17,31,.05),0 10px 28px rgba(21,17,31,.08);
+    --radius:18px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#110e18; --ink:#f3f0f8; --muted:#a9a3b8; --card:#1b1725; --line:#2c2638; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35); }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 16px; }
+
+  /* hero */
+  .hero { position:relative; overflow:hidden; background:var(--hero); color:#fff; padding:20px 0 44px; isolation:isolate; }
+  .hero::before, .hero::after { content:""; position:absolute; z-index:-1; border-radius:50%; filter:blur(60px); opacity:.55; }
+  .hero::before { width:420px; height:420px; background:var(--pink); top:-160px; right:-80px; }
+  .hero::after { width:380px; height:380px; background:var(--violet); bottom:-220px; left:-120px; }
+  .top { display:flex; justify-content:space-between; align-items:center; font-size:14px; }
+  .top a { text-decoration:none; color:rgba(255,255,255,.8); font-weight:600; }
+  .top a:hover { color:#fff; }
+  .kicker { display:flex; flex-wrap:wrap; gap:8px; margin:36px 0 16px; padding:0; list-style:none; }
+  .kicker li { font-size:13px; font-weight:700; letter-spacing:.02em; padding:5px 12px; border-radius:99px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); }
+  h1 { margin:0; font-size:clamp(38px,9vw,76px); line-height:1.02; letter-spacing:-.035em; font-weight:800; max-width:15ch; }
+  h1 .g { white-space:nowrap; background:linear-gradient(90deg,var(--orange),var(--pink) 55%,#c86bff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .lede { font-size:clamp(17px,2.4vw,21px); color:rgba(255,255,255,.82); max-width:40ch; margin:18px 0 26px; }
+  .cta { display:flex; flex-wrap:wrap; gap:10px; }
+  .btn { display:inline-flex; align-items:center; gap:6px; font:inherit; font-weight:700; font-size:16px; padding:12px 20px; border-radius:99px; border:0; cursor:pointer; text-decoration:none; }
+  .btn-main { background:#fff; color:var(--hero); }
+  .btn-ghost { background:rgba(255,255,255,.1); color:#fff; border:1px solid rgba(255,255,255,.25); }
+  .btn:hover { transform:translateY(-1px); }
+  .btn:focus-visible, .try:focus-visible, input:focus-visible { outline:3px solid var(--orange); outline-offset:2px; }
+  .strip { display:flex; gap:12px; margin-top:36px; overflow:hidden; mask-image:linear-gradient(90deg,#000 80%,transparent); -webkit-mask-image:linear-gradient(90deg,#000 80%,transparent); }
+  .strip img { width:150px; height:94px; object-fit:cover; border-radius:12px; flex:none; box-shadow:0 8px 24px rgba(0,0,0,.4); }
+  .strip img:nth-child(odd) { transform:rotate(-2deg); }
+  .strip img:nth-child(even) { transform:rotate(2deg) translateY(6px); }
+
+  /* nav chips */
+  nav.jump { position:sticky; top:0; z-index:5; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  nav.jump ul { display:flex; gap:6px; list-style:none; margin:0 auto; padding:10px 16px; overflow-x:auto; max-width:1120px; scrollbar-width:none; }
+  nav.jump a { display:block; white-space:nowrap; text-decoration:none; font-weight:650; font-size:14px; padding:6px 13px; border-radius:99px; color:var(--muted); }
+  nav.jump a:hover { background:var(--card); color:var(--ink); }
+
+  /* sections */
+  section { padding:44px 0 8px; scroll-margin-top:52px; }
+  .sh { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:4px 16px; margin-bottom:18px; }
+  h2 { margin:0; font-size:clamp(26px,4.5vw,36px); letter-spacing:-.025em; line-height:1.1; }
+  h2 .dot { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:10px; vertical-align:.12em; }
+  .sh p { margin:0; color:var(--muted); font-size:16px; max-width:52ch; }
+  .wrapped-sec { position:relative; }
+  .season { display:inline-block; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:linear-gradient(90deg,var(--orange),var(--pink)); padding:4px 10px; border-radius:99px; margin-bottom:10px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; }
+  .card { position:relative; display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:transform .18s ease, box-shadow .18s ease; }
+  .card:hover { transform:translateY(-3px); box-shadow:0 2px 4px rgba(21,17,31,.06),0 18px 40px rgba(21,17,31,.14); }
+  .card img { display:block; width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; background:var(--line); }
+  .card .body { display:flex; flex-direction:column; gap:6px; padding:16px 18px 18px; flex:1; }
+  .tags { font-size:12px; font-weight:700; letter-spacing:.03em; color:var(--muted); text-transform:uppercase; }
+  .card h3 { margin:0; font-size:20px; letter-spacing:-.015em; line-height:1.2; }
+  .card p { margin:0; color:var(--muted); font-size:15px; flex:1; }
+  .try { align-self:flex-start; margin-top:8px; font-weight:750; font-size:15px; text-decoration:none; padding:8px 15px; border-radius:99px; color:#fff; background:var(--accent,var(--ink)); }
+  .try::after { content:""; position:absolute; inset:0; border-radius:var(--radius); }
+  .card:hover .try { box-shadow:0 0 0 3px color-mix(in srgb,var(--accent,var(--ink)) 25%,transparent); } /* no filter/transform here: it would shrink the stretched link */
+  /* single-card sections lay out wide on bigger screens */
+  @media (min-width:720px) {
+    .grid.pair { grid-template-columns:repeat(2,1fr); }
+    .grid.wide .card { flex-direction:row; }
+    .grid.wide .card img { width:50%; aspect-ratio:16/10; }
+    .grid.wide .card .body { justify-content:center; padding:24px 28px; }
+    .grid.wide .card p { flex:0; }
+    .grid.wide .card h3 { font-size:24px; }
+  }
+  @media (min-width:720px) { .grid.five { grid-template-columns:repeat(3,1fr); } }
+  @media (min-width:1040px) { .grid.five { grid-template-columns:repeat(5,1fr); gap:14px; } .grid.five .card .body { padding:14px 15px 16px; } .grid.five .card h3 { font-size:18px; } .grid.five .card p { font-size:14px; } }
+  .duo { display:grid; gap:0 24px; }
+  @media (min-width:960px) { .duo { grid-template-columns:1fr 2fr; } .duo .grid.wide .card { flex-direction:column; } .duo .grid.wide .card img { width:100%; } .duo .grid.wide .card .body { padding:16px 18px 18px; } .duo .grid.wide .card h3 { font-size:20px; } }
+
+  /* data */
+  .data { margin-top:48px; background:var(--card); border:1px solid var(--line); border-radius:24px; padding:28px 20px; box-shadow:var(--shadow); }
+  @media (min-width:720px) { .data { padding:36px 40px; } }
+  .data h2 { margin-bottom:6px; }
+  .data > p { margin:0 0 20px; color:var(--muted); max-width:60ch; }
+  .facts { list-style:none; margin:0; padding:0; display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+  .facts li { display:flex; gap:12px; align-items:flex-start; }
+  .facts .ic { flex:none; width:36px; height:36px; border-radius:10px; display:grid; place-items:center; color:#fff; }
+  .facts b { display:block; font-size:16px; }
+  .facts span { color:var(--muted); font-size:15px; }
+
+  /* signup */
+  .signup { margin:24px 0 0; border-radius:24px; padding:28px 20px; color:#fff; background:linear-gradient(120deg,#2a1640,#15111f 60%); position:relative; overflow:hidden; isolation:isolate; }
+  .signup::after { content:""; position:absolute; z-index:-1; width:300px; height:300px; right:-90px; top:-120px; border-radius:50%; background:var(--orange); filter:blur(70px); opacity:.45; }
+  @media (min-width:720px) { .signup { padding:36px 40px; display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:center; } }
+  .signup h2 { font-size:clamp(24px,4vw,30px); }
+  .signup p { margin:8px 0 0; color:rgba(255,255,255,.78); }
+  .signup form { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+  @media (min-width:720px) { .signup form { margin-top:0; } }
+  .signup label { flex-basis:100%; font-size:13px; font-weight:700; color:rgba(255,255,255,.8); }
+  .signup input { flex:1 1 200px; min-width:0; font:inherit; font-size:16px; padding:12px 16px; border-radius:99px; border:1px solid rgba(255,255,255,.25); background:rgba(255,255,255,.08); color:#fff; }
+  .signup input::placeholder { color:rgba(255,255,255,.5); }
+  .signup .small { flex-basis:100%; font-size:13px; color:rgba(255,255,255,.62); margin:4px 0 0; }
+  #signup-msg { min-height:1em; color:#ffd6a0; }
+
+  footer { color:var(--muted); font-size:14px; padding:36px 0 44px; }
+  footer p { margin:4px 0; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .card, .btn { transition:none; } .card:hover, .btn:hover { transform:none; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top"><a href="../">Lantern Lab</a><a href="#data">Privacy</a></div>
+    <ul class="kicker"><li>100% free</li><li>No sign-up</li><li>Runs on your device</li></ul>
+    <h1>Free apps. <span class="g">No sign-up.</span> Nothing uploaded.</h1>
+    <p class="lede">Spotify Wrapped for the rest of your life: your group chat, books, Netflix, workouts and dating apps, plus a few games and holiday helpers. Open one and go.</p>
+    <div class="cta">
+      <a class="btn btn-main" href="#wrapped">Make your Wrapped &darr;</a>
+      <a class="btn btn-ghost" href="#data">How we handle your data</a>
+    </div>
+    <div class="strip" aria-hidden="true">
+      <img src="img/wrapped.jpg" alt="" width="150" height="94">
+      <img src="img/reading.jpg" alt="" width="150" height="94">
+      <img src="img/netflix.jpg" alt="" width="150" height="94">
+      <img src="img/sport.jpg" alt="" width="150" height="94">
+      <img src="img/dating.jpg" alt="" width="150" height="94">
+      <img src="img/awards.jpg" alt="" width="150" height="94">
+      <img src="img/then.jpg" alt="" width="150" height="94">
+    </div>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Sections">
+  <ul>
+    <li><a href="#wrapped">Wrapped season</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#holidays">Holidays</a></li>
+    <li><a href="#data">Your data</a></li>
+    <li><a href="#signup">New app drops</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+  <section id="wrapped" class="wrapped-sec" aria-labelledby="wrapped-h">
+    <span class="season">December</span>
+    <div class="sh">
+      <h2 id="wrapped-h">Wrapped season</h2>
+      <p>Spotify does your music. These do everything else. Drop in the export file and get story-sized cards to share.</p>
+    </div>
+    <div class="grid five">
+      <article class="card" style="--accent:#d6336c">
+        <img src="img/wrapped.jpg" alt="Group Chat Wrapped cards: top yapper and message counts" width="640" height="400" loading="lazy">
+        <div class="body">
+          <div class="tags">WhatsApp &middot; Telegram</div>
+          <h3>Group Chat Wrapped</h3>
+          <p>Your group chat as shareable cards: the top yapper, the night owl, the ghost, emoji royalty and more.</p>
+          <a class="try" href="../wrapped/" aria-label="Try Group Chat Wrapped">Try it &rarr;</a>
+        </div>
+      </article>
+      <article class="card" style="--accent:#1b6b47">
+        <img src="img/reading.jpg" alt="Reading Wrapped cards: books finished and top-rated read" width="640" height="400" loading="lazy">
+        <div class="body">
+          <div class="tags">Goodreads &middot; StoryGraph</div>
+          <h3>Reading Wrapped</h3>
+          <p>Your year in books: books and pages read, top-rated read, most-read author, genre mix and reader personality.</p>
+          <a class="try" href="../reading/" aria-label="Try Reading Wrapped">Try it &rarr;</a>
+        </div>
+      </article>
+      <article class="card" style="--accent:#b8860b">
+        <img src="img/netflix.jpg" alt="Streaming Wrapped cards: titles watched and biggest binge" width="640" height="400" loading="lazy">
+        <div class="body">
+          <div class="tags">Netflix viewing history</div>
+          <h3>Streaming Wrapped</h3>
+          <p>A Netflix Wrapped from your viewing history: top show, biggest binge, longest streak and your viewer personality.</p>
+          <a class="try" href="../netflix/" aria-label="Try Streaming Wrapped">Try it &rarr;</a>
+        </div>
+      </article>
+      <article class="card" style="--accent:#e8590c">
+        <img src="img/sport.jpg" alt="Year in Motion cards: distance, activities and route art" width="640" height="400" loading="lazy">
+        <div class="body">
+          <div class="tags">Strava &middot; Garmin &middot; GPX</div>
+          <h3>Year in Motion</h3>
+          <p>A Year in Sport from your workout export, with route art, streaks and your distance in real-world terms.</p>
+          <a class="try" href="../sport/" aria-label="Try Year in Motion">Try it &rarr;</a>
+        </div>
+      </article>
+      <article class="card" style="--accent:#7b3fa0">
+        <img src="img/dating.jpg" alt="Dating Wrapped cards: swipe rate and dating personality" width="640" height="400" loading="lazy">
+        <div class="body">
+          <div class="tags">Tinder &middot; Hinge</div>
+          <h3>Dating Wrapped</h3>
+          <p>Your year on the apps as cards: rates and patterns only, never names or message text.</p>
+          <a class="try" href="../dating/" aria-label="Try Dating Wrapped">Try it &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="games" aria-labelledby="games-h">
+    <div class="sh">
+      <h2 id="games-h"><span class="dot" style="background:var(--violet)"></span>Games</h2>
+      <p>A daily puzzle and bragging rights for your league.</p>
+    </div>
+    <div class="grid pair">
+      <article class="card" style="--accent:#a3392b">
+        <img src="img/then.jpg" alt="NYC Then: an old New York photo with year guesses" width="640" height="400" loading="lazy">
+        <div class="body">
+          <div class="tags">Daily game</div>
+          <h3>NYC Then</h3>
+          <p>One historic New York photo a day. Guess the year in five tries and share your score.</p>
+          <a class="try" href="../then/" aria-label="Play NYC Then">Try it &rarr;</a>
+        </div>
+      </article>
+      <article class="card" style="--accent:#5b3fc4">
+        <img src="img/awards.jpg" alt="Fantasy League Awards cards: highest scorer and heartbreak loss" width="640" height="400" loading="lazy">
+        <div class="body">
+          <div class="tags">Sleeper fantasy football</div>
+          <h3>Fantasy League Awards</h3>
+          <p>Weekly awards for your Sleeper league: highest scorer, heartbreak loss, luckiest win, power rankings and a group-chat recap.</p>
+          <a class="try" href="../awards/" aria-label="Try Fantasy League Awards">Try it &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="duo">
+    <section id="tools" aria-labelledby="tools-h">
+      <div class="sh">
+        <h2 id="tools-h"><span class="dot" style="background:var(--teal)"></span>Tools</h2>
+      </div>
+      <div class="grid wide">
+        <article class="card" style="--accent:#0f7a52">
+          <img src="img/eats.jpg" alt="NYC Restaurant Report Card showing an A grade" width="640" height="400" loading="lazy">
+          <div class="body">
+            <div class="tags">NYC &middot; Health grades</div>
+            <h3>NYC Restaurant Report Card</h3>
+            <p>Any NYC restaurant's health grade and inspection history in plain English, with a shareable card.</p>
+            <a class="try" href="../eats/" aria-label="Try NYC Restaurant Report Card">Try it &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="holidays" aria-labelledby="holidays-h">
+      <div class="sh">
+        <h2 id="holidays-h"><span class="dot" style="background:var(--pink)"></span>Holidays</h2>
+        <p>For the gift swap and the fresh start.</p>
+      </div>
+      <div class="grid pair">
+        <article class="card" style="--accent:#b8283a">
+          <img src="img/santa.jpg" alt="Secret Santa: draw names, no sign-up" width="640" height="400" loading="lazy">
+          <div class="body">
+            <div class="tags">Gift exchange</div>
+            <h3>Secret Santa</h3>
+            <p>Draw names, keep couples apart, and text everyone a private link. No emails, no accounts.</p>
+            <a class="try" href="../santa/" aria-label="Try Secret Santa">Try it &rarr;</a>
+          </div>
+        </article>
+        <article class="card" style="--accent:#c2255c">
+          <img src="img/bingo.jpg" alt="2027 Goal Bingo card maker" width="640" height="400" loading="lazy">
+          <div class="body">
+            <div class="tags">New year</div>
+            <h3>2027 Goal Bingo</h3>
+            <p>Turn your resolutions into a bingo card: print it or make it your lock screen, then check squares off all year.</p>
+            <a class="try" href="../bingo/" aria-label="Try 2027 Goal Bingo">Try it &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <section id="data" class="data" aria-labelledby="data-h">
+    <h2 id="data-h">How we handle your data</h2>
+    <p>No accounts, no analytics, no ads. Each page ships a Content-Security-Policy, so the browser itself blocks any connection we haven't listed here.</p>
+    <ul class="facts">
+      <li><span class="ic" style="background:var(--pink)" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg></span><div><b>Wrapped apps: zero uploads</b><span>Your chat, library, viewing history, workouts or dating export is read and drawn in your browser. The file never leaves your device.</span></div></li>
+      <li><span class="ic" style="background:var(--violet)" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4Zm-1 14-4-4 1.4-1.4L11 13.2l4.6-4.6L17 10l-6 6Z"/></svg></span><div><b>Fantasy League Awards</b><span>Reads public league data from Sleeper's API. No Sleeper login or password.</span></div></li>
+      <li><span class="ic" style="background:var(--teal)" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18v2H3V5Zm0 6h18v2H3v-2Zm0 6h12v2H3v-2Z"/></svg></span><div><b>Restaurant Report Card</b><span>Searches go straight from your browser to NYC Open Data, the city's public inspection records.</span></div></li>
+      <li><span class="ic" style="background:var(--orange)" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg></span><div><b>Email is optional</b><span>Beyond that, the only network call is the optional email signup, which sends just your address to our email provider, Kit.</span></div></li>
+    </ul>
+  </section>
+
+  <section id="signup" class="signup" aria-labelledby="signup-h">
+    <div>
+      <h2 id="signup-h">Get new app drops</h2>
+      <p>One short email when we ship something new. That's it. Unsubscribe any time.</p>
+    </div>
+    <div>
+      <form id="signup-form">
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn btn-main">Notify me</button>
+      </form>
+      <p class="small" id="signup-msg" role="status" aria-live="polite"></p>
+      <p class="small">Optional. Sends only your email address to Kit.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="../">A Lantern Lab project</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/apps" rel="noopener">GitHub</a></p>
+    <p>Independent apps. Not affiliated with Spotify, WhatsApp, Telegram, Goodreads, StoryGraph, Netflix, Strava, Garmin, Tinder, Hinge or Sleeper; names are used only to describe which files or data each app reads.</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
