@@ -220,6 +220,7 @@
     say('Showing a made-up sample (every video, search and number is invented). Request your own export to make yours.');
   }
   $('#sample').addEventListener('click', showSample);
+  var st = document.getElementById('sample-top'); if (st) st.addEventListener('click', function (e) { e.preventDefault(); showSample(); });
   $('#peek').addEventListener('click', showSample);
 
   // ---------- pass it on ----------
