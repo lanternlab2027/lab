@@ -1,0 +1,83 @@
+Date,Type,Title,Info,Currency,Amount,Fees & Taxes,Net,Tax Details
+"February 28, 2026",Sale,Payment for Order #3100011011,,USD,$49.34,--,$49.34,--
+"February 28, 2026",Tax,Sales tax paid by buyer,Order #3100011011,USD,--,-$3.34,-$3.34,--
+"February 28, 2026",Fee,Transaction fee: Hand-thrown ramen bowl,Order #3100011011,USD,--,-$2.99,-$2.99,--
+"February 28, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000002,USD,--,-$0.20,-$0.20,--
+"February 28, 2026",Fee,Processing fee,Order #3100011011,USD,--,-$1.73,-$1.73,--
+"February 28, 2026",Shipping,USPS shipping label,Label #9400011011,USD,--,-$5.39,-$5.39,--
+"February 25, 2026",Shipping,USPS shipping label,Label #9400011014,USD,--,-$5.91,-$5.91,--
+"February 25, 2026",Shipping,USPS shipping label,Label #9400011021,USD,--,-$7.43,-$7.43,--
+"February 24, 2026",Sale,Payment for Order #3100011014,,USD,$37.97,--,$37.97,--
+"February 24, 2026",Tax,Sales tax paid by buyer,Order #3100011014,USD,--,-$2.57,-$2.57,--
+"February 24, 2026",Fee,Transaction fee: Speckled stoneware mug,Order #3100011014,USD,--,-$1.88,-$1.88,--
+"February 24, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000000,USD,--,-$0.20,-$0.20,--
+"February 24, 2026",Fee,Transaction fee: Shipping,Order #3100011014,USD,--,-$0.42,-$0.42,--
+"February 24, 2026",Fee,Processing fee,Order #3100011014,USD,--,-$1.39,-$1.39,--
+"February 24, 2026",Sale,Payment for Order #3100011021,,USD,$49.80,--,$49.80,--
+"February 24, 2026",Tax,Sales tax paid by buyer,Order #3100011021,USD,--,-$3.80,-$3.80,--
+"February 24, 2026",Fee,Transaction fee: Hand-thrown ramen bowl,Order #3100011021,USD,--,-$2.99,-$2.99,--
+"February 24, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000002,USD,--,-$0.20,-$0.20,--
+"February 24, 2026",Fee,Processing fee,Order #3100011021,USD,--,-$1.74,-$1.74,--
+"February 24, 2026",Marketing,Etsy Ads,"Bill for click-throughs to your shop on Feb 24, 2026",USD,--,-$8.45,-$8.45,--
+"February 20, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000122,USD,--,-$0.20,-$0.20,--
+"February 17, 2026",Shipping,USPS shipping label,Label #9400011020,USD,--,-$16.40,-$16.40,--
+"February 17, 2026",Marketing,Etsy Ads,"Bill for click-throughs to your shop on Feb 17, 2026",USD,--,-$15.51,-$15.51,--
+"February 16, 2026",Shipping,USPS shipping label,Label #9400011017,USD,--,-$7.43,-$7.43,--
+"February 16, 2026",Sale,Payment for Order #3100011020,,USD,$31.60,--,$31.60,--
+"February 16, 2026",Fee,Transaction fee: Glazed ring dish,Order #3100011020,USD,--,-$0.88,-$0.88,--
+"February 16, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000005,USD,--,-$0.20,-$0.20,--
+"February 16, 2026",Fee,Transaction fee: Shipping,Order #3100011020,USD,--,-$1.17,-$1.17,--
+"February 16, 2026",Fee,Processing fee,Order #3100011020,USD,--,-$1.20,-$1.20,--
+"February 15, 2026",Sale,Payment for Order #3100011017,,USD,$62.21,--,$62.21,--
+"February 15, 2026",Tax,Sales tax paid by buyer,Order #3100011017,USD,--,-$4.21,-$4.21,--
+"February 15, 2026",Fee,Transaction fee: Pour-over coffee dripper,Order #3100011017,USD,--,-$3.77,-$3.77,--
+"February 15, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000006,USD,--,-$0.20,-$0.20,--
+"February 15, 2026",Fee,Processing fee,Order #3100011017,USD,--,-$2.12,-$2.12,--
+"February 12, 2026",Shipping,USPS shipping label,Label #9400011019,USD,--,-$7.05,-$7.05,--
+"February 11, 2026",Sale,Payment for Order #3100011019,,USD,$47.40,--,$47.40,--
+"February 11, 2026",Tax,Sales tax paid by buyer,Order #3100011019,USD,--,-$3.20,-$3.20,--
+"February 11, 2026",Fee,Transaction fee: Stoneware planter with saucer,Order #3100011019,USD,--,-$2.87,-$2.87,--
+"February 11, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000004,USD,--,-$0.20,-$0.20,--
+"February 11, 2026",Fee,Processing fee,Order #3100011019,USD,--,-$1.67,-$1.67,--
+"February 11, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000121,USD,--,-$0.20,-$0.20,--
+"February 10, 2026",Marketing,Etsy Ads,"Bill for click-throughs to your shop on Feb 10, 2026",USD,--,-$12.28,-$12.28,--
+"February 7, 2026",Shipping,USPS shipping label,Label #9400011018,USD,--,-$7.21,-$7.21,--
+"February 6, 2026",Refund,Refund for Order #3100011016,,USD,-$62.00,--,-$62.00,--
+"February 6, 2026",Fee,Credit for processing fee,Order #3100011016,USD,--,$2.11,$2.11,--
+"February 6, 2026",Fee,"Credit for transaction fee on Little bud vase, matte white",Order #3100011016,USD,--,$2.86,$2.86,--
+"February 6, 2026",Shipping,USPS shipping label,Label #9400011015,USD,--,-$6.57,-$6.57,--
+"February 6, 2026",Sale,Payment for Order #3100011018,,USD,$80.56,--,$80.56,--
+"February 6, 2026",Tax,Sales tax paid by buyer,Order #3100011018,USD,--,-$4.56,-$4.56,--
+"February 6, 2026",Fee,Transaction fee: Ceramic spoon rest,Order #3100011018,USD,--,-$1.17,-$1.17,--
+"February 6, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000003,USD,--,-$0.20,-$0.20,--
+"February 6, 2026",Fee,Transaction fee: Pour-over coffee dripper,Order #3100011018,USD,--,-$3.77,-$3.77,--
+"February 6, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000006,USD,--,-$0.20,-$0.20,--
+"February 6, 2026",Fee,Processing fee,Order #3100011018,USD,--,-$2.67,-$2.67,--
+"February 5, 2026",Shipping,USPS shipping label,Label #9400011012,USD,--,-$6.43,-$6.43,--
+"February 5, 2026",Sale,Payment for Order #3100011015,,USD,$55.77,--,$55.77,--
+"February 5, 2026",Tax,Sales tax paid by buyer,Order #3100011015,USD,--,-$3.77,-$3.77,--
+"February 5, 2026",Fee,Transaction fee: Stoneware planter with saucer,Order #3100011015,USD,--,-$3.38,-$3.38,--
+"February 5, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000004,USD,--,-$0.20,-$0.20,--
+"February 5, 2026",Fee,Processing fee,Order #3100011015,USD,--,-$1.92,-$1.92,--
+"February 5, 2026",Deposit,$382.95 sent to your bank account,,USD,--,--,--,--
+"February 4, 2026",Shipping,USPS shipping label,Label #9400011013,USD,--,-$4.95,-$4.95,--
+"February 4, 2026",Sale,Payment for Order #3100011012,,USD,$24.13,--,$24.13,--
+"February 4, 2026",Tax,Sales tax paid by buyer,Order #3100011012,USD,--,-$1.63,-$1.63,--
+"February 4, 2026",Fee,Transaction fee: Glazed ring dish,Order #3100011012,USD,--,-$1.04,-$1.04,--
+"February 4, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000005,USD,--,-$0.20,-$0.20,--
+"February 4, 2026",Fee,Transaction fee: Shipping,Order #3100011012,USD,--,-$0.42,-$0.42,--
+"February 4, 2026",Fee,Processing fee,Order #3100011012,USD,--,-$0.97,-$0.97,--
+"February 3, 2026",Sale,Payment for Order #3100011013,,USD,$182.91,--,$182.91,--
+"February 3, 2026",Tax,Sales tax paid by buyer,Order #3100011013,USD,--,-$14.91,-$14.91,--
+"February 3, 2026",Fee,Transaction fee: Pour-over coffee dripper,Order #3100011013,USD,--,-$7.54,-$7.54,--
+"February 3, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000006,USD,--,-$0.20,-$0.20,--
+"February 3, 2026",Fee,Transaction fee: Stoneware planter with saucer,Order #3100011013,USD,--,-$3.38,-$3.38,--
+"February 3, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000004,USD,--,-$0.20,-$0.20,--
+"February 3, 2026",Fee,Processing fee,Order #3100011013,USD,--,-$5.74,-$5.74,--
+"February 3, 2026",Sale,Payment for Order #3100011016,,USD,$62.00,--,$62.00,--
+"February 3, 2026",Fee,"Transaction fee: Little bud vase, matte white",Order #3100011016,USD,--,-$2.86,-$2.86,--
+"February 3, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000001,USD,--,-$0.20,-$0.20,--
+"February 3, 2026",Fee,Transaction fee: Shipping,Order #3100011016,USD,--,-$1.17,-$1.17,--
+"February 3, 2026",Fee,Processing fee,Order #3100011016,USD,--,-$2.11,-$2.11,--
+"February 3, 2026",Marketing,Etsy Ads,"Bill for click-throughs to your shop on Feb 3, 2026",USD,--,-$16.84,-$16.84,--
+"February 2, 2026",Fee,Listing fee ($0.20 USD),Listing #1500000120,USD,--,-$0.20,-$0.20,--

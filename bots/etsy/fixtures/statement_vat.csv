@@ -1,0 +1,24 @@
+Date,Type,Title,Info,Currency,Amount,Fees & Taxes,Net,Tax Details
+"January 30, 2025",Sale,Payment for Order #3500000001,,EUR,"€40.00",--,"€40.00",--
+"January 30, 2025",Tax,Sales tax paid by buyer,Order #3500000001,EUR,--,"-€3.00","-€3.00",--
+"January 30, 2025",Fee,"Transaction fee: Hand-thrown bowl &amp; lid",Order #3500000001,EUR,--,"-€2.40","-€2.40",--
+"January 30, 2025",Fee,Transaction fee: Shipping,Order #3500000001,EUR,--,"-€0.30","-€0.30",--
+"January 30, 2025",Fee,Processing fee,Order #3500000001,EUR,--,"-€1.60","-€1.60",--
+"January 30, 2025",Fee,Regulatory Operating fee,Order #3500000001,EUR,--,"-€0.45","-€0.45",--
+"January 30, 2025",VAT,VAT: Processing Fee,Order #3500000001,EUR,--,"-€0.32","-€0.32",--
+"January 30, 2025",VAT,VAT: transaction,transaction: 4500000001,EUR,--,"-€0.48","-€0.48",--
+"January 30, 2025",Fee,Listing fee ($0.20 USD),Listing #1600000001,EUR,--,"-€0.19","-€0.19",--
+"January 30, 2025",VAT,VAT: auto-renew sold ,auto-renew sold : 1600000001,EUR,--,"-€0.04","-€0.04",--
+"January 28, 2025",Marketing,Fee for sale made through Offsite Ads,Order #3500000001,EUR,--,"-€6.00","-€6.00",--
+"January 28, 2025",VAT,VAT: Offsite Ads fee,order: 3500000001,EUR,--,"-€1.20","-€1.20",--
+"January 27, 2025",Marketing,Etsy Ads,"Bill for click-throughs to your shop on Jan 26, 2025",EUR,--,"-€5.00","-€5.00",--
+"January 26, 2025",Refund,Partial refund for Order #3500000000,,EUR,"-€10.00",--,"-€10.00",--
+"January 26, 2025",Tax,Refund to buyer for sales tax,Order #3500000000,EUR,--,"€0.75","€0.75",--
+"January 26, 2025",Fee,Credit for processing fee,Order #3500000000,EUR,--,"€0.40","€0.40",--
+"January 26, 2025",Fee,Credit for transaction fee on Glazed cup,Order #3500000000,EUR,--,"€0.60","€0.60",--
+"January 26, 2025",Payment,Charge for refund 99887766,,EUR,"€5.00",--,"€5.00",--
+"January 15, 2025",Marketing,Etsy Plus subscription fee ($10.00 USD),,EUR,--,"-€9.50","-€9.50",--
+"January 16, 2025",Fee,Credit for listing fee,Etsy Plus listing credits,EUR,--,"€0.19","€0.19",--
+"January 20, 2025",Deposit,"€25.00 sent to your bank account",,EUR,--,--,--,--
+"January 21, 2025",Shipping,USPS shipping label,Label #940001,EUR,--,"-€4.10","-€4.10",--
+"January 22, 2025",Shipping,Credit for USPS shipping label,Label #940001,EUR,--,"€1.10","€1.10",--

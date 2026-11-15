@@ -1,0 +1,4 @@
+order id;item title;qty;price;item total;currency code;listing id;transaction id;sale date;ship country;ship state;ship name;ship address1;buyer
+3400000001;Hand-thrown bowl;2;"12,50";"25,00";EUR;111;9001;2026-04-02;Germany;;Gerda Sentinelname;Geheimstrasse 1;gerda
+3400000001;Glazed cup;1;"9,00";"9,00";EUR;112;9002;2026-04-02;Germany;;Gerda Sentinelname;Geheimstrasse 1;gerda
+3400000002;Hand-thrown bowl;1;"12,50";"12,50";EUR;111;9003;2026-05-11;France;;Henri Sentinelname;Rue Secrete 2;henri

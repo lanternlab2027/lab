@@ -1,0 +1,4 @@
+Date;Type;Title;Info;Currency;Amount;Fees & Taxes;Net;Tax Details
+"5 April 2026";Sale;Payment for Order #3700000001;;EUR;1.234,50 €;--;1.234,50 €;--
+"5 April 2026";Fee;Transaction fee: Big commission piece;Order #3700000001;EUR;--;−80,24 €;−80,24 €;--
+"5 April 2026";Fee;Processing fee;Order #3700000001;EUR;--;−41,29 €;−41,29 €;--

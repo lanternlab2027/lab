@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Etsy Shop Year in Review: Free Etsy Sales Report and Fees Calculator for Taxes</title>
+<meta name="description" content="A free Etsy shop year in review and Etsy sales report from the CSVs in your Shop Manager: orders, items sold, best seller, busiest month and day, top state and repeat buyers as shareable cards. Plus an Etsy fees calculator for taxes: gross sales, refunds, transaction, processing, listing and ads fees, shipping labels and net by month, with a CSV export. Nothing is uploaded; it runs on your device.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/etsy/">
+<meta name="theme-color" content="#f4efe6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Etsy shop year in review: shareable cards and a fees summary for taxes">
+<meta property="og:description" content="Drop in your Etsy sold-orders CSVs and monthly statements. Get story cards for your shop's year and a month-by-month fees and net summary for tax time. 100% on your device.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/etsy/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/etsy/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Year in Review for Etsy sellers: sample shop cards made from an invented shop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Etsy shop year in review and fees summary for taxes">
+<meta name="twitter:description" content="Free shop recap cards and an Etsy sales report with fees by month. Nothing is uploaded.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/etsy/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Seller Year in Review",
+ "alternateName": ["Year in Review for Etsy sellers", "Etsy shop year in review", "Etsy fees calculator for taxes"],
+ "url": "https://lanternlab2027.github.io/lab/etsy/",
+ "applicationCategory": "BusinessApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Year in Review for Etsy sellers: turn the order and statement CSVs from your shop into shareable recap cards and a month-by-month sales, fees and net summary for tax prep. Runs entirely in your browser; not affiliated with Etsy.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #f4efe6; --paper: #fffcf6; --ink: #2a2320; --muted: #645a52; --line: rgba(42,35,32,.16); --rule: rgba(42,35,32,.09);
+    --teal: #2f6f62; --teal2: #245a4f; --teal-soft: #dcebe5; --plum: #6a3d6e; --rose: #8c3b4a; --navy: #1f2b4d; --mustard: #f2c14e;
+    --display: "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed", "DejaVu Sans Condensed", "Helvetica Neue", Arial, sans-serif;
+    --serif: Georgia, "Iowan Old Style", Cambria, serif;
+    --mono: "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); background-image: repeating-linear-gradient(0deg, rgba(42,35,32,.025) 0 1px, transparent 1px 6px), repeating-linear-gradient(90deg, rgba(42,35,32,.022) 0 1px, transparent 1px 6px); color: var(--ink); font-family: var(--font); line-height: 1.55; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--teal); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 40px 0 12px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  h1 { font-family: var(--display); font-size: clamp(52px, 14vw, 112px); line-height: .9; margin: 14px 0 6px; font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; }
+  h1 em { font-style: normal; color: var(--teal); display: block; }
+  .for { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 5vw, 26px); color: var(--plum); margin: 0 0 14px; }
+  .lede { font-size: clamp(18px, 4.6vw, 21px); max-width: 720px; margin: 0 0 16px; color: #3a312c; }
+  .privacy { display: inline-flex; gap: 10px; align-items: center; background: var(--teal-soft); color: #173f36; padding: 10px 16px; border-radius: 14px; font-weight: 700; border: 1px dashed rgba(47,111,98,.6); }
+  .privacy svg { flex: none; color: var(--teal); }
+  .drop { margin: 22px 0 8px; border: 2px dashed rgba(42,35,32,.3); border-radius: 22px; padding: 26px 18px; text-align: center; background: var(--paper); transition: border-color .15s, background .15s; }
+  .drop.over { border-color: var(--teal); background: var(--teal-soft); }
+  .drop p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+  .btn { appearance: none; border: 0; border-radius: 999px; font: 800 17px/1 var(--font); padding: 16px 24px; cursor: pointer; color: #fff; background: var(--teal); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 6px 18px rgba(47,111,98,.25); }
+  .btn:hover { background: var(--teal2); }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label.upload:focus-within, [role=tab]:focus-visible { outline: 3px solid var(--plum); outline-offset: 3px; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid rgba(42,35,32,.35); box-shadow: none; }
+  .btn.ghost:hover { background: rgba(42,35,32,.06); }
+  .btn.small { padding: 10px 16px; font-size: 15px; min-height: 44px; }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  label.upload { display: inline-flex; }
+  label.upload input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .linkbtn { background: none; border: 0; color: var(--teal); font: 700 16px var(--font); text-decoration: underline; cursor: pointer; padding: 12px 6px; min-height: 44px; }
+  .status { min-height: 1.5em; margin: 10px 0 0; color: var(--teal); font-weight: 600; }
+  .status.err { color: var(--rose); }
+  section { margin: 44px 0; }
+  h2 { font-family: var(--display); font-size: clamp(32px, 7.4vw, 48px); margin: 0 0 12px; line-height: 1; text-transform: uppercase; color: var(--navy); }
+  h3 { margin: 0 0 6px; font-size: 19px; }
+  .tabs { display: flex; gap: 6px; border-bottom: 2px solid var(--line); margin: 0 0 16px; }
+  .tabs [role=tab] { appearance: none; background: none; border: 0; border-bottom: 4px solid transparent; margin-bottom: -2px; font: 800 18px var(--font); color: var(--muted); padding: 12px 14px; min-height: 48px; cursor: pointer; }
+  .tabs [role=tab][aria-selected=true] { color: var(--ink); border-bottom-color: var(--teal); }
+  .controls { display: grid; gap: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin: 14px 0 18px; }
+  .controls label.field { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+  .controls input[type=text], form.signup input { font: 600 16px var(--font); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(42,35,32,.3); background: #fff; color: var(--ink); min-height: 48px; width: 100%; }
+  label.check { display: flex; gap: 10px; align-items: flex-start; font-weight: 700; font-size: 15px; cursor: pointer; }
+  label.check input { width: 22px; height: 22px; flex: none; margin: 1px 0 0; accent-color: var(--teal); }
+  label.check small { display: block; font-weight: 500; color: var(--muted); }
+  .picker { display: flex; flex-wrap: wrap; gap: 8px; }
+  .picker label { display: inline-flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 14px; min-height: 44px; cursor: pointer; background: #fff; }
+  .picker input { width: 20px; height: 20px; accent-color: var(--teal); margin: 0; }
+  .yearbar { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 0 0 6px; }
+  .yearbar label { display: inline-flex; gap: 8px; align-items: center; font-weight: 800; font-size: 15px; }
+  .yearbar select { font: 700 16px var(--font); padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(42,35,32,.3); background: #fff; color: var(--ink); min-height: 44px; }
+  .deckbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 0 0 12px; }
+  .deckbar .acts, .taxbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .taxbar { margin: 12px 0; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+  .card { margin: 0; scroll-snap-align: center; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 16px; display: block; box-shadow: 0 14px 30px rgba(42,35,32,.25); background: #e4d9c6; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+  .note { background: #fff6dc; border: 1px solid #e8d49a; border-radius: 14px; padding: 12px 14px; font-size: 15px; margin: 10px 0; }
+  .note.info { background: var(--teal-soft); border-color: rgba(47,111,98,.4); }
+  .empty { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 18px; font-weight: 600; }
+  .pass { display: grid; gap: 10px; margin: 18px 0; }
+  .pass h3 { margin: 0; }
+  .pass .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pass-text { margin: 0; padding: 10px 12px; border-radius: 12px; background: rgba(42,35,32,.06); font-size: 15px; word-break: break-word; }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .panel.dark { background: linear-gradient(160deg, #2f6f62, #1d4840); color: #f1f8f5; border-color: transparent; }
+  .panel.dark h2 { color: #fff; }
+  .panel.dark .small-print { color: #d3eae2; }
+  .panel.dark a { color: #fff; }
+  .panel.dark form.signup .btn { background: var(--mustard); color: #2a2320; box-shadow: none; }
+  details { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 16px 18px; font-weight: 800; font-size: 18px; min-height: 48px; }
+  details > div { padding: 0 18px 16px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin: 6px 0; }
+  .grid2 { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } .controls { grid-template-columns: 1fr 1fr; } .controls .wide { grid-column: 1 / -1; } }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; }
+  .small-print { color: var(--muted); font-size: 14px; }
+  .source { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+  code { font-family: var(--mono); font-size: 14px; background: rgba(42,35,32,.07); padding: 1px 6px; border-radius: 6px; word-break: break-word; }
+  /* tax summary */
+  .totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 12px 0; }
+  .totals div { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+  .totals b { display: block; font-family: var(--display); font-size: clamp(22px, 6vw, 30px); line-height: 1.1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .totals .net { background: var(--teal-soft); border-color: rgba(47,111,98,.4); }
+  .totals span { font-size: 13px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+  .tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); margin: 10px 0; }
+  table.fin { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table.fin th { text-align: right; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding: 10px 8px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  table.fin th:first-child, table.fin td:first-child { text-align: left; position: sticky; left: 0; background: var(--paper); }
+  table.fin td { padding: 8px; border-bottom: 1px solid var(--rule); text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 14px; }
+  table.fin td:first-child { font-family: var(--font); font-weight: 700; white-space: normal; min-width: 120px; }
+  table.fin tr.sum td { font-weight: 800; border-top: 2px solid var(--line); }
+  table.fin tr.net td { background: var(--teal-soft); font-weight: 800; }
+  table.fin tr.sub td:first-child { padding-left: 20px; font-weight: 500; }
+  table.fin td.neg { color: var(--rose); }
+  .irs { border-left: 6px solid var(--plum); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  footer p { margin: 6px 0; }
+  .makeyours { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 12px; font-size: 16px; color: var(--ink); }
+  @media print {
+    body { background: #fff; }
+    header.hero, #panel-recap, .tabs, .yearbar, #download, #how-we-know, #signup, #faq, #more-apps, footer .makeyours, .taxbar, .no-print { display: none !important; }
+    #results, #panel-tax { display: block !important; }
+    .tablewrap { overflow: visible; border: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="brand">A Lantern Lab project</div>
+    <h1>Seller Year <em>in Review</em></h1>
+    <p class="for">Year in Review for Etsy sellers</p>
+    <p class="lede"><b>Your shop&rsquo;s year, as cards you can post.</b> Drop in the order CSVs from your Shop Manager and get your orders, items sold, best seller, busiest month and day, where your orders went and how many buyers came back. Add your monthly statements and get a <b>fees and net summary for tax time</b>, month by month, with a CSV for your bookkeeper. Free, no sign-up.</p>
+    <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your shop data never leaves your device. Buyer names and addresses are never read.</span></div>
+
+    <div class="drop" id="drop">
+      <label class="upload btn" for="file">Choose your shop CSVs
+        <input id="file" type="file" multiple accept=".csv,.zip,text/csv,application/zip">
+      </label>
+      <p>Pick several at once: <code>EtsySoldOrders2026.csv</code>, <code>EtsySoldOrderItems2026.csv</code> and your monthly statements (<code>etsy_statement_2026_1.csv</code> &hellip;). One file is enough to start. You can also drag them here.</p>
+      <button type="button" class="btn ghost small" id="sample">See a sample shop first</button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <p class="hint">Don&rsquo;t have the files yet? They download instantly from Shop Manager. <a href="#download">How to download them</a>.</p>
+  </header>
+
+  <section id="results" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Your shop&rsquo;s year</h2>
+    <div class="yearbar">
+      <label>Year <select id="year"></select></label>
+      <label id="currency-wrap" hidden>Currency <select id="currency"></select></label>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Views">
+      <button type="button" role="tab" id="tab-recap" aria-controls="panel-recap" aria-selected="true">Recap cards</button>
+      <button type="button" role="tab" id="tab-tax" aria-controls="panel-tax" aria-selected="false" tabindex="-1">Tax summary</button>
+    </div>
+
+    <div id="panel-recap" role="tabpanel" aria-labelledby="tab-recap">
+      <p class="note info" id="included"></p>
+      <div class="deckbar">
+        <b id="deck-count"></b>
+        <div class="acts">
+          <button type="button" class="btn small" id="share-all">Share all</button>
+          <button type="button" class="btn small ghost" id="zip-all">Download all (.zip)</button>
+          <button type="button" class="btn small ghost" id="reset">Start over</button>
+        </div>
+      </div>
+      <p class="hint">Swipe through the cards (1080&times;1920, sized for stories). Nothing is shared until you tap Share or Save.</p>
+      <div id="empty" class="empty" hidden></div>
+      <div id="deck"></div>
+
+      <div class="controls" id="controls">
+        <h3 class="wide" style="margin:0">Choose what to show</h3>
+        <label class="field wide">Shop name on the cards (optional)
+          <input type="text" id="name-input" maxlength="40" autocomplete="off" placeholder="e.g. Little Kiln Studio">
+        </label>
+        <label class="check"><input type="checkbox" id="revenue" checked><span>Show sales in dollars <small>Untick to keep money off every card. Counts stay.</small></span></label>
+        <label class="check"><input type="checkbox" id="names" checked><span>Show listing names <small>Your own product titles on the best-seller card. Untick to hide them.</small></span></label>
+        <label class="check wide"><input type="checkbox" id="handmade" checked><span>I make what I sell <small>Cards say &ldquo;made by hand&rdquo;. Untick for vintage, supplies or print-on-demand shops (&ldquo;packed and shipped&rdquo;).</small></span></label>
+        <div class="wide"><b style="font-size:15px">Cards</b>
+          <div class="picker" id="picker"></div>
+        </div>
+        <p class="small-print wide" style="margin:0">Never on a card: buyer names, usernames, addresses, cities, zip codes or emails. Places are counts by state or country, and repeat buyers are a percentage.</p>
+      </div>
+
+      <div class="panel pass" id="pass">
+        <h3>Pass it on</h3>
+        <p class="small-print" style="margin:0">Posting your cards in a seller group? Add this so other makers can make their own:</p>
+        <p class="pass-text" id="pass-text"></p>
+        <div class="acts"><button type="button" class="btn small" id="pass-share">Share the link</button><button type="button" class="btn small ghost" id="pass-copy">Copy text + link</button></div>
+        <p class="small-print" id="pass-msg" role="status" aria-live="polite" style="margin:0"></p>
+      </div>
+    </div>
+
+    <div id="panel-tax" role="tabpanel" aria-labelledby="tab-tax" hidden>
+      <p class="note"><b>Not tax advice.</b> This totals what your Etsy files say so tax prep is quicker. It is not a tax return, and what you report (and what you can deduct) depends on your situation. <b>Your accountant or tax preparer should confirm these numbers</b> against your 1099-K, bank deposits and your own records.</p>
+      <p class="note info" id="tax-source"></p>
+      <div class="totals" id="totals"></div>
+      <div class="taxbar">
+        <button type="button" class="btn small" id="export-csv">Download CSV (by month)</button>
+        <button type="button" class="btn small ghost" id="print">Print / save as PDF</button>
+      </div>
+      <h3 id="cat-h">Where the money went</h3>
+      <div class="tablewrap"><table class="fin" id="cats"><thead></thead><tbody></tbody></table></div>
+      <h3 id="month-h">By month</h3>
+      <div class="tablewrap"><table class="fin" id="months"><thead></thead><tbody></tbody></table></div>
+      <p class="small-print" id="tax-foot"></p>
+      <div class="panel irs" id="irs">
+        <h3>About Form 1099-K</h3>
+        <p style="margin:6px 0">Etsy (as a payment platform) generally has to send a Form 1099-K only when your gross payments for the year are <b>over $20,000 and more than 200 transactions</b>. The One, Big, Beautiful Bill put that federal threshold back in place retroactively, and the IRS repeated it in January 2026. Some states have lower thresholds of their own, so you may still get one.</p>
+        <p style="margin:6px 0"><b>No 1099-K does not mean no tax.</b> The threshold only decides whether the form is sent; business income is reportable either way. The 1099-K shows gross payments, before Etsy&rsquo;s fees and refunds, so it will not match the net above.</p>
+        <p class="source">Sources: IRS, <a href="https://www.irs.gov/newsroom/irs-issues-faqs-on-form-1099-k-threshold-under-the-one-big-beautiful-bill-dollar-limit-reverts-to-20000" rel="noopener">IRS issues FAQs on Form 1099-K threshold under the One, Big, Beautiful Bill; dollar limit reverts to $20,000</a> (IR-2025-107, Oct. 23, 2025) and <a href="https://www.irs.gov/node/154056" rel="noopener">IR-2026-03</a> (Jan. 8, 2026), both checked Nov. 15, 2026. Rules can change; your accountant should confirm what applies to your 2026 return.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" aria-labelledby="download-h">
+    <h2 id="download-h">How to download your Etsy files</h2>
+    <p>Etsy lets sellers download their shop data any time, as CSV files, on a computer browser. Get the year&rsquo;s orders for the cards, and the monthly statements for the tax summary.</p>
+    <details open>
+      <summary>1. Orders and order items (for the cards)</summary>
+      <div><ol class="steps">
+        <li>Sign in at etsy.com on a computer and open <b>Shop Manager</b>.</li>
+        <li>Go to <b>Settings &rarr; Options</b>, then the <b>Download Data</b> tab.</li>
+        <li>Under <b>Orders</b>, pick the <b>CSV Type</b> &ldquo;Orders&rdquo;, choose the <b>Year</b>, and leave <b>Month</b> empty to get the whole year. Select <b>Download CSV</b>. You get <code>EtsySoldOrders2026.csv</code>.</li>
+        <li>Do it again with CSV Type &ldquo;Order Items&rdquo; for <code>EtsySoldOrderItems2026.csv</code>. This one has your listing titles, so it powers the best-seller card.</li>
+        <li>Drop both files here together.</li>
+      </ol>
+      <p class="source">Etsy&rsquo;s own instructions: <a href="https://help.etsy.com/hc/articles/360000343328" rel="noopener">How to Download a Spreadsheet of Your Sold Transactions</a> (Etsy Help, checked Nov. 15, 2026). Menu names change from time to time.</p></div>
+    </details>
+    <details>
+      <summary>2. Monthly statements (for the tax summary)</summary>
+      <div><ol class="steps">
+        <li>In <b>Shop Manager</b>, select <b>Finances &rarr; Payment account</b>. (In the Etsy Seller app it&rsquo;s under More &rarr; Finances.)</li>
+        <li>Open <b>Monthly statements</b> (or &ldquo;View all monthly statements&rdquo; at the bottom of the page).</li>
+        <li>Choose a month and select <b>Download CSV</b>. Repeat for each month of the year; each file is like <code>etsy_statement_2026_3.csv</code>.</li>
+        <li>Select all twelve at once and drop them here, with or without the order files.</li>
+      </ol>
+      <p class="source">Etsy&rsquo;s own page: <a href="https://help.etsy.com/hc/articles/115015747228" rel="noopener">How to Manage Your Payment Account</a> (Etsy Help, checked Nov. 15, 2026). That page describes monthly statements but doesn&rsquo;t spell out the CSV button; seller guides (e.g. <a href="https://craftybase.com/blog/how-to-download-your-tax-totals-from-etsy" rel="noopener">Craftybase</a>) describe Finances &rarr; Monthly statements &rarr; Download CSV.</p></div>
+    </details>
+    <details>
+      <summary>Which columns does this read?</summary>
+      <div>
+        <p><b>Orders:</b> sale date, order ID, number of items, order value, discount, shipping, sales tax, order total, adjusted order total, status, currency, ship state and ship country. The buyer user ID is scrambled into a one-way code on the spot (to count repeat buyers) and the original is thrown away.</p>
+        <p><b>Order items:</b> sale date, order ID, item name, listing ID, transaction ID, quantity, price, item total, currency, ship state and country.</p>
+        <p><b>Statements:</b> date, type, title, info (only to find an order number), currency, amount, fees &amp; taxes and net.</p>
+        <p><b>Never read:</b> buyer full, first and last names, street, city and zip, ship-to name, usernames, payment method, coupon codes and personalization notes (Variations). Files like deposits, payments, reviews and listings are skipped.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="how-we-know" aria-labelledby="hwk-h">
+    <h2 id="hwk-h">Your shop data stays on your device. How we know:</h2>
+    <div class="grid2">
+      <div class="panel"><h3>There&rsquo;s no server to send it to</h3><p>This page is plain files on GitHub Pages. Your CSVs are read, counted and drawn by JavaScript in this browser tab. Close the tab and they&rsquo;re gone.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page&rsquo;s Content-Security-Policy only allows one outside address: the optional email signup, which sends just your email. No analytics, no trackers, no third-party scripts or fonts.</p></div>
+      <div class="panel"><h3>Buyers stay anonymous</h3><p>Name, address and email columns are skipped when the file is read, so they are never in memory to show. Places are counted by state or country; repeat buyers are a percentage from scrambled IDs.</p></div>
+      <div class="panel"><h3>It&rsquo;s open source</h3><p>Every line is on GitHub: <a href="https://github.com/lanternlab2027/lab/tree/main/docs/etsy" rel="noopener">lanternlab2027/lab &rarr; docs/etsy</a>. The zip writer (JSZip) is copied into the folder, not loaded from a CDN. Try it in airplane mode.</p></div>
+    </div>
+  </section>
+
+  <section id="signup" aria-labelledby="signup-h" hidden>
+    <div class="panel dark">
+      <h2 id="signup-h" style="font-size:32px">Remind me at tax time</h2>
+      <p class="small-print">Optional. One email in January to download your statements and run the summary, and one when next year&rsquo;s recap is ready. We only send your email address; nothing from your shop is ever included.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small-print" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Remind me</button>
+      </form>
+      <p class="small-print" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Is this made by Etsy?</summary><div><p>No. Seller Year in Review is an independent project. It is not affiliated with, endorsed by or sponsored by Etsy, Inc., and uses no Etsy logos or brand colors. It just reads the files Etsy lets you download.</p></div></details>
+    <details><summary>Why don&rsquo;t the card totals match the tax summary?</summary><div><p>The cards use your orders file: item sales after discounts plus shipping charged, minus refunds the file shows. The tax summary uses your statements, which count money when Etsy posts it (a late-December order can land in January) and include every fee. Sales tax that Etsy collects and pays for you is left out of both.</p></div></details>
+    <details><summary>How is &ldquo;net&rdquo; worked out?</summary><div><p>Gross sales (statement sales minus the sales tax Etsy collected) minus refunds to buyers, minus every Etsy fee (transaction, processing, listing, Offsite Ads, Etsy Ads, shipping labels, subscriptions, regulatory and VAT on fees), plus any other credits. We check it against the sum of the Net column in your statements and say if they disagree. Deposits to your bank are not income and are left out.</p></div></details>
+    <details><summary>My shop sells in more than one currency</summary><div><p>Statements are in your payment account&rsquo;s currency; orders are in your listing currency. Nothing is ever added across currencies: pick the currency next to the year, and the page says what was left out.</p></div></details>
+    <details><summary>Where is the best-seller card?</summary><div><p>It needs the <b>Order Items</b> CSV, which has your listing titles. The Orders CSV alone has counts and totals only.</p></div></details>
+    <details><summary>It says it can&rsquo;t read my file</summary><div><p>Upload the CSV exactly as Etsy gave it, not a copy re-saved from a spreadsheet (which can change dates and commas). If Etsy renamed a column, tell us on GitHub (without your file) and we&rsquo;ll add the new name.</p></div></details>
+    <details><summary>Is it free?</summary><div><p>Yes.</p></div></details>
+  </section>
+
+  <link rel="stylesheet" href="../apps/more.css">
+  <div id="more-apps" data-from="etsy"></div>
+  <script src="../apps/more.js" defer></script>
+
+  <footer>
+    <div class="makeyours"><b>Make yours:</b> <code>lanternlab2027.github.io/lab/etsy</code> <button type="button" class="btn ghost small" id="share-tool">Share this tool</button></div>
+    <p><a href="../">A Lantern Lab project</a> &middot; <a href="../apps/">More free apps &rarr;</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/etsy" rel="noopener">GitHub</a></p>
+    <p id="disclaimer">Not affiliated with Etsy. Etsy is a trademark of Etsy, Inc., used here only to describe the files this tool reads. Not tax, legal or accounting advice. The sample shop, its products and its buyers are invented.</p>
+  </footer>
+</div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="parser.js"></script>
+<script src="stats.js"></script>
+<script src="demo.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>
