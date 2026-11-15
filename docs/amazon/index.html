@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>How Much Have I Spent on Amazon? Free 2026 Order History Spending Recap</title>
+<meta name="description" content="See how much you have spent on Amazon in 2026, free. Drop in the order history from Amazon's Request Your Data export and get your Amazon order history spending as shareable cards: total spent after refunds, orders, biggest order, busiest month, most re-ordered item and late-night orders. Plus a business-expense filter with CSV export for tax time. Nothing is uploaded; it all runs on your device.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/amazon/">
+<meta name="theme-color" content="#f7f2e7">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="How much have I spent on Amazon? Year in Orders, free and private">
+<meta property="og:description" content="Turn your Amazon order history into a spending recap: total spent, biggest order, busiest month, 2am orders, plus a tax-time business filter. 100% on your device.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/amazon/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/amazon/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Year in Orders: sample spending cards made from an invented order history">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How much have I spent on Amazon? Year in Orders">
+<meta name="twitter:description" content="A free Amazon order history spending recap and tax-time business filter. Nothing is uploaded.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/amazon/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Year in Orders",
+ "alternateName": ["Amazon spending recap", "How much have I spent on Amazon"],
+ "url": "https://lanternlab2027.github.io/lab/amazon/",
+ "applicationCategory": "FinanceApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Year in Orders, for your Amazon data: turn the order history from Amazon's Request Your Data export into a spending recap and a business-expense CSV. Runs entirely in your browser; not affiliated with Amazon.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #f7f2e7; --paper: #fffdf7; --ink: #1d2433; --muted: #5d6475; --line: rgba(29,36,51,.16); --rule: rgba(29,36,51,.09);
+    --green: #1f7a5c; --green2: #17654b; --green-soft: #dcefe5; --plum: #7b2d5e; --brick: #b5523f; --navy: #17254a;
+    --display: "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed", "DejaVu Sans Condensed", "Helvetica Neue", Arial, sans-serif;
+    --serif: Georgia, "Iowan Old Style", Cambria, serif;
+    --mono: "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); background-image: radial-gradient(rgba(29,36,51,.07) 1.2px, transparent 1.3px); background-size: 24px 24px; color: var(--ink); font-family: var(--font); line-height: 1.55; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--green); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 40px 0 12px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  h1 { font-family: var(--display); font-size: clamp(56px, 15vw, 118px); line-height: .9; margin: 14px 0 6px; font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; }
+  h1 em { font-style: normal; color: var(--green); display: block; }
+  .for { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 5vw, 26px); color: var(--plum); margin: 0 0 14px; }
+  .lede { font-size: clamp(18px, 4.6vw, 21px); max-width: 700px; margin: 0 0 16px; color: #2e3446; }
+  .privacy { display: inline-flex; gap: 10px; align-items: center; background: var(--green-soft); color: #0f3d2e; padding: 10px 16px; border-radius: 14px; font-weight: 700; border: 1px solid rgba(31,122,92,.35); }
+  .privacy svg { flex: none; color: var(--green); }
+  .drop { margin: 22px 0 8px; border: 2px dashed rgba(29,36,51,.3); border-radius: 22px; padding: 26px 18px; text-align: center; background: var(--paper); transition: border-color .15s, background .15s; }
+  .drop.over { border-color: var(--green); background: var(--green-soft); }
+  .drop p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+  .btn { appearance: none; border: 0; border-radius: 999px; font: 800 17px/1 var(--font); padding: 16px 24px; cursor: pointer; color: #fff; background: var(--green); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 6px 18px rgba(31,122,92,.25); }
+  .btn:hover { background: var(--green2); }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label.upload:focus-within, [role=tab]:focus-visible { outline: 3px solid var(--plum); outline-offset: 3px; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid rgba(29,36,51,.35); box-shadow: none; }
+  .btn.ghost:hover { background: rgba(29,36,51,.06); }
+  .btn.small { padding: 10px 16px; font-size: 15px; min-height: 44px; }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  label.upload { display: inline-flex; }
+  label.upload input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .linkbtn { background: none; border: 0; color: var(--green); font: 700 16px var(--font); text-decoration: underline; cursor: pointer; padding: 12px 6px; min-height: 44px; }
+  .status { min-height: 1.5em; margin: 10px 0 0; color: var(--green); font-weight: 600; }
+  .status.err { color: var(--brick); }
+  section { margin: 44px 0; }
+  h2 { font-family: var(--display); font-size: clamp(32px, 7.4vw, 48px); margin: 0 0 12px; line-height: 1; text-transform: uppercase; color: var(--navy); }
+  h3 { margin: 0 0 6px; font-size: 19px; }
+  .tabs { display: flex; gap: 6px; border-bottom: 2px solid var(--line); margin: 0 0 16px; }
+  .tabs [role=tab] { appearance: none; background: none; border: 0; border-bottom: 4px solid transparent; margin-bottom: -2px; font: 800 18px var(--font); color: var(--muted); padding: 12px 14px; min-height: 48px; cursor: pointer; }
+  .tabs [role=tab][aria-selected=true] { color: var(--ink); border-bottom-color: var(--green); }
+  .controls { display: grid; gap: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin: 14px 0 18px; }
+  .controls label.field { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+  .controls input[type=text], .controls input[type=search], .controls input[type=date], .controls select, form.signup input { font: 600 16px var(--font); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(29,36,51,.3); background: #fff; color: var(--ink); min-height: 48px; width: 100%; }
+  label.check { display: flex; gap: 10px; align-items: flex-start; font-weight: 700; font-size: 15px; cursor: pointer; }
+  label.check input { width: 22px; height: 22px; flex: none; margin: 1px 0 0; accent-color: var(--green); }
+  label.check small { display: block; font-weight: 500; color: var(--muted); }
+  .yearbar { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 0 0 6px; }
+  .yearbar label { display: inline-flex; gap: 8px; align-items: center; font-weight: 800; font-size: 15px; }
+  .yearbar select { font: 700 16px var(--font); padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(29,36,51,.3); background: #fff; color: var(--ink); min-height: 44px; }
+  .deckbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 0 0 12px; }
+  .deckbar .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+  .card { margin: 0; scroll-snap-align: center; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 16px; display: block; box-shadow: 0 14px 30px rgba(29,36,51,.25); background: #e9dfca; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+  .note { background: #fff6dc; border: 1px solid #e8d49a; border-radius: 14px; padding: 12px 14px; font-size: 15px; margin: 10px 0; }
+  .empty { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 18px; font-weight: 600; }
+  .pass { display: grid; gap: 10px; margin: 18px 0; }
+  .pass h3 { margin: 0; }
+  .pass .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pass-text { margin: 0; padding: 10px 12px; border-radius: 12px; background: rgba(29,36,51,.06); font-size: 15px; word-break: break-word; }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .panel.green { background: linear-gradient(160deg, #1f7a5c, #134d3a); color: #f2fbf6; border-color: transparent; }
+  .panel.green h2 { color: #fff; }
+  .panel.green .small-print { color: #cfe9dc; }
+  .panel.green a { color: #fff; }
+  .panel.green form.signup .btn { background: #ffd166; color: #1d2433; box-shadow: none; }
+  details { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 16px 18px; font-weight: 800; font-size: 18px; min-height: 48px; }
+  details > div { padding: 0 18px 16px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin: 6px 0; }
+  .grid2 { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } .controls { grid-template-columns: 1fr 1fr; } .controls .wide { grid-column: 1 / -1; } .controls.three { grid-template-columns: 1fr 1fr 1fr; } }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; }
+  .small-print { color: var(--muted); font-size: 14px; }
+  .source { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+  code { font-family: var(--mono); font-size: 14px; background: rgba(29,36,51,.07); padding: 1px 6px; border-radius: 6px; word-break: break-word; }
+  /* tax table */
+  .totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 12px 0; }
+  .totals div { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+  .totals b { display: block; font-family: var(--display); font-size: 30px; line-height: 1.1; }
+  .totals .biz { background: var(--green-soft); border-color: rgba(31,122,92,.4); }
+  .totals span { font-size: 13px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+  .taxbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0; }
+  table.items { width: 100%; border-collapse: collapse; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; font-size: 15px; }
+  table.items th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); padding: 10px 8px; border-bottom: 2px solid var(--line); }
+  table.items td { padding: 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  table.items .num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  table.items td.d { font-family: var(--mono); font-size: 14px; white-space: nowrap; }
+  table.items td.nm { word-break: break-word; }
+  table.items td.nm small { display: block; color: var(--muted); font-size: 12px; }
+  table.items td.bz { width: 56px; text-align: center; }
+  table.items td.bz input { width: 24px; height: 24px; accent-color: var(--green); cursor: pointer; }
+  table.items tr.on { background: var(--green-soft); }
+  table.items tfoot td { font-weight: 800; border-bottom: 0; }
+  @media (max-width: 640px) {
+    table.items, table.items tbody, table.items tfoot { display: block; border: 0; background: none; }
+    table.items thead { display: none; }
+    table.items tr { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 2px 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; align-items: center; }
+    table.items tr.on { background: var(--green-soft); }
+    table.items td { border: 0; padding: 0; }
+    table.items td.bz { grid-row: 1 / 3; grid-column: 1; width: auto; }
+    table.items td.nm { grid-column: 2 / 4; grid-row: 1; }
+    table.items td.d { grid-column: 2; grid-row: 2; font-size: 13px; color: var(--muted); }
+    table.items td.q { display: none; }
+    table.items td.t { grid-column: 3; grid-row: 2; font-weight: 800; }
+    table.items tfoot tr { display: block; }
+  }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  footer p { margin: 6px 0; }
+  .makeyours { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 12px; font-size: 16px; color: var(--ink); }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="brand">A Lantern Lab project</div>
+    <h1>Year in <em>Orders</em></h1>
+    <p class="for">for your Amazon data</p>
+    <p class="lede"><b>How much have you spent on Amazon this year?</b> Drop in the order history from Amazon&rsquo;s data export and get your total after refunds, your biggest order, busiest month, the thing you keep re-ordering and the orders you placed after midnight, as cards sized for stories. There&rsquo;s a business-expense filter for tax time too. Free, no sign-up.</p>
+    <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your order history never leaves your device.</span></div>
+
+    <div class="drop" id="drop">
+      <label class="upload btn" for="file">Choose your order files
+        <input id="file" type="file" multiple accept=".zip,.csv,text/csv,application/zip">
+      </label>
+      <p>The <b>.zip</b> Amazon sends you (for example <code>Your Orders.zip</code>), or the CSVs inside it: <code>Order History.csv</code> or <code>Retail.OrderHistory.1.csv</code>, plus the refund file if you have it. You can also drag them here.</p>
+      <button type="button" class="btn ghost small" id="sample">See a sample first</button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <p class="hint">Don&rsquo;t have the file yet? Amazon has no instant download any more: you request it and wait, often a few hours, sometimes days. <a href="#export">How to request it</a>.</p>
+  </header>
+
+  <section id="results" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Your year in orders</h2>
+    <div class="yearbar">
+      <label>Year <select id="year"></select></label>
+      <label id="currency-wrap" hidden>Currency <select id="currency"></select></label>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Views">
+      <button type="button" role="tab" id="tab-recap" aria-controls="panel-recap" aria-selected="true">Recap cards</button>
+      <button type="button" role="tab" id="tab-tax" aria-controls="panel-tax" aria-selected="false" tabindex="-1">Tax filter</button>
+    </div>
+
+    <div id="panel-recap" role="tabpanel" aria-labelledby="tab-recap">
+      <p class="note" id="included"></p>
+      <div class="deckbar">
+        <b id="deck-count"></b>
+        <div class="acts">
+          <button type="button" class="btn small" id="share-all">Share all</button>
+          <button type="button" class="btn small ghost" id="zip-all">Download all (.zip)</button>
+          <button type="button" class="btn small ghost" id="reset">Start over</button>
+        </div>
+      </div>
+      <p class="hint">Swipe through the cards (1080&times;1920, sized for stories). Nothing is shared until you tap Share or Save.</p>
+      <div id="empty" class="empty" hidden></div>
+      <div id="deck"></div>
+
+      <div class="controls" id="controls">
+        <h3 class="wide" style="margin:0">Adjust the cards</h3>
+        <label class="field wide">Your name on the cards (optional)
+          <input type="text" id="name-input" maxlength="40" autocomplete="off" placeholder="e.g. Sam">
+        </label>
+        <label class="check wide" id="digital-wrap" hidden><input type="checkbox" id="digital" checked><span>Count digital orders <small>Kindle books, apps, rentals and other digital purchases from the digital orders file.</small></span></label>
+        <label class="check wide"><input type="checkbox" id="names"><span>Show item names on the cards <small>Off by default, so shared cards only show totals. You can always see item names in the tax filter, on this device only.</small></span></label>
+      </div>
+
+      <div class="panel pass" id="pass">
+        <h3>Pass it on</h3>
+        <p class="small-print" style="margin:0">Posting your cards? Add this so friends can make their own:</p>
+        <p class="pass-text" id="pass-text"></p>
+        <div class="acts"><button type="button" class="btn small" id="pass-share">Share the link</button><button type="button" class="btn small ghost" id="pass-copy">Copy text + link</button></div>
+        <p class="small-print" id="pass-msg" role="status" aria-live="polite" style="margin:0"></p>
+      </div>
+    </div>
+
+    <div id="panel-tax" role="tabpanel" aria-labelledby="tab-tax" hidden>
+      <p class="note"><b>Not tax advice.</b> This only helps you find and total purchases you think were for business. Whether something is deductible depends on your situation, so check with a tax professional. <b>Keep the receipts</b>: this list is not a receipt, and Amazon&rsquo;s invoices (Your Orders &rarr; Invoice) are what you&rsquo;d show if asked.</p>
+      <div class="controls three">
+        <label class="field">From
+          <input type="date" id="from">
+        </label>
+        <label class="field">To
+          <input type="date" id="to">
+        </label>
+        <label class="field">Search items
+          <input type="search" id="q" placeholder="e.g. printer, cable" autocomplete="off">
+        </label>
+        <label class="field">Show
+          <select id="show"><option value="all">All items</option><option value="biz">Business only</option><option value="personal">Not tagged</option></select>
+        </label>
+        <label class="check wide"><input type="checkbox" id="remember"><span>Remember my business tags in this browser <small>Saves only order numbers and product IDs of tagged items in this browser&rsquo;s storage, never names or prices. Off by default.</small></span></label>
+      </div>
+      <p class="hint" id="tax-cur" hidden></p>
+      <div class="totals" id="totals"></div>
+      <div class="taxbar">
+        <button type="button" class="btn small ghost" id="tag-shown">Tag all shown as business</button>
+        <button type="button" class="btn small ghost" id="untag-shown">Untag all shown</button>
+        <button type="button" class="btn small" id="export-biz">Download business CSV</button>
+        <button type="button" class="btn small ghost" id="export-all">Download shown items CSV</button>
+      </div>
+      <table class="items" id="items">
+        <thead><tr><th class="bz">Business</th><th>Date</th><th>Item</th><th class="num">Qty</th><th class="num">Total</th></tr></thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+      </table>
+      <p class="hint" id="more-wrap"><button type="button" class="btn small ghost" id="more">Show more</button></p>
+      <p class="small-print">Totals are each item line&rsquo;s amount from the file (tax and shipping included where Amazon includes them) and don&rsquo;t take refunds off. Refunded or returned items are marked &ldquo;refund on this order&rdquo;; untag them if the money came back.</p>
+    </div>
+  </section>
+
+  <section id="export" aria-labelledby="export-h">
+    <h2 id="export-h">How to get your Amazon order history</h2>
+    <p>Amazon retired its &ldquo;order history reports&rdquo; download in 2023. Today you ask for a copy of your data and Amazon emails you when it&rsquo;s ready. Ask for <b>Your Orders</b> only and it&rsquo;s usually quicker: often a few hours, sometimes a few days, and Amazon allows up to 30 days for big requests.</p>
+    <details open>
+      <summary>Request your data (on a computer or phone browser)</summary>
+      <div><ol class="steps">
+        <li>Sign in at amazon.com (or your country&rsquo;s Amazon site) in a web browser.</li>
+        <li>Go to <b>Account &amp; Lists &rarr; Account</b>, find <b>Data and privacy</b>, and choose <b>Request your data</b>. (Searching the help pages for &ldquo;request my data&rdquo; also gets you there.)</li>
+        <li>In the list of data categories, pick <b>Your Orders</b>. Add <b>Your Returns &amp; Refunds</b> too if it&rsquo;s listed, so refunds can be taken off your total.</li>
+        <li>Submit, then click the confirmation link Amazon emails you.</li>
+        <li>Wait for the &ldquo;your data is ready&rdquo; email. The download link expires after a while, so grab it when it arrives.</li>
+        <li>Download the <b>.zip</b> and drop it here, unopened. On a phone it lands in Files or Downloads.</li>
+      </ol>
+      <p class="source">Amazon&rsquo;s own instructions: <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=TP1zlemejtTn6pwYKS" rel="noopener">Request your personal information</a> (Amazon Customer Service). Menu names differ a little by country and change over time; the direct page is <code>amazon.com/hz/privacy-central/data-requests/preview.html</code>.</p></div>
+    </details>
+    <details>
+      <summary>Which files does this read?</summary>
+      <div>
+        <p>Newer exports (2025 onward) look like <code>Your Amazon Orders/Order History.csv</code>, with refunds in <code>Your Returns &amp; Refunds/Refund Details.csv</code> and digital purchases in <code>Digital Content Orders.csv</code>. Older ones use <code>Retail.OrderHistory.1/Retail.OrderHistory.1.csv</code> and <code>Retail.OrdersReturned.Payments.1.csv</code>. Drop the whole zip and the right files are picked out; everything else in it is skipped without being opened.</p>
+        <p>From each order row only these columns are read: order number, order date, product name, product ID (ASIN), quantity, prices and totals, currency, order status and department. <b>Shipping and billing addresses, payment methods, gift messages and tracking numbers are ignored</b> and never shown.</p>
+        <p>If you shop on more than one Amazon site, each site is its own <code>.1</code>, <code>.2</code> file and currency; pick the currency above the cards.</p>
+      </div>
+    </details>
+    <details>
+      <summary>What exactly is in the total?</summary>
+      <div><p>Each item line&rsquo;s <b>Total Owed</b> (older files) or <b>Total Amount</b> (newer files), which includes tax and, where Amazon lists it, shipping and discounts. Cancelled lines are left out. Refunds from the refund file are taken off when they match an order in the year you&rsquo;re looking at. Digital orders are counted when the digital file is there and the box is ticked. Gift card reloads, Prime membership fees, subscriptions billed outside orders and Whole Foods in-store purchases aren&rsquo;t in the order file, so they aren&rsquo;t counted. The line under the controls says what went into your number.</p></div>
+    </details>
+  </section>
+
+  <section id="how-we-know" aria-labelledby="hwk-h">
+    <h2 id="hwk-h">Your orders never leave your device. How we know:</h2>
+    <div class="grid2">
+      <div class="panel"><h3>There&rsquo;s no server to send them to</h3><p>This page is plain files on GitHub Pages. Your files are read, counted and drawn by JavaScript in this browser tab. Close the tab and they&rsquo;re gone.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page&rsquo;s Content-Security-Policy only allows one outside address: the optional email signup, which sends just your email. No analytics, no trackers, no third-party scripts or fonts.</p></div>
+      <div class="panel"><h3>Item names stay off the cards</h3><p>Cards show totals and counts. Product names appear only if you tick the box, and the tax table with names is never in an image or a link.</p></div>
+      <div class="panel"><h3>It&rsquo;s open source</h3><p>Every line is on GitHub: <a href="https://github.com/lanternlab2027/lab/tree/main/docs/amazon" rel="noopener">lanternlab2027/lab &rarr; docs/amazon</a>. The zip reader (JSZip) is copied into the folder, not loaded from a CDN. Try it in airplane mode.</p></div>
+    </div>
+  </section>
+
+  <section id="signup" aria-labelledby="signup-h" hidden>
+    <div class="panel green">
+      <h2 id="signup-h" style="font-size:32px">Get a reminder at tax time</h2>
+      <p class="small-print">Optional. One email in January to pull your business purchases, and one when next year&rsquo;s recap is ready. We only send your email address; nothing from your orders is ever included.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small-print" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Remind me</button>
+      </form>
+      <p class="small-print" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>How much have I spent on Amazon, all time?</summary><div><p>Pick <b>All time</b> in the year menu. It covers whatever range is in your export; ask for all your orders when you request the data.</p></div></details>
+    <details><summary>Is this made by Amazon?</summary><div><p>No. Year in Orders is an independent project. It is not affiliated with, endorsed by or sponsored by Amazon, and uses no Amazon logos or brand colors.</p></div></details>
+    <details><summary>Why don&rsquo;t my numbers match my card statement?</summary><div><p>Amazon charges when items ship, splits orders, and some money never appears in the order file (gift card balance, Prime fees, in-store purchases). Refunds only come off if the refund file is included. Treat the total as a close estimate, not an accounting record.</p></div></details>
+    <details><summary>Where are the top categories?</summary><div><p>Only some exports include a <b>Department</b> column. When yours does, you get a top-categories card. When it doesn&rsquo;t, the card is skipped; we don&rsquo;t guess categories from product names.</p></div></details>
+    <details><summary>Why are late-night orders in my time zone?</summary><div><p>The export stores order times in UTC. They&rsquo;re converted to this device&rsquo;s time zone, so if you moved during the year a few times may be off by some hours.</p></div></details>
+    <details><summary>It says it can&rsquo;t find orders in my file</summary><div><p>Upload the original zip, or the order history CSV inside it, not a copy re-saved from a spreadsheet. If Amazon changed the column names, tell us on GitHub (without your file) and we&rsquo;ll add them.</p></div></details>
+    <details><summary>Is it free?</summary><div><p>Yes.</p></div></details>
+  </section>
+
+  <footer>
+    <div class="makeyours"><b>Make yours:</b> <code>lanternlab2027.github.io/lab/amazon</code> <button type="button" class="btn ghost small" id="share-tool">Share this tool</button></div>
+    <p><a href="../">A Lantern Lab project</a> &middot; <a href="../apps/">More free apps &rarr;</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/amazon" rel="noopener">GitHub</a></p>
+    <p id="disclaimer">Not affiliated with Amazon. Amazon is a trademark of Amazon.com, Inc. or its affiliates, used here only to describe the file this tool reads. Not tax, legal or accounting advice. The sample uses invented products and orders.</p>
+  </footer>
+</div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="parser.js"></script>
+<script src="stats.js"></script>
+<script src="demo.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+﻿"Website","Product Name","Quantity","Order ID","Total Owed","Order Date","Currency","Order Status","Shipping Address","Payment Instrument Type"
+Amazon.com,"Desk fan, 12""",2,111-1111111-0000001,"$1,049.98",2026-04-02T03:15:00.000Z,USD,Closed,"1 Secret Lane, Hidden Town",Visa - 0000
+Amazon.com,Sticky notes,1,111-1111111-0000002,'4.99',2026-04-05T15:00:00Z,USD,Closed,"1 Secret Lane, Hidden Town",Visa - 0000
+Amazon.com,Cancelled thing,1,111-1111111-0000003,25.00,2026-04-06T15:00:00Z,USD,Cancelled,"1 Secret Lane, Hidden Town",Visa - 0000
+Amazon.com,Lamp with no total,2,111-1111111-0000004,Not Available,2026-04-07T15:00:00Z,USD,Closed,"1 Secret Lane, Hidden Town",Visa - 0000
