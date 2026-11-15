@@ -632,15 +632,19 @@ def class_explainer():
 <p class="note" style="margin-bottom:0">HPD also lists Class I entries: orders to repair and vacate orders, which are not ranked by hazard. A violation stays "open" until the owner certifies the correction and HPD clears it, so an open count can include problems already fixed but not yet cleared.</p></div>"""
 
 
-def building_page(B, by_hood, meta):
+def building_page(B, by_hood, meta, by_boro=None):
+    by_boro = by_boro or {}
     b, boro = B["bbl"], B["boro"]
     canon = f"b/{b}.html"
     cta_url = f"{LOOKUP}?bbl={b}"
     zip_ = f" {B['zip']}" if B["zip"] else ""
     place = f"{B['addr']}, {BORO[boro]}, NY{zip_}"
-    title = f"{B['addr']}, {BORO[boro]}: {fmt_int(B['open_total'])} Open HPD Violations"
-    if len(title) > 68:
-        title = f"{B['addr']}: {fmt_int(B['open_total'])} Open HPD Violations"
+    viol = f"{fmt_int(B['open_total'])} Open HPD Violation{'' if B['open_total'] == 1 else 's'}"
+    title = f"{B['addr']}, {BORO[boro]}: {viol}"
+    if len(title) > 65:  # SEO audit Nov 15: keep titles within ~65 chars
+        title = f"{B['addr']}: {viol}"
+    elif len(title) < 50 and B["zip"] and len(f"{B['addr']}, {BORO[boro]} {B['zip']}: {viol}") <= 65:
+        title = f"{B['addr']}, {BORO[boro]} {B['zip']}: {viol}"
     d = (f"{B['addr']}, {BORO[boro]} {B['zip']}: {fmt_int(B['open_total'])} open HPD violations "
          f"({fmt_int(B['C'])} Class C), {fmt_int(B['c12'])} HPD complaints in 12 months, "
          f"{fmt_int(B['ecb_active'])} active ECB violations. Data as of {fmt_date(meta['fetched'])}.")
@@ -763,15 +767,30 @@ def building_page(B, by_hood, meta):
                      + "".join(f"<li>{esc(a)}</li>" for a in shown) + "</ul>"
                      + (f'<p class="note">and {len(addrs) - 16} more.</p>' if len(addrs) > 16 else ""))
 
-    # Nearby
-    near = [x for x in by_hood.get((boro, B["hood"]), []) if x["bbl"] != b][:6]
+    # Nearby: up to 6 in the same neighborhood. Where the neighborhood has fewer
+    # than 3 other listed buildings, fill to 3 with listed buildings in the same
+    # ZIP, then the same borough (both in set rank order), under their own heading.
+    def li(x):
+        return f'<li><a href="{x["bbl"]}.html">{esc(x["addr"])}</a> ({fmt_int(x["open_total"])} open, {fmt_int(x["C"])} Class C)</li>'
+    near = [x for x in by_hood.get((boro, B["hood"]), []) if x["bbl"] != b][:6] if B["hood"] != "Other" else []
     near_html = ""
     if near:
-        near_html = (f'<h2>Other buildings in {esc(B["hood"] if B["hood"] != "Other" else BORO[boro])} with many open violations</h2><ul class="links">'
-                     + "".join(f'<li><a href="{x["bbl"]}.html">{esc(x["addr"])}</a> ({fmt_int(x["open_total"])} open, {fmt_int(x["C"])} Class C)</li>' for x in near)
-                     + "</ul>")
-    else:
-        near_html = f'<p><a href="{BORO_SLUG[boro]}.html">See other {esc(BORO[boro])} buildings with many open violations</a></p>'
+        near_html = (f'<h2>Other buildings in {esc(B["hood"])} with many open violations</h2><ul class="links">'
+                     + "".join(li(x) for x in near) + "</ul>")
+    if len(near) < 3:
+        seen = {b} | {x["bbl"] for x in near}
+        boro_list = by_boro.get(boro, [])
+        same_zip = [x for x in boro_list if B["zip"] and x["zip"] == B["zip"] and x["bbl"] not in seen]
+        rest = [x for x in boro_list if x["bbl"] not in seen and x not in same_zip]
+        if B["zip"].isdigit():  # nearest ZIP code number first, a rough proxy for nearby
+            rest.sort(key=lambda x: abs(int(x["zip"]) - int(B["zip"])) if x["zip"].isdigit() else 10 ** 6)
+        fill = (same_zip + rest)[:3 - len(near)]
+        if fill:
+            where = f"ZIP {B['zip']} and elsewhere in {BORO[boro]}" if same_zip and len(same_zip) < len(fill) else (
+                f"ZIP {B['zip']}" if same_zip else BORO[boro])
+            near_html += (f'<h2>More listed buildings in {esc(where)}</h2><ul class="links">'
+                          + "".join(li(x) for x in fill) + "</ul>")
+    near_html += f'<p><a href="{BORO_SLUG[boro]}.html">See all listed {esc(BORO[boro])} buildings</a></p>'
 
     src = (f'<h2>Sources</h2><p class="note">Data as of {fmt_date(meta["fetched"])} (latest HPD violation in the dataset issued {fmt_date(meta["hpd_latest_issued"])}). '
            f'From NYC Open Data: '
@@ -814,8 +833,10 @@ def render():
     bs = [derive(data[b]) for b in meta["rank"] if b in data]
     bs.sort(key=lambda x: (-x["score"], x["bbl"]))
     by_hood = collections.defaultdict(list)
+    by_boro = collections.defaultdict(list)
     for x in bs:
         by_hood[(x["boro"], x["hood"])].append(x)
+        by_boro[x["boro"]].append(x)
     os.makedirs(os.path.join(OUT, "n"), exist_ok=True)
     for fn in os.listdir(OUT):  # remove pages of buildings that dropped out of the set
         if re.fullmatch(r"\d{10}\.html", fn):
@@ -826,7 +847,7 @@ def render():
         f.write(CSS)
     urls = []
     for x in bs:
-        canon, h = building_page(x, by_hood, meta)
+        canon, h = building_page(x, by_hood, meta, by_boro)
         with open(os.path.join(DOCS, canon), "w") as f:
             f.write(h)
         urls.append(canon)
@@ -854,6 +875,10 @@ def render():
                 f'<a class="btn" href="../{LOOKUP}">Look up a building</a></div>{method_note(meta, len(bs))}')
         body = body.replace(f'href="{LOOKUP}"', f'href="../{LOOKUP}"')
         t = f"{hood}, {BORO[boro]}: Buildings With the Most HPD Violations"
+        if len(t) > 65:
+            t = f"{hood}, {BORO[boro]}: Buildings With Most HPD Violations"
+        if len(t) > 65:
+            t = f"{hood}: Buildings With the Most HPD Violations"
         d = (f"{len(xs)} {hood} buildings with the most open HPD violations and complaints: {fmt_int(tot)} open violations, "
              f"{fmt_int(totc)} Class C. Addresses, counts and free alerts. Data as of {fmt_date(meta['fetched'])}.")
         with open(os.path.join(DOCS, canon), "w") as f:
@@ -914,12 +939,28 @@ def render():
     sm.append("</urlset>")
     with open(os.path.join(DOCS, "sitemap-buildings.xml"), "w") as f:
         f.write("\n".join(sm) + "\n")
-    idx = ['<?xml version="1.0" encoding="UTF-8"?>', '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-           f"  <sitemap><loc>{SITE}sitemap.xml</loc></sitemap>",
-           f"  <sitemap><loc>{SITE}sitemap-buildings.xml</loc><lastmod>{lm}</lastmod></sitemap>", "</sitemapindex>"]
-    with open(os.path.join(DOCS, "sitemap-index.xml"), "w") as f:
-        f.write("\n".join(idx) + "\n")
+    update_sitemap_index(lm)
     print(f"rendered {len(bs)} building pages, {len(hood_pages)} neighborhood pages, {len(boro_counts)} borough pages", file=sys.stderr)
+
+
+def update_sitemap_index(lm):
+    """Update only this generator's entry in sitemap-index.xml (it used to rewrite
+    the whole file, which dropped the eats and names sitemaps)."""
+    path = os.path.join(DOCS, "sitemap-index.xml")
+    loc = f"{SITE}sitemap-buildings.xml"
+    entry = f"  <sitemap><loc>{loc}</loc><lastmod>{lm}</lastmod></sitemap>\n"
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+    else:
+        text = ('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                f"  <sitemap><loc>{SITE}sitemap.xml</loc></sitemap>\n</sitemapindex>\n")
+    if loc in text:
+        text = re.sub(r"  <sitemap><loc>" + re.escape(loc) + r"</loc>.*?</sitemap>\n", lambda m: entry, text)
+    else:
+        text = text.replace("</sitemapindex>", entry + "</sitemapindex>")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
 
 
 def main():

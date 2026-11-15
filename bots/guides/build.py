@@ -53,6 +53,19 @@ def howto_ld(g):
     return json.dumps(ld, indent=1, ensure_ascii=False).replace("</", "<\\/")
 
 
+def more_guides(g):
+    """Links to the other guides, same app first (SEO audit Nov 15: guides linked
+    to no other guide)."""
+    others = [x for x in GUIDES if x is not g]
+    others.sort(key=lambda x: x["app"] != g["app"])
+    items = "\n".join(f'    <li><a href="{x["slug"]}"><b>{x["h1"]}</b></a></li>' for x in others)
+    return f"""
+  <h2 id="more">More guides</h2>
+  <ul class="guide-list">
+{items}
+  </ul>"""
+
+
 def page(g):
     canonical = BASE + "guides/" + g["slug"]
     e = html.escape
@@ -106,6 +119,7 @@ def page(g):
   <ul class="sources">
 {srcs}
   </ul>
+{more_guides(g)}
   </main>
   <footer>
     <p><b>{g["disclaimer"]}</b> This is an independent guide written by Lantern Lab. Product names are trademarks of their owners and are used only to describe how to use their own features.</p>

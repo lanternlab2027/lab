@@ -56,6 +56,8 @@ function head({ title, desc, canonical, extra = '' }) {
 <body>
 <div class="wrap">`;
 }
+const crumbLd = (items) => `\n<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: items.map(([name, item], i) => ({ '@type': 'ListItem', position: i + 1, name, item })) })}</script>`;
 const FOOT = `
 <footer>
 <p><a href="../../">A Lantern Lab project</a> &middot; <a href="../../apps/">More free apps &rarr;</a> &middot; <a href="../">Baby Name Report Card</a> &middot; <a href="./">All names A&ndash;Z</a></p>
@@ -105,7 +107,8 @@ function splitText(rep) {
 function page(rep) {
   const n = rep.name, p = rep.sexes[rep.primary], w = S.SEX_WORD[rep.primary], L = meta.latest;
   const rankBit = p.rank ? `#${fmt(p.rank)} for ${w} in ${L}` : `${fmt(rep.latestCount)} babies in ${L}`;
-  const title = `${n}: Name Popularity, ${rankBit.replace(/^#/, 'Rank #')}, Peak ${rep.peak.year}`;
+  let title = `${n}: Name Popularity, ${rankBit.replace(/^#/, 'Rank #')}, Peak ${rep.peak.year}`;
+  if (title.length > 65) title = `${n}: Name Popularity, ${rankBit.replace(/^#/, 'Rank #')}`; // SEO audit Nov 15: <= 65 chars
   const summary = S.summary(rep);
   const desc = `${summary.split('. ').slice(0, 2).join('. ').replace(/\.?$/, '.')} Trend: ${rep.trend.label.toLowerCase()}. Chart since ${meta.first} from Social Security data.`;
   const series = S.seriesFor(rep, COLORS);
@@ -160,6 +163,13 @@ ${neighbors(rep)}
 }
 
 // ---------- write pages ----------
+// Sitemap lastmod = the date a page's HTML last changed, not the build date (SEO audit
+// Nov 15), so a rebuild with unchanged data doesn't mark all 1,945 URLs as modified.
+const oldHtml = new Map(), oldLastmod = new Map();
+if (fs.existsSync(OUT)) for (const f of fs.readdirSync(OUT)) if (f.endsWith('.html')) oldHtml.set(f, fs.readFileSync(path.join(OUT, f), 'utf8'));
+const smPath = path.join(DOCS, 'sitemap-names.xml');
+if (fs.existsSync(smPath)) for (const m of fs.readFileSync(smPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod>/g)) oldLastmod.set(m[1], m[2]);
+const lastmodFor = (url, file) => (oldLastmod.has(url) && oldHtml.get(file) === fs.readFileSync(path.join(OUT, file), 'utf8') ? oldLastmod.get(url) : TODAY);
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 let bytes = 0, count = 0;
@@ -180,7 +190,8 @@ for (const l of letters) {
   const html = head({
     title: `Baby Names Starting With ${l}: ${list.length} Popular ${l} Names (${meta.latest} Rankings)`,
     desc: `${list.length} of the top U.S. baby names of ${meta.latest} start with ${l}. ${topHere} leads with ${fmt(reports.get(topHere).latestCount)} babies. Rank, trend and popularity since ${meta.first} for each.`,
-    canonical: `${BASE}names/n/${l.toLowerCase()}.html`
+    canonical: `${BASE}names/n/${l.toLowerCase()}.html`,
+    extra: crumbLd([['Baby Name Report Card', BASE + 'names/'], ['A–Z', BASE + 'names/n/'], [l, `${BASE}names/n/${l.toLowerCase()}.html`]])
   }) + `
 <p class="crumbs"><a href="../">Baby Name Report Card</a> &rsaquo; <a href="./">A&ndash;Z</a> &rsaquo; ${l}</p>
 <h1>Names starting with ${l}</h1>
@@ -196,7 +207,8 @@ const topList = (s) => top[s].slice(0, 100).map((n, i) => `<li><a href="${href(n
 const idx = head({
   title: `Top Baby Names of ${meta.latest}: All ${names.length.toLocaleString('en-US')} Name Report Cards A–Z`,
   desc: `Popularity report cards for the ${names.length.toLocaleString('en-US')} names in SSA's ${meta.latest} top 1,000 for girls and boys: rank, peak year, trend and a chart since ${meta.first}. Browse A to Z.`,
-  canonical: `${BASE}names/n/`
+  canonical: `${BASE}names/n/`,
+  extra: crumbLd([['Baby Name Report Card', BASE + 'names/'], ['A–Z', BASE + 'names/n/']])
 }) + `
 <p class="crumbs"><a href="../">Baby Name Report Card</a> &rsaquo; A&ndash;Z</p>
 <h1>Every top name, A to Z</h1>
@@ -211,10 +223,13 @@ fs.writeFileSync(path.join(OUT, 'index.html'), idx); bytes += idx.length;
 
 // ---------- sitemap ----------
 const urls = [`${BASE}names/n/`, ...letters.map((l) => `${BASE}names/n/${l.toLowerCase()}.html`), ...names.map((n) => `${BASE}names/n/${href(n)}`)];
-fs.writeFileSync(path.join(DOCS, 'sitemap-names.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`);
+const fileFor = (u) => { const r = u.slice((BASE + 'names/n/').length); return r === '' ? 'index.html' : r; };
+const mods = urls.map((u) => lastmodFor(u, fileFor(u)));
+const newest = mods.reduce((a, b) => (b > a ? b : a), '');
+fs.writeFileSync(smPath, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u, i) => `  <url><loc>${u}</loc><lastmod>${mods[i]}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 const si = path.join(DOCS, 'sitemap-index.xml');
 let six = fs.readFileSync(si, 'utf8');
-const entry = `  <sitemap><loc>${BASE}sitemap-names.xml</loc><lastmod>${TODAY}</lastmod></sitemap>\n`;
+const entry = `  <sitemap><loc>${BASE}sitemap-names.xml</loc><lastmod>${newest}</lastmod></sitemap>\n`;
 if (six.includes('sitemap-names.xml')) six = six.replace(/  <sitemap><loc>[^<]*sitemap-names\.xml<\/loc>.*\n/, entry);
 else six = six.replace('</sitemapindex>', entry + '</sitemapindex>');
 fs.writeFileSync(si, six);

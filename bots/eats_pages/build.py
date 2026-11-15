@@ -460,7 +460,25 @@ def inspection_html(i):
     return "".join(out)
 
 
-def restaurant_page(camis, c, asof, stale, neighbors, cuisine_pages, in_data=True):
+def restaurant_title(idn, disambig=None):
+    """Longest of the title forms that fits in 65 characters (SEO audit Nov 15:
+    the single long form ran to 110). The address stays in every form, because it
+    tells chain locations apart, and the borough is dropped only as a last resort. `disambig` (the cuisine, or the permit number) is
+    added only when two listed restaurants would otherwise share a title."""
+    name = idn["name"] or "Restaurant"
+    boro = idn.get("boro") or ""
+    addr = idn.get("address") or boro
+    tail = f", {boro}" if boro and addr != boro else ""
+    forms = [f"{name} Health Grade and Inspections, {addr}{tail}",
+             f"{name} Health Grade, {addr}{tail}",
+             f"{name} Health Grade, {addr}"]
+    title = next((t for t in forms if len(t) <= 65), forms[-1])
+    if disambig:
+        title += f" ({disambig})"
+    return title
+
+
+def restaurant_page(camis, c, asof, stale, neighbors, cuisine_pages, in_data=True, disambig=None, more=None):
     idn = c["id"]
     name = idn["name"] or "Restaurant"
     boro = idn.get("boro") or ""
@@ -475,8 +493,9 @@ def restaurant_page(camis, c, asof, stale, neighbors, cuisine_pages, in_data=Tru
     crumbs.append((name, canonical))
     rel.append(None)
 
-    addr_short = idn.get("address") or boro
-    title = f"{name} Health Grade and Inspections, {addr_short}" + (f", {boro}" if boro and addr_short != boro else "")
+    title = restaurant_title(idn, disambig)
+    if disambig:  # keep the description unique too
+        place = f"{place} ({disambig})"
     if stale:
         desc = (f"{name}, {place}: closed or no recent inspection. Last NYC health inspection on record {fmt(c['latestDate'])}; "
                 f"its last grade and inspections, from DOHMH data as of {fmt(asof)}.")
@@ -536,6 +555,13 @@ def restaurant_page(camis, c, asof, stale, neighbors, cuisine_pages, in_data=Tru
         p.append(f"<h2>Also in ZIP {esc(idn.get('zip'))}</h2>\n<ul class=\"list\">\n")
         for ncamis, nc in neighbors:
             p.append(f"<li><a href=\"{ncamis}.html\">{esc(nc['id']['name'])}</a><span>{esc(nc['id'].get('address'))}</span></li>\n")
+        p.append("</ul>\n")
+    if more:
+        label, items = more
+        p.append(f"<h2>More {esc(label)}</h2>\n<ul class=\"list\">\n")
+        for ncamis, nc in items:
+            sub = ", ".join(x for x in [nc['id'].get('address'), nc['id'].get('zip')] if x)
+            p.append(f"<li><a href=\"{ncamis}.html\">{esc(nc['id']['name'])}</a><span>{esc(sub)}</span></li>\n")
         p.append("</ul>\n")
     p.append("</main>\n")
     p.append(footer("../", "../../", asof))
@@ -626,10 +652,47 @@ def render():
 
     os.makedirs(OUT, exist_ok=True)
     write(os.path.join(OUT, "r.css"), CSS)
+    # Titles that would collide (e.g. two counters of one chain at one airport address)
+    # get the cuisine, or failing that the permit number, appended.
+    tcount = collections.Counter(restaurant_title(c["id"]) for c in data.values())
+    disambig = {}
+    for camis, c in data.items():
+        t = restaurant_title(c["id"])
+        if tcount[t] > 1:
+            same = [k for k, v in data.items() if restaurant_title(v["id"]) == t]
+            cus = [data[k]["id"].get("cuisine") or "" for k in same]
+            cu = c["id"].get("cuisine") or ""
+            disambig[camis] = cu if cu and cus.count(cu) == 1 else f"permit {camis}"
+
+    def rotate(items, camis, n):
+        """The n entries after this restaurant in alphabetical order, wrapping, so
+        related links spread across the list instead of always naming the same
+        alphabetically-first places (SEO audit Nov 15)."""
+        items = sorted(items, key=name_key)
+        i = next((j for j, x in enumerate(items) if x[0] == camis), -1)
+        out = [x for x in items[i + 1:] + items[:max(i, 0)] if x[0] != camis]
+        return out[:n]
+
     for camis, c in data.items():
         z = c["id"].get("zip")
-        nb = sorted([x for x in by_zip.get(z, []) if x[0] != camis], key=name_key)[:6] if z else []
-        write(os.path.join(OUT, f"{camis}.html"), restaurant_page(camis, c, asof, camis in stale, nb, cuisine_pages, camis in fresh))
+        b = c["id"].get("boro")
+        nb = rotate(by_zip.get(z, []), camis, 6) if z else []
+        more = None
+        if len(nb) < 3:  # fill to 3 with the same cuisine in the same borough, then the same borough
+            cs = slug(c["id"].get("cuisine") or "")
+            seen = {camis} | {x[0] for x in nb}
+            pool = [x for x in by_cuisine.get(cs, []) if x[1]["id"].get("boro") == b and x[0] not in seen]
+            label = f"{cuisine_label[cs]} restaurants in {BORO_IN.get(b, b)}" if pool and cs in cuisine_label else None
+            fill = rotate(pool + [(camis, c)], camis, 3 - len(nb))
+            if len(fill) < 3 - len(nb):
+                seen |= {x[0] for x in fill}
+                rest = [x for x in by_boro.get(b, []) if x[0] not in seen]
+                fill += rotate(rest + [(camis, c)], camis, 3 - len(nb) - len(fill))
+                label = f"restaurants in {BORO_IN.get(b, b)}"
+            if fill:
+                more = (label or f"restaurants in {BORO_IN.get(b, b)}", fill)
+        write(os.path.join(OUT, f"{camis}.html"), restaurant_page(camis, c, asof, camis in stale, nb, cuisine_pages, camis in fresh,
+                                                                  disambig.get(camis), more))
 
     total = len(data)
     pages = []  # (url, path)
