@@ -36,7 +36,7 @@ const APPS = ['wrapped', 'reading', 'netflix', 'sport', 'dating', 'awards', 'san
     const broken = await pg.evaluate(() => [...document.images].filter(i => !i.naturalWidth).map(i => i.src));
     ok(broken.length === 0, `${w}px: all images load ${broken.join(' ')}`);
     const cards = await pg.$$eval('.card', cs => cs.map(c => ({ h: c.querySelector('h3').textContent, img: !!c.querySelector('img'), p: !!c.querySelector('p'), href: c.querySelector('a.try').getAttribute('href'), txt: c.querySelector('a.try').textContent })));
-    ok(cards.length === 16 && cards.every(c => c.img && c.p && /Try it/.test(c.txt)), `${w}px: 16 cards each with thumbnail, line and Try it`);
+    ok(cards.length === 17 && cards.every(c => c.img && c.p && /Try it/.test(c.txt)), `${w}px: 17 cards each with thumbnail, line and Try it`);
     ok(APPS.every(a => cards.some(c => c.href === '../' + a + '/')), `${w}px: every app linked`);
     for (const id of ['wrapped', 'games', 'tools', 'holidays', 'data', 'signup']) ok(await pg.$('#' + id), `${w}px: section #${id}`);
     ok(await pg.$eval('link[rel=canonical]', l => l.href) === 'https://lanternlab2027.github.io/lab/apps/', `${w}px: canonical`);

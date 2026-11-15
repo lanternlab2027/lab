@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Couples Chat Wrapped: Our Year in Texts (WhatsApp Chat Stats for Couples)</title>
+<meta name="description" content="Couples Chat Wrapped turns your 1:1 WhatsApp or Telegram chat into an &ldquo;our year in texts&rdquo; Valentine's deck: who says good morning first, reply speed, goodnights, I love yous, your shared emoji and longest streak. Free WhatsApp chat stats for couples, made on your device.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/couples/">
+<meta name="theme-color" content="#5a0b3c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Couples Chat Wrapped: our year in texts">
+<meta property="og:description" content="Turn your 1:1 WhatsApp or Telegram chat into a cute Valentine's deck: goodnights, I love yous, reply speed, your shared emoji. Free, and the chat never leaves your phone.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/couples/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/couples/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Couples Chat Wrapped: sample cards for a made-up couple">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Couples Chat Wrapped: our year in texts">
+<meta name="twitter:description" content="WhatsApp chat stats for couples, as shareable Valentine's cards. Free, and 100% on your device.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/couples/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Couples Chat Wrapped",
+ "alternateName": "Our Year in Texts",
+ "url": "https://lanternlab2027.github.io/lab/couples/",
+ "applicationCategory": "EntertainmentApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "WhatsApp chat stats for couples: turn a 1:1 WhatsApp or Telegram chat export into an \u201cour year in texts\u201d Valentine's card deck. Runs entirely in your browser.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #2a0620; --ink: #fff; --muted: #f3cfe0; --line: rgba(255,255,255,.18);
+    --card: rgba(255,255,255,.08); --pink: #ff4f8b; --rose: #ff8fb1; --cream: #ffe3ec; --gold: #ffe066; --mint: #9dffd0;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); background-image: radial-gradient(1100px 620px at 0% -10%, #b0124f 0%, transparent 60%), radial-gradient(900px 520px at 110% 5%, #ff6f91 0%, transparent 55%); background-repeat: no-repeat; color: var(--ink); font-family: var(--font); line-height: 1.5; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--gold); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 40px 0 16px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  h1 { font-size: clamp(42px, 11.5vw, 88px); line-height: .95; margin: 12px 0 14px; font-weight: 900; letter-spacing: -.03em; }
+  h1 .grad { background: linear-gradient(95deg, var(--cream), var(--rose) 40%, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lede { font-size: clamp(18px, 4.6vw, 22px); color: #ffe9f1; max-width: 660px; margin: 0 0 18px; }
+  .privacy { display: inline-flex; gap: 10px; align-items: center; background: rgba(157,255,208,.12); border: 1px solid rgba(157,255,208,.5); color: #dcffee; padding: 10px 14px; border-radius: 14px; font-weight: 700; }
+  .privacy svg { flex: none; }
+  .drop { margin: 22px 0 8px; border: 2px dashed rgba(255,255,255,.38); border-radius: 22px; padding: 26px 18px; text-align: center; background: var(--card); transition: border-color .15s, background .15s; }
+  .drop.over { border-color: var(--gold); background: rgba(255,224,102,.08); }
+  .drop p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+  .btn { appearance: none; border: 0; border-radius: 999px; font: 800 17px/1 var(--font); padding: 16px 24px; cursor: pointer; color: #3a0420; background: linear-gradient(95deg, var(--cream), var(--rose) 50%, var(--pink)); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label.upload:focus-within { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid rgba(255,255,255,.42); }
+  .btn.small { padding: 10px 16px; font-size: 15px; min-height: 44px; }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  label.upload { display: inline-flex; }
+  label.upload input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .linkbtn { background: none; border: 0; color: var(--gold); font: 700 16px var(--font); text-decoration: underline; cursor: pointer; padding: 12px 6px; min-height: 44px; }
+  .status { min-height: 1.5em; margin: 10px 0 0; color: #dcffee; font-weight: 600; }
+  .status.err { color: #ffc2d4; }
+  .notice { margin: 14px 0; padding: 18px; border-radius: 18px; background: rgba(255,224,102,.12); border: 1px solid rgba(255,224,102,.55); }
+  .notice h3 { margin: 0 0 6px; }
+  .notice p { margin: 6px 0; }
+  section { margin: 44px 0; }
+  h2 { font-size: clamp(26px, 6vw, 36px); margin: 0 0 12px; letter-spacing: -.02em; line-height: 1.1; }
+  h3 { margin: 0 0 6px; font-size: 19px; }
+  .controls { display: grid; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin: 14px 0 18px; }
+  .controls label.field { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+  .controls input[type=text], .controls select, form.signup input { font: 600 16px var(--font); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.3); background: rgba(0,0,0,.25); color: var(--ink); min-height: 48px; width: 100%; }
+  select option { color: #111; }
+  fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+  legend { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+  .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+  .seg label { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); cursor: pointer; font-weight: 700; font-size: 15px; min-height: 44px; }
+  .seg input { accent-color: var(--pink); width: 18px; height: 18px; margin: 0; }
+  .seg label:has(input:checked) { background: rgba(255,255,255,.16); border-color: var(--gold); }
+  .nicks { display: grid; gap: 10px; margin-top: 10px; }
+  @media (min-width: 560px) { .nicks { grid-template-columns: 1fr 1fr; } }
+  .deckbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 0 0 12px; }
+  .deckbar .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+  .card { margin: 0; scroll-snap-align: center; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 18px; display: block; box-shadow: 0 18px 40px rgba(0,0,0,.4); background: #3a0420; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .peek { display: block; position: relative; width: 100%; margin: 18px 0 0; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 18px; overflow: hidden; }
+  .peek img { display: block; width: 100%; height: 210px; object-fit: cover; object-position: center top; }
+  .peek span { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 12px 12px; background: linear-gradient(transparent, rgba(42,6,32,.92)); color: var(--ink); font: 800 16px var(--font); text-align: center; }
+  .peek:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  @media (min-width: 760px) { .peek { max-width: 520px; } .peek img { height: 300px; } }
+  .pass { display: grid; gap: 10px; margin-top: 18px; }
+  .pass .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pass-text { margin: 0; padding: 10px 12px; border-radius: 12px; background: rgba(0,0,0,.25); font-size: 15px; word-break: break-word; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 16px 18px; font-weight: 800; font-size: 18px; min-height: 48px; }
+  details > div { padding: 0 18px 16px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin: 6px 0; }
+  .grid2 { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } .controls { grid-template-columns: 1fr 1fr; } .controls .wide { grid-column: 1 / -1; } }
+  ul.facts { margin: 8px 0 0; padding-left: 20px; }
+  ul.facts li { margin: 4px 0; }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; }
+  .small-print { color: var(--muted); font-size: 14px; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  footer p { margin: 6px 0; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="brand">A Lantern Lab project</div>
+    <h1>Couples Chat <span class="grad">Wrapped</span></h1>
+    <p class="lede">Your year in texts, as a deck of Valentine's cards. Who says good morning first, how fast you each reply, how many goodnights and I love yous, your shared emoji and your longest streak. Free, no sign-up, for 1:1 WhatsApp and Telegram chats.</p>
+    <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your chat never leaves your device. Cards show numbers, never messages.</span></div>
+
+    <div class="drop" id="drop">
+      <label class="upload btn" for="file">Choose your chat export
+        <input id="file" type="file" accept=".txt,.zip,.json,text/plain,application/zip,application/json">
+      </label>
+      <p>WhatsApp <b>.txt</b> or <b>.zip</b>, or Telegram <b>result.json</b>, from a chat between two people. You can also drag the file here.</p>
+      <button type="button" class="btn ghost small" id="sample">See a sample deck first</button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <div class="notice" id="group-msg" hidden role="alert">
+      <h3>That looks like a group chat</h3>
+      <p>We found <b id="group-count"></b> people talking. Couples Chat Wrapped is made for 1:1 chats between two people, so export the chat with just your partner (or best friend) and try again.</p>
+      <p>Want cards for the whole group instead? <a href="../wrapped/" data-ref>Try Group Chat Wrapped &rarr;</a></p>
+    </div>
+    <p class="hint">Getting the file takes about 30 seconds: in WhatsApp, open your chat, tap their name, then <b>Export chat &rarr; Without media</b>. <a href="#export">Step-by-step for iPhone, Android and Telegram</a>.</p>
+    <button type="button" class="peek" id="peek" aria-label="See a sample deck"><img src="preview.jpg" width="720" height="464" alt="Sample cards for a made-up couple: the text count, goodnights and the summary"><span>Tap to see a sample deck</span></button>
+  </header>
+
+  <section id="results" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Your cards</h2>
+    <div class="deckbar">
+      <b id="deck-count"></b>
+      <div class="acts">
+        <button type="button" class="btn small" id="share-all">Share all</button>
+        <button type="button" class="btn small ghost" id="zip-all">Download all (.zip)</button>
+        <button type="button" class="btn small ghost" id="reset">Start over</button>
+      </div>
+    </div>
+    <p class="hint">Swipe through the cards (1080&times;1920, sized for stories). Names show as initials until you change them: <a href="#controls">adjust names and period</a>.</p>
+    <div id="deck"></div>
+
+    <div class="controls" id="controls">
+      <h3 class="wide" style="margin:0">Adjust the cards</h3>
+      <fieldset class="wide">
+        <legend>Names on the cards</legend>
+        <div class="seg">
+          <label><input type="radio" name="names" value="initials" checked> Initials</label>
+          <label><input type="radio" name="names" value="first"> First names</label>
+          <label><input type="radio" name="names" value="nick"> Nicknames</label>
+        </div>
+        <div class="nicks" id="nicks" hidden>
+          <label class="field"><span id="nick-a-label">Nickname 1</span><input type="text" id="nick-a" maxlength="24" autocomplete="off" placeholder="e.g. Bean"></label>
+          <label class="field"><span id="nick-b-label">Nickname 2</span><input type="text" id="nick-b" maxlength="24" autocomplete="off" placeholder="e.g. Sunshine"></label>
+        </div>
+      </fieldset>
+      <label class="field">Period
+        <select id="period"></select>
+      </label>
+      <p class="small-print" style="margin:0;align-self:end">Your nicknames stay in this tab. They aren't saved or sent anywhere.</p>
+    </div>
+
+    <div class="panel pass" id="pass">
+      <h3>Pass it on</h3>
+      <p class="small-print" style="margin:0">Posting your cards? Add this so friends can make their own:</p>
+      <p class="pass-text" id="pass-text"></p>
+      <div class="acts"><button type="button" class="btn small" id="pass-share">Share the link</button><button type="button" class="btn small ghost" id="pass-copy">Copy text + link</button></div>
+      <p class="small-print" id="pass-msg" role="status" aria-live="polite" style="margin:0"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="what-h">
+    <h2 id="what-h">What's in the deck</h2>
+    <div class="panel">
+      <ul class="facts">
+        <li>Messages each, and who sends the first text of the morning</li>
+        <li>Typical reply time for each of you (the median, ignoring gaps over 12 hours)</li>
+        <li>How many goodnights (goodnight, gn, buenas noches, bonne nuit, gute Nacht, boa noite, buonanotte&hellip;)</li>
+        <li>Your most-used emojis, and the one you both use most</li>
+        <li>Your longest daily streak and your busiest day</li>
+        <li>How much of your texting happens after 11 PM</li>
+        <li>I love yous, in English, Spanish, French, German, Portuguese or Italian</li>
+        <li>The date of the first message in your file, and a summary card</li>
+      </ul>
+      <p class="small-print">Fun facts, not a score. Nothing here rates your relationship, and the cards never show what anyone wrote.</p>
+    </div>
+  </section>
+
+  <section id="export" aria-labelledby="export-h">
+    <h2 id="export-h">How to export your chat</h2>
+    <p>Export the 1:1 chat <b>without media</b>. It's faster, and the cards only need the text.</p>
+    <details open>
+      <summary>WhatsApp on iPhone</summary>
+      <div><ol class="steps">
+        <li>Open WhatsApp and go into the chat with your partner.</li>
+        <li>Tap <b>their name</b> at the top of the screen.</li>
+        <li>Scroll down and tap <b>Export chat</b>.</li>
+        <li>Choose <b>Without media</b>.</li>
+        <li>Pick <b>Save to Files</b>, then come back here, tap <b>Choose your chat export</b> and pick the <b>.zip</b> file.</li>
+      </ol>
+      <p class="small-print">More detail and troubleshooting: <a href="../guides/how-to-export-whatsapp-chat.html">How to export a WhatsApp chat</a>.</p></div>
+    </details>
+    <details>
+      <summary>WhatsApp on Android</summary>
+      <div><ol class="steps">
+        <li>Open WhatsApp and go into the chat with your partner.</li>
+        <li>Tap the <b>&#8942;</b> menu (three dots, top right).</li>
+        <li>Tap <b>More</b>, then <b>Export chat</b>.</li>
+        <li>Choose <b>Without media</b>.</li>
+        <li>Save it to your phone (for example to <b>Drive</b> or <b>Files</b>), then upload the <b>.txt</b> or <b>.zip</b> here.</li>
+      </ol>
+      <p class="small-print">Full guide: <a href="../guides/how-to-export-whatsapp-chat.html">How to export a WhatsApp chat</a>.</p></div>
+    </details>
+    <details>
+      <summary>Telegram (Desktop app)</summary>
+      <div><ol class="steps">
+        <li>Telegram's phone apps can't export chats, so use Telegram Desktop on a computer.</li>
+        <li>Open the chat with your partner, click the <b>&#8942;</b> menu, then <b>Export chat history</b>.</li>
+        <li>Untick photos, videos and files. Set <b>Format</b> to <b>Machine-readable JSON</b>.</li>
+        <li>Click <b>Export</b>, then upload the <b>result.json</b> file from the export folder.</li>
+      </ol>
+      <p class="small-print">Full guide: <a href="../guides/how-to-export-telegram-chat-history.html">How to export Telegram chat history</a>.</p></div>
+    </details>
+    <details>
+      <summary>iMessage or Instagram?</summary>
+      <div><p>iPhone can't export an iMessage conversation as a file, so iMessage isn't supported. Instagram DMs aren't supported yet either. WhatsApp and Telegram both have a built-in export, which is what this page reads.</p></div>
+    </details>
+  </section>
+
+  <section id="how-we-know" aria-labelledby="hwk-h">
+    <h2 id="hwk-h">Your chat never leaves your device. How we know:</h2>
+    <div class="grid2">
+      <div class="panel"><h3>There's no server to send it to</h3><p>This page is plain files on GitHub Pages. Your export is read, counted and drawn into cards by JavaScript running in this browser tab. Close the tab and it's gone.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only lets it talk to one outside address: the optional email signup, which sends just your email. No analytics, no trackers, no third-party scripts, no web fonts.</p></div>
+      <div class="panel"><h3>Numbers, not messages</h3><p>The cards only show counts, dates and the names you choose (initials by default). Words like &ldquo;goodnight&rdquo; are counted, but no message is ever shown.</p></div>
+      <div class="panel"><h3>Open source, and works offline</h3><p>Every line is on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/couples" rel="noopener">GitHub</a>. Load this page, turn on airplane mode, then upload your chat. It still works.</p></div>
+    </div>
+  </section>
+
+  <section id="notify" aria-labelledby="notify-h">
+    <div class="panel">
+      <h2 id="notify-h" style="font-size:26px">Get a reminder before Valentine's Day</h2>
+      <p class="small-print">Optional. We only send your email address. Nothing from your chat is ever included.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small-print" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Remind me</button>
+      </form>
+      <p class="small-print" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Does it say who loves who more?</summary><div><p>No, and it never will. Every card is a fun fact about the two of you. The I-love-you card shows one shared total, and nothing is ranked or graded.</p></div></details>
+    <details><summary>Can my partner's messages end up on a card?</summary><div><p>No. Cards show counts, dates and emojis only. Names show as initials by default; you can switch to first names or type your own nicknames before sharing.</p></div></details>
+    <details><summary>Can I use it for a group chat?</summary><div><p>This one is for chats between two people. For groups, use <a href="../wrapped/" data-ref>Group Chat Wrapped</a>.</p></div></details>
+    <details><summary>Is this made by WhatsApp or Telegram?</summary><div><p>No. Couples Chat Wrapped is an independent project that works with the export files those apps already let you make. It is not affiliated with or endorsed by WhatsApp, Meta or Telegram.</p></div></details>
+    <details><summary>Is it free?</summary><div><p>Yes. No sign-up, no watermark on the cards beyond a small &ldquo;Make yours&rdquo; line.</p></div></details>
+  </section>
+
+  <footer>
+    <p><a href="../">A Lantern Lab project</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/couples" rel="noopener">GitHub</a> &middot; <a href="../apps/">More free apps &rarr;</a></p>
+    <p>Also try: <a href="../wrapped/" data-ref>Group Chat Wrapped</a></p>
+    <p>Export help: <a href="../guides/how-to-export-whatsapp-chat.html">How to export a WhatsApp chat</a> &middot; <a href="../guides/how-to-export-telegram-chat-history.html">How to export Telegram chat history</a></p>
+  </footer>
+</div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="../wrapped/parser.js"></script>
+<script src="../wrapped/stats.js"></script>
+<script src="stats.js"></script>
+<script src="demo.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>

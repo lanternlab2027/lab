@@ -1,0 +1,45 @@
+{
+ "name": "Two of Us + Bot",
+ "type": "private_supergroup",
+ "id": 88,
+ "messages": [
+  {
+   "id": 1,
+   "type": "message",
+   "date": "2026-01-10T08:00:00",
+   "from": "Sam Park",
+   "from_id": "user1",
+   "text": "morning ☕"
+  },
+  {
+   "id": 2,
+   "type": "message",
+   "date": "2026-01-10T08:02:00",
+   "from": "Kai Chen",
+   "from_id": "user2",
+   "text": [
+    {
+     "type": "bold",
+     "text": "morning"
+    },
+    " ❤️"
+   ]
+  },
+  {
+   "id": 3,
+   "type": "message",
+   "date": "2026-01-10T23:15:00",
+   "from": "Kai Chen",
+   "from_id": "user2",
+   "text": "good night, love you"
+  },
+  {
+   "id": 4,
+   "type": "message",
+   "date": "2026-01-10T23:16:00",
+   "from": "Sam Park",
+   "from_id": "user1",
+   "text": "nighty night ❤️"
+  }
+ ]
+}
