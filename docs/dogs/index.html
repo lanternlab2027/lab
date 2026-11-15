@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>NYC Dog Name Report Card: Most Popular Dog Names in NYC</title>
+<meta name="description" content="How many dogs in NYC share your dog's name? Look up any name for its rank, count, top breeds, boroughs and ZIPs, and dog name popularity since 2015, from the city's dog license data. Free share card.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/dogs/">
+<meta name="theme-color" content="#1f4d3f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="How many NYC dogs share your dog's name?">
+<meta property="og:description" content="Rank, count, top breeds and boroughs for any dog name in New York City, from the city's dog license data. Make a share card.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/dogs/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/dogs/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NYC Dog Name Report Card: a sample dog name's count and trend">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How many NYC dogs share your dog's name?">
+<meta name="twitter:description" content="Rank, count, top breeds and boroughs for any NYC dog name, from city license data. Free.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/dogs/og.png">
+<link rel="stylesheet" href="dogs.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "NYC Dog Name Report Card",
+ "url": "https://lanternlab2027.github.io/lab/dogs/",
+ "applicationCategory": "ReferenceApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Dog name popularity in New York City: rank, count, top breeds, boroughs and trend for any name, from NYC Department of Health dog licensing data.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <a class="brand" href="../">Lantern Lab</a>
+    <h1>NYC Dog Name <em>Report Card</em></h1>
+    <p class="lede">Type your dog's name. See how many licensed dogs in New York City share it, where it ranks, which breeds and boroughs have the most, and whether it's catching on. From <span class="dogs-n">332,539</span> dogs licensed since <span class="first">2014</span>.</p>
+  </header>
+
+  <section class="sheet" aria-label="Look up a dog name">
+    <form class="search" id="search" autocomplete="off">
+      <div class="row">
+        <div><label for="q">Dog's name</label><input type="text" id="q" name="q" list="suggest" placeholder="e.g. Luna" maxlength="30" autocapitalize="words" spellcheck="false" required></div>
+        <button class="btn" type="submit">Get report card</button>
+      </div>
+    </form>
+    <datalist id="suggest"></datalist>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <p class="small quick" id="quick">Most common: <a href="?n=Bella" data-name="Bella">Bella</a>, <a href="?n=Luna" data-name="Luna">Luna</a>, <a href="?n=Max" data-name="Max">Max</a>, <a href="?n=Charlie" data-name="Charlie">Charlie</a>, <a href="?n=Coco" data-name="Coco">Coco</a> &middot; <a href="n/">Top 100 &amp; A&ndash;Z</a> &middot; <a href="n/breeds.html">By breed</a> &middot; <a href="n/boroughs.html">By borough</a></p>
+  </section>
+
+  <div id="result" hidden></div>
+
+  <section id="share" hidden aria-labelledby="share-h">
+    <h2 id="share-h">Share the card</h2>
+    <div class="sheet cardwrap">
+      <canvas id="card" width="1080" height="1350" aria-label="Shareable dog name card image"></canvas>
+      <div class="actions">
+        <button class="btn" type="button" id="card-share">Share image</button>
+        <button class="btn alt" type="button" id="card-save">Save PNG</button>
+        <button class="btn alt" type="button" id="card-copy">Copy link + text</button>
+      </div>
+      <p class="pass" id="pass-text"></p>
+      <p class="small" id="pass-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="how-h">
+    <h2 id="how-h">How the report card works</h2>
+    <details><summary>Where do the numbers come from?</summary><div><p>From the NYC Department of Health and Mental Hygiene's dog licensing data, published on NYC Open Data (the "NYC Dog Licensing Dataset"). It lists every active dog license in each yearly extract: the dog's name, sex, birth year, breed and the owner's ZIP code, with no owner names or addresses. Licenses here were issued from <span class="first">2014</span> to <span class="latest">2025</span>.</p><p><b>Licensed dogs only, not all dogs.</b> Many NYC dogs are never licensed, so these counts undercount every name. Treat a rank as "most common among licensed dogs", not "most popular".</p></div></details>
+    <details><summary>How are dogs counted once?</summary><div><p>A dog can appear many times: once for each license, and again in every yearly extract that still lists that license. We count one dog per unique <b>name + birth year + breed + ZIP code</b>. Two different dogs that match on all four are counted once, and a dog that moved ZIP codes or whose breed was typed differently on renewal is counted twice. Placeholder names such as "Unknown", "Name not provided", "N/A" and "None" are dropped.</p></div></details>
+    <details><summary>What do the trend and the chart show?</summary><div><p>The chart shows how many dogs per 10,000 licensed that year got a license with this name, by year the license was issued (<span class="y0">2015</span>&ndash;<span class="latest">2025</span>; 2014 starts in September, so it's left out). Using a share, not a raw count, matters because the city's yearly extracts don't capture every year equally.</p><p><b>Rising:</b> the last three years' share is 25%+ above the first three. <b>Fading:</b> 20%+ below. <b>Newcomer:</b> absent from the first three years. Otherwise <b>Steady</b>.</p></div></details>
+    <details><summary>Why can't I find my dog's name?</summary><div><p>To protect owners' privacy, a name needs at least 5 licensed dogs to show up, and any breed, borough or ZIP code with fewer than 5 dogs of that name is hidden. Static name pages need 20+ dogs. Names are matched ignoring case, spaces, hyphens and periods ("Jay-Jay" = "Jay Jay").</p></div></details>
+    <details><summary>Does this track me?</summary><div><p>No. No analytics, no cookies, no third-party scripts or fonts. Lookups load small data files from this site.</p></div></details>
+  </section>
+
+  <section id="signup" aria-labelledby="signup-h" hidden>
+    <h2 id="signup-h">Get next year's names</h2>
+    <div class="sheet">
+      <p style="margin:0">The city updates its dog license data about once a year. Get one email when the new numbers are in.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Email me</button>
+      </form>
+      <p class="small" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="../">A Lantern Lab project</a> &middot; <a href="../apps/">More free apps &rarr;</a> &middot; <a href="n/">Top dog names A&ndash;Z</a> &middot; <a href="n/breeds.html">By breed</a> &middot; <a href="../names/">Baby Name Report Card</a></p>
+    <p id="data-note">Data: NYC Department of Health dog licensing data via NYC Open Data; licensed dogs only, not all dogs. Not affiliated with the City of New York.</p>
+  </footer>
+</div>
+<script src="stats.js"></script>
+<script src="card.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>

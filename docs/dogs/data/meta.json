@@ -1,0 +1,51 @@
+{
+ "source": "NYC Dog Licensing Dataset (nu7n-tubp), NYC Open Data",
+ "dataset": "nu7n-tubp",
+ "rowsUpdated": "2026-07-15",
+ "fetched": "2026-11-15",
+ "firstIssue": 2014,
+ "years": [
+  2015,
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "yearTotals": [
+  32236,
+  73910,
+  71343,
+  67747,
+  67242,
+  63410,
+  64227,
+  37520,
+  49874,
+  48631,
+  43661
+ ],
+ "latest": 2025,
+ "rows": 819323,
+ "junkRows": 40848,
+ "dogs": 332539,
+ "distinctNames": 34420,
+ "lookupNames": 6397,
+ "pageNames": 1500,
+ "boroTotals": {
+  "M": 114763,
+  "B": 37305,
+  "K": 90769,
+  "Q": 64465,
+  "S": 23473
+ },
+ "minLookup": 5,
+ "minCell": 5,
+ "minPage": 20,
+ "shards": "a b c d e f g h i j k l m n o p q r s t u v w x y z"
+}
