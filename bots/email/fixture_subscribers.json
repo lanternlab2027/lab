@@ -1,0 +1,55 @@
+{
+ "_comment": "Test-only subscribers for welcome.py / reminders.py --fixture. Fake example.com addresses, fake tag ids.",
+ "tags": {
+  "building-watch": 101, "snow-day": 102, "fantasy-awards": 103, "fdny-cof": 104, "secret-santa": 105,
+  "scroll-wrapped": 106, "goal-bingo": 107, "etsy-year": 108, "mileage-log": 109, "year-in-orders": 110,
+  "bracket-2027": 111, "couples-wrapped": 112, "nyc-then": 113, "house-history": 114, "nyc-food-es": 115
+ },
+ "subscribers": {
+  "building-watch": [
+   {"id": 900001, "email": "owner-a@example.com", "tagged_at": "2026-11-15T18:00:00Z", "fields": {"building_address": "289 Garfield Pl, Brooklyn"}},
+   {"id": 900009, "email": "old@example.com", "tagged_at": "2026-11-01T10:00:00Z", "fields": {"building_address": "1 Old St"}}
+  ],
+  "snow-day": [
+   {"id": 900001, "email": "owner-a@example.com", "tagged_at": "2026-11-15T18:05:00Z", "fields": {"snow_zip": "11215"}},
+   {"id": 900002, "email": "no-zip@example.com", "tagged_at": "2026-11-15T20:00:00Z", "fields": {"snow_zip": ""}}
+  ],
+  "fantasy-awards": [
+   {"id": 900003, "email": "sample-league@example.com", "tagged_at": "2026-11-15T21:00:00Z", "fields": {"league_id": ""}}
+  ],
+  "fdny-cof": [
+   {"id": 900004, "email": "cof@example.com", "tagged_at": "2026-11-15T22:00:00Z", "fields": {"exam_code": "F-01", "building_address": "12 Real Address Ave"}}
+  ],
+  "secret-santa": [
+   {"id": 900005, "email": "santa-dated@example.com", "tagged_at": "2026-11-15T12:00:00Z", "fields": {"santa_exchange_date": "2026-12-19"}},
+   {"id": 900006, "email": "santa-nodate@example.com", "tagged_at": "2026-11-15T12:30:00Z", "fields": {"santa_exchange_date": ""}}
+  ],
+  "scroll-wrapped": [
+   {"id": 900007, "email": "scroller@example.com", "tagged_at": "2026-11-15T13:00:00Z", "fields": {}},
+   {"id": 900010, "email": "test@example.com", "tagged_at": "2026-11-15T13:30:00Z", "fields": {}}
+  ],
+  "goal-bingo": [
+   {"id": 900008, "email": "bingo@example.com", "tagged_at": "2026-11-15T14:00:00Z", "fields": {}}
+  ],
+  "etsy-year": [
+   {"id": 900011, "email": "seller@example.com", "tagged_at": "2026-11-15T15:00:00Z", "fields": {}}
+  ],
+  "mileage-log": [
+   {"id": 900011, "email": "seller@example.com", "tagged_at": "2026-11-15T15:01:00Z", "fields": {}}
+  ],
+  "year-in-orders": [],
+  "bracket-2027": [
+   {"id": 900012, "email": "hoops@example.com", "tagged_at": "2026-11-15T16:00:00Z", "fields": {}}
+  ],
+  "couples-wrapped": [],
+  "nyc-then": [
+   {"id": 900013, "email": "then@example.com", "tagged_at": "2026-11-15T17:00:00Z", "fields": {}}
+  ],
+  "house-history": [
+   {"id": 900014, "email": "house@example.com", "tagged_at": "2026-11-15T17:30:00Z", "fields": {"building_address": ""}}
+  ],
+  "nyc-food-es": [
+   {"id": 900015, "email": "comida@example.com", "tagged_at": "2026-11-15T19:00:00Z", "fields": {"exam_code": ""}}
+  ]
+ }
+}

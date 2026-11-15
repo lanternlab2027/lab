@@ -1,0 +1,170 @@
+{
+ "_comment": "Dated promises from the apps' signup copy. kind: 'date' (send on date, catch-up for grace_days), 'monthly' (day N of each month from..to), 'before_field' (days_before a per-subscriber date field; fallback_date if blank). Each (id, subscriber) is sent once (salted-hash state). Optional send_at (UTC) schedules the Kit broadcast later that day. Links carry ?ref=email-<tag>.",
+ "combined": {
+  "subject": "Your Lantern Lab reminders",
+  "intro": "Here are the reminders you asked us for:",
+  "outro": [
+   "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+  ]
+ },
+ "reminders": [
+  {
+   "id": "scroll-wrapped-2026",
+   "tag": "scroll-wrapped",
+   "kind": "date",
+   "date": "2026-11-30",
+   "grace_days": 3,
+   "promise": "docs/tiktok/index.html: 'One email in late November, so you remember to request your export in time.' app.js success: 'We'll email you once when Wrapped season opens, as a nudge to request your export.' Date set to Dec 1, 2026 by the lab brief.",
+   "name": "Scroll Wrapped",
+   "subject": "Wrapped season is here: request your TikTok export",
+   "body": [
+    "Wrapped season is open. This is the one reminder you asked for: request your TikTok data export now, because it can take a few days to arrive. The page has the steps.",
+    "When the export lands, drop it into Scroll Wrapped to make your cards. The messages section is thrown away the moment the file is opened, and nothing leaves your device.",
+    "Make your Scroll Wrapped: https://lanternlab2027.github.io/lab/tiktok/?ref=email-scroll-wrapped",
+    "That's the only email this list sends.\nTo stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "Wrapped season is open: request your TikTok data export now, it can take a few days.",
+   "link": "https://lanternlab2027.github.io/lab/tiktok/?ref=email-scroll-wrapped"
+  },
+  {
+   "id": "secret-santa",
+   "tag": "secret-santa",
+   "kind": "before_field",
+   "field": "santa_exchange_date",
+   "days_before": 7,
+   "fallback_date": "2026-12-25",
+   "promise": "docs/santa/index.html: 'We'll email you once, a week before your exchange.' Exchange date is optional; blank dates use the fallback (a week before Christmas 2026), which the welcome email states.",
+   "name": "Secret Santa",
+   "subject": "Your Secret Santa exchange is {when}",
+   "body": [
+    "Your Secret Santa exchange is {when}, on {exchange_long}. Here's the reminder you asked for, so there's time to shop.",
+    "Lost the draw or need a wish list? Everything is on the page: https://lanternlab2027.github.io/lab/santa/?ref=email-secret-santa",
+    "We never saw your group's names or who drew whom. That's the only email this list sends.\nTo stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "your exchange is {when}, on {exchange_long}. Time to shop.",
+   "link": "https://lanternlab2027.github.io/lab/santa/?ref=email-secret-santa",
+   "variants": {
+    "fallback": {
+     "subject": "Christmas is a week away: Secret Santa reminder",
+     "body": [
+      "You asked for a reminder a week before your Secret Santa exchange. You didn't add a date, so here it is a week before Christmas, on {exchange_long}. Time to shop.",
+      "Lost the draw or need a wish list? Everything is on the page: https://lanternlab2027.github.io/lab/santa/?ref=email-secret-santa",
+      "We never saw your group's names or who drew whom. That's the only email this list sends.\nTo stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+     ],
+     "next": "Christmas is a week away (you didn't add an exchange date). Time to shop."
+    }
+   }
+  },
+  {
+   "id": "year-in-orders-tax-2027",
+   "tag": "year-in-orders",
+   "kind": "date",
+   "date": "2027-01-12",
+   "grace_days": 5,
+   "promise": "docs/amazon/index.html: 'One email in January to pull your business purchases, and one when next year's recap is ready.' kit.js: 'one reminder before tax season'.",
+   "name": "Year in Orders",
+   "subject": "Tax time: pull your business purchases",
+   "body": [
+    "Here's the January reminder you asked for: it's a good time to pull last year's business purchases for your taxes.",
+    "Request your order history from Amazon (Request Your Data), drop it into Year in Orders and use the business-expense filter to download a CSV. The page has the steps. Your orders never leave your device.",
+    "Open Year in Orders: https://lanternlab2027.github.io/lab/amazon/?ref=email-year-in-orders",
+    "Not tax advice. We'll write once more, when next year's recap is ready.\nTo stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "time to pull last year's business purchases: request your Amazon order history and use the business-expense filter.",
+   "link": "https://lanternlab2027.github.io/lab/amazon/?ref=email-year-in-orders"
+  },
+  {
+   "id": "etsy-year-tax-2027",
+   "tag": "etsy-year",
+   "kind": "date",
+   "date": "2027-01-12",
+   "grace_days": 5,
+   "promise": "docs/etsy/index.html: 'One email in January to download your statements and run the summary, and one when next year's recap is ready.'",
+   "name": "Seller Year in Review",
+   "subject": "Tax time: download your Etsy statements",
+   "body": [
+    "Here's the January reminder you asked for: download your Etsy monthly statements for last year and run your fees and net summary.",
+    "In Shop Manager, open your monthly statements and download the CSV for each month, then drop them into Seller Year in Review. The page has the steps. Your shop data never leaves your device.",
+    "Run your summary: https://lanternlab2027.github.io/lab/etsy/?ref=email-etsy-year",
+    "Not tax advice. We'll write once more, when next year's review is ready.\nTo stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "time to download last year's Etsy monthly statements and run your fees and net summary.",
+   "link": "https://lanternlab2027.github.io/lab/etsy/?ref=email-etsy-year"
+  },
+  {
+   "id": "mileage-log-tax-2027",
+   "tag": "mileage-log",
+   "kind": "date",
+   "date": "2027-01-12",
+   "grace_days": 5,
+   "promise": "docs/mileage/index.html: 'One email in January to export your Timeline and build your log.' kit.js: 'one reminder before tax season'.",
+   "name": "Timeline Mileage Log",
+   "subject": "Tax time: export your Timeline for your mileage log",
+   "body": [
+    "Here's the January reminder you asked for: export your Google Maps Timeline and build last year's mileage log.",
+    "Timeline's auto-delete can remove old trips, so export soon. Then drop the file into the tool, tag trips business or personal and download your CSV. The page has the steps. Your trips never leave your device.",
+    "Build your log: https://lanternlab2027.github.io/lab/mileage/?ref=email-mileage-log",
+    "Not tax advice. Check your log against your calendar and receipts. That's the only email this list sends.\nTo stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "time to export your Google Maps Timeline and build last year's mileage log.",
+   "link": "https://lanternlab2027.github.io/lab/mileage/?ref=email-mileage-log"
+  },
+  {
+   "id": "couples-wrapped-valentines-2027",
+   "tag": "couples-wrapped",
+   "kind": "date",
+   "date": "2027-02-07",
+   "grace_days": 3,
+   "promise": "docs/couples/index.html + kit.js: 'We'll send one reminder before Valentine's Day, plus new card packs.'",
+   "name": "Couples Chat Wrapped",
+   "subject": "Valentine's Day is a week away",
+   "body": [
+    "Here's the reminder you asked for: Valentine's Day is Sunday, February 14. There's still time to make your Couples Chat Wrapped.",
+    "Export your 1:1 WhatsApp or Telegram chat, drop it in, and you get a deck of cards: who says good morning first, reply speed, goodnights, I love yous and your longest streak. The chat never leaves your phone.",
+    "Make your cards: https://lanternlab2027.github.io/lab/couples/?ref=email-couples-wrapped",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "Valentine's Day is Sunday, February 14: there's still time to make your Couples Chat Wrapped.",
+   "link": "https://lanternlab2027.github.io/lab/couples/?ref=email-couples-wrapped"
+  },
+  {
+   "id": "bracket-2027-selection-sunday",
+   "tag": "bracket-2027",
+   "kind": "date",
+   "date": "2027-03-14",
+   "grace_days": 1,
+   "send_at": "2027-03-15T00:30:00Z",
+   "promise": "docs/bracket/index.html: 'One email on March 14, 2027, when the field is posted and this bracket fills in with real teams. Nothing else.' send_at = 8:30pm EDT Mar 14, after the field is revealed. The bracket page must have the field posted by then.",
+   "name": "Bracket 2027",
+   "subject": "Selection Sunday: the 76-team field is out",
+   "body": [
+    "It's Selection Sunday, and the 76-team field is out. The bracket now fills in with real teams.",
+    "Print it, fill it in on your phone or run a free pool by link. The Opening Round starts Tuesday, March 16.",
+    "Open the bracket: https://lanternlab2027.github.io/lab/bracket/?ref=email-bracket-2027",
+    "That's the only email this list sends.\nTo stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "the 76-team field is out and the bracket fills in with real teams. The Opening Round starts Tuesday, March 16.",
+   "link": "https://lanternlab2027.github.io/lab/bracket/?ref=email-bracket-2027"
+  },
+  {
+   "id": "goal-bingo-{month}",
+   "tag": "goal-bingo",
+   "kind": "monthly",
+   "from": "2027-02",
+   "to": "2027-12",
+   "day": 1,
+   "grace_days": 2,
+   "promise": "docs/bingo/index.html: 'One short email a month in 2027 to nudge you to check off squares.' Rule from bots/bingo/NOTES.md: 1st of each month, Feb to Dec 2027.",
+   "name": "Goal Bingo",
+   "subject": "It's {month_name}: check off some bingo squares",
+   "body": [
+    "It's {month_name}. Here's your monthly nudge to open your 2027 goal bingo card and check off what you've done.",
+    "Your card lives on your device, so open it from the link you bookmarked. Lost it? You can make a new card on the page.",
+    "Goal Bingo: https://lanternlab2027.github.io/lab/bingo/?ref=email-goal-bingo",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "it's {month_name}: open your bookmarked card and check off what you've done.",
+   "link": "https://lanternlab2027.github.io/lab/bingo/?ref=email-goal-bingo"
+  }
+ ]
+}

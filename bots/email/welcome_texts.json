@@ -1,0 +1,527 @@
+{
+ "_comment": "Welcome copy per Kit tag, from bots/email/WELCOME_EMAILS.md section 2. {placeholders} are filled by welcome.py from the subscriber's custom fields (defaults below when empty). 'variants' keys: 'no:<value>' = value empty, 'has:<value>' = value set, 'after:YYYY-MM-DD' = run date on/after. 'skip' = never sent (reason). Links carry ?ref=welcome-<tag>.",
+ "combined": {
+  "subject": "Welcome to Lantern Lab",
+  "intro": "Thanks for signing up. Here's what you'll get from us:",
+  "outro": [
+   "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+  ]
+ },
+ "tags": {
+  "building-watch": {
+   "name": "Building Watch",
+   "subject": "You're on Building Watch for {building_address}",
+   "body": [
+    "Thanks for signing up for Building Watch.",
+    "What happens next: every day we check NYC Open Data. When something new is filed for your building (violations, complaints, summonses, hearing dates, deadlines), we email you a plain-English digest. Your first one should arrive within a day. Quiet days mean no email.",
+    "Free for your first 3 months while we're in beta. After that it's $6 per building per month or $59 a year. We never took a card, so nothing is charged automatically.",
+    "Look up another building: https://lanternlab2027.github.io/lab/buildingwatch/lookup?ref=welcome-building-watch",
+    "Informational only, not legal advice.\nTo stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "a plain-English digest when something new is filed for {building_address}, the first within a day. Free for 3 months, nothing charged automatically.",
+   "link": "https://lanternlab2027.github.io/lab/buildingwatch/lookup?ref=welcome-building-watch",
+   "defaults": {
+    "building_address": "your building"
+   }
+  },
+  "nyc-hearings": {
+   "name": "Hearing Watch",
+   "subject": "Your OATH hearing reminders are set",
+   "body": [
+    "Thanks for joining the Hearing Watch beta.",
+    "What you signed up for: an email in the week before each upcoming hearing on your lookup, and another in the last two days. It's free while we're in beta.",
+    "Please don't rely on email alone. Add the hearing to your calendar with the .ics download under each result, and always confirm the date on your latest OATH notice.",
+    "Check a hearing or a new summons: https://lanternlab2027.github.io/lab/hearings/?ref=welcome-nyc-hearings",
+    "Not legal advice, and not affiliated with OATH.\nTo stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "an email in the week before each upcoming hearing on your lookup, and another in the last two days. Always confirm the date on your latest OATH notice.",
+   "link": "https://lanternlab2027.github.io/lab/hearings/?ref=welcome-nyc-hearings"
+  },
+  "ll97-energy": {
+   "name": "LL97 energy check",
+   "subject": "We'll watch your building's energy data",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: we'll email you when new benchmarking data, a new energy letter grade or a DOB deadline change shows up for your building. NYC publishes this data a few times a year, so expect only a few emails a year, and none when nothing changes.",
+    "Reminder: the LL97 penalty on the page is a rough estimate. Only a registered design professional's LL97 report filed with DOB counts.",
+    "Check your building again: https://lanternlab2027.github.io/lab/ll97/?ref=welcome-ll97-energy",
+    "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "an email when new benchmarking data, a new energy grade or a DOB deadline change shows up for your building. Only a few a year.",
+   "link": "https://lanternlab2027.github.io/lab/ll97/?ref=welcome-ll97-energy"
+  },
+  "nyc-taxappeal": {
+   "name": "Tax appeal check",
+   "subject": "Your tax appeal reminder is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next:\n1. Around mid-January, after DOF posts the new tentative values (usually about January 15), we'll send this property's comparable sales.\n2. Before your tax class's 2027 appeal deadline, we'll send a reminder so you have time to file with the Tax Commission.",
+    "That's it. It's free.",
+    "Re-run the appeal check any time: https://lanternlab2027.github.io/lab/taxappeal/?ref=welcome-nyc-taxappeal",
+    "Not legal or tax advice.\nTo stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "this property's comparable sales after DOF posts new values in mid-January, and a reminder before your class's 2027 appeal deadline.",
+   "link": "https://lanternlab2027.github.io/lab/taxappeal/?ref=welcome-nyc-taxappeal"
+  },
+  "nyc-calendar-2027": {
+   "name": "2027 NYC owner calendar",
+   "subject": "Your 2027 NYC owner compliance calendar",
+   "body": [
+    "Thanks for downloading the calendar. Here's the link again in case you lost the tab:\nhttps://lanternlab2027.github.io/lab/calendar/nyc-2027-owner-calendar.pdf?ref=welcome-nyc-calendar-2027",
+    "It's 17 printable pages with every 2027 city deadline for 1-20 unit buildings, each with its source. Dates marked \"Expected\" will be confirmed once the City publishes them.",
+    "What's next: occasional emails about NYC building deadlines, mostly when one is coming up. Nothing weekly.",
+    "Want deadlines for your own building? https://lanternlab2027.github.io/lab/buildingwatch/lookup?ref=welcome-nyc-calendar-2027",
+    "General information, not legal advice.\nTo stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "your calendar PDF (link below), then occasional emails about NYC building deadlines, mostly when one is coming up.",
+   "link": "https://lanternlab2027.github.io/lab/calendar/nyc-2027-owner-calendar.pdf?ref=welcome-nyc-calendar-2027"
+  },
+  "house-history": {
+   "name": "House history",
+   "subject": "We got your house: {building_address}",
+   "body": [
+    "Thanks for asking about your house's history.",
+    "What happens next: we're opening orders in small batches. Within a day you'll get a personal email from us with what the public records hold for that address (deeds back to 1966, old maps and photos where they exist) and a link to order the full report, from $79. If there isn't much on your house, we'll tell you plainly.",
+    "See sample reports: https://lanternlab2027.github.io/lab/househistory/?ref=welcome-house-history",
+    "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "within a day, a personal email with what the public records hold for {building_address} and a link to order the full report, from $79.",
+   "link": "https://lanternlab2027.github.io/lab/househistory/?ref=welcome-house-history",
+   "defaults": {
+    "building_address": "your address"
+   },
+   "manual_followup": true,
+   "variants": {
+    "no:building_address": {
+     "subject": "We got your house history request",
+     "next": "within a day, a personal email with what the public records hold for your house and a link to order the full report, from $79."
+    }
+   }
+  },
+  "fdny-cof": {
+   "name": "FDNY Certificate of Fitness practice",
+   "subject": "Your FDNY Certificate of Fitness practice bank is unlocked",
+   "body": [
+    "Thanks for signing up. The full question bank and the timed mock exam are now open on the device you used. On a new phone or computer, enter your email again to unlock it there.",
+    "Pick up where you left off: https://lanternlab2027.github.io/lab/cof/quiz?ref=welcome-fdny-cof",
+    "What's next: an occasional study tip for your exam, nothing more. Official materials always win. Check the agency's own study guide before test day.",
+    "Good luck on the exam.",
+    "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "the full question bank and timed mock exam are unlocked on the device you used, plus an occasional study tip.",
+   "link": "https://lanternlab2027.github.io/lab/cof/quiz?ref=welcome-fdny-cof",
+   "variants": {
+    "has:exam_code": {
+     "subject": "Your FDNY {exam_code} practice bank is unlocked",
+     "name": "FDNY {exam_code} practice"
+    }
+   }
+  },
+  "nyc-guide": {
+   "name": "NYC Sightseeing Guide practice",
+   "subject": "Your NYC Sightseeing Guide practice bank is unlocked",
+   "body": [
+    "Thanks for signing up. The full question bank and the timed mock exam are now open on the device you used. On a new phone or computer, enter your email again to unlock it there.",
+    "Pick up where you left off: https://lanternlab2027.github.io/lab/guide/quiz?ref=welcome-nyc-guide",
+    "What's next: an occasional study tip for your exam, nothing more. Official materials always win. Check the agency's own study guide before test day.",
+    "Good luck on the exam.",
+    "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "the full question bank and timed mock exam are unlocked on the device you used, plus an occasional study tip.",
+   "link": "https://lanternlab2027.github.io/lab/guide/quiz?ref=welcome-nyc-guide"
+  },
+  "nyc-food": {
+   "name": "NYC Food Protection practice",
+   "subject": "Your NYC Food Protection practice bank is unlocked",
+   "body": [
+    "Thanks for signing up. The full question bank and the timed mock exam are now open on the device you used. On a new phone or computer, enter your email again to unlock it there.",
+    "Pick up where you left off: https://lanternlab2027.github.io/lab/food/quiz?ref=welcome-nyc-food",
+    "What's next: an occasional study tip for your exam, nothing more. Official materials always win. Check the agency's own study guide before test day.",
+    "Good luck on the exam.",
+    "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "the full question bank and timed mock exam are unlocked on the device you used, plus an occasional study tip.",
+   "link": "https://lanternlab2027.github.io/lab/food/quiz?ref=welcome-nyc-food"
+  },
+  "nyc-hic": {
+   "name": "NYC Home Improvement Contractor practice",
+   "subject": "Your NYC Home Improvement Contractor practice bank is unlocked",
+   "body": [
+    "Thanks for signing up. The full question bank and the timed mock exam are now open on the device you used. On a new phone or computer, enter your email again to unlock it there.",
+    "Pick up where you left off: https://lanternlab2027.github.io/lab/hic/quiz?ref=welcome-nyc-hic",
+    "What's next: an occasional study tip for your exam, nothing more. Official materials always win. Check the agency's own study guide before test day.",
+    "Good luck on the exam.",
+    "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "the full question bank and timed mock exam are unlocked on the device you used, plus an occasional study tip.",
+   "link": "https://lanternlab2027.github.io/lab/hic/quiz?ref=welcome-nyc-hic"
+  },
+  "nyc-processserver": {
+   "name": "NYC Process Server practice",
+   "subject": "Your NYC Process Server practice bank is unlocked",
+   "body": [
+    "Thanks for signing up. The full question bank and the timed mock exam are now open on the device you used. On a new phone or computer, enter your email again to unlock it there.",
+    "Pick up where you left off: https://lanternlab2027.github.io/lab/processserver/quiz?ref=welcome-nyc-processserver",
+    "What's next: an occasional study tip for your exam, nothing more. Official materials always win. Check the agency's own study guide before test day.",
+    "Good luck on the exam.",
+    "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "the full question bank and timed mock exam are unlocked on the device you used, plus an occasional study tip.",
+   "link": "https://lanternlab2027.github.io/lab/processserver/quiz?ref=welcome-nyc-processserver"
+  },
+  "nyc-tlc": {
+   "name": "NYC TLC Driver practice",
+   "subject": "Your NYC TLC Driver practice bank is unlocked",
+   "body": [
+    "Thanks for signing up. The full question bank and the timed mock exam are now open on the device you used. On a new phone or computer, enter your email again to unlock it there.",
+    "Pick up where you left off: https://lanternlab2027.github.io/lab/tlc/quiz?ref=welcome-nyc-tlc",
+    "What's next: an occasional study tip for your exam, nothing more. Official materials always win. Check the agency's own study guide before test day.",
+    "Good luck on the exam.",
+    "To stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "the full question bank and timed mock exam are unlocked on the device you used, plus an occasional study tip.",
+   "link": "https://lanternlab2027.github.io/lab/tlc/quiz?ref=welcome-nyc-tlc"
+  },
+  "nyc-food-es": {
+   "name": "Protecci\u00f3n de Alimentos (espa\u00f1ol)",
+   "subject": "Su banco de preguntas de Protecci\u00f3n de Alimentos est\u00e1 desbloqueado",
+   "body": [
+    "Gracias por inscribirse. Todas las preguntas y el examen de pr\u00e1ctica con reloj ya est\u00e1n abiertos en el dispositivo que us\u00f3. En otro tel\u00e9fono o computadora, escriba su correo otra vez para desbloquearlos.",
+    "Siga practicando: https://lanternlab2027.github.io/lab/food/es/quiz?ref=welcome-nyc-food-es",
+    "Qu\u00e9 sigue: de vez en cuando, un consejo de estudio para su examen. Nada m\u00e1s. Revise siempre el manual oficial antes del examen.",
+    "\u00a1Mucha suerte!",
+    "Para dejar de recibir estos correos, use el enlace para darse de baja al final (detiene todos los correos de Lantern Lab).\n- Lantern Lab"
+   ],
+   "next": "todas las preguntas y el examen de pr\u00e1ctica est\u00e1n abiertos en el dispositivo que us\u00f3, y de vez en cuando un consejo de estudio.",
+   "link": "https://lanternlab2027.github.io/lab/food/es/quiz?ref=welcome-nyc-food-es"
+  },
+  "nyc-eats": {
+   "name": "NYC restaurant grades",
+   "subject": "Grade alert set for your restaurant",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: we'll email you when a new letter grade for this restaurant shows up in the NYC Health Department's inspection data. Grades change only after an inspection, which happens at least once a year, so this email may be the only one for months.",
+    "See the report card again: https://lanternlab2027.github.io/lab/eats/?ref=welcome-nyc-eats",
+    "A grade reflects one inspection on one day. Read the full history before drawing conclusions.\nTo stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "an email when a new letter grade for your restaurant shows up in the Health Department's data. Could be months.",
+   "link": "https://lanternlab2027.github.io/lab/eats/?ref=welcome-nyc-eats"
+  },
+  "chi-eats": {
+   "name": "Chicago restaurant inspections",
+   "subject": "Inspection alert set for your restaurant",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: we'll email you when a new inspection for this restaurant shows up in the City of Chicago's data. Inspections happen on the city's schedule, so you may not hear from us for a while.",
+    "Check the inspection history again: https://lanternlab2027.github.io/lab/chi-eats/?ref=welcome-chi-eats",
+    "One inspection reflects one day. Read the full history before drawing conclusions.\nTo stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "an email when a new inspection for your restaurant shows up in the City of Chicago's data.",
+   "link": "https://lanternlab2027.github.io/lab/chi-eats/?ref=welcome-chi-eats"
+  },
+  "nyc-then": {
+   "name": "NYC Then",
+   "subject": "You're on the NYC Then list",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: an email when new photo packs or new city games launch, a few times a year. There's no daily email, so come back to the page for each day's photo.",
+    "Play today's photo: https://lanternlab2027.github.io/lab/then/?ref=welcome-nyc-then",
+    "All photos come from the Library of Congress.\nTo stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "an email when new photo packs or new city games launch (a few times a year). No daily email.",
+   "link": "https://lanternlab2027.github.io/lab/then/?ref=welcome-nyc-then"
+  },
+  "chicago-then": {
+   "name": "Chicago Then",
+   "subject": "You're on the Chicago Then list",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: an email when new photo packs or new city games launch, a few times a year. There's no daily email, so come back to the page for each day's photo.",
+    "Play today's photo: https://lanternlab2027.github.io/lab/chicago-then/?ref=welcome-chicago-then",
+    "All photos come from the Library of Congress.\nTo stop these emails, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "an email when new photo packs or new city games launch (a few times a year). No daily email.",
+   "link": "https://lanternlab2027.github.io/lab/chicago-then/?ref=welcome-chicago-then"
+  },
+  "reading-wrapped": {
+   "name": "Reading Wrapped",
+   "subject": "You're on the list for next year's Reading Wrapped",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one email, when next year's Reading Wrapped is ready (around the end of 2027). That's the only email this list sends.",
+    "Your library never left your device, and we only have your email address.",
+    "Make or share this year's cards: https://lanternlab2027.github.io/lab/reading/?ref=welcome-reading-wrapped",
+    "To stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email when next year's Reading Wrapped is ready (around the end of 2027).",
+   "link": "https://lanternlab2027.github.io/lab/reading/?ref=welcome-reading-wrapped"
+  },
+  "netflix-wrapped": {
+   "name": "Streaming Wrapped",
+   "subject": "You're on the list for next year's Streaming Wrapped",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one email, when next year's Streaming Wrapped is ready (around the end of 2027). That's all.",
+    "Your viewing history never left your device. We only have your email address.",
+    "Make or share this year's cards: https://lanternlab2027.github.io/lab/netflix/?ref=welcome-netflix-wrapped",
+    "To stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email when next year's Streaming Wrapped is ready (around the end of 2027).",
+   "link": "https://lanternlab2027.github.io/lab/netflix/?ref=welcome-netflix-wrapped"
+  },
+  "sport-wrapped": {
+   "name": "Year in Motion",
+   "subject": "We'll remind you to make your Year in Motion cards",
+   "body": [
+    "Thanks for signing up.",
+    "Strava and Garmin exports can take a while to arrive. What happens next: one reminder to come back and make your cards once your export is ready, then one note when next year's edition is live. That's all.",
+    "Your activities never leave your device. We only have your email address.",
+    "Come back here: https://lanternlab2027.github.io/lab/sport/?ref=welcome-sport-wrapped",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one reminder to come back and make your cards, then one note when next year's edition is live.",
+   "link": "https://lanternlab2027.github.io/lab/sport/?ref=welcome-sport-wrapped"
+  },
+  "dating-wrapped": {
+   "name": "Dating Wrapped",
+   "subject": "We'll remind you when to come back",
+   "body": [
+    "Thanks for signing up.",
+    "Tinder and Hinge exports can take days to arrive. What happens next: one reminder to come back and make your Dating Wrapped, then one note when next year's edition is ready. Nothing else.",
+    "Your export never leaves your device. We only have your email address.",
+    "Come back here: https://lanternlab2027.github.io/lab/dating/?ref=welcome-dating-wrapped",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one reminder to come back and make your Dating Wrapped, then one note when next year's edition is ready.",
+   "link": "https://lanternlab2027.github.io/lab/dating/?ref=welcome-dating-wrapped"
+  },
+  "scroll-wrapped": {
+   "name": "Scroll Wrapped",
+   "subject": "Your Scroll Wrapped reminder is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one email on November 30, as Wrapped season opens, as a nudge to request your TikTok data export. It can take a few days to arrive, so it helps to ask early.",
+    "The messages section of your export is thrown away the moment it's opened, and nothing leaves your device.",
+    "Get a head start: https://lanternlab2027.github.io/lab/tiktok/?ref=welcome-scroll-wrapped",
+    "To stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email on November 30, as Wrapped season opens, as a nudge to request your TikTok data export.",
+   "link": "https://lanternlab2027.github.io/lab/tiktok/?ref=welcome-scroll-wrapped",
+   "variants": {
+    "after:2026-12-03": {
+     "subject": "Wrapped season is here: request your TikTok export",
+     "body": [
+      "Thanks for signing up.",
+      "Wrapped season is already open, so this email is your nudge: request your TikTok data export now. It can take a few days to arrive. The page has the steps.",
+      "The messages section of your export is thrown away the moment it's opened, and nothing leaves your device.",
+      "Make your Scroll Wrapped: https://lanternlab2027.github.io/lab/tiktok/?ref=welcome-scroll-wrapped",
+      "That's the only email this list sends.\nTo stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+     ],
+     "next": "Wrapped season is open, so this is your nudge: request your TikTok data export now (it can take a few days)."
+    }
+   }
+  },
+  "wrapped": {
+   "name": "Group Chat Wrapped",
+   "subject": "You'll hear about new Group Chat Wrapped card packs",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: a short email when we drop a new card pack. There's no fixed schedule, so expect only a few a year.",
+    "Nothing from your chat was ever sent anywhere. We only have your email address.",
+    "Run your chat again: https://lanternlab2027.github.io/lab/wrapped/?ref=welcome-wrapped",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "a short email when we drop a new card pack, only a few a year.",
+   "link": "https://lanternlab2027.github.io/lab/wrapped/?ref=welcome-wrapped"
+  },
+  "couples-wrapped": {
+   "name": "Couples Chat Wrapped",
+   "subject": "Your Valentine's reminder is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one reminder before Valentine's Day 2027 to make your Couples Chat Wrapped, plus a note when we add new card packs. That's it.",
+    "Nothing from your chat was ever sent anywhere. We only have your email address.",
+    "Make your cards: https://lanternlab2027.github.io/lab/couples/?ref=welcome-couples-wrapped",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one reminder before Valentine's Day 2027, plus a note when we add new card packs.",
+   "link": "https://lanternlab2027.github.io/lab/couples/?ref=welcome-couples-wrapped"
+  },
+  "mileage-log": {
+   "name": "Timeline Mileage Log",
+   "subject": "Your January mileage-log reminder is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one email in January to export your Google Maps Timeline and build your mileage log for tax season. That's the only one.",
+    "Your trips never leave your device. We only have your email address.",
+    "The tool: https://lanternlab2027.github.io/lab/mileage/?ref=welcome-mileage-log",
+    "Not tax advice. Check your log against your calendar and receipts.\nTo stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email in January to export your Google Maps Timeline and build your mileage log.",
+   "link": "https://lanternlab2027.github.io/lab/mileage/?ref=welcome-mileage-log"
+  },
+  "year-in-orders": {
+   "name": "Year in Orders",
+   "subject": "Your tax-time reminder is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: two emails. One in January reminds you to pull your business purchases for taxes. The other comes when next year's Year in Orders recap is ready.",
+    "Your orders never leave your device. We only have your email address.",
+    "Back to your recap: https://lanternlab2027.github.io/lab/amazon/?ref=welcome-year-in-orders",
+    "Not tax advice.\nTo stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email in January to pull your business purchases for taxes, and one when next year's recap is ready.",
+   "link": "https://lanternlab2027.github.io/lab/amazon/?ref=welcome-year-in-orders"
+  },
+  "etsy-year": {
+   "name": "Seller Year in Review",
+   "subject": "Your January reminder is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: two emails. One in January reminds you to download your Etsy statements and run your tax summary. The other comes when next year's Seller Year in Review is ready.",
+    "Your shop data never leaves your device. We only have your email address.",
+    "Back to your review: https://lanternlab2027.github.io/lab/etsy/?ref=welcome-etsy-year",
+    "Not tax advice.\nTo stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email in January to download your Etsy statements and run your tax summary, and one when next year's review is ready.",
+   "link": "https://lanternlab2027.github.io/lab/etsy/?ref=welcome-etsy-year"
+  },
+  "baby-names": {
+   "name": "Baby name report card",
+   "subject": "We'll email you when the new baby name rankings land",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one email when the Social Security Administration publishes its new baby name rankings (usually in May) and they're in the report card. That's it.",
+    "Look up a name: https://lanternlab2027.github.io/lab/names/?ref=welcome-baby-names",
+    "To stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email when the new SSA baby name rankings (usually in May) are in the report card.",
+   "link": "https://lanternlab2027.github.io/lab/names/?ref=welcome-baby-names"
+  },
+  "nyc-dog-names": {
+   "name": "NYC dog names",
+   "subject": "We'll email you when the new NYC dog names are in",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one email when the city's new dog license data is in. It updates about once a year.",
+    "Look up a dog name: https://lanternlab2027.github.io/lab/dogs/?ref=welcome-nyc-dog-names",
+    "To stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email when the city's new dog license data is in (about once a year).",
+   "link": "https://lanternlab2027.github.io/lab/dogs/?ref=welcome-nyc-dog-names"
+  },
+  "secret-santa": {
+   "name": "Secret Santa",
+   "subject": "Your Secret Santa reminder is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one email a week before your exchange on {santa_exchange_date}, so there's time to shop. That's the only email.",
+    "We never saw your group's names or who drew whom.",
+    "Need to start over or make a wish list? https://lanternlab2027.github.io/lab/santa/?ref=welcome-secret-santa",
+    "To stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email a week before your exchange on {santa_exchange_date}, so there's time to shop.",
+   "link": "https://lanternlab2027.github.io/lab/santa/?ref=welcome-secret-santa",
+   "variants": {
+    "no:santa_exchange_date": {
+     "body": [
+      "Thanks for signing up.",
+      "What happens next: one email a week before your exchange, so there's time to shop. You didn't add an exchange date, so we'll send it on Friday, December 18, a week before Christmas. That's the only email.",
+      "We never saw your group's names or who drew whom.",
+      "Need to start over or make a wish list? https://lanternlab2027.github.io/lab/santa/?ref=welcome-secret-santa",
+      "To stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+     ],
+     "next": "one email a week before your exchange. You didn't add a date, so we'll send it on Friday, December 18, a week before Christmas."
+    }
+   }
+  },
+  "bracket-2027": {
+   "name": "Bracket 2027",
+   "subject": "Selection Sunday reminder is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one email on Selection Sunday, March 14, 2027, when the 76-team field is posted and the bracket fills in with real teams. Nothing else.",
+    "Print the blank bracket or set up a pool: https://lanternlab2027.github.io/lab/bracket/?ref=welcome-bracket-2027",
+    "To stop this, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one email on Selection Sunday, March 14, 2027, when the 76-team field is posted.",
+   "link": "https://lanternlab2027.github.io/lab/bracket/?ref=welcome-bracket-2027"
+  },
+  "goal-bingo": {
+   "name": "Goal Bingo",
+   "subject": "Your monthly goal bingo nudge is set",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one short email a month in 2027 to remind you to check off squares. Your card and goals stay on your device, so bookmark your card link.",
+    "Open your card: https://lanternlab2027.github.io/lab/bingo/?ref=welcome-goal-bingo",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one short email a month in 2027 to check off squares. Bookmark your card link: it stays on your device.",
+   "link": "https://lanternlab2027.github.io/lab/bingo/?ref=welcome-goal-bingo"
+  },
+  "snow-day": {
+   "name": "Snow Day Odds",
+   "subject": "Snow day alerts on for {snow_zip}",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: on school nights when our estimate for your ZIP reaches 50% or higher, we'll email you that evening. At most one email per school morning, and none when snow isn't likely.",
+    "It's just for fun. Only your school district decides, so check its official announcements.",
+    "Check the odds any time: https://lanternlab2027.github.io/lab/snow/?ref=welcome-snow-day",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "an evening email on school nights when our snow day estimate for {snow_zip} reaches 50% or higher. Just for fun.",
+   "link": "https://lanternlab2027.github.io/lab/snow/?ref=welcome-snow-day",
+   "defaults": {
+    "snow_zip": "your ZIP"
+   }
+  },
+  "fantasy-awards": {
+   "name": "Fantasy league awards",
+   "subject": "Weekly awards for your league",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: after each week's games, we'll email your league's awards (top scorer, biggest blowout, heartbreak loss and the rest). Emailed awards are still in testing, so the first ones may be a little rough.",
+    "See this week's cards now: https://lanternlab2027.github.io/lab/awards/?ref=welcome-fantasy-awards",
+    "We only stored your email and your league ID.\nTo stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "your league's awards after each week's games (still in testing).",
+   "link": "https://lanternlab2027.github.io/lab/awards/?ref=welcome-fantasy-awards",
+   "variants": {
+    "no:league_id": {
+     "subject": "Weekly fantasy awards: add your league",
+     "body": [
+      "Thanks for signing up.",
+      "You signed up from the sample league, so we don't have a league to send awards for yet. Look up your own league on the page and sign up from there to get its awards after each week's games (top scorer, biggest blowout, heartbreak loss and the rest). Emailed awards are still in testing.",
+      "Find your league: https://lanternlab2027.github.io/lab/awards/?ref=welcome-fantasy-awards",
+      "We only stored your email.\nTo stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+     ],
+     "next": "you signed up from the sample league, so look up your own league on the page to get its weekly awards."
+    }
+   }
+  },
+  "party-bingo": {
+   "name": "Watch-party bingo",
+   "subject": "You'll get new watch-party bingo packs",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: an occasional email when we add new ready-made square lists for big nights, like awards season, the tournament and finales. Nothing else.",
+    "Host your next game: https://lanternlab2027.github.io/lab/partybingo/?ref=welcome-party-bingo",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "an occasional email when we add new ready-made square lists for big nights.",
+   "link": "https://lanternlab2027.github.io/lab/partybingo/?ref=welcome-party-bingo"
+  },
+  "app-drops": {
+   "name": "New Lantern Lab apps",
+   "subject": "You're on the Lantern Lab app list",
+   "body": [
+    "Thanks for signing up.",
+    "What happens next: one short email when we ship a new app. That's it.",
+    "In the meantime, see what's already out: https://lanternlab2027.github.io/lab/apps/?ref=welcome-app-drops",
+    "To stop these, use the unsubscribe link below (it stops all Lantern Lab email).\n- Lantern Lab"
+   ],
+   "next": "one short email when we ship a new app.",
+   "link": "https://lanternlab2027.github.io/lab/apps/?ref=welcome-app-drops"
+  }
+ }
+}

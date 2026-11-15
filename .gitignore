@@ -1,5 +1,6 @@
 __pycache__/
 bots/notify/outbox/
+bots/email/outbox/
 bots/buildingwatch/outbox/
 /*.png
 bots/chi-eats/*.png
