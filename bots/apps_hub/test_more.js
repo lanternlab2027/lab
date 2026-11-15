@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   fs.readFile(f, (e, b) => { if (e) { res.writeHead(404); return res.end(); } res.writeHead(200, { 'Content-Type': TYPES[path.extname(p)] || 'application/octet-stream' }); res.end(b); });
 }).listen(PORT);
 let fails = 0; const ok = (c, m) => { console.log((c ? 'PASS ' : 'FAIL ') + m); if (!c) fails++; };
-const APPS = ['wrapped', 'reading', 'netflix', 'sport', 'dating', 'tiktok', 'couples', 'amazon', 'awards', 'santa', 'bingo', 'partybingo', 'then', 'chicago-then', 'eats', 'chi-eats', 'names', 'mileage', 'dogs', 'snow'];
+const APPS = ['wrapped', 'reading', 'netflix', 'sport', 'dating', 'tiktok', 'couples', 'amazon', 'awards', 'santa', 'bingo', 'partybingo', 'then', 'chicago-then', 'eats', 'chi-eats', 'names', 'mileage', 'dogs', 'snow', 'bracket'];
 const SHOT = new Set(process.env.SHOT_ALL ? APPS : ['wrapped', 'santa', 'eats', 'then', 'names', 'mileage', 'partybingo', 'awards']);
 
 async function open(ctx, app, blockStrip) {

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>76-Team Bracket 2027: PDF View (Letter or A4)</title>
+<meta name="description" content="One-page printable 76 team bracket for 2027 in landscape: print it or save it as a PDF on Letter or A4 paper. Free, not affiliated with the NCAA.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/bracket/">
+<meta name="theme-color" content="#13294b">
+<style>
+  :root { --bar: #13294b; --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color-scheme: light; }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: #d9dce1; color: #14181f; font-family: var(--font); font-size: 16px; }
+  .bar { position: sticky; top: 0; background: var(--bar); color: #fff; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 10px 16px; z-index: 2; }
+  .bar a { color: #fff; font-weight: 700; }
+  .bar .sp { flex: 1 1 auto; }
+  .btn { appearance: none; border: 0; border-radius: 9px; background: #e8590c; color: #fff; font: 800 15px var(--font); padding: 9px 14px; min-height: 42px; cursor: pointer; }
+  select { font: 700 15px var(--font); min-height: 42px; border-radius: 9px; padding: 6px 8px; }
+  .hint { font-size: 13px; color: #c9d4e6; width: 100%; margin: 0; }
+  .page { margin: 18px auto; background: #fff; box-shadow: 0 6px 24px rgba(0,0,0,.25); width: calc(100% - 32px); max-width: 1320px; aspect-ratio: 11 / 8.5; padding: 2.2%; }
+  .page.a4 { aspect-ratio: 297 / 210; }
+  .page svg { display: block; width: 100%; height: 100%; font-family: Arial, Helvetica, sans-serif; }
+  .foot { text-align: center; font-size: 13px; color: #444; margin: 0 16px 24px; }
+  @page { size: landscape; margin: 0.3in; }
+  @media print {
+    body { background: #fff; }
+    .bar, .foot { display: none !important; }
+    .page, .page.a4 { margin: 0; box-shadow: none; width: auto; max-width: none; aspect-ratio: auto; padding: 0; }
+    .page svg { width: 9.6in; height: 7.42in; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="./" id="back">&larr; 76-Team Bracket</a>
+  <span class="sp"></span>
+  <label for="paper" style="font-weight:700">Paper</label>
+  <select id="paper"><option value="letter">US Letter</option><option value="a4">A4</option></select>
+  <button type="button" class="btn" id="print">Print or save as PDF</button>
+  <p class="hint">In the print dialog, choose "Save as PDF" to download it. Landscape, one page.</p>
+</div>
+<div class="page" id="page"></div>
+<p class="foot">Free printable for bragging rights. Not affiliated with the NCAA. <a href="./">lanternlab2027.github.io/lab/bracket</a></p>
+<script src="bracket.js"></script>
+<script src="codec.js"></script>
+<script src="render.js"></script>
+<script src="printview.js"></script>
+</body>
+</html>

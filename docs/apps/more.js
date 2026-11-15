@@ -26,6 +26,7 @@
     mileage:        ['Timeline Mileage Log', 'Business miles from Google Maps'],
     dogs:           ['NYC Dog Name Report Card', "How many NYC dogs share a name"],
     snow:           ['Snow Day Odds', "Tomorrow's snow-day chance"],
+    bracket:        ['76-Team Bracket', 'Printable bracket + no-account pool'],
     hub:            ['All free apps', 'Wrapped apps, games and tools']
   };
 
@@ -52,7 +53,8 @@
     10: ['santa', 'snow'],             // Nov: Wrapped season starts
     11: ['santa', 'snow'],             // Dec
     0:  ['bingo', 'amazon', 'mileage'],   // Jan
-    1:  ['couples', 'partybingo']         // Feb
+    1:  ['couples', 'partybingo'],        // Feb
+    2:  ['bracket', 'partybingo']         // Mar
   };
   var OFF_SEASON = ['then', 'names'];
   var FILL = ['bingo', 'wrapped', 'then', 'names', 'eats'];
