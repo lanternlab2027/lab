@@ -220,7 +220,7 @@
     fetch(KIT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ api_key: KIT_KEY, email: email, fields: { building_address: examCode } })
+      body: JSON.stringify({ api_key: KIT_KEY, email: email, fields: { exam_code: examCode } })
     }).then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       unlock();

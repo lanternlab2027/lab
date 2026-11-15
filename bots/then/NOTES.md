@@ -118,3 +118,7 @@ NODE_PATH=/opt/npm-tools/node_modules node bots/then/test_page.js <screenshot di
 2. Optional: change `EPOCH` in `docs/then/game.js` to the real launch day.
 3. Remove the two `then` lines from `.git/info/exclude`, then commit.
 4. Optional: add `then/` to `docs/sitemap.xml` and a card on `docs/index.html` (under Apps). Neither was touched.
+
+## 2026-11-15: signup is launch news, not a daily email
+- Nothing sends a daily photo email, so the signup no longer promises one. It now says: "Get an email when new photo packs or new city games launch (a few times a year)." Heading "Launch news", button "Keep me posted". Kit tag nyc-then 25880799 is unchanged (replaces the TAGID_THEN placeholder mentioned above).
+- test_page.js checks this copy and that no daily-email wording comes back.

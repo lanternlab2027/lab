@@ -83,8 +83,8 @@ const check = (cond, msg) => { if (!cond) { fails.push(msg); console.log('FAIL',
       await page.waitForSelector('#unlocked:not(.hidden)');
       check(kitReq && kitReq.method === 'POST' && kitReq.url === `https://api.convertkit.com/v3/tags/${s.tag}/subscribe`, `${L} Kit POST to ${s.tag} placeholder URL`);
       const body = kitReq ? JSON.parse(kitReq.body) : {};
-      check(body.email === 'test@example.com' && typeof body.api_key === 'string' && body.api_key.length > 10 && body.fields && body.fields.building_address === s.code,
-        `${L} Kit body has email, api_key (not shown), fields.building_address=${body.fields && body.fields.building_address}`);
+      check(body.email === 'test@example.com' && typeof body.api_key === 'string' && body.api_key.length > 10 && body.fields && body.fields.exam_code === s.code,
+        `${L} Kit body has email, api_key (not shown), fields.exam_code=${body.fields && body.fields.exam_code}`);
       check(await page.isVisible('#buyBtn'), `${L} buy button visible`);
       const mockBtns = await page.$$('#mockButtons button');
       check(mockBtns.length === 1, `${L} 1 mock button`);

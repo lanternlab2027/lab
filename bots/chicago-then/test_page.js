@@ -178,6 +178,8 @@ async function run(width, mobile) {
   check(kitCalls.length === 1 && kitCalls[0].url.includes('/tags/25915601/subscribe'), 'Kit called once with 25915601');
   const body = JSON.parse(kitCalls[0] ? kitCalls[0].body : '{}');
   check(JSON.stringify(Object.keys(body).sort()) === '["api_key","email"]' && body.email === 'test@example.com', 'Kit body has only api_key + email');
+  const signupText = (await page.textContent('#signup')) || '';
+  check(/new photo packs or new city games launch \(a few times a year\)/.test(signupText) && !/tomorrow|inbox|email a day|Daily reminder/i.test(signupText), 'signup copy promises launch news only, no daily email');
 
   // localStorage blocked: game still playable
   const ctx2 = await browser.newContext({ viewport: { width, height: 800 } });

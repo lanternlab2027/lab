@@ -107,7 +107,7 @@ async function run(width) {
   const c = kitCalls[0];
   check('kit url tag', c.url === 'https://api.convertkit.com/v3/tags/25845321/subscribe', c.url);
   check('kit body email', c.body.email === 'prueba@example.com');
-  check('kit body field', c.body.fields && c.body.fields.building_address === 'FPCES');
+  check('kit body field', c.body.fields && c.body.fields.exam_code === 'FPCES');
   check('kit body has api_key', typeof c.body.api_key === 'string' && c.body.api_key.length > 10);
   check('unlocked text', (await page.textContent('#unlockedText')).startsWith('Practique las 131 preguntas'));
   check('no buy button', (await page.$('#buyBtn')) === null);

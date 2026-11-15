@@ -1,4 +1,4 @@
-/* Daily reminder signup (Kit). Sends only api_key + email. Same pattern as ../ll97/. */
+/* Launch-news signup (Kit): new photo packs and new city games, a few times a year. Sends only api_key + email. Same pattern as ../ll97/. */
 (function () {
   'use strict';
   var KIT_KEY = '9OgTfHEbtX6FB0NWVjkgyg'; var TAG = '25880799';
@@ -15,10 +15,10 @@
       body: JSON.stringify({ api_key: KIT_KEY, email: email })
     }).then(function (r) {
       if (!r.ok) throw new Error('status ' + r.status);
-      f.innerHTML = '<b>You\u2019re in.</b> Watch your inbox for tomorrow\u2019s photo.';
+      f.innerHTML = '<b>You\u2019re in.</b> We\u2019ll email you when new photo packs or new city games launch (a few times a year).';
       msg.textContent = '';
     }).catch(function () {
-      btn.disabled = false; btn.textContent = 'Remind me';
+      btn.disabled = false; btn.textContent = 'Keep me posted';
       msg.textContent = 'Sorry, that didn\u2019t go through. Please try again in a moment.';
     });
   });

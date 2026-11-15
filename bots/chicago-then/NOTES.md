@@ -101,3 +101,7 @@ NODE_PATH=/opt/npm-tools/node_modules node bots/chicago-then/test_page.js <scree
 2. Optional: move `EPOCH` (game.js) and `EPOCH` (build.py) to the real launch day, then re-run `build.py`.
 3. Optional: add `chicago-then/` to `docs/sitemap.xml` and a card on `docs/index.html` / `docs/apps/`. Neither was touched.
 4. Commit (`docs/chicago-then/`, `bots/chicago-then/` minus `data/`, and the `docs/then/index.html` cross-link edit).
+
+## 2026-11-15: signup is launch news, not a daily email
+- Nothing sends a daily photo email, so the signup no longer promises one. It now says: "Get an email when new photo packs or new city games launch (a few times a year)." Heading "Launch news", button "Keep me posted". Kit tag chicago-then 25915601 is unchanged (replaces the TAGID_CHITHEN placeholder mentioned above).
+- test_page.js checks this copy and that no daily-email wording comes back.
