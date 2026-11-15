@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Free Strava Year in Sport &amp; Garmin Year in Review 2026 (Strava Wrapped) | Year in Motion</title>
+<meta name="description" content="Strava Year in Sport for free: make your own Strava Wrapped or Garmin year in review from your Strava bulk export, Garmin Connect CSV or GPX files. Total distance, elevation in Everests, sport mix, streaks, busiest month, route art and your sport personality, as 9:16 cards. No subscription, no login, and your activities never leave your device.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/sport/">
+<meta name="theme-color" content="#070d24">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Year in Motion: your free Year in Sport">
+<meta property="og:description" content="A free Strava Wrapped and Garmin year in review: shareable cards for your distance, climbing, streaks, sport mix and route art. Made from your own export, 100% on your device.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/sport/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/sport/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Year in Motion: sample year-in-sport cards for a made-up athlete">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Year in Motion: your free Year in Sport">
+<meta name="twitter:description" content="Free Strava Wrapped and Garmin year in review cards from your own export. Nothing is uploaded.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/sport/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Year in Motion",
+ "alternateName": ["Free Strava Year in Sport alternative", "Strava Wrapped", "Garmin Year in Review"],
+ "url": "https://lanternlab2027.github.io/lab/sport/",
+ "applicationCategory": "SportsApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Turn a Strava bulk export, a Garmin Connect activities CSV or GPX files into shareable year-in-sport cards. Runs entirely in your browser.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #070d24; --bg2: #0d1a45; --ink: #f3f6ff; --muted: #a9b4d6; --line: rgba(243,246,255,.14);
+    --card: rgba(255,255,255,.05); --orange: #ff5b1f; --orange2: #ff7a45; --volt: #c6ff1a; --navy: #0a1433;
+    --display: "Avenir Next Condensed", "DIN Condensed", "Roboto Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); background-image: radial-gradient(900px 520px at 100% -10%, rgba(255,91,31,.28), transparent 60%), radial-gradient(800px 600px at -20% 40%, rgba(31,61,255,.22), transparent 60%); background-repeat: no-repeat; color: var(--ink); font-family: var(--font); line-height: 1.55; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--volt); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 34px 0 10px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  .brand a { color: inherit; text-decoration: none; }
+  h1, h2, .disp { font-family: var(--display); font-style: italic; font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; }
+  h1 { font-size: clamp(56px, 16vw, 124px); line-height: .86; margin: 14px 0 10px; }
+  h1 span { color: var(--orange); display: block; }
+  .stripes { display: flex; gap: 6px; margin: 0 0 16px; }
+  .stripes i { display: block; height: 8px; width: 46px; background: var(--volt); transform: skewX(-24deg); }
+  .stripes i:nth-child(2) { width: 30px; opacity: .7; } .stripes i:nth-child(3) { width: 18px; opacity: .45; }
+  .lede { font-size: clamp(18px, 4.6vw, 22px); color: #dfe5fb; max-width: 680px; margin: 0 0 18px; }
+  .lede b { color: var(--volt); }
+  .privacy { display: inline-flex; gap: 10px; align-items: center; background: var(--volt); color: var(--navy); padding: 10px 16px; border-radius: 12px; font-weight: 800; transform: skewX(-6deg); }
+  .privacy > * { transform: skewX(6deg); }
+  .drop { margin: 22px 0 8px; border: 2px dashed rgba(243,246,255,.35); border-radius: 20px; padding: 24px 16px; text-align: center; background: var(--card); transition: border-color .15s, background .15s; }
+  .drop.over { border-color: var(--volt); background: rgba(198,255,26,.08); }
+  .drop p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+  .drop .row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .btn { appearance: none; border: 0; border-radius: 12px; font: 800 17px/1 var(--font); padding: 16px 22px; cursor: pointer; color: var(--navy); background: var(--orange); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 8px 22px rgba(255,91,31,.3); }
+  .btn:hover { background: var(--orange2); }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label.upload:focus-within, [role=tab]:focus-visible, .seg button:focus-visible { outline: 3px solid var(--volt); outline-offset: 3px; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid rgba(243,246,255,.45); box-shadow: none; }
+  .btn.ghost:hover { background: rgba(243,246,255,.08); }
+  .btn.volt { background: var(--volt); box-shadow: 0 8px 22px rgba(198,255,26,.18); }
+  .btn.small { padding: 10px 16px; font-size: 15px; min-height: 44px; }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  label.upload { display: inline-flex; }
+  label.upload input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .linkbtn { background: none; border: 0; color: var(--volt); font: 700 16px var(--font); text-decoration: underline; cursor: pointer; padding: 12px 6px; min-height: 44px; }
+  .status { min-height: 1.5em; margin: 10px 0 0; color: var(--volt); font-weight: 700; }
+  .status.err { color: #ff9c7a; }
+  .prog { display: grid; gap: 6px; margin: 10px 0 0; }
+  .prog progress { width: 100%; height: 12px; accent-color: var(--volt); }
+  .peek { display: block; position: relative; width: 100%; margin: 18px 0 0; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 18px; overflow: hidden; }
+  .peek img { display: block; width: 100%; height: 220px; object-fit: cover; object-position: center top; }
+  .peek span { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 12px 12px; background: linear-gradient(transparent, rgba(7,13,36,.95)); color: var(--ink); font: 800 16px var(--font); text-align: center; }
+  .peek:focus-visible { outline: 3px solid var(--volt); outline-offset: 3px; }
+  @media (min-width: 760px) { .peek { max-width: 560px; } .peek img { height: 300px; } }
+  section { margin: 44px 0; }
+  h2 { font-size: clamp(34px, 8vw, 52px); margin: 0 0 12px; line-height: .95; }
+  h2 em { color: var(--orange); font-style: inherit; }
+  h3 { margin: 0 0 6px; font-size: 19px; }
+  .controls { display: grid; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin: 14px 0 18px; }
+  .controls label.field, .controls .field { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+  .controls input[type=text], .controls select, form.signup input { font: 600 16px var(--font); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(243,246,255,.3); background: #0f1a3f; color: var(--ink); min-height: 48px; width: 100%; }
+  .seg { display: inline-flex; border: 2px solid rgba(243,246,255,.35); border-radius: 12px; overflow: hidden; width: max-content; }
+  .seg button { appearance: none; border: 0; background: transparent; color: var(--ink); font: 800 16px var(--font); padding: 10px 18px; min-height: 44px; cursor: pointer; }
+  .seg button[aria-pressed=true] { background: var(--volt); color: var(--navy); }
+  .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 600; font-size: 15px; cursor: pointer; }
+  .check input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--volt); flex: none; }
+  .deckbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 0 0 12px; }
+  .deckbar .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } .controls { grid-template-columns: 1fr 1fr; } .controls .wide { grid-column: 1 / -1; } }
+  .card { margin: 0; scroll-snap-align: center; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 14px; display: block; box-shadow: 0 16px 34px rgba(0,0,0,.45); background: #0d1a45; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+  .empty { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; font-weight: 600; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .panel.hot { background: var(--orange); color: var(--navy); border-color: transparent; }
+  .panel.hot h2 { color: var(--navy); }
+  .panel.hot .small-print { color: #2a1206; }
+  .panel.hot a { color: var(--navy); }
+  .pass { display: grid; gap: 10px; margin: 18px 0; }
+  .pass h3 { margin: 0; }
+  .pass .acts, .poster .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pass-text { margin: 0; padding: 10px 12px; border-radius: 12px; background: rgba(243,246,255,.08); font-size: 15px; word-break: break-word; }
+  .poster { display: grid; gap: 8px; margin: 0 0 18px; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0 0; }
+  .tabs [role=tab] { appearance: none; border: 2px solid rgba(243,246,255,.35); background: transparent; color: var(--ink); font: 800 16px var(--font); border-radius: 12px; padding: 10px 18px; min-height: 44px; cursor: pointer; }
+  .tabs [role=tab][aria-selected=true] { background: var(--ink); color: var(--navy); border-color: var(--ink); }
+  [role=tabpanel] { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px; margin-top: 10px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin: 6px 0; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 16px 18px; font-weight: 800; font-size: 18px; min-height: 48px; }
+  details > div { padding: 0 18px 16px; }
+  .grid2 { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; background: #fff; color: var(--navy); border-color: transparent; }
+  form.signup .btn { background: var(--navy); color: var(--ink); box-shadow: none; }
+  .small-print { color: var(--muted); font-size: 14px; }
+  code { font-size: 15px; background: rgba(243,246,255,.1); padding: 1px 6px; border-radius: 6px; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  footer p { margin: 6px 0; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="brand"><a href="../">A Lantern Lab project</a></div>
+    <h1>Year in <span>Motion</span></h1>
+    <div class="stripes" aria-hidden="true"><i></i><i></i><i></i></div>
+    <p class="lede">Your free <b>Year in Sport</b>: distance, climbing, streaks, sport mix, route art and your sport personality, as cards sized for stories. Works with your Strava export, a Garmin Connect CSV or plain GPX files. No subscription, no login.</p>
+    <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your activities never leave your device.</span></div>
+
+    <div class="drop" id="drop">
+      <div class="row">
+        <label class="upload btn" for="file">Choose your export
+          <input id="file" type="file" multiple accept=".zip,.csv,.gpx,.tcx,.fit,.gz,.json,application/zip,text/csv,application/gpx+xml">
+        </label>
+        <button type="button" class="btn ghost" id="sample">See a sample deck</button>
+      </div>
+      <p>Strava <b>export .zip</b> (or just its <b>activities.csv</b>), Garmin Connect <b>Activities.csv</b>, or one or more <b>.gpx / .fit / .tcx</b> files. You can also drag them here.</p>
+    </div>
+    <div class="prog" id="prog" hidden><progress id="prog-bar" max="1" value="0"></progress><span class="small-print" id="prog-label"></span></div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <p class="hint">Don't have your file yet? <a href="#export">How to export from Strava, Garmin or as GPX</a>. Strava emails the archive, usually within a few hours.</p>
+    <button type="button" class="peek" id="peek" aria-label="See a sample deck"><img src="preview.jpg" width="720" height="491" alt="Sample cards: activities, distance and route art for a made-up athlete"><span>Tap to see a sample deck</span></button>
+  </header>
+
+  <section id="results" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Your <em>cards</em></h2>
+    <div class="deckbar">
+      <b id="deck-count"></b>
+      <div class="acts">
+        <button type="button" class="btn small" id="share-all">Share all</button>
+        <button type="button" class="btn small ghost" id="zip-all">Download all (.zip)</button>
+        <button type="button" class="btn small ghost" id="reset">Start over</button>
+      </div>
+    </div>
+    <p class="hint">Swipe through the cards (1080&times;1920, sized for stories). Change the year, units or route privacy in <a href="#controls">Adjust the cards</a>.</p>
+    <div id="empty" class="empty" hidden></div>
+    <div id="deck"></div>
+
+    <div class="panel pass" id="pass">
+      <h3>Pass it on</h3>
+      <p class="small-print" style="margin:0">Posting your cards? Add this so your club can make theirs:</p>
+      <p class="pass-text" id="pass-text"></p>
+      <div class="acts"><button type="button" class="btn small" id="pass-share">Share the link</button><button type="button" class="btn small ghost" id="pass-copy">Copy text + link</button></div>
+      <p class="small-print" id="pass-msg" role="status" aria-live="polite" style="margin:0"></p>
+    </div>
+
+    <div class="panel poster">
+      <h3>Want it on the wall?</h3>
+      <p class="small-print" style="margin:0">An 18&times;24 in print-ready poster of every route plus your year's stats, made on your device like everything else.</p>
+      <div class="acts"><button type="button" class="btn small volt" id="poster" disabled aria-disabled="true">Printable poster (coming soon)</button></div>
+    </div>
+
+    <div class="controls" id="controls">
+      <h3 class="wide" style="margin:0">Adjust the cards</h3>
+      <label class="field">Year
+        <select id="year"></select>
+      </label>
+      <div class="field"><span id="units-label">Units</span>
+        <div class="seg" role="group" aria-labelledby="units-label"><button type="button" id="u-metric" aria-pressed="true">km / m</button><button type="button" id="u-imperial" aria-pressed="false">mi / ft</button></div>
+      </div>
+      <label class="field">Your name on the cards (optional)
+        <input type="text" id="name-input" maxlength="40" autocomplete="off" placeholder="e.g. Sam">
+      </label>
+      <label class="field" id="garmin-units-wrap" hidden>Distances in your Garmin file are in
+        <select id="garmin-units"><option value="metric">kilometers and meters</option><option value="imperial">miles and feet</option></select>
+      </label>
+      <label class="check wide"><input type="checkbox" id="trim" checked> <span>Hide 500&nbsp;m around every start and finish on the route art (recommended: routes can reveal where you live)</span></label>
+      <label class="check wide"><input type="checkbox" id="hide-routes"> <span>Hide routes completely (drops the route art card)</span></label>
+      <p class="small-print wide" id="routes-note" style="margin:0"></p>
+    </div>
+  </section>
+
+  <section id="export" aria-labelledby="export-h">
+    <h2 id="export-h">Get your <em>file</em></h2>
+    <div class="tabs" role="tablist" aria-label="Where your activities live">
+      <button type="button" role="tab" id="tab-strava" aria-controls="panel-strava" aria-selected="true">Strava</button>
+      <button type="button" role="tab" id="tab-garmin" aria-controls="panel-garmin" aria-selected="false" tabindex="-1">Garmin</button>
+      <button type="button" role="tab" id="tab-gpx" aria-controls="panel-gpx" aria-selected="false" tabindex="-1">GPX files</button>
+    </div>
+    <div role="tabpanel" id="panel-strava" aria-labelledby="tab-strava">
+      <ol class="steps">
+        <li>On a computer, sign in at <b>strava.com</b> (the bulk export isn't in the phone app).</li>
+        <li>Hover over your name (top right) and choose <b>Settings</b>, then the <b>My Account</b> tab.</li>
+        <li>Under <b>Download your account</b>, click <b>Get Started</b>, then <b>Request download</b>.</li>
+        <li>Strava emails you a link, usually within a few hours. Download the <b>.zip</b> and drop it here as is. Big archives with photos are fine: only <code>activities.csv</code> and your route files are read.</li>
+      </ol>
+      <p class="small-print">Source: <a href="https://support.strava.com/hc/en-us/articles/216918437-Exporting-your-Data-and-GDPR" rel="noopener">Strava Support: Exporting your Data</a>. On a phone? You can unzip it and upload just <code>activities.csv</code> (no route art then).</p>
+    </div>
+    <div role="tabpanel" id="panel-garmin" aria-labelledby="tab-garmin" hidden>
+      <ol class="steps">
+        <li>On a computer, sign in at <b>connect.garmin.com</b> and open <b>Activities</b> &rarr; <b>All Activities</b>.</li>
+        <li><b>Scroll down until the whole year has loaded.</b> Garmin only exports the rows you can see.</li>
+        <li>Click <b>Export CSV</b> (top right of the list) and upload <b>Activities.csv</b> here.</li>
+        <li>Want route art too? Export single activities as <b>GPX</b> (activity &rarr; gear icon &rarr; Export to GPX) and add them along with the CSV.</li>
+      </ol>
+      <p class="small-print">Garmin's full "Export Your Data" archive (Account &rarr; Data Management) also works: drop the .zip and we read its activity summary file.</p>
+    </div>
+    <div role="tabpanel" id="panel-gpx" aria-labelledby="tab-gpx" hidden>
+      <ol class="steps">
+        <li>Export your activities as <b>.gpx</b> (also <b>.fit</b>, <b>.tcx</b> or gzipped versions) from your watch, app or bike computer.</li>
+        <li>Tap <b>Choose your export</b> and select them all at once, or put them in one .zip.</li>
+        <li>Distance, time and climbing are worked out from the tracks themselves.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="how-we-know" aria-labelledby="hwk-h">
+    <h2 id="hwk-h">Your activities never leave <em>your device</em></h2>
+    <div class="grid2">
+      <div class="panel"><h3>There's no server to send them to</h3><p>This page is plain files on GitHub Pages. Your export is read, counted and drawn into cards by JavaScript in this browser tab. Close the tab and it's gone.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only allows one outside address: the optional email signup, which sends just your email. No analytics, no trackers, no map tiles, no web fonts.</p></div>
+      <div class="panel"><h3>Routes are drawn, not mapped</h3><p>Route art is plain line drawings with no map and no coordinates. By default we also cut 500&nbsp;m around every start and finish, so your front door isn't on your story.</p></div>
+      <div class="panel"><h3>Try it offline</h3><p>Load this page, turn on airplane mode, then add your export. It still works. The code is <a href="https://github.com/lanternlab2027/lab/tree/main/docs/sport" rel="noopener">open on GitHub</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="notify" aria-labelledby="notify-h">
+    <div class="panel hot">
+      <h2 id="notify-h" style="font-size:34px">Waiting on your export?</h2>
+      <p class="small-print">Optional. Get one email reminding you to come back and make your cards, plus a note when next year's edition is ready. We only send your email address; nothing from your activities is ever included.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small-print" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Remind me</button>
+      </form>
+      <p class="small-print" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Is this made by Strava or Garmin?</summary><div><p>No. Year in Motion is an independent project that reads the export files Strava and Garmin already let you download. It is not affiliated with, endorsed by or connected to Strava or Garmin, and it doesn't use either company's API.</p></div></details>
+    <details><summary>Is it really free?</summary><div><p>Yes. Every card is free. A printable poster may come later as an optional extra.</p></div></details>
+    <details><summary>Why are some cards missing?</summary><div><p>Cards only appear when your data supports them. Route art needs GPS files (the Strava .zip, or GPX/FIT/TCX files), so a CSV alone won't have it. "Fastest efforts" only shows runs close to 5K, 10K, half or full marathon distance, and rides of 20&nbsp;km or more. It uses whole-activity averages, so it's a rough guide rather than an official PR.</p></div></details>
+    <details><summary>My times of day look off</summary><div><p>Strava's export stores start times in UTC. We convert them with your phone's time zone, or with the zone your default activity names ("Morning Run", "Evening Ride") point to. Activities recorded while traveling may land an hour or two off.</p></div></details>
+    <details><summary>My Garmin distances look wrong</summary><div><p>Garmin's CSV uses your account's units without saying which. We guess, and you can switch it under <b>Adjust the cards</b> ("Distances in your Garmin file are in").</p></div></details>
+    <details><summary>How is the sport personality picked?</summary><div><p>From your numbers alone: streaks, how many weeks you were active, weekend share, start times, climbing per distance, average session length, sport variety, commutes and how many different places you started from. The strongest signal wins.</p></div></details>
+  </section>
+
+  <footer>
+    <p><a href="../">A Lantern Lab project</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/sport" rel="noopener">GitHub</a></p>
+    <p id="disclaimer">Not affiliated with Strava or Garmin. Strava is a trademark of Strava, Inc. Garmin and Garmin Connect are trademarks of Garmin Ltd. or its subsidiaries. Names are used only to describe which export files this tool reads.</p>
+  </footer>
+</div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="zip.js"></script>
+<script src="parser.js"></script>
+<script src="stats.js"></script>
+<script src="demo.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

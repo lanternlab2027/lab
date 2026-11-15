@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Netflix Wrapped 2026: Free Netflix Year in Review From Your Viewing History</title>
+<meta name="description" content="Make your Netflix Wrapped for 2026, free. Drop in your Netflix viewing history CSV and get a Netflix year in review as shareable story cards: titles watched, top show, biggest binge, longest streak, comfort watch and your viewer personality. Nothing is uploaded; it all runs on your device.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/netflix/">
+<meta name="theme-color" content="#081316">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Netflix Wrapped 2026: your year on screen">
+<meta property="og:description" content="A free Netflix year in review from your own viewing history: top show, biggest binge, streak, comfort watch and viewer personality as shareable cards. 100% on your device.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/netflix/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/netflix/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Streaming Wrapped: sample year-on-screen cards made from an invented viewing history">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Netflix Wrapped 2026: your year on screen">
+<meta name="twitter:description" content="Turn your Netflix viewing history into shareable year-in-review cards. Free, and 100% on your device.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/netflix/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Streaming Wrapped",
+ "alternateName": ["Netflix Wrapped", "Netflix Year in Review"],
+ "url": "https://lanternlab2027.github.io/lab/netflix/",
+ "applicationCategory": "EntertainmentApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "Turn a Netflix viewing-history CSV into shareable year-in-review cards. Runs entirely in your browser; not affiliated with Netflix.",
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #081316; --bg2: #0e2026; --ink: #f2ead9; --muted: #a9b7b4; --line: rgba(242,234,217,.16);
+    --card: rgba(255,255,255,.05); --amber: #ffb648; --amber2: #ffcf6a; --teal: #5ee0d0; --teal2: #0f5056; --coral: #ff9b73;
+    --display: "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed", "DejaVu Sans Condensed", "Helvetica Neue", Arial, sans-serif;
+    --serif: Georgia, "Iowan Old Style", Cambria, serif;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); background-image: linear-gradient(170deg, rgba(255,214,140,.10) 0%, transparent 38%), radial-gradient(900px 600px at 110% 10%, rgba(94,224,208,.10) 0%, transparent 60%); background-repeat: no-repeat; color: var(--ink); font-family: var(--font); line-height: 1.55; font-size: 17px; overflow-x: hidden; }
+  a { color: var(--teal); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 40px 0 16px; }
+  .brand { font-weight: 800; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  h1 { font-family: var(--display); font-size: clamp(54px, 15vw, 120px); line-height: .9; margin: 14px 0 16px; font-weight: 800; letter-spacing: -.01em; text-transform: uppercase; }
+  h1 em { font-style: normal; color: var(--amber); display: block; }
+  .lede { font-size: clamp(18px, 4.6vw, 22px); color: #d9d3c4; max-width: 680px; margin: 0 0 18px; }
+  .lede b { color: var(--ink); }
+  .privacy { display: inline-flex; gap: 10px; align-items: center; background: var(--teal2); color: #eafffb; padding: 10px 16px; border-radius: 14px; font-weight: 700; border: 1px solid rgba(94,224,208,.4); }
+  .privacy svg { flex: none; color: var(--teal); }
+  .drop { margin: 22px 0 8px; border: 2px dashed rgba(242,234,217,.32); border-radius: 22px; padding: 26px 18px; text-align: center; background: var(--card); transition: border-color .15s, background .15s; }
+  .drop.over { border-color: var(--amber); background: rgba(255,182,72,.08); }
+  .drop p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+  .btn { appearance: none; border: 0; border-radius: 999px; font: 800 17px/1 var(--font); padding: 16px 24px; cursor: pointer; color: #1a1206; background: var(--amber); min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 6px 20px rgba(255,182,72,.25); }
+  .btn:hover { background: var(--amber2); }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label.upload:focus-within { outline: 3px solid var(--teal); outline-offset: 3px; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid rgba(242,234,217,.4); box-shadow: none; }
+  .btn.ghost:hover { background: rgba(242,234,217,.08); }
+  .btn.small { padding: 10px 16px; font-size: 15px; min-height: 44px; }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  label.upload { display: inline-flex; }
+  label.upload input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .linkbtn { background: none; border: 0; color: var(--teal); font: 700 16px var(--font); text-decoration: underline; cursor: pointer; padding: 12px 6px; min-height: 44px; }
+  .status { min-height: 1.5em; margin: 10px 0 0; color: var(--teal); font-weight: 600; }
+  .status.err { color: var(--coral); }
+  section { margin: 44px 0; }
+  h2 { font-family: var(--display); font-size: clamp(32px, 7.4vw, 48px); margin: 0 0 12px; line-height: 1; text-transform: uppercase; color: var(--amber2); }
+  h3 { margin: 0 0 6px; font-size: 19px; }
+  .controls { display: grid; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin: 14px 0 18px; }
+  .controls label.field { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+  .controls input[type=text], .controls select, form.signup input { font: 600 16px var(--font); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(242,234,217,.3); background: #0f1d21; color: var(--ink); min-height: 48px; width: 100%; }
+  .deckbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 0 0 12px; }
+  .deckbar .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+  .card { margin: 0; scroll-snap-align: center; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 16px; display: block; box-shadow: 0 16px 34px rgba(0,0,0,.5); background: #10262d; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+  .empty { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; font-weight: 600; }
+  .peek { display: block; position: relative; width: 100%; margin: 18px 0 0; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 18px; overflow: hidden; }
+  .peek img { display: block; width: 100%; height: 210px; object-fit: cover; object-position: center top; }
+  .peek span { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 12px 12px; background: linear-gradient(transparent, rgba(6,14,17,.95)); color: var(--ink); font: 800 16px var(--font); text-align: center; }
+  .peek:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+  @media (min-width: 760px) { .peek { max-width: 520px; } .peek img { height: 300px; } }
+  .pass { display: grid; gap: 10px; margin: 18px 0; }
+  .pass h3 { margin: 0; }
+  .pass .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pass-text { margin: 0; padding: 10px 12px; border-radius: 12px; background: rgba(242,234,217,.07); font-size: 15px; word-break: break-word; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .panel.amber { background: linear-gradient(160deg, #ffcf6a, #f29a2e); color: #1c1307; border-color: transparent; }
+  .panel.amber h2 { color: #1c1307; }
+  .panel.amber .small-print { color: #4a3311; }
+  .panel.amber a { color: #0b4248; }
+  .panel.amber form.signup input { background: #fff7e6; color: #1c1307; border-color: rgba(28,19,7,.3); }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 16px 18px; font-weight: 800; font-size: 18px; min-height: 48px; }
+  details > div { padding: 0 18px 16px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin: 6px 0; }
+  .grid2 { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } .controls { grid-template-columns: 1fr 1fr; } .controls .wide { grid-column: 1 / -1; } }
+  form.signup { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  form.signup input { flex: 1 1 220px; }
+  form.signup .btn { background: #0b4248; color: #fff7e6; box-shadow: none; }
+  .small-print { color: var(--muted); font-size: 14px; }
+  .source { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+  code { font-size: 15px; background: rgba(242,234,217,.1); padding: 1px 6px; border-radius: 6px; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  footer p { margin: 6px 0; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="brand">A Lantern Lab project</div>
+    <h1>Streaming <em>Wrapped</em></h1>
+    <p class="lede">A free <b>Netflix Wrapped</b> made from your own viewing history: titles watched, top show, biggest binge, longest streak, comfort watch and your viewer personality, as cards sized for stories.</p>
+    <div class="privacy" id="privacy-badge"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><span>Your viewing history never leaves your device.</span></div>
+
+    <div class="drop" id="drop">
+      <label class="upload btn" for="file">Choose your viewing history
+        <input id="file" type="file" accept=".csv,.zip,.txt,text/csv,application/zip,text/plain">
+      </label>
+      <p>The <b>NetflixViewingHistory.csv</b> from Viewing activity &rarr; Download all. You can also drag the file here.</p>
+      <button type="button" class="btn ghost small" id="sample">See a sample deck first</button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <p class="hint">In a web browser: Account &rarr; Profiles &rarr; pick a profile &rarr; Viewing activity &rarr; <b>Download all</b> at the bottom. <a href="#export">Step by step</a>.</p>
+    <button type="button" class="peek" id="peek" aria-label="See a sample deck"><img src="preview.jpg" width="720" height="491" alt="Sample cards made from an invented viewing history: titles watched, top show and the big binge"><span>Tap to see a sample deck</span></button>
+  </header>
+
+  <section id="results" hidden aria-labelledby="results-h">
+    <h2 id="results-h">Your cards</h2>
+    <div class="deckbar">
+      <b id="deck-count"></b>
+      <div class="acts">
+        <button type="button" class="btn small" id="share-all">Share all</button>
+        <button type="button" class="btn small ghost" id="zip-all">Download all (.zip)</button>
+        <button type="button" class="btn small ghost" id="reset">Start over</button>
+      </div>
+    </div>
+    <p class="hint">Swipe through the cards (1080&times;1920, sized for stories). Want a different year, or your name on them? <a href="#controls">Adjust the cards</a>.</p>
+    <div id="empty" class="empty" hidden></div>
+    <div id="deck"></div>
+
+    <div class="panel pass" id="pass">
+      <h3>Pass it on</h3>
+      <p class="small-print" style="margin:0">Posting the cards? Add this so your friends can make their own:</p>
+      <p class="pass-text" id="pass-text"></p>
+      <div class="acts"><button type="button" class="btn small" id="pass-share">Share the link</button><button type="button" class="btn small ghost" id="pass-copy">Copy text + link</button></div>
+      <p class="small-print" id="pass-msg" role="status" aria-live="polite" style="margin:0"></p>
+    </div>
+
+    <div class="controls" id="controls">
+      <h3 class="wide" style="margin:0">Adjust the cards</h3>
+      <label class="field">Year
+        <select id="year"></select>
+      </label>
+      <label class="field">Your name on the cards (optional)
+        <input type="text" id="name-input" maxlength="40" autocomplete="off" placeholder="e.g. Sam">
+      </label>
+      <label class="field wide" id="profile-wrap" hidden>Profile
+        <select id="profile"></select>
+      </label>
+    </div>
+  </section>
+
+  <section id="export" aria-labelledby="export-h">
+    <h2 id="export-h">How to download your viewing history</h2>
+    <p>Netflix gives you a plain <b>.csv</b> file with a <b>Title</b> and a <b>Date</b> for everything a profile watched. It downloads instantly. Upload it here as it is.</p>
+    <details open>
+      <summary>Viewing activity (instant, one profile)</summary>
+      <div><ol class="steps">
+        <li>In a web browser (not the TV or phone app), sign in at netflix.com and go to your <b>Account</b> page.</li>
+        <li>Select <b>Profiles</b>, then choose the profile you want.</li>
+        <li>Open <b>Viewing activity</b>.</li>
+        <li>Scroll to the bottom and select <b>Download all</b>. You get <b>NetflixViewingHistory.csv</b>.</li>
+        <li>Upload that file here. On a phone, use your browser (Safari or Chrome); the file lands in Downloads or Files.</li>
+      </ol>
+      <p class="source">Steps from Netflix&rsquo;s help center: <a href="https://help.netflix.com/en/node/101917" rel="noopener">How to see viewing history and device activity</a>.</p></div>
+    </details>
+    <details>
+      <summary>Full data request (every profile, takes longer)</summary>
+      <div><p>The account owner can also request a copy of all account data at <b>netflix.com/account/getmyinfo</b>. Netflix says it can take up to 30 days (<a href="https://help.netflix.com/en/node/100624" rel="noopener">Netflix help</a>). The zip it sends has <code>CONTENT_INTERACTION/ViewingActivity.csv</code>, which covers every profile. Upload the zip or that file; you can switch between profiles above the cards, and trailers and previews are left out.</p></div>
+    </details>
+    <details>
+      <summary>What can the cards know?</summary>
+      <div><p>The Download all file only has a title and a date, with no times or durations. So the cards count titles and days, not minutes; the hours figure is an estimate (45 minutes an episode, 1 hour 50 for a movie). A series is spotted from titles like <i>Show: Season 1: Episode</i>; anything without a season or a repeated show name counts as a movie or special. Netflix may list a title you watched twice only once, at the latest date.</p></div>
+    </details>
+  </section>
+
+  <section id="how-we-know" aria-labelledby="hwk-h">
+    <h2 id="hwk-h">Your history never leaves your device. How we know:</h2>
+    <div class="grid2">
+      <div class="panel"><h3>There&rsquo;s no server to send it to</h3><p>This page is plain files on GitHub Pages. Your file is read, counted and drawn into cards by JavaScript running in this browser tab. Close the tab and it&rsquo;s gone.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only lets it talk to one outside address: the optional email signup below, which sends just your email. No analytics, no trackers, no third-party scripts, no web fonts.</p></div>
+      <div class="panel"><h3>It&rsquo;s open source</h3><p>Every line is on GitHub: <a href="https://github.com/lanternlab2027/lab/tree/main/docs/netflix" rel="noopener">lanternlab2027/lab &rarr; docs/netflix</a>. The zip helper (JSZip) is copied into the folder, not loaded from a CDN.</p></div>
+      <div class="panel"><h3>Try it offline</h3><p>Load this page, turn on airplane mode, then upload your file. It still works, because nothing needs the internet.</p></div>
+    </div>
+  </section>
+
+  <section id="notify" aria-labelledby="notify-h">
+    <div class="panel amber">
+      <h2 id="notify-h" style="font-size:32px">Get next year&rsquo;s Streaming Wrapped</h2>
+      <p class="small-print">Optional. We&rsquo;ll email you once when the next edition is ready. We only send your email address; nothing from your viewing history is ever included.</p>
+      <form class="signup" id="signup-form">
+        <label for="signup-email" class="small-print" style="flex-basis:100%;margin:0">Email</label>
+        <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn">Remind me</button>
+      </form>
+      <p class="small-print" id="signup-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Does Netflix have its own Wrapped?</summary><div><p>Not a personal year in review like Spotify&rsquo;s. That&rsquo;s why this exists: it builds one from the viewing history Netflix already lets you download.</p></div></details>
+    <details><summary>Is this made by Netflix?</summary><div><p>No. Streaming Wrapped is an independent project. It is not affiliated with, endorsed by or sponsored by Netflix, and it uses no Netflix logos or artwork.</p></div></details>
+    <details><summary>How is the viewer personality picked?</summary><div><p>From your numbers alone: your biggest day, how much of your year went to one show, your movie share, weekend share, streaks, the show you kept coming back to, and how bunched-up your watching is. The strongest signal wins.</p></div></details>
+    <details><summary>It says &ldquo;doesn&rsquo;t look like a Netflix viewing history&rdquo;</summary><div><p>Upload the original <b>.csv</b> from Viewing activity &rarr; Download all. Files re-saved from Excel or Numbers, other languages and other date formats (11/14/26, 14/11/2026, 14.11.26) all work, but the file needs a title column and a date column.</p></div></details>
+    <details><summary>Shared profile? Kids&rsquo; shows everywhere?</summary><div><p>Each profile downloads separately, so pick your own profile before you tap Download all.</p></div></details>
+    <details><summary>Is it free?</summary><div><p>Yes, completely.</p></div></details>
+  </section>
+
+  <footer>
+    <p><a href="../">A Lantern Lab project</a> &middot; Open source on <a href="https://github.com/lanternlab2027/lab/tree/main/docs/netflix" rel="noopener">GitHub</a></p>
+    <p id="disclaimer">Not affiliated with Netflix. Netflix is a trademark of Netflix, Inc., used here only to describe the file this tool reads. The sample deck uses invented titles.</p>
+  </footer>
+</div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="parser.js"></script>
+<script src="stats.js"></script>
+<script src="demo.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
