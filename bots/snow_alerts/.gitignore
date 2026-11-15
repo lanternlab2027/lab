@@ -1,0 +1,4 @@
+outbox/
+gridpoint_cache.json
+*.tmp
+__pycache__/

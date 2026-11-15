@@ -1,0 +1,14 @@
+{
+ "_comment": "Test-only subscribers for the snow-day tag. Fake example.com addresses.",
+ "snow-day": [
+  {"id": 910001, "email": "parent-a@example.com", "fields": {"snow_zip": "14201"}},
+  {"id": 910002, "email": "parent-b@example.com", "fields": {"snow_zip": " 14201-1234 "}},
+  {"id": 910003, "email": "PARENT-A@example.com", "fields": {"snow_zip": "14201"}},
+  {"id": 910004, "email": "buffalo-south@example.com", "fields": {"snow_zip": "14202"}},
+  {"id": 910005, "email": "atl@example.com", "fields": {"snow_zip": "30303"}},
+  {"id": 910006, "email": "den@example.com", "fields": {"snow_zip": "80202"}},
+  {"id": 910007, "email": "nozip@example.com", "fields": {"snow_zip": null}},
+  {"id": 910008, "email": "badzip@example.com", "fields": {"snow_zip": "abc"}},
+  {"id": 910009, "email": "unknown@example.com", "fields": {"snow_zip": "00000"}}
+ ]
+}
