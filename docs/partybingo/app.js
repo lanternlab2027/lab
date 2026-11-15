@@ -23,8 +23,24 @@
   var toastTimer;
   function toast(msg) { var t = $('toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.hidden = true; }, 2600); }
   function baseUrl() { return location.origin + location.pathname; }
-  function gameUrl() { return baseUrl() + '#' + state.hash; }
+  // ?ref= passthrough (URL only, nothing stored): opened with ?ref=X, links this visitor shares carry
+  // ?ref=share-X (then share2-X, share3-X...); no ref -> ?ref=share. The ref sits in the query string,
+  // before the #, so the game payload in the hash is untouched.
+  function nextRef() {
+    var r = '';
+    try { r = new URLSearchParams(location.search).get('ref') || ''; } catch (e) { r = ''; }
+    r = r.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+    if (!r) return 'share';
+    var m = /^share(\d*)(?:-(.+))?$/.exec(r);
+    if (m) return 'share' + ((m[1] ? +m[1] : 1) + 1) + (m[2] ? '-' + m[2] : '');
+    return 'share-' + r;
+  }
+  var REF = nextRef();
+  // Links handed to other people (copy, Share, QR, check link).
+  function gameUrl() { return baseUrl() + '?ref=' + encodeURIComponent(REF) + '#' + state.hash; }
   function checkUrl() { return gameUrl() + '&v=' + C.verifyParam(state.seed, state.marks, state.time); }
+  // Links this visitor follows on this page: keep their own query so it is a hash change, not a reload.
+  function selfUrl() { return baseUrl() + location.search + '#' + state.hash; }
 
   async function copyText(text, input) {
     try { await navigator.clipboard.writeText(text); return true; }
@@ -138,7 +154,7 @@
     state.game = game; state.hash = await C.encode(game); state.id = C.gameId(game); state.createdFrom = draftKey();
     var url = gameUrl();
     $('game-link').value = url;
-    $('open-card').href = url;
+    $('open-card').href = selfUrl();
     $('share-title').textContent = game.title;
     drawQR(url);
     $('share').hidden = false; $('printsec').hidden = false;
@@ -341,7 +357,7 @@
       s.textContent = prog.bingos ? 'BINGO' + (state.time ? ' at ' + R.clock(state.time) : '') + ' · ' + prog.done + ' squares marked' : prog.done + ' squares marked, no bingo yet';
       b.append(s, '. It’s rebuilt from the link, so the squares and their order are exactly what they saw.');
       b.hidden = false;
-      $('me-panel').hidden = true; $('check-panel').hidden = false; $('own-card').href = gameUrl();
+      $('me-panel').hidden = true; $('check-panel').hidden = false; $('own-card').href = selfUrl();
       $('board').classList.add('readonly'); $('b-label').textContent = 'Shared card'; $('b-foot').textContent = 'Checked from a shared link';
       $('g-hint').textContent = 'Read only.';
     } else {
@@ -413,6 +429,7 @@
 
   initHost();
   initGuest();
+  $('host-own').href = './' + location.search; // "Host your own game" keeps the incoming ref
   window.addEventListener('hashchange', route);
   route().then(function () { document.documentElement.dataset.ready = '1'; });
 })();

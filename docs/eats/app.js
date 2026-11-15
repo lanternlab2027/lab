@@ -6,6 +6,21 @@
   var $ = function (s) { return document.querySelector(s); };
   var state = { results: [], resultsKey: '', current: null };
 
+  // ---------- ?ref= passthrough (URL only, nothing stored) ----------
+  // Opened with ?ref=X -> links this visitor shares carry ref=share-X (then share2-X, share3-X...);
+  // no ref -> ref=share. The incoming ref is also kept in the address bar as the page navigates.
+  var IN_REF = '';
+  try { IN_REF = (new URLSearchParams(location.search).get('ref') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40); } catch (e) { IN_REF = ''; }
+  function nextRef() {
+    var r = IN_REF;
+    if (!r) return 'share';
+    var m = /^share(\d*)(?:-(.+))?$/.exec(r);
+    if (m) return 'share' + ((m[1] ? +m[1] : 1) + 1) + (m[2] ? '-' + m[2] : '');
+    return 'share-' + r;
+  }
+  var REF = nextRef();
+  function keepRef(qs) { return IN_REF ? qs + '&ref=' + encodeURIComponent(IN_REF) : qs; }
+
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function setStatus(msg, err) { var el = $('#status'); el.textContent = msg || ''; el.className = 'status' + (err ? ' err' : ''); }
   var toastTimer;
@@ -43,7 +58,7 @@
         return Object.assign({}, r, { cardGrade: gr ? gr.grade : (grades ? 'N' : null) });
       });
       state.resultsKey = JSON.stringify([q, area]);
-      if (push) history.pushState({ q: q, area: area }, '', '?' + new URLSearchParams(Object.assign({ q: q }, area.boro ? { boro: area.boro } : {}, area.zip ? { zip: area.zip } : {})).toString());
+      if (push) history.pushState({ q: q, area: area }, '', keepRef('?' + new URLSearchParams(Object.assign({ q: q }, area.boro ? { boro: area.boro } : {}, area.zip ? { zip: area.zip } : {})).toString()));
       renderResults(mode, q, area);
       showResults();
     } catch (e) {
@@ -87,7 +102,7 @@
     try {
       var rows = await S.get(S.detailParams(camis));
       if (!rows.length) { setStatus('No records found for that restaurant. It may have closed and been removed from the city’s data.', true); return; }
-      if (push) history.pushState({ camis: camis }, '', '?camis=' + camis);
+      if (push) history.pushState({ camis: camis }, '', keepRef('?camis=' + camis));
       renderDetail(rows);
       setStatus('');
       $('#results-sec').hidden = true;
@@ -206,7 +221,7 @@
   }
 
   // ---------- Sharing ----------
-  function shareUrl() { return SITE + '?camis=' + (state.current ? state.current.id.camis : ''); }
+  function shareUrl() { return SITE + '?camis=' + (state.current ? state.current.id.camis : '') + '&ref=' + encodeURIComponent(REF); }
   function shareText() {
     var c = state.current; if (!c) return '';
     var when = c.cur.gradedInspection ? ' (graded ' + G.fmtDate(c.cur.gradeDate) + ')' : '';

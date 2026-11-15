@@ -3,6 +3,19 @@
   'use strict';
   var C = window.BingoCodec, R = window.BingoRender, IDEAS = window.BingoIdeas;
   var SITE = 'https://lanternlab2027.github.io/lab/bingo/';
+  // ?ref= passthrough (URL only, nothing stored): opened with ?ref=X, links this visitor shares carry
+  // ?ref=share-X (then share2-X, share3-X...); no ref -> ?ref=share. The ref goes in the query string,
+  // before the #, so the card/group payload in the hash is untouched.
+  function nextRef() {
+    var r = '';
+    try { r = new URLSearchParams(location.search).get('ref') || ''; } catch (e) { r = ''; }
+    r = r.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+    if (!r) return 'share';
+    var m = /^share(\d*)(?:-(.+))?$/.exec(r);
+    if (m) return 'share' + ((m[1] ? +m[1] : 1) + 1) + (m[2] ? '-' + m[2] : '');
+    return 'share-' + r;
+  }
+  var REF_Q = '?ref=' + encodeURIComponent(nextRef());
   var KEY_CUR = 'goalbingo:v1:current', KEY_PREV = 'goalbingo:v1:prev';
   var $ = function (id) { return document.getElementById(id); };
 
@@ -378,7 +391,7 @@
 
   function groupUrl() {
     var c = C.normalize(state.card); c.title = '';
-    return location.origin + location.pathname + '#' + C.encodeGroup(c);
+    return location.origin + location.pathname + REF_Q + '#' + C.encodeGroup(c);
   }
   $('copy-group').addEventListener('click', function () { copy(groupUrl(), 'Group link copied. It contains no goals.'); });
   $('share-group').addEventListener('click', function () {
@@ -428,7 +441,7 @@
   $('share-img').addEventListener('click', busy($('share-img'), function () {
     return toBlob(R.render(state.card, 'story'), 'image/png').then(function (blob) {
       var file = new File([blob], slug() + '.png', { type: 'image/png' });
-      var data = { files: [file], title: 'My 2027 goal bingo', text: 'My 2027 goal bingo card. Make yours: ' + SITE };
+      var data = { files: [file], title: 'My 2027 goal bingo', text: 'My 2027 goal bingo card. Make yours: ' + SITE + REF_Q };
       if (navigator.canShare && navigator.canShare(data)) return navigator.share(data).catch(function () {});
       saveBlob(blob, file.name); $('dl-msg').textContent = 'Saved the image. Post it with: Make yours at lanternlab2027.github.io/lab/bingo';
     });

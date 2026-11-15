@@ -192,6 +192,30 @@ function pngSize(file) { const b = fs.readFileSync(file); return { w: b.readUInt
   check(e3.length === 0 && /#c=/.test(p3.url()) && /1 of 24/.test(await p3.textContent('#progress')), 'works with storage blocked; hash still saves the card');
   await ctx3.close();
 
+  // ---- ?ref passthrough: group invite + share text carry ref=share-X; hash payload untouched
+  console.log('\n== ?ref passthrough ==');
+  const ctx5 = await browser.newContext({ viewport: { width: 390, height: 900 }, permissions: ['clipboard-read', 'clipboard-write'] });
+  await ctx5.route('**/*', (route) => route.request().url().startsWith(ORIGIN + '/') ? route.continue() : route.abort());
+  await ctx5.addInitScript(() => { navigator.canShare = () => true; navigator.share = (d) => { window.__shared = { text: d.text, url: d.url }; return Promise.resolve(); }; });
+  const p5 = await ctx5.newPage(); const e5 = []; p5.on('pageerror', (e) => e5.push(String(e)));
+  await p5.goto(URL0 + '?ref=tiktok'); await p5.waitForLoadState('networkidle');
+  await p5.fill('#group-input', 'Book club'); await p5.waitForTimeout(300);
+  const expHash = await p5.evaluate(() => { const c = JSON.parse(JSON.stringify(window.__bingoState.card)); c.title = ''; return BingoCodec.encodeGroup(c); });
+  await p5.click('#copy-group'); await p5.waitForTimeout(200);
+  const g5 = await p5.evaluate(() => navigator.clipboard.readText());
+  check(g5 === URL0 + '?ref=share-tiktok#' + expHash, '?ref=tiktok -> group link carries ?ref=share-tiktok before the #, hash unchanged');
+  await p5.click('#share-group'); await p5.waitForTimeout(100);
+  check((await p5.evaluate(() => window.__shared.url)) === g5, 'Share group invite uses the same ref link');
+  await p5.click('#fill-empty'); await p5.click('#share-img'); await p5.waitForFunction(() => window.__shared && /Make yours/.test(window.__shared.text));
+  check((await p5.evaluate(() => window.__shared.text)) === 'My 2027 goal bingo card. Make yours: https://lanternlab2027.github.io/lab/bingo/?ref=share-tiktok', 'share-image text: Make yours link carries ref=share-tiktok');
+  await p5.goto(g5); await p5.waitForLoadState('networkidle');
+  check(/Book club/.test(await p5.textContent('#group-banner')) && /^\?ref=share-tiktok$/.test(new URL(p5.url()).search), 'friend opens the ref group link: group decodes, ref kept in the address bar');
+  await p5.fill('#group-input', 'Book club'); await p5.waitForTimeout(300);
+  await p5.click('#copy-group'); await p5.waitForTimeout(200);
+  check(/^[^#]*\?ref=share2-tiktok#g=/.test(await p5.evaluate(() => navigator.clipboard.readText())), 'next hop: share2-tiktok');
+  check(e5.length === 0, 'no page errors on the ref run');
+  await ctx5.close();
+
   // ---- CSP blocks exfiltration
   const ctx4 = await browser.newContext(); const p4 = await ctx4.newPage();
   await p4.goto(URL0);

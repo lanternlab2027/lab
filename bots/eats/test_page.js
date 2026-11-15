@@ -164,7 +164,7 @@ async function noHScroll(page) { return page.evaluate(() => document.documentEle
     // Copy link
     await page.click('#copy');
     const clip = await page.evaluate(() => navigator.clipboard.readText()).catch(() => '');
-    check(clip.startsWith("Before you go: Sunny's Slice got an A") && clip.includes('lanternlab2027.github.io/lab/eats/?camis=50000001'), 'copy link text: ' + clip.slice(0, 60));
+    check(clip.startsWith("Before you go: Sunny's Slice got an A") && clip.endsWith('lanternlab2027.github.io/lab/eats/?camis=50000001&ref=share'), 'copy link text: ' + clip.slice(0, 60) + ' ... ' + clip.slice(-50));
 
     // Kit signup
     check(await page.locator('#alert').isVisible(), 'alert signup visible when tag configured');
@@ -241,6 +241,29 @@ async function noHScroll(page) { return page.evaluate(() => document.documentEle
     await s2.page.waitForSelector('#detail:not([hidden])');
     check(await s2.page.locator('#alert').isVisible(), 'alert signup visible with real Kit tag');
     await s2.ctx.close();
+  }
+
+  console.log('\n== ?ref passthrough ==');
+  {
+    const { ctx, page, log } = await setup(browser, 390);
+    await ctx.addInitScript(() => { navigator.canShare = () => true; navigator.share = (d) => { window.__shared = d.text; return Promise.resolve(); }; });
+    await page.goto(ORIGIN + '/eats/?ref=tiktok');
+    await page.fill('#q', 'sunny'); await page.click('#go');
+    await page.waitForSelector('#results li');
+    check(new URL(page.url()).searchParams.get('ref') === 'tiktok', 'search keeps the incoming ref in the address bar (' + new URL(page.url()).search + ')');
+    await page.click('#results li button'); await page.waitForSelector('#detail:not([hidden])');
+    check(/camis=50000001/.test(page.url()) && new URL(page.url()).searchParams.get('ref') === 'tiktok', 'detail URL keeps camis + incoming ref');
+    await page.click('#copy');
+    const clip = await page.evaluate(() => navigator.clipboard.readText()).catch(() => '');
+    check(clip.endsWith('https://lanternlab2027.github.io/lab/eats/?camis=50000001&ref=share-tiktok'), '?ref=tiktok -> copied link carries ref=share-tiktok');
+    await page.click('#share'); await page.click('#card-share');
+    await page.waitForFunction(() => !!window.__shared);
+    check((await page.evaluate(() => window.__shared)).endsWith('?camis=50000001&ref=share-tiktok'), 'share-card text carries ref=share-tiktok');
+    await page.goto(ORIGIN + '/eats/?camis=50000001&ref=share-tiktok'); await page.waitForSelector('#detail:not([hidden])');
+    await page.click('#copy');
+    check((await page.evaluate(() => navigator.clipboard.readText())).endsWith('&ref=share2-tiktok'), 'next hop: share2-tiktok');
+    check(log.errs.length === 0, 'no page errors on the ref run');
+    await ctx.close();
   }
 
   if (LIVE) {

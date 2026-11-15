@@ -85,7 +85,8 @@ const tap = (p, i) => p.click(`#grid .sq[data-i="${i}"]`);
     const link = await host.inputValue('#game-link');
     const ld = await C.decode(link.split('#')[1]);
     check(!ld.error && ld.game.presetId === 'biggame1', `preset link is short and decodes (${link.length} chars)`);
-    check((await host.getAttribute('#open-card', 'href')) === link, '"Open my own card" points at the game link');
+    check(link.startsWith(URL0 + '?ref=share#g='), '?ref passthrough: no incoming ref -> game link carries ?ref=share before the # (' + link.slice(0, 60) + '...)');
+    check((await host.getAttribute('#open-card', 'href')) === URL0 + '#' + link.split('#')[1], '"Open my own card" points at the game (same page, no ref bump)');
     // QR scans back to the link
     const qrPng = path.join(OUT, `qr${tag}.png`);
     fs.writeFileSync(qrPng, Buffer.from((await host.evaluate(() => document.getElementById('qr').toDataURL('image/png'))).split(',')[1], 'base64'));
@@ -159,7 +160,8 @@ const tap = (p, i) => p.click(`#grid .sq[data-i="${i}"]`);
     check(!!sdl && /^BINGO at .* Check my card: http.*&v=/.test(clip1), 'share fallback: picture downloaded, message + check link copied');
     await g1.click('#cel-copy');
     const checkLink = await g1.evaluate(() => navigator.clipboard.readText());
-    check(checkLink.startsWith(link + '&v='), 'check link = game link + &v=');
+    const link2 = link.replace('?ref=share#', '?ref=share2#');
+    check(checkLink.startsWith(link2 + '&v='), 'check link = game link + &v=, ref bumped to share2 (guest arrived via ref=share)');
     await g1.keyboard.press('Escape');
     check(await g1.isHidden('#celebrate') && await g1.isVisible('#winline') && await g1.isVisible('#share-bingo'), 'Escape closes; win line and "Share my bingo" stay');
     await g1.screenshot({ path: path.join(OUT, `guest1-after${tag}.png`), fullPage: true });
@@ -177,7 +179,7 @@ const tap = (p, i) => p.click(`#grid .sq[data-i="${i}"]`);
     check(/BINGO at \d/.test(await v.textContent('#check-banner')) && await v.isHidden('#me-panel'), 'check view: banner with the bingo time, no controls');
     await tap(v, 0);
     check(!(await v.evaluate(() => window.__party.marks[0])), 'check view is read only');
-    check((await v.getAttribute('#own-card', 'href')) === link, '"Get my own card" goes to the plain game link');
+    check((await v.getAttribute('#own-card', 'href')) === link2.split('&v=')[0], '"Get my own card" goes to the plain game link (keeps the incoming ref)');
     await v.screenshot({ path: path.join(OUT, `check${tag}.png`), fullPage: true });
     await v.click('#own-card'); await v.waitForTimeout(300);
     const own = await cells(v);
@@ -212,6 +214,24 @@ const tap = (p, i) => p.click(`#grid .sq[data-i="${i}"]`);
     const t = await open(g2ctx, link.slice(0, link.length - 6));
     check(await t.isVisible('#host-view') && /cut off|damaged/.test(await t.textContent('#notice')), 'truncated link: friendly notice, host view');
 
+    // ---------------- ?ref passthrough from an incoming ref
+    const rctx = await newCtx(browser, width, { permissions: ['clipboard-read', 'clipboard-write'] });
+    const rh = await open(rctx, URL0 + '?ref=tiktok');
+    await rh.click('.preset[data-preset="biggame1"]'); await rh.waitForTimeout(200);
+    await rh.click('#create'); await rh.waitForSelector('#share:not([hidden])');
+    const rlink = await rh.inputValue('#game-link');
+    check(rlink === URL0 + '?ref=share-tiktok#' + link.split('#')[1], '?ref=tiktok -> game link carries ?ref=share-tiktok, hash payload unchanged');
+    const rqr = path.join(OUT, `qr-ref${tag}.png`);
+    fs.writeFileSync(rqr, Buffer.from((await rh.evaluate(() => document.getElementById('qr').toDataURL('image/png'))).split(',')[1], 'base64'));
+    check(scanQR(rqr) === rlink, 'QR carries the ref link too');
+    const rg = await open(rctx, rlink);
+    check(await rg.isVisible('#guest-view') && (await cells(rg)).length === 25, 'guest opens the ref link fine (hash decodes)');
+    await rg.click('#share-game'); await rg.waitForTimeout(200);
+    const rclip = await rg.evaluate(() => navigator.clipboard.readText());
+    check(rclip === URL0 + '?ref=share2-tiktok#' + link.split('#')[1], 'guest "Invite someone" link: ?ref=share2-tiktok + same hash (' + rclip.slice(0, 70) + '...)');
+    check((await rg.getAttribute('#host-own', 'href')) === './?ref=share-tiktok', '"Host your own game" keeps the incoming ref');
+    fs.unlinkSync(rqr);
+
     // ---------------- Kit (stubbed)
     const kctx = await newCtx(browser, width);
     await kctx.addInitScript(() => { window.PARTYBINGO_KIT_TAG_TEST = '12345'; });
@@ -225,9 +245,9 @@ const tap = (p, i) => p.click(`#grid .sq[data-i="${i}"]`);
     check(kb.api_key === EATS_KEY, 'Kit key matches docs/eats/kit.js (not printed)');
 
     // ---------------- hygiene
-    const all = [hctx, g1ctx, g2ctx, vctx, sctx, kctx];
+    const all = [hctx, g1ctx, g2ctx, vctx, sctx, kctx, rctx];
     check(all.every((c) => c.offOrigin.length === 0), 'no off-origin requests anywhere (except the stubbed Kit call)');
-    const errs = [host, g1, g2, v, cg, k].flatMap((p) => p.errs);
+    const errs = [host, g1, g2, v, cg, k, rh, rg].flatMap((p) => p.errs);
     check(errs.length === 0, 'no page errors' + (errs.length ? ': ' + errs.slice(0, 3).join(' | ') : ''));
     for (const c of all) await c.close();
   }
