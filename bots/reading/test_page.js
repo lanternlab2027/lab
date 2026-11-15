@@ -73,7 +73,7 @@ async function expectError(page, file, re) {
     check(csp === "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'", 'CSP unchanged: scripts self-only, connections to Kit only');
     check(/goodreads wrapped/i.test(await page.title()) && /reading wrapped 2026/i.test(await page.title()), 'SEO title targets "goodreads wrapped" / "reading wrapped 2026"');
     check(/storygraph/i.test(await page.getAttribute('meta[name="description"]', 'content')), 'meta description mentions StoryGraph');
-    check(/og\.png$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
+    check(/og\.(png|jpg)$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
     const loadCount = all.length;
 
     // Goodreads CSV

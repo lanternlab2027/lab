@@ -72,7 +72,7 @@ async function expectError(page, file, re) {
     check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit only');
     const title = await page.title(), desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/netflix wrapped/i.test(title) && /netflix year in review/i.test(title + desc), 'SEO title/description target "netflix wrapped" / "netflix year in review"');
-    check(/og\.png$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
+    check(/og\.(png|jpg)$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
     check(/help\.netflix\.com\/en\/node\/101917/.test(await page.innerHTML('#export')), 'export steps cite the Netflix help center');
     check(/\?ref=share-tiktok$/.test(await page.textContent('#pass-text')), '?ref passthrough: shared link carries ref=share-tiktok');
     check(await page.evaluate(() => document.querySelector('.peek img').naturalWidth > 0), 'preview image loads');

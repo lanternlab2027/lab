@@ -93,7 +93,7 @@ async function expectError(page, file, re) {
     const title = await page.title(), desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/strava year in sport/i.test(title) && /strava wrapped/i.test(title) && /garmin year in review/i.test(title), 'title targets the three search phrases: ' + title);
     check(/strava year in sport for free/i.test(desc) && /strava wrapped/i.test(desc) && /garmin year in review/i.test(desc), 'meta description targets them too');
-    check(/sport\/og\.png$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
+    check(/sport\/og\.(png|jpg)$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
     check(await page.isDisabled('#poster') && /Printable poster \(coming soon\)/.test(await page.textContent('#poster')), 'poster button present and disabled');
     check(/\?ref=share-card$/.test(await page.textContent('#pass-text')) && /lanternlab2027\.github\.io\/lab\/sport\//.test(await page.textContent('#pass-text')), 'share text carries the link with ?ref passthrough (ref=card -> share-card)');
     await page.click('#tab-garmin');

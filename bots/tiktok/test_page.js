@@ -75,7 +75,7 @@ const ALL = ['Videos watched', 'Time estimate', 'Busiest day', 'Scroll clock', '
     check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit only');
     const title = await page.title(), desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/TikTok Wrapped 2026/.test(title) && /TikTok Wrapped 2026/.test(desc), 'SEO title/description target "TikTok Wrapped 2026"');
-    check(/og\.png$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
+    check(/og\.(png|jpg)$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
     const reqBox = await page.locator('#request').boundingBox(), dropBox = await page.locator('#drop').boundingBox();
     check(reqBox && dropBox && reqBox.y < dropBox.y && /1.4 days/.test(await page.textContent('#request-h')), 'request-your-export guide (1-4 days) sits above the upload');
     check((await page.$$('#request ol li')).length >= 6 && /support\.tiktok\.com/.test(await page.innerHTML('#request')), 'request guide has steps and cites TikTok support');
