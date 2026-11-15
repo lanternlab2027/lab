@@ -1,0 +1,4 @@
+Order Date,Order ID,Title,Category,ASIN/ISBN,Purchase Price Per Unit,Quantity,Item Total,Buyer Name
+01/15/22,113-0000000-0000001,Old paperback,Paperback,0000000001,$9.99,1,$10.69,Sam Example
+12/20/23,113-0000000-0000002,Old toaster,Kitchen,B000000002,$29.99,1,$32.09,Sam Example
+11/02/25,113-0000000-0000003,Old umbrella,Apparel,B000000003,$19.99,1,$21.39,Sam Example
