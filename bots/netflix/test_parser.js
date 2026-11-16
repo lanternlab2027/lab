@@ -186,3 +186,15 @@ test('Korean, Hungarian and Czech account locales (spaced dotted dates) parse to
   assert.deepEqual(P.parseDate('2026. 01. 02.'), { y: 2026, mo: 1, d: 2 });
   assert.deepEqual(P.parseDate('2. 1. 2026'), { y: 2026, mo: 1, d: 2 });
 });
+
+// Found on real exports (see bots/launch/REAL_EXPORT_TESTS.md); fixture is synthetic.
+test('real-export regression: "Show: Show 3: Chapter One" seasons and "Chapter N" episodes stay one show', () => {
+  assert.deepEqual(T('Night Signal: Night Signal 3: Chapter One: Static'), ['series', 'Night Signal', 'Night Signal 3', 'Chapter One: Static']);
+  assert.deepEqual(T('Night Signal: Chapter One: The Vanishing'), ['series', 'Night Signal', '', 'Chapter One: The Vanishing']);
+  const r = P.parseAny(read('numbered_seasons.csv'));
+  const s = S.compute(r.entries, { year: 2026 });
+  const ns = s.shows.find((x) => x.name === 'Night Signal');
+  assert.equal(ns.episodes, 6);
+  assert.deepEqual(ns.seasons.sort(), ['Night Signal 2', 'Night Signal 3']);
+  assert.ok(!s.shows.some((x) => /^Night Signal: /.test(x.name)), 'no "Night Signal: Night Signal 3" show');
+});

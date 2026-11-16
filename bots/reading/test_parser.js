@@ -352,3 +352,15 @@ test('Libby spreadsheet in a day-first locale (UK/AU) reads every row day-first'
   const us = P.parseAny('Title,Author,Publisher,ISBN,Timestamp,Activity,Details,Library\nA,B,C,1,03/04/2026 09:15,Borrowed,,L\nA,B,C,1,03/20/2026 09:15,Returned,,L\n', 'x.csv', { now: new Date(2026, 10, 15) });
   assert.deepEqual(us.books[0].loans[0].date, { y: 2026, mo: 3, d: 4 });
 });
+
+// Found on a real export (see bots/launch/REAL_EXPORT_TESTS.md); fixture is synthetic.
+test('real-export regression: audio editions’ "Number of Pages" (discs, hours) is not a page count', () => {
+  const r = P.parseAny(read('goodreads_audio_pages.csv'), 'goodreads_library_export.csv');
+  assert.equal(r.books.length, 4);
+  assert.deepEqual(r.books.map((b) => b.pages), [null, null, 320, 410]);
+  const s = S.compute(r.books, { year: 2025, now: NOW, source: r.source });
+  assert.equal(s.count, 4);
+  assert.equal(s.pages, 730);
+  assert.equal(s.pagesKnown, 2);
+  assert.equal(s.shortest.title, 'Paper Moons');
+});

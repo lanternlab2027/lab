@@ -266,13 +266,17 @@
       for (var k = 0; k < header.length; k++) if (rows.slice(1, 30).some(function (r) { return /^activities\//.test(cell(r, k)); })) { c.file = k; break; }
     }
     var dc = detectDecimalComma(rows, [c.dist1]);
+    // A lone Distance column is km in Strava's export, but trimmed/re-saved files (e.g. R packages' sample data) carry
+    // meters there: a typical activity of 300+ "km" means the column is already meters.
+    var d1m = rows.slice(1).map(function (r) { return sportOf(cell(r, c.type)) === 'swim' ? null : num(cell(r, c.dist1), dc); }).filter(function (v) { return v > 0; }).sort(function (x, y) { return x - y; });
+    var d1Meters = c.dist2 < 0 && c.distMi < 0 && d1m.length >= 3 && d1m[Math.floor(d1m.length / 2)] > 300;
     var acts = [], skipped = 0;
     for (var i = 1; i < rows.length; i++) {
       var r = rows[i], dt = parseDateTime(cell(r, c.date));
       if (!dt) { skipped++; continue; }
       var type = cell(r, c.type), sport = sportOf(type);
       var d2 = num(cell(r, c.dist2)), d1 = num(cell(r, c.dist1), dc), dmi = num(cell(r, c.distMi), dc);
-      var dist = d2 != null && d2 > 0 ? d2 : dmi != null ? dmi * 1609.344 : d1 != null ? (sport === 'swim' && d1 >= 50 ? d1 : d1 * 1000) : null;
+      var dist = d2 != null && d2 > 0 ? d2 : dmi != null ? dmi * 1609.344 : d1 != null ? (d1Meters || (sport === 'swim' && d1 >= 50) ? d1 : d1 * 1000) : null;
       var utc = dt.utcMs != null ? dt.utcMs : wall(dt); // Strava's Activity Date is UTC
       acts.push(mkAct({
         src: 'strava', type: type, utc: utc, dist: dist,
@@ -408,7 +412,12 @@
     var trk = /<(?:\w+:)?trk\b[^>]*>([\s\S]*?)<(?:\w+:)?trkseg/i.exec(text);
     var type = trk ? tag(trk[1], 'type') : '';
     if (/^\d+$/.test(type)) type = '';
+    // No <type>: Strava's default names ("Afternoon Ride", "Morning Run") say it (real exports: slow MTB rides read as runs).
+    if (!type && trk) { var nm = /\b(ride|run|walk|hike|swim)\b/i.exec(tag(trk[1], 'name') || ''); if (nm) type = nm[1].charAt(0).toUpperCase() + nm[1].slice(1).toLowerCase(); }
     var t0 = isoUtc(tag(tag(text, 'metadata'), 'time'));
+    // Some exporters stamp <metadata><time> with the export time, not the start: trust the first point then.
+    var p0 = pts.filter(function (p) { return p[2] != null; })[0];
+    if (p0 && t0 != null && Math.abs(t0 - p0[2]) > 3600000) t0 = p0[2];
     return { kind: 'gpx', type: type, pts: pts, startUtc: t0 };
   }
 

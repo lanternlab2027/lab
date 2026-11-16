@@ -192,7 +192,8 @@
     return {
       title: t.title, series: t.series,
       author: author || 'Unknown author',
-      pages: pages && pages > 0 && pages < 30000 ? Math.round(pages) : null,
+      // Audio editions put disc counts or hours in "Number of Pages" (real exports: Audio CD 3, Audible 12).
+      pages: pages && pages > 0 && pages < 30000 && formatKind(binding) !== 'audio' ? Math.round(pages) : null,
       myRating: rating && rating > 0 && rating <= 5 ? rating : null,
       avgRating: avg && avg > 0 && avg <= 5 ? avg : null,
       shelf: shelf,

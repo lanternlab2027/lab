@@ -180,3 +180,16 @@ test('Telegram HTML export gets a "choose JSON" hint', () => {
   assert.throws(() => P.parseAny(''), /That file is empty/);
   assert.throws(() => P.parseAny('\ufeff  \n'), /That file is empty/);
 });
+
+// Found on real exports (see bots/launch/REAL_EXPORT_TESTS.md); fixtures are synthetic.
+test('real-export regressions: E2E notice without the iOS mark, iOS document with a caption', () => {
+  const a = P.parseAny(read('android_e2e_no_mark.txt'));
+  assert.deepEqual(senders(a), ['Dev Patel', 'Mara Quinn'], 'group name posting the E2E notice is not a member');
+  assert.equal(a.messages.length, 3);
+  const b = P.parseAny(read('ios_document_caption.txt'), '_chat.txt');
+  assert.equal(b.messages.length, 3);
+  const doc = b.messages.find((m) => m.mi === 1 && m.h === 21 && m.kind !== 'text');
+  assert.ok(doc, 'document with a caption counts as media');
+  assert.equal(b.messages.filter((m) => m.kind === 'media').length, 1);
+  assert.equal(b.messages.filter((m) => /attached/.test(m.text)).length, 0);
+});

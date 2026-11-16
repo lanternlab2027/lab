@@ -26,6 +26,8 @@
     /^<?\s*(image|video|audio|sticker|gif|document|contact card|file|photo|voice message) omitted\s*>?$/i,
     /\b(image|video|audio|sticker|gif|document|contact card) omitted$/i,
     /^<attached: [^>]+>$/i,
+    // iOS documents keep a caption: "Report.pdf \u2022 3 pages <attached: 00000012-Report.pdf>"
+    /\s<attached: [^>]+>$/i,
     // "IMG-20240101-WA0001.jpg (file attached)" in any language: "(Datei angeh\u00e4ngt)", "(archivo adjunto)"...
     /^\S+\.(jpe?g|png|gif|webp|heic|mp4|mov|3gp|opus|ogg|m4a|aac|mp3|pdf|vcf|webm|docx?|xlsx?|pptx?|zip|txt) [(<][^()<>]{2,40}[)>]$/i,
     /^<?(medien ausgeschlossen|media weggelaten|multimedia omitido|archivo omitido|m[\u00e9e]dias? omis|m[\u00edi]dia oculta|media omessi|immagine omessa)>?$/i,
@@ -36,6 +38,8 @@
     /^(location|live location shared|standort|ubicaci[\u00f3o]n): /i
   ];
   var RE_DELETED = /^(this message was deleted\.?|you deleted this message\.?|diese nachricht wurde gel[\u00f6o]scht\.?|du hast diese nachricht gel[\u00f6o]scht\.?|se elimin[\u00f3o] este mensaje\.?|eliminaste este mensaje\.?|ce message a [\u00e9e]t[\u00e9e] supprim[\u00e9e]\.?|vous avez supprim[\u00e9e] ce message\.?|questo messaggio [\u00e8e] stato eliminato\.?|essa mensagem foi apagada\.?|mensagem apagada)$/i;
+  // The end-to-end encryption notice, when an editor or forwarder stripped iOS's LRM mark ("Group: Messages and calls are...").
+  var RE_E2E = /^(messages and calls are end-to-end encrypted|messages (to|you send to) this (group|chat) are now secured with end-to-end encryption|los mensajes y las llamadas est[\u00e1a]n cifrados de extremo a extremo|nachrichten und anrufe sind ende-zu-ende-verschl[\u00fcu]sselt|les messages et les appels sont chiffr[\u00e9e]s de bout en bout|i messaggi e le chiamate sono crittografati end-to-end|as mensagens e as liga[\u00e7c][\u00f5o]es s[\u00e3a]o protegidas com a criptografia de ponta a ponta)/i;
   var RE_EDITED = /\s*<\s*(this message was edited|diese nachricht wurde bearbeitet|se edit[\u00f3o] este mensaje|ce message a [\u00e9e]t[\u00e9e] modifi[\u00e9e])\s*>\s*$/i;
 
   // Arabic-Indic and Persian digits become ASCII; the Arabic comma becomes ",".
@@ -163,7 +167,7 @@
       if (idx <= 0 || /["\u201c\u201d\u00ab\u00bb]/.test(sender) || sender.length > 60) isSystem = true;
       else {
         var kind0 = classify(body);
-        if (r.mark && kind0 === 'text') {
+        if ((r.mark || RE_E2E.test(body)) && kind0 === 'text') {
           isSystem = true; // iOS: "Group Name: \u200eAlice added Bob"
           systemSenders[cleanSender(sender)] = 1;
           if (!title && r.ios) title = cleanSender(sender);

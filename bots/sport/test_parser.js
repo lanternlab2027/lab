@@ -291,3 +291,14 @@ test('Strava CSV in Japanese and Korean display locales (CJK dates, AM/PM words)
   assert.deepEqual(P.parseDateTime('2026年1月2日 下午3:00:00'), { y: 2026, mo: 1, d: 2, h: 15, mi: 0, s: 0 });
   assert.equal(P.parseDateTime('24 paź 2026, 10:47:26').mo, 10);
 });
+
+// Found on real files (see bots/launch/REAL_EXPORT_TESTS.md); fixtures are synthetic.
+test('real-export regressions: GPX without <type> and with an export-time stamp; lone Distance column in metres', () => {
+  const t = P.parseTrackFile('ride.gpx', txt('ride_no_type_export_time.gpx'));
+  assert.equal(t.act.sport, 'ride', 'Strava name "Afternoon Ride" beats the slow-speed guess');
+  assert.equal(new Date(t.utc).toISOString(), '2025-11-09T01:00:00.000Z', 'start is the first point, not the export time');
+  const r = P.parseActivitiesCSV(txt('strava_meters_single_distance.csv'));
+  assert.deepEqual(r.acts.map((a) => Math.round(a.dist)), [33892, 7925, 18210, 1500]);
+  const old = P.parseActivitiesCSV(txt('strava_old.csv'));
+  assert.ok(old.acts[0].dist > 1000 && old.acts[0].dist < 100000, 'km column still scaled');
+});

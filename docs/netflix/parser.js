@@ -152,10 +152,17 @@
     var segs = splitSegs(t);
     for (var i = 1; i < segs.length; i++) {
       var s = segs[i], rest = segs.slice(i + 1).join(': ');
+      // "Stranger Things: Chapter One: The Vanishing...": a chapter is an episode, not a season.
+      if (/^chapter\b/i.test(s) && WEAK.test(s) && rest) return { title: t, show: segs.slice(0, i).join(': '), season: '', episode: segs.slice(i).join(': '), kind: 'series', marker: true };
       if (s.length <= 48 && (STRONG.test(s) || (WEAK.test(s) && rest))) {
         return { title: t, show: segs.slice(0, i).join(': '), season: s, episode: rest, kind: 'series', marker: true };
       }
       if (EPISODE.test(s)) return { title: t, show: segs.slice(0, i).join(': '), season: '', episode: segs.slice(i).join(': '), kind: 'series', marker: true };
+      // "Stranger Things: Stranger Things 3: Chapter One": the season is the show's name plus a number.
+      var head = segs.slice(0, i).join(': ');
+      if (rest && s.length <= 48 && s.toLowerCase().indexOf(head.toLowerCase() + ' ') === 0 && /^(\d{1,2}|[ivx]{1,4})$/i.test(s.slice(head.length + 1))) {
+        return { title: t, show: head, season: s, episode: rest, kind: 'series', marker: true };
+      }
     }
     return { title: t, show: t, season: '', episode: '', kind: 'movie', marker: false, segs: segs };
   }
