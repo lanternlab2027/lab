@@ -29,6 +29,7 @@
     bracket:        ['76-Team Bracket', 'Printable bracket + no-account pool'],
     etsy:           ['Seller Year in Review', 'Your Etsy shop year + tax summary'],
     ballot:         ['Awards-Night Ballot Pool', 'Pick winners, live leaderboard'],
+    weather:        ['Weather Wrapped', "Your city's year in weather"],
     hub:            ['All free apps', 'Wrapped apps, games and tools']
   };
 
@@ -54,7 +55,7 @@
   var SEASON = {
     10: ['santa', 'snow'],             // Nov: Wrapped season starts
     11: ['santa', 'snow'],             // Dec
-    0:  ['bingo', 'etsy', 'amazon', 'mileage'],   // Jan
+    0:  ['bingo', 'weather', 'etsy', 'amazon', 'mileage'],   // Jan
     1:  ['couples', 'partybingo', 'ballot'],        // Feb
     2:  ['bracket', 'ballot']         // Mar
   };

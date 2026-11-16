@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://archive-api.open-meteo.com https://geocoding-api.open-meteo.com https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Weather Wrapped 2026: Your City's Weather Year in Review (Free)</title>
+<meta name="description" content="Weather Wrapped: the 2026 weather year in review for your city or ZIP. Hottest and coldest days, total rain and snow, longest dry streak, sunniest month, 90-degree days and the weirdest day, as free shareable cards.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/weather/">
+<meta name="theme-color" content="#2c74c4">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Weather Wrapped: your city's 2026 in weather">
+<meta property="og:description" content="The 2026 weather year in review for your city: hottest day, rain and snow totals, dry streaks, sunniest month and the weirdest day, as shareable cards. Free.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/weather/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/weather/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Weather Wrapped: your city's 2026 in weather, over a ribbon of a year's daily temperatures">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Weather Wrapped: your city's 2026 in weather">
+<meta name="twitter:description" content="2026 weather year in review for your city, as shareable cards. Free.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/weather/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Weather Wrapped",
+ "alternateName": ["Weather Year in Review", "2026 weather year in review"],
+ "url": "https://lanternlab2027.github.io/lab/weather/",
+ "applicationCategory": "UtilitiesApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "A 2026 weather year in review for any city or U.S. ZIP code, as shareable cards, from Open-Meteo historical weather (ERA5 reanalysis) data.",
+ "isAccessibleForFree": true,
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #eef4fb; --sheet: #ffffff; --ink: #10203a; --muted: #4c5b73; --line: #d5dfec;
+    --sky0: #2c74c4; --sky1: #3a2a6b; --sky2: #b8202f; --warm: #b4470f; --warm-bg: #fff1e4; --cool: #1f6fb5;
+    --accent: #10203a; --accent-ink: #ffffff; --focus: #2a62c9; --err: #a33a2a;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --display: "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed", "DejaVu Sans Condensed", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0a1220; --sheet: #111c2f; --ink: #edf3ff; --muted: #a8b6cb; --line: #24354f;
+      --warm: #ffb27a; --warm-bg: #3a2414; --cool: #8cc8ff; --accent: #edf3ff; --accent-ink: #0a1220; --focus: #8fb0ff; --err: #ffb4a3;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0a1220; --sheet: #111c2f; --ink: #edf3ff; --muted: #a8b6cb; --line: #24354f;
+    --warm: #ffb27a; --warm-bg: #3a2414; --cool: #8cc8ff; --accent: #edf3ff; --accent-ink: #0a1220; --focus: #8fb0ff; --err: #ffb4a3;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+  header.hero { background: linear-gradient(160deg, var(--sky0) 0%, var(--sky1) 62%, var(--sky2) 130%); color: #fff; padding: 26px 0 30px; position: relative; overflow: hidden; }
+  header.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; pointer-events: none;
+    background: linear-gradient(90deg, #3b4cc0, #5fa8e8 18%, #bfe3f2 32%, #f6e7a1 50%, #f59a4a 68%, #d7301f 82%, #f59a4a 90%, #5fa8e8); opacity: .9; }
+  header.hero .wrap { position: relative; }
+  .brand { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: #d8e6fb; text-decoration: none; }
+  h1 { font-family: var(--display); font-size: clamp(50px, 14vw, 100px); line-height: .9; letter-spacing: -.01em; margin: 12px 0 14px; font-weight: 800; text-transform: uppercase; }
+  h1 em { font-style: normal; color: #ffe08a; display: block; }
+  .lede { margin: 0 0 18px; color: #e4ecfa; font-size: 18px; max-width: 640px; }
+
+  form.find { background: var(--sheet); color: var(--ink); border-radius: 18px; padding: 14px; display: grid; gap: 12px; box-shadow: 0 12px 30px rgba(0,0,0,.25); max-width: 720px; }
+  form.find label.lab, .unitrow legend { display: block; font-weight: 800; font-size: 14px; margin-bottom: 4px; padding: 0; }
+  .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+  input[type=text], input[type=email], select { width: 100%; font: 600 17px var(--font); padding: 12px; min-height: 48px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+  .opts { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 600px) { .opts { grid-template-columns: 150px 1fr 1fr; } }
+  .btn { appearance: none; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font: 800 17px var(--font); padding: 12px 18px; min-height: 48px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn.small { padding: 8px 14px; font-size: 15px; min-height: 44px; color: var(--accent-ink); }
+  .btn.ghost.small { color: var(--ink); }
+  .btn[disabled] { opacity: .55; cursor: progress; }
+  fieldset.unitrow { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .seg label { display: block; cursor: pointer; }
+  .seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .seg span { display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; min-height: 48px; border-radius: 10px; border: 1px solid var(--line); font-weight: 800; font-size: 16px; }
+  .seg input:checked + span { border: 2px solid var(--ink); background: var(--bg); }
+  .seg input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .status { min-height: 1.5em; margin: 14px 0 0; font-weight: 700; color: #fff; max-width: 720px; }
+  .status.err { color: #ffd0c4; }
+
+  section { margin: 28px 0; }
+  h2 { font-size: 26px; line-height: 1.15; margin: 0 0 10px; letter-spacing: -.01em; }
+  h3 { font-size: 19px; margin: 18px 0 6px; }
+  .sheet { background: var(--sheet); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .res-head h2 { font-size: clamp(28px, 7vw, 40px); margin: 0; }
+  .res-head p { margin: 2px 0 0; color: var(--muted); font-weight: 700; }
+  .note { border-left: 4px solid var(--cool); background: var(--sheet); padding: 10px 12px; border-radius: 0 10px 10px 0; margin: 12px 0 0; font-size: 15px; }
+  .note.warm { border-color: var(--warm); background: var(--warm-bg); }
+  .deckbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 16px 0 12px; }
+  .deckbar .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+  #deck { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  @media (min-width: 760px) { #deck { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+  .card { margin: 0; scroll-snap-align: center; min-width: 0; }
+  .card canvas { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 16px; display: block; box-shadow: 0 14px 30px rgba(0,0,0,.28); background: #2c74c4; }
+  .card figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-weight: 700; font-size: 15px; }
+  .card-btns { display: flex; gap: 6px; }
+  .small { font-size: 14px; color: var(--muted); }
+  .empty { font-weight: 700; }
+
+  .signup form { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .signup input[type=email] { flex: 1 1 220px; width: auto; }
+
+  .how ul { padding-left: 22px; }
+  .how li { margin: 4px 0; }
+  .how code { font: 700 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--bg); border-radius: 6px; padding: 1px 6px; }
+  .grid-honest { font-weight: 700; font-size: 17px; background: var(--warm-bg); border-radius: 12px; padding: 12px 14px; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  .makeyours { font-size: 16px; color: var(--ink); margin-bottom: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .makeyours code { font: 700 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; }
+  .toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-weight: 700; opacity: 0; pointer-events: none; transition: opacity .2s; max-width: calc(100% - 32px); }
+  .toast.on { opacity: 1; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="wrap">
+    <a class="brand" href="../">Lantern Lab</a>
+    <h1>Weather <em>Wrapped</em></h1>
+    <p class="lede">Your city's 2026 in weather, as cards to share: the hottest and coldest days, total rain and snow, the longest dry streak, the sunniest month, 90-degree days and the weirdest day of the year. Free, no sign-up.</p>
+    <form class="find" id="find" novalidate>
+      <div>
+        <label class="lab" for="q">ZIP code or city</label>
+        <div class="row">
+          <input id="q" name="q" type="text" autocomplete="postal-code" autocapitalize="words" enterkeyhint="go" placeholder="14201 or Buffalo, NY" required>
+          <button class="btn" id="go" type="submit">Wrap it</button>
+        </div>
+      </div>
+      <div class="opts">
+        <div>
+          <label class="lab" for="year">Year</label>
+          <select id="year"></select>
+        </div>
+        <fieldset class="unitrow">
+          <legend>Temperature</legend>
+          <div class="seg">
+            <label><input type="radio" name="tu" value="F" checked><span>&deg;F</span></label>
+            <label><input type="radio" name="tu" value="C"><span>&deg;C</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="unitrow">
+          <legend>Rain and snow</legend>
+          <div class="seg">
+            <label><input type="radio" name="pu" value="in" checked><span>in.</span></label>
+            <label><input type="radio" name="pu" value="mm"><span>mm</span></label>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="results" hidden aria-labelledby="res-place">
+    <div class="res-head">
+      <h2 id="res-place"></h2>
+      <p id="res-label"></p>
+    </div>
+    <p class="note warm" id="partial" hidden><span id="partial-text"></span></p>
+    <p class="note" id="weird-note" hidden></p>
+    <div class="deckbar">
+      <b id="deck-count"></b>
+      <div class="acts">
+        <button class="btn small" id="share-all" type="button">Share all</button>
+        <button class="btn small ghost" id="zip-all" type="button">Download all (.zip)</button>
+        <button class="btn small ghost" id="copy-link" type="button">Copy link</button>
+      </div>
+    </div>
+    <p class="empty" id="empty" hidden>No data for that year and place yet. Try another year.</p>
+    <div id="deck"></div>
+    <p class="small" id="grid-note"></p>
+    <p class="small">Weather data by <a href="https://open-meteo.com/" rel="noopener">Open-Meteo.com</a> (CC BY 4.0). Card numbers are totals, streaks and averages we compute from its daily values.</p>
+  </section>
+
+  <section class="sheet signup" id="remind" aria-labelledby="remind-h" hidden>
+    <h2 id="remind-h" style="font-size:22px">Remind me Jan 1 when the full year is in</h2>
+    <p class="small" style="margin:0">One email on Jan 1 to make your full-year cards. Just your email; the place you looked up isn't sent. Unsubscribe anytime.</p>
+    <form id="signup-form" novalidate>
+      <label class="sr" for="signup-email">Email</label>
+      <input id="signup-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      <button class="btn" type="submit">Remind me</button>
+    </form>
+    <p class="small" id="signup-msg" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-h">
+    <h2 id="how-h">How Weather Wrapped works</h2>
+    <p class="grid-honest">These numbers come from a weather reanalysis, a computer model's best estimate for a grid square of roughly 10 to 25 km around your location, so they can differ from your airport weather station's official records.</p>
+    <p>Type a ZIP code or a city. We look up its location, then your browser asks <a href="https://open-meteo.com/en/docs/historical-weather-api" rel="noopener">Open-Meteo's Historical Weather API</a> for one value per day: the high and low temperature, precipitation, snowfall, sunshine and peak wind. Everything on the cards is counted from those daily values, in your browser.</p>
+    <h3>2026 so far</h3>
+    <p>Data runs only through yesterday, and the newest few days can lag while the data catch up. Until the year is over, cards say &ldquo;2026 so far&rdquo; and show the last day included. The full year is ready on Jan 1.</p>
+    <h3>What each card counts</h3>
+    <ul>
+      <li><b>Hottest and coldest:</b> the highest daily high and the lowest daily low.</li>
+      <li><b>Rain and snow:</b> total precipitation (rain plus snow melted into water) and total snowfall. A <b>wet day</b> has at least 1 mm (0.04 in.).</li>
+      <li><b>Streaks:</b> the most days in a row with less than 1 mm (dry), or at least 1 mm (wet). A missing day breaks a streak.</li>
+      <li><b>Sunniest month:</b> the most hours of sunshine per day, among months with at least 20 days of data.</li>
+      <li><b>Hot days and freezing nights:</b> days with a high of 90&deg;F (32.2&deg;C) or more, and nights with a low below 32&deg;F (0&deg;C).</li>
+      <li><b>The weirdest day:</b> the day whose high was furthest from normal. &ldquo;Normal&rdquo; for a date is the average high over the 10 years before (2016&ndash;2025 for 2026), across the same date &plusmn;7 days, from the same source and grid point. If that comparison can't load, the card is skipped.</li>
+      <li><b>Summary:</b> all of it on one card, plus the windiest day and how this year's highs compare with the 10-year average.</li>
+    </ul>
+    <h3>Data and credits</h3>
+    <ul class="small">
+      <li>Weather: <a href="https://open-meteo.com/" rel="noopener">Weather data by Open-Meteo.com</a>, Historical Weather API, licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>. We add up, count and average its daily values; we don't change them.</li>
+      <li>Underlying reanalysis: ECMWF ERA5 and ERA5-Land (Hersbach et al., 2023; Mu&ntilde;oz Sabater, 2019) and the ECMWF IFS model, as combined by Open-Meteo. Generated using Copernicus Climate Change Service information 2026. Neither the European Commission nor ECMWF is responsible for any use of this information.</li>
+      <li>Open-Meteo: Zippenfenig, P. (2023). Open-Meteo.com Weather API. Zenodo. <a href="https://doi.org/10.5281/ZENODO.7970649" rel="noopener">doi.org/10.5281/ZENODO.7970649</a>.</li>
+      <li>ZIP locations: U.S. Census Bureau 2026 Gazetteer Files, ZIP Code Tabulation Areas (internal points). Public domain. Loaded from this site.</li>
+      <li>Place names: <a href="https://open-meteo.com/en/docs/geocoding-api" rel="noopener">Open-Meteo geocoding</a>; location data based on <a href="https://www.geonames.org/" rel="noopener">GeoNames</a> (CC BY 4.0).</li>
+    </ul>
+  </section>
+</main>
+
+<link rel="stylesheet" href="../apps/more.css">
+<div id="more-apps" class="wrap" data-from="weather"></div>
+<script src="../apps/more.js" defer></script>
+<footer class="wrap">
+  <div class="makeyours"><b>Make yours:</b> <code>lanternlab2027.github.io/lab/weather</code> <button type="button" class="btn ghost small" id="share-tool">Share this tool</button></div>
+  <p><b>Not affiliated with Open-Meteo, ECMWF, Copernicus or the National Weather Service.</b> For official climate records, see your national weather service.</p>
+  <p>No tracking, no ads, no login. The place you type goes from your browser to Open-Meteo (a ZIP code is looked up on this site first). Nothing is saved except your last search and unit choice, in this browser only.</p>
+  <p><a href="../">A Lantern Lab project</a> &middot; <a href="../apps/">More free apps &rarr;</a></p>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="vendor/jszip-3.10.1.min.js"></script>
+<script src="stats.js"></script>
+<script src="net.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>

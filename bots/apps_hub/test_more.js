@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   fs.readFile(f, (e, b) => { if (e) { res.writeHead(404); return res.end(); } res.writeHead(200, { 'Content-Type': TYPES[path.extname(p)] || 'application/octet-stream' }); res.end(b); });
 }).listen(PORT);
 let fails = 0; const ok = (c, m) => { console.log((c ? 'PASS ' : 'FAIL ') + m); if (!c) fails++; };
-const APPS = ['wrapped', 'reading', 'netflix', 'sport', 'dating', 'tiktok', 'couples', 'amazon', 'awards', 'santa', 'bingo', 'partybingo', 'then', 'chicago-then', 'eats', 'chi-eats', 'names', 'mileage', 'dogs', 'snow', 'bracket', 'etsy', 'ballot'];
+const APPS = ['wrapped', 'reading', 'netflix', 'sport', 'dating', 'tiktok', 'couples', 'amazon', 'awards', 'santa', 'bingo', 'partybingo', 'then', 'chicago-then', 'eats', 'chi-eats', 'names', 'mileage', 'dogs', 'snow', 'bracket', 'etsy', 'ballot', 'weather'];
 const SHOT = new Set(process.env.SHOT_ALL ? APPS : ['wrapped', 'santa', 'eats', 'then', 'names', 'mileage', 'partybingo', 'awards']);
 
 async function open(ctx, app, blockStrip) {
@@ -85,7 +85,7 @@ async function open(ctx, app, blockStrip) {
     await pg.clock.setFixedTime(new Date('2027-01-10T12:00:00'));
     await pg.goto(ORIGIN + '/mileage/', { waitUntil: 'load' });
     const hrefs = await pg.$$eval('#more-apps a', as => as.map(a => a.getAttribute('href')));
-    ok(hrefs.join() === '../bingo/?ref=more-mileage,../etsy/?ref=more-mileage,../apps/?ref=more-mileage', `January on mileage: ${hrefs.join(', ')}`);
+    ok(hrefs.join() === '../bingo/?ref=more-mileage,../weather/?ref=more-mileage,../apps/?ref=more-mileage', `January on mileage: ${hrefs.join(', ')}`);
     await ctx.close();
   }
   await browser.close(); server.close();
