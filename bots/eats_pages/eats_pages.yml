@@ -1,5 +1,5 @@
 # Draft GitHub Actions workflow. NOT installed. To enable, copy to .github/workflows/eats_pages.yml.
-# Weekly rebuild of the static restaurant pages (docs/eats/r/) from NYC Open Data 43nn-pn8j.
+# Weekly rebuild of the static restaurant pages (docs/eats/r/, docs/eats/z/) from NYC Open Data 43nn-pn8j.
 # Keeps the pilot set fixed (bots/eats_pages/pilot.json) and never deletes a page: restaurants
 # that leave the data or stop being inspected are re-rendered as "Closed or no recent inspection".
 name: eats-pages
@@ -19,7 +19,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -39,14 +39,15 @@ jobs:
           n=$(ls docs/eats/r/*.html | grep -cE '/[0-9]+\.html$')
           stale=$(grep -l 'Closed or no recent inspection.</b>' docs/eats/r/[0-9]*.html | wc -l)
           echo "restaurant pages: $n, marked closed/no recent inspection: $stale"
-          test "$n" -ge 1000                 # pages are never dropped
+          test "$n" -ge 6000                 # pages are never dropped (6,000 since the Nov 16 expansion)
           test "$stale" -le $(( n / 4 ))     # a mass "closed" result means a bad fetch, not mass closures
           grep -q '<loc>https://lanternlab2027.github.io/lab/eats/r/</loc>' docs/sitemap-eats.xml
+          test "$(ls docs/eats/z/*.html | wc -l)" -ge 150   # ZIP index pages
 
       - name: Commit
         run: |
           git config user.name  "eats-pages-bot"
           git config user.email "eats-pages-bot@users.noreply.github.com"
-          git add -A docs/eats/r docs/sitemap-eats.xml docs/sitemap-index.xml bots/eats_pages/last_known.json.gz bots/eats_pages/pilot.json
+          git add -A docs/eats/r docs/eats/z docs/sitemap-eats*.xml docs/sitemap-index.xml bots/eats_pages/last_known.json.gz bots/eats_pages/pilot.json
           git diff --cached --quiet || git commit -m "eats pages: weekly refresh $(date -u +%F)"
           git push

@@ -9,6 +9,7 @@ const http = require('http'), fs = require('fs'), path = require('path');
 
 const ROOT = path.resolve(__dirname, '../../docs');
 const R = path.join(ROOT, 'eats', 'r');
+const Z = path.join(ROOT, 'eats', 'z'); // per-ZIP index pages (Nov 16)
 const args = process.argv.slice(2);
 const OUT = path.resolve(args[0] || '.');
 const LIVE = !args.includes('--no-live');
@@ -43,7 +44,7 @@ function htmlFiles(dir) {
 
 async function linkCheck() {
   console.log('Internal links');
-  const files = htmlFiles(R);
+  const files = htmlFiles(R).concat(fs.existsSync(Z) ? htmlFiles(Z) : []);
   const targets = new Map(); // absolute local URL -> first page that links to it
   for (const f of files) {
     const rel = '/' + path.relative(ROOT, f).split(path.sep).join('/');
@@ -56,9 +57,9 @@ async function linkCheck() {
       if (!targets.has(u)) targets.set(u, rel);
     }
   }
-  // Sitemap URLs map to local paths too.
-  const sm = fs.readFileSync(path.join(ROOT, 'sitemap-eats.xml'), 'utf8');
-  const smUrls = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  // Sitemap URLs map to local paths too (sitemap-eats.xml, plus sitemap-eats-2.xml ... when split).
+  const smFiles = fs.readdirSync(ROOT).filter((f) => /^sitemap-eats(-\d+)?\.xml$/.test(f));
+  const smUrls = smFiles.flatMap((f) => [...fs.readFileSync(path.join(ROOT, f), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
   smUrls.forEach((u) => { const l = ORIGIN + '/' + u.slice(SITE.length); if (!targets.has(l)) targets.set(l, 'sitemap-eats.xml'); });
   const bad = [];
   const list = [...targets.keys()];
@@ -68,17 +69,29 @@ async function linkCheck() {
   }
   check(bad.length === 0, `${list.length} unique internal URLs from ${files.length} pages + ${smUrls.length} sitemap URLs return 200` + (bad.length ? ':\n    ' + bad.slice(0, 20).join('\n    ') : ''));
   const idx = fs.readFileSync(path.join(ROOT, 'sitemap-index.xml'), 'utf8');
-  check(idx.includes(SITE + 'sitemap-eats.xml') && idx.includes(SITE + 'sitemap.xml') && idx.includes(SITE + 'sitemap-buildings.xml'), 'sitemap-index.xml lists sitemap.xml, sitemap-buildings.xml and sitemap-eats.xml');
-  check(smUrls.length === files.length, `sitemap-eats.xml lists every generated page (${smUrls.length} URLs, ${files.length} files)`);
+  check(idx.includes(SITE + 'sitemap.xml') && idx.includes(SITE + 'sitemap-buildings.xml') && smFiles.every((f) => idx.includes(SITE + f)),
+    `sitemap-index.xml lists sitemap.xml, sitemap-buildings.xml and ${smFiles.join(', ')}`);
+  check(smUrls.length === files.length && new Set(smUrls).size === smUrls.length, `eats sitemaps list every generated page once (${smUrls.length} URLs, ${files.length} files)`);
   // Wording and markup guards across all pages.
   let banned = [], ratingMarkup = [];
+  // Restaurant trading names are the pages' subject and are excluded from the wording check
+  // ("Best Deli", "U Best Bakery" are real DBAs), as escaped in the HTML.
+  const BAN = /\b(worst|best|dirtiest|filthy|gross|disgusting|shocking|avoid|ranked|ranking|top \d+)\b/i;
+  const bannedNames = new Set();
+  for (const f of files) {
+    if (!/\/\d+\.html$/.test(f)) continue;
+    const m = fs.readFileSync(f, 'utf8').match(/<h1>([^<]*)<\/h1>/);
+    if (m && BAN.test(m[1])) { bannedNames.add(m[1]); bannedNames.add(m[1].replace(/&amp;/g, '&').replace(/&#x27;/g, "'").replace(/&quot;/g, '"')); }
+  }
+  const names = [...bannedNames].sort((a, b) => b.length - a.length);
   for (const f of files) {
     const s = fs.readFileSync(f, 'utf8');
-    const visible = s.replace(/<p class="off">[\s\S]*?<\/p>/g, ''); // official DOHMH text excluded
-    if (/\b(worst|best|dirtiest|filthy|gross|disgusting|shocking|avoid|ranked|ranking|top \d+)\b/i.test(visible.replace(/<[^>]+>/g, ' '))) banned.push(path.basename(f));
+    let visible = s.replace(/<p class="off">[\s\S]*?<\/p>/g, ''); // official DOHMH text excluded
+    for (const n of names) visible = visible.split(n).join(' ');
+    if (BAN.test(visible.replace(/<[^>]+>/g, ' '))) banned.push(path.basename(f));
     if (/"@type":\s*"(Restaurant|FoodEstablishment|Review|AggregateRating|Rating|LocalBusiness)"/.test(s)) ratingMarkup.push(path.basename(f));
   }
-  check(!banned.length, 'no ranking or sensational wording' + (banned.length ? ': ' + banned.slice(0, 5).join(', ') : ''));
+  check(!banned.length, `no ranking or sensational wording (outside ${names.length} restaurant names)` + (banned.length ? ': ' + banned.slice(0, 5).join(', ') : ''));
   check(!ratingMarkup.length, 'no Restaurant/Review/Rating structured data' + (ratingMarkup.length ? ': ' + ratingMarkup.slice(0, 5).join(', ') : ''));
   check(!files.some((f) => /<img|url\(/.test(fs.readFileSync(f, 'utf8'))), 'no images on any page');
 }
@@ -109,7 +122,7 @@ async function pageChecks(browser) {
         bytes: document.documentElement.outerHTML.length,
       };
     });
-    console.log(` ${camis}: ${info.h1} — ${info.grade}`);
+    console.log(` ${camis}: ${info.h1} - ${info.grade}`);
     check(res.status() === 200, 'HTTP 200');
     check(info.sw <= 390, `no horizontal scroll (scrollWidth ${info.sw})`);
     check(info.h1 && info.badge && info.grade, 'name, badge and grade label shown');
@@ -128,12 +141,14 @@ async function pageChecks(browser) {
     await page.close();
   }
   // Index pages at 390px.
-  for (const p of ['/eats/r/', '/eats/r/borough/staten-island.html', '/eats/r/cuisine/pizza.html']) {
+  const zipPage = fs.existsSync(Z) ? '/eats/z/' + fs.readdirSync(Z).filter((f) => f.endsWith('.html')).sort()[0] : null;
+  for (const p of ['/eats/r/', '/eats/r/borough/staten-island.html', '/eats/r/cuisine/pizza.html', '/eats/r/cuisine/pizza/brooklyn.html', zipPage].filter(Boolean)) {
     const page = await ctx.newPage();
     const res = await page.goto(ORIGIN + p);
     const sw = await page.evaluate(() => document.documentElement.scrollWidth);
     check(res.status() === 200 && sw <= 390, `${p}: 200, no horizontal scroll (${sw})`);
     if (p === '/eats/r/') await page.screenshot({ path: path.join(OUT, 'r-index-390.png'), fullPage: false });
+    if (p === zipPage) await page.screenshot({ path: path.join(OUT, 'z-index-390.png'), fullPage: false });
     await page.close();
   }
   await ctx.close();

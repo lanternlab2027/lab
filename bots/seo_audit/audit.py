@@ -3,8 +3,8 @@
 
 Usage: python3 bots/seo_audit/audit.py [--json out.json] [--verbose]
 
-Read-only. Checks every HTML page in the four programmatic sets
-(docs/b, docs/eats/r, docs/names/n, docs/guides) for: unique title and
+Read-only. Checks every HTML page in the programmatic sets
+(docs/b, docs/eats/r, docs/eats/z, docs/names/n, docs/guides) for: unique title and
 meta description, title/description length, self-referencing canonical
 that matches its sitemap <loc> exactly, one H1, JSON-LD that parses,
 accidental noindex, broken internal links (resolved against the file
@@ -26,6 +26,9 @@ SETS = {
                   'detail': re.compile(r'^b/\d{10}\.html$'), 'sitemap': 'sitemap-buildings.xml'},
     'eats': {'dir': 'eats/r', 'hub': 'eats/r/index.html',
              'detail': re.compile(r'^eats/r/\d+\.html$'), 'sitemap': 'sitemap-eats.xml'},
+    # per-ZIP restaurant index pages (Nov 16); "related" = links to nearby ZIP pages
+    'eats_zip': {'dir': 'eats/z', 'hub': 'eats/r/index.html',
+                 'detail': re.compile(r'^eats/z/\d{5}\.html$'), 'sitemap': 'sitemap-eats.xml'},
     'names': {'dir': 'names/n', 'hub': 'names/n/index.html',
               'detail': re.compile(r'^names/n/(?!index\.html$)[a-z0-9-]{2,}\.html$'), 'sitemap': 'sitemap-names.xml'},
     'guides': {'dir': 'guides', 'hub': 'guides/index.html',

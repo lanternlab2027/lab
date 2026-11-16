@@ -150,3 +150,64 @@ Run: `NODE_PATH=/opt/npm-tools/node_modules node bots/eats_pages/test_pages.js <
 - [ ] Submit `sitemap-index.xml` (or `sitemap-eats.xml`) in Search Console.
 - [ ] Install `eats_pages.yml` if the pages should stay current. Without it, grades go stale within weeks.
 - [ ] Optionally add a link to `eats/r/` from `docs/index.html` or `docs/sitemap.xml`.
+
+## Expansion to 6,000 (Nov 16, 2026)
+
+Grown from 1,000 to **6,000 restaurant pages**, plus hub pages. Data as of Nov 13, 2026 (unchanged; DOHMH had not published newer rows). Nothing committed or pushed.
+
+**Caveat from the pilot plan above:** the pilot said not to scale until the 1,000 pages index and earn clicks. This expansion was requested before that signal exists. Watch "Crawled, currently not indexed" for `eats/r/` in Search Console; if most new pages stay unindexed after 6 to 8 weeks, stop growing and improve the pages.
+
+### How the 5,000 new restaurants were picked (`build.py select --target 6000`, `select_expand`)
+
+Every input is a count in the open data. No popularity number was invented.
+
+1. **Pool:** in the five boroughs, inspected within 18 months of the data date, a valid 5-digit ZIP, and a current letter grade A, B or C (latest card grade, the `grades.js` rule). 22,018 restaurants.
+2. **Neighborhood density:** each ZIP gets slots in proportion to (pool restaurants in the ZIP)^1.2, so denser restaurant areas get a larger share. ZIPs with 8 or more pool restaurants get at least 5 slots, so each can have a useful ZIP page. The 1,000 pilot restaurants stay and count toward their ZIP's slots.
+3. **Brand recognition, within each ZIP:** slots alternate between
+   - (a) names in the `NAMED` chain/landmark list, then multi-location names (the same normalized trading name on 3 or more active permits, larger first). One location per name per ZIP, at most 40 per named chain and 25 per other name. Generic names (Cafe, Deli, Pizza and similar) and stadium stands don't count as brands. Some shared names are common names, not chains (for example "Great Wall"). They are still real, active, graded restaurants.
+   - (b) single-location restaurants with the longest record in the data (earliest inspection).
+4. Selection is filled round-robin across ZIPs, densest first. `pilot.json` records each pick's reason and ZIP.
+
+Result for the 5,000 new picks: 2,550 single-location by longest record, 1,689 multi-location names, 760 named chains and 1 landmark. By borough: Manhattan 2,113, Brooklyn 1,290, Queens 1,084, Bronx 381 and Staten Island 132. By grade: A 4,638, B 306 and C 56. The pool is A 90.2%, B 7.6%, C 2.2%, so the picks lean slightly toward A, because the longest-record proxy favors established places.
+
+### What changed on the pages
+
+- **Restaurant pages:**
+  - a prominent "Data as of" line under the address;
+  - an "Earlier inspections" list (date, score and grade for up to 10 inspections before the 3 shown in full);
+  - Browse links to the ZIP page and the cuisine-by-borough page;
+  - the "Also in ZIP" heading links to the ZIP page.
+- **Titles and descriptions now follow the audit limits.**
+  - Titles: when the long forms don't fit in 65 characters, the address uses USPS abbreviations (W 56 St). A title under 50 gets the ZIP. 99 titles are still over 65, all because the restaurant name itself is long.
+  - Descriptions: a shorter form is used past 160 characters.
+- **New hubs:**
+  - `docs/eats/z/{zip}.html`: 184 ZIP pages for ZIPs with 3 or more listed restaurants. Each lists restaurants alphabetically with their grade, the cuisines in the ZIP, and nearby ZIPs in the same borough.
+  - `r/cuisine/{cuisine}/{borough}.html`: 111 pages for cuisine-borough pairs with 10 or more restaurants.
+- **Restructured index pages:**
+  - Borough pages now link ZIPs and cuisines and list only restaurants in ZIPs too small for their own page. Listing all 2,400+ Manhattan restaurants would have made one page about 800 KB.
+  - Cuisine pages link their borough pages and list small groups inline.
+  - `r/index.html` links every ZIP page.
+  - Every restaurant page is within 2 clicks of `r/`.
+- **Sitemaps:** `docs/sitemap-eats.xml` has 6,363 URLs. Past 45,000 URLs the builder writes `sitemap-eats-2.xml` and onward, and adds or updates only those entries in `sitemap-index.xml`.
+- `bots/seo_audit/audit.py` gained an `eats_zip` set for `docs/eats/z/`.
+- In `test_pages.js`:
+  - the test now checks `eats/z/`, all eats sitemaps, and a ZIP page and a cuisine-by-borough page at 390px;
+  - the wording guard now skips restaurant trading names such as "Best Deli".
+
+### Weekly rebuild
+
+Unchanged: `python bots/eats_pages/build.py all`. A fetch of 6,000 restaurants takes about 3 minutes and resumes the same day if interrupted (`.cache/parts/`).
+
+In `eats_pages.yml`:
+- the page guard is now at least 6,000;
+- `docs/eats/z/` must hold at least 150 pages;
+- the commit step adds `docs/eats/z/` and `docs/sitemap-eats*.xml`;
+- the timeout is 45 minutes.
+
+### Size
+
+- `docs/eats/r/` holds 63 MB of HTML (11.1 MB before). Restaurant pages have a median of 10.6 KB.
+- `docs/eats/z/` is 1.6 MB.
+- `last_known.json.gz` is 1.7 MB.
+- `sitemap-eats.xml` is 0.7 MB.
+- That is about 56 MB more in the working tree. Compressed (as git stores it, and as Pages serves it) it is about 5.5 MB.
