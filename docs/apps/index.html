@@ -162,6 +162,14 @@
   .signup .small { flex-basis:100%; font-size:13px; color:rgba(255,255,255,.62); margin:4px 0 0; }
   #signup-msg { min-height:1em; color:#ffd6a0; }
 
+  /* wrapped-season hub banner (a link, not a .card, so the card count stays the same) */
+  a.season-banner { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px 16px; margin:24px 0 0; padding:16px 20px; border-radius:16px; text-decoration:none; color:var(--ink); background:var(--card); border:2px solid var(--pink); box-shadow:var(--shadow); }
+  a.season-banner b { display:block; font-size:18px; letter-spacing:-.01em; }
+  a.season-banner span { display:block; font-size:15px; color:var(--muted); }
+  a.season-banner em { font-style:normal; font-weight:750; white-space:nowrap; color:#fff; background:var(--pink); padding:9px 16px; border-radius:99px; }
+  a.season-banner:hover em { filter:brightness(1.08); }
+  a.season-banner:focus-visible { outline:3px solid var(--orange); outline-offset:2px; }
+
   footer { color:var(--muted); font-size:14px; padding:36px 0 44px; }
   footer p { margin:4px 0; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .card, .btn { transition:none; } .card:hover, .btn:hover { transform:none; } }
@@ -202,6 +210,7 @@
 </nav>
 
 <main class="wrap">
+  <a class="season-banner" href="../wrapped-season/"><div><b>Wrapped season: which exports to request today</b><span>All 9 year-in-review apps, sorted by how long each export takes to arrive.</span></div><em>See the list &rarr;</em></a>
   <section id="wrapped" class="wrapped-sec" aria-labelledby="wrapped-h">
     <span class="season">December</span>
     <div class="sh">
