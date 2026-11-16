@@ -43,7 +43,9 @@ const readJson = (p) => JSON.parse(fs.readFileSync(path.join(DOCS, p), 'utf8'));
   // verified 2027 dates
   check(new Date(shows['film-2027'].ceremony).toISOString() === '2027-0314T23:00:00.000Z'.replace('0314', '03-14'), 'film: Mar 14 2027, 7 pm EDT (DST starts that morning)');
   check(shows['film-2027'].nominations === '2027-01-21', 'film: nominations Jan 21 2027');
-  check(new Date(shows['music-2027'].ceremony).toISOString() === '2027-02-08T01:00:00.000Z', 'music: Feb 7 2027, 8 pm EST');
+  check(new Date(shows['music-2027'].ceremony).toISOString() === '2027-02-08T00:00:00.000Z', 'music: Feb 7 2027, 7 pm EST (announced with the nominations)');
+  check(B.isOpen(shows['music-2027']) && shows['music-2027'].categories.length === 20, 'music: nominees posted, 20 categories, ballot open');
+  check(B.status(shows['music-2027'], Date.parse('2026-11-17')) === 'open', 'music is "open" after nominations');
   check(new Date(shows['globes-2027'].ceremony).toISOString() === '2027-01-11T00:30:00.000Z', 'film+TV: Jan 10 2027, 7:30 pm EST');
   check(shows['film-2027'].categories.length === 24, 'film has 24 categories');
   check(shows['globes-2027'].categories.length === 28, 'film+TV has 28 categories');

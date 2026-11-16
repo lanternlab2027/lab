@@ -13,7 +13,7 @@ Page: `docs/ballot/` (https://lanternlab2027.github.io/lab/ballot/). Nothing out
 
 The source URLs are in each show file's `sources`.
 
-- The music start time is NOT announced yet. The file uses 8 pm ET (the usual start) and says "(start time to be confirmed)". Fix `ceremony` and `ceremonyLabel` when ABC posts it.
+- Music start time: 7 pm ET / 4 pm PT on ABC (announced with the nominations, Nov 16, 2026: academy press release + Billboard). `ceremony` is `2027-02-07T19:00:00-05:00`; the unit test checks it.
 - Mar 14, 2027 is the day DST starts, so 7 pm ET is `-04:00`. The unit test checks this.
 - Categories:
   - Film: the 24 categories for the 99th awards. The academy's rules release for the 99th added, removed and renamed nothing, and Casting stays.
@@ -101,7 +101,7 @@ Same approach as the bracket app: text -> deflate-raw -> base64url (`z`), or pla
 
 ## To do
 
-1. **Music nominations are out today (Nov 16).** Fill `shows/music-2027.json` nominees, a list of `{ "name": ..., "note": ... }` per category, where the note is the artist or work. Every category needs 2+ nominees, and the show opens when all have them. Then re-run the unit test.
+1. Done Nov 16: `shows/music-2027.json` has the official nominees for all 20 categories (116 nominees; no category renamed or dropped). Checked against the academy's list and press release plus Billboard. Spellings follow the official list (e.g. "THIS MUSIC MAY CONTAIN HOPE.", "Tame Impala With JENNIE"). The music ballot is open; `rev` stays 1.
 2. Dec 7: fill `globes-2027.json`. Jan 21: fill `film-2027.json` (up to 10 Best Picture nominees; the limit is 30 per category).
 3. If a nominee list changes after ballots go out, bump `rev`; old ballots then show "older list". Never reorder nominees, because picks are stored as indexes.
 4. During each show, edit `results/<id>.json`:
@@ -110,4 +110,4 @@ Same approach as the bracket app: text -> deflate-raw -> base64url (`z`), or pla
    - Set `final: true` at the end. Pages pick up changes within a minute.
 5. Create the Kit tag and replace `TAGID_BALLOT`. The box then appears automatically.
 6. At launch: add `ballot` to docs/apps/more.js, the hub and the sitemap. These files were off limits for this build.
-7. Confirm the music show's start time.
+7. Done: the music show starts at 7 pm ET.

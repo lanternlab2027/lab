@@ -3,13 +3,25 @@
  "rev": 1,
  "name": "Music awards night 2027",
  "short": "Music awards 2027",
- "about": "The recording academy's 69th awards, Sunday, Feb 7, 2027, at Crypto.com Arena in Los Angeles. This ballot covers the big four and a set of headline genre awards (20 of the roughly 100 categories).",
- "ceremony": "2027-02-07T20:00:00-05:00",
- "ceremonyLabel": "Sun, Feb 7, 2027, 8 pm ET (start time to be confirmed)",
+ "about": "The recording academy's 69th awards, Sunday, Feb 7, 2027, at Crypto.com Arena in Los Angeles. This ballot covers the big four and a set of headline genre awards (20 of the 100 categories).",
+ "ceremony": "2027-02-07T19:00:00-05:00",
+ "ceremonyLabel": "Sun, Feb 7, 2027, 7 pm ET",
  "nominations": "2026-11-16",
  "nominationsLabel": "Mon, Nov 16, 2026",
  "resultsUrl": "https://www.grammy.com/",
  "sources": [
+  {
+   "label": "Recording academy: full list of 69th nominations (Nov 16, 2026)",
+   "url": "https://www.grammy.com/awards/69th-annual-grammy-awards-2027/"
+  },
+  {
+   "label": "Recording academy press release: 69th nominations; show at 7 pm ET / 4 pm PT on ABC",
+   "url": "https://www.financialcontent.com/article/bizwire-2026-11-16-raye-rosala-ella-langley-miranda-lambert-olivia-rodrigo-phoebe-bridgers-bruno-mars-leon-thomas-and-olivia-dean-lead-the-69th-grammy-awards-nominations"
+  },
+  {
+   "label": "Billboard: 2027 nominations, complete list",
+   "url": "https://www.billboard.com/lists/grammy-nominations-2027-full-list/"
+  },
   {
    "label": "ABC: the 2027 show airs live Sunday, Feb 7, 2027",
    "url": "https://abc.com/news/f055deb9-3d58-4ecf-bdf2-70536dff9549/category/1138628"
@@ -43,140 +55,616 @@
    "name": "Album of the Year",
    "group": "General field",
    "weight": 3,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Lost Weekend",
+     "note": "Phoebe Bridgers"
+    },
+    {
+     "name": "The Art of Loving",
+     "note": "Olivia Dean"
+    },
+    {
+     "name": "Dandelion",
+     "note": "Ella Langley"
+    },
+    {
+     "name": "The Romantic",
+     "note": "Bruno Mars"
+    },
+    {
+     "name": "THIS MUSIC MAY CONTAIN HOPE.",
+     "note": "RAYE"
+    },
+    {
+     "name": "you seem pretty sad for a girl so in love",
+     "note": "Olivia Rodrigo"
+    },
+    {
+     "name": "LUX (Complete Works)",
+     "note": "ROSAL\u00cdA"
+    },
+    {
+     "name": "The Life of a Showgirl",
+     "note": "Taylor Swift"
+    }
+   ]
   },
   {
    "id": "record",
    "name": "Record of the Year",
    "group": "General field",
    "weight": 3,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Man I Need",
+     "note": "Olivia Dean"
+    },
+    {
+     "name": "Choosin' Texas",
+     "note": "Ella Langley"
+    },
+    {
+     "name": "I Just Might",
+     "note": "Bruno Mars"
+    },
+    {
+     "name": "WHERE IS MY HUSBAND!",
+     "note": "RAYE"
+    },
+    {
+     "name": "the cure",
+     "note": "Olivia Rodrigo"
+    },
+    {
+     "name": "Berghain",
+     "note": "ROSAL\u00cdA, Bj\u00f6rk, Yves Tumor"
+    },
+    {
+     "name": "The Fate of Ophelia",
+     "note": "Taylor Swift"
+    },
+    {
+     "name": "Dracula",
+     "note": "Tame Impala With JENNIE"
+    }
+   ]
   },
   {
    "id": "song",
    "name": "Song of the Year",
    "group": "General field",
    "weight": 3,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Berghain",
+     "note": "ROSAL\u00cdA, Bj\u00f6rk, Yves Tumor"
+    },
+    {
+     "name": "Choosin' Texas",
+     "note": "Ella Langley"
+    },
+    {
+     "name": "the cure",
+     "note": "Olivia Rodrigo"
+    },
+    {
+     "name": "hate that i made you love me",
+     "note": "Ariana Grande"
+    },
+    {
+     "name": "I Knew It, I Knew You (From Toy Story 5)",
+     "note": "Taylor Swift"
+    },
+    {
+     "name": "Man I Need",
+     "note": "Olivia Dean"
+    },
+    {
+     "name": "Risk It All",
+     "note": "Bruno Mars"
+    },
+    {
+     "name": "WHERE IS MY HUSBAND!",
+     "note": "RAYE"
+    }
+   ]
   },
   {
    "id": "new-artist",
    "name": "Best New Artist",
    "group": "General field",
    "weight": 3,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Angine de Poitrine"
+    },
+    {
+     "name": "Geese"
+    },
+    {
+     "name": "Ella Langley"
+    },
+    {
+     "name": "Slayyyter"
+    },
+    {
+     "name": "SIENNA SPIRO"
+    },
+    {
+     "name": "Don Toliver"
+    },
+    {
+     "name": "Remi Wolf"
+    },
+    {
+     "name": "The Womack Sisters"
+    }
+   ]
   },
   {
    "id": "pop-solo",
    "name": "Best Pop Solo Performance",
    "group": "Pop",
    "weight": 2,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Man I Need",
+     "note": "Olivia Dean"
+    },
+    {
+     "name": "Risk It All",
+     "note": "Bruno Mars"
+    },
+    {
+     "name": "WHERE IS MY HUSBAND!",
+     "note": "RAYE"
+    },
+    {
+     "name": "the cure",
+     "note": "Olivia Rodrigo"
+    },
+    {
+     "name": "Sauvignon Blanc",
+     "note": "ROSAL\u00cdA"
+    }
+   ]
   },
   {
    "id": "pop-group",
    "name": "Best Pop Duo/Group Performance",
    "group": "Pop",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "RUNWAY",
+     "note": "Lady Gaga, Doechii"
+    },
+    {
+     "name": "Bring Your Love",
+     "note": "Madonna, Sabrina Carpenter"
+    },
+    {
+     "name": "Click Clack Symphony.",
+     "note": "RAYE Featuring Hans Zimmer"
+    },
+    {
+     "name": "The Life of a Showgirl",
+     "note": "Taylor Swift, Sabrina Carpenter"
+    },
+    {
+     "name": "Dracula",
+     "note": "Tame Impala With JENNIE"
+    }
+   ]
   },
   {
    "id": "pop-album",
    "name": "Best Pop Vocal Album",
    "group": "Pop",
    "weight": 2,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "The Art of Loving",
+     "note": "Olivia Dean"
+    },
+    {
+     "name": "petal",
+     "note": "Ariana Grande"
+    },
+    {
+     "name": "The Romantic",
+     "note": "Bruno Mars"
+    },
+    {
+     "name": "THIS MUSIC MAY CONTAIN HOPE.",
+     "note": "RAYE"
+    },
+    {
+     "name": "you seem pretty sad for a girl so in love",
+     "note": "Olivia Rodrigo"
+    }
+   ]
   },
   {
    "id": "asian-pop",
    "name": "Best Asian Pop Music Performance",
    "group": "Pop",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Sunset Kiss",
+     "note": "BABYMETAL, Polyphia"
+    },
+    {
+     "name": "Unang Kilig",
+     "note": "BINI"
+    },
+    {
+     "name": "BANG BANG",
+     "note": "IVE"
+    },
+    {
+     "name": "404 (New Era)",
+     "note": "KiiiKiii"
+    },
+    {
+     "name": "YES",
+     "note": "LiSA"
+    },
+    {
+     "name": "VISA",
+     "note": "SB19"
+    }
+   ]
   },
   {
    "id": "dance-album",
    "name": "Best Dance/Electronic Album",
    "group": "Dance",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "CONFESSIONS II",
+     "note": "Madonna"
+    },
+    {
+     "name": "Sexistential",
+     "note": "Robyn"
+    },
+    {
+     "name": "SOMA",
+     "note": "Skrillex"
+    },
+    {
+     "name": "WOR$T GIRL IN AMERICA",
+     "note": "Slayyyter"
+    },
+    {
+     "name": "Deadbeat",
+     "note": "Tame Impala"
+    }
+   ]
   },
   {
    "id": "rock-album",
    "name": "Best Rock Album",
    "group": "Rock",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Vol.II",
+     "note": "Angine de Poitrine"
+    },
+    {
+     "name": "Your Favorite Toy",
+     "note": "Foo Fighters"
+    },
+    {
+     "name": "The Wow! Signal",
+     "note": "Muse"
+    },
+    {
+     "name": "Foreign Tongues",
+     "note": "The Rolling Stones"
+    },
+    {
+     "name": "Frozen Charlotte",
+     "note": "Jack White"
+    }
+   ]
   },
   {
    "id": "alt-album",
    "name": "Best Alternative Music Album",
    "group": "Alternative",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "I Must Be Dreaming",
+     "note": "Alabama Shakes"
+    },
+    {
+     "name": "Lost Weekend",
+     "note": "Phoebe Bridgers"
+    },
+    {
+     "name": "Music, Fashion, Film",
+     "note": "Charli xcx"
+    },
+    {
+     "name": "Getting Killed",
+     "note": "Geese"
+    },
+    {
+     "name": "The Mountain",
+     "note": "Gorillaz"
+    },
+    {
+     "name": "LUX (Complete Works)",
+     "note": "ROSAL\u00cdA"
+    }
+   ]
   },
   {
    "id": "rnb-solo",
    "name": "Best R&B Solo Performance",
    "group": "R&B",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "MORNING DEW (DONK)",
+     "note": "Beyonc\u00e9"
+    },
+    {
+     "name": "Out The Window",
+     "note": "Kehlani"
+    },
+    {
+     "name": "Let Me",
+     "note": "Victoria Mon\u00e9t"
+    },
+    {
+     "name": "Pressha",
+     "note": "Jill Scott"
+    },
+    {
+     "name": "What You Need",
+     "note": "Tems"
+    }
+   ]
   },
   {
    "id": "rnb-album",
    "name": "Best R&B Album",
    "group": "R&B",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "BROWN (The Chocolate Edition)",
+     "note": "Chris Brown"
+    },
+    {
+     "name": "When The City Sleeps",
+     "note": "Alex Isley"
+    },
+    {
+     "name": "Kehlani",
+     "note": "Kehlani"
+    },
+    {
+     "name": "Saturday Night",
+     "note": "PJ Morton"
+    },
+    {
+     "name": "To Whom This May Concern",
+     "note": "Jill Scott"
+    }
+   ]
   },
   {
    "id": "rap-album",
    "name": "Best Rap Album",
    "group": "Rap",
    "weight": 2,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "DILLAGENCE II",
+     "note": "Busta Rhymes (& J Dilla)"
+    },
+    {
+     "name": "AM I THE DRAMA?",
+     "note": "Cardi B"
+    },
+    {
+     "name": "God Gotta Afro & Gold Hoops",
+     "note": "Rapsody"
+    },
+    {
+     "name": "OCTANE",
+     "note": "Don Toliver"
+    },
+    {
+     "name": "everything is a lot.",
+     "note": "Wale"
+    },
+    {
+     "name": "BULLY - DELUXE",
+     "note": "Kanye West (Ye)"
+    }
+   ]
   },
   {
    "id": "rap-song",
    "name": "Best Rap Song",
    "group": "Rap",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "E85",
+     "note": "Don Toliver"
+    },
+    {
+     "name": "ErrTime",
+     "note": "Cardi B"
+    },
+    {
+     "name": "girl, get up.",
+     "note": "Doechii Featuring SZA"
+    },
+    {
+     "name": "LET 'EM KNOW",
+     "note": "T.I."
+    },
+    {
+     "name": "Spend Dat",
+     "note": "Yung Miami"
+    }
+   ]
   },
   {
    "id": "country-album",
    "name": "Best Contemporary Country Album",
    "group": "Country",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Mount Pleasant",
+     "note": "Kelsea Ballerini"
+    },
+    {
+     "name": "Cherry Valley",
+     "note": "Carter Faith"
+    },
+    {
+     "name": "Dandelion",
+     "note": "Ella Langley"
+    },
+    {
+     "name": "Cloud 9",
+     "note": "Megan Moroney"
+    },
+    {
+     "name": "Middle of Nowhere",
+     "note": "Kacey Musgraves"
+    }
+   ]
   },
   {
    "id": "trad-country",
    "name": "Best Traditional Country Album",
    "group": "Country",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Clovis",
+     "note": "Charley Crockett"
+    },
+    {
+     "name": "50 Years From Home: Down At The Borderline",
+     "note": "Vince Gill"
+    },
+    {
+     "name": "Banks Of The Trinity",
+     "note": "Cody Johnson"
+    },
+    {
+     "name": "Workin' Man: Willie Sings Merle",
+     "note": "Willie Nelson"
+    },
+    {
+     "name": "Once Upon a Second Time Around",
+     "note": "Charlie Worsham"
+    }
+   ]
   },
   {
    "id": "latin-pop",
    "name": "Best Latin Pop Album",
    "group": "Latin",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "NO ME ARREPIENTO DE SENTIR TANTO",
+     "note": "KAROL G"
+    },
+    {
+     "name": "FEMME FATALE",
+     "note": "Mon Laferte"
+    },
+    {
+     "name": "MUDA",
+     "note": "Car\u00edn Le\u00f3n"
+    },
+    {
+     "name": "\u00bfD\u00f3nde Es El After?",
+     "note": "Rawayana"
+    },
+    {
+     "name": "Bendito Verano",
+     "note": "ELENA ROSE"
+    }
+   ]
   },
   {
    "id": "latin-song",
    "name": "Best Latin Song",
    "group": "Latin",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Ah\u00ed",
+     "note": "KAROL G, Drake"
+    },
+    {
+     "name": "\u00bfC\u00f3mo se ama?",
+     "note": "Jorge Drexler"
+    },
+    {
+     "name": "Hasta Jes\u00fas Tuvo un Mal D\u00eda",
+     "note": "CA7RIEL & Paco Amoroso, Sting"
+    },
+    {
+     "name": "La Perla",
+     "note": "ROSAL\u00cdA, Yahritza Y Su Esencia"
+    },
+    {
+     "name": "Ni\u00f1o",
+     "note": "Milo J"
+    }
+   ]
   },
   {
    "id": "comedy",
    "name": "Best Comedy Album",
    "group": "Comedy",
    "weight": 1,
-   "nominees": []
+   "nominees": [
+    {
+     "name": "Good Girl",
+     "note": "Nikki Glaser"
+    },
+    {
+     "name": "Joy in The Trenches",
+     "note": "Trevor Noah"
+    },
+    {
+     "name": "Legacy",
+     "note": "Wanda Sykes"
+    },
+    {
+     "name": "100 Sound Effects",
+     "note": "Fred Armisen"
+    },
+    {
+     "name": "Take a Banana for the Ride",
+     "note": "Jeff Ross"
+    },
+    {
+     "name": "The Unstoppable\u2026",
+     "note": "Dave Chappelle"
+    }
+   ]
   }
  ]
 }

@@ -103,6 +103,8 @@ const winIx = (ci) => DEMO.categories[ci].nominees.findIndex((x) => x.name === F
     const filmCard = await home.textContent('#shows [data-show="film-2027"]');
     check(/Nominations announced Thu, Jan 21, 2027; ballots open then\./.test(filmCard) && /Mar 14, 2027/.test(filmCard), 'film show: "Nominations announced Thu, Jan 21, 2027; ballots open then."');
     check(/Feb 7, 2027/.test(await home.textContent('#shows [data-show="music-2027"]')) && /Jan 10, 2027/.test(await home.textContent('#shows [data-show="globes-2027"]')), 'music Feb 7 and film+TV Jan 10 shown');
+    const musicCard = await home.textContent('#shows [data-show="music-2027"]');
+    check(/Ballots are open\./.test(musicCard) && /Open/.test(await home.textContent('#shows [data-show="music-2027"] .badge')) && !/ballots open then/.test(musicCard), 'music show: nominees posted, "Ballots are open."');
     check(/Demo/.test(await home.textContent('#shows [data-show="demo"] .badge.demo')), 'demo show labelled Demo');
     check(await home.isVisible('#remind'), 'Kit box visible with the real tag');
     check(await home.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'no horizontal page scroll');
@@ -259,6 +261,16 @@ const winIx = (ci) => DEMO.categories[ci].nominees.findIndex((x) => x.name === F
     check(await fpage.isVisible('#fill-closed') && /Nominations announced Thu, Jan 21, 2027; ballots open then\./.test(await fpage.textContent('#fill-closed')), 'film pool before nominations: "ballots open then"');
     check(await fpage.isHidden('#finish'), 'no picks possible before nominees are posted');
     await fpage.screenshot({ path: path.join(OUT, `closed-film${tag}.png`) });
+
+    // ---------------- the music show, now that its nominees are posted
+    const mp = C.makePool({ name: 'Music Night', show: 'music-2027', rules: 'weighted', lock: Date.parse('2027-02-08T00:00:00Z'), tbKey: 'runtime' });
+    const mpage = await open(p1ctx, URL0 + '#' + await C.encodePool(mp));
+    check(await mpage.isVisible('#fill') && await mpage.isHidden('#fill-closed') && await mpage.locator('#cats fieldset').count() === 20, 'music pool: open ballot with 20 categories');
+    check(/THIS MUSIC MAY CONTAIN HOPE\./.test(await mpage.textContent('#cat-0')) && !MARKS.test(await mpage.evaluate(() => [...document.body.children].filter((e) => e.id !== 'more-apps').map((e) => e.innerText || '').join('\n'))), 'music ballot lists the nominees, no awards trademarks');
+    check(await mpage.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'music ballot: no horizontal page scroll');
+    await mpage.screenshot({ path: path.join(OUT, `music-ballot${tag}.png`) });
+    await mpage.screenshot({ path: path.join(OUT, `music-ballot-full${tag}.png`), fullPage: true });
+    check(mpage.errs.length === 0, 'music ballot: no console errors');
 
     // ---------------- damaged link
     const bad = await open(p1ctx, URL0 + '#e=' + new URL(ana).hash.slice(3, 40));
