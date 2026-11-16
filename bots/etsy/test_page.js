@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/etsy/test_page.js <screenshot dir>
 // Uses only synthetic fixtures (bots/etsy/make_fixtures.js). Kit is routed to a local stub; the real API is never hit.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const JSZip = require(require('path').resolve(__dirname, '../../docs/etsy/vendor/jszip-3.10.1.min.js'));
 const http = require('http'), fs = require('fs'), path = require('path');
 
@@ -60,6 +61,7 @@ const bodyText = (page) => page.evaluate(() => document.body.innerText + ' ' + d
       if (!r.url().startsWith(ORIGIN + '/')) { offOrigin.push(r.url()); return route.abort(); }
       return route.continue();
     });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked after the uploads
 
     await page.goto(ORIGIN + '/etsy/?ref=fbgroup');
     await page.waitForLoadState('networkidle');
@@ -73,7 +75,7 @@ const bodyText = (page) => page.evaluate(() => document.body.innerText + ' ' + d
     await page.waitForTimeout(300);
     check((await page.locator('#more-apps a').count()) >= 3, 'cross-promo strip renders links');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self';/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit only');
+    check(/default-src 'none'/.test(csp) && /script-src 'self';/.test(csp) && /connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit and the page-view counter only');
     const title = await page.title(), desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/etsy shop year in review/i.test(title) && /etsy sales report/i.test(title) && /etsy fees calculator for taxes/i.test(desc) && /etsy shop year in review/i.test(desc) && /etsy sales report/i.test(desc), 'SEO title/description carry the three phrases');
     check(/og\.png$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
@@ -88,6 +90,7 @@ const bodyText = (page) => page.evaluate(() => document.body.innerText + ' ' + d
     check(await noHScroll(page), 'landing: no horizontal scroll');
     await page.screenshot({ path: path.join(OUT, `landing-${width}.png`), fullPage: width === 1280 });
     const loadCount = all.length;
+    const gcAtLoad = gc.hits.length;
 
     // Demo.
     await page.click('#sample');
@@ -209,6 +212,9 @@ const bodyText = (page) => page.evaluate(() => document.body.innerText + ' ' + d
     // Privacy: after page load, nothing went over the network; CSP blocks exfiltration.
     const after = all.slice(loadCount).filter((r) => !/\/etsy\/(\?|$|index\.html|[a-z]+\.js|vendor\/|og\.png)/.test(r.url.replace(ORIGIN, '')) && !(r.method === 'GET' && /^\/apps\/(more\.(js|css)|img\/[a-z0-9-]+\.(jpg|png|webp))$/.test(r.url.replace(ORIGIN, ''))));
     check(after.length === 0 && offOrigin.length === 0, `zero network requests from uploads (${after.map((r) => r.method + ' ' + r.url).join(', ') || 'none'})`);
+    // The only other request allowed is the page-view beacon, sent once at load: no hash, no file names or data.
+    GC.checkBeacons(gc, check, { forbid: GC.fixtureNames(FX), expect: { p: '/etsy/?ref=fbgroup', q: '?ref=fbgroup' } });
+    check(gc.hits.length === gcAtLoad, 'no page-view beacon after upload (' + (gc.hits.length - gcAtLoad) + ')');
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));
     check(blocked, 'CSP blocks fetch to a third-party origin');
     const realErrs = errs.filter((e) => !/example\.com\/x/.test(e));

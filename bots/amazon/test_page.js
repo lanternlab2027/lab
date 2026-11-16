@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/amazon/test_page.js <screenshot dir>
 // Uses only synthetic fixtures (bots/amazon/make_fixtures.js). Kit is routed to a local stub; the real API is never hit.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const JSZip = require(require('path').resolve(__dirname, '../../docs/amazon/vendor/jszip-3.10.1.min.js'));
 const http = require('http'), fs = require('fs'), path = require('path');
 
@@ -61,6 +62,7 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
       if (!r.url().startsWith(ORIGIN + '/')) { offOrigin.push(r.url()); return route.abort(); }
       return route.continue();
     });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked after the uploads
 
     await page.goto(ORIGIN + '/amazon/?ref=tiktok');
     await page.waitForLoadState('networkidle');
@@ -71,7 +73,7 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
     check(await page.locator('footer a[href="../"]').count() === 1 && await page.locator('footer a[href="../apps/"]').count() === 1, 'footer links to ../ and ../apps/');
     check(/Make yours/.test(await page.textContent('footer')), 'footer has "Make yours"');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self';/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit only');
+    check(/default-src 'none'/.test(csp) && /script-src 'self';/.test(csp) && /connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit and the page-view counter only');
     const title = await page.title(), desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/how much have i spent on amazon/i.test(title) && /amazon order history spending/i.test(desc), 'SEO title/description target the two phrases');
     check(/og\.png$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
@@ -84,6 +86,7 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
     check(await noHScroll(page), 'landing: no horizontal scroll');
     await page.screenshot({ path: path.join(OUT, `landing-${width}.png`), fullPage: width === 1280 });
     const loadCount = all.length;
+    const gcAtLoad = gc.hits.length;
 
     // Sample.
     await page.click('#sample');
@@ -218,8 +221,11 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
 
     // Privacy: after page load, nothing went over the network; CSP blocks exfiltration.
     // The static "More free apps" strip (../apps/more.js, more.css, lazy thumbnails) may load after upload; it sends no data.
-    const after = all.slice(loadCount).filter((r) => !/\/amazon\/(\?|$|index\.html|[a-z]+\.js|vendor\/|og\.png)/.test(r.url.replace(ORIGIN, '')) && !(r.method === 'GET' && /^\/apps\/(more\.(js|css)|img\/[a-z-]+\.jpg)$/.test(r.url.replace(ORIGIN, ''))));
+    const after = all.slice(loadCount).filter((r) => !/\/amazon\/(\?|$|index\.html|[a-z]+\.js|vendor\/|og\.png)/.test(r.url.replace(ORIGIN, '')) && !(r.method === 'GET' && /^\/(apps\/(more\.(js|css)|img\/[a-z-]+\.jpg)|vendor\/goatcounter\/count\.js)$/.test(r.url.replace(ORIGIN, ''))));
     check(after.length === 0 && offOrigin.length === 0, `zero network requests from uploads (${after.map((r) => r.method + ' ' + r.url).join(', ') || 'none'})`);
+    // The only other request allowed is the page-view beacon, sent once at load: no hash, no file names or data.
+    GC.checkBeacons(gc, check, { forbid: GC.fixtureNames(FX), expect: { p: '/amazon/?ref=tiktok', q: '?ref=tiktok' } });
+    check(gc.hits.length === gcAtLoad + 1, 'no page-view beacon from uploads; one from the reload (' + (gc.hits.length - gcAtLoad) + ')');
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));
     check(blocked, 'CSP blocks fetch to a third-party origin');
     const realErrs = errs.filter((e) => !/example\.com\/x/.test(e));

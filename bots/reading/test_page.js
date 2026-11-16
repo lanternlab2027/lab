@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/reading/test_page.js <screenshot dir>
 // Uses only synthetic fixtures. Kit is routed to a local stub; the real API is never hit.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const JSZip = require(require('path').resolve(__dirname, '../../docs/reading/vendor/jszip-3.10.1.min.js'));
 const http = require('http'), fs = require('fs'), path = require('path');
 
@@ -61,6 +62,7 @@ async function expectError(page, file, re) {
       if (!r.url().startsWith(ORIGIN + '/')) { offOrigin.push(r.url()); return route.abort(); }
       return route.continue();
     });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked after the uploads
 
     await page.goto(ORIGIN + '/reading/');
     await page.waitForLoadState('networkidle');
@@ -70,11 +72,12 @@ async function expectError(page, file, re) {
     check(await page.locator('footer a[href="../guides/how-to-export-libby-timeline.html"]').count() === 1 && await page.locator('#libby').count() === 1, 'Libby export steps + guide link on the page');
     check(await page.locator('footer a[href="../"]').count() === 1, 'footer links to ../');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(csp === "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'", 'CSP unchanged: scripts self-only, connections to Kit only');
+    check(csp === "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'", 'CSP unchanged: scripts self-only, connections to Kit and the page-view counter only');
     check(/goodreads wrapped/i.test(await page.title()) && /reading wrapped 2026/i.test(await page.title()), 'SEO title targets "goodreads wrapped" / "reading wrapped 2026"');
     check(/storygraph/i.test(await page.getAttribute('meta[name="description"]', 'content')), 'meta description mentions StoryGraph');
     check(/og\.(png|jpg)$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
     const loadCount = all.length;
+    const gcAtLoad = gc.hits.length;
 
     // Goodreads CSV
     let cards = await upload(page, 'goodreads_library_export.csv');
@@ -160,6 +163,9 @@ async function expectError(page, file, re) {
     // The static "More free apps" strip (../apps/more.js, more.css, lazy thumbnails) may load after upload; it sends no data.
     const afterUpload = all.slice(loadCount).filter((r) => !(r.method === 'GET' && /^\/apps\/(more\.(js|css)|img\/[a-z-]+\.jpg)$/.test(r.url.replace(ORIGIN, ''))));
     check(afterUpload.length === 0 && offOrigin.length === 0, `zero network requests after upload (${afterUpload.length} made: ${afterUpload.map((r) => r.method + ' ' + r.url).join(', ') || 'none'})`);
+    // The only other request allowed is the page-view beacon, sent once at load: no hash, no file names or data.
+    GC.checkBeacons(gc, check, { forbid: GC.fixtureNames(FX), expect: { p: '/reading/', q: '' } });
+    check(gc.hits.length === gcAtLoad, 'no page-view beacon after upload (' + (gc.hits.length - gcAtLoad) + ')');
 
     // CSP really blocks an exfiltration attempt from page context.
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));

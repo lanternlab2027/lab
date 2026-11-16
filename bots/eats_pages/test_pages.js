@@ -5,6 +5,7 @@
 // 3. Live smoke (skip with --no-live): the CTA opens the app, which loads that restaurant from NYC Open Data.
 'use strict';
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 
 const ROOT = path.resolve(__dirname, '../../docs');
@@ -99,10 +100,12 @@ async function linkCheck() {
 async function pageChecks(browser) {
   console.log('Pages at 390px');
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+  const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked per page below
   for (const camis of PAGES) {
     const page = await ctx.newPage();
     const external = [];
-    page.on('request', (r) => { if (!r.url().startsWith(ORIGIN)) external.push(r.url()); });
+    const gcBefore = gc.hits.length;
+    page.on('request', (r) => { if (!r.url().startsWith(ORIGIN) && !GC.isCounter(r.url())) external.push(r.url()); });
     const errors = [];
     page.on('pageerror', (e) => errors.push(String(e)));
     const res = await page.goto(`${ORIGIN}/eats/r/${camis}.html`);
@@ -135,7 +138,8 @@ async function pageChecks(browser) {
     check(info.codes === info.viol, `every violation (${info.viol}) shows its official code`);
     check(info.asof, '"Data as of" date shown');
     check(info.how, 'grading note with DOHMH citation and snapshot caveat');
-    check(external.length === 0, 'no external requests' + (external.length ? ': ' + external.join(', ') : ''));
+    check(external.length === 0, 'no external requests besides the page-view counter' + (external.length ? ': ' + external.join(', ') : ''));
+    GC.checkBeacons({ hits: gc.hits.slice(gcBefore), other: gc.other }, check, { expect: { p: `/eats/r/${camis}.html`, q: '' } });
     check(errors.length === 0, 'no page errors');
     await page.screenshot({ path: path.join(OUT, `r-${camis}-390.png`), fullPage: true });
     await page.close();

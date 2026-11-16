@@ -110,6 +110,7 @@ console.log(fails ? '  static: ' + fails + ' failures' : '  ok   static: ' + pag
 // ---------- browser ----------
 async function browser() {
   const { chromium } = require('playwright');
+  const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
   fs.mkdirSync(OUT, { recursive: true });
   const PORT = 8795, ORIGIN = 'http://127.0.0.1:' + PORT;
   const TYPES = { '.html': 'text/html', '.js': 'application/javascript', '.json': 'application/json', '.png': 'image/png', '.css': 'text/css', '.jpg': 'image/jpeg' };
@@ -146,6 +147,7 @@ async function browser() {
       return json(route, 404, {});
     });
     await ctx.route('https://api.convertkit.com/**', (r) => r.fulfill({ status: 200, body: '{}' }));
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked with the other-hosts check
     const page = await ctx.newPage();
     await page.clock.setFixedTime(new Date(FX.NOW));
     page.on('request', (r) => hosts.add(new URL(r.url()).host));
@@ -184,8 +186,9 @@ async function browser() {
     await page.goto(ORIGIN + '/lab/' + rel); await page.waitForSelector('#result:not([hidden])', { timeout: 15000 }).catch(() => {});
     await page.screenshot({ path: path.join(OUT, 'town-390-' + t.st.toLowerCase() + '-' + t.slug + '.png'), fullPage: false });
     await page.screenshot({ path: path.join(OUT, 'town-390-' + t.st.toLowerCase() + '-' + t.slug + '-full.png'), fullPage: true });
-    const bad = [...hosts].filter((h) => !['127.0.0.1:' + PORT, 'api.weather.gov'].includes(h));
+    const bad = [...hosts].filter((h) => !['127.0.0.1:' + PORT, 'api.weather.gov', 'lanternlab.goatcounter.com'].includes(h));
     check(bad.length === 0, rel + ': no other hosts ' + bad.join(','));
+    GC.checkBeacons(gc, check, { expect: { q: '' } }); // town pages: page views only, nothing else in the query
     check(errors.length === 0, rel + ': no console errors ' + errors.join(' | '));
     ok(rel + ': ' + pct + ' (' + t.region + ')');
     await ctx.close();

@@ -28,6 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 DOCS = os.path.join(REPO, "docs")
 OUT = os.path.join(DOCS, "b")
+GOATCOUNTER = "https://lanternlab.goatcounter.com/count"  # self-hosted count.js; see docs/vendor/goatcounter/LICENSE.txt
 CACHE = os.path.join(HERE, ".cache", "data.json")
 
 SITE = "https://lanternlab2027.github.io/lab/"
@@ -593,6 +594,7 @@ def page(title, desc, canon, crumbs, body):
 <meta property="og:url" content="{esc(SITE + canon)}">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <link rel="stylesheet" href="{esc(rel_from(canon, 'b/style.css'))}">
+<script data-goatcounter="{GOATCOUNTER}" async src="{esc(rel_from(canon, 'vendor/goatcounter/count.js'))}"></script>
 </head>
 <body>
 <main>

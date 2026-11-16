@@ -4,6 +4,7 @@
 // The clock is frozen at fixtures.NOW. A live smoke test at the end tries the real NWS API (skipped if unreachable).
 'use strict';
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const FX = require('./fixtures.js');
 
@@ -65,6 +66,7 @@ async function newPage(browser, width, opts) {
   const ctx = await browser.newContext({ viewport: { width, height: width < 500 ? 844 : 900 }, deviceScaleFactor: 1, acceptDownloads: true, geolocation: { latitude: 42.8864, longitude: -78.8784 }, permissions: opts.geo ? ['geolocation'] : [] });
   const log = [], hosts = new Set(), errors = [];
   await wire(ctx, log);
+  ctx.gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked with the other-hosts check
   if (opts.kit) await ctx.addInitScript(() => { window.SNOW_KIT_TAG_TEST = '1234567'; });
   await ctx.addInitScript(() => { window.__copied = []; try { Object.defineProperty(navigator, 'clipboard', { value: { writeText: (t) => { window.__copied.push(t); return Promise.resolve(); } } }); } catch (e) {} });
   const page = await ctx.newPage();
@@ -160,8 +162,9 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
     await page.waitForFunction(() => /doesn.t forecast/.test(document.getElementById('status').textContent));
     check(true, 'NWS 404 point message');
 
-    const bad = [...hosts].filter((h) => !['127.0.0.1:' + PORT, 'api.weather.gov', 'geocoding-api.open-meteo.com'].includes(h));
+    const bad = [...hosts].filter((h) => !['127.0.0.1:' + PORT, 'api.weather.gov', 'geocoding-api.open-meteo.com', 'lanternlab.goatcounter.com'].includes(h));
     check(bad.length === 0, 'no other hosts contacted ' + (bad.join(',') || ''));
+    GC.checkBeacons(ctx.gc, check); // only page views: no hash, nothing but page-view fields
     check(errors.filter((e) => !/404|Failed to load resource/.test(e)).length === 0, 'no console errors ' + errors.join(' | '));
     await ctx.close();
   }

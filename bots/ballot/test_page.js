@@ -5,6 +5,7 @@
 // the "My ballot" card, a closed (pre-nominations) show, the late flag, ?ref passthrough and the Kit stub.
 // The Kit key is never printed.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const { PDFDocument } = require('pdf-lib');
 const fs = require('fs'), path = require('path'), zlib = require('zlib');
 const B = require('../../docs/ballot/ballot.js');
@@ -37,6 +38,7 @@ async function newCtx(browser, width, opts = {}) {
     return route.continue();
   });
   ctx.offOrigin = offOrigin; ctx.kit = kit;
+  ctx.gc = await GC.stubCounter(ctx); ctx.hashes = []; // GoatCounter -> local 204; game data in #hashes must never reach it
   return ctx;
 }
 async function open(ctx, url) {
@@ -44,6 +46,7 @@ async function open(ctx, url) {
   page.errs = [];
   page.on('pageerror', (e) => page.errs.push(String(e)));
   page.on('console', (m) => { if (m.type() === 'error') page.errs.push(m.text()); });
+  if (url.includes('#')) ctx.hashes.push(url.split('#')[1]);
   await page.goto(url);
   await page.waitForSelector('html[data-ready]');
   return page;
@@ -82,7 +85,7 @@ const winIx = (ci) => DEMO.categories[ci].nominees.findIndex((x) => x.name === F
     const hctx = await newCtx(browser, width);
     const home = await open(hctx, URL0);
     const csp = await home.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self';/.test(csp) && /connect-src 'self' https:\/\/api\.convertkit\.com;/.test(csp), 'strict CSP (self + Kit only)');
+    check(/default-src 'none'/.test(csp) && /script-src 'self';/.test(csp) && /connect-src 'self' https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp), 'strict CSP (self + Kit + page-view counter only)');
     const title = await home.title(), desc = await home.getAttribute('meta[name="description"]', 'content');
     check(/printable awards ballot 2027/i.test(title) && /awards night ballot pool/i.test(title), `SEO title: ${title}`);
     check(/printable awards ballot for 2027/i.test(desc) && /awards night ballot pool/i.test(desc) && /bragging rights/i.test(desc), 'meta description has both phrases + bragging rights');
@@ -275,6 +278,10 @@ const winIx = (ci) => DEMO.categories[ci].nominees.findIndex((x) => x.name === F
     // ---------------- hygiene
     const all = [hctx, rctx, p1ctx, p2ctx, p3ctx, kctx];
     check(all.every((c) => c.offOrigin.length === 0), 'no off-site requests ' + all.map((c) => c.offOrigin.join(' ')).join(''));
+    const beacons = { hits: all.flatMap((c) => c.gc.hits), other: all.flatMap((c) => c.gc.other) };
+    const hashes = all.flatMap((c) => c.hashes).flatMap((h) => [h, h.slice(0, 16), decodeURIComponent(h).slice(0, 16)]);
+    check(hashes.length > 0, 'hash links were opened (' + hashes.length / 3 + ')');
+    GC.checkBeacons(beacons, check, { forbid: hashes, expect: { t: 'Printable Awards Ballot 2027 + Free Awards Night Ballot Pool' } });
     const errs = [];
     for (const c of all) for (const pg of c.pages()) if (pg.errs) errs.push(...pg.errs);
     check(errs.length === 0, 'no console errors ' + errs.join(' | '));

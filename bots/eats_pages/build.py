@@ -542,6 +542,15 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:20px 0 40px;colo
 """
 
 
+GOATCOUNTER = "https://lanternlab.goatcounter.com/count"  # self-hosted count.js; see docs/vendor/goatcounter/LICENSE.txt
+
+
+def counter_src(canonical):
+    """Relative path from the page at `canonical` to docs/vendor/goatcounter/count.js."""
+    assert canonical.startswith(SITE), canonical
+    return "../" * canonical[len(SITE):].count("/") + "vendor/goatcounter/count.js"
+
+
 def head(title, desc, canonical, css_href, crumbs, robots=None):
     ld = {"@context": "https://schema.org", "@type": "BreadcrumbList",
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(crumbs)]}
@@ -557,6 +566,7 @@ def head(title, desc, canonical, css_href, crumbs, robots=None):
         f"<meta property=\"og:url\" content=\"{esc(canonical)}\">\n"
         f"<link rel=\"stylesheet\" href=\"{css_href}\">\n"
         "<script type=\"application/ld+json\">" + json.dumps(ld, ensure_ascii=True).replace("</", "<\\/") + "</script>\n"
+        f"<script data-goatcounter=\"{GOATCOUNTER}\" async src=\"{counter_src(canonical)}\"></script>\n"
         "</head>\n<body>\n"
     )
 

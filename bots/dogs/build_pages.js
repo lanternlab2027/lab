@@ -45,7 +45,7 @@ function head({ title, desc, canonical, ld, depth = 1 }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://lanternlab.goatcounter.com; connect-src https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
@@ -59,6 +59,7 @@ function head({ title, desc, canonical, ld, depth = 1 }) {
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="${up}dogs.css">
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="${up}../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <div class="wrap">`;

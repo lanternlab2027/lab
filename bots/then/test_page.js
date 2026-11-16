@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/then/test_page.js <screenshot dir>
 // Serves docs/ locally, blocks every off-origin request, stubs Kit.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 
 const ROOT = path.resolve(__dirname, '../../docs');
@@ -50,6 +51,7 @@ async function run(width, mobile) {
     }
     thirdParty.push(u); return route.abort();
   });
+  const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked after play
   await ctx.addInitScript(() => {
     window.__shared = []; window.__copied = [];
     if (navigator.clipboard) navigator.clipboard.writeText = (t) => { window.__copied.push(t); return Promise.resolve(); };
@@ -154,6 +156,7 @@ async function run(width, mobile) {
 
   // Zero third-party requests during play
   check(thirdParty.length === 0, 'zero third-party requests during play' + (thirdParty.length ? ': ' + thirdParty.join(', ') : ''));
+  GC.checkBeacons(gc, check); // only page views: no hash, nothing but page-view fields
 
   // Kit signup (stubbed): exactly api_key + email to 25880799
   allowKit = true;

@@ -1,6 +1,7 @@
 // Playwright test for docs/wrapped-season/ (the Wrapped season hub). Every non-local request is aborted and recorded.
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/wrapped-season/test_page.js <screenshot dir>
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const ROOT = path.resolve(__dirname, '../../docs');
 const OUT = path.resolve(process.argv[2] || '.'); fs.mkdirSync(OUT, { recursive: true });
@@ -47,6 +48,7 @@ async function open(ctx, url) {
   pg.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
   pg.on('response', r => { if (r.url().startsWith(ORIGIN) && r.status() >= 400) local404.push(r.url()); });
   await pg.route('**/*', r => { const u = r.request().url(); if (!u.startsWith(ORIGIN)) { external.push(u); return r.abort(); } return r.continue(); });
+  pg.gc = await GC.stubCounter(pg); // GoatCounter -> local 204 (registered last, so it wins over the catch-all)
   await pg.goto(ORIGIN + url, { waitUntil: 'load' });
   return { pg, errors, external, local404 };
 }
@@ -56,7 +58,7 @@ async function open(ctx, url) {
   const html = fs.readFileSync(PAGE, 'utf8');
   for (const f of ['wrapped-season/index.html', 'wrapped-season/hub.js']) ok(/^[\x00-\x7F]*$/.test(fs.readFileSync(path.join(ROOT, f), 'utf8')), `${f}: ASCII only`);
   const csp = (html.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/) || [])[1] || '';
-  ok(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && !/connect-src/.test(csp) && !/<script>(?!\s*$)/.test(html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')), 'strict CSP, no connect-src, no inline scripts');
+  ok(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/lanternlab\.goatcounter\.com;/.test(csp) && (csp.match(/connect-src[^;]*/) || [''])[0].split(/\s+/).length === 2 && !/<script>(?!\s*$)/.test(html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')), 'strict CSP, connect-src only the page-view counter, no inline scripts');
   const title = (html.match(/<title>([^<]+)<\/title>/) || [])[1] || '';
   const desc = (html.match(/<meta name="description" content="([^"]+)"/) || [])[1] || '';
   ok(/Wrapped Alternatives 2026/.test(title) && title.length <= 70, `title (${title.length} chars): ${title}`);
@@ -85,6 +87,7 @@ async function open(ctx, url) {
     await pg.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
     ok(errors.length === 0, `${tag}: no console/page errors ${errors.join(' | ')}`);
     ok(external.length === 0, `${tag}: no external requests ${external.join(' ')}`);
+    GC.checkBeacons(pg.gc, ok, { expect: { p: '/wrapped-season/', q: '' } });
     ok(local404.length === 0, `${tag}: no local 404s ${local404.join(' ')}`);
     const r = await pg.evaluate(() => ({
       sw: document.documentElement.scrollWidth, cw: document.documentElement.clientWidth,

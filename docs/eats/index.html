@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://data.cityofnewyork.us https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src https://data.cityofnewyork.us https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>NYC Restaurant Grades Lookup: Health Inspection Report Card (Free)</title>
 <meta name="description" content="Look up any NYC restaurant's health inspection letter grade, score history and violations in plain English, from official DOHMH open data. Share a report card before you pick where to eat.">
@@ -167,6 +167,7 @@
   .toast.on { opacity: 1; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 </style>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <header class="top wrap">
@@ -296,7 +297,7 @@
 
 <footer class="wrap">
   <p><b>Not affiliated with NYC DOHMH</b> or the City of New York. This is an independent, free tool that displays official open data as published. It may lag the city's own site, and data can contain errors; for the official record, use <a href="https://www.nyc.gov/site/doh/services/restaurant-grades.page" rel="noopener">ABCEats on nyc.gov</a> or the grade card posted at the restaurant.</p>
-  <p>No tracking, no ads, no login. Searches go directly from your browser to NYC Open Data.</p>
+  <p>No ads, no login. Searches go directly from your browser to NYC Open Data. We count anonymous page views with GoatCounter (no cookies, no personal data).</p>
   <p><a href="r/">Browse restaurant pages by borough and cuisine</a></p>
   <p>In Chicago? Try the <a href="../chi-eats/">Chicago Restaurant Report Card</a> (inspection results).</p>
   <p><a href="../">More free NYC tools from Lantern Lab</a> &middot; <a href="../apps/">More free apps &rarr;</a></p>

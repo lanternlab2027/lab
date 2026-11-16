@@ -2,6 +2,7 @@
 // Run: node bots/awards/make_fixtures.js && NODE_PATH=/opt/npm-tools/node_modules node bots/awards/test_page.js <screenshot dir>
 // Sleeper API calls are routed to synthetic fixtures; Kit is stubbed. No real network is used.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const JSZip = require(path.resolve(__dirname, '../../docs/awards/vendor/jszip-3.10.1.min.js'));
 
@@ -69,6 +70,7 @@ function pngSize(buf) { return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20
       }
       offOrigin.push(url); return route.abort();
     });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked with the other-origins check
 
     await page.goto(ORIGIN + '/awards/');
     await page.waitForLoadState('networkidle');
@@ -193,6 +195,7 @@ function pngSize(buf) { return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20
     if (width === 1280) { await page.click('#tab-season'); await waitCards(page, 7); await dumpCards(page, 'sample-season'); await page.click('#tab-week'); await waitCards(page, 8); await dumpCards(page, 'sample-week'); }
 
     check(offOrigin.filter((u) => !/example\.com/.test(u)).length === 0, 'no requests to other origins: ' + offOrigin.join(', '));
+    GC.checkBeacons(gc, check); // only page views: no hash, nothing but page-view fields
     check(errs.length === 0, 'no page errors' + (errs.length ? ': ' + errs.join(' | ') : ''));
     await ctx.close();
   }

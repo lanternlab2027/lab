@@ -4,6 +4,7 @@
 // One live smoke test at the end hits the real NYC Open Data API (and checks CORS) unless --no-live.
 'use strict';
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const FX = require('./fixtures.js');
 
@@ -83,6 +84,7 @@ async function setup(browser, width, opts) {
     log.off.push(url);
     return route.abort();
   });
+  log.gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked with the other-hosts check
   return { ctx, page, log };
 }
 
@@ -225,7 +227,8 @@ async function noHScroll(page) { return page.evaluate(() => document.documentEle
     check(/5 digits/.test(await page.locator('#status').innerText()), 'ZIP validation');
 
     check(log.errs.length === 0, 'no console errors' + (log.errs.length ? ': ' + log.errs.join(' | ') : ''));
-    check(log.off.length === 0, 'no requests to other hosts (no tracking)' + (log.off.length ? ': ' + log.off.join(', ') : ''));
+    check(log.off.length === 0, 'no requests to other hosts (besides the stubbed page-view counter)' + (log.off.length ? ': ' + log.off.join(', ') : ''));
+    GC.checkBeacons(log.gc, check); // only page views: no hash, nothing but page-view fields
     await ctx.close();
   }
 

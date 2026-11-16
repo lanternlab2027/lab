@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>TikTok Wrapped 2026: Free Year in Review From Your TikTok Data Export</title>
 <meta name="description" content="Make your TikTok Wrapped 2026 for free from your own TikTok data export: videos watched, estimated minutes, busiest day, your 3am scroll clock, longest doomscroll, streak, likes and top searches, as shareable story cards. Runs on your device; nothing is uploaded.">
@@ -133,6 +133,7 @@
   footer p { margin: 6px 0; }
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 </style>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <div class="wrap" id="top">
@@ -235,7 +236,7 @@
     <div class="grid2">
       <div class="panel" id="dm-note"><h3>Direct messages are skipped entirely</h3><p>Your export includes your DMs. We don&rsquo;t use them. In a zip, the message files are never even unzipped. In a JSON file, the messages section is thrown away the moment the file is opened, before anything is counted. No message content is read into the cards, shown or stored.</p></div>
       <div class="panel"><h3>There&rsquo;s no server to send it to</h3><p>This page is plain files on GitHub Pages. Your export is read, counted and drawn into cards by JavaScript running in this browser tab. Close the tab and it&rsquo;s gone.</p></div>
-      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only lets it talk to one outside address: the optional email reminder below, which sends just your email. No analytics, no trackers, no third-party scripts, no web fonts.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only lets it talk to two outside addresses: the optional email reminder below, which sends just your email, and our page-view counter, which never sees your file. We count anonymous page views with GoatCounter (no cookies, no personal data). No ad trackers, no third-party scripts, no web fonts.</p></div>
       <div class="panel"><h3>It&rsquo;s open source, and works offline</h3><p>Every line is on GitHub: <a href="https://github.com/lanternlab2027/lab/tree/main/docs/tiktok" rel="noopener">lanternlab2027/lab &rarr; docs/tiktok</a>. The zip helper (JSZip) is copied into the folder. Load the page, turn on airplane mode, then upload: it still works.</p></div>
     </div>
   </section>

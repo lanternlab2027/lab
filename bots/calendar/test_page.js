@@ -1,6 +1,7 @@
 // Playwright test for docs/calendar/index.html. Kit is routed to a local stub; never hits the real API.
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/calendar/test_page.js <screenshot dir>
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const ROOT = '/home/claude/lab/docs';
 const OUT = process.argv[2] || '.';
@@ -17,7 +18,8 @@ const server = http.createServer((req, res) => {
     const ctx = await browser.newContext({viewport: {width: 390, height: 844}});
     const page = await ctx.newPage();
     const kitCalls = [], external = [];
-    page.on('request', r => { const u = r.url(); if (!u.startsWith('http://127.0.0.1') && !/convertkit|kit\.com/.test(u)) external.push(u); });
+    page.on('request', r => { const u = r.url(); if (!u.startsWith('http://127.0.0.1') && !/convertkit|kit\.com/.test(u) && !GC.isCounter(u)) external.push(u); });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked below
     await page.route(/convertkit\.com|kit\.com/, async route => {
       const body = JSON.parse(route.request().postData() || '{}');
       kitCalls.push({url: route.request().url(), hasKey: !!body.api_key, email: body.email});
@@ -50,6 +52,7 @@ const server = http.createServer((req, res) => {
     check(after, 'no horizontal scroll after signup');
     check(errs.length === 0, 'no page errors ' + errs.join('; '));
     check(external.length === 0, 'no other external requests ' + external.join(', '));
+    GC.checkBeacons(gc, check, { expect: { p: '/calendar/', q: '' } });
     await page.screenshot({path: `${OUT}/calendar-390-${mode}.png`, fullPage: true});
     await ctx.close();
   }

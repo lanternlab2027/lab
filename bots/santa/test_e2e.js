@@ -1,6 +1,7 @@
 // End-to-end test for docs/santa/. Kit is routed to a local stub; never hits the real API.
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/santa/test_e2e.js <screenshot dir>
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const ROOT = '/home/claude/lab/docs';
 const OUT = process.argv[2] || '.';
@@ -28,12 +29,14 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
     const ctx = await browser.newContext({viewport: {width: w, height: h}, acceptDownloads: true});
     await ctx.grantPermissions(['clipboard-read', 'clipboard-write'], {origin: ORIGIN});
     const offsite = [], kitCalls = [], errs = [];
-    ctx.on('request', r => { const u = r.url(); if (!u.startsWith(ORIGIN + '/') && !/^(blob|data):/.test(u)) offsite.push(u); });
+    ctx.on('request', r => { const u = r.url(); if (!u.startsWith(ORIGIN + '/') && !/^(blob|data):/.test(u) && !GC.isCounter(u)) offsite.push(u); });
     ctx.on('page', p => p.on('pageerror', e => errs.push(String(e))));
     await ctx.route(/convertkit\.com|kit\.com/, async route => {
       kitCalls.push({url: route.request().url(), body: JSON.parse(route.request().postData() || '{}')});
       await route.fulfill({status: 200, contentType: 'application/json', body: '{"subscription":{"id":1}}'});
     });
+    const gc = await GC.stubCounter(ctx), hashes = []; // GoatCounter -> local 204; the match in the #hash must never reach it
+    ctx.on('page', p => p.on('framenavigated', f => { if (f.url().includes('#')) hashes.push(f.url().split('#')[1]); }));
     const page = await ctx.newPage();
     await page.goto(ORIGIN + '/santa/?ref=tiktok');
     check(await noHScroll(page), 'organizer page: no horizontal scroll');
@@ -158,7 +161,9 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
     await bp.close();
 
     check(kitCalls.length === 0, 'no Kit call unless the organizer asks');
-    check(offsite.length === 0, 'no requests except same-origin static files ' + offsite.join(', '));
+    check(offsite.length === 0, 'no requests except same-origin static files and the page-view counter ' + offsite.join(', '));
+    check(hashes.length > 0, 'secret links were opened (' + hashes.length + ')');
+    GC.checkBeacons(gc, check, { forbid: PEOPLE.concat(hashes, hashes.map(h => h.slice(0, 16))) });
 
     // Reminder signup (stubbed Kit): only email + date are sent.
     if (w === 390) {

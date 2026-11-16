@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.weather.gov https://geocoding-api.open-meteo.com https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src 'self' https://api.weather.gov https://geocoding-api.open-meteo.com https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Snow Day Calculator for New Rochelle, NY: Will School Be Canceled Tomorrow?</title>
 <meta name="description" content="Free snow day calculator for New Rochelle, New York: tomorrow's snow-day chance from the National Weather Service forecast for ZIP 10801 (snow, ice, timing, cold and winter alerts). Just for fun.">
@@ -92,6 +92,7 @@
 }
 </script>
 <link rel="stylesheet" href="../town.css">
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../../../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <header class="hero">
@@ -189,7 +190,7 @@
 <footer class="wrap">
   <div class="makeyours"><b>Make yours:</b> <code>lanternlab2027.github.io/lab/snow</code> <button type="button" class="btn ghost" id="share-tool" style="min-height:44px;padding:6px 12px;font-size:15px">Share this tool</button></div>
   <p><b>Not affiliated with the National Weather Service</b> or NOAA. Forecast and alert data come from the NWS API, used as published; we turn it into a for-fun estimate. For official forecasts, visit <a href="https://www.weather.gov/" rel="noopener">weather.gov</a>.</p>
-  <p>No tracking, no ads, no login. Your location goes straight from your browser to the National Weather Service (and to Open-Meteo only if you type a town name). &ldquo;Use my location&rdquo; asks first and isn't saved or shared.</p>
+  <p>We count anonymous page views with GoatCounter (no cookies, no personal data). No ads, no login. Your location goes straight from your browser to the National Weather Service (and to Open-Meteo only if you type a town name). &ldquo;Use my location&rdquo; asks first and isn't saved or shared.</p>
   <p><a href="../../../">A Lantern Lab project</a> &middot; <a href="../../../apps/">More free apps &rarr;</a></p>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>

@@ -1,6 +1,7 @@
 // Playwright test for docs/apps/ (apps hub). Kit is routed to a local stub; the real API is never hit.
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/apps_hub/test_page.js <screenshot dir>
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const ROOT = path.resolve(__dirname, '../../docs');
 const OUT = path.resolve(process.argv[2] || '.'); fs.mkdirSync(OUT, { recursive: true });
@@ -23,7 +24,8 @@ const APPS = ['wrapped', 'reading', 'netflix', 'sport', 'dating', 'awards', 'san
     const errors = [], external = [], kitBodies = [];
     pg.on('pageerror', e => errors.push(String(e)));
     pg.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
-    pg.on('request', r => { if (!r.url().startsWith(ORIGIN)) external.push(r.url()); });
+    pg.on('request', r => { if (!r.url().startsWith(ORIGIN) && !GC.isCounter(r.url())) external.push(r.url()); });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked below
     await pg.route('https://api.convertkit.com/**', r => { kitBodies.push(r.request().postDataJSON()); r.fulfill({ status: 200, contentType: 'application/json', body: '{"subscription":{}}' }); });
     await pg.goto(ORIGIN + '/apps/', { waitUntil: 'load' });
     const H = await pg.evaluate(() => document.documentElement.scrollHeight);
@@ -31,7 +33,8 @@ const APPS = ['wrapped', 'reading', 'netflix', 'sport', 'dating', 'awards', 'san
     await pg.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
     await pg.waitForFunction(() => [...document.images].every(i => i.complete));
     ok(errors.length === 0, `${w}px: no console/page errors ${errors.join(' | ')}`);
-    ok(external.length === 0, `${w}px: no external requests on load ${external.join(' ')}`);
+    ok(external.length === 0, `${w}px: no external requests on load besides the page-view counter ${external.join(' ')}`);
+    GC.checkBeacons(gc, ok, { expect: { p: '/apps/', q: '' } });
     const sw = await pg.evaluate(() => document.documentElement.scrollWidth);
     ok(sw <= w, `${w}px: no horizontal scroll (scrollWidth ${sw})`);
     const broken = await pg.evaluate(() => [...document.images].filter(i => !i.naturalWidth).map(i => i.src));

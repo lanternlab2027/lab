@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/bingo/test_page.js <screenshot dir>
 // Kit is routed to a local stub; the real API is never hit. The Kit key is never printed.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
 const C = require('../../docs/bingo/codec.js');
 
@@ -37,12 +38,16 @@ function pngSize(file) { const b = fs.readFileSync(file); return { w: b.readUInt
       return route.continue();
     });
 
+    const gc = await GC.stubCounter(ctx), hashes = []; // GoatCounter -> local 204; the card in the #hash must never reach it
+    const seeHash = (pg) => pg.on('framenavigated', (f) => { if (f.url().includes('#')) hashes.push(f.url().split('#')[1]); });
+    seeHash(page); ctx.on('page', seeHash);
+
     // ---- page basics
     await page.goto(URL0);
     await page.waitForLoadState('networkidle');
     check(offOrigin.length === 0, 'page load makes no off-origin requests');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP matches the other apps');
+    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp), 'CSP matches the other apps');
     const title = await page.title(), desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/goal bingo/i.test(title) && /2027/.test(title) && /resolution bingo card/i.test(title), `SEO title: ${title}`);
     check(/goal bingo card/i.test(desc) && /new year resolution bingo card/i.test(desc), 'meta description targets both phrases');
@@ -177,6 +182,9 @@ function pngSize(file) { const b = fs.readFileSync(file); return { w: b.readUInt
     check(kb.api_key === readingKey, 'Kit key matches the reading app (value not printed)');
 
     check(offOrigin.length === 0, 'no off-origin requests in the whole run');
+    if (page.url().includes('#')) hashes.push(page.url().split('#')[1]);
+    check(hashes.length > 0, 'card links were opened (' + hashes.length + ')');
+    GC.checkBeacons(gc, check, { forbid: hashes.concat(hashes.map((h) => h.slice(0, 16))) });
     check(errs.length === 0, `no page errors (${errs.join(' | ') || 'none'})`);
     await ctx.close();
   }

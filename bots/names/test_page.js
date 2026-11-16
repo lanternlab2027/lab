@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/names/test_page.js [screenshot dir]
 // Kit is routed to a local stub; the real API is never hit. Any other off-origin request fails the test.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const fs = require('fs'), path = require('path'), http = require('http');
 const DOCS = path.resolve(__dirname, '../../docs');
 const OUT = path.resolve(process.argv[2] || path.join(__dirname, 'shots'));
@@ -27,6 +28,7 @@ const PAGES = ['/names/n/olivia.html', '/names/n/jordan.html', '/names/n/theodor
       if (u.startsWith('https://api.convertkit.com/')) { kit.push({ url: u, body: r.postData() }); return route.fulfill({ status: 200, contentType: 'application/json', body: '{"subscription":{}}' }); }
       offOrigin.push(u); return route.abort();
     });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked with the off-origin check
     const page = await ctx.newPage();
     const errs = []; page.on('pageerror', (e) => errs.push(String(e))); page.on('console', (m) => { if (m.type() === 'error') errs.push(m.text() + ' @' + page.url()); }); page.on('response', (r) => { if (r.status() >= 400) errs.push(r.status() + ' ' + r.url()); });
     const noHScroll = () => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth);
@@ -97,13 +99,13 @@ const PAGES = ['/names/n/olivia.html', '/names/n/jordan.html', '/names/n/theodor
     for (const p of PAGES) {
       await page.goto(ORIGIN + p);
       const info = await page.evaluate(() => ({
-        h1: document.querySelector('h1').textContent, scripts: document.querySelectorAll('script:not([type="application/ld+json"])').length,
+        h1: document.querySelector('h1').textContent, scripts: document.querySelectorAll('script:not([type="application/ld+json"]):not([data-goatcounter])').length, counter: document.querySelectorAll('script[data-goatcounter]').length,
         poly: document.querySelectorAll('svg.chart polyline').length, title: document.title, desc: document.querySelector('meta[name=description]').content,
         canon: document.querySelector('link[rel=canonical]').href, note: /Source: U\.S\. Social Security Administration\. Not affiliated\./.test(document.body.textContent),
         footer: [...document.querySelectorAll('footer a')].map((a) => a.getAttribute('href'))
       }));
       const n = path.basename(p, '.html');
-      check(info.h1.toLowerCase() === n && info.poly >= 1 && info.scripts === 0, `${p}: h1, inline SVG chart, no scripts`);
+      check(info.h1.toLowerCase() === n && info.poly >= 1 && info.scripts === 0 && info.counter === 1, `${p}: h1, inline SVG chart, no scripts but the page-view counter`);
       check(info.title.length <= 70 && info.desc.length >= 80 && info.desc.length <= 200 && info.canon.endsWith(p.replace('/names/', '/lab/names/')), `${p}: title (${info.title.length}), description (${info.desc.length}), canonical`);
       check(info.note && info.footer.includes('../../') && info.footer.includes('../../apps/'), `${p}: data note + footer links`);
       check(await noHScroll(), `${p}: no horizontal scroll`);
@@ -114,6 +116,7 @@ const PAGES = ['/names/n/olivia.html', '/names/n/jordan.html', '/names/n/theodor
 
     check(errs.length === 0, 'no console/page errors' + (errs.length ? ': ' + errs.slice(0, 3).join(' | ') : ''));
     check(offOrigin.length === 0, 'no off-origin requests except stubbed Kit' + (offOrigin.length ? ': ' + offOrigin.slice(0, 3).join(', ') : ''));
+    GC.checkBeacons(gc, check); // one page view per load: no hash, nothing but page-view fields
     await ctx.close();
   }
   await browser.close();

@@ -10,8 +10,12 @@ import html, json, re, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[2] / "docs" / "guides"
 BASE = "https://lanternlab2027.github.io/lab/"
 CHECKED = "Nov 2026"
-CSP = ("default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; "
+CSP = ("default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; "
+       "img-src 'self' data: https://lanternlab.goatcounter.com; connect-src https://lanternlab.goatcounter.com; "
        "base-uri 'none'; form-action 'none'; object-src 'none'")
+# Anonymous page-view counter, self-hosted (see docs/vendor/goatcounter/LICENSE.txt).
+COUNTER = ('<script data-goatcounter="https://lanternlab.goatcounter.com/count" async '
+           'src="../vendor/goatcounter/count.js"></script>')
 
 
 def plain(s):
@@ -96,6 +100,7 @@ def page(g):
 <meta name="twitter:description" content="{e(g["description"])}">
 <meta name="twitter:image" content="{BASE}{g["app"]}/og.png">
 {ld}<link rel="stylesheet" href="guides.css">
+{COUNTER}
 </head>
 <body class="t-{g["app"]}">
 <div class="wrap">
@@ -697,6 +702,7 @@ def index_page():
 {ld}
 </script>
 <link rel="stylesheet" href="guides.css">
+{COUNTER}
 </head>
 <body class="t-awards">
 <div class="wrap">

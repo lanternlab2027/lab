@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://data.cityofchicago.org https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src https://data.cityofchicago.org https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Chicago Restaurant Inspection Lookup: Health Inspection Results (Free)</title>
 <meta name="description" content="Chicago restaurant inspection lookup: search any Chicago restaurant to see its latest health inspection result (Pass, Pass with Conditions or Fail), risk category, inspection history and violations in plain English, from official CDPH data.">
@@ -165,6 +165,7 @@
   .toast.on { opacity: 1; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 </style>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <header class="top wrap">
@@ -286,7 +287,7 @@
 
 <footer class="wrap">
   <p><b>Not affiliated with the City of Chicago</b> or the Chicago Department of Public Health. This is an independent, free tool that displays official open data as published. It may lag the city's own records, the dataset can contain duplicates or errors, and nothing here is a ranking. For the official record, use the <a href="https://data.cityofchicago.org/d/4ijn-s7e5" rel="noopener">Food Inspections dataset</a> or the inspection report posted at the restaurant.</p>
-  <p>No tracking, no ads, no login. Searches go directly from your browser to the City of Chicago Data Portal.</p>
+  <p>No ads, no login. Searches go directly from your browser to the City of Chicago Data Portal. We count anonymous page views with GoatCounter (no cookies, no personal data).</p>
   <p>In New York? Try the <a href="../eats/">NYC Restaurant Report Card</a> (letter grades).</p>
   <p><a href="../">More free tools from Lantern Lab</a> &middot; <a href="../apps/">More free apps &rarr;</a></p>
 </footer>

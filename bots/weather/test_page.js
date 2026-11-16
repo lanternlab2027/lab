@@ -4,6 +4,7 @@
 // synthetic fixtures in the documented response format (bots/weather/fixtures.js); Kit is stubbed. Clocks are frozen.
 'use strict';
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const FX = require('./fixtures.js');
 
@@ -57,6 +58,7 @@ async function newPage(browser, width, opts) {
     log.push('KIT ' + Object.keys(JSON.parse(route.request().postData() || '{}')).sort().join(','));
     route.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: '{"subscription":{"id":1}}' });
   });
+  ctx.gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked with the hosts check
   if (opts.kit) await ctx.addInitScript(() => { window.WEATHER_KIT_TAG_TEST = '1234567'; });
   await ctx.addInitScript(() => {
     window.__copied = [];
@@ -152,7 +154,8 @@ async function saveCards(page, prefix) {
     const csp = await page.evaluate(() => window.__csp || []);
     check(!csp.length, 'no CSP violations ' + csp.join('; '));
     check(!errors.length, 'no console errors ' + errors.join(' | '));
-    check([...hosts].every((h) => ['127.0.0.1:' + PORT, 'archive-api.open-meteo.com', 'geocoding-api.open-meteo.com', 'api.convertkit.com'].includes(h)), 'only expected hosts: ' + [...hosts].join(', '));
+    check([...hosts].every((h) => ['127.0.0.1:' + PORT, 'archive-api.open-meteo.com', 'geocoding-api.open-meteo.com', 'api.convertkit.com', 'lanternlab.goatcounter.com'].includes(h)), 'only expected hosts: ' + [...hosts].join(', '));
+    GC.checkBeacons(ctx.gc, check); // only page views: no hash, nothing but page-view fields
     await ctx.close();
   }
 

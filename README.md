@@ -49,13 +49,14 @@ The site root (https://lanternlab2027.github.io/lab/) also has free NYC building
 
 ## How we handle your data
 
-- **No accounts, no ads, no analytics.**
+- **No accounts, no ads.** We count anonymous page views with GoatCounter (no cookies, no personal data). The counter script is self-hosted (`docs/vendor/goatcounter/`), never sees your files, and never sends the part of a link after `#`.
 - **Export-based apps make zero uploads.** Your chat, library, viewing history, workouts, orders or dating export is parsed by JavaScript in your browser tab and never leaves your device.
 - **Pages declare their connections.** App pages ship a Content-Security-Policy that limits which servers the browser may contact. The only outside services used are:
   - NYC Open Data and the Chicago Data Portal (restaurant lookups; your search goes straight from your browser to the city's public API);
   - Sleeper's public API (Fantasy League Awards; you enter a league ID);
   - the National Weather Service and Open-Meteo's geocoder (Snow Day Odds; your ZIP is sent to look up the forecast);
   - Kit, our email provider, only if you choose to sign up for new-app emails. It receives just your email address.
+  - GoatCounter (lanternlab.goatcounter.com), which receives an anonymous page view: the page path and query string (so `?ref=` and `utm_` campaign tags are recorded; never the part after `#`), page title, referrer and screen width.
 - **Shared links carry their own data.** Secret Santa and Watch-Party Bingo put the card or match in the link itself, so there's nothing on a server to leak. Anyone who has a link can open it.
 
 ## How it's built

@@ -5,6 +5,7 @@
 // If the network blocks data.cityofchicago.org, the live smoke reports BLOCKED (not counted as an app failure).
 'use strict';
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const FX = require('./fixtures.js');
 
@@ -74,6 +75,7 @@ async function setup(browser, width, opts) {
     log.off.push(url);
     return route.abort();
   });
+  log.gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked with the other-hosts check
   return { ctx, page, log };
 }
 const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1);
@@ -235,6 +237,7 @@ async function saveCard(page, file) {
 
     check(log.errs.length === 0, 'no console errors' + (log.errs.length ? ': ' + log.errs.join(' | ') : ''));
     check(log.off.length === 0, 'no requests to other hosts' + (log.off.length ? ': ' + log.off.join(', ') : ''));
+    GC.checkBeacons(log.gc, check); // only page views: no hash, nothing but page-view fields
     await ctx.close();
   }
 

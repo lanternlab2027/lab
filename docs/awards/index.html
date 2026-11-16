@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.sleeper.app https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src https://api.sleeper.app https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Sleeper League Awards: Free Fantasy Football Weekly Awards Cards</title>
 <meta name="description" content="Free fantasy football weekly awards for your Sleeper league: highest scorer, biggest blowout, heartbreak loss, bench warmer, luckiest win, all-play record and power rankings as shareable cards and a group-chat recap. No login.">
@@ -121,6 +121,7 @@
   textarea.recap { position: absolute; left: -9999px; }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <div class="field-bg">
@@ -219,7 +220,7 @@
   <section aria-labelledby="faq-h">
     <h2 id="faq-h">Questions</h2>
     <details><summary>Do I need to log in?</summary><div><p>No. Sleeper league data is public to anyone with the league ID, and this page reads it through Sleeper's public, read-only API. There's no account and no password.</p></div></details>
-    <details><summary>What happens to my data?</summary><div><p>Your browser asks Sleeper for the league directly. Nothing goes through our servers (we don't have any), and there are no analytics, cookies or trackers. The only thing ever sent to us is your email and league ID, and only if you fill in the optional email box.</p></div></details>
+    <details><summary>What happens to my data?</summary><div><p>Your browser asks Sleeper for the league directly. Nothing goes through our servers (we don't have any), and there are no cookies or ad trackers. We count anonymous page views with GoatCounter (no cookies, no personal data). The only thing ever sent to us is your email and league ID, and only if you fill in the optional email box.</p></div></details>
     <details><summary>How is "points left on the bench" counted?</summary><div><p>It's the total points scored by players on your roster who weren't in your starting lineup that week. It doesn't check whether they could legally have started, so treat it as bragging rights, not a lineup audit.</p></div></details>
     <details><summary>Does it work for ESPN or Yahoo?</summary><div><p>Not yet. ESPN private leagues and Yahoo need a login, so this only covers Sleeper leagues for now.</p></div></details>
     <details><summary>Can I bookmark my league?</summary><div><p>Yes. After the awards load, the page address includes your league ID. Bookmark it or drop it in the group chat and it opens straight to your league.</p></div></details>
