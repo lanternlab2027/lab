@@ -54,6 +54,15 @@ const opts = { year: 2026, endMonth: 11, endDay: 13 };
     '01/15/22,113-0000000-0000001,Old paperback,Paperback,0000000001,$9.99,1,$10.69,Sam Example\n' +
     '12/20/23,113-0000000-0000002,Old toaster,Kitchen,B000000002,$29.99,1,$32.09,Sam Example\n' +
     '11/02/25,113-0000000-0000003,Old umbrella,Apparel,B000000003,$19.99,1,$21.39,Sam Example\n');
+  // Retired "Orders and shipments" report (one row per shipment, no item names). Header copied from a real
+  // report; every value is invented. Address, payment, email, tracking and buyer values must never be read.
+  w('old_orders_summary.csv', 'Order Date,Order ID,Payment Instrument Type,Website,Purchase Order Number,Ordering Customer Email,Shipment Date,Shipping Address Name,Shipping Address Street 1,Shipping Address Street 2,Shipping Address City,Shipping Address State,Shipping Address Zip,Order Status,Carrier Name & Tracking Number,Subtotal,Shipping Charge,Tax Before Promotions,Total Promotions,Tax Charged,Total Charged,Buyer Name,Group Name\n' +
+    '03/04/22,114-0000000-0000001,"Visa - 0000",Amazon.com,,sam@example.invalid,03/05/22,Sam Example,1 Secret Lane,,HIDDEN TOWN,NJ,07999-1234,Shipped,AMZN_US(TBA000000000001),$20.00,$0.00,$1.40,$0.00,$1.40,$21.40,Sam Example,\n' +
+    '03/04/22,114-0000000-0000001,"Visa - 0000",Amazon.com,,sam@example.invalid,03/09/22,Sam Example,1 Secret Lane,,HIDDEN TOWN,NJ,07999-1234,Shipped,UPS(1Z0000000000000002),$100.00,$5.99,$7.00,-$5.99,$7.00,$107.00,Sam Example,\n' +
+    '07/19/22,114-0000000-0000002,"MasterCard - 0000",Amazon.com,,sam@example.invalid,07/20/22,Sam Example,1 Secret Lane,,HIDDEN TOWN,NJ,07999-1234,Shipped,AMZN_US(TBA000000000003),$15.00,$0.00,$1.05,$0.00,$1.05,,Sam Example,\n' +
+    '09/30/22,114-0000000-0000003,"Visa - 0000",Amazon.com,,sam@example.invalid,,Sam Example,1 Secret Lane,,HIDDEN TOWN,NJ,07999-1234,Cancelled,,$45.00,$0.00,$0.00,$0.00,$0.00,$0.00,Sam Example,\n' +
+    '12/20/23,113-0000000-0000002,"Visa - 0000",Amazon.com,,sam@example.invalid,12/21/23,Sam Example,1 Secret Lane,,HIDDEN TOWN,NJ,07999-1234,Shipped,AMZN_US(TBA000000000004),$29.99,$0.00,$2.10,$0.00,$2.10,$32.09,Sam Example,\n' +
+    '01/08/23,114-0000000-0000004,"Gift Certificate/Card",Amazon.com,,sam@example.invalid,01/09/23,Sam Example,1 Secret Lane,,HIDDEN TOWN,NJ,07999-1234,Shipped,AMZN_US(TBA000000000005),$9.98,$0.00,$0.70,$0.00,$0.70,$10.68,Sam Example,\n');
   w('not_amazon.csv', 'Title,Date\nSome Show: Season 1: Pilot,11/14/26\n');
   w('empty_orders.csv', D.NEW_HEADER.join(',') + '\n');
   console.log('fixtures written:', fs.readdirSync(FX).join(', '));

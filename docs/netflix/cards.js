@@ -374,7 +374,7 @@
       var share = Math.round(t.episodes / s.count * 100);
       var y = 1110;
       var lines = [];
-      if (t.seasons.length) lines.push(t.seasons.length === 1 ? t.seasons[0] : t.seasons.length + ' seasons: ' + t.seasons.map(function (x) { return x.replace(/^(Season|Series|Part|Volume)\s+/i, ''); }).join(', '));
+      if (t.seasons.length) lines.push(t.seasons.length === 1 ? t.seasons[0] : t.seasons.length + ' seasons: ' + t.seasons.map(function (x) { return x.replace(/^(Season|Series|Part|Volume)\s+/i, '').replace(x.indexOf(t.name + ' ') === 0 ? t.name + ' ' : /$^/, ''); }).join(', '));
       lines.push('First: ' + shortDate(t.first.day, !Y) + '  \u00b7  Latest: ' + shortDate(t.last.day, !Y));
       lines.push(share + '% of everything you watched' + (Y ? ' this year' : ''));
       lines.forEach(function (l, i) {

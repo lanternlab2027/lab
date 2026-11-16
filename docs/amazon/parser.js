@@ -113,6 +113,25 @@
     status:    ['orderstatus', 'fullfilmentstatus', 'fulfillmentstatus']
   };
 
+  // Old "Orders and shipments" report. Payment, email, address, tracking and buyer columns are never read.
+  var SUMMARY_ALIASES = {
+    orderId:   ['orderid'],
+    date:      ['orderdate'],
+    status:    ['orderstatus'],
+    site:      ['website'],
+    subtotal:  ['subtotal'],
+    shipping:  ['shippingcharge'],
+    promos:    ['totalpromotions'],
+    tax:       ['taxcharged'],
+    total:     ['totalcharged']
+  };
+  var SITE_CURRENCY = { com: 'USD', ca: 'CAD', 'co.uk': 'GBP', de: 'EUR', fr: 'EUR', it: 'EUR', es: 'EUR', nl: 'EUR', 'co.jp': 'JPY',
+    'com.au': 'AUD', 'in': 'INR', 'com.mx': 'MXN', 'com.br': 'BRL' };
+  function siteCurrency(site) {
+    var m = clean(site).toLowerCase().match(/amazon\.([a-z.]+)$/);
+    return m && SITE_CURRENCY[m[1]] || '';
+  }
+
   function columns(header, aliases) {
     var keys = header.map(normKey), out = {};
     Object.keys(aliases).forEach(function (k) {
@@ -240,6 +259,8 @@
     if (/refund|returned\.payments|ordersreturned/.test(name) && r.amount >= 0) return 'refunds';
     if (/return|cart|wishlist|subscribe|review/.test(name) && !/orderhistory|order history/.test(name)) return null;
     if (c.date >= 0 && c.product >= 0 && (c.total >= 0 || c.unitPrice >= 0)) return 'orders';
+    var sm = columns(header, SUMMARY_ALIASES);
+    if (c.product < 0 && sm.date >= 0 && sm.total >= 0) return 'summary';
     return null;
   }
 
@@ -272,6 +293,33 @@
         name: name, asin: val(get(r, 'asin')).toUpperCase(), qty: qty, total: Math.round(total * 100) / 100,
         currency: (val(get(r, 'currency')) || '').toUpperCase().replace(/[^A-Z]/g, '').slice(0, 3),
         category: cat, status: status, src: src
+      });
+    }
+    return { items: out, stats: stats };
+  }
+
+  // Old "Orders and shipments" report: one record per shipment row, with the charged total and no item name.
+  function readSummary(rows, hi, src) {
+    var c = columns(rows[hi], SUMMARY_ALIASES), out = [], stats = { cancelled: 0, badDate: 0, rows: 0 };
+    var order = detectOrder(rows.slice(hi + 1, hi + 400).map(function (r) { return r[c.date] || ''; }));
+    function get(r, k) { return c[k] >= 0 ? r[c[k]] : ''; }
+    for (var i = hi + 1; i < rows.length; i++) {
+      var r = rows[i];
+      if (r.length < 3) continue;
+      stats.rows++;
+      var status = val(get(r, 'status'));
+      if (/cancel/i.test(status)) { stats.cancelled++; continue; }
+      var when = parseWhen(get(r, 'date'), order);
+      if (!when) { stats.badDate++; continue; }
+      var total = parseMoney(get(r, 'total'));
+      if (total == null) {
+        var sub = parseMoney(get(r, 'subtotal'));
+        total = sub == null ? 0 : sub + (parseMoney(get(r, 'shipping')) || 0) + (parseMoney(get(r, 'tax')) || 0) - Math.abs(parseMoney(get(r, 'promos')) || 0);
+      }
+      out.push({
+        id: '', kind: 'physical', orderId: val(get(r, 'orderId')) || ('row' + i), ts: when.ts, timed: when.timed,
+        name: 'Shipment (no item names in this report)', asin: '', qty: 1, total: Math.round(total * 100) / 100,
+        currency: siteCurrency(get(r, 'site')), category: '', status: status, src: src, noItems: true
       });
     }
     return { items: out, stats: stats };
@@ -348,7 +396,7 @@
 
   // files: [{ name, text }] -> { items, refunds, files: [{name, kind, rows}], ignored: [names], ... }
   function parseFiles(files) {
-    var ordLists = [], refLists = [], digLists = [], report = [], ignored = [];
+    var ordLists = [], sumLists = [], refLists = [], digLists = [], report = [], ignored = [];
     var cancelled = 0, freeDigital = 0, pendingRefunds = 0;
     files.forEach(function (f) {
       var rows = parseCSV(f.text);
@@ -357,12 +405,18 @@
       if (!kind) { ignored.push(f.name); return; }
       var res;
       if (kind === 'orders') { res = readOrders(rows, hi, f.name); ordLists.push(res.items); cancelled += res.stats.cancelled; }
+      else if (kind === 'summary') { res = readSummary(rows, hi, f.name); sumLists.push(res.items); cancelled += res.stats.cancelled; }
       else if (kind === 'digital') { res = readDigital(rows, hi, f.name); digLists.push(res.items); freeDigital += res.stats.free; }
       else { res = readRefunds(rows, hi, f.name); refLists.push(res.items); pendingRefunds += res.stats.pending; }
       report.push({ name: f.name, kind: kind, rows: res.stats.rows, used: res.items.length });
     });
     var isig = function (x) { return [x.kind, x.orderId, x.ts, x.name, x.qty, x.total, x.currency].join('|'); };
-    var items = mergeDedup(ordLists, isig).concat(mergeDedup(digLists, isig));
+    var lineItems = mergeDedup(ordLists, isig);
+    // Summary rows only fill in orders that no item-level file covers (both old reports uploaded together).
+    var covered = {};
+    lineItems.forEach(function (x) { covered[x.orderId] = 1; });
+    var summary = mergeDedup(sumLists, isig).filter(function (x) { return !covered[x.orderId]; });
+    var items = lineItems.concat(summary, mergeDedup(digLists, isig));
     var refunds = mergeDedup(refLists, function (x) { return [x.orderId, x.ts, x.amount, x.currency].join('|'); });
     // Fill a missing currency from the most common one in the file set (blank -> USD as a last resort).
     var cc = {};
@@ -377,6 +431,7 @@
     return {
       items: items, refunds: refunds, files: report, ignored: ignored,
       cancelled: cancelled, freeDigital: freeDigital, pendingRefunds: pendingRefunds,
+      summaryOnly: summary.length > 0 && summary.length === items.filter(function (x) { return x.kind === 'physical'; }).length,
       timed: items.some(function (x) { return x.timed; }),
       hasCategory: items.filter(function (x) { return x.kind === 'physical' && x.category; }).length >= Math.max(1, items.filter(function (x) { return x.kind === 'physical'; }).length * 0.5)
     };
@@ -396,7 +451,7 @@
   var api = {
     parseCSV: parseCSV, parseMoney: parseMoney, parseWhen: parseWhen, detectOrder: detectOrder, normKey: normKey,
     columns: columns, kindOf: kindOf, headerOf: headerOf, parseFiles: parseFiles, wantEntry: wantEntry,
-    ALIASES: ALIASES, REFUND_ALIASES: REFUND_ALIASES, DIGITAL_ALIASES: DIGITAL_ALIASES
+    ALIASES: ALIASES, REFUND_ALIASES: REFUND_ALIASES, DIGITAL_ALIASES: DIGITAL_ALIASES, SUMMARY_ALIASES: SUMMARY_ALIASES
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.AmazonParser = api;

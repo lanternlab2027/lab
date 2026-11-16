@@ -195,6 +195,32 @@ test('real-export regression: "Show: Show 3: Chapter One" seasons and "Chapter N
   const s = S.compute(r.entries, { year: 2026 });
   const ns = s.shows.find((x) => x.name === 'Night Signal');
   assert.equal(ns.episodes, 6);
-  assert.deepEqual(ns.seasons.sort(), ['Night Signal 2', 'Night Signal 3']);
+  // season 1 has no label in the export; it is counted as its own season (see the next test)
+  assert.deepEqual(ns.seasons.sort(), ['Night Signal 1', 'Night Signal 2', 'Night Signal 3']);
   assert.ok(!s.shows.some((x) => /^Night Signal: /.test(x.name)), 'no "Night Signal: Night Signal 3" show');
+});
+
+test('real-export regression: unlabeled season 1 episodes count as season 1 only when later seasons are numbered from 2', () => {
+  const r = P.parseAny(read('unlabeled_season_one.csv'));
+  const by = (show) => r.entries.filter((e) => e.show === show).map((e) => [e.kind, e.season, e.episode]);
+  const s = S.compute(r.entries, { year: 2026 });
+  const seasons = (name) => s.shows.find((x) => x.name === name).seasons.slice().sort();
+  // "Season 2", "Season 3" labeled; "Show: Pilot" and "Show: The Keeper" are season 1
+  assert.deepEqual(seasons('Harbor Lights'), ['Season 1', 'Season 2', 'Season 3']);
+  assert.deepEqual(by('Harbor Lights').filter((x) => /Pilot|Keeper/.test(x[2])).map((x) => x[1]), ['Season 1', 'Season 1']);
+  // "Show II" style roman numerals get "Show I"
+  assert.deepEqual(seasons('Ember Road'), ['Ember Road I', 'Ember Road II']);
+  // a show that already has a season 1 keeps its special unlabeled
+  assert.deepEqual(seasons('Quiet Acres'), ['Season 1', 'Season 2']);
+  assert.equal(by('Quiet Acres').find((x) => x[2] === 'Christmas Special')[1], '');
+  // seasons starting above 2 are left alone (the unlabeled one could be anything)
+  assert.deepEqual(seasons('Late Bloom'), ['Season 3', 'Season 4']);
+  // limited series: not numbered, so untouched
+  assert.deepEqual(seasons('Glass River'), ['Limited Series']);
+  assert.deepEqual(by('Glass River').filter((x) => x[1] === '').length, 2);
+  // films stay films
+  assert.deepEqual(r.entries.filter((e) => /^Moon Street/.test(e.title)).map((e) => [e.kind, e.season]), [['movie', ''], ['movie', '']]);
+  // the original Stranger Things-style fixture now has 3 seasons
+  const ns = P.parseAny(read('numbered_seasons.csv'));
+  assert.equal(S.compute(ns.entries, { year: 2026 }).shows.find((x) => x.name === 'Night Signal').seasons.length, 3);
 });

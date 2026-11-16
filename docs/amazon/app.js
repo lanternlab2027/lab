@@ -100,7 +100,7 @@
     state.year = cur && cur.orders ? CURRENT : latest ? latest.year : CURRENT;
     yearSel.value = String(state.year);
     var orders = {}; parsed.items.forEach(function (x) { orders[x.orderId] = 1; });
-    var msg = 'Found ' + Object.keys(orders).length.toLocaleString('en-US') + ' orders (' + parsed.items.length.toLocaleString('en-US') + ' item lines) in ' + parsed.files.length + (parsed.files.length === 1 ? ' file' : ' files') + '. Nothing was uploaded.';
+    var msg = 'Found ' + Object.keys(orders).length.toLocaleString('en-US') + ' orders (' + (parsed.summaryOnly ? 'old order summary report: totals only, no item names' : parsed.items.length.toLocaleString('en-US') + ' item lines') + ') in ' + parsed.files.length + (parsed.files.length === 1 ? ' file' : ' files') + '. Nothing was uploaded.';
     if (state.year !== CURRENT) msg += ' No orders in ' + CURRENT + ' yet, so we\u2019re showing ' + state.year + '.';
     say(msg);
     setTab('recap');
@@ -122,7 +122,7 @@
   function describe(s) {
     var p = state.parsed, bits = [];
     var period = state.year == null ? 'all time' : String(state.year);
-    bits.push('Counting ' + s.orderCount.toLocaleString('en-US') + ' orders from ' + period + ' in ' + s.currency + ': ' + money(s.gross) + ' in item totals (tax and shipping included)');
+    bits.push('Counting ' + s.orderCount.toLocaleString('en-US') + ' orders from ' + period + ' in ' + s.currency + ': ' + money(s.gross) + ' in ' + (s.noItems ? 'order' : 'item') + ' totals (tax and shipping included)');
     if (s.refundTotal) bits.push('minus ' + money(s.refundTotal) + ' refunded on ' + s.refundOrders + (s.refundOrders === 1 ? ' order' : ' orders') + ' = ' + money(s.net));
     else if (!s.hasRefundFile) bits.push('no refund file was included, so refunds aren\u2019t taken off');
     var extra = [];
@@ -130,7 +130,8 @@
     if (p.cancelled) extra.push(p.cancelled + ' cancelled ' + (p.cancelled === 1 ? 'line' : 'lines') + ' left out');
     if (p.freeDigital) extra.push(p.freeDigital + ' free digital ' + (p.freeDigital === 1 ? 'item' : 'items') + ' skipped');
     s.otherCurrencies.forEach(function (c) { extra.push(money(c.total, c.currency) + ' in ' + c.currency + ' not included (switch currency above)'); });
-    if (!s.categories && state.parsed.items.length) extra.push(p.hasCategory ? '' : 'no department column in this export, so no categories card');
+    if (s.noItems) extra.push('this is Amazon\u2019s old order summary report, which has no item names, so there are no item counts or re-order card (the Items report or the \u201cYour Orders\u201d export has them)');
+    else if (!s.categories && state.parsed.items.length) extra.push(p.hasCategory ? '' : 'no department column in this export, so no categories card');
     return bits.join(', ') + '.' + (extra.filter(Boolean).length ? ' ' + extra.filter(Boolean).join('; ') + '.' : '');
   }
 

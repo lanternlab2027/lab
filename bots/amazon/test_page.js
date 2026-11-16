@@ -201,6 +201,10 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
       cards = await upload(page, f);
       check(cards.length >= min && cards.every((c) => c.spread > 200), `${f} -> ${cards.length} cards`);
     }
+    // Retired "Orders and shipments" summary report: order totals only, explained in the notes.
+    cards = await upload(page, 'old_orders_summary.csv');
+    check(cards.length >= 3 && cards.every((c) => c.spread > 200), `old_orders_summary.csv -> ${cards.length} cards`);
+    check(/old order summary report/.test(await page.textContent('#included')), 'summary report: the notes say it has no item names');
     // Spreadsheet formula guard in the CSV export.
     const evil = path.join(TMP, 'formula.csv');
     fs.writeFileSync(evil, 'Order ID,Order Date,Product Name,Quantity,Total Owed\n114-1,2026-06-01T12:00:00Z,"=HYPERLINK(""http://x"")",1,5.00\n');

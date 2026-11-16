@@ -168,7 +168,7 @@ async function browser() {
     check(await page.evaluate(() => { try { return localStorage.getItem('snow.q') === null; } catch (e) { return true; } }), rel + ': ZIP not stored on auto-load');
     check(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), rel + ': no horizontal scroll at 390px');
     check(await page.evaluate(() => window.scrollY === 0), rel + ': page not scrolled on load');
-    // cross-promo links resolve after more-fix.js
+    // cross-promo links resolve three folders deep (more.js takes the site root from its own URL)
     const promo = await page.$$eval('#more-apps a', (as) => as.map((a) => a.href));
     check(promo.length === 3, rel + ': cross-promo strip rendered (' + promo.length + ' links)');
     for (const h of promo) {

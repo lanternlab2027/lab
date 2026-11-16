@@ -199,7 +199,50 @@
       p.show = Object.keys(c).sort(function (a, b) { return c[b] - c[a]; })[0];
       delete p.segs;
     });
+    unlabeledFirstSeason(parsed);
     return parsed;
+  }
+
+  // Season number in a season label, with the label's form so a matching "season 1" label can be made:
+  // "Season 2", "Temporada II", "Part 3", "Stranger Things 2" (the show's name plus a number). Else null.
+  var WORDNUM = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
+  function romanNum(r) {
+    var v = { i: 1, v: 5, x: 10, l: 50, c: 100 }, n = 0;
+    r = r.toLowerCase();
+    for (var i = 0; i < r.length; i++) { var a = v[r[i]], b = v[r[i + 1]] || 0; n += a < b ? -a : a; }
+    return n;
+  }
+  function seasonNumber(label, show) {
+    var m = label.match(/^((?:season|series|temporada|saison|staffel|stagione|seizoen|sezon|s\u00e4song|s\u00e6son|sesong|kausi|\u00e9vad|sez\u00f3na|part|parte|partie|teil|deel|volume|vol\.|book)\s*)(\d{1,2}|[ivx]{1,4}|one|two|three|four|five|six|seven|eight|nine|ten)$/i);
+    var lead, tok;
+    if (m) { lead = m[1]; tok = m[2]; }
+    else if (label.toLowerCase().indexOf(show.toLowerCase() + ' ') === 0 && /^(\d{1,2}|[ivx]{1,4})$/i.test(label.slice(show.length + 1))) { lead = label.slice(0, show.length + 1); tok = label.slice(show.length + 1); }
+    else return null;
+    var n = /^\d+$/.test(tok) ? +tok : WORDNUM[tok.toLowerCase()] || romanNum(tok);
+    var one = /^\d+$/.test(tok) ? '1' : WORDNUM[tok.toLowerCase()] ? (tok[0] === tok[0].toUpperCase() ? 'One' : 'one') : (tok === tok.toUpperCase() ? 'I' : 'i');
+    return { n: n, first: lead + one };
+  }
+
+  // Netflix often leaves season 1 unlabeled ("Stranger Things: Chapter One: The Vanishing") while later
+  // seasons carry a label ("Stranger Things: Stranger Things 2: Chapter One"). When a series has numbered
+  // seasons starting at 2, with no season 1 label, its unlabeled episodes are season 1. Films, limited
+  // series and shows whose labels are not numbered (or that already have a season 1) are left alone.
+  function unlabeledFirstSeason(parsed) {
+    var shows = {};
+    parsed.forEach(function (p) {
+      if (p.kind !== 'series') return;
+      var sh = shows[p.show] || (shows[p.show] = { nums: [], other: false, bare: [], first: null });
+      if (!p.season) { if (p.episode) sh.bare.push(p); return; }
+      var sn = seasonNumber(p.season, p.show);
+      if (!sn) { sh.other = true; return; }
+      sh.nums.push(sn.n);
+      if (!sh.first || sn.n < sh.first.n) sh.first = sn;
+    });
+    Object.keys(shows).forEach(function (k) {
+      var sh = shows[k];
+      if (!sh.bare.length || sh.other || !sh.first || sh.first.n !== 2) return;
+      sh.bare.forEach(function (p) { p.season = sh.first.first; });
+    });
   }
   function setSeries(p, show, k) { p.show = show; p.kind = 'series'; p.season = ''; p.episode = p.segs.slice(k).join(': '); }
 

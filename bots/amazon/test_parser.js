@@ -222,3 +222,51 @@ test('not an order file / empty export', () => {
   assert.equal(e.items.length, 0);
   assert.equal(e.files[0].kind, 'orders');
 });
+
+test('old "Orders and shipments" summary report: order totals only, never address/payment columns', () => {
+  const header = read('old_orders_summary.csv').split('\n')[0].split(',');
+  assert.equal(P.kindOf(header, '01-Jan-2022_to_31-Dec-2023.csv'), 'summary');
+  const p = one('old_orders_summary.csv');
+  assert.deepEqual(p.files.map((f) => f.kind), ['summary']);
+  assert.equal(p.summaryOnly, true);
+  assert.equal(p.cancelled, 1);
+  assert.equal(p.hasCategory, false);
+  assert.ok(p.items.every((x) => x.noItems && x.currency === 'USD' && x.asin === '' && x.category === ''));
+  // two shipments of one order are one order; a blank Total Charged falls back to subtotal + shipping + tax - promotions
+  const s22 = S.compute(p, { year: 2022, today: TODAY });
+  assert.deepEqual([s22.orderCount, s22.gross, s22.itemCount, s22.noItems], [2, 144.45, null, true]);
+  assert.equal(s22.biggest.total, 128.4);
+  assert.equal(s22.biggest.lines.length, 2);
+  assert.equal(s22.reorder, null);
+  assert.equal(s22.topItem, null);
+  assert.equal(s22.late, null);
+  assert.deepEqual(S.years(p.items).map((y) => [y.year, y.orders]), [[2023, 2], [2022, 2]]);
+  // privacy: nothing from the payment, email, address, tracking or buyer columns
+  const blob = JSON.stringify(p);
+  for (const bad of ['Visa', 'MasterCard', 'Gift Certificate', 'example.invalid', 'Secret Lane', 'HIDDEN TOWN', '07999-1234', 'TBA000', '1Z000', 'Sam Example']) assert.ok(!blob.includes(bad), bad + ' leaked');
+  // cards: no item counts or re-order card, and the receipt lines say "Shipment" without a name toggle
+  const ids = C.build(s22, { year: 2022, periodShort: '2022', title: 'x' }).map((c) => c.id);
+  assert.ok(!ids.includes('reorder') && !ids.includes('categories') && ids.includes('total') && ids.includes('biggest'));
+  const texts = [];
+  const PROPS = new Set(['font', 'fillStyle', 'strokeStyle', 'globalAlpha', 'textAlign', 'textBaseline', 'lineWidth', 'letterSpacing', 'shadowColor', 'shadowBlur', 'shadowOffsetX', 'shadowOffsetY']);
+  const ctx = new Proxy({}, {
+    get: (t, k) => PROPS.has(k) ? t[k] : k === 'fillText' ? (str) => texts.push(String(str)) : k === 'measureText' ? (str) => ({ width: String(str).length * 20 })
+      : /Gradient$/.test(String(k)) ? () => ({ addColorStop() {} }) : () => {},
+    set: (t, k, v) => { t[k] = v; return true; }
+  });
+  C.build(s22, { year: 2022, periodShort: '2022', title: 'x' }).forEach((c) => c.draw(ctx, C.THEMES[c.theme]));
+  const all = texts.join(' | ');
+  assert.ok(/Shipment 1/.test(all) && !/null|undefined|NaN/.test(all), 'card text: ' + all.slice(0, 200));
+  assert.ok(!/NAME HIDDEN/.test(all));
+});
+
+test('old summary report next to the old Items report: item lines win, summary only fills uncovered orders', () => {
+  const p = P.parseFiles([{ name: 'items.csv', text: read('old_order_report.csv') }, { name: 'orders.csv', text: read('old_orders_summary.csv') }]);
+  assert.equal(p.summaryOnly, false);
+  // 113-0000000-0000002 is in both files: counted once, from the Items report
+  const both = p.items.filter((x) => x.orderId === '113-0000000-0000002');
+  assert.equal(both.length, 1);
+  assert.equal(both[0].name, 'Old toaster');
+  const s23 = S.compute(p, { year: 2023, today: TODAY });
+  assert.deepEqual([s23.orderCount, s23.gross, s23.itemCount], [2, 42.77, 1]);
+});

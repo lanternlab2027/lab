@@ -304,7 +304,7 @@
       kicker(ctx, th, Y ? 'YOUR ' + Y + ' IN ORDERS' : 'ALL YOUR ORDERS', 300);
       txt(ctx, th, 'You spent', M, 440, 'display', 800, 80);
       bigNumber(ctx, th, $(s.net), 720, 290);
-      var sub = 'on ' + fmt(s.orderCount) + ' ' + plural(s.orderCount, 'order') + ' and ' + fmt(s.itemCount) + ' ' + plural(s.itemCount, 'item') + (s.refundTotal ? ', after refunds.' : '.');
+      var sub = 'on ' + fmt(s.orderCount) + ' ' + plural(s.orderCount, 'order') + (s.itemCount == null ? '' : ' and ' + fmt(s.itemCount) + ' ' + plural(s.itemCount, 'item')) + (s.refundTotal ? ', after refunds.' : '.');
       var y = block(ctx, th, sub, 820, { max: 60, min: 40, lines: 2 });
       var q;
       if (s.prevGross) {
@@ -312,7 +312,9 @@
         q = Math.abs(pct) < 3 ? 'About the same as ' + (Y - 1) + '. Consistent, at least.' : d > 0 ? pct + '% more than ' + (Y - 1) + '. The doorstep noticed.' : pct + '% less than ' + (Y - 1) + '. Restraint looks good on you.';
       } else q = pick(['Every one of them a small, brown-box decision.', 'Click, confirm, wait by the door. Repeat.', 'The porch has seen things.'], key + 'q');
       y = quip(ctx, th, q, y + 90, { max: 46 });
-      var chips = [[fmt(s.orderCount), plural(s.orderCount, 'order')], [fmt(s.itemCount), plural(s.itemCount, 'item')]];
+      var chips = [[fmt(s.orderCount), plural(s.orderCount, 'order')]];
+      if (s.itemCount != null) chips.push([fmt(s.itemCount), plural(s.itemCount, 'item')]);
+      else chips.push([fmt(s.activeDays), plural(s.activeDays, 'day') + ' with an order']);
       if (s.refundTotal) chips.push([$(s.refundTotal), 'came back in refunds']);
       else chips.push([$(s.avgOrder), 'average order']);
       var chy = Math.max(y + 110, 1060);
@@ -357,7 +359,9 @@
       ctx.restore();
       if (!Y) txt(ctx, th, 'Calendar: ' + calY, W - M, my, 'sans', 700, 26, { align: 'right', alpha: 0.7 });
       var wk = s.weekdays.indexOf(Math.max.apply(null, s.weekdays));
-      chipRow(ctx, th, my + 60, [[fmt(s.activeDays), plural(s.activeDays, 'day') + ' with an order'], [DAYS[wk].slice(0, 3), 'your top ordering day'], [fmt(s.itemCount), plural(s.itemCount, 'item') + ' delivered']], 196);
+      var cchips = [[fmt(s.activeDays), plural(s.activeDays, 'day') + ' with an order'], [DAYS[wk].slice(0, 3), 'your top ordering day']];
+      if (s.itemCount != null) cchips.push([fmt(s.itemCount), plural(s.itemCount, 'item') + ' delivered']);
+      chipRow(ctx, th, my + 60, cchips, 196);
       if (my + 330 < 1730) quip(ctx, th, every < 3 ? 'The delivery driver knows your dog by name.' : every < 7 ? 'A box a week keeps the doorstep busy.' : 'Measured. Deliberate. Occasional.', my + 330, { max: 44, lines: 1 });
     });
 
@@ -374,13 +378,15 @@
       rule(ctx, RINK, area.y + 34, 0.35, area.x, area.x + area.w);
       shown.forEach(function (ln, i) {
         var y = area.y + 104 + i * 74;
-        var label = (ln.qty > 1 ? ln.qty + 'x ' : '') + ln.name;
-        rline(ctx, area.x, y, area.w, label, $(ln.total, true), { hidden: names ? 0 : 300 + (hash(ln.name) % 260) });
+        // Old summary-report lines have no item name, so there is nothing to hide: they read "Shipment".
+        var label = ln.noItems ? 'Shipment' + (lines.length > 1 ? ' ' + (i + 1) : '') : (ln.qty > 1 ? ln.qty + 'x ' : '') + ln.name;
+        rline(ctx, area.x, y, area.w, label, $(ln.total, true), { hidden: names || ln.noItems ? 0 : 300 + (hash(ln.name) % 260) });
       });
       var ey = area.y + 104 + shown.length * 74;
       if (lines.length > shown.length) { txt(ctx, RINK, '+ ' + (lines.length - shown.length) + ' more', area.x, ey - 10, 'mono', 600, 30, { alpha: 0.7 }); ey += 60; }
       rule(ctx, RINK, ey - 30, 0.35, area.x, area.x + area.w);
-      rline(ctx, area.x, ey + 30, area.w, 'TOTAL  ' + fmt(b.qty) + ' ' + plural(b.qty, 'item'), $(b.total, true), { bold: true, size: 38 });
+      var bNoItems = b.lines.every(function (ln) { return ln.noItems; });
+      rline(ctx, area.x, ey + 30, area.w, bNoItems ? 'TOTAL' : 'TOTAL  ' + fmt(b.qty) + ' ' + plural(b.qty, 'item'), $(b.total, true), { bold: true, size: 38 });
       var after = 730 + rh + 90;
       var times = b.total / (s.avgOrder || 1);
       quip(ctx, th, times >= 2 ? 'That\u2019s ' + fmt1(times) + ' times your average order. Treat yourself, apparently.' : 'Your biggest, and still pretty close to your usual.', after, { max: 46 });
@@ -503,7 +509,7 @@
       kicker(ctx, th, Y ? 'YOUR ' + Y + ', ITEMIZED' : 'ALL TIME, ITEMIZED', 300);
       var rows = [];
       rows.push(['Orders', fmt(s.orderCount)]);
-      rows.push(['Items', fmt(s.itemCount)]);
+      if (s.itemCount != null) rows.push(['Items', fmt(s.itemCount)]);
       if (s.everyDays && s.orderCount > 1) rows.push(['An order every', fmt1(s.everyDays) + ' days']);
       if (s.biggest) rows.push(['Biggest order', $(s.biggest.total, true)]);
       rows.push(['Average order', $(s.avgOrder, true)]);

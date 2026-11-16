@@ -76,6 +76,23 @@
   if (typeof module !== 'undefined' && module.exports) module.exports = { pick: pick, APPS: APPS };
   if (typeof document === 'undefined') return;
 
+  // Site root, from this script's own URL (it lives at <root>/apps/more.js), so links and thumbnails work on
+  // pages at any depth. Kept relative to the page when possible ("../" one folder deep, "../../../" for
+  // /snow/t/<st>/). Falls back to "../" when the script URL is unknown.
+  var base = '../';
+  try {
+    var me = document.currentScript;
+    if (me && me.src) {
+      var root = new URL('../', me.src), here = new URL('./', location.href);
+      if (root.origin !== here.origin) base = root.href;
+      else if (here.pathname.indexOf(root.pathname) !== 0) base = root.pathname;
+      else {
+        var depth = here.pathname.slice(root.pathname.length).split('/').filter(Boolean).length;
+        base = depth ? new Array(depth + 1).join('../') : './';
+      }
+    }
+  } catch (e) { base = '../'; }
+
   var box = document.getElementById('more-apps');
   if (!box || box.firstChild) return;
   var from = String(box.getAttribute('data-from') || '').replace(/[^a-z0-9-]/g, '');
@@ -98,7 +115,7 @@
   pick(from, new Date().getMonth()).forEach(function (key) {
     var info = APPS[key];
     var a = el('a', 'llm-a');
-    a.href = (key === 'hub' ? '../apps/' : '../' + key + '/') + ref;
+    a.href = base + (key === 'hub' ? 'apps/' : key + '/') + ref;
     var thumb;
     if (key === 'hub') {
       thumb = el('span', 'llm-thumb llm-hub');
@@ -106,7 +123,7 @@
       for (var i = 0; i < 4; i++) thumb.appendChild(el('span'));
     } else {
       thumb = el('img', 'llm-thumb');
-      thumb.src = '../apps/img/' + key + '.jpg';
+      thumb.src = base + 'apps/img/' + key + '.jpg';
       thumb.alt = '';
       thumb.width = 64;
       thumb.height = 40;

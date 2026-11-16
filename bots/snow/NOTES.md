@@ -100,6 +100,6 @@ Geolocation runs only on "Use my location". Coordinates go only to NWS, never in
 **App changes for this (small):**
 - `nws.js`: ZIP shards are loaded from `z/` next to the script (`document.currentScript`), so pages in subfolders work.
 - `app.js`: if `#find` has `data-town-zip` / `data-town-region` / `data-town-name`, the page loads that ZIP on open with that region (URL `?r=` / `?zip=` still win; the stored region doesn't apply), shows "Buffalo, NY 14204" as the place, and on that auto-load doesn't store the ZIP, rewrite the URL or scroll. On town pages typed lookups don't rewrite the URL either (keeps the canonical URL clean). Share links still point at the main app.
-- Cross-promo: `docs/apps/more.js` builds `../<app>/` links that only work one folder deep, and docs/apps was off-limits, so town pages load `docs/snow/t/more-fix.js` right after it, which re-resolves those links against `/snow/`. If more.js ever gets a base-path option, drop the shim.
+- Cross-promo: `docs/apps/more.js` takes the site root from its own script URL (`document.currentScript.src`), so its links and thumbnails work on the town pages three folders deep. The old `docs/snow/t/more-fix.js` shim was removed.
 
 Screenshots: `/tmp/claude-0/-home-claude/69ef2e03-4772-566e-a19b-2f78e096e5ba/scratchpad/shots/snowtowns/` (not in the repo).

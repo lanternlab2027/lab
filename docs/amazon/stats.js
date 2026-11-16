@@ -48,7 +48,9 @@
     olist.sort(function (a, b) { return a.ts - b.ts; });
     s.orders = olist;
     s.orderCount = olist.length;
-    s.itemCount = items.reduce(function (a, x) { return a + x.qty; }, 0);
+    // Lines from the old orders summary report have no item names or counts (x.noItems).
+    s.noItems = items.length > 0 && items.every(function (x) { return x.noItems; });
+    s.itemCount = s.noItems ? null : items.reduce(function (a, x) { return a + (x.noItems ? 0 : x.qty); }, 0);
     s.lineCount = items.length;
     s.digitalCount = items.filter(function (x) { return x.kind === 'digital'; }).length;
     s.physicalOrders = olist.filter(function (o) { return o.kind === 'physical'; }).length;
@@ -117,6 +119,7 @@
     // most re-ordered: the same product (ASIN, else name) in the most separate orders
     var rm = {};
     items.forEach(function (x) {
+      if (x.noItems) return;
       var k = itemKey(x), e = rm[k] || (rm[k] = { key: k, name: x.name, orders: {}, qty: 0, total: 0, last: 0 });
       e.orders[x.orderId] = 1; e.qty += x.qty; e.total += x.total; if (x.ts > e.last) { e.last = x.ts; e.name = x.name; }
     });
@@ -137,7 +140,7 @@
 
     // the top item (most money on a single product line), used only if the person opts in
     var ti = {};
-    items.forEach(function (x) { var k = itemKey(x), e = ti[k] || (ti[k] = { name: x.name, total: 0, qty: 0 }); e.total += x.total; e.qty += x.qty; });
+    items.forEach(function (x) { if (x.noItems) return; var k = itemKey(x), e = ti[k] || (ti[k] = { name: x.name, total: 0, qty: 0 }); e.total += x.total; e.qty += x.qty; });
     s.topItem = Object.keys(ti).map(function (k) { return ti[k]; }).sort(function (a, b) { return b.total - a.total; })[0] || null;
 
     // all time, for the "since" line
