@@ -1,0 +1,182 @@
+{
+ "id": "music-2027",
+ "rev": 1,
+ "name": "Music awards night 2027",
+ "short": "Music awards 2027",
+ "about": "The recording academy's 69th awards, Sunday, Feb 7, 2027, at Crypto.com Arena in Los Angeles. This ballot covers the big four and a set of headline genre awards (20 of the roughly 100 categories).",
+ "ceremony": "2027-02-07T20:00:00-05:00",
+ "ceremonyLabel": "Sun, Feb 7, 2027, 8 pm ET (start time to be confirmed)",
+ "nominations": "2026-11-16",
+ "nominationsLabel": "Mon, Nov 16, 2026",
+ "resultsUrl": "https://www.grammy.com/",
+ "sources": [
+  {
+   "label": "ABC: the 2027 show airs live Sunday, Feb 7, 2027",
+   "url": "https://abc.com/news/f055deb9-3d58-4ecf-bdf2-70536dff9549/category/1138628"
+  },
+  {
+   "label": "ABC News: what to know about the 69th nominations",
+   "url": "https://abcnews.com/culture/story/2027-grammy-nominations/?id=137921246"
+  },
+  {
+   "label": "Recording academy: 2027 new categories and rule updates",
+   "url": "https://www.grammy.com/news/2027-grammys-new-categories-rule-updates/"
+  }
+ ],
+ "tiebreakers": [
+  {
+   "id": "runtime",
+   "q": "How many minutes will the main broadcast run, from start to sign-off?",
+   "min": 60,
+   "max": 400
+  },
+  {
+   "id": "aoty-wins",
+   "q": "How many awards will the Album of the Year winner's artist win in total (all ceremonies that day)?",
+   "min": 1,
+   "max": 20
+  }
+ ],
+ "categories": [
+  {
+   "id": "album",
+   "name": "Album of the Year",
+   "group": "General field",
+   "weight": 3,
+   "nominees": []
+  },
+  {
+   "id": "record",
+   "name": "Record of the Year",
+   "group": "General field",
+   "weight": 3,
+   "nominees": []
+  },
+  {
+   "id": "song",
+   "name": "Song of the Year",
+   "group": "General field",
+   "weight": 3,
+   "nominees": []
+  },
+  {
+   "id": "new-artist",
+   "name": "Best New Artist",
+   "group": "General field",
+   "weight": 3,
+   "nominees": []
+  },
+  {
+   "id": "pop-solo",
+   "name": "Best Pop Solo Performance",
+   "group": "Pop",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "pop-group",
+   "name": "Best Pop Duo/Group Performance",
+   "group": "Pop",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "pop-album",
+   "name": "Best Pop Vocal Album",
+   "group": "Pop",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "asian-pop",
+   "name": "Best Asian Pop Music Performance",
+   "group": "Pop",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "dance-album",
+   "name": "Best Dance/Electronic Album",
+   "group": "Dance",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "rock-album",
+   "name": "Best Rock Album",
+   "group": "Rock",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "alt-album",
+   "name": "Best Alternative Music Album",
+   "group": "Alternative",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "rnb-solo",
+   "name": "Best R&B Solo Performance",
+   "group": "R&B",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "rnb-album",
+   "name": "Best R&B Album",
+   "group": "R&B",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "rap-album",
+   "name": "Best Rap Album",
+   "group": "Rap",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "rap-song",
+   "name": "Best Rap Song",
+   "group": "Rap",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "country-album",
+   "name": "Best Contemporary Country Album",
+   "group": "Country",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "trad-country",
+   "name": "Best Traditional Country Album",
+   "group": "Country",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "latin-pop",
+   "name": "Best Latin Pop Album",
+   "group": "Latin",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "latin-song",
+   "name": "Best Latin Song",
+   "group": "Latin",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "comedy",
+   "name": "Best Comedy Album",
+   "group": "Comedy",
+   "weight": 1,
+   "nominees": []
+  }
+ ]
+}

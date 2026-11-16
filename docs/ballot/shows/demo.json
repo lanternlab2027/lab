@@ -1,0 +1,208 @@
+{
+ "id": "demo",
+ "rev": 1,
+ "demo": true,
+ "name": "Demo awards night",
+ "short": "Demo awards",
+ "about": "Made-up categories and nominees, for trying the pool before the real nominations are out. None of these films or people exist.",
+ "ceremony": null,
+ "ceremonyLabel": "Any time (demo)",
+ "nominations": null,
+ "nominationsLabel": "",
+ "resultsUrl": null,
+ "sources": [],
+ "tiebreakers": [
+  {
+   "id": "runtime",
+   "q": "How many minutes will the (made-up) broadcast run?",
+   "min": 60,
+   "max": 400
+  }
+ ],
+ "categories": [
+  {
+   "id": "picture",
+   "name": "Best Picture (Demo)",
+   "group": "Top awards",
+   "weight": 3,
+   "nominees": [
+    {
+     "name": "The Toaster Who Knew Too Much",
+     "note": "Demo"
+    },
+    {
+     "name": "Seven Robots for Seven Brides",
+     "note": "Demo"
+    },
+    {
+     "name": "Moonlight Laundromat",
+     "note": "Demo"
+    },
+    {
+     "name": "Captain Spreadsheet",
+     "note": "Demo"
+    },
+    {
+     "name": "A Quiet Place to Park",
+     "note": "Demo"
+    }
+   ]
+  },
+  {
+   "id": "director",
+   "name": "Best Director (Demo)",
+   "group": "Top awards",
+   "weight": 2,
+   "nominees": [
+    {
+     "name": "Pat Placeholder",
+     "note": "The Toaster Who Knew Too Much"
+    },
+    {
+     "name": "Lee Lorem",
+     "note": "Moonlight Laundromat"
+    },
+    {
+     "name": "Sam Sample",
+     "note": "Captain Spreadsheet"
+    },
+    {
+     "name": "Dee Fault",
+     "note": "A Quiet Place to Park"
+    }
+   ]
+  },
+  {
+   "id": "actress",
+   "name": "Best Actress (Demo)",
+   "group": "Acting",
+   "weight": 2,
+   "nominees": [
+    {
+     "name": "Ima Pretend",
+     "note": "Moonlight Laundromat"
+    },
+    {
+     "name": "Faye Kename",
+     "note": "Captain Spreadsheet"
+    },
+    {
+     "name": "Dot Example",
+     "note": "Seven Robots for Seven Brides"
+    },
+    {
+     "name": "Nora Nonesuch",
+     "note": "A Quiet Place to Park"
+    }
+   ]
+  },
+  {
+   "id": "actor",
+   "name": "Best Actor (Demo)",
+   "group": "Acting",
+   "weight": 2,
+   "nominees": [
+    {
+     "name": "Joe Dummy",
+     "note": "The Toaster Who Knew Too Much"
+    },
+    {
+     "name": "Rex Testcase",
+     "note": "Captain Spreadsheet"
+    },
+    {
+     "name": "Al Ipsum",
+     "note": "Moonlight Laundromat"
+    },
+    {
+     "name": "Mo Mockup",
+     "note": "Seven Robots for Seven Brides"
+    }
+   ]
+  },
+  {
+   "id": "supporting",
+   "name": "Best Supporting Performance (Demo)",
+   "group": "Acting",
+   "weight": 1,
+   "nominees": [
+    {
+     "name": "A Very Good Dog",
+     "note": "The Toaster Who Knew Too Much"
+    },
+    {
+     "name": "Robot No. 4",
+     "note": "Seven Robots for Seven Brides"
+    },
+    {
+     "name": "Gil Fakerson",
+     "note": "A Quiet Place to Park"
+    }
+   ]
+  },
+  {
+   "id": "song",
+   "name": "Best Song (Demo)",
+   "group": "Music",
+   "weight": 1,
+   "nominees": [
+    {
+     "name": "Spin Cycle of Love",
+     "note": "Moonlight Laundromat"
+    },
+    {
+     "name": "Ctrl Alt Delete My Heart",
+     "note": "Captain Spreadsheet"
+    },
+    {
+     "name": "Beep Boop Forever",
+     "note": "Seven Robots for Seven Brides"
+    }
+   ]
+  },
+  {
+   "id": "effects",
+   "name": "Best Visual Effects (Demo)",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": [
+    {
+     "name": "Seven Robots for Seven Brides",
+     "note": "Demo"
+    },
+    {
+     "name": "The Toaster Who Knew Too Much",
+     "note": "Demo"
+    },
+    {
+     "name": "A Quiet Place to Park",
+     "note": "Demo"
+    }
+   ]
+  },
+  {
+   "id": "short",
+   "name": "Best Short (Demo)",
+   "group": "Shorts",
+   "weight": 1,
+   "nominees": [
+    {
+     "name": "Lunch Break",
+     "note": "Demo"
+    },
+    {
+     "name": "The Stapler",
+     "note": "Demo"
+    },
+    {
+     "name": "Out of Office",
+     "note": "Demo"
+    },
+    {
+     "name": "Reply All",
+     "note": "Demo"
+    }
+   ]
+  }
+ ]
+}

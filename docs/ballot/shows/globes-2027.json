@@ -1,0 +1,232 @@
+{
+ "id": "globes-2027",
+ "rev": 1,
+ "name": "Film and TV awards night 2027",
+ "short": "Film and TV awards 2027",
+ "about": "The 84th film and television awards voted by entertainment journalists, Sunday, Jan 10, 2027, live from the Beverly Hilton (7:30 pm ET / 4:30 pm PT).",
+ "ceremony": "2027-01-10T19:30:00-05:00",
+ "ceremonyLabel": "Sun, Jan 10, 2027, 7:30 pm ET",
+ "nominations": "2026-12-07",
+ "nominationsLabel": "Mon, Dec 7, 2026",
+ "resultsUrl": "https://goldenglobes.com/",
+ "sources": [
+  {
+   "label": "CBS press: the 84th ceremony, Jan 10, 2027",
+   "url": "https://www.paramountpressexpress.com/cbs-entertainment/shows/84th-annual-golden-globes/about/"
+  },
+  {
+   "label": "AwardsWatch: 2027 key dates",
+   "url": "https://awardswatch.com/2027-golden-globes-reveal-key-dates-adds-ai-rules-expands-podcast-pool/"
+  },
+  {
+   "label": "NBC DFW: last year's 28 categories",
+   "url": "https://www.nbcdfw.com/entertainment-news/golden-globes-nominations-2026/"
+  }
+ ],
+ "tiebreakers": [
+  {
+   "id": "runtime",
+   "q": "How many minutes will the broadcast run, from start to sign-off?",
+   "min": 60,
+   "max": 400
+  }
+ ],
+ "categories": [
+  {
+   "id": "film-drama",
+   "name": "Best Motion Picture - Drama",
+   "group": "Film",
+   "weight": 3,
+   "nominees": []
+  },
+  {
+   "id": "film-comedy",
+   "name": "Best Motion Picture - Musical or Comedy",
+   "group": "Film",
+   "weight": 3,
+   "nominees": []
+  },
+  {
+   "id": "film-animated",
+   "name": "Best Motion Picture - Animated",
+   "group": "Film",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "film-non-english",
+   "name": "Best Motion Picture - Non-English Language",
+   "group": "Film",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "box-office",
+   "name": "Cinematic and Box Office Achievement",
+   "group": "Film",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "film-director",
+   "name": "Best Director - Motion Picture",
+   "group": "Film",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "film-screenplay",
+   "name": "Best Screenplay - Motion Picture",
+   "group": "Film",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "film-actress-drama",
+   "name": "Best Female Actor - Motion Picture, Drama",
+   "group": "Film acting",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "film-actor-drama",
+   "name": "Best Male Actor - Motion Picture, Drama",
+   "group": "Film acting",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "film-actress-comedy",
+   "name": "Best Female Actor - Motion Picture, Musical or Comedy",
+   "group": "Film acting",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "film-actor-comedy",
+   "name": "Best Male Actor - Motion Picture, Musical or Comedy",
+   "group": "Film acting",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "film-supp-actress",
+   "name": "Best Supporting Female Actor - Motion Picture",
+   "group": "Film acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "film-supp-actor",
+   "name": "Best Supporting Male Actor - Motion Picture",
+   "group": "Film acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "score",
+   "name": "Best Original Score - Motion Picture",
+   "group": "Film",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "song",
+   "name": "Best Original Song - Motion Picture",
+   "group": "Film",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "tv-drama",
+   "name": "Best Television Series - Drama",
+   "group": "TV",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "tv-comedy",
+   "name": "Best Television Series - Musical or Comedy",
+   "group": "TV",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "tv-limited",
+   "name": "Best Limited Series, Anthology Series or TV Movie",
+   "group": "TV",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "tv-actress-drama",
+   "name": "Best Female Actor - TV Series, Drama",
+   "group": "TV acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "tv-actor-drama",
+   "name": "Best Male Actor - TV Series, Drama",
+   "group": "TV acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "tv-actress-comedy",
+   "name": "Best Female Actor - TV Series, Musical or Comedy",
+   "group": "TV acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "tv-actor-comedy",
+   "name": "Best Male Actor - TV Series, Musical or Comedy",
+   "group": "TV acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "tv-actress-limited",
+   "name": "Best Female Actor - Limited Series or TV Movie",
+   "group": "TV acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "tv-actor-limited",
+   "name": "Best Male Actor - Limited Series or TV Movie",
+   "group": "TV acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "tv-supp-actress",
+   "name": "Best Supporting Female Actor - Television",
+   "group": "TV acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "tv-supp-actor",
+   "name": "Best Supporting Male Actor - Television",
+   "group": "TV acting",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "standup",
+   "name": "Best Stand-Up Comedy Performance on Television",
+   "group": "TV",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "podcast",
+   "name": "Best Podcast",
+   "group": "Other",
+   "weight": 1,
+   "nominees": []
+  }
+ ]
+}

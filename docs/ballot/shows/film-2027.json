@@ -1,0 +1,210 @@
+{
+ "id": "film-2027",
+ "rev": 1,
+ "name": "Movie awards night 2027",
+ "short": "Movie awards 2027",
+ "about": "The film academy's 99th awards ceremony, Sunday, March 14, 2027 (live at 7 pm ET / 4 pm PT).",
+ "ceremony": "2027-03-14T19:00:00-04:00",
+ "ceremonyLabel": "Sun, Mar 14, 2027, 7 pm ET",
+ "nominations": "2027-01-21",
+ "nominationsLabel": "Thu, Jan 21, 2027",
+ "resultsUrl": "https://www.oscars.org/",
+ "sources": [
+  {
+   "label": "ABC: show dates for the 99th and 100th ceremonies",
+   "url": "https://abc.com/news/0346fd99-0415-425f-a09e-4bd26cb324d4/category/3590738"
+  },
+  {
+   "label": "TheWrap: academy sets 2027 and 2028 dates",
+   "url": "https://www.thewrap.com/creative-content/movies/academy-sets-2027-and-2028-oscars-dates/"
+  },
+  {
+   "label": "Academy press: rules for the 99th awards",
+   "url": "https://press.oscars.org/news/awards-rules-and-campaign-promotional-regulations-approved-99th-oscarsr"
+  }
+ ],
+ "tiebreakers": [
+  {
+   "id": "runtime",
+   "q": "How many minutes will the broadcast run, from start to sign-off?",
+   "min": 60,
+   "max": 400
+  },
+  {
+   "id": "bp-wins",
+   "q": "How many awards will the Best Picture winner take home in total?",
+   "min": 1,
+   "max": 24
+  }
+ ],
+ "categories": [
+  {
+   "id": "picture",
+   "name": "Best Picture",
+   "group": "Top awards",
+   "weight": 3,
+   "nominees": []
+  },
+  {
+   "id": "director",
+   "name": "Best Director",
+   "group": "Top awards",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "actress",
+   "name": "Best Actress",
+   "group": "Acting",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "actor",
+   "name": "Best Actor",
+   "group": "Acting",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "supp-actress",
+   "name": "Best Supporting Actress",
+   "group": "Acting",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "supp-actor",
+   "name": "Best Supporting Actor",
+   "group": "Acting",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "orig-screenplay",
+   "name": "Best Original Screenplay",
+   "group": "Writing",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "adapt-screenplay",
+   "name": "Best Adapted Screenplay",
+   "group": "Writing",
+   "weight": 2,
+   "nominees": []
+  },
+  {
+   "id": "animated",
+   "name": "Best Animated Feature",
+   "group": "Features",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "international",
+   "name": "Best International Feature",
+   "group": "Features",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "doc-feature",
+   "name": "Best Documentary Feature",
+   "group": "Features",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "cinematography",
+   "name": "Best Cinematography",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "editing",
+   "name": "Best Film Editing",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "production",
+   "name": "Best Production Design",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "costume",
+   "name": "Best Costume Design",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "makeup",
+   "name": "Best Makeup and Hairstyling",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "sound",
+   "name": "Best Sound",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "vfx",
+   "name": "Best Visual Effects",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "casting",
+   "name": "Best Casting",
+   "group": "Craft",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "score",
+   "name": "Best Original Score",
+   "group": "Music",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "song",
+   "name": "Best Original Song",
+   "group": "Music",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "anim-short",
+   "name": "Best Animated Short",
+   "group": "Shorts",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "live-short",
+   "name": "Best Live Action Short",
+   "group": "Shorts",
+   "weight": 1,
+   "nominees": []
+  },
+  {
+   "id": "doc-short",
+   "name": "Best Documentary Short",
+   "group": "Shorts",
+   "weight": 1,
+   "nominees": []
+  }
+ ]
+}

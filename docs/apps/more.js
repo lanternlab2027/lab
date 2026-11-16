@@ -28,6 +28,7 @@
     snow:           ['Snow Day Odds', "Tomorrow's snow-day chance"],
     bracket:        ['76-Team Bracket', 'Printable bracket + no-account pool'],
     etsy:           ['Seller Year in Review', 'Your Etsy shop year + tax summary'],
+    ballot:         ['Awards-Night Ballot Pool', 'Pick winners, live leaderboard'],
     hub:            ['All free apps', 'Wrapped apps, games and tools']
   };
 
@@ -54,8 +55,8 @@
     10: ['santa', 'snow'],             // Nov: Wrapped season starts
     11: ['santa', 'snow'],             // Dec
     0:  ['bingo', 'etsy', 'amazon', 'mileage'],   // Jan
-    1:  ['couples', 'partybingo'],        // Feb
-    2:  ['bracket', 'partybingo']         // Mar
+    1:  ['couples', 'partybingo', 'ballot'],        // Feb
+    2:  ['bracket', 'ballot']         // Mar
   };
   var OFF_SEASON = ['then', 'names'];
   var FILL = ['bingo', 'wrapped', 'then', 'names', 'eats'];

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Printable Awards Ballot 2027 + Free Awards Night Ballot Pool</title>
+<meta name="description" content="Free printable awards ballot for 2027 and an awards night ballot pool with no accounts: everyone picks winners on their phone by link, then the host sees a live leaderboard. For bragging rights.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/ballot/">
+<meta name="theme-color" content="#2a0d16">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Awards-Night Ballot Pool: pick the winners, see the leaderboard">
+<meta property="og:description" content="A free awards night ballot pool by link: no accounts, no app. Everyone picks on their phone, the host gets a live leaderboard, and there's a printable ballot too. For bragging rights.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/ballot/">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/ballot/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="An awards night ballot on a phone next to a pool leaderboard.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Awards-Night Ballot Pool">
+<meta name="twitter:description" content="Pick the winners by link, then see the leaderboard. No accounts. Printable ballot included. For bragging rights.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/ballot/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Awards-Night Ballot Pool",
+ "alternateName": "Printable Awards Ballot 2027",
+ "url": "https://lanternlab2027.github.io/lab/ballot/",
+ "applicationCategory": "EntertainmentApplication",
+ "operatingSystem": "Any (web browser)",
+ "description": "A free printable awards ballot and a no-account awards night ballot pool: players pick winners by link and the host sees a leaderboard. Not affiliated with any awards organization.",
+ "isAccessibleForFree": true,
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+ "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
+}
+</script>
+<style>
+  :root {
+    --bg: #f7f3ea; --sheet: #ffffff; --ink: #19141a; --muted: #5d5560; --line: #e1d8c6;
+    --wine: #2a0d16; --wine2: #13060b; --gold: #9a6b00; --gold-bg: #fbf1d6; --gold-hi: #e9c46a; --ok: #1d7a3a; --bad: #b3261e;
+    --accent: #19141a; --accent-ink: #ffffff; --focus: #2a62c9;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", Times, serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #100c10; --sheet: #1b151b; --ink: #f2ede4; --muted: #b3a9b0; --line: #342a33;
+      --gold: #e9c46a; --gold-bg: #33280f; --ok: #6fd28f; --bad: #ff8c84; --accent: #f2ede4; --accent-ink: #100c10; --focus: #8fb0ff;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #100c10; --sheet: #1b151b; --ink: #f2ede4; --muted: #b3a9b0; --line: #342a33;
+    --gold: #e9c46a; --gold-bg: #33280f; --ok: #6fd28f; --bad: #ff8c84; --accent: #f2ede4; --accent-ink: #100c10; --focus: #8fb0ff;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  .narrow { max-width: 760px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .sr { position: absolute; left: -9999px; }
+
+  header.hero { background: radial-gradient(120% 90% at 50% -10%, #5a1a2c 0%, var(--wine) 45%, var(--wine2) 100%); color: #fff; padding: 22px 0 30px; position: relative; overflow: hidden; }
+  header.hero::before, header.hero::after { content: ""; position: absolute; top: -40px; width: 260px; height: 520px; background: linear-gradient(180deg, rgba(233,196,106,.22), rgba(233,196,106,0)); pointer-events: none; }
+  header.hero::before { left: 8%; transform: rotate(18deg); }
+  header.hero::after { right: 8%; transform: rotate(-18deg); }
+  .brand { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: #e6cfa0; text-decoration: none; position: relative; }
+  h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(34px, 7.4vw, 60px); line-height: 1.02; letter-spacing: -.01em; margin: 12px 0 12px; max-width: 820px; position: relative; }
+  h1 em { font-style: italic; color: var(--gold-hi); }
+  .lede { margin: 0 0 16px; color: #ecdcd6; font-size: 18px; max-width: 680px; position: relative; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; position: relative; }
+  .pills li { background: rgba(255,255,255,.1); border: 1px solid rgba(233,196,106,.35); border-radius: 999px; padding: 5px 12px; font-size: 14px; font-weight: 700; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; position: relative; }
+  .btn { appearance: none; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font: 800 16px var(--font); padding: 11px 16px; min-height: 46px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+  .hero .btn { background: #fff; color: var(--wine); }
+  .btn.gold, .hero .btn.gold { background: var(--gold-hi); color: #241a05; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid currentColor; }
+  .hero .btn.ghost { color: #fff; background: transparent; }
+  .btn.sm { min-height: 40px; padding: 6px 12px; font-size: 14.5px; }
+  .btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+  main { padding-bottom: 10px; }
+  section { margin: 30px 0; }
+  h2 { font-family: var(--serif); font-size: 29px; line-height: 1.15; margin: 0 0 10px; }
+  h3 { font-size: 19px; margin: 18px 0 6px; }
+  .card { background: var(--sheet); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+  .small { font-size: 14.5px; color: var(--muted); }
+  .note { border-left: 4px solid var(--gold); background: var(--gold-bg); padding: 10px 12px; border-radius: 0 10px 10px 0; margin: 12px 0; font-size: 15.5px; }
+  .note.err { border-color: var(--bad); }
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-radius: 6px; padding: 2px 7px; background: var(--gold-bg); color: var(--gold); vertical-align: middle; }
+  .badge.demo { background: #7a1d3a; color: #fff; }
+
+  /* shows */
+  .shows { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .show { display: flex; flex-direction: column; gap: 6px; }
+  .show h3 { margin: 0; font-family: var(--serif); font-size: 22px; }
+  .show .when { font-weight: 800; font-size: 15px; }
+  .show .stat { font-size: 15px; }
+  .show .actions { margin-top: auto; padding-top: 8px; }
+
+  /* fill */
+  .fillbar { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .prog { display: flex; justify-content: space-between; gap: 8px; font-weight: 800; font-size: 15px; flex-wrap: wrap; }
+  .bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 6px; }
+  .bar i { display: block; height: 100%; width: 0; background: var(--gold); }
+  .cats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); align-items: start; margin-top: 14px; }
+  .cat { background: var(--sheet); border: 1px solid var(--line); border-radius: 14px; padding: 12px; margin: 0; min-width: 0; }
+  .cat legend { font-weight: 800; font-size: 16.5px; padding: 0 4px; float: left; width: 100%; margin-bottom: 6px; }
+  .cat legend small { font-weight: 700; color: var(--muted); font-size: 12.5px; margin-left: 6px; }
+  .nom { display: flex; gap: 10px; align-items: flex-start; border: 1px solid var(--line); background: var(--bg); border-radius: 10px; padding: 10px 12px; min-height: 48px; margin-top: 6px; cursor: pointer; clear: both; }
+  .nom input { width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: var(--gold); }
+  .nom span { display: block; font-weight: 700; }
+  .nom small { display: block; color: var(--muted); font-size: 13.5px; font-weight: 500; }
+  .nom.on { border: 2px solid var(--gold); background: var(--gold-bg); padding: 9px 11px; }
+  .cat .empty { color: var(--muted); font-style: italic; clear: both; padding-top: 4px; }
+  .row2 { display: grid; gap: 12px; grid-template-columns: 1fr; margin: 16px 0 0; }
+  @media (min-width: 640px) { .row2 { grid-template-columns: 1fr 1fr; } }
+  label.lab { display: block; font-weight: 800; font-size: 14.5px; margin-bottom: 4px; }
+  input[type=text], input[type=email], input[type=number], input[type=datetime-local], select, textarea {
+    width: 100%; max-width: 100%; font: 600 16px var(--font); padding: 11px 12px; min-height: 46px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+  textarea { min-height: 120px; font: 500 14.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; resize: vertical; }
+  input.url { font: 600 13.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .msg { min-height: 1.4em; font-weight: 700; color: var(--bad); margin: 8px 0 0; }
+  .done { border: 2px solid var(--gold); }
+  .radio { display: grid; gap: 6px; }
+  .radio label { display: flex; gap: 8px; align-items: flex-start; font-weight: 600; }
+  .radio input { margin-top: 5px; width: 18px; height: 18px; flex: 0 0 auto; }
+
+  /* entry */
+  ul.picks { list-style: none; padding: 0; margin: 10px 0; display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  ul.picks li { background: var(--sheet); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+  ul.picks li small { display: block; color: var(--muted); font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; }
+  ul.picks li.ok { border-color: var(--ok); } ul.picks li.ok b::after { content: " \2713"; color: var(--ok); }
+  ul.picks li.bad b { text-decoration: line-through; color: var(--muted); }
+
+  /* standings */
+  table { border-collapse: collapse; width: 100%; font-size: 15.5px; }
+  th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 6px; vertical-align: top; }
+  th.n, td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td .small { font-size: 12.5px; }
+  tr.lead td { font-weight: 800; }
+  .flag { display: inline-block; font-size: 12px; font-weight: 800; background: var(--gold-bg); color: var(--gold); border-radius: 6px; padding: 1px 6px; margin-left: 4px; }
+  .flag.bad { background: var(--bad); color: #fff; }
+  .tablewrap { overflow-x: auto; }
+  .live { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--muted); display: inline-block; }
+  .dot.on { background: #e5484d; box-shadow: 0 0 0 4px rgba(229,72,77,.2); }
+  .awards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .award { margin: 0; }
+  .award canvas, .cardprev canvas { width: 100%; height: auto; aspect-ratio: 4 / 5; display: block; border-radius: 12px; box-shadow: 0 8px 22px rgba(0,0,0,.2); }
+  .award figcaption { font-size: 14.5px; margin-top: 8px; }
+  .cardprev { max-width: 300px; margin-top: 12px; }
+  ol.steps { padding-left: 22px; } ol.steps li { margin: 6px 0; }
+  details { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  summary { font-weight: 800; cursor: pointer; }
+  #remind form { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  #remind input[type=email] { flex: 1 1 220px; width: auto; }
+
+  /* printable ballot: on screen a preview card, in print the only thing on the page */
+  .paper { background: #fff; color: #111; border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 16px; box-shadow: 0 8px 26px rgba(0,0,0,.10); font-family: Arial, Helvetica, sans-serif; }
+  .paper .ph { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; border-bottom: 2px solid #111; padding-bottom: 6px; flex-wrap: wrap; }
+  .paper .ph b { font: 700 24px var(--serif); }
+  .paper .lines { display: flex; gap: 18px; margin: 10px 0 8px; font-size: 13px; flex-wrap: wrap; }
+  .paper .lines span { flex: 1 1 200px; border-bottom: 1px solid #111; padding-bottom: 2px; }
+  .paper .cols { columns: 2 260px; column-gap: 22px; }
+  .paper .pc { break-inside: avoid; margin: 0 0 10px; font-size: 12.5px; }
+  .paper .pc h4 { margin: 0 0 3px; font-size: 13px; text-transform: uppercase; letter-spacing: .03em; border-bottom: 1px solid #999; }
+  .paper .pc h4 small { float: right; font-weight: 400; text-transform: none; }
+  .paper .pn { display: flex; gap: 6px; align-items: flex-start; line-height: 1.25; margin: 2px 0; }
+  .paper .bx { width: 11px; height: 11px; border: 1.5px solid #111; flex: 0 0 auto; margin-top: 2px; }
+  .paper .bx.x { background: #111; }
+  .paper .pn i { font-style: normal; color: #555; }
+  .paper .blank { border-bottom: 1px solid #bbb; height: 17px; }
+  .paper.clip { max-height: 520px; overflow: hidden; position: relative; }
+  .paper.clip::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(rgba(255,255,255,0), #fff); }
+  .paper .pf { border-top: 1px solid #111; margin-top: 8px; padding-top: 6px; font-size: 11px; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 22px 16px 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--ink); font-weight: 700; }
+  .makeyours { font-size: 16px; color: var(--ink); margin-bottom: 10px; }
+  .makeyours code { font: 700 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+  .toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-weight: 700; opacity: 0; pointer-events: none; transition: opacity .2s; max-width: calc(100vw - 32px); z-index: 20; }
+  .toast.on { opacity: 1; }
+
+  @page { size: letter portrait; margin: 0.4in; }
+  @media print {
+    html, body { background: #fff !important; color: #111 !important; }
+    body > *:not(main), main > *:not(#print-sec), #print-sec > *:not(#paper), #more-apps, .toast { display: none !important; }
+    main, .wrap { max-width: none; padding: 0; margin: 0; }
+    #print-sec { margin: 0; }
+    .paper, .paper.clip { border: 0; box-shadow: none; border-radius: 0; padding: 0; max-height: none; overflow: visible; }
+    .paper.clip::after { display: none; }
+    .paper .cols { columns: 2; }
+  }
+</style>
+</head>
+<body data-mode="home">
+<header class="hero">
+  <div class="wrap">
+    <a class="brand" href="../">Lantern Lab</a> <a class="brand" id="go-home" href="./" style="margin-left:10px">Ballot Pool</a>
+    <div id="home-intro">
+      <h1>Awards-Night <em>Ballot Pool</em></h1>
+      <p class="lede">Pick the winners on your phone, send your picks link to the host, and watch the leaderboard during the show. No accounts, no app, no sign-up. Printable ballot included. For bragging rights.</p>
+      <ul class="pills" id="pills"></ul>
+      <div class="actions">
+        <a class="btn gold" href="#create">Start a pool</a>
+        <button type="button" class="btn" id="try-demo">Try the demo</button>
+        <a class="btn ghost" href="#print-sec">Printable ballot</a>
+      </div>
+    </div>
+    <div id="poolhead" hidden>
+      <h1 id="ph-name" style="font-size:clamp(30px,6.4vw,50px)">Ballot pool</h1>
+      <p class="lede" id="ph-meta"></p>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="note err" id="linkerr" role="alert" hidden></p>
+  <p class="note" id="ph-warn" role="status" hidden></p>
+
+  <section id="fill" hidden>
+    <h2 id="fill-h">Your ballot</h2>
+    <div id="fill-closed" class="card" hidden>
+      <p id="fill-closed-msg" style="margin-top:0"></p>
+      <p class="small">Keep this link. It will show the ballot as soon as the nominees are posted here.<span id="fill-nudge"> Want a nudge? Use "Tell me when ballots open" below.</span></p>
+    </div>
+    <div id="fill-open">
+      <p class="small" id="fill-sub">Tap who you think wins each category. You can skip any category.</p>
+      <div class="fillbar">
+        <div class="prog"><span id="prog">0 of 0 picked</span><span id="prog-pts" class="small"></span></div>
+        <div class="bar"><i id="progbar"></i></div>
+      </div>
+      <div class="cats" id="cats"></div>
+      <div class="row2">
+        <div><label class="lab" for="pname">Your name (as the pool will see it)</label><input type="text" id="pname" maxlength="30" autocomplete="nickname" placeholder="Sam R."></div>
+        <div id="tb-box"><label class="lab" for="tb" id="tb-lab">Tiebreaker</label><input type="number" id="tb" min="0" max="100000" inputmode="numeric" placeholder="Your guess"></div>
+      </div>
+      <div class="actions"><button type="button" class="btn gold" id="finish">Get my picks link</button> <button type="button" class="btn sm ghost" id="clear">Clear my picks</button></div>
+      <p class="msg" id="finish-msg" role="status"></p>
+      <div class="card done" id="mylink" hidden>
+        <h3 style="margin-top:0">Your picks link</h3>
+        <p id="mylink-what">Send this link to the host. It holds your name and every pick. To change a pick later, edit and get a new link.</p>
+        <p class="note" id="late-msg" hidden>The show has started (this pool's lock time has passed), so the host will see this ballot marked late.</p>
+        <input type="text" class="url" id="mylink-url" readonly aria-label="Your picks link">
+        <div class="actions">
+          <button type="button" class="btn sm" id="mylink-copy">Copy link</button>
+          <button type="button" class="btn sm" id="mylink-share">Share link</button>
+          <button type="button" class="btn sm ghost" id="mylink-img">Save "My ballot" picture</button>
+          <button type="button" class="btn sm ghost" id="mylink-open">Open my ballot page</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="entry" hidden>
+    <h2 id="entry-h">Ballot</h2>
+    <p class="note err" id="entry-bad" hidden>This link was changed after it was made: its checksum doesn't match the picks inside. Standings will flag it as edited.</p>
+    <p id="entry-facts" class="small"></p>
+    <ul class="picks" id="entry-picks"></ul>
+    <input type="text" class="url" id="entry-url" readonly aria-label="This picks link">
+    <div class="actions">
+      <button type="button" class="btn sm" id="entry-copy">Copy this link</button>
+      <button type="button" class="btn sm ghost" id="entry-img">Save "My ballot" picture</button>
+      <button type="button" class="btn sm ghost" id="entry-print">Print this ballot</button>
+      <button type="button" class="btn sm ghost" id="entry-edit">Change these picks</button>
+      <button type="button" class="btn sm ghost" id="entry-join">Make my own picks in this pool</button>
+      <button type="button" class="btn sm ghost" id="entry-add">I'm the host: add to standings</button>
+    </div>
+  </section>
+
+  <section id="standings" hidden>
+    <h2>Leaderboard</h2>
+    <div class="live card">
+      <span class="dot" id="live-dot" aria-hidden="true"></span>
+      <span id="st-status" style="flex:1 1 240px"></span>
+      <button type="button" class="btn sm" id="refresh">Refresh results</button>
+    </div>
+    <div class="tablewrap" id="st-table" style="margin-top:14px"></div>
+    <p class="msg" id="st-flags" style="color:var(--muted);font-weight:600"></p>
+    <div id="host-tb" class="card" hidden style="margin:12px 0">
+      <label class="lab" for="host-tb-in" id="host-tb-lab">Tiebreaker answer</label>
+      <div class="actions" style="margin:0"><input type="number" id="host-tb-in" inputmode="numeric" min="0" style="flex:1 1 140px;width:auto"> <button type="button" class="btn sm" id="host-tb-set">Set answer</button></div>
+      <p class="small">Your own tiebreak question, so you enter the answer. It is saved in the leaderboard link.</p>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <label class="lab" for="paste">Paste picks links (as many as you like, any text: a group chat export works)</label>
+      <textarea id="paste" placeholder="https://lanternlab2027.github.io/lab/ballot/#e=..."></textarea>
+      <div class="actions"><button type="button" class="btn sm gold" id="paste-add">Add to leaderboard</button> <span id="st-count" class="small" style="align-self:center"></span></div>
+      <p class="msg" id="paste-msg" role="status" style="color:var(--ink)"></p>
+    </div>
+    <h3>Leaderboard link</h3>
+    <p class="small">This link holds the pool and every ballot above. Bookmark it, and post it in the group chat so everyone can check the scores during the show. Paste new links any time; the link updates.</p>
+    <input type="text" class="url" id="st-url" readonly aria-label="Leaderboard link">
+    <div class="actions">
+      <button type="button" class="btn sm" id="st-copy">Copy leaderboard link</button>
+      <button type="button" class="btn sm" id="st-share">Share</button>
+      <button type="button" class="btn sm ghost" id="st-pool">Copy the pool link for new players</button>
+    </div>
+    <h3>Awards for the group chat</h3>
+    <p class="small">The Oracle (most right), the Upset Caller (the rarest correct pick) and the Contrarian (least like the rest of the pool). They update as winners are announced.</p>
+    <div class="awards" id="awards"></div>
+  </section>
+
+  <section id="shows-sec">
+    <h2>Pick a show</h2>
+    <p class="small">Real ballots open the day the nominations come out. Until then, the demo show has made-up nominees so you can try the whole thing.</p>
+    <div class="shows" id="shows"></div>
+  </section>
+
+  <section id="create">
+    <div class="narrow">
+      <h2>Start a pool</h2>
+      <p>You get one link for your group chat. Everyone picks from it and sends you back a "my picks" link. You paste those into a leaderboard. No accounts anywhere.</p>
+      <form id="create-form" class="card" novalidate>
+        <label class="lab" for="c-show">Show</label>
+        <select id="c-show"></select>
+        <p class="small" id="c-show-note"></p>
+        <label class="lab" for="pool-name" style="margin-top:12px">Pool name</label>
+        <input type="text" id="pool-name" maxlength="48" placeholder="Smith Family Awards Night">
+        <h3>Scoring</h3>
+        <div class="radio">
+          <label><input type="radio" name="rules" id="r-flat" checked> One point per category</label>
+          <label><input type="radio" name="rules" id="r-weighted"> Weighted: the big awards count more <span class="small" id="weights-note"></span></label>
+        </div>
+        <h3>Tiebreaker</h3>
+        <select id="c-tb" aria-label="Tiebreaker"></select>
+        <div id="c-tbq-box" hidden style="margin-top:8px"><label class="lab" for="c-tbq">Your question (a number answer)</label><input type="text" id="c-tbq" maxlength="120" placeholder="How many speeches will thank a mom?"></div>
+        <h3>Lock time</h3>
+        <label class="lab" for="lock">Ballots made after this are marked late (your time zone)</label>
+        <input type="datetime-local" id="lock">
+        <p class="small" id="lock-note"></p>
+        <div class="actions"><button type="submit" class="btn gold">Create the pool link</button></div>
+        <p class="msg" id="create-msg" role="status"></p>
+      </form>
+      <div class="card done" id="pool-made" hidden style="margin-top:16px">
+        <h3 style="margin-top:0">1. Send this pool link to your players</h3>
+        <input type="text" class="url" id="pool-url" readonly aria-label="Pool link">
+        <div class="actions">
+          <button type="button" class="btn sm" id="pool-copy">Copy pool link</button>
+          <button type="button" class="btn sm" id="pool-share">Share</button>
+          <a class="btn sm ghost" id="pool-play" href="#">Make my own picks</a>
+        </div>
+        <h3>2. Keep your leaderboard link</h3>
+        <p class="small">Open it when picks links come in and paste them there. Bookmark it: we don't store it anywhere.</p>
+        <input type="text" class="url" id="pool-st-url" readonly aria-label="Leaderboard link">
+        <div class="actions">
+          <button type="button" class="btn sm" id="pool-st-copy">Copy leaderboard link</button>
+          <a class="btn sm ghost" id="pool-st" href="#">Open the leaderboard</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="print-sec">
+    <h2>Printable ballot</h2>
+    <p class="small">One sheet per guest, for the coffee table. Prints on Letter or A4 with nothing else on the page.</p>
+    <div class="actions" style="margin-bottom:12px">
+      <label class="sr" for="p-show">Show to print</label>
+      <select id="p-show" style="flex:1 1 240px;width:auto;min-width:0;max-width:100%"></select>
+      <button type="button" class="btn gold" id="print">Print ballot</button>
+    </div>
+    <div class="paper clip" id="paper"></div>
+    <div class="actions"><button type="button" class="btn sm ghost" id="paper-more" aria-controls="paper" aria-expanded="false">Show the whole ballot</button></div>
+  </section>
+
+  <section id="how" class="narrow">
+    <h2>How the no-account pool works</h2>
+    <ol class="steps">
+      <li><b>The host makes a pool link</b>: show, pool name, scoring and an optional tiebreaker. All of it is packed into the link. Post it in the group chat.</li>
+      <li><b>Everyone picks</b> from that link on their phone and taps "Get my picks link". That link holds their name and every pick. They send it back to the host.</li>
+      <li><b>The host pastes the picks links into the leaderboard.</b> During the show we post winners to this site as they are announced; refresh to see the standings move. At the end, share the award pictures.</li>
+    </ol>
+    <p><b>Nothing is stored on a server.</b> No accounts, no sign-ups, and we never see your pool or anyone's picks. Everything lives in the links, in the part after the <code>#</code>, which browsers don't send to any website. The page only downloads the show and results files from this site.</p>
+    <p><b>Honest-play checks.</b> Each picks link carries a checksum, so a hand-edited link shows up as "edited link". Each link also records when it was made, and a ballot made after the lock time shows as "late". They are honest-play checks, not security.</p>
+    <p class="small">No money, no entry fees, no prizes: this is a free pool for bragging rights.</p>
+  </section>
+
+  <section id="remind" class="narrow" hidden>
+    <div class="card">
+      <h2>Tell me when ballots open</h2>
+      <p>One email when the nominees are posted here and real ballots open. Nothing else.</p>
+      <form id="remind-form" novalidate>
+        <label class="sr" for="remind-email">Email</label>
+        <input type="email" id="remind-email" autocomplete="email" placeholder="you@example.com" required>
+        <button type="submit" class="btn gold">Tell me</button>
+      </form>
+      <p class="small" id="remind-msg" role="status"></p>
+    </div>
+  </section>
+
+  <section id="faq" class="narrow">
+    <h2>Questions</h2>
+    <details><summary>Which shows can I run a pool for?</summary><p id="faq-shows">The 2027 film and TV awards on Jan 10, the recording academy's music awards on Feb 7, and the film academy awards on Mar 14, plus a demo show to try it out.</p></details>
+    <details><summary>When can people fill in their ballots?</summary><p>As soon as the nominations are announced and we add the nominees here, usually the same day. You can make the pool link before that; it shows the ballot as soon as the nominees are in.</p></details>
+    <details><summary>How do I print an awards ballot?</summary><p>Pick the show under "Printable ballot" and tap "Print ballot". Only the ballot prints. Choose "Save as PDF" in the print dialog for a PDF. Before nominations it prints with blank lines to write the nominees in.</p></details>
+    <details><summary>How does the weighted scoring work?</summary><p>Each category has a weight from 1 to 3 in our show file: the top awards count 3, acting and other headline awards 2, everything else 1. The ballot shows each category's points when the pool uses weighted scoring.</p></details>
+    <details><summary>Where do the winners come from?</summary><p>We post winners to a results file on this site during the ceremony, as each award is announced, and check them against the official results. Your browser downloads that file and scores every ballot on your own device. Hit "Refresh results" to update.</p></details>
+    <details><summary>What if someone changes their picks after the show starts?</summary><p>A new picks link records when it was made, so the leaderboard marks it late. If someone edits a link by hand, the checksum no longer matches and it is marked "edited link". The host decides what to do about either.</p></details>
+    <details><summary>Is this official?</summary><p>No. It is an independent, free fan tool, not affiliated with, endorsed by or connected to any awards organization. Show, film, artist and program names are used only to identify the nominees.</p></details>
+  </section>
+</main>
+<link rel="stylesheet" href="../apps/more.css">
+<div id="more-apps" class="wrap" data-from="ballot"></div>
+<script src="../apps/more.js" defer></script>
+<footer class="wrap">
+  <div class="makeyours"><b>Make yours:</b> <code>lanternlab2027.github.io/lab/ballot</code> <button type="button" class="btn ghost sm" id="share-tool">Share this tool</button></div>
+  <p><b>Not affiliated with any awards organization.</b> An independent fan tool. Free and for bragging rights only: no money, no entry fees, no prizes.</p>
+  <p>No tracking, no ads, no login. Pools and picks live only in the links you share.</p>
+  <p><a href="../">A Lantern Lab project</a> &middot; <a href="../apps/">More free apps &rarr;</a></p>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="ballot.js"></script>
+<script src="codec.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+<script src="kit.js"></script>
+</body>
+</html>

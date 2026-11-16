@@ -1,0 +1,18 @@
+{
+ "show": "demo",
+ "updated": "Demo results (made up)",
+ "final": true,
+ "winners": {
+  "picture": "Moonlight Laundromat",
+  "director": "Pat Placeholder",
+  "actress": "Ima Pretend",
+  "actor": "Rex Testcase",
+  "supporting": "A Very Good Dog",
+  "song": "Beep Boop Forever",
+  "effects": "Seven Robots for Seven Brides",
+  "short": "The Stapler"
+ },
+ "tiebreak": {
+  "runtime": 214
+ }
+}
