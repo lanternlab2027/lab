@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.weather.gov https://geocoding-api.open-meteo.com https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Snow Day Calculator for Sandy, UT: Will School Be Canceled Tomorrow?</title>
+<meta name="description" content="Free snow day calculator for Sandy, Utah: tomorrow's snow-day chance from the National Weather Service forecast for ZIP 84094 (snow, ice, timing, cold and winter alerts). Just for fun.">
+<link rel="canonical" href="https://lanternlab2027.github.io/lab/snow/t/ut/sandy.html">
+<meta name="theme-color" content="#0b1a33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lantern Lab">
+<meta property="og:title" content="Snow day odds for Sandy, UT">
+<meta property="og:description" content="Free snow day calculator for Sandy, Utah: tomorrow's snow-day chance from the National Weather Service forecast for ZIP 84094 (snow, ice, timing, cold and winter alerts). Just for fun.">
+<meta property="og:url" content="https://lanternlab2027.github.io/lab/snow/t/ut/sandy.html">
+<meta property="og:image" content="https://lanternlab2027.github.io/lab/snow/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Snow Day Odds: will school be canceled tomorrow? A snow-day chance meter.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Snow day odds for Sandy, UT">
+<meta name="twitter:description" content="Free snow day calculator for Sandy, Utah: tomorrow's snow-day chance from the National Weather Service forecast for ZIP 84094 (snow, ice, timing, cold and winter alerts). Just for fun.">
+<meta name="twitter:image" content="https://lanternlab2027.github.io/lab/snow/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://lanternlab2027.github.io/lab/snow/t/ut/sandy.html",
+   "url": "https://lanternlab2027.github.io/lab/snow/t/ut/sandy.html",
+   "name": "Snow Day Calculator for Sandy, UT: Will School Be Canceled Tomorrow?",
+   "description": "Free snow day calculator for Sandy, Utah: tomorrow's snow-day chance from the National Weather Service forecast for ZIP 84094 (snow, ice, timing, cold and winter alerts). Just for fun.",
+   "inLanguage": "en-US",
+   "isPartOf": {
+    "@type": "WebSite",
+    "name": "Lantern Lab",
+    "url": "https://lanternlab2027.github.io/lab/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Lantern Lab",
+    "url": "https://lanternlab2027.github.io/lab/"
+   },
+   "about": {
+    "@type": "City",
+    "name": "Sandy, UT",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 40.571714,
+     "longitude": -111.84987
+    }
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Lantern Lab",
+     "item": "https://lanternlab2027.github.io/lab/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Snow Day Odds",
+     "item": "https://lanternlab2027.github.io/lab/snow/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Towns",
+     "item": "https://lanternlab2027.github.io/lab/snow/t/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Utah",
+     "item": "https://lanternlab2027.github.io/lab/snow/t/ut/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "name": "Sandy",
+     "item": "https://lanternlab2027.github.io/lab/snow/t/ut/sandy.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="../town.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <a class="brand" href="../../../">Lantern Lab</a>
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Snow Day Odds</a></li><li><a href="../">Towns</a></li><li><a href="./">Utah</a></li><li><span aria-current="page">Sandy</span></li></ol></nav>
+    <h1 class="town">Snow Day Calculator for Sandy, UT</h1>
+    <p class="lede">Will school be canceled tomorrow in Sandy? This page checks the National Weather Service forecast for Sandy and turns tonight's snow, ice, timing, cold and winter alerts into a snow-day chance, with the same points table as our main calculator.</p>
+    <form class="find" id="find" novalidate data-town-zip="84094" data-town-region="used" data-town-name="Sandy, UT">
+      <div>
+        <label class="lab" for="q">ZIP code or town</label>
+        <div class="row">
+          <input id="q" name="q" type="text" autocomplete="postal-code" autocapitalize="words" enterkeyhint="go" placeholder="84094 or Sandy, UT" value="84094" required>
+          <button class="btn" id="go" type="submit">Check</button>
+        </div>
+        <button class="linkbtn" id="geo" type="button">Use my location</button>
+      </div>
+      <fieldset class="region">
+        <legend>Where you live</legend>
+        <div class="seg">
+          <label><input type="radio" name="region" value="used" checked><span>Snow-used<small>Plows ready, e.g. Buffalo</small></span></label>
+          <label><input type="radio" name="region" value="rare"><span>Rarely sees snow<small>An inch is news, e.g. Atlanta</small></span></label>
+        </div>
+      </fieldset>
+    </form>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="result" hidden aria-labelledby="place">
+    <article class="sheet">
+      <div class="result-head">
+        <div class="gauge" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="84" fill="none" stroke="var(--line)" stroke-width="16" stroke-dasharray="395.8 527.8" stroke-linecap="round" transform="rotate(135 100 100)"/><circle id="arc" cx="100" cy="100" r="84" fill="none" stroke="var(--ice)" stroke-width="16" stroke-dasharray="0 527.8" stroke-linecap="round" transform="rotate(135 100 100)"/></svg>
+          <div class="num"><div><b id="pct">0<small>%</small></b><i>snow-day chance</i></div></div>
+        </div>
+        <div>
+          <h2 class="place" id="place"></h2>
+          <p class="when" id="when"></p>
+          <p class="verdict" id="verdict"></p>
+          <p class="sr" id="sr-chance"></p>
+        </div>
+      </div>
+      <ul class="reasons" id="reasons"></ul>
+      <div id="notes"></div>
+      <dl class="facts" id="facts"></dl>
+      <p class="disclaimer">Just for fun. Only your school district decides; check their official announcements.</p>
+      <div class="actions">
+        <button class="btn" id="share" type="button">Make a share card</button>
+        <button class="btn ghost" id="copy" type="button">Copy link</button>
+      </div>
+      <div class="cardwrap" id="cardwrap" hidden>
+        <canvas id="card" width="1080" height="1350" role="img" aria-label="Shareable snow-day odds card"></canvas>
+        <div class="actions">
+          <button class="btn" id="card-share" type="button">Share image</button>
+          <button class="btn ghost" id="card-save" type="button">Save image</button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="sheet signup" id="alert" aria-labelledby="alert-h" hidden>
+    <h2 id="alert-h" style="font-size:22px">Get a free email when odds look high</h2>
+    <p class="small" style="margin:0">Optional. Just your email and ZIP; no texts, no name. If you're under 13, ask a parent or guardian to sign up instead. Unsubscribe anytime.</p>
+    <form id="signup-form" novalidate>
+      <label class="sr" for="signup-email">Email</label>
+      <input id="signup-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      <label class="sr" for="signup-zip">ZIP code</label>
+      <input id="signup-zip" class="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" placeholder="ZIP" required>
+      <button class="btn" type="submit">Email me</button>
+    </form>
+    <p class="small" id="signup-msg" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="sheet facts-local" aria-labelledby="about-h">
+    <h2 id="about-h">About Sandy, UT</h2>
+      <p>Sandy is a city in Salt Lake County, Utah. The U.S. Census Bureau estimates its population at 92,840 (July 1, 2024) and its land area at 24.3 square miles.</p>
+      <p>Forecast point: the center of ZIP code area 84094, the ZIP area whose center is nearest Sandy's Census center point. Weather can differ across town, so type your own ZIP above for your exact spot.</p>
+      <p>This page starts with &ldquo;Snow-used&rdquo; because Sandy is north of 36.5&deg; N, where schools usually expect to plow and keep going. That is the same rule the main calculator uses for its first guess; switch it above if it doesn't fit your schools.</p>
+    <p class="small">Population and land area: U.S. Census Bureau, Vintage 2024 population estimates and 2025 Gazetteer Files. Forecast and alerts: National Weather Service API. <a href="../../#how">How we estimate</a>.</p>
+    <p class="disclaimer">Just for fun. Only your school district decides; check their official announcements.</p>
+  </section>
+
+  <section aria-labelledby="near-h">
+    <h2 id="near-h">Snow day odds near Sandy</h2>
+    <ul class="towns"><li><a href="south-jordan.html">South Jordan<small>8 mi away</small></a></li><li><a href="millcreek.html">Millcreek<small>8 mi away</small></a></li><li><a href="west-jordan.html">West Jordan<small>8 mi away</small></a></li><li><a href="lehi.html">Lehi<small>11 mi away</small></a></li><li><a href="west-valley-city.html">West Valley City<small>12 mi away</small></a></li><li><a href="salt-lake-city.html">Salt Lake City<small>15 mi away</small></a></li></ul>
+    <p class="morelinks"><a href="./">All Utah towns</a> <a href="../">All states</a> <a href="../../">Snow day calculator (any ZIP)</a></p>
+  </section>
+</main>
+
+<link rel="stylesheet" href="../../../apps/more.css">
+<div id="more-apps" class="wrap" data-from="snow"></div>
+<script src="../../../apps/more.js" defer></script>
+<script src="../more-fix.js" defer></script>
+<footer class="wrap">
+  <div class="makeyours"><b>Make yours:</b> <code>lanternlab2027.github.io/lab/snow</code> <button type="button" class="btn ghost" id="share-tool" style="min-height:44px;padding:6px 12px;font-size:15px">Share this tool</button></div>
+  <p><b>Not affiliated with the National Weather Service</b> or NOAA. Forecast and alert data come from the NWS API, used as published; we turn it into a for-fun estimate. For official forecasts, visit <a href="https://www.weather.gov/" rel="noopener">weather.gov</a>.</p>
+  <p>No tracking, no ads, no login. Your location goes straight from your browser to the National Weather Service (and to Open-Meteo only if you type a town name). &ldquo;Use my location&rdquo; asks first and isn't saved or shared.</p>
+  <p><a href="../../../">A Lantern Lab project</a> &middot; <a href="../../../apps/">More free apps &rarr;</a></p>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../../model.js"></script>
+<script src="../../nws.js"></script>
+<script src="../../card.js"></script>
+<script src="../../app.js"></script>
+<script src="../../kit.js"></script>
+</body>
+</html>

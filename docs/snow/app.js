@@ -5,6 +5,11 @@
   var $ = function (s) { return document.querySelector(s); };
   var APP_URL = 'https://lanternlab2027.github.io/lab/snow/';
   var state = { loc: null, data: null, win: null, inp: null, res: null, regionChosen: false, busy: false };
+  // Town landing pages (docs/snow/t/) set data-town-zip / -region / -name on the form; the page loads that ZIP on open.
+  var TOWN = (function () {
+    var f = document.getElementById('find'), d = f && f.dataset;
+    return d && /^\d{5}$/.test(d.townZip || '') ? { zip: d.townZip, region: d.townRegion === 'rare' ? 'rare' : 'used', name: d.townName || '' } : null;
+  })();
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function say(msg, isErr) { var s = $('#status'); s.textContent = msg || ''; s.className = 'status' + (isErr ? ' err' : ''); }
@@ -81,7 +86,7 @@
 
   // ---------- flow ----------
   function setBusy(b) { state.busy = b; $('#go').disabled = b; $('#geo').disabled = b; }
-  function run(locPromise, label) {
+  function run(locPromise, label, auto) {
     if (state.busy) return;
     setBusy(true); say(label || 'Checking the forecast\u2026');
     locPromise.then(function (loc) {
@@ -89,15 +94,17 @@
       return N.forecast(loc.lat, loc.lon).then(function (data) {
         state.data = data;
         if (!loc.name && !loc.zip) loc.name = data.place; // geolocation: show nearest town, never coordinates
-        if (loc.zip && data.place) loc.name = data.place + ' ' + loc.zip;
+        if (loc.zip && TOWN && TOWN.name && loc.zip === TOWN.zip) loc.name = TOWN.name + ' ' + loc.zip;
+        else if (loc.zip && data.place) loc.name = data.place + ' ' + loc.zip;
         state.guessedRegion = false;
         if (!state.regionChosen) { setRegion(loc.lat < 36.5 ? 'rare' : 'used'); state.guessedRegion = true; }
         state.win = M.targetWindow(Date.now(), data.timeZone);
         state.inp = M.extract(data.grid, data.alerts, state.win);
         render();
         say('');
+        if (auto) return; // town page opened: don't remember the ZIP, rewrite the URL or scroll
         if (loc.zip) store('q', loc.zip); else if (loc.typed) store('q', loc.typed);
-        try {
+        if (!TOWN) try {
           var u = new URL(location.href); u.search = '';
           if (loc.zip) u.searchParams.set('zip', loc.zip); else if (loc.typed) u.searchParams.set('q', loc.typed);
           var ref = new URLSearchParams(location.search).get('ref'); if (ref) u.searchParams.set('ref', ref);
@@ -167,9 +174,10 @@
 
   // ---------- start ----------
   var params = new URLSearchParams(location.search);
-  var r0 = params.get('r') || load('region');
+  var r0 = params.get('r') || (TOWN ? TOWN.region : load('region'));
   if (r0 === 'used' || r0 === 'rare') { setRegion(r0); state.regionChosen = true; }
   var q0 = (params.get('zip') || params.get('q') || '').slice(0, 80);
   if (q0) { $('#q').value = q0; run(lookup(q0)); }
+  else if (TOWN) { $('#q').value = TOWN.zip; run(lookup(TOWN.zip), 'Loading today\u2019s odds for ' + (TOWN.name || TOWN.zip) + '\u2026', true); }
   else { var last = load('q'); if (last) $('#q').value = last; }
 })();

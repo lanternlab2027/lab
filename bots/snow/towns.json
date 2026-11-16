@@ -1,0 +1,7976 @@
+{
+ "generated": "node bots/snow/select_towns.js (see header for method)",
+ "sources": [
+  "U.S. Census Bureau, 2025 Gazetteer Files, Places (per-state files): names, internal points, land area",
+  "U.S. Census Bureau, Vintage 2024 Population Estimates, sub-county (sub-est2024): POPESTIMATE2024, county parts",
+  "U.S. Census Bureau, 2026 Gazetteer Files, ZCTAs (docs/snow/z/): representative ZIP"
+ ],
+ "count": 414,
+ "towns": [
+  {
+   "st": "AL",
+   "state": "Alabama",
+   "name": "Huntsville",
+   "slug": "huntsville",
+   "censusName": "Huntsville city",
+   "geoid": "0137000",
+   "lat": 34.69772,
+   "lon": -86.67667,
+   "pop2024": 230402,
+   "landSqMi": 225.326,
+   "counties": [
+    "Madison County",
+    "Limestone County",
+    "Morgan County"
+   ],
+   "mainCounty": "Madison County",
+   "zip": "35805",
+   "zipKm": 5.1,
+   "region": "rare"
+  },
+  {
+   "st": "AL",
+   "state": "Alabama",
+   "name": "Mobile",
+   "slug": "mobile",
+   "censusName": "Mobile city",
+   "geoid": "0150000",
+   "lat": 30.668246,
+   "lon": -88.107853,
+   "pop2024": 201367,
+   "landSqMi": 150.838,
+   "counties": [
+    "Mobile County"
+   ],
+   "mainCounty": "Mobile County",
+   "zip": "36606",
+   "zipKm": 0.2,
+   "region": "rare"
+  },
+  {
+   "st": "AL",
+   "state": "Alabama",
+   "name": "Birmingham",
+   "slug": "birmingham",
+   "censusName": "Birmingham city",
+   "geoid": "0107000",
+   "lat": 33.527174,
+   "lon": -86.797036,
+   "pop2024": 196357,
+   "landSqMi": 146.95,
+   "counties": [
+    "Jefferson County",
+    "Shelby County"
+   ],
+   "mainCounty": "Jefferson County",
+   "zip": "35234",
+   "zipKm": 1.6,
+   "region": "rare"
+  },
+  {
+   "st": "AL",
+   "state": "Alabama",
+   "name": "Montgomery",
+   "slug": "montgomery",
+   "censusName": "Montgomery city",
+   "geoid": "0151000",
+   "lat": 32.348503,
+   "lon": -86.267307,
+   "pop2024": 195818,
+   "landSqMi": 159.854,
+   "counties": [
+    "Montgomery County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "36106",
+   "zipKm": 1.1,
+   "region": "rare"
+  },
+  {
+   "st": "AR",
+   "state": "Arkansas",
+   "name": "Little Rock",
+   "slug": "little-rock",
+   "censusName": "Little Rock city",
+   "geoid": "0541000",
+   "lat": 34.725393,
+   "lon": -92.358556,
+   "pop2024": 204774,
+   "landSqMi": 121.243,
+   "counties": [
+    "Pulaski County"
+   ],
+   "mainCounty": "Pulaski County",
+   "zip": "72204",
+   "zipKm": 0.8,
+   "region": "rare"
+  },
+  {
+   "st": "AR",
+   "state": "Arkansas",
+   "name": "Fayetteville",
+   "slug": "fayetteville",
+   "censusName": "Fayetteville city",
+   "geoid": "0523290",
+   "lat": 36.071455,
+   "lon": -94.166564,
+   "pop2024": 103134,
+   "landSqMi": 54.759,
+   "counties": [
+    "Washington County"
+   ],
+   "mainCounty": "Washington County",
+   "zip": "72730",
+   "zipKm": 10.3,
+   "region": "rare"
+  },
+  {
+   "st": "AR",
+   "state": "Arkansas",
+   "name": "Fort Smith",
+   "slug": "fort-smith",
+   "censusName": "Fort Smith city",
+   "geoid": "0524550",
+   "lat": 35.349276,
+   "lon": -94.370883,
+   "pop2024": 90507,
+   "landSqMi": 64.227,
+   "counties": [
+    "Sebastian County"
+   ],
+   "mainCounty": "Sebastian County",
+   "zip": "72903",
+   "zipKm": 1.1,
+   "region": "rare"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Denver",
+   "slug": "denver",
+   "censusName": "Denver city",
+   "geoid": "0820000",
+   "lat": 39.76185,
+   "lon": -104.881105,
+   "pop2024": 729019,
+   "landSqMi": 153.074,
+   "counties": [
+    "Denver County"
+   ],
+   "mainCounty": "Denver County",
+   "zip": "80238",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Colorado Springs",
+   "slug": "colorado-springs",
+   "censusName": "Colorado Springs city",
+   "geoid": "0816000",
+   "lat": 38.867255,
+   "lon": -104.760749,
+   "pop2024": 493554,
+   "landSqMi": 202.23,
+   "counties": [
+    "El Paso County"
+   ],
+   "mainCounty": "El Paso County",
+   "zip": "80909",
+   "zipKm": 2,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Aurora",
+   "slug": "aurora",
+   "censusName": "Aurora city",
+   "geoid": "0804000",
+   "lat": 39.709537,
+   "lon": -104.720509,
+   "pop2024": 403130,
+   "landSqMi": 164.122,
+   "counties": [
+    "Arapahoe County",
+    "Adams County",
+    "Douglas County"
+   ],
+   "mainCounty": "Arapahoe County",
+   "zip": "80018",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Fort Collins",
+   "slug": "fort-collins",
+   "censusName": "Fort Collins city",
+   "geoid": "0827425",
+   "lat": 40.548216,
+   "lon": -105.064833,
+   "pop2024": 170924,
+   "landSqMi": 57.24,
+   "counties": [
+    "Larimer County"
+   ],
+   "mainCounty": "Larimer County",
+   "zip": "80525",
+   "zipKm": 3.1,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Lakewood",
+   "slug": "lakewood",
+   "censusName": "Lakewood city",
+   "geoid": "0843000",
+   "lat": 39.698939,
+   "lon": -105.117573,
+   "pop2024": 156868,
+   "landSqMi": 43.49,
+   "counties": [
+    "Jefferson County"
+   ],
+   "mainCounty": "Jefferson County",
+   "zip": "80226",
+   "zipKm": 2.5,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Thornton",
+   "slug": "thornton",
+   "censusName": "Thornton city",
+   "geoid": "0877290",
+   "lat": 39.920433,
+   "lon": -104.941413,
+   "pop2024": 146689,
+   "landSqMi": 36.651,
+   "counties": [
+    "Adams County",
+    "Weld County"
+   ],
+   "mainCounty": "Adams County",
+   "zip": "80241",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Arvada",
+   "slug": "arvada",
+   "censusName": "Arvada city",
+   "geoid": "0803455",
+   "lat": 39.833728,
+   "lon": -105.150306,
+   "pop2024": 121873,
+   "landSqMi": 38.998,
+   "counties": [
+    "Jefferson County",
+    "Adams County"
+   ],
+   "mainCounty": "Jefferson County",
+   "zip": "80005",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Westminster",
+   "slug": "westminster",
+   "censusName": "Westminster city",
+   "geoid": "0883835",
+   "lat": 39.880122,
+   "lon": -105.061513,
+   "pop2024": 115302,
+   "landSqMi": 31.635,
+   "counties": [
+    "Adams County",
+    "Jefferson County"
+   ],
+   "mainCounty": "Adams County",
+   "zip": "80031",
+   "zipKm": 2,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Greeley",
+   "slug": "greeley",
+   "censusName": "Greeley city",
+   "geoid": "0832155",
+   "lat": 40.414034,
+   "lon": -104.771043,
+   "pop2024": 114363,
+   "landSqMi": 50.611,
+   "counties": [
+    "Weld County"
+   ],
+   "mainCounty": "Weld County",
+   "zip": "80634",
+   "zipKm": 2.3,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Pueblo",
+   "slug": "pueblo",
+   "censusName": "Pueblo city",
+   "geoid": "0862000",
+   "lat": 38.269228,
+   "lon": -104.610816,
+   "pop2024": 111166,
+   "landSqMi": 56.616,
+   "counties": [
+    "Pueblo County"
+   ],
+   "mainCounty": "Pueblo County",
+   "zip": "81003",
+   "zipKm": 4.1,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Centennial",
+   "slug": "centennial",
+   "censusName": "Centennial city",
+   "geoid": "0812815",
+   "lat": 39.590856,
+   "lon": -104.863754,
+   "pop2024": 108853,
+   "landSqMi": 30.156,
+   "counties": [
+    "Arapahoe County"
+   ],
+   "mainCounty": "Arapahoe County",
+   "zip": "80112",
+   "zipKm": 2,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Boulder",
+   "slug": "boulder",
+   "censusName": "Boulder city",
+   "geoid": "0807850",
+   "lat": 40.024431,
+   "lon": -105.251251,
+   "pop2024": 106803,
+   "landSqMi": 26.926,
+   "counties": [
+    "Boulder County"
+   ],
+   "mainCounty": "Boulder County",
+   "zip": "80310",
+   "zipKm": 2.4,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Longmont",
+   "slug": "longmont",
+   "censusName": "Longmont city",
+   "geoid": "0845970",
+   "lat": 40.168199,
+   "lon": -105.100522,
+   "pop2024": 99818,
+   "landSqMi": 29.28,
+   "counties": [
+    "Boulder County",
+    "Weld County"
+   ],
+   "mainCounty": "Boulder County",
+   "zip": "80501",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Castle Rock",
+   "slug": "castle-rock",
+   "censusName": "Castle Rock town",
+   "geoid": "0812415",
+   "lat": 39.376194,
+   "lon": -104.852922,
+   "pop2024": 83213,
+   "landSqMi": 34.742,
+   "counties": [
+    "Douglas County"
+   ],
+   "mainCounty": "Douglas County",
+   "zip": "80109",
+   "zipKm": 5.4,
+   "region": "used"
+  },
+  {
+   "st": "CO",
+   "state": "Colorado",
+   "name": "Loveland",
+   "slug": "loveland",
+   "censusName": "Loveland city",
+   "geoid": "0846465",
+   "lat": 40.416905,
+   "lon": -105.063111,
+   "pop2024": 81102,
+   "landSqMi": 36.154,
+   "counties": [
+    "Larimer County"
+   ],
+   "mainCounty": "Larimer County",
+   "zip": "80528",
+   "zipKm": 10.4,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Bridgeport",
+   "slug": "bridgeport",
+   "censusName": "Bridgeport city",
+   "geoid": "0908000",
+   "lat": 41.187393,
+   "lon": -73.195757,
+   "pop2024": 151599,
+   "landSqMi": 16.064,
+   "counties": [
+    "Greater Bridgeport Planning Region"
+   ],
+   "mainCounty": "Greater Bridgeport Planning Region",
+   "zip": "06608",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Stamford",
+   "slug": "stamford",
+   "censusName": "Stamford city",
+   "geoid": "0973000",
+   "lat": 41.079611,
+   "lon": -73.54608,
+   "pop2024": 139134,
+   "landSqMi": 37.629,
+   "counties": [
+    "Western Connecticut Planning Region"
+   ],
+   "mainCounty": "Western Connecticut Planning Region",
+   "zip": "06905",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "New Haven",
+   "slug": "new-haven",
+   "censusName": "New Haven city",
+   "geoid": "0952000",
+   "lat": 41.310809,
+   "lon": -72.924953,
+   "pop2024": 137562,
+   "landSqMi": 18.69,
+   "counties": [
+    "South Central Connecticut Planning Region"
+   ],
+   "mainCounty": "South Central Connecticut Planning Region",
+   "zip": "06510",
+   "zipKm": 0.6,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Hartford",
+   "slug": "hartford",
+   "censusName": "Hartford city",
+   "geoid": "0937000",
+   "lat": 41.765933,
+   "lon": -72.681579,
+   "pop2024": 122129,
+   "landSqMi": 17.411,
+   "counties": [
+    "Capitol Planning Region"
+   ],
+   "mainCounty": "Capitol Planning Region",
+   "zip": "06103",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Waterbury",
+   "slug": "waterbury",
+   "censusName": "Waterbury city",
+   "geoid": "0980000",
+   "lat": 41.5585,
+   "lon": -73.036685,
+   "pop2024": 115908,
+   "landSqMi": 28.557,
+   "counties": [
+    "Naugatuck Valley Planning Region"
+   ],
+   "mainCounty": "Naugatuck Valley Planning Region",
+   "zip": "06702",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Norwalk",
+   "slug": "norwalk",
+   "censusName": "Norwalk city",
+   "geoid": "0955990",
+   "lat": 41.092739,
+   "lon": -73.419796,
+   "pop2024": 93661,
+   "landSqMi": 22.891,
+   "counties": [
+    "Western Connecticut Planning Region"
+   ],
+   "mainCounty": "Western Connecticut Planning Region",
+   "zip": "06854",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Danbury",
+   "slug": "danbury",
+   "censusName": "Danbury city",
+   "geoid": "0918430",
+   "lat": 41.398741,
+   "lon": -73.478103,
+   "pop2024": 88692,
+   "landSqMi": 42.044,
+   "counties": [
+    "Western Connecticut Planning Region"
+   ],
+   "mainCounty": "Western Connecticut Planning Region",
+   "zip": "06811",
+   "zipKm": 2.7,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "New Britain",
+   "slug": "new-britain",
+   "censusName": "New Britain city",
+   "geoid": "0950370",
+   "lat": 41.676555,
+   "lon": -72.786161,
+   "pop2024": 75871,
+   "landSqMi": 13.396,
+   "counties": [
+    "Capitol Planning Region"
+   ],
+   "mainCounty": "Capitol Planning Region",
+   "zip": "06053",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Bristol",
+   "slug": "bristol",
+   "censusName": "Bristol city",
+   "geoid": "0908420",
+   "lat": 41.681578,
+   "lon": -72.940749,
+   "pop2024": 62195,
+   "landSqMi": 26.399,
+   "counties": [
+    "Naugatuck Valley Planning Region"
+   ],
+   "mainCounty": "Naugatuck Valley Planning Region",
+   "zip": "06010",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Meriden",
+   "slug": "meriden",
+   "censusName": "Meriden city",
+   "geoid": "0946450",
+   "lat": 41.536777,
+   "lon": -72.794543,
+   "pop2024": 60849,
+   "landSqMi": 23.732,
+   "counties": [
+    "South Central Connecticut Planning Region"
+   ],
+   "mainCounty": "South Central Connecticut Planning Region",
+   "zip": "06450",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "West Haven",
+   "slug": "west-haven",
+   "censusName": "West Haven city",
+   "geoid": "0982800",
+   "lat": 41.272121,
+   "lon": -72.967497,
+   "pop2024": 55379,
+   "landSqMi": 10.75,
+   "counties": [
+    "South Central Connecticut Planning Region"
+   ],
+   "mainCounty": "South Central Connecticut Planning Region",
+   "zip": "06516",
+   "zipKm": 0.2,
+   "region": "used"
+  },
+  {
+   "st": "CT",
+   "state": "Connecticut",
+   "name": "Milford",
+   "slug": "milford",
+   "censusName": "Milford city (balance)",
+   "geoid": "0947515",
+   "lat": 41.223644,
+   "lon": -73.064556,
+   "pop2024": 51004,
+   "landSqMi": 21.905,
+   "counties": [
+    "South Central Connecticut Planning Region"
+   ],
+   "mainCounty": "South Central Connecticut Planning Region",
+   "zip": "06460",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "DC",
+   "state": "District of Columbia",
+   "name": "Washington",
+   "slug": "washington",
+   "censusName": "Washington city",
+   "geoid": "1150000",
+   "lat": 38.904243,
+   "lon": -77.016524,
+   "pop2024": 702250,
+   "landSqMi": 61.127,
+   "counties": [
+    "District of Columbia"
+   ],
+   "mainCounty": "District of Columbia",
+   "zip": "20001",
+   "zipKm": 0.7,
+   "region": "used"
+  },
+  {
+   "st": "GA",
+   "state": "Georgia",
+   "name": "Atlanta",
+   "slug": "atlanta",
+   "censusName": "Atlanta city",
+   "geoid": "1304000",
+   "lat": 33.762909,
+   "lon": -84.422675,
+   "pop2024": 520760,
+   "landSqMi": 135.277,
+   "counties": [
+    "Fulton County",
+    "DeKalb County"
+   ],
+   "mainCounty": "Fulton County",
+   "zip": "30314",
+   "zipKm": 1,
+   "region": "rare"
+  },
+  {
+   "st": "GA",
+   "state": "Georgia",
+   "name": "Columbus",
+   "slug": "columbus",
+   "censusName": "Columbus city",
+   "geoid": "1319000",
+   "lat": 32.510191,
+   "lon": -84.874946,
+   "pop2024": 202072,
+   "landSqMi": 216.5,
+   "counties": [
+    "Muscogee County"
+   ],
+   "mainCounty": "Muscogee County",
+   "zip": "31907",
+   "zipKm": 3.7,
+   "region": "rare"
+  },
+  {
+   "st": "GA",
+   "state": "Georgia",
+   "name": "Augusta",
+   "slug": "augusta",
+   "censusName": "Augusta-Richmond County consolidated government (balance)",
+   "geoid": "1304204",
+   "lat": 33.365531,
+   "lon": -82.073422,
+   "pop2024": 201979,
+   "landSqMi": 302.302,
+   "counties": [
+    "Richmond County"
+   ],
+   "mainCounty": "Richmond County",
+   "zip": "30812",
+   "zipKm": 4.1,
+   "region": "rare"
+  },
+  {
+   "st": "GA",
+   "state": "Georgia",
+   "name": "Macon",
+   "slug": "macon",
+   "censusName": "Macon-Bibb County",
+   "geoid": "1349008",
+   "lat": 32.80899,
+   "lon": -83.69406,
+   "pop2024": 157360,
+   "landSqMi": 249.383,
+   "counties": [
+    "Bibb County"
+   ],
+   "mainCounty": "Bibb County",
+   "zip": "31206",
+   "zipKm": 2,
+   "region": "rare"
+  },
+  {
+   "st": "GA",
+   "state": "Georgia",
+   "name": "Savannah",
+   "slug": "savannah",
+   "censusName": "Savannah city",
+   "geoid": "1369000",
+   "lat": 32.012457,
+   "lon": -81.194157,
+   "pop2024": 150080,
+   "landSqMi": 109.494,
+   "counties": [
+    "Chatham County"
+   ],
+   "mainCounty": "Chatham County",
+   "zip": "31405",
+   "zipKm": 3.3,
+   "region": "rare"
+  },
+  {
+   "st": "GA",
+   "state": "Georgia",
+   "name": "Athens",
+   "slug": "athens",
+   "censusName": "Athens-Clarke County unified government (balance)",
+   "geoid": "1303440",
+   "lat": 33.949597,
+   "lon": -83.370088,
+   "pop2024": 129429,
+   "landSqMi": 116.437,
+   "counties": [
+    "Clarke County"
+   ],
+   "mainCounty": "Clarke County",
+   "zip": "30602",
+   "zipKm": 0.7,
+   "region": "rare"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Des Moines",
+   "slug": "des-moines",
+   "censusName": "Des Moines city",
+   "geoid": "1921000",
+   "lat": 41.57259,
+   "lon": -93.610243,
+   "pop2024": 213096,
+   "landSqMi": 88.16,
+   "counties": [
+    "Polk County",
+    "Warren County"
+   ],
+   "mainCounty": "Polk County",
+   "zip": "50309",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Cedar Rapids",
+   "slug": "cedar-rapids",
+   "censusName": "Cedar Rapids city",
+   "geoid": "1912000",
+   "lat": 41.96419,
+   "lon": -91.67917,
+   "pop2024": 137904,
+   "landSqMi": 74.787,
+   "counties": [
+    "Linn County"
+   ],
+   "mainCounty": "Linn County",
+   "zip": "52401",
+   "zipKm": 2.1,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Davenport",
+   "slug": "davenport",
+   "censusName": "Davenport city",
+   "geoid": "1919000",
+   "lat": 41.55682,
+   "lon": -90.603948,
+   "pop2024": 100938,
+   "landSqMi": 64.209,
+   "counties": [
+    "Scott County"
+   ],
+   "mainCounty": "Scott County",
+   "zip": "52806",
+   "zipKm": 4,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Sioux City",
+   "slug": "sioux-city",
+   "censusName": "Sioux City city",
+   "geoid": "1973335",
+   "lat": 42.49538,
+   "lon": -96.389495,
+   "pop2024": 86875,
+   "landSqMi": 59.387,
+   "counties": [
+    "Woodbury County",
+    "Plymouth County"
+   ],
+   "mainCounty": "Woodbury County",
+   "zip": "51101",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Ankeny",
+   "slug": "ankeny",
+   "censusName": "Ankeny city",
+   "geoid": "1902305",
+   "lat": 41.731281,
+   "lon": -93.601074,
+   "pop2024": 76727,
+   "landSqMi": 32.655,
+   "counties": [
+    "Polk County"
+   ],
+   "mainCounty": "Polk County",
+   "zip": "50023",
+   "zipKm": 2.5,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Iowa City",
+   "slug": "iowa-city",
+   "censusName": "Iowa City city",
+   "geoid": "1938595",
+   "lat": 41.655654,
+   "lon": -91.530863,
+   "pop2024": 76710,
+   "landSqMi": 25.764,
+   "counties": [
+    "Johnson County"
+   ],
+   "mainCounty": "Johnson County",
+   "zip": "52242",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "West Des Moines",
+   "slug": "west-des-moines",
+   "censusName": "West Des Moines city",
+   "geoid": "1983910",
+   "lat": 41.549937,
+   "lon": -93.781351,
+   "pop2024": 73664,
+   "landSqMi": 47.505,
+   "counties": [
+    "Polk County",
+    "Dallas County",
+    "Warren County",
+    "Madison County"
+   ],
+   "mainCounty": "Polk County",
+   "zip": "50265",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Ames",
+   "slug": "ames",
+   "censusName": "Ames city",
+   "geoid": "1901855",
+   "lat": 42.026327,
+   "lon": -93.621264,
+   "pop2024": 69026,
+   "landSqMi": 28.204,
+   "counties": [
+    "Story County"
+   ],
+   "mainCounty": "Story County",
+   "zip": "50012",
+   "zipKm": 2.4,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Waterloo",
+   "slug": "waterloo",
+   "censusName": "Waterloo city",
+   "geoid": "1982425",
+   "lat": 42.492327,
+   "lon": -92.351947,
+   "pop2024": 67477,
+   "landSqMi": 61.595,
+   "counties": [
+    "Black Hawk County"
+   ],
+   "mainCounty": "Black Hawk County",
+   "zip": "50702",
+   "zipKm": 4.7,
+   "region": "used"
+  },
+  {
+   "st": "IA",
+   "state": "Iowa",
+   "name": "Council Bluffs",
+   "slug": "council-bluffs",
+   "censusName": "Council Bluffs city",
+   "geoid": "1916860",
+   "lat": 41.236585,
+   "lon": -95.852805,
+   "pop2024": 62665,
+   "landSqMi": 42.973,
+   "counties": [
+    "Pottawattamie County"
+   ],
+   "mainCounty": "Pottawattamie County",
+   "zip": "51501",
+   "zipKm": 3.5,
+   "region": "used"
+  },
+  {
+   "st": "ID",
+   "state": "Idaho",
+   "name": "Boise",
+   "slug": "boise",
+   "censusName": "Boise City city",
+   "geoid": "1608830",
+   "lat": 43.59805,
+   "lon": -116.231596,
+   "pop2024": 237963,
+   "landSqMi": 86.101,
+   "counties": [
+    "Ada County"
+   ],
+   "mainCounty": "Ada County",
+   "zip": "83725",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "ID",
+   "state": "Idaho",
+   "name": "Meridian",
+   "slug": "meridian",
+   "censusName": "Meridian city",
+   "geoid": "1652120",
+   "lat": 43.61149,
+   "lon": -116.400662,
+   "pop2024": 139740,
+   "landSqMi": 37.618,
+   "counties": [
+    "Ada County"
+   ],
+   "mainCounty": "Ada County",
+   "zip": "83642",
+   "zipKm": 4.2,
+   "region": "used"
+  },
+  {
+   "st": "ID",
+   "state": "Idaho",
+   "name": "Nampa",
+   "slug": "nampa",
+   "censusName": "Nampa city",
+   "geoid": "1656260",
+   "lat": 43.586441,
+   "lon": -116.56389,
+   "pop2024": 117350,
+   "landSqMi": 36.068,
+   "counties": [
+    "Canyon County"
+   ],
+   "mainCounty": "Canyon County",
+   "zip": "83687",
+   "zipKm": 3.8,
+   "region": "used"
+  },
+  {
+   "st": "ID",
+   "state": "Idaho",
+   "name": "Caldwell",
+   "slug": "caldwell",
+   "censusName": "Caldwell city",
+   "geoid": "1612250",
+   "lat": 43.64588,
+   "lon": -116.659336,
+   "pop2024": 73088,
+   "landSqMi": 25.396,
+   "counties": [
+    "Canyon County"
+   ],
+   "mainCounty": "Canyon County",
+   "zip": "83605",
+   "zipKm": 2.8,
+   "region": "used"
+  },
+  {
+   "st": "ID",
+   "state": "Idaho",
+   "name": "Idaho Falls",
+   "slug": "idaho-falls",
+   "censusName": "Idaho Falls city",
+   "geoid": "1639700",
+   "lat": 43.489616,
+   "lon": -112.03534,
+   "pop2024": 69523,
+   "landSqMi": 27.157,
+   "counties": [
+    "Bonneville County"
+   ],
+   "mainCounty": "Bonneville County",
+   "zip": "83404",
+   "zipKm": 7.1,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Chicago",
+   "slug": "chicago",
+   "censusName": "Chicago city",
+   "geoid": "1714000",
+   "lat": 41.837045,
+   "lon": -87.684939,
+   "pop2024": 2721308,
+   "landSqMi": 227.748,
+   "counties": [
+    "Cook County",
+    "DuPage County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60608",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Aurora",
+   "slug": "aurora",
+   "censusName": "Aurora city",
+   "geoid": "1703012",
+   "lat": 41.763455,
+   "lon": -88.290099,
+   "pop2024": 180710,
+   "landSqMi": 45.247,
+   "counties": [
+    "Kane County",
+    "DuPage County",
+    "Will County",
+    "Kendall County"
+   ],
+   "mainCounty": "Kane County",
+   "zip": "60505",
+   "zipKm": 0.7,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Naperville",
+   "slug": "naperville",
+   "censusName": "Naperville city",
+   "geoid": "1751622",
+   "lat": 41.749173,
+   "lon": -88.162019,
+   "pop2024": 153124,
+   "landSqMi": 39.368,
+   "counties": [
+    "DuPage County",
+    "Will County"
+   ],
+   "mainCounty": "DuPage County",
+   "zip": "60540",
+   "zipKm": 2.3,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Joliet",
+   "slug": "joliet",
+   "censusName": "Joliet city",
+   "geoid": "1738570",
+   "lat": 41.516866,
+   "lon": -88.147963,
+   "pop2024": 151837,
+   "landSqMi": 66.257,
+   "counties": [
+    "Will County",
+    "Kendall County"
+   ],
+   "mainCounty": "Will County",
+   "zip": "60431",
+   "zipKm": 3.6,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Rockford",
+   "slug": "rockford",
+   "censusName": "Rockford city",
+   "geoid": "1765000",
+   "lat": 42.2593,
+   "lon": -89.063478,
+   "pop2024": 147486,
+   "landSqMi": 65.393,
+   "counties": [
+    "Winnebago County",
+    "Ogle County"
+   ],
+   "mainCounty": "Winnebago County",
+   "zip": "61104",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Elgin",
+   "slug": "elgin",
+   "censusName": "Elgin city",
+   "geoid": "1723074",
+   "lat": 42.038963,
+   "lon": -88.325671,
+   "pop2024": 114701,
+   "landSqMi": 38.254,
+   "counties": [
+    "Kane County",
+    "Cook County"
+   ],
+   "mainCounty": "Kane County",
+   "zip": "60123",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Springfield",
+   "slug": "springfield",
+   "censusName": "Springfield city",
+   "geoid": "1772000",
+   "lat": 39.791063,
+   "lon": -89.644572,
+   "pop2024": 112949,
+   "landSqMi": 61.329,
+   "counties": [
+    "Sangamon County"
+   ],
+   "mainCounty": "Sangamon County",
+   "zip": "62701",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Peoria",
+   "slug": "peoria",
+   "censusName": "Peoria city",
+   "geoid": "1759000",
+   "lat": 40.751641,
+   "lon": -89.617198,
+   "pop2024": 111696,
+   "landSqMi": 48.189,
+   "counties": [
+    "Peoria County"
+   ],
+   "mainCounty": "Peoria County",
+   "zip": "61614",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Champaign",
+   "slug": "champaign",
+   "censusName": "Champaign city",
+   "geoid": "1712385",
+   "lat": 40.114099,
+   "lon": -88.274619,
+   "pop2024": 91961,
+   "landSqMi": 23.026,
+   "counties": [
+    "Champaign County"
+   ],
+   "mainCounty": "Champaign County",
+   "zip": "61821",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Waukegan",
+   "slug": "waukegan",
+   "censusName": "Waukegan city",
+   "geoid": "1779293",
+   "lat": 42.369447,
+   "lon": -87.870898,
+   "pop2024": 88570,
+   "landSqMi": 24.261,
+   "counties": [
+    "Lake County"
+   ],
+   "mainCounty": "Lake County",
+   "zip": "60085",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Cicero",
+   "slug": "cicero",
+   "censusName": "Cicero town",
+   "geoid": "1714351",
+   "lat": 41.844537,
+   "lon": -87.75929,
+   "pop2024": 82090,
+   "landSqMi": 5.865,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60804",
+   "zipKm": 0.5,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Bloomington",
+   "slug": "bloomington",
+   "censusName": "Bloomington city",
+   "geoid": "1706613",
+   "lat": 40.475777,
+   "lon": -88.969912,
+   "pop2024": 79232,
+   "landSqMi": 27.112,
+   "counties": [
+    "McLean County"
+   ],
+   "mainCounty": "McLean County",
+   "zip": "61701",
+   "zipKm": 2,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Schaumburg",
+   "slug": "schaumburg",
+   "censusName": "Schaumburg village",
+   "geoid": "1768003",
+   "lat": 42.0289,
+   "lon": -88.083773,
+   "pop2024": 77099,
+   "landSqMi": 19.386,
+   "counties": [
+    "Cook County",
+    "DuPage County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60193",
+   "zipKm": 2.5,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Evanston",
+   "slug": "evanston",
+   "censusName": "Evanston city",
+   "geoid": "1724582",
+   "lat": 42.046391,
+   "lon": -87.694352,
+   "pop2024": 76006,
+   "landSqMi": 7.779,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60201",
+   "zipKm": 1,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Arlington Heights",
+   "slug": "arlington-heights",
+   "censusName": "Arlington Heights village",
+   "geoid": "1702154",
+   "lat": 42.097362,
+   "lon": -87.981671,
+   "pop2024": 75596,
+   "landSqMi": 16.614,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60004",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Bolingbrook",
+   "slug": "bolingbrook",
+   "censusName": "Bolingbrook village",
+   "geoid": "1707133",
+   "lat": 41.687466,
+   "lon": -88.106215,
+   "pop2024": 74756,
+   "landSqMi": 24.957,
+   "counties": [
+    "Will County",
+    "DuPage County"
+   ],
+   "mainCounty": "Will County",
+   "zip": "60440",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Decatur",
+   "slug": "decatur",
+   "censusName": "Decatur city",
+   "geoid": "1718823",
+   "lat": 39.855983,
+   "lon": -88.933746,
+   "pop2024": 68763,
+   "landSqMi": 44.163,
+   "counties": [
+    "Macon County"
+   ],
+   "mainCounty": "Macon County",
+   "zip": "62523",
+   "zipKm": 2.1,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Palatine",
+   "slug": "palatine",
+   "censusName": "Palatine village",
+   "geoid": "1757225",
+   "lat": 42.116467,
+   "lon": -88.044361,
+   "pop2024": 65951,
+   "landSqMi": 14.101,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60067",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Skokie",
+   "slug": "skokie",
+   "censusName": "Skokie village",
+   "geoid": "1770122",
+   "lat": 42.03597,
+   "lon": -87.739994,
+   "pop2024": 65850,
+   "landSqMi": 10.064,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60076",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Des Plaines",
+   "slug": "des-plaines",
+   "censusName": "Des Plaines city",
+   "geoid": "1719642",
+   "lat": 42.034398,
+   "lon": -87.901136,
+   "pop2024": 58832,
+   "landSqMi": 14.238,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60016",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Orland Park",
+   "slug": "orland-park",
+   "censusName": "Orland Park village",
+   "geoid": "1756640",
+   "lat": 41.608145,
+   "lon": -87.85929,
+   "pop2024": 58020,
+   "landSqMi": 22.042,
+   "counties": [
+    "Cook County",
+    "Will County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60462",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Oak Lawn",
+   "slug": "oak-lawn",
+   "censusName": "Oak Lawn village",
+   "geoid": "1754820",
+   "lat": 41.713885,
+   "lon": -87.752777,
+   "pop2024": 56531,
+   "landSqMi": 8.571,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60453",
+   "zipKm": 0,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Mount Prospect",
+   "slug": "mount-prospect",
+   "censusName": "Mount Prospect village",
+   "geoid": "1751089",
+   "lat": 42.064202,
+   "lon": -87.937364,
+   "pop2024": 55460,
+   "landSqMi": 10.721,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60056",
+   "zipKm": 0.2,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Berwyn",
+   "slug": "berwyn",
+   "censusName": "Berwyn city",
+   "geoid": "1705573",
+   "lat": 41.843333,
+   "lon": -87.790926,
+   "pop2024": 55152,
+   "landSqMi": 3.904,
+   "counties": [
+    "Cook County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60402",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "IL",
+   "state": "Illinois",
+   "name": "Tinley Park",
+   "slug": "tinley-park",
+   "censusName": "Tinley Park village",
+   "geoid": "1775484",
+   "lat": 41.568579,
+   "lon": -87.804217,
+   "pop2024": 54856,
+   "landSqMi": 16.176,
+   "counties": [
+    "Cook County",
+    "Will County"
+   ],
+   "mainCounty": "Cook County",
+   "zip": "60477",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Indianapolis",
+   "slug": "indianapolis",
+   "censusName": "Indianapolis city (balance)",
+   "geoid": "1836003",
+   "lat": 39.776664,
+   "lon": -86.145935,
+   "pop2024": 891484,
+   "landSqMi": 361.015,
+   "counties": [
+    "Marion County"
+   ],
+   "mainCounty": "Marion County",
+   "zip": "46204",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Fort Wayne",
+   "slug": "fort-wayne",
+   "censusName": "Fort Wayne city",
+   "geoid": "1825000",
+   "lat": 41.088193,
+   "lon": -85.142791,
+   "pop2024": 273203,
+   "landSqMi": 111.76,
+   "counties": [
+    "Allen County"
+   ],
+   "mainCounty": "Allen County",
+   "zip": "46805",
+   "zipKm": 2.5,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Evansville",
+   "slug": "evansville",
+   "censusName": "Evansville city",
+   "geoid": "1822000",
+   "lat": 37.987737,
+   "lon": -87.534705,
+   "pop2024": 115395,
+   "landSqMi": 47.355,
+   "counties": [
+    "Vanderburgh County"
+   ],
+   "mainCounty": "Vanderburgh County",
+   "zip": "47711",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Fishers",
+   "slug": "fishers",
+   "censusName": "Fishers city",
+   "geoid": "1823278",
+   "lat": 39.96183,
+   "lon": -85.968364,
+   "pop2024": 103986,
+   "landSqMi": 36.565,
+   "counties": [
+    "Hamilton County"
+   ],
+   "mainCounty": "Hamilton County",
+   "zip": "46037",
+   "zipKm": 2.1,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "South Bend",
+   "slug": "south-bend",
+   "censusName": "South Bend city",
+   "geoid": "1871000",
+   "lat": 41.676643,
+   "lon": -86.268809,
+   "pop2024": 103713,
+   "landSqMi": 41.895,
+   "counties": [
+    "St. Joseph County"
+   ],
+   "mainCounty": "St. Joseph County",
+   "zip": "46601",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Carmel",
+   "slug": "carmel",
+   "censusName": "Carmel city",
+   "geoid": "1810342",
+   "lat": 39.965479,
+   "lon": -86.148369,
+   "pop2024": 103606,
+   "landSqMi": 49.09,
+   "counties": [
+    "Hamilton County"
+   ],
+   "mainCounty": "Hamilton County",
+   "zip": "46032",
+   "zipKm": 2.3,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Bloomington",
+   "slug": "bloomington",
+   "censusName": "Bloomington city",
+   "geoid": "1805860",
+   "lat": 39.1637,
+   "lon": -86.524264,
+   "pop2024": 79986,
+   "landSqMi": 23.25,
+   "counties": [
+    "Monroe County"
+   ],
+   "mainCounty": "Monroe County",
+   "zip": "47405",
+   "zipKm": 0.6,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Hammond",
+   "slug": "hammond",
+   "censusName": "Hammond city",
+   "geoid": "1831000",
+   "lat": 41.618736,
+   "lon": -87.494949,
+   "pop2024": 76030,
+   "landSqMi": 22.734,
+   "counties": [
+    "Lake County"
+   ],
+   "mainCounty": "Lake County",
+   "zip": "46320",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Noblesville",
+   "slug": "noblesville",
+   "censusName": "Noblesville city",
+   "geoid": "1854180",
+   "lat": 40.036813,
+   "lon": -86.005058,
+   "pop2024": 75239,
+   "landSqMi": 35.641,
+   "counties": [
+    "Hamilton County"
+   ],
+   "mainCounty": "Hamilton County",
+   "zip": "46062",
+   "zipKm": 5.4,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Lafayette",
+   "slug": "lafayette",
+   "censusName": "Lafayette city",
+   "geoid": "1840788",
+   "lat": 40.39941,
+   "lon": -86.862806,
+   "pop2024": 71757,
+   "landSqMi": 30.374,
+   "counties": [
+    "Tippecanoe County"
+   ],
+   "mainCounty": "Tippecanoe County",
+   "zip": "47901",
+   "zipKm": 3.1,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Greenwood",
+   "slug": "greenwood",
+   "censusName": "Greenwood city",
+   "geoid": "1829898",
+   "lat": 39.603372,
+   "lon": -86.105227,
+   "pop2024": 68175,
+   "landSqMi": 28.817,
+   "counties": [
+    "Johnson County"
+   ],
+   "mainCounty": "Johnson County",
+   "zip": "46143",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "IN",
+   "state": "Indiana",
+   "name": "Gary",
+   "slug": "gary",
+   "censusName": "Gary city",
+   "geoid": "1827000",
+   "lat": 41.59074,
+   "lon": -87.347113,
+   "pop2024": 67555,
+   "landSqMi": 49.932,
+   "counties": [
+    "Lake County"
+   ],
+   "mainCounty": "Lake County",
+   "zip": "46407",
+   "zipKm": 2,
+   "region": "used"
+  },
+  {
+   "st": "KS",
+   "state": "Kansas",
+   "name": "Wichita",
+   "slug": "wichita",
+   "censusName": "Wichita city",
+   "geoid": "2079000",
+   "lat": 37.690638,
+   "lon": -97.345836,
+   "pop2024": 400991,
+   "landSqMi": 165.074,
+   "counties": [
+    "Sedgwick County"
+   ],
+   "mainCounty": "Sedgwick County",
+   "zip": "67202",
+   "zipKm": 1,
+   "region": "used"
+  },
+  {
+   "st": "KS",
+   "state": "Kansas",
+   "name": "Overland Park",
+   "slug": "overland-park",
+   "censusName": "Overland Park city",
+   "geoid": "2053775",
+   "lat": 38.889042,
+   "lon": -94.690584,
+   "pop2024": 202893,
+   "landSqMi": 75.28,
+   "counties": [
+    "Johnson County"
+   ],
+   "mainCounty": "Johnson County",
+   "zip": "66213",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "KS",
+   "state": "Kansas",
+   "name": "Kansas City",
+   "slug": "kansas-city",
+   "censusName": "Kansas City city",
+   "geoid": "2036000",
+   "lat": 39.122539,
+   "lon": -94.741781,
+   "pop2024": 156752,
+   "landSqMi": 124.737,
+   "counties": [
+    "Wyandotte County"
+   ],
+   "mainCounty": "Wyandotte County",
+   "zip": "66112",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "KS",
+   "state": "Kansas",
+   "name": "Olathe",
+   "slug": "olathe",
+   "censusName": "Olathe city",
+   "geoid": "2052575",
+   "lat": 38.882031,
+   "lon": -94.820054,
+   "pop2024": 149035,
+   "landSqMi": 64.669,
+   "counties": [
+    "Johnson County"
+   ],
+   "mainCounty": "Johnson County",
+   "zip": "66061",
+   "zipKm": 5.4,
+   "region": "used"
+  },
+  {
+   "st": "KY",
+   "state": "Kentucky",
+   "name": "Louisville",
+   "slug": "louisville",
+   "censusName": "Louisville/Jefferson County metro government (balance)",
+   "geoid": "2148006",
+   "lat": 38.165376,
+   "lon": -85.647377,
+   "pop2024": 640796,
+   "landSqMi": 262.836,
+   "counties": [
+    "Jefferson County"
+   ],
+   "mainCounty": "Jefferson County",
+   "zip": "40218",
+   "zipKm": 2.9,
+   "region": "used"
+  },
+  {
+   "st": "KY",
+   "state": "Kentucky",
+   "name": "Lexington",
+   "slug": "lexington",
+   "censusName": "Lexington-Fayette urban county",
+   "geoid": "2146027",
+   "lat": 38.040678,
+   "lon": -84.458272,
+   "pop2024": 329437,
+   "landSqMi": 283.854,
+   "counties": [
+    "Fayette County"
+   ],
+   "mainCounty": "Fayette County",
+   "zip": "40505",
+   "zipKm": 2.3,
+   "region": "used"
+  },
+  {
+   "st": "KY",
+   "state": "Kentucky",
+   "name": "Bowling Green",
+   "slug": "bowling-green",
+   "censusName": "Bowling Green city",
+   "geoid": "2108902",
+   "lat": 36.976832,
+   "lon": -86.433661,
+   "pop2024": 79076,
+   "landSqMi": 42.004,
+   "counties": [
+    "Warren County"
+   ],
+   "mainCounty": "Warren County",
+   "zip": "42101",
+   "zipKm": 9.4,
+   "region": "used"
+  },
+  {
+   "st": "LA",
+   "state": "Louisiana",
+   "name": "New Orleans",
+   "slug": "new-orleans",
+   "censusName": "New Orleans city",
+   "geoid": "2255000",
+   "lat": 30.05342,
+   "lon": -89.934502,
+   "pop2024": 362701,
+   "landSqMi": 169.578,
+   "counties": [
+    "Orleans Parish"
+   ],
+   "mainCounty": "Orleans Parish",
+   "zip": "70128",
+   "zipKm": 1.8,
+   "region": "rare"
+  },
+  {
+   "st": "LA",
+   "state": "Louisiana",
+   "name": "Baton Rouge",
+   "slug": "baton-rouge",
+   "censusName": "Baton Rouge city",
+   "geoid": "2205000",
+   "lat": 30.442174,
+   "lon": -91.130894,
+   "pop2024": 220907,
+   "landSqMi": 86.392,
+   "counties": [
+    "East Baton Rouge Parish"
+   ],
+   "mainCounty": "East Baton Rouge Parish",
+   "zip": "70806",
+   "zipKm": 0.9,
+   "region": "rare"
+  },
+  {
+   "st": "LA",
+   "state": "Louisiana",
+   "name": "Shreveport",
+   "slug": "shreveport",
+   "censusName": "Shreveport city",
+   "geoid": "2270000",
+   "lat": 32.466879,
+   "lon": -93.792193,
+   "pop2024": 176578,
+   "landSqMi": 108.165,
+   "counties": [
+    "Caddo Parish",
+    "Bossier Parish"
+   ],
+   "mainCounty": "Caddo Parish",
+   "zip": "71109",
+   "zipKm": 2,
+   "region": "rare"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Boston",
+   "slug": "boston",
+   "censusName": "Boston city",
+   "geoid": "2507000",
+   "lat": 42.338551,
+   "lon": -71.018253,
+   "pop2024": 673458,
+   "landSqMi": 48.341,
+   "counties": [
+    "Suffolk County"
+   ],
+   "mainCounty": "Suffolk County",
+   "zip": "02127",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Worcester",
+   "slug": "worcester",
+   "censusName": "Worcester city",
+   "geoid": "2582000",
+   "lat": 42.269478,
+   "lon": -71.807783,
+   "pop2024": 211286,
+   "landSqMi": 37.36,
+   "counties": [
+    "Worcester County"
+   ],
+   "mainCounty": "Worcester County",
+   "zip": "01608",
+   "zipKm": 1,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Springfield",
+   "slug": "springfield",
+   "censusName": "Springfield city",
+   "geoid": "2567000",
+   "lat": 42.115454,
+   "lon": -72.539978,
+   "pop2024": 154888,
+   "landSqMi": 31.87,
+   "counties": [
+    "Hampden County"
+   ],
+   "mainCounty": "Hampden County",
+   "zip": "01109",
+   "zipKm": 1,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Cambridge",
+   "slug": "cambridge",
+   "censusName": "Cambridge city",
+   "geoid": "2511000",
+   "lat": 42.376043,
+   "lon": -71.11868,
+   "pop2024": 121186,
+   "landSqMi": 6.397,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "02163",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Lowell",
+   "slug": "lowell",
+   "censusName": "Lowell city",
+   "geoid": "2537000",
+   "lat": 42.638995,
+   "lon": -71.32102,
+   "pop2024": 120418,
+   "landSqMi": 13.61,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "01851",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Brockton",
+   "slug": "brockton",
+   "censusName": "Brockton city",
+   "geoid": "2509000",
+   "lat": 42.082543,
+   "lon": -71.024638,
+   "pop2024": 105788,
+   "landSqMi": 21.333,
+   "counties": [
+    "Plymouth County"
+   ],
+   "mainCounty": "Plymouth County",
+   "zip": "02301",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Lynn",
+   "slug": "lynn",
+   "censusName": "Lynn city",
+   "geoid": "2537490",
+   "lat": 42.474762,
+   "lon": -70.96203,
+   "pop2024": 103489,
+   "landSqMi": 10.739,
+   "counties": [
+    "Essex County"
+   ],
+   "mainCounty": "Essex County",
+   "zip": "01905",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Quincy",
+   "slug": "quincy",
+   "censusName": "Quincy city",
+   "geoid": "2555745",
+   "lat": 42.261006,
+   "lon": -71.008988,
+   "pop2024": 103434,
+   "landSqMi": 16.573,
+   "counties": [
+    "Norfolk County"
+   ],
+   "mainCounty": "Norfolk County",
+   "zip": "02170",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "New Bedford",
+   "slug": "new-bedford",
+   "censusName": "New Bedford city",
+   "geoid": "2545000",
+   "lat": 41.661303,
+   "lon": -70.937913,
+   "pop2024": 101318,
+   "landSqMi": 20.004,
+   "counties": [
+    "Bristol County"
+   ],
+   "mainCounty": "Bristol County",
+   "zip": "02746",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Fall River",
+   "slug": "fall-river",
+   "censusName": "Fall River city",
+   "geoid": "2523000",
+   "lat": 41.725351,
+   "lon": -71.094162,
+   "pop2024": 94689,
+   "landSqMi": 33.123,
+   "counties": [
+    "Bristol County"
+   ],
+   "mainCounty": "Bristol County",
+   "zip": "02720",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Newton",
+   "slug": "newton",
+   "censusName": "Newton city",
+   "geoid": "2545560",
+   "lat": 42.331768,
+   "lon": -71.2084,
+   "pop2024": 90700,
+   "landSqMi": 17.828,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "02461",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Lawrence",
+   "slug": "lawrence",
+   "censusName": "Lawrence city",
+   "geoid": "2534550",
+   "lat": 42.700273,
+   "lon": -71.161357,
+   "pop2024": 89332,
+   "landSqMi": 6.93,
+   "counties": [
+    "Essex County"
+   ],
+   "mainCounty": "Essex County",
+   "zip": "01840",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Somerville",
+   "slug": "somerville",
+   "censusName": "Somerville city",
+   "geoid": "2562535",
+   "lat": 42.390445,
+   "lon": -71.101033,
+   "pop2024": 82149,
+   "landSqMi": 4.12,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "02145",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Framingham",
+   "slug": "framingham",
+   "censusName": "Framingham city",
+   "geoid": "2524960",
+   "lat": 42.307905,
+   "lon": -71.436196,
+   "pop2024": 73361,
+   "landSqMi": 25.044,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "01701",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Haverhill",
+   "slug": "haverhill",
+   "censusName": "Haverhill city",
+   "geoid": "2529405",
+   "lat": 42.782945,
+   "lon": -71.087436,
+   "pop2024": 68291,
+   "landSqMi": 33.036,
+   "counties": [
+    "Essex County"
+   ],
+   "mainCounty": "Essex County",
+   "zip": "01830",
+   "zipKm": 3.2,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Malden",
+   "slug": "malden",
+   "censusName": "Malden city",
+   "geoid": "2537875",
+   "lat": 42.42938,
+   "lon": -71.058706,
+   "pop2024": 66693,
+   "landSqMi": 5.045,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "02148",
+   "zipKm": 0,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Waltham",
+   "slug": "waltham",
+   "censusName": "Waltham city",
+   "geoid": "2572600",
+   "lat": 42.388921,
+   "lon": -71.242268,
+   "pop2024": 65849,
+   "landSqMi": 12.745,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "02451",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Taunton",
+   "slug": "taunton",
+   "censusName": "Taunton city",
+   "geoid": "2569170",
+   "lat": 41.903324,
+   "lon": -71.094987,
+   "pop2024": 61936,
+   "landSqMi": 46.712,
+   "counties": [
+    "Bristol County"
+   ],
+   "mainCounty": "Bristol County",
+   "zip": "02780",
+   "zipKm": 2,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Revere",
+   "slug": "revere",
+   "censusName": "Revere city",
+   "geoid": "2556585",
+   "lat": 42.421005,
+   "lon": -70.99036,
+   "pop2024": 60702,
+   "landSqMi": 5.704,
+   "counties": [
+    "Suffolk County"
+   ],
+   "mainCounty": "Suffolk County",
+   "zip": "02151",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "MA",
+   "state": "Massachusetts",
+   "name": "Weymouth",
+   "slug": "weymouth",
+   "censusName": "Weymouth Town city",
+   "geoid": "2578972",
+   "lat": 42.2073,
+   "lon": -70.943687,
+   "pop2024": 60159,
+   "landSqMi": 16.765,
+   "counties": [
+    "Norfolk County"
+   ],
+   "mainCounty": "Norfolk County",
+   "zip": "02188",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "MD",
+   "state": "Maryland",
+   "name": "Baltimore",
+   "slug": "baltimore",
+   "censusName": "Baltimore city",
+   "geoid": "2404000",
+   "lat": 39.300032,
+   "lon": -76.610476,
+   "pop2024": 568271,
+   "landSqMi": 80.946,
+   "counties": [
+    "Baltimore city"
+   ],
+   "mainCounty": "Baltimore city",
+   "zip": "21202",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "MD",
+   "state": "Maryland",
+   "name": "Frederick",
+   "slug": "frederick",
+   "censusName": "Frederick city",
+   "geoid": "2430325",
+   "lat": 39.436891,
+   "lon": -77.411952,
+   "pop2024": 89537,
+   "landSqMi": 24.56,
+   "counties": [
+    "Frederick County"
+   ],
+   "mainCounty": "Frederick County",
+   "zip": "21705",
+   "zipKm": 3.1,
+   "region": "used"
+  },
+  {
+   "st": "MD",
+   "state": "Maryland",
+   "name": "Gaithersburg",
+   "slug": "gaithersburg",
+   "censusName": "Gaithersburg city",
+   "geoid": "2431175",
+   "lat": 39.148601,
+   "lon": -77.195131,
+   "pop2024": 70686,
+   "landSqMi": 10.349,
+   "counties": [
+    "Montgomery County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "20877",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "MD",
+   "state": "Maryland",
+   "name": "Rockville",
+   "slug": "rockville",
+   "censusName": "Rockville city",
+   "geoid": "2467675",
+   "lat": 39.083666,
+   "lon": -77.155585,
+   "pop2024": 68417,
+   "landSqMi": 13.567,
+   "counties": [
+    "Montgomery County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "20850",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "MD",
+   "state": "Maryland",
+   "name": "Bowie",
+   "slug": "bowie",
+   "censusName": "Bowie city",
+   "geoid": "2408775",
+   "lat": 38.954703,
+   "lon": -76.738834,
+   "pop2024": 58421,
+   "landSqMi": 20.439,
+   "counties": [
+    "Prince George's County"
+   ],
+   "mainCounty": "Prince George's County",
+   "zip": "20715",
+   "zipKm": 3.6,
+   "region": "used"
+  },
+  {
+   "st": "MD",
+   "state": "Maryland",
+   "name": "Hagerstown",
+   "slug": "hagerstown",
+   "censusName": "Hagerstown city",
+   "geoid": "2436075",
+   "lat": 39.637986,
+   "lon": -77.723252,
+   "pop2024": 43909,
+   "landSqMi": 13.258,
+   "counties": [
+    "Washington County"
+   ],
+   "mainCounty": "Washington County",
+   "zip": "21740",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "ME",
+   "state": "Maine",
+   "name": "Portland",
+   "slug": "portland",
+   "censusName": "Portland city",
+   "geoid": "2360545",
+   "lat": 43.633157,
+   "lon": -70.185305,
+   "pop2024": 69568,
+   "landSqMi": 21.54,
+   "counties": [
+    "Cumberland County"
+   ],
+   "mainCounty": "Cumberland County",
+   "zip": "04108",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "ME",
+   "state": "Maine",
+   "name": "Lewiston",
+   "slug": "lewiston",
+   "censusName": "Lewiston city",
+   "geoid": "2338740",
+   "lat": 44.089513,
+   "lon": -70.172095,
+   "pop2024": 38772,
+   "landSqMi": 34.146,
+   "counties": [
+    "Androscoggin County"
+   ],
+   "mainCounty": "Androscoggin County",
+   "zip": "04240",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "ME",
+   "state": "Maine",
+   "name": "Bangor",
+   "slug": "bangor",
+   "censusName": "Bangor city",
+   "geoid": "2302795",
+   "lat": 44.829625,
+   "lon": -68.788767,
+   "pop2024": 32446,
+   "landSqMi": 34.259,
+   "counties": [
+    "Penobscot County"
+   ],
+   "mainCounty": "Penobscot County",
+   "zip": "04401",
+   "zipKm": 5.3,
+   "region": "used"
+  },
+  {
+   "st": "ME",
+   "state": "Maine",
+   "name": "South Portland",
+   "slug": "south-portland",
+   "censusName": "South Portland city",
+   "geoid": "2371990",
+   "lat": 43.631402,
+   "lon": -70.285989,
+   "pop2024": 26994,
+   "landSqMi": 12.046,
+   "counties": [
+    "Cumberland County"
+   ],
+   "mainCounty": "Cumberland County",
+   "zip": "04106",
+   "zipKm": 0,
+   "region": "used"
+  },
+  {
+   "st": "ME",
+   "state": "Maine",
+   "name": "Auburn",
+   "slug": "auburn",
+   "censusName": "Auburn city",
+   "geoid": "2302060",
+   "lat": 44.084537,
+   "lon": -70.249649,
+   "pop2024": 25200,
+   "landSqMi": 59.342,
+   "counties": [
+    "Androscoggin County"
+   ],
+   "mainCounty": "Androscoggin County",
+   "zip": "04210",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Detroit",
+   "slug": "detroit",
+   "censusName": "Detroit city",
+   "geoid": "2622000",
+   "lat": 42.383037,
+   "lon": -83.102237,
+   "pop2024": 645705,
+   "landSqMi": 138.735,
+   "counties": [
+    "Wayne County"
+   ],
+   "mainCounty": "Wayne County",
+   "zip": "48206",
+   "zipKm": 1,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Grand Rapids",
+   "slug": "grand-rapids",
+   "censusName": "Grand Rapids city",
+   "geoid": "2634000",
+   "lat": 42.961156,
+   "lon": -85.65557,
+   "pop2024": 200117,
+   "landSqMi": 44.778,
+   "counties": [
+    "Kent County"
+   ],
+   "mainCounty": "Kent County",
+   "zip": "49503",
+   "zipKm": 0.3,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Warren",
+   "slug": "warren",
+   "censusName": "Warren city",
+   "geoid": "2684000",
+   "lat": 42.492904,
+   "lon": -83.025001,
+   "pop2024": 137686,
+   "landSqMi": 34.377,
+   "counties": [
+    "Macomb County"
+   ],
+   "mainCounty": "Macomb County",
+   "zip": "48015",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Sterling Heights",
+   "slug": "sterling-heights",
+   "censusName": "Sterling Heights city",
+   "geoid": "2676460",
+   "lat": 42.581206,
+   "lon": -83.030316,
+   "pop2024": 134342,
+   "landSqMi": 36.449,
+   "counties": [
+    "Macomb County"
+   ],
+   "mainCounty": "Macomb County",
+   "zip": "48313",
+   "zipKm": 3.1,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Ann Arbor",
+   "slug": "ann-arbor",
+   "censusName": "Ann Arbor city",
+   "geoid": "2603000",
+   "lat": 42.276147,
+   "lon": -83.73086,
+   "pop2024": 122925,
+   "landSqMi": 28.396,
+   "counties": [
+    "Washtenaw County"
+   ],
+   "mainCounty": "Washtenaw County",
+   "zip": "48104",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Lansing",
+   "slug": "lansing",
+   "censusName": "Lansing city",
+   "geoid": "2646000",
+   "lat": 42.714341,
+   "lon": -84.560889,
+   "pop2024": 114336,
+   "landSqMi": 39.367,
+   "counties": [
+    "Ingham County",
+    "Eaton County",
+    "Clinton County"
+   ],
+   "mainCounty": "Ingham County",
+   "zip": "48933",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Dearborn",
+   "slug": "dearborn",
+   "censusName": "Dearborn city",
+   "geoid": "2621000",
+   "lat": 42.313057,
+   "lon": -83.211488,
+   "pop2024": 106377,
+   "landSqMi": 24.247,
+   "counties": [
+    "Wayne County"
+   ],
+   "mainCounty": "Wayne County",
+   "zip": "48126",
+   "zipKm": 2.8,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Livonia",
+   "slug": "livonia",
+   "censusName": "Livonia city",
+   "geoid": "2649000",
+   "lat": 42.397183,
+   "lon": -83.372319,
+   "pop2024": 93113,
+   "landSqMi": 35.695,
+   "counties": [
+    "Wayne County"
+   ],
+   "mainCounty": "Wayne County",
+   "zip": "48154",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Troy",
+   "slug": "troy",
+   "censusName": "Troy city",
+   "geoid": "2680700",
+   "lat": 42.583882,
+   "lon": -83.145533,
+   "pop2024": 89209,
+   "landSqMi": 33.447,
+   "counties": [
+    "Oakland County"
+   ],
+   "mainCounty": "Oakland County",
+   "zip": "48085",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Farmington Hills",
+   "slug": "farmington-hills",
+   "censusName": "Farmington Hills city",
+   "geoid": "2627440",
+   "lat": 42.485648,
+   "lon": -83.375961,
+   "pop2024": 84173,
+   "landSqMi": 33.268,
+   "counties": [
+    "Oakland County"
+   ],
+   "mainCounty": "Oakland County",
+   "zip": "48334",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Westland",
+   "slug": "westland",
+   "censusName": "Westland city",
+   "geoid": "2686000",
+   "lat": 42.319173,
+   "lon": -83.380778,
+   "pop2024": 82745,
+   "landSqMi": 20.432,
+   "counties": [
+    "Wayne County"
+   ],
+   "mainCounty": "Wayne County",
+   "zip": "48185",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Flint",
+   "slug": "flint",
+   "censusName": "Flint city",
+   "geoid": "2629000",
+   "lat": 43.02442,
+   "lon": -83.691971,
+   "pop2024": 79735,
+   "landSqMi": 33.44,
+   "counties": [
+    "Genesee County"
+   ],
+   "mainCounty": "Genesee County",
+   "zip": "48502",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Wyoming",
+   "slug": "wyoming",
+   "censusName": "Wyoming city",
+   "geoid": "2688940",
+   "lat": 42.890317,
+   "lon": -85.706733,
+   "pop2024": 78559,
+   "landSqMi": 24.741,
+   "counties": [
+    "Kent County"
+   ],
+   "mainCounty": "Kent County",
+   "zip": "49519",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Rochester Hills",
+   "slug": "rochester-hills",
+   "censusName": "Rochester Hills city",
+   "geoid": "2669035",
+   "lat": 42.663484,
+   "lon": -83.159196,
+   "pop2024": 78330,
+   "landSqMi": 32.804,
+   "counties": [
+    "Oakland County"
+   ],
+   "mainCounty": "Oakland County",
+   "zip": "48309",
+   "zipKm": 2.4,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Southfield",
+   "slug": "southfield",
+   "censusName": "Southfield city",
+   "geoid": "2674900",
+   "lat": 42.47464,
+   "lon": -83.259509,
+   "pop2024": 76874,
+   "landSqMi": 26.265,
+   "counties": [
+    "Oakland County"
+   ],
+   "mainCounty": "Oakland County",
+   "zip": "48075",
+   "zipKm": 2.8,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Kalamazoo",
+   "slug": "kalamazoo",
+   "censusName": "Kalamazoo city",
+   "geoid": "2642160",
+   "lat": 42.275163,
+   "lon": -85.588501,
+   "pop2024": 73290,
+   "landSqMi": 24.637,
+   "counties": [
+    "Kalamazoo County"
+   ],
+   "mainCounty": "Kalamazoo County",
+   "zip": "49008",
+   "zipKm": 2.4,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Novi",
+   "slug": "novi",
+   "censusName": "Novi city",
+   "geoid": "2659440",
+   "lat": 42.478494,
+   "lon": -83.486825,
+   "pop2024": 67675,
+   "landSqMi": 30.245,
+   "counties": [
+    "Oakland County"
+   ],
+   "mainCounty": "Oakland County",
+   "zip": "48375",
+   "zipKm": 2.3,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Pontiac",
+   "slug": "pontiac",
+   "censusName": "Pontiac city",
+   "geoid": "2665440",
+   "lat": 42.649228,
+   "lon": -83.287363,
+   "pop2024": 62528,
+   "landSqMi": 19.885,
+   "counties": [
+    "Oakland County"
+   ],
+   "mainCounty": "Oakland County",
+   "zip": "48342",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Taylor",
+   "slug": "taylor",
+   "censusName": "Taylor city",
+   "geoid": "2679000",
+   "lat": 42.225283,
+   "lon": -83.267691,
+   "pop2024": 61544,
+   "landSqMi": 23.616,
+   "counties": [
+    "Wayne County"
+   ],
+   "mainCounty": "Wayne County",
+   "zip": "48180",
+   "zipKm": 0,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Dearborn Heights",
+   "slug": "dearborn-heights",
+   "censusName": "Dearborn Heights city",
+   "geoid": "2621020",
+   "lat": 42.335671,
+   "lon": -83.288832,
+   "pop2024": 61040,
+   "landSqMi": 11.737,
+   "counties": [
+    "Wayne County"
+   ],
+   "mainCounty": "Wayne County",
+   "zip": "48127",
+   "zipKm": 0.5,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Royal Oak",
+   "slug": "royal-oak",
+   "censusName": "Royal Oak city",
+   "geoid": "2670040",
+   "lat": 42.507816,
+   "lon": -83.15389,
+   "pop2024": 58251,
+   "landSqMi": 11.792,
+   "counties": [
+    "Oakland County"
+   ],
+   "mainCounty": "Oakland County",
+   "zip": "48073",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "St. Clair Shores",
+   "slug": "st-clair-shores",
+   "censusName": "St. Clair Shores city",
+   "geoid": "2670760",
+   "lat": 42.493043,
+   "lon": -82.890901,
+   "pop2024": 58077,
+   "landSqMi": 11.681,
+   "counties": [
+    "Macomb County"
+   ],
+   "mainCounty": "Macomb County",
+   "zip": "48081",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Kentwood",
+   "slug": "kentwood",
+   "censusName": "Kentwood city",
+   "geoid": "2642820",
+   "lat": 42.88482,
+   "lon": -85.59254,
+   "pop2024": 54768,
+   "landSqMi": 20.915,
+   "counties": [
+    "Kent County"
+   ],
+   "mainCounty": "Kent County",
+   "zip": "49508",
+   "zipKm": 3.2,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Battle Creek",
+   "slug": "battle-creek",
+   "censusName": "Battle Creek city",
+   "geoid": "2605920",
+   "lat": 42.299176,
+   "lon": -85.229267,
+   "pop2024": 52205,
+   "landSqMi": 42.614,
+   "counties": [
+    "Calhoun County"
+   ],
+   "mainCounty": "Calhoun County",
+   "zip": "49015",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Portage",
+   "slug": "portage",
+   "censusName": "Portage city",
+   "geoid": "2665560",
+   "lat": 42.19705,
+   "lon": -85.591395,
+   "pop2024": 49975,
+   "landSqMi": 32.222,
+   "counties": [
+    "Kalamazoo County"
+   ],
+   "mainCounty": "Kalamazoo County",
+   "zip": "49024",
+   "zipKm": 2.5,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "East Lansing",
+   "slug": "east-lansing",
+   "censusName": "East Lansing city",
+   "geoid": "2624120",
+   "lat": 42.748913,
+   "lon": -84.482442,
+   "pop2024": 48964,
+   "landSqMi": 13.431,
+   "counties": [
+    "Ingham County",
+    "Clinton County"
+   ],
+   "mainCounty": "Ingham County",
+   "zip": "48825",
+   "zipKm": 2,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Roseville",
+   "slug": "roseville",
+   "censusName": "Roseville city",
+   "geoid": "2669800",
+   "lat": 42.507586,
+   "lon": -82.936582,
+   "pop2024": 47047,
+   "landSqMi": 9.836,
+   "counties": [
+    "Macomb County"
+   ],
+   "mainCounty": "Macomb County",
+   "zip": "48066",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Saginaw",
+   "slug": "saginaw",
+   "censusName": "Saginaw city",
+   "geoid": "2670520",
+   "lat": 43.417678,
+   "lon": -83.954716,
+   "pop2024": 43001,
+   "landSqMi": 17.38,
+   "counties": [
+    "Saginaw County"
+   ],
+   "mainCounty": "Saginaw County",
+   "zip": "48602",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Midland",
+   "slug": "midland",
+   "censusName": "Midland city",
+   "geoid": "2653780",
+   "lat": 43.624796,
+   "lon": -84.231984,
+   "pop2024": 42780,
+   "landSqMi": 34.508,
+   "counties": [
+    "Midland County",
+    "Bay County"
+   ],
+   "mainCounty": "Midland County",
+   "zip": "48642",
+   "zipKm": 8.6,
+   "region": "used"
+  },
+  {
+   "st": "MI",
+   "state": "Michigan",
+   "name": "Lincoln Park",
+   "slug": "lincoln-park",
+   "censusName": "Lincoln Park city",
+   "geoid": "2647800",
+   "lat": 42.243291,
+   "lon": -83.181258,
+   "pop2024": 38774,
+   "landSqMi": 5.836,
+   "counties": [
+    "Wayne County"
+   ],
+   "mainCounty": "Wayne County",
+   "zip": "48146",
+   "zipKm": 0,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Minneapolis",
+   "slug": "minneapolis",
+   "censusName": "Minneapolis city",
+   "geoid": "2743000",
+   "lat": 44.963324,
+   "lon": -93.26832,
+   "pop2024": 428579,
+   "landSqMi": 54,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55404",
+   "zipKm": 0.6,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "St. Paul",
+   "slug": "st-paul",
+   "censusName": "St. Paul city",
+   "geoid": "2758000",
+   "lat": 44.948901,
+   "lon": -93.104063,
+   "pop2024": 307465,
+   "landSqMi": 51.98,
+   "counties": [
+    "Ramsey County"
+   ],
+   "mainCounty": "Ramsey County",
+   "zip": "55155",
+   "zipKm": 0.5,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Rochester",
+   "slug": "rochester",
+   "censusName": "Rochester city",
+   "geoid": "2754880",
+   "lat": 44.014299,
+   "lon": -92.478592,
+   "pop2024": 123624,
+   "landSqMi": 56.807,
+   "counties": [
+    "Olmsted County"
+   ],
+   "mainCounty": "Olmsted County",
+   "zip": "55903",
+   "zipKm": 3.5,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Bloomington",
+   "slug": "bloomington",
+   "censusName": "Bloomington city",
+   "geoid": "2706616",
+   "lat": 44.829666,
+   "lon": -93.315217,
+   "pop2024": 88344,
+   "landSqMi": 34.699,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55431",
+   "zipKm": 0.5,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Duluth",
+   "slug": "duluth",
+   "censusName": "Duluth city",
+   "geoid": "2717000",
+   "lat": 46.774458,
+   "lon": -92.134135,
+   "pop2024": 87986,
+   "landSqMi": 71.658,
+   "counties": [
+    "St. Louis County"
+   ],
+   "mainCounty": "St. Louis County",
+   "zip": "55806",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Brooklyn Park",
+   "slug": "brooklyn-park",
+   "censusName": "Brooklyn Park city",
+   "geoid": "2707966",
+   "lat": 45.110906,
+   "lon": -93.349088,
+   "pop2024": 82893,
+   "landSqMi": 26.076,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55443",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Woodbury",
+   "slug": "woodbury",
+   "censusName": "Woodbury city",
+   "geoid": "2771428",
+   "lat": 44.906283,
+   "lon": -92.923703,
+   "pop2024": 80596,
+   "landSqMi": 34.895,
+   "counties": [
+    "Washington County"
+   ],
+   "mainCounty": "Washington County",
+   "zip": "55125",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Plymouth",
+   "slug": "plymouth",
+   "censusName": "Plymouth city",
+   "geoid": "2751730",
+   "lat": 45.022312,
+   "lon": -93.462883,
+   "pop2024": 78551,
+   "landSqMi": 32.711,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55446",
+   "zipKm": 2.8,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Lakeville",
+   "slug": "lakeville",
+   "censusName": "Lakeville city",
+   "geoid": "2735180",
+   "lat": 44.676134,
+   "lon": -93.251743,
+   "pop2024": 77971,
+   "landSqMi": 36.915,
+   "counties": [
+    "Dakota County"
+   ],
+   "mainCounty": "Dakota County",
+   "zip": "55044",
+   "zipKm": 4.3,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Blaine",
+   "slug": "blaine",
+   "censusName": "Blaine city",
+   "geoid": "2706382",
+   "lat": 45.170515,
+   "lon": -93.206089,
+   "pop2024": 75172,
+   "landSqMi": 32.905,
+   "counties": [
+    "Anoka County",
+    "Ramsey County"
+   ],
+   "mainCounty": "Anoka County",
+   "zip": "55449",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Maple Grove",
+   "slug": "maple-grove",
+   "censusName": "Maple Grove city",
+   "geoid": "2740166",
+   "lat": 45.112764,
+   "lon": -93.462975,
+   "pop2024": 72739,
+   "landSqMi": 32.573,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55369",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "St. Cloud",
+   "slug": "st-cloud",
+   "censusName": "St. Cloud city",
+   "geoid": "2756896",
+   "lat": 45.526658,
+   "lon": -94.171007,
+   "pop2024": 72145,
+   "landSqMi": 40.216,
+   "counties": [
+    "Stearns County",
+    "Sherburne County",
+    "Benton County"
+   ],
+   "mainCounty": "Stearns County",
+   "zip": "56387",
+   "zipKm": 5.6,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Eagan",
+   "slug": "eagan",
+   "censusName": "Eagan city",
+   "geoid": "2717288",
+   "lat": 44.815217,
+   "lon": -93.162816,
+   "pop2024": 67240,
+   "landSqMi": 31.18,
+   "counties": [
+    "Dakota County"
+   ],
+   "mainCounty": "Dakota County",
+   "zip": "55123",
+   "zipKm": 2.4,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Burnsville",
+   "slug": "burnsville",
+   "censusName": "Burnsville city",
+   "geoid": "2708794",
+   "lat": 44.764409,
+   "lon": -93.279372,
+   "pop2024": 64864,
+   "landSqMi": 24.937,
+   "counties": [
+    "Dakota County"
+   ],
+   "mainCounty": "Dakota County",
+   "zip": "55337",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Coon Rapids",
+   "slug": "coon-rapids",
+   "censusName": "Coon Rapids city",
+   "geoid": "2713114",
+   "lat": 45.176411,
+   "lon": -93.311454,
+   "pop2024": 63807,
+   "landSqMi": 22.601,
+   "counties": [
+    "Anoka County"
+   ],
+   "mainCounty": "Anoka County",
+   "zip": "55433",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Eden Prairie",
+   "slug": "eden-prairie",
+   "censusName": "Eden Prairie city",
+   "geoid": "2718116",
+   "lat": 44.849595,
+   "lon": -93.458721,
+   "pop2024": 62905,
+   "landSqMi": 32.496,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55347",
+   "zipKm": 2.4,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Apple Valley",
+   "slug": "apple-valley",
+   "censusName": "Apple Valley city",
+   "geoid": "2701900",
+   "lat": 44.745301,
+   "lon": -93.199413,
+   "pop2024": 55272,
+   "landSqMi": 16.871,
+   "counties": [
+    "Dakota County"
+   ],
+   "mainCounty": "Dakota County",
+   "zip": "55124",
+   "zipKm": 0,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Edina",
+   "slug": "edina",
+   "censusName": "Edina city",
+   "geoid": "2718188",
+   "lat": 44.891123,
+   "lon": -93.359752,
+   "pop2024": 53564,
+   "landSqMi": 15.458,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55424",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "Minnetonka",
+   "slug": "minnetonka",
+   "censusName": "Minnetonka city",
+   "geoid": "2743252",
+   "lat": 44.93256,
+   "lon": -93.456705,
+   "pop2024": 52651,
+   "landSqMi": 26.929,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55345",
+   "zipKm": 2.9,
+   "region": "used"
+  },
+  {
+   "st": "MN",
+   "state": "Minnesota",
+   "name": "St. Louis Park",
+   "slug": "st-louis-park",
+   "censusName": "St. Louis Park city",
+   "geoid": "2757220",
+   "lat": 44.948681,
+   "lon": -93.365035,
+   "pop2024": 49899,
+   "landSqMi": 10.624,
+   "counties": [
+    "Hennepin County"
+   ],
+   "mainCounty": "Hennepin County",
+   "zip": "55426",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "MO",
+   "state": "Missouri",
+   "name": "Kansas City",
+   "slug": "kansas-city",
+   "censusName": "Kansas City city",
+   "geoid": "2938000",
+   "lat": 39.125155,
+   "lon": -94.550313,
+   "pop2024": 516032,
+   "landSqMi": 314.515,
+   "counties": [
+    "Jackson County",
+    "Clay County",
+    "Platte County",
+    "Cass County"
+   ],
+   "mainCounty": "Jackson County",
+   "zip": "64124",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "MO",
+   "state": "Missouri",
+   "name": "St. Louis",
+   "slug": "st-louis",
+   "censusName": "St. Louis city",
+   "geoid": "2965000",
+   "lat": 38.635699,
+   "lon": -90.244582,
+   "pop2024": 279695,
+   "landSqMi": 61.717,
+   "counties": [
+    "St. Louis city"
+   ],
+   "mainCounty": "St. Louis city",
+   "zip": "63108",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "MO",
+   "state": "Missouri",
+   "name": "Springfield",
+   "slug": "springfield",
+   "censusName": "Springfield city",
+   "geoid": "2970000",
+   "lat": 37.194157,
+   "lon": -93.292642,
+   "pop2024": 170596,
+   "landSqMi": 83.34,
+   "counties": [
+    "Greene County",
+    "Christian County"
+   ],
+   "mainCounty": "Greene County",
+   "zip": "65897",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "MO",
+   "state": "Missouri",
+   "name": "Columbia",
+   "slug": "columbia",
+   "censusName": "Columbia city",
+   "geoid": "2915670",
+   "lat": 38.94729,
+   "lon": -92.326387,
+   "pop2024": 130900,
+   "landSqMi": 67.837,
+   "counties": [
+    "Boone County"
+   ],
+   "mainCounty": "Boone County",
+   "zip": "65215",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "MO",
+   "state": "Missouri",
+   "name": "Independence",
+   "slug": "independence",
+   "censusName": "Independence city",
+   "geoid": "2935000",
+   "lat": 39.085469,
+   "lon": -94.352082,
+   "pop2024": 121629,
+   "landSqMi": 77.98,
+   "counties": [
+    "Jackson County",
+    "Clay County"
+   ],
+   "mainCounty": "Jackson County",
+   "zip": "64057",
+   "zipKm": 3.2,
+   "region": "used"
+  },
+  {
+   "st": "MO",
+   "state": "Missouri",
+   "name": "Lee's Summit",
+   "slug": "lees-summit",
+   "censusName": "Lee's Summit city",
+   "geoid": "2941348",
+   "lat": 38.921601,
+   "lon": -94.384763,
+   "pop2024": 106419,
+   "landSqMi": 63.894,
+   "counties": [
+    "Jackson County",
+    "Cass County"
+   ],
+   "mainCounty": "Jackson County",
+   "zip": "64081",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "MS",
+   "state": "Mississippi",
+   "name": "Jackson",
+   "slug": "jackson",
+   "censusName": "Jackson city",
+   "geoid": "2836000",
+   "lat": 32.315834,
+   "lon": -90.21285,
+   "pop2024": 141449,
+   "landSqMi": 111.685,
+   "counties": [
+    "Hinds County",
+    "Madison County",
+    "Rankin County"
+   ],
+   "mainCounty": "Hinds County",
+   "zip": "39203",
+   "zipKm": 1.4,
+   "region": "rare"
+  },
+  {
+   "st": "MS",
+   "state": "Mississippi",
+   "name": "Gulfport",
+   "slug": "gulfport",
+   "censusName": "Gulfport city",
+   "geoid": "2829700",
+   "lat": 30.419487,
+   "lon": -89.069022,
+   "pop2024": 74621,
+   "landSqMi": 55.624,
+   "counties": [
+    "Harrison County"
+   ],
+   "mainCounty": "Harrison County",
+   "zip": "39507",
+   "zipKm": 4,
+   "region": "rare"
+  },
+  {
+   "st": "MT",
+   "state": "Montana",
+   "name": "Billings",
+   "slug": "billings",
+   "censusName": "Billings city",
+   "geoid": "3006550",
+   "lat": 45.788538,
+   "lon": -108.552475,
+   "pop2024": 121483,
+   "landSqMi": 46.263,
+   "counties": [
+    "Yellowstone County"
+   ],
+   "mainCounty": "Yellowstone County",
+   "zip": "59102",
+   "zipKm": 2.7,
+   "region": "used"
+  },
+  {
+   "st": "MT",
+   "state": "Montana",
+   "name": "Missoula",
+   "slug": "missoula",
+   "censusName": "Missoula city",
+   "geoid": "3050200",
+   "lat": 46.874359,
+   "lon": -114.026136,
+   "pop2024": 78204,
+   "landSqMi": 35.033,
+   "counties": [
+    "Missoula County"
+   ],
+   "mainCounty": "Missoula County",
+   "zip": "59801",
+   "zipKm": 2.5,
+   "region": "used"
+  },
+  {
+   "st": "MT",
+   "state": "Montana",
+   "name": "Great Falls",
+   "slug": "great-falls",
+   "censusName": "Great Falls city",
+   "geoid": "3032800",
+   "lat": 47.502518,
+   "lon": -111.29997,
+   "pop2024": 60013,
+   "landSqMi": 23.162,
+   "counties": [
+    "Cascade County"
+   ],
+   "mainCounty": "Cascade County",
+   "zip": "59401",
+   "zipKm": 2,
+   "region": "used"
+  },
+  {
+   "st": "MT",
+   "state": "Montana",
+   "name": "Bozeman",
+   "slug": "bozeman",
+   "censusName": "Bozeman city",
+   "geoid": "3008950",
+   "lat": 45.683155,
+   "lon": -111.053782,
+   "pop2024": 57894,
+   "landSqMi": 21.409,
+   "counties": [
+    "Gallatin County"
+   ],
+   "mainCounty": "Gallatin County",
+   "zip": "59718",
+   "zipKm": 10.3,
+   "region": "used"
+  },
+  {
+   "st": "MT",
+   "state": "Montana",
+   "name": "Butte",
+   "slug": "butte",
+   "censusName": "Butte-Silver Bow (balance)",
+   "geoid": "3011397",
+   "lat": 45.896232,
+   "lon": -112.660071,
+   "pop2024": 35480,
+   "landSqMi": 715.764,
+   "counties": [
+    "Silver Bow County"
+   ],
+   "mainCounty": "Silver Bow County",
+   "zip": "59750",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "NC",
+   "state": "North Carolina",
+   "name": "Charlotte",
+   "slug": "charlotte",
+   "censusName": "Charlotte city",
+   "geoid": "3712000",
+   "lat": 35.209045,
+   "lon": -80.83099,
+   "pop2024": 943476,
+   "landSqMi": 312.099,
+   "counties": [
+    "Mecklenburg County"
+   ],
+   "mainCounty": "Mecklenburg County",
+   "zip": "28204",
+   "zipKm": 0.8,
+   "region": "rare"
+  },
+  {
+   "st": "NC",
+   "state": "North Carolina",
+   "name": "Raleigh",
+   "slug": "raleigh",
+   "censusName": "Raleigh city",
+   "geoid": "3755000",
+   "lat": 35.831868,
+   "lon": -78.641042,
+   "pop2024": 499825,
+   "landSqMi": 152.263,
+   "counties": [
+    "Wake County",
+    "Durham County"
+   ],
+   "mainCounty": "Wake County",
+   "zip": "27609",
+   "zipKm": 1.5,
+   "region": "rare"
+  },
+  {
+   "st": "NC",
+   "state": "North Carolina",
+   "name": "Greensboro",
+   "slug": "greensboro",
+   "censusName": "Greensboro city",
+   "geoid": "3728000",
+   "lat": 36.09485,
+   "lon": -79.823624,
+   "pop2024": 307381,
+   "landSqMi": 134.744,
+   "counties": [
+    "Guilford County"
+   ],
+   "mainCounty": "Guilford County",
+   "zip": "27408",
+   "zipKm": 1.3,
+   "region": "rare"
+  },
+  {
+   "st": "NC",
+   "state": "North Carolina",
+   "name": "Durham",
+   "slug": "durham",
+   "censusName": "Durham city",
+   "geoid": "3719000",
+   "lat": 35.977928,
+   "lon": -78.898109,
+   "pop2024": 301870,
+   "landSqMi": 119.945,
+   "counties": [
+    "Durham County",
+    "Wake County",
+    "Orange County"
+   ],
+   "mainCounty": "Durham County",
+   "zip": "27701",
+   "zipKm": 2.3,
+   "region": "rare"
+  },
+  {
+   "st": "NC",
+   "state": "North Carolina",
+   "name": "Winston-Salem",
+   "slug": "winston-salem",
+   "censusName": "Winston-Salem city",
+   "geoid": "3775000",
+   "lat": 36.102863,
+   "lon": -80.260829,
+   "pop2024": 255769,
+   "landSqMi": 133.725,
+   "counties": [
+    "Forsyth County"
+   ],
+   "mainCounty": "Forsyth County",
+   "zip": "27110",
+   "zipKm": 3.6,
+   "region": "rare"
+  },
+  {
+   "st": "NC",
+   "state": "North Carolina",
+   "name": "Fayetteville",
+   "slug": "fayetteville",
+   "censusName": "Fayetteville city",
+   "geoid": "3722920",
+   "lat": 35.082766,
+   "lon": -78.973515,
+   "pop2024": 209496,
+   "landSqMi": 148.266,
+   "counties": [
+    "Cumberland County"
+   ],
+   "mainCounty": "Cumberland County",
+   "zip": "28303",
+   "zipKm": 1.3,
+   "region": "rare"
+  },
+  {
+   "st": "NC",
+   "state": "North Carolina",
+   "name": "Cary",
+   "slug": "cary",
+   "censusName": "Cary town",
+   "geoid": "3710740",
+   "lat": 35.781302,
+   "lon": -78.823444,
+   "pop2024": 182659,
+   "landSqMi": 61.091,
+   "counties": [
+    "Wake County",
+    "Chatham County",
+    "Durham County"
+   ],
+   "mainCounty": "Wake County",
+   "zip": "27513",
+   "zipKm": 2.9,
+   "region": "rare"
+  },
+  {
+   "st": "NC",
+   "state": "North Carolina",
+   "name": "Wilmington",
+   "slug": "wilmington",
+   "censusName": "Wilmington city",
+   "geoid": "3774440",
+   "lat": 34.209225,
+   "lon": -77.885767,
+   "pop2024": 125284,
+   "landSqMi": 51.396,
+   "counties": [
+    "New Hanover County"
+   ],
+   "mainCounty": "New Hanover County",
+   "zip": "28403",
+   "zipKm": 1.5,
+   "region": "rare"
+  },
+  {
+   "st": "ND",
+   "state": "North Dakota",
+   "name": "Fargo",
+   "slug": "fargo",
+   "censusName": "Fargo city",
+   "geoid": "3825700",
+   "lat": 46.8647,
+   "lon": -96.82908,
+   "pop2024": 136285,
+   "landSqMi": 51.888,
+   "counties": [
+    "Cass County"
+   ],
+   "mainCounty": "Cass County",
+   "zip": "58103",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "ND",
+   "state": "North Dakota",
+   "name": "Bismarck",
+   "slug": "bismarck",
+   "censusName": "Bismarck city",
+   "geoid": "3807200",
+   "lat": 46.814572,
+   "lon": -100.768568,
+   "pop2024": 77772,
+   "landSqMi": 35.955,
+   "counties": [
+    "Burleigh County"
+   ],
+   "mainCounty": "Burleigh County",
+   "zip": "58505",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "ND",
+   "state": "North Dakota",
+   "name": "Grand Forks",
+   "slug": "grand-forks",
+   "censusName": "Grand Forks city",
+   "geoid": "3832060",
+   "lat": 47.919595,
+   "lon": -97.087328,
+   "pop2024": 59845,
+   "landSqMi": 29.18,
+   "counties": [
+    "Grand Forks County"
+   ],
+   "mainCounty": "Grand Forks County",
+   "zip": "58202",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "ND",
+   "state": "North Dakota",
+   "name": "Minot",
+   "slug": "minot",
+   "censusName": "Minot city",
+   "geoid": "3853380",
+   "lat": 48.236125,
+   "lon": -101.277533,
+   "pop2024": 47440,
+   "landSqMi": 27.767,
+   "counties": [
+    "Ward County"
+   ],
+   "mainCounty": "Ward County",
+   "zip": "58707",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "NE",
+   "state": "Nebraska",
+   "name": "Omaha",
+   "slug": "omaha",
+   "censusName": "Omaha city",
+   "geoid": "3137000",
+   "lat": 41.262705,
+   "lon": -96.053475,
+   "pop2024": 489265,
+   "landSqMi": 142.984,
+   "counties": [
+    "Douglas County"
+   ],
+   "mainCounty": "Douglas County",
+   "zip": "68114",
+   "zipKm": 0.5,
+   "region": "used"
+  },
+  {
+   "st": "NE",
+   "state": "Nebraska",
+   "name": "Lincoln",
+   "slug": "lincoln",
+   "censusName": "Lincoln city",
+   "geoid": "3128000",
+   "lat": 40.810284,
+   "lon": -96.674856,
+   "pop2024": 300619,
+   "landSqMi": 102.54,
+   "counties": [
+    "Lancaster County"
+   ],
+   "mainCounty": "Lancaster County",
+   "zip": "68503",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "NE",
+   "state": "Nebraska",
+   "name": "Bellevue",
+   "slug": "bellevue",
+   "censusName": "Bellevue city",
+   "geoid": "3103950",
+   "lat": 41.144932,
+   "lon": -95.93856,
+   "pop2024": 64777,
+   "landSqMi": 23.589,
+   "counties": [
+    "Sarpy County"
+   ],
+   "mainCounty": "Sarpy County",
+   "zip": "68056",
+   "zipKm": 2.9,
+   "region": "used"
+  },
+  {
+   "st": "NE",
+   "state": "Nebraska",
+   "name": "Grand Island",
+   "slug": "grand-island",
+   "censusName": "Grand Island city",
+   "geoid": "3119595",
+   "lat": 40.921352,
+   "lon": -98.358559,
+   "pop2024": 53250,
+   "landSqMi": 30.255,
+   "counties": [
+    "Hall County"
+   ],
+   "mainCounty": "Hall County",
+   "zip": "68801",
+   "zipKm": 6.1,
+   "region": "used"
+  },
+  {
+   "st": "NE",
+   "state": "Nebraska",
+   "name": "Kearney",
+   "slug": "kearney",
+   "censusName": "Kearney city",
+   "geoid": "3125055",
+   "lat": 40.701745,
+   "lon": -99.082312,
+   "pop2024": 34741,
+   "landSqMi": 15.17,
+   "counties": [
+    "Buffalo County"
+   ],
+   "mainCounty": "Buffalo County",
+   "zip": "68849",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "NH",
+   "state": "New Hampshire",
+   "name": "Manchester",
+   "slug": "manchester",
+   "censusName": "Manchester city",
+   "geoid": "3345140",
+   "lat": 42.984941,
+   "lon": -71.444131,
+   "pop2024": 116386,
+   "landSqMi": 33.036,
+   "counties": [
+    "Hillsborough County"
+   ],
+   "mainCounty": "Hillsborough County",
+   "zip": "03101",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "NH",
+   "state": "New Hampshire",
+   "name": "Nashua",
+   "slug": "nashua",
+   "censusName": "Nashua city",
+   "geoid": "3350260",
+   "lat": 42.749074,
+   "lon": -71.490544,
+   "pop2024": 91851,
+   "landSqMi": 30.834,
+   "counties": [
+    "Hillsborough County"
+   ],
+   "mainCounty": "Hillsborough County",
+   "zip": "03060",
+   "zipKm": 2.8,
+   "region": "used"
+  },
+  {
+   "st": "NH",
+   "state": "New Hampshire",
+   "name": "Concord",
+   "slug": "concord",
+   "censusName": "Concord city",
+   "geoid": "3314200",
+   "lat": 43.232493,
+   "lon": -71.561252,
+   "pop2024": 44674,
+   "landSqMi": 63.94,
+   "counties": [
+    "Merrimack County"
+   ],
+   "mainCounty": "Merrimack County",
+   "zip": "03301",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "NH",
+   "state": "New Hampshire",
+   "name": "Dover",
+   "slug": "dover",
+   "censusName": "Dover city",
+   "geoid": "3318820",
+   "lat": 43.18636,
+   "lon": -70.883623,
+   "pop2024": 33909,
+   "landSqMi": 26.732,
+   "counties": [
+    "Strafford County"
+   ],
+   "mainCounty": "Strafford County",
+   "zip": "03820",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "NH",
+   "state": "New Hampshire",
+   "name": "Rochester",
+   "slug": "rochester",
+   "censusName": "Rochester city",
+   "geoid": "3365140",
+   "lat": 43.298493,
+   "lon": -70.977005,
+   "pop2024": 33598,
+   "landSqMi": 45.021,
+   "counties": [
+    "Strafford County"
+   ],
+   "mainCounty": "Strafford County",
+   "zip": "03867",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "NH",
+   "state": "New Hampshire",
+   "name": "Keene",
+   "slug": "keene",
+   "censusName": "Keene city",
+   "geoid": "3339300",
+   "lat": 42.953842,
+   "lon": -72.306875,
+   "pop2024": 23036,
+   "landSqMi": 37.092,
+   "counties": [
+    "Cheshire County"
+   ],
+   "mainCounty": "Cheshire County",
+   "zip": "03431",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Newark",
+   "slug": "newark",
+   "censusName": "Newark city",
+   "geoid": "3451000",
+   "lat": 40.72422,
+   "lon": -74.172574,
+   "pop2024": 317303,
+   "landSqMi": 24.143,
+   "counties": [
+    "Essex County"
+   ],
+   "mainCounty": "Essex County",
+   "zip": "07102",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Jersey City",
+   "slug": "jersey-city",
+   "censusName": "Jersey City city",
+   "geoid": "3436000",
+   "lat": 40.711417,
+   "lon": -74.06476,
+   "pop2024": 302824,
+   "landSqMi": 14.748,
+   "counties": [
+    "Hudson County"
+   ],
+   "mainCounty": "Hudson County",
+   "zip": "07304",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Paterson",
+   "slug": "paterson",
+   "censusName": "Paterson city",
+   "geoid": "3457000",
+   "lat": 40.914766,
+   "lon": -74.162829,
+   "pop2024": 160463,
+   "landSqMi": 8.413,
+   "counties": [
+    "Passaic County"
+   ],
+   "mainCounty": "Passaic County",
+   "zip": "07501",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Elizabeth",
+   "slug": "elizabeth",
+   "censusName": "Elizabeth city",
+   "geoid": "3421000",
+   "lat": 40.666367,
+   "lon": -74.193503,
+   "pop2024": 140413,
+   "landSqMi": 12.319,
+   "counties": [
+    "Union County"
+   ],
+   "mainCounty": "Union County",
+   "zip": "07201",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Trenton",
+   "slug": "trenton",
+   "censusName": "Trenton city",
+   "geoid": "3474000",
+   "lat": 40.223841,
+   "lon": -74.763624,
+   "pop2024": 91193,
+   "landSqMi": 7.606,
+   "counties": [
+    "Mercer County"
+   ],
+   "mainCounty": "Mercer County",
+   "zip": "08608",
+   "zipKm": 0.6,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Clifton",
+   "slug": "clifton",
+   "censusName": "Clifton city",
+   "geoid": "3413690",
+   "lat": 40.862137,
+   "lon": -74.160393,
+   "pop2024": 90322,
+   "landSqMi": 11.275,
+   "counties": [
+    "Passaic County"
+   ],
+   "mainCounty": "Passaic County",
+   "zip": "07013",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Bayonne",
+   "slug": "bayonne",
+   "censusName": "Bayonne city",
+   "geoid": "3403580",
+   "lat": 40.662495,
+   "lon": -74.110201,
+   "pop2024": 74532,
+   "landSqMi": 5.821,
+   "counties": [
+    "Hudson County"
+   ],
+   "mainCounty": "Hudson County",
+   "zip": "07002",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "East Orange",
+   "slug": "east-orange",
+   "censusName": "East Orange city",
+   "geoid": "3419390",
+   "lat": 40.765055,
+   "lon": -74.211655,
+   "pop2024": 71850,
+   "landSqMi": 3.928,
+   "counties": [
+    "Essex County"
+   ],
+   "mainCounty": "Essex County",
+   "zip": "07017",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Camden",
+   "slug": "camden",
+   "censusName": "Camden city",
+   "geoid": "3410000",
+   "lat": 39.936787,
+   "lon": -75.106644,
+   "pop2024": 71749,
+   "landSqMi": 8.919,
+   "counties": [
+    "Camden County"
+   ],
+   "mainCounty": "Camden County",
+   "zip": "08103",
+   "zipKm": 0.6,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Passaic",
+   "slug": "passaic",
+   "censusName": "Passaic city",
+   "geoid": "3456550",
+   "lat": 40.857552,
+   "lon": -74.129089,
+   "pop2024": 70722,
+   "landSqMi": 3.133,
+   "counties": [
+    "Passaic County"
+   ],
+   "mainCounty": "Passaic County",
+   "zip": "07055",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Union City",
+   "slug": "union-city",
+   "censusName": "Union City city",
+   "geoid": "3474630",
+   "lat": 40.767425,
+   "lon": -74.032279,
+   "pop2024": 66918,
+   "landSqMi": 1.287,
+   "counties": [
+    "Hudson County"
+   ],
+   "mainCounty": "Hudson County",
+   "zip": "07087",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Vineland",
+   "slug": "vineland",
+   "censusName": "Vineland city",
+   "geoid": "3476070",
+   "lat": 39.465007,
+   "lon": -74.997115,
+   "pop2024": 62070,
+   "landSqMi": 68.403,
+   "counties": [
+    "Cumberland County"
+   ],
+   "mainCounty": "Cumberland County",
+   "zip": "08360",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Hoboken",
+   "slug": "hoboken",
+   "censusName": "Hoboken city",
+   "geoid": "3432250",
+   "lat": 40.745251,
+   "lon": -74.027926,
+   "pop2024": 59149,
+   "landSqMi": 1.25,
+   "counties": [
+    "Hudson County"
+   ],
+   "mainCounty": "Hudson County",
+   "zip": "07030",
+   "zipKm": 0,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "New Brunswick",
+   "slug": "new-brunswick",
+   "censusName": "New Brunswick city",
+   "geoid": "3451210",
+   "lat": 40.486677,
+   "lon": -74.444414,
+   "pop2024": 57487,
+   "landSqMi": 5.233,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "08901",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Perth Amboy",
+   "slug": "perth-amboy",
+   "censusName": "Perth Amboy city",
+   "geoid": "3458200",
+   "lat": 40.52016,
+   "lon": -74.271331,
+   "pop2024": 56939,
+   "landSqMi": 4.662,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "08861",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Plainfield",
+   "slug": "plainfield",
+   "censusName": "Plainfield city",
+   "geoid": "3459190",
+   "lat": 40.615444,
+   "lon": -74.415775,
+   "pop2024": 56507,
+   "landSqMi": 5.959,
+   "counties": [
+    "Union County"
+   ],
+   "mainCounty": "Union County",
+   "zip": "07060",
+   "zipKm": 0.6,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "West New York",
+   "slug": "west-new-york",
+   "censusName": "West New York town",
+   "geoid": "3479610",
+   "lat": 40.786032,
+   "lon": -74.009507,
+   "pop2024": 52975,
+   "landSqMi": 0.993,
+   "counties": [
+    "Hudson County"
+   ],
+   "mainCounty": "Hudson County",
+   "zip": "07093",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Sayreville",
+   "slug": "sayreville",
+   "censusName": "Sayreville borough",
+   "geoid": "3465790",
+   "lat": 40.466945,
+   "lon": -74.320192,
+   "pop2024": 47165,
+   "landSqMi": 15.89,
+   "counties": [
+    "Middlesex County"
+   ],
+   "mainCounty": "Middlesex County",
+   "zip": "08859",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Hackensack",
+   "slug": "hackensack",
+   "censusName": "Hackensack city",
+   "geoid": "3428680",
+   "lat": 40.889398,
+   "lon": -74.045698,
+   "pop2024": 46630,
+   "landSqMi": 4.191,
+   "counties": [
+    "Bergen County"
+   ],
+   "mainCounty": "Bergen County",
+   "zip": "07601",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "NJ",
+   "state": "New Jersey",
+   "name": "Linden",
+   "slug": "linden",
+   "censusName": "Linden city",
+   "geoid": "3440350",
+   "lat": 40.627337,
+   "lon": -74.23631,
+   "pop2024": 45393,
+   "landSqMi": 10.688,
+   "counties": [
+    "Union County"
+   ],
+   "mainCounty": "Union County",
+   "zip": "07036",
+   "zipKm": 0.3,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "New York City",
+   "slug": "new-york-city",
+   "censusName": "New York city",
+   "geoid": "3651000",
+   "lat": 40.662712,
+   "lon": -73.938677,
+   "pop2024": 8478072,
+   "landSqMi": 300.483,
+   "counties": [
+    "Kings County",
+    "Queens County",
+    "New York County",
+    "Bronx County",
+    "Richmond County"
+   ],
+   "mainCounty": "Kings County",
+   "zip": "11213",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Buffalo",
+   "slug": "buffalo",
+   "censusName": "Buffalo city",
+   "geoid": "3611000",
+   "lat": 42.892492,
+   "lon": -78.859686,
+   "pop2024": 276617,
+   "landSqMi": 40.376,
+   "counties": [
+    "Erie County"
+   ],
+   "mainCounty": "Erie County",
+   "zip": "14204",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Yonkers",
+   "slug": "yonkers",
+   "censusName": "Yonkers city",
+   "geoid": "3684000",
+   "lat": 40.945862,
+   "lon": -73.867446,
+   "pop2024": 211040,
+   "landSqMi": 18.006,
+   "counties": [
+    "Westchester County"
+   ],
+   "mainCounty": "Westchester County",
+   "zip": "10701",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Rochester",
+   "slug": "rochester",
+   "censusName": "Rochester city",
+   "geoid": "3663000",
+   "lat": 43.169927,
+   "lon": -77.616891,
+   "pop2024": 207282,
+   "landSqMi": 35.761,
+   "counties": [
+    "Monroe County"
+   ],
+   "mainCounty": "Monroe County",
+   "zip": "14614",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Syracuse",
+   "slug": "syracuse",
+   "censusName": "Syracuse city",
+   "geoid": "3673000",
+   "lat": 43.040998,
+   "lon": -76.143554,
+   "pop2024": 146097,
+   "landSqMi": 25.059,
+   "counties": [
+    "Onondaga County"
+   ],
+   "mainCounty": "Onondaga County",
+   "zip": "13202",
+   "zipKm": 0.7,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Albany",
+   "slug": "albany",
+   "censusName": "Albany city",
+   "geoid": "3601000",
+   "lat": 42.665745,
+   "lon": -73.798353,
+   "pop2024": 101317,
+   "landSqMi": 21.404,
+   "counties": [
+    "Albany County"
+   ],
+   "mainCounty": "Albany County",
+   "zip": "12206",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "New Rochelle",
+   "slug": "new-rochelle",
+   "censusName": "New Rochelle city",
+   "geoid": "3650617",
+   "lat": 40.923243,
+   "lon": -73.779344,
+   "pop2024": 85512,
+   "landSqMi": 10.286,
+   "counties": [
+    "Westchester County"
+   ],
+   "mainCounty": "Westchester County",
+   "zip": "10801",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Mount Vernon",
+   "slug": "mount-vernon",
+   "censusName": "Mount Vernon city",
+   "geoid": "3649121",
+   "lat": 40.913105,
+   "lon": -73.829317,
+   "pop2024": 71999,
+   "landSqMi": 4.392,
+   "counties": [
+    "Westchester County"
+   ],
+   "mainCounty": "Westchester County",
+   "zip": "10553",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Schenectady",
+   "slug": "schenectady",
+   "censusName": "Schenectady city",
+   "geoid": "3665508",
+   "lat": 42.802641,
+   "lon": -73.9272,
+   "pop2024": 69495,
+   "landSqMi": 10.808,
+   "counties": [
+    "Schenectady County"
+   ],
+   "mainCounty": "Schenectady County",
+   "zip": "12307",
+   "zipKm": 0.5,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Utica",
+   "slug": "utica",
+   "censusName": "Utica city",
+   "geoid": "3676540",
+   "lat": 43.096382,
+   "lon": -75.225983,
+   "pop2024": 63660,
+   "landSqMi": 16.722,
+   "counties": [
+    "Oneida County"
+   ],
+   "mainCounty": "Oneida County",
+   "zip": "13501",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "White Plains",
+   "slug": "white-plains",
+   "censusName": "White Plains city",
+   "geoid": "3681677",
+   "lat": 41.0238,
+   "lon": -73.751048,
+   "pop2024": 62561,
+   "landSqMi": 9.737,
+   "counties": [
+    "Westchester County"
+   ],
+   "mainCounty": "Westchester County",
+   "zip": "10605",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Hempstead",
+   "slug": "hempstead",
+   "censusName": "Hempstead village",
+   "geoid": "3633139",
+   "lat": 40.704374,
+   "lon": -73.619445,
+   "pop2024": 59569,
+   "landSqMi": 3.691,
+   "counties": [
+    "Nassau County"
+   ],
+   "mainCounty": "Nassau County",
+   "zip": "11550",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Troy",
+   "slug": "troy",
+   "censusName": "Troy city",
+   "geoid": "3675484",
+   "lat": 42.735812,
+   "lon": -73.675321,
+   "pop2024": 51065,
+   "landSqMi": 10.357,
+   "counties": [
+    "Rensselaer County"
+   ],
+   "mainCounty": "Rensselaer County",
+   "zip": "12183",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Niagara Falls",
+   "slug": "niagara-falls",
+   "censusName": "Niagara Falls city",
+   "geoid": "3651055",
+   "lat": 43.092841,
+   "lon": -79.014743,
+   "pop2024": 47512,
+   "landSqMi": 14.082,
+   "counties": [
+    "Niagara County"
+   ],
+   "mainCounty": "Niagara County",
+   "zip": "14301",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Binghamton",
+   "slug": "binghamton",
+   "censusName": "Binghamton city",
+   "geoid": "3606607",
+   "lat": 42.101331,
+   "lon": -75.909369,
+   "pop2024": 46773,
+   "landSqMi": 10.479,
+   "counties": [
+    "Broome County"
+   ],
+   "mainCounty": "Broome County",
+   "zip": "13902",
+   "zipKm": 5.1,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Freeport",
+   "slug": "freeport",
+   "censusName": "Freeport village",
+   "geoid": "3627485",
+   "lat": 40.650851,
+   "lon": -73.584575,
+   "pop2024": 44028,
+   "landSqMi": 4.835,
+   "counties": [
+    "Nassau County"
+   ],
+   "mainCounty": "Nassau County",
+   "zip": "11520",
+   "zipKm": 0.2,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Kiryas Joel",
+   "slug": "kiryas-joel",
+   "censusName": "Kiryas Joel village",
+   "geoid": "3639853",
+   "lat": 41.340667,
+   "lon": -74.167274,
+   "pop2024": 43863,
+   "landSqMi": 1.462,
+   "counties": [
+    "Orange County"
+   ],
+   "mainCounty": "Orange County",
+   "zip": "10950",
+   "zipKm": 3.8,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Valley Stream",
+   "slug": "valley-stream",
+   "censusName": "Valley Stream village",
+   "geoid": "3676705",
+   "lat": 40.664747,
+   "lon": -73.704902,
+   "pop2024": 40232,
+   "landSqMi": 3.478,
+   "counties": [
+    "Nassau County"
+   ],
+   "mainCounty": "Nassau County",
+   "zip": "11580",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Long Beach",
+   "slug": "long-beach",
+   "censusName": "Long Beach city",
+   "geoid": "3643335",
+   "lat": 40.585835,
+   "lon": -73.665403,
+   "pop2024": 34777,
+   "landSqMi": 2.218,
+   "counties": [
+    "Nassau County"
+   ],
+   "mainCounty": "Nassau County",
+   "zip": "11561",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Ithaca",
+   "slug": "ithaca",
+   "censusName": "Ithaca city",
+   "geoid": "3638077",
+   "lat": 42.443937,
+   "lon": -76.503055,
+   "pop2024": 33768,
+   "landSqMi": 5.389,
+   "counties": [
+    "Tompkins County"
+   ],
+   "mainCounty": "Tompkins County",
+   "zip": "14850",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Spring Valley",
+   "slug": "spring-valley",
+   "censusName": "Spring Valley village",
+   "geoid": "3670420",
+   "lat": 41.114567,
+   "lon": -74.048712,
+   "pop2024": 33637,
+   "landSqMi": 2.008,
+   "counties": [
+    "Rockland County"
+   ],
+   "mainCounty": "Rockland County",
+   "zip": "10977",
+   "zipKm": 0.5,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Poughkeepsie",
+   "slug": "poughkeepsie",
+   "censusName": "Poughkeepsie city",
+   "geoid": "3659641",
+   "lat": 41.694595,
+   "lon": -73.919869,
+   "pop2024": 32293,
+   "landSqMi": 5.145,
+   "counties": [
+    "Dutchess County"
+   ],
+   "mainCounty": "Dutchess County",
+   "zip": "12601",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Rome",
+   "slug": "rome",
+   "censusName": "Rome city",
+   "geoid": "3663418",
+   "lat": 43.226002,
+   "lon": -75.489523,
+   "pop2024": 31990,
+   "landSqMi": 74.854,
+   "counties": [
+    "Oneida County"
+   ],
+   "mainCounty": "Oneida County",
+   "zip": "13440",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Harrison",
+   "slug": "harrison",
+   "censusName": "Harrison village",
+   "geoid": "3632402",
+   "lat": 41.023538,
+   "lon": -73.719283,
+   "pop2024": 31321,
+   "landSqMi": 16.766,
+   "counties": [
+    "Westchester County"
+   ],
+   "mainCounty": "Westchester County",
+   "zip": "10577",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Port Chester",
+   "slug": "port-chester",
+   "censusName": "Port Chester village",
+   "geoid": "3659223",
+   "lat": 41.004701,
+   "lon": -73.667175,
+   "pop2024": 30957,
+   "landSqMi": 2.328,
+   "counties": [
+    "Westchester County"
+   ],
+   "mainCounty": "Westchester County",
+   "zip": "10573",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Middletown",
+   "slug": "middletown",
+   "censusName": "Middletown city",
+   "geoid": "3647042",
+   "lat": 41.444922,
+   "lon": -74.423573,
+   "pop2024": 30188,
+   "landSqMi": 5.306,
+   "counties": [
+    "Orange County"
+   ],
+   "mainCounty": "Orange County",
+   "zip": "10940",
+   "zipKm": 4.6,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "North Tonawanda",
+   "slug": "north-tonawanda",
+   "censusName": "North Tonawanda city",
+   "geoid": "3653682",
+   "lat": 43.049157,
+   "lon": -78.871224,
+   "pop2024": 29981,
+   "landSqMi": 10.093,
+   "counties": [
+    "Niagara County"
+   ],
+   "mainCounty": "Niagara County",
+   "zip": "14120",
+   "zipKm": 4,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Saratoga Springs",
+   "slug": "saratoga-springs",
+   "censusName": "Saratoga Springs city",
+   "geoid": "3665255",
+   "lat": 43.067704,
+   "lon": -73.778142,
+   "pop2024": 28741,
+   "landSqMi": 28.057,
+   "counties": [
+    "Saratoga County"
+   ],
+   "mainCounty": "Saratoga County",
+   "zip": "12866",
+   "zipKm": 3.2,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Newburgh",
+   "slug": "newburgh",
+   "censusName": "Newburgh city",
+   "geoid": "3650034",
+   "lat": 41.503249,
+   "lon": -74.01964,
+   "pop2024": 28181,
+   "landSqMi": 3.806,
+   "counties": [
+    "Orange County"
+   ],
+   "mainCounty": "Orange County",
+   "zip": "12550",
+   "zipKm": 5.1,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Glen Cove",
+   "slug": "glen-cove",
+   "censusName": "Glen Cove city",
+   "geoid": "3629113",
+   "lat": 40.884756,
+   "lon": -73.644781,
+   "pop2024": 28088,
+   "landSqMi": 6.658,
+   "counties": [
+    "Nassau County"
+   ],
+   "mainCounty": "Nassau County",
+   "zip": "11542",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Jamestown",
+   "slug": "jamestown",
+   "censusName": "Jamestown city",
+   "geoid": "3638264",
+   "lat": 42.097603,
+   "lon": -79.236135,
+   "pop2024": 27699,
+   "landSqMi": 8.9,
+   "counties": [
+    "Chautauqua County"
+   ],
+   "mainCounty": "Chautauqua County",
+   "zip": "14701",
+   "zipKm": 2.9,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Lindenhurst",
+   "slug": "lindenhurst",
+   "censusName": "Lindenhurst village",
+   "geoid": "3642554",
+   "lat": 40.685751,
+   "lon": -73.371594,
+   "pop2024": 27160,
+   "landSqMi": 3.748,
+   "counties": [
+    "Suffolk County"
+   ],
+   "mainCounty": "Suffolk County",
+   "zip": "11757",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Ossining",
+   "slug": "ossining",
+   "censusName": "Ossining village",
+   "geoid": "3655530",
+   "lat": 41.15349,
+   "lon": -73.870587,
+   "pop2024": 26895,
+   "landSqMi": 3.167,
+   "counties": [
+    "Westchester County"
+   ],
+   "mainCounty": "Westchester County",
+   "zip": "10510",
+   "zipKm": 3.3,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Elmira",
+   "slug": "elmira",
+   "censusName": "Elmira city",
+   "geoid": "3624229",
+   "lat": 42.093388,
+   "lon": -76.80961,
+   "pop2024": 26255,
+   "landSqMi": 7.249,
+   "counties": [
+    "Chemung County"
+   ],
+   "mainCounty": "Chemung County",
+   "zip": "14904",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "NY",
+   "state": "New York",
+   "name": "Auburn",
+   "slug": "auburn",
+   "censusName": "Auburn city",
+   "geoid": "3603078",
+   "lat": 42.9338,
+   "lon": -76.567181,
+   "pop2024": 25963,
+   "landSqMi": 8.335,
+   "counties": [
+    "Cayuga County"
+   ],
+   "mainCounty": "Cayuga County",
+   "zip": "13024",
+   "zipKm": 0.6,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Columbus",
+   "slug": "columbus",
+   "censusName": "Columbus city",
+   "geoid": "3918000",
+   "lat": 39.985531,
+   "lon": -82.985594,
+   "pop2024": 933263,
+   "landSqMi": 221.93,
+   "counties": [
+    "Franklin County",
+    "Delaware County",
+    "Fairfield County"
+   ],
+   "mainCounty": "Franklin County",
+   "zip": "43201",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Cleveland",
+   "slug": "cleveland",
+   "censusName": "Cleveland city",
+   "geoid": "3916000",
+   "lat": 41.478462,
+   "lon": -81.679435,
+   "pop2024": 365379,
+   "landSqMi": 77.735,
+   "counties": [
+    "Cuyahoga County"
+   ],
+   "mainCounty": "Cuyahoga County",
+   "zip": "44101",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Cincinnati",
+   "slug": "cincinnati",
+   "censusName": "Cincinnati city",
+   "geoid": "3915000",
+   "lat": 39.140183,
+   "lon": -84.505829,
+   "pop2024": 314915,
+   "landSqMi": 77.914,
+   "counties": [
+    "Hamilton County"
+   ],
+   "mainCounty": "Hamilton County",
+   "zip": "45267",
+   "zipKm": 0.3,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Toledo",
+   "slug": "toledo",
+   "censusName": "Toledo city",
+   "geoid": "3977000",
+   "lat": 41.664071,
+   "lon": -83.581861,
+   "pop2024": 265638,
+   "landSqMi": 80.485,
+   "counties": [
+    "Lucas County"
+   ],
+   "mainCounty": "Lucas County",
+   "zip": "43620",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Akron",
+   "slug": "akron",
+   "censusName": "Akron city",
+   "geoid": "3901000",
+   "lat": 41.080456,
+   "lon": -81.521429,
+   "pop2024": 189664,
+   "landSqMi": 61.933,
+   "counties": [
+    "Summit County"
+   ],
+   "mainCounty": "Summit County",
+   "zip": "44308",
+   "zipKm": 0.4,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Dayton",
+   "slug": "dayton",
+   "censusName": "Dayton city",
+   "geoid": "3921000",
+   "lat": 39.784743,
+   "lon": -84.199632,
+   "pop2024": 136346,
+   "landSqMi": 55.787,
+   "counties": [
+    "Montgomery County",
+    "Greene County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "45405",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Parma",
+   "slug": "parma",
+   "censusName": "Parma city",
+   "geoid": "3961000",
+   "lat": 41.383569,
+   "lon": -81.728641,
+   "pop2024": 79350,
+   "landSqMi": 20.023,
+   "counties": [
+    "Cuyahoga County"
+   ],
+   "mainCounty": "Cuyahoga County",
+   "zip": "44129",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Canton",
+   "slug": "canton",
+   "censusName": "Canton city",
+   "geoid": "3912000",
+   "lat": 40.80765,
+   "lon": -81.367228,
+   "pop2024": 69211,
+   "landSqMi": 26.309,
+   "counties": [
+    "Stark County"
+   ],
+   "mainCounty": "Stark County",
+   "zip": "44702",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Lorain",
+   "slug": "lorain",
+   "censusName": "Lorain city",
+   "geoid": "3944856",
+   "lat": 41.438805,
+   "lon": -82.179722,
+   "pop2024": 65751,
+   "landSqMi": 23.607,
+   "counties": [
+    "Lorain County"
+   ],
+   "mainCounty": "Lorain County",
+   "zip": "44052",
+   "zipKm": 2.7,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Hamilton",
+   "slug": "hamilton",
+   "censusName": "Hamilton city",
+   "geoid": "3933012",
+   "lat": 39.394328,
+   "lon": -84.565522,
+   "pop2024": 63953,
+   "landSqMi": 21.465,
+   "counties": [
+    "Butler County"
+   ],
+   "mainCounty": "Butler County",
+   "zip": "45015",
+   "zipKm": 2.3,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Youngstown",
+   "slug": "youngstown",
+   "censusName": "Youngstown city",
+   "geoid": "3988000",
+   "lat": 41.099095,
+   "lon": -80.645902,
+   "pop2024": 59123,
+   "landSqMi": 33.929,
+   "counties": [
+    "Mahoning County",
+    "Trumbull County"
+   ],
+   "mainCounty": "Mahoning County",
+   "zip": "44503",
+   "zipKm": 0.3,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Springfield",
+   "slug": "springfield",
+   "censusName": "Springfield city",
+   "geoid": "3974118",
+   "lat": 39.928908,
+   "lon": -83.794241,
+   "pop2024": 58138,
+   "landSqMi": 26.641,
+   "counties": [
+    "Clark County"
+   ],
+   "mainCounty": "Clark County",
+   "zip": "45501",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Kettering",
+   "slug": "kettering",
+   "censusName": "Kettering city",
+   "geoid": "3940040",
+   "lat": 39.695991,
+   "lon": -84.150437,
+   "pop2024": 57028,
+   "landSqMi": 18.715,
+   "counties": [
+    "Montgomery County",
+    "Greene County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "45429",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Elyria",
+   "slug": "elyria",
+   "censusName": "Elyria city",
+   "geoid": "3925256",
+   "lat": 41.378235,
+   "lon": -82.104505,
+   "pop2024": 53604,
+   "landSqMi": 20.492,
+   "counties": [
+    "Lorain County"
+   ],
+   "mainCounty": "Lorain County",
+   "zip": "44035",
+   "zipKm": 2.8,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Middletown",
+   "slug": "middletown",
+   "censusName": "Middletown city",
+   "geoid": "3949840",
+   "lat": 39.502952,
+   "lon": -84.364893,
+   "pop2024": 52291,
+   "landSqMi": 26.347,
+   "counties": [
+    "Butler County",
+    "Warren County"
+   ],
+   "mainCounty": "Butler County",
+   "zip": "45044",
+   "zipKm": 4.5,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Newark",
+   "slug": "newark",
+   "censusName": "Newark city",
+   "geoid": "3954040",
+   "lat": 40.071503,
+   "lon": -82.424221,
+   "pop2024": 51424,
+   "landSqMi": 20.999,
+   "counties": [
+    "Licking County"
+   ],
+   "mainCounty": "Licking County",
+   "zip": "43055",
+   "zipKm": 6.1,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Cuyahoga Falls",
+   "slug": "cuyahoga-falls",
+   "censusName": "Cuyahoga Falls city",
+   "geoid": "3919778",
+   "lat": 41.182881,
+   "lon": -81.553008,
+   "pop2024": 50979,
+   "landSqMi": 25.796,
+   "counties": [
+    "Summit County"
+   ],
+   "mainCounty": "Summit County",
+   "zip": "44223",
+   "zipKm": 2.3,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Lakewood",
+   "slug": "lakewood",
+   "censusName": "Lakewood city",
+   "geoid": "3941664",
+   "lat": 41.483258,
+   "lon": -81.801143,
+   "pop2024": 49517,
+   "landSqMi": 5.555,
+   "counties": [
+    "Cuyahoga County"
+   ],
+   "mainCounty": "Cuyahoga County",
+   "zip": "44107",
+   "zipKm": 0.3,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Dublin",
+   "slug": "dublin",
+   "censusName": "Dublin city",
+   "geoid": "3922694",
+   "lat": 40.113304,
+   "lon": -83.145774,
+   "pop2024": 49456,
+   "landSqMi": 24.682,
+   "counties": [
+    "Franklin County",
+    "Delaware County",
+    "Union County"
+   ],
+   "mainCounty": "Franklin County",
+   "zip": "43017",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Euclid",
+   "slug": "euclid",
+   "censusName": "Euclid city",
+   "geoid": "3925704",
+   "lat": 41.592154,
+   "lon": -81.519678,
+   "pop2024": 48421,
+   "landSqMi": 10.655,
+   "counties": [
+    "Cuyahoga County"
+   ],
+   "mainCounty": "Cuyahoga County",
+   "zip": "44123",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Beavercreek",
+   "slug": "beavercreek",
+   "censusName": "Beavercreek city",
+   "geoid": "3904720",
+   "lat": 39.733155,
+   "lon": -84.059615,
+   "pop2024": 48012,
+   "landSqMi": 26.594,
+   "counties": [
+    "Greene County"
+   ],
+   "mainCounty": "Greene County",
+   "zip": "45430",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Mansfield",
+   "slug": "mansfield",
+   "censusName": "Mansfield city",
+   "geoid": "3947138",
+   "lat": 40.76672,
+   "lon": -82.53082,
+   "pop2024": 47593,
+   "landSqMi": 30.876,
+   "counties": [
+    "Richland County"
+   ],
+   "mainCounty": "Richland County",
+   "zip": "44903",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Mentor",
+   "slug": "mentor",
+   "censusName": "Mentor city",
+   "geoid": "3949056",
+   "lat": 41.690159,
+   "lon": -81.33588,
+   "pop2024": 47113,
+   "landSqMi": 27.797,
+   "counties": [
+    "Lake County"
+   ],
+   "mainCounty": "Lake County",
+   "zip": "44060",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Delaware",
+   "slug": "delaware",
+   "censusName": "Delaware city",
+   "geoid": "3921434",
+   "lat": 40.286476,
+   "lon": -83.074864,
+   "pop2024": 46521,
+   "landSqMi": 20.408,
+   "counties": [
+    "Delaware County"
+   ],
+   "mainCounty": "Delaware County",
+   "zip": "43015",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Strongsville",
+   "slug": "strongsville",
+   "censusName": "Strongsville city",
+   "geoid": "3975098",
+   "lat": 41.312955,
+   "lon": -81.83169,
+   "pop2024": 45768,
+   "landSqMi": 24.622,
+   "counties": [
+    "Cuyahoga County"
+   ],
+   "mainCounty": "Cuyahoga County",
+   "zip": "44149",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Fairfield",
+   "slug": "fairfield",
+   "censusName": "Fairfield city",
+   "geoid": "3925970",
+   "lat": 39.33142,
+   "lon": -84.542716,
+   "pop2024": 45094,
+   "landSqMi": 20.832,
+   "counties": [
+    "Butler County",
+    "Hamilton County"
+   ],
+   "mainCounty": "Butler County",
+   "zip": "45014",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Cleveland Heights",
+   "slug": "cleveland-heights",
+   "censusName": "Cleveland Heights city",
+   "geoid": "3916014",
+   "lat": 41.511075,
+   "lon": -81.561766,
+   "pop2024": 44064,
+   "landSqMi": 8.065,
+   "counties": [
+    "Cuyahoga County"
+   ],
+   "mainCounty": "Cuyahoga County",
+   "zip": "44118",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Grove City",
+   "slug": "grove-city",
+   "censusName": "Grove City city",
+   "geoid": "3932592",
+   "lat": 39.866366,
+   "lon": -83.066971,
+   "pop2024": 44019,
+   "landSqMi": 18.935,
+   "counties": [
+    "Franklin County"
+   ],
+   "mainCounty": "Franklin County",
+   "zip": "43123",
+   "zipKm": 4.4,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Huber Heights",
+   "slug": "huber-heights",
+   "censusName": "Huber Heights city",
+   "geoid": "3936610",
+   "lat": 39.858881,
+   "lon": -84.112893,
+   "pop2024": 43590,
+   "landSqMi": 22.665,
+   "counties": [
+    "Montgomery County",
+    "Miami County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "45424",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "OH",
+   "state": "Ohio",
+   "name": "Reynoldsburg",
+   "slug": "reynoldsburg",
+   "censusName": "Reynoldsburg city",
+   "geoid": "3966390",
+   "lat": 39.961302,
+   "lon": -82.788939,
+   "pop2024": 42897,
+   "landSqMi": 11.331,
+   "counties": [
+    "Franklin County",
+    "Licking County",
+    "Fairfield County"
+   ],
+   "mainCounty": "Franklin County",
+   "zip": "43068",
+   "zipKm": 0.7,
+   "region": "used"
+  },
+  {
+   "st": "OK",
+   "state": "Oklahoma",
+   "name": "Oklahoma City",
+   "slug": "oklahoma-city",
+   "censusName": "Oklahoma City city",
+   "geoid": "4055000",
+   "lat": 35.467079,
+   "lon": -97.513657,
+   "pop2024": 712919,
+   "landSqMi": 606.998,
+   "counties": [
+    "Oklahoma County",
+    "Canadian County",
+    "Cleveland County",
+    "Pottawatomie County"
+   ],
+   "mainCounty": "Oklahoma County",
+   "zip": "73102",
+   "zipKm": 0.7,
+   "region": "rare"
+  },
+  {
+   "st": "OK",
+   "state": "Oklahoma",
+   "name": "Tulsa",
+   "slug": "tulsa",
+   "censusName": "Tulsa city",
+   "geoid": "4075000",
+   "lat": 36.127949,
+   "lon": -95.902316,
+   "pop2024": 415154,
+   "landSqMi": 197.725,
+   "counties": [
+    "Tulsa County",
+    "Osage County",
+    "Rogers County",
+    "Wagoner County"
+   ],
+   "mainCounty": "Tulsa County",
+   "zip": "74112",
+   "zipKm": 2.1,
+   "region": "rare"
+  },
+  {
+   "st": "OK",
+   "state": "Oklahoma",
+   "name": "Norman",
+   "slug": "norman",
+   "censusName": "Norman city",
+   "geoid": "4052500",
+   "lat": 35.240569,
+   "lon": -97.345299,
+   "pop2024": 131010,
+   "landSqMi": 178.653,
+   "counties": [
+    "Cleveland County"
+   ],
+   "mainCounty": "Cleveland County",
+   "zip": "73071",
+   "zipKm": 6,
+   "region": "rare"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Philadelphia",
+   "slug": "philadelphia",
+   "censusName": "Philadelphia city",
+   "geoid": "4260000",
+   "lat": 40.009376,
+   "lon": -75.133346,
+   "pop2024": 1573916,
+   "landSqMi": 134.325,
+   "counties": [
+    "Philadelphia County"
+   ],
+   "mainCounty": "Philadelphia County",
+   "zip": "19140",
+   "zipKm": 1,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Pittsburgh",
+   "slug": "pittsburgh",
+   "censusName": "Pittsburgh city",
+   "geoid": "4261000",
+   "lat": 40.439936,
+   "lon": -79.975676,
+   "pop2024": 307668,
+   "landSqMi": 55.373,
+   "counties": [
+    "Allegheny County"
+   ],
+   "mainCounty": "Allegheny County",
+   "zip": "15219",
+   "zipKm": 0.8,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Allentown",
+   "slug": "allentown",
+   "censusName": "Allentown city",
+   "geoid": "4202000",
+   "lat": 40.593648,
+   "lon": -75.478393,
+   "pop2024": 127138,
+   "landSqMi": 17.564,
+   "counties": [
+    "Lehigh County"
+   ],
+   "mainCounty": "Lehigh County",
+   "zip": "18101",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Reading",
+   "slug": "reading",
+   "censusName": "Reading city",
+   "geoid": "4263624",
+   "lat": 40.33922,
+   "lon": -75.926277,
+   "pop2024": 96000,
+   "landSqMi": 9.843,
+   "counties": [
+    "Berks County"
+   ],
+   "mainCounty": "Berks County",
+   "zip": "19602",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Erie",
+   "slug": "erie",
+   "censusName": "Erie city",
+   "geoid": "4224000",
+   "lat": 42.116594,
+   "lon": -80.073503,
+   "pop2024": 92940,
+   "landSqMi": 19.132,
+   "counties": [
+    "Erie County"
+   ],
+   "mainCounty": "Erie County",
+   "zip": "16501",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Bethlehem",
+   "slug": "bethlehem",
+   "censusName": "Bethlehem city",
+   "geoid": "4206088",
+   "lat": 40.626424,
+   "lon": -75.367898,
+   "pop2024": 79453,
+   "landSqMi": 19.115,
+   "counties": [
+    "Northampton County",
+    "Lehigh County"
+   ],
+   "mainCounty": "Northampton County",
+   "zip": "18018",
+   "zipKm": 2.4,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Scranton",
+   "slug": "scranton",
+   "censusName": "Scranton city",
+   "geoid": "4269000",
+   "lat": 41.404178,
+   "lon": -75.665908,
+   "pop2024": 75905,
+   "landSqMi": 25.308,
+   "counties": [
+    "Lackawanna County"
+   ],
+   "mainCounty": "Lackawanna County",
+   "zip": "18503",
+   "zipKm": 0.7,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Lancaster",
+   "slug": "lancaster",
+   "censusName": "Lancaster city",
+   "geoid": "4241216",
+   "lat": 40.042061,
+   "lon": -76.30099,
+   "pop2024": 58441,
+   "landSqMi": 7.227,
+   "counties": [
+    "Lancaster County"
+   ],
+   "mainCounty": "Lancaster County",
+   "zip": "17603",
+   "zipKm": 2.8,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Harrisburg",
+   "slug": "harrisburg",
+   "censusName": "Harrisburg city",
+   "geoid": "4232800",
+   "lat": 40.275891,
+   "lon": -76.88502,
+   "pop2024": 50649,
+   "landSqMi": 8.119,
+   "counties": [
+    "Dauphin County"
+   ],
+   "mainCounty": "Dauphin County",
+   "zip": "17120",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "York",
+   "slug": "york",
+   "censusName": "York city",
+   "geoid": "4287048",
+   "lat": 39.964798,
+   "lon": -76.73184,
+   "pop2024": 45241,
+   "landSqMi": 5.292,
+   "counties": [
+    "York County"
+   ],
+   "mainCounty": "York County",
+   "zip": "17401",
+   "zipKm": 0.7,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Wilkes-Barre",
+   "slug": "wilkes-barre",
+   "censusName": "Wilkes-Barre city",
+   "geoid": "4285152",
+   "lat": 41.246561,
+   "lon": -75.875689,
+   "pop2024": 44661,
+   "landSqMi": 6.848,
+   "counties": [
+    "Luzerne County"
+   ],
+   "mainCounty": "Luzerne County",
+   "zip": "18701",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Altoona",
+   "slug": "altoona",
+   "censusName": "Altoona city",
+   "geoid": "4202184",
+   "lat": 40.508052,
+   "lon": -78.401114,
+   "pop2024": 42719,
+   "landSqMi": 9.791,
+   "counties": [
+    "Blair County"
+   ],
+   "mainCounty": "Blair County",
+   "zip": "16602",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "State College",
+   "slug": "state-college",
+   "censusName": "State College borough",
+   "geoid": "4273808",
+   "lat": 40.791039,
+   "lon": -77.856813,
+   "pop2024": 41228,
+   "landSqMi": 4.578,
+   "counties": [
+    "Centre County"
+   ],
+   "mainCounty": "Centre County",
+   "zip": "16802",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Norristown",
+   "slug": "norristown",
+   "censusName": "Norristown borough",
+   "geoid": "4254656",
+   "lat": 40.122076,
+   "lon": -75.33987,
+   "pop2024": 36075,
+   "landSqMi": 3.515,
+   "counties": [
+    "Montgomery County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "19401",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Chester",
+   "slug": "chester",
+   "censusName": "Chester city",
+   "geoid": "4213208",
+   "lat": 39.845558,
+   "lon": -75.371882,
+   "pop2024": 34052,
+   "landSqMi": 4.833,
+   "counties": [
+    "Delaware County"
+   ],
+   "mainCounty": "Delaware County",
+   "zip": "19013",
+   "zipKm": 0.3,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Bethel Park",
+   "slug": "bethel-park",
+   "censusName": "Bethel Park municipality",
+   "geoid": "4206064",
+   "lat": 40.323803,
+   "lon": -80.036421,
+   "pop2024": 32376,
+   "landSqMi": 11.702,
+   "counties": [
+    "Allegheny County"
+   ],
+   "mainCounty": "Allegheny County",
+   "zip": "15102",
+   "zipKm": 0.3,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Easton",
+   "slug": "easton",
+   "censusName": "Easton city",
+   "geoid": "4221648",
+   "lat": 40.685971,
+   "lon": -75.218548,
+   "pop2024": 30432,
+   "landSqMi": 4.263,
+   "counties": [
+    "Northampton County"
+   ],
+   "mainCounty": "Northampton County",
+   "zip": "18042",
+   "zipKm": 4.7,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Hazleton",
+   "slug": "hazleton",
+   "censusName": "Hazleton city",
+   "geoid": "4233408",
+   "lat": 40.95047,
+   "lon": -75.972509,
+   "pop2024": 30354,
+   "landSqMi": 5.972,
+   "counties": [
+    "Luzerne County"
+   ],
+   "mainCounty": "Luzerne County",
+   "zip": "18201",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Monroeville",
+   "slug": "monroeville",
+   "censusName": "Monroeville municipality",
+   "geoid": "4250528",
+   "lat": 40.426324,
+   "lon": -79.761379,
+   "pop2024": 27966,
+   "landSqMi": 19.716,
+   "counties": [
+    "Allegheny County"
+   ],
+   "mainCounty": "Allegheny County",
+   "zip": "15146",
+   "zipKm": 0.2,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Williamsport",
+   "slug": "williamsport",
+   "censusName": "Williamsport city",
+   "geoid": "4285312",
+   "lat": 41.240019,
+   "lon": -77.035591,
+   "pop2024": 27628,
+   "landSqMi": 8.777,
+   "counties": [
+    "Lycoming County"
+   ],
+   "mainCounty": "Lycoming County",
+   "zip": "17702",
+   "zipKm": 7.2,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Lebanon",
+   "slug": "lebanon",
+   "censusName": "Lebanon city",
+   "geoid": "4242168",
+   "lat": 40.341193,
+   "lon": -76.422735,
+   "pop2024": 26456,
+   "landSqMi": 4.167,
+   "counties": [
+    "Lebanon County"
+   ],
+   "mainCounty": "Lebanon County",
+   "zip": "17046",
+   "zipKm": 4.6,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Plum",
+   "slug": "plum",
+   "censusName": "Plum borough",
+   "geoid": "4261536",
+   "lat": 40.501869,
+   "lon": -79.748178,
+   "pop2024": 26420,
+   "landSqMi": 28.57,
+   "counties": [
+    "Allegheny County"
+   ],
+   "mainCounty": "Allegheny County",
+   "zip": "15239",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Pottstown",
+   "slug": "pottstown",
+   "censusName": "Pottstown borough",
+   "geoid": "4262416",
+   "lat": 40.250924,
+   "lon": -75.644754,
+   "pop2024": 23553,
+   "landSqMi": 4.852,
+   "counties": [
+    "Montgomery County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "19464",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Chambersburg",
+   "slug": "chambersburg",
+   "censusName": "Chambersburg borough",
+   "geoid": "4212536",
+   "lat": 39.931433,
+   "lon": -77.655642,
+   "pop2024": 23041,
+   "landSqMi": 6.925,
+   "counties": [
+    "Franklin County"
+   ],
+   "mainCounty": "Franklin County",
+   "zip": "17202",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "West Chester",
+   "slug": "west-chester",
+   "censusName": "West Chester borough",
+   "geoid": "4282704",
+   "lat": 39.959883,
+   "lon": -75.605422,
+   "pop2024": 22758,
+   "landSqMi": 1.846,
+   "counties": [
+    "Chester County"
+   ],
+   "mainCounty": "Chester County",
+   "zip": "19383",
+   "zipKm": 2.5,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Carlisle",
+   "slug": "carlisle",
+   "censusName": "Carlisle borough",
+   "geoid": "4211272",
+   "lat": 40.199994,
+   "lon": -77.204149,
+   "pop2024": 22517,
+   "landSqMi": 5.533,
+   "counties": [
+    "Cumberland County"
+   ],
+   "mainCounty": "Cumberland County",
+   "zip": "17015",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "New Castle",
+   "slug": "new-castle",
+   "censusName": "New Castle city",
+   "geoid": "4253368",
+   "lat": 40.995617,
+   "lon": -80.345807,
+   "pop2024": 21332,
+   "landSqMi": 8.31,
+   "counties": [
+    "Lawrence County"
+   ],
+   "mainCounty": "Lawrence County",
+   "zip": "16101",
+   "zipKm": 4.9,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Murrysville",
+   "slug": "murrysville",
+   "censusName": "Murrysville municipality",
+   "geoid": "4252432",
+   "lat": 40.442861,
+   "lon": -79.658311,
+   "pop2024": 20729,
+   "landSqMi": 36.83,
+   "counties": [
+    "Westmoreland County"
+   ],
+   "mainCounty": "Westmoreland County",
+   "zip": "15668",
+   "zipKm": 2.7,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Baldwin",
+   "slug": "baldwin",
+   "censusName": "Baldwin borough",
+   "geoid": "4203928",
+   "lat": 40.380642,
+   "lon": -79.945203,
+   "pop2024": 20712,
+   "landSqMi": 5.771,
+   "counties": [
+    "Allegheny County"
+   ],
+   "mainCounty": "Allegheny County",
+   "zip": "15207",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "PA",
+   "state": "Pennsylvania",
+   "name": "Phoenixville",
+   "slug": "phoenixville",
+   "censusName": "Phoenixville borough",
+   "geoid": "4260120",
+   "lat": 40.135201,
+   "lon": -75.522699,
+   "pop2024": 20286,
+   "landSqMi": 3.511,
+   "counties": [
+    "Chester County"
+   ],
+   "mainCounty": "Chester County",
+   "zip": "19460",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "RI",
+   "state": "Rhode Island",
+   "name": "Providence",
+   "slug": "providence",
+   "censusName": "Providence city",
+   "geoid": "4459000",
+   "lat": 41.823056,
+   "lon": -71.418784,
+   "pop2024": 194706,
+   "landSqMi": 18.406,
+   "counties": [
+    "Providence County"
+   ],
+   "mainCounty": "Providence County",
+   "zip": "02903",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "RI",
+   "state": "Rhode Island",
+   "name": "Cranston",
+   "slug": "cranston",
+   "censusName": "Cranston city",
+   "geoid": "4419180",
+   "lat": 41.769734,
+   "lon": -71.485049,
+   "pop2024": 84448,
+   "landSqMi": 28.345,
+   "counties": [
+    "Providence County"
+   ],
+   "mainCounty": "Providence County",
+   "zip": "02920",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "RI",
+   "state": "Rhode Island",
+   "name": "Warwick",
+   "slug": "warwick",
+   "censusName": "Warwick city",
+   "geoid": "4474300",
+   "lat": 41.703085,
+   "lon": -71.42031,
+   "pop2024": 83554,
+   "landSqMi": 35.001,
+   "counties": [
+    "Kent County"
+   ],
+   "mainCounty": "Kent County",
+   "zip": "02886",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "RI",
+   "state": "Rhode Island",
+   "name": "Pawtucket",
+   "slug": "pawtucket",
+   "censusName": "Pawtucket city",
+   "geoid": "4454640",
+   "lat": 41.874824,
+   "lon": -71.373323,
+   "pop2024": 76996,
+   "landSqMi": 8.667,
+   "counties": [
+    "Providence County"
+   ],
+   "mainCounty": "Providence County",
+   "zip": "02860",
+   "zipKm": 1.4,
+   "region": "used"
+  },
+  {
+   "st": "SC",
+   "state": "South Carolina",
+   "name": "Charleston",
+   "slug": "charleston",
+   "censusName": "Charleston city",
+   "geoid": "4513330",
+   "lat": 32.828017,
+   "lon": -79.972896,
+   "pop2024": 157665,
+   "landSqMi": 115.292,
+   "counties": [
+    "Charleston County",
+    "Berkeley County"
+   ],
+   "mainCounty": "Charleston County",
+   "zip": "29405",
+   "zipKm": 2.7,
+   "region": "rare"
+  },
+  {
+   "st": "SC",
+   "state": "South Carolina",
+   "name": "Columbia",
+   "slug": "columbia",
+   "censusName": "Columbia city",
+   "geoid": "4516000",
+   "lat": 34.040519,
+   "lon": -80.906099,
+   "pop2024": 144788,
+   "landSqMi": 139.355,
+   "counties": [
+    "Richland County",
+    "Lexington County"
+   ],
+   "mainCounty": "Richland County",
+   "zip": "29206",
+   "zipKm": 5.2,
+   "region": "rare"
+  },
+  {
+   "st": "SC",
+   "state": "South Carolina",
+   "name": "North Charleston",
+   "slug": "north-charleston",
+   "censusName": "North Charleston city",
+   "geoid": "4550875",
+   "lat": 32.917881,
+   "lon": -80.065,
+   "pop2024": 126005,
+   "landSqMi": 77.989,
+   "counties": [
+    "Charleston County",
+    "Dorchester County",
+    "Berkeley County"
+   ],
+   "mainCounty": "Charleston County",
+   "zip": "29404",
+   "zipKm": 2.5,
+   "region": "rare"
+  },
+  {
+   "st": "SC",
+   "state": "South Carolina",
+   "name": "Mount Pleasant",
+   "slug": "mount-pleasant",
+   "censusName": "Mount Pleasant town",
+   "geoid": "4548535",
+   "lat": 32.808382,
+   "lon": -79.865038,
+   "pop2024": 95604,
+   "landSqMi": 49.766,
+   "counties": [
+    "Charleston County"
+   ],
+   "mainCounty": "Charleston County",
+   "zip": "29464",
+   "zipKm": 1.3,
+   "region": "rare"
+  },
+  {
+   "st": "SD",
+   "state": "South Dakota",
+   "name": "Sioux Falls",
+   "slug": "sioux-falls",
+   "censusName": "Sioux Falls city",
+   "geoid": "4659020",
+   "lat": 43.540696,
+   "lon": -96.731962,
+   "pop2024": 209289,
+   "landSqMi": 84.546,
+   "counties": [
+    "Minnehaha County",
+    "Lincoln County"
+   ],
+   "mainCounty": "Minnehaha County",
+   "zip": "57197",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "SD",
+   "state": "South Dakota",
+   "name": "Rapid City",
+   "slug": "rapid-city",
+   "censusName": "Rapid City city",
+   "geoid": "4652980",
+   "lat": 44.071071,
+   "lon": -103.217924,
+   "pop2024": 79894,
+   "landSqMi": 55.987,
+   "counties": [
+    "Pennington County"
+   ],
+   "mainCounty": "Pennington County",
+   "zip": "57701",
+   "zipKm": 5.8,
+   "region": "used"
+  },
+  {
+   "st": "SD",
+   "state": "South Dakota",
+   "name": "Aberdeen",
+   "slug": "aberdeen",
+   "censusName": "Aberdeen city",
+   "geoid": "4600100",
+   "lat": 45.464678,
+   "lon": -98.468104,
+   "pop2024": 27919,
+   "landSqMi": 16.57,
+   "counties": [
+    "Brown County"
+   ],
+   "mainCounty": "Brown County",
+   "zip": "57401",
+   "zipKm": 5.4,
+   "region": "used"
+  },
+  {
+   "st": "SD",
+   "state": "South Dakota",
+   "name": "Brookings",
+   "slug": "brookings",
+   "censusName": "Brookings city",
+   "geoid": "4607580",
+   "lat": 44.303364,
+   "lon": -96.787339,
+   "pop2024": 24555,
+   "landSqMi": 14.003,
+   "counties": [
+    "Brookings County"
+   ],
+   "mainCounty": "Brookings County",
+   "zip": "57006",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "TN",
+   "state": "Tennessee",
+   "name": "Nashville",
+   "slug": "nashville",
+   "censusName": "Nashville-Davidson metropolitan government (balance)",
+   "geoid": "4752006",
+   "lat": 36.1718,
+   "lon": -86.785002,
+   "pop2024": 704963,
+   "landSqMi": 475.61,
+   "counties": [
+    "Davidson County"
+   ],
+   "mainCounty": "Davidson County",
+   "zip": "37219",
+   "zipKm": 0.7,
+   "region": "rare"
+  },
+  {
+   "st": "TN",
+   "state": "Tennessee",
+   "name": "Memphis",
+   "slug": "memphis",
+   "censusName": "Memphis city",
+   "geoid": "4748000",
+   "lat": 35.109164,
+   "lon": -89.968511,
+   "pop2024": 610919,
+   "landSqMi": 289.758,
+   "counties": [
+    "Shelby County"
+   ],
+   "mainCounty": "Shelby County",
+   "zip": "38114",
+   "zipKm": 2.2,
+   "region": "rare"
+  },
+  {
+   "st": "TN",
+   "state": "Tennessee",
+   "name": "Knoxville",
+   "slug": "knoxville",
+   "censusName": "Knoxville city",
+   "geoid": "4740000",
+   "lat": 35.97068,
+   "lon": -83.94927,
+   "pop2024": 198722,
+   "landSqMi": 98.733,
+   "counties": [
+    "Knox County"
+   ],
+   "mainCounty": "Knox County",
+   "zip": "37916",
+   "zipKm": 2.5,
+   "region": "rare"
+  },
+  {
+   "st": "TN",
+   "state": "Tennessee",
+   "name": "Chattanooga",
+   "slug": "chattanooga",
+   "censusName": "Chattanooga city",
+   "geoid": "4714000",
+   "lat": 35.065958,
+   "lon": -85.248386,
+   "pop2024": 191496,
+   "landSqMi": 142.352,
+   "counties": [
+    "Hamilton County"
+   ],
+   "mainCounty": "Hamilton County",
+   "zip": "37406",
+   "zipKm": 0.8,
+   "region": "rare"
+  },
+  {
+   "st": "TN",
+   "state": "Tennessee",
+   "name": "Clarksville",
+   "slug": "clarksville",
+   "censusName": "Clarksville city",
+   "geoid": "4715160",
+   "lat": 36.56643,
+   "lon": -87.345216,
+   "pop2024": 185690,
+   "landSqMi": 100.144,
+   "counties": [
+    "Montgomery County"
+   ],
+   "mainCounty": "Montgomery County",
+   "zip": "37040",
+   "zipKm": 5.3,
+   "region": "used"
+  },
+  {
+   "st": "TN",
+   "state": "Tennessee",
+   "name": "Murfreesboro",
+   "slug": "murfreesboro",
+   "censusName": "Murfreesboro city",
+   "geoid": "4751560",
+   "lat": 35.853915,
+   "lon": -86.421224,
+   "pop2024": 168387,
+   "landSqMi": 64.798,
+   "counties": [
+    "Rutherford County"
+   ],
+   "mainCounty": "Rutherford County",
+   "zip": "37132",
+   "zipKm": 5.3,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "Houston",
+   "slug": "houston",
+   "censusName": "Houston city",
+   "geoid": "4835000",
+   "lat": 29.785743,
+   "lon": -95.388806,
+   "pop2024": 2390125,
+   "landSqMi": 640.819,
+   "counties": [
+    "Harris County",
+    "Fort Bend County",
+    "Montgomery County",
+    "Waller County"
+   ],
+   "mainCounty": "Harris County",
+   "zip": "77009",
+   "zipKm": 2.3,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "San Antonio",
+   "slug": "san-antonio",
+   "censusName": "San Antonio city",
+   "geoid": "4865000",
+   "lat": 29.462809,
+   "lon": -98.524635,
+   "pop2024": 1526656,
+   "landSqMi": 498.979,
+   "counties": [
+    "Bexar County",
+    "Medina County",
+    "Comal County"
+   ],
+   "mainCounty": "Bexar County",
+   "zip": "78201",
+   "zipKm": 0.7,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "Dallas",
+   "slug": "dallas",
+   "censusName": "Dallas city",
+   "geoid": "4819000",
+   "lat": 32.793333,
+   "lon": -96.766513,
+   "pop2024": 1326087,
+   "landSqMi": 339.685,
+   "counties": [
+    "Dallas County",
+    "Collin County",
+    "Denton County",
+    "Kaufman County",
+    "Rockwall County"
+   ],
+   "mainCounty": "Dallas County",
+   "zip": "75246",
+   "zipKm": 0.6,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "Fort Worth",
+   "slug": "fort-worth",
+   "censusName": "Fort Worth city",
+   "geoid": "4827000",
+   "lat": 32.781954,
+   "lon": -97.348573,
+   "pop2024": 1008106,
+   "landSqMi": 352.011,
+   "counties": [
+    "Tarrant County",
+    "Denton County",
+    "Parker County",
+    "Johnson County",
+    "Wise County"
+   ],
+   "mainCounty": "Tarrant County",
+   "zip": "76164",
+   "zipKm": 0.5,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "Austin",
+   "slug": "austin",
+   "censusName": "Austin city",
+   "geoid": "4805000",
+   "lat": 30.298622,
+   "lon": -97.754134,
+   "pop2024": 993588,
+   "landSqMi": 325.013,
+   "counties": [
+    "Travis County",
+    "Williamson County",
+    "Hays County",
+    "Bastrop County"
+   ],
+   "mainCounty": "Travis County",
+   "zip": "78703",
+   "zipKm": 1.3,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "El Paso",
+   "slug": "el-paso",
+   "censusName": "El Paso city",
+   "geoid": "4824000",
+   "lat": 31.84778,
+   "lon": -106.431106,
+   "pop2024": 681723,
+   "landSqMi": 258.823,
+   "counties": [
+    "El Paso County"
+   ],
+   "mainCounty": "El Paso County",
+   "zip": "79904",
+   "zipKm": 3.2,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "Arlington",
+   "slug": "arlington",
+   "censusName": "Arlington city",
+   "geoid": "4804000",
+   "lat": 32.700708,
+   "lon": -97.124691,
+   "pop2024": 403672,
+   "landSqMi": 95.809,
+   "counties": [
+    "Tarrant County"
+   ],
+   "mainCounty": "Tarrant County",
+   "zip": "76015",
+   "zipKm": 1.4,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "Plano",
+   "slug": "plano",
+   "censusName": "Plano city",
+   "geoid": "4858016",
+   "lat": 33.050769,
+   "lon": -96.747944,
+   "pop2024": 293286,
+   "landSqMi": 71.696,
+   "counties": [
+    "Collin County",
+    "Denton County"
+   ],
+   "mainCounty": "Collin County",
+   "zip": "75023",
+   "zipKm": 1.7,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "Lubbock",
+   "slug": "lubbock",
+   "censusName": "Lubbock city",
+   "geoid": "4845000",
+   "lat": 33.561901,
+   "lon": -101.888883,
+   "pop2024": 272086,
+   "landSqMi": 143.204,
+   "counties": [
+    "Lubbock County"
+   ],
+   "mainCounty": "Lubbock County",
+   "zip": "79410",
+   "zipKm": 0.9,
+   "region": "rare"
+  },
+  {
+   "st": "TX",
+   "state": "Texas",
+   "name": "Irving",
+   "slug": "irving",
+   "censusName": "Irving city",
+   "geoid": "4837000",
+   "lat": 32.857748,
+   "lon": -96.970022,
+   "pop2024": 258060,
+   "landSqMi": 66.979,
+   "counties": [
+    "Dallas County"
+   ],
+   "mainCounty": "Dallas County",
+   "zip": "75062",
+   "zipKm": 1.6,
+   "region": "rare"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "Salt Lake City",
+   "slug": "salt-lake-city",
+   "censusName": "Salt Lake City city",
+   "geoid": "4967000",
+   "lat": 40.776928,
+   "lon": -111.930991,
+   "pop2024": 217783,
+   "landSqMi": 110.891,
+   "counties": [
+    "Salt Lake County"
+   ],
+   "mainCounty": "Salt Lake County",
+   "zip": "84180",
+   "zipKm": 2.6,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "West Valley City",
+   "slug": "west-valley-city",
+   "censusName": "West Valley City city",
+   "geoid": "4983470",
+   "lat": 40.688493,
+   "lon": -112.011759,
+   "pop2024": 138144,
+   "landSqMi": 35.827,
+   "counties": [
+    "Salt Lake County"
+   ],
+   "mainCounty": "Salt Lake County",
+   "zip": "84120",
+   "zipKm": 1.3,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "West Jordan",
+   "slug": "west-jordan",
+   "censusName": "West Jordan city",
+   "geoid": "4982950",
+   "lat": 40.602666,
+   "lon": -112.001255,
+   "pop2024": 116688,
+   "landSqMi": 32.586,
+   "counties": [
+    "Salt Lake County"
+   ],
+   "mainCounty": "Salt Lake County",
+   "zip": "84081",
+   "zipKm": 3.1,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "Provo",
+   "slug": "provo",
+   "censusName": "Provo city",
+   "geoid": "4962470",
+   "lat": 40.245312,
+   "lon": -111.645057,
+   "pop2024": 115479,
+   "landSqMi": 41.891,
+   "counties": [
+    "Utah County"
+   ],
+   "mainCounty": "Utah County",
+   "zip": "84602",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "St. George",
+   "slug": "st-george",
+   "censusName": "St. George city",
+   "geoid": "4965330",
+   "lat": 37.077006,
+   "lon": -113.576534,
+   "pop2024": 106288,
+   "landSqMi": 77.403,
+   "counties": [
+    "Washington County"
+   ],
+   "mainCounty": "Washington County",
+   "zip": "84790",
+   "zipKm": 3.9,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "Orem",
+   "slug": "orem",
+   "censusName": "Orem city",
+   "geoid": "4957300",
+   "lat": 40.298067,
+   "lon": -111.699463,
+   "pop2024": 96646,
+   "landSqMi": 18.608,
+   "counties": [
+    "Utah County"
+   ],
+   "mainCounty": "Utah County",
+   "zip": "84057",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "Lehi",
+   "slug": "lehi",
+   "censusName": "Lehi city",
+   "geoid": "4944320",
+   "lat": 40.41708,
+   "lon": -111.871147,
+   "pop2024": 93446,
+   "landSqMi": 30.341,
+   "counties": [
+    "Utah County"
+   ],
+   "mainCounty": "Utah County",
+   "zip": "84043",
+   "zipKm": 0.6,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "Sandy",
+   "slug": "sandy",
+   "censusName": "Sandy city",
+   "geoid": "4967440",
+   "lat": 40.571714,
+   "lon": -111.84987,
+   "pop2024": 92840,
+   "landSqMi": 24.346,
+   "counties": [
+    "Salt Lake County"
+   ],
+   "mainCounty": "Salt Lake County",
+   "zip": "84094",
+   "zipKm": 1,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "Ogden",
+   "slug": "ogden",
+   "censusName": "Ogden city",
+   "geoid": "4955980",
+   "lat": 41.228391,
+   "lon": -111.968147,
+   "pop2024": 88656,
+   "landSqMi": 27.531,
+   "counties": [
+    "Weber County"
+   ],
+   "mainCounty": "Weber County",
+   "zip": "84408",
+   "zipKm": 4.6,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "South Jordan",
+   "slug": "south-jordan",
+   "censusName": "South Jordan city",
+   "geoid": "4970850",
+   "lat": 40.555007,
+   "lon": -111.992337,
+   "pop2024": 86156,
+   "landSqMi": 25.761,
+   "counties": [
+    "Salt Lake County"
+   ],
+   "mainCounty": "Salt Lake County",
+   "zip": "84009",
+   "zipKm": 2.2,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "Layton",
+   "slug": "layton",
+   "censusName": "Layton city",
+   "geoid": "4943660",
+   "lat": 41.077423,
+   "lon": -111.960727,
+   "pop2024": 84348,
+   "landSqMi": 22.603,
+   "counties": [
+    "Davis County"
+   ],
+   "mainCounty": "Davis County",
+   "zip": "84041",
+   "zipKm": 1.9,
+   "region": "used"
+  },
+  {
+   "st": "UT",
+   "state": "Utah",
+   "name": "Millcreek",
+   "slug": "millcreek",
+   "censusName": "Millcreek city",
+   "geoid": "4950150",
+   "lat": 40.689017,
+   "lon": -111.829559,
+   "pop2024": 64217,
+   "landSqMi": 12.895,
+   "counties": [
+    "Salt Lake County"
+   ],
+   "mainCounty": "Salt Lake County",
+   "zip": "84124",
+   "zipKm": 2.9,
+   "region": "used"
+  },
+  {
+   "st": "VA",
+   "state": "Virginia",
+   "name": "Virginia Beach",
+   "slug": "virginia-beach",
+   "censusName": "Virginia Beach city",
+   "geoid": "5182000",
+   "lat": 36.779525,
+   "lon": -76.029142,
+   "pop2024": 454808,
+   "landSqMi": 244.72,
+   "counties": [
+    "Virginia Beach city"
+   ],
+   "mainCounty": "Virginia Beach city",
+   "zip": "23453",
+   "zipKm": 3.7,
+   "region": "used"
+  },
+  {
+   "st": "VA",
+   "state": "Virginia",
+   "name": "Chesapeake",
+   "slug": "chesapeake",
+   "censusName": "Chesapeake city",
+   "geoid": "5116000",
+   "lat": 36.679376,
+   "lon": -76.301788,
+   "pop2024": 254997,
+   "landSqMi": 338.456,
+   "counties": [
+    "Chesapeake city"
+   ],
+   "mainCounty": "Chesapeake city",
+   "zip": "23322",
+   "zipKm": 6.7,
+   "region": "used"
+  },
+  {
+   "st": "VA",
+   "state": "Virginia",
+   "name": "Richmond",
+   "slug": "richmond",
+   "censusName": "Richmond city",
+   "geoid": "5167000",
+   "lat": 37.531399,
+   "lon": -77.476009,
+   "pop2024": 233655,
+   "landSqMi": 59.925,
+   "counties": [
+    "Richmond city"
+   ],
+   "mainCounty": "Richmond city",
+   "zip": "23220",
+   "zipKm": 2.4,
+   "region": "used"
+  },
+  {
+   "st": "VA",
+   "state": "Virginia",
+   "name": "Norfolk",
+   "slug": "norfolk",
+   "censusName": "Norfolk city",
+   "geoid": "5157000",
+   "lat": 36.923015,
+   "lon": -76.244641,
+   "pop2024": 231105,
+   "landSqMi": 53.275,
+   "counties": [
+    "Norfolk city"
+   ],
+   "mainCounty": "Norfolk city",
+   "zip": "23518",
+   "zipKm": 2.7,
+   "region": "used"
+  },
+  {
+   "st": "VA",
+   "state": "Virginia",
+   "name": "Newport News",
+   "slug": "newport-news",
+   "censusName": "Newport News city",
+   "geoid": "5156000",
+   "lat": 37.076136,
+   "lon": -76.52198,
+   "pop2024": 183056,
+   "landSqMi": 68.996,
+   "counties": [
+    "Newport News city"
+   ],
+   "mainCounty": "Newport News city",
+   "zip": "23606",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "VA",
+   "state": "Virginia",
+   "name": "Alexandria",
+   "slug": "alexandria",
+   "censusName": "Alexandria city",
+   "geoid": "5101000",
+   "lat": 38.819251,
+   "lon": -77.08367,
+   "pop2024": 159102,
+   "landSqMi": 14.935,
+   "counties": [
+    "Alexandria city"
+   ],
+   "mainCounty": "Alexandria city",
+   "zip": "22302",
+   "zipKm": 1,
+   "region": "used"
+  },
+  {
+   "st": "VT",
+   "state": "Vermont",
+   "name": "Burlington",
+   "slug": "burlington",
+   "censusName": "Burlington city",
+   "geoid": "5010675",
+   "lat": 44.491927,
+   "lon": -73.238882,
+   "pop2024": 44432,
+   "landSqMi": 10.303,
+   "counties": [
+    "Chittenden County"
+   ],
+   "mainCounty": "Chittenden County",
+   "zip": "05401",
+   "zipKm": 2.5,
+   "region": "used"
+  },
+  {
+   "st": "VT",
+   "state": "Vermont",
+   "name": "South Burlington",
+   "slug": "south-burlington",
+   "censusName": "South Burlington city",
+   "geoid": "5066175",
+   "lat": 44.436565,
+   "lon": -73.181103,
+   "pop2024": 21713,
+   "landSqMi": 16.435,
+   "counties": [
+    "Chittenden County"
+   ],
+   "mainCounty": "Chittenden County",
+   "zip": "05403",
+   "zipKm": 1.1,
+   "region": "used"
+  },
+  {
+   "st": "VT",
+   "state": "Vermont",
+   "name": "Rutland",
+   "slug": "rutland",
+   "censusName": "Rutland city",
+   "geoid": "5061225",
+   "lat": 43.60967,
+   "lon": -72.977788,
+   "pop2024": 15565,
+   "landSqMi": 7.553,
+   "counties": [
+    "Rutland County"
+   ],
+   "mainCounty": "Rutland County",
+   "zip": "05736",
+   "zipKm": 2.9,
+   "region": "used"
+  },
+  {
+   "st": "VT",
+   "state": "Vermont",
+   "name": "Essex Junction",
+   "slug": "essex-junction",
+   "censusName": "Essex Junction city",
+   "geoid": "5024400",
+   "lat": 44.490288,
+   "lon": -73.114121,
+   "pop2024": 10787,
+   "landSqMi": 4.569,
+   "counties": [
+    "Chittenden County"
+   ],
+   "mainCounty": "Chittenden County",
+   "zip": "05439",
+   "zipKm": 4.1,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Milwaukee",
+   "slug": "milwaukee",
+   "censusName": "Milwaukee city",
+   "geoid": "5553000",
+   "lat": 43.063348,
+   "lon": -87.966695,
+   "pop2024": 563531,
+   "landSqMi": 96.173,
+   "counties": [
+    "Milwaukee County",
+    "Washington County",
+    "Waukesha County"
+   ],
+   "mainCounty": "Milwaukee County",
+   "zip": "53210",
+   "zipKm": 0.9,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Madison",
+   "slug": "madison",
+   "censusName": "Madison city",
+   "geoid": "5548000",
+   "lat": 43.087815,
+   "lon": -89.429856,
+   "pop2024": 285300,
+   "landSqMi": 84.215,
+   "counties": [
+    "Dane County"
+   ],
+   "mainCounty": "Dane County",
+   "zip": "53792",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Green Bay",
+   "slug": "green-bay",
+   "censusName": "Green Bay city",
+   "geoid": "5531000",
+   "lat": 44.521542,
+   "lon": -87.986568,
+   "pop2024": 106311,
+   "landSqMi": 45.479,
+   "counties": [
+    "Brown County"
+   ],
+   "mainCounty": "Brown County",
+   "zip": "54302",
+   "zipKm": 1.8,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Kenosha",
+   "slug": "kenosha",
+   "censusName": "Kenosha city",
+   "geoid": "5539225",
+   "lat": 42.587526,
+   "lon": -87.879996,
+   "pop2024": 99578,
+   "landSqMi": 29.608,
+   "counties": [
+    "Kenosha County"
+   ],
+   "mainCounty": "Kenosha County",
+   "zip": "53142",
+   "zipKm": 3,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Racine",
+   "slug": "racine",
+   "censusName": "Racine city",
+   "geoid": "5566000",
+   "lat": 42.725569,
+   "lon": -87.814224,
+   "pop2024": 78057,
+   "landSqMi": 15.472,
+   "counties": [
+    "Racine County"
+   ],
+   "mainCounty": "Racine County",
+   "zip": "53405",
+   "zipKm": 1.2,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Appleton",
+   "slug": "appleton",
+   "censusName": "Appleton city",
+   "geoid": "5502375",
+   "lat": 44.278873,
+   "lon": -88.388284,
+   "pop2024": 75344,
+   "landSqMi": 25.422,
+   "counties": [
+    "Outagamie County",
+    "Calumet County",
+    "Winnebago County"
+   ],
+   "mainCounty": "Outagamie County",
+   "zip": "54911",
+   "zipKm": 0.7,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Eau Claire",
+   "slug": "eau-claire",
+   "censusName": "Eau Claire city",
+   "geoid": "5522300",
+   "lat": 44.818343,
+   "lon": -91.494769,
+   "pop2024": 72331,
+   "landSqMi": 34.433,
+   "counties": [
+    "Eau Claire County",
+    "Chippewa County"
+   ],
+   "mainCounty": "Eau Claire County",
+   "zip": "54703",
+   "zipKm": 2.7,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Waukesha",
+   "slug": "waukesha",
+   "censusName": "Waukesha city",
+   "geoid": "5584250",
+   "lat": 43.009084,
+   "lon": -88.245062,
+   "pop2024": 71461,
+   "landSqMi": 25.523,
+   "counties": [
+    "Waukesha County"
+   ],
+   "mainCounty": "Waukesha County",
+   "zip": "53186",
+   "zipKm": 3.6,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Oshkosh",
+   "slug": "oshkosh",
+   "censusName": "Oshkosh city",
+   "geoid": "5560500",
+   "lat": 44.023168,
+   "lon": -88.56226,
+   "pop2024": 67242,
+   "landSqMi": 27.83,
+   "counties": [
+    "Winnebago County"
+   ],
+   "mainCounty": "Winnebago County",
+   "zip": "54901",
+   "zipKm": 4.9,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Janesville",
+   "slug": "janesville",
+   "censusName": "Janesville city",
+   "geoid": "5537825",
+   "lat": 42.684698,
+   "lon": -89.01317,
+   "pop2024": 66428,
+   "landSqMi": 34.644,
+   "counties": [
+    "Rock County"
+   ],
+   "mainCounty": "Rock County",
+   "zip": "53545",
+   "zipKm": 6.4,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "West Allis",
+   "slug": "west-allis",
+   "censusName": "West Allis city",
+   "geoid": "5585300",
+   "lat": 43.007186,
+   "lon": -88.028986,
+   "pop2024": 59784,
+   "landSqMi": 11.381,
+   "counties": [
+    "Milwaukee County"
+   ],
+   "mainCounty": "Milwaukee County",
+   "zip": "53227",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "La Crosse",
+   "slug": "la-crosse",
+   "censusName": "La Crosse city",
+   "geoid": "5540775",
+   "lat": 43.824685,
+   "lon": -91.224616,
+   "pop2024": 51049,
+   "landSqMi": 21.707,
+   "counties": [
+    "La Crosse County"
+   ],
+   "mainCounty": "La Crosse County",
+   "zip": "54603",
+   "zipKm": 3.9,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Sheboygan",
+   "slug": "sheboygan",
+   "censusName": "Sheboygan city",
+   "geoid": "5572975",
+   "lat": 43.738713,
+   "lon": -87.731531,
+   "pop2024": 49624,
+   "landSqMi": 16.187,
+   "counties": [
+    "Sheboygan County"
+   ],
+   "mainCounty": "Sheboygan County",
+   "zip": "53081",
+   "zipKm": 3.2,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Wauwatosa",
+   "slug": "wauwatosa",
+   "censusName": "Wauwatosa city",
+   "geoid": "5584675",
+   "lat": 43.063165,
+   "lon": -88.035583,
+   "pop2024": 48794,
+   "landSqMi": 13.227,
+   "counties": [
+    "Milwaukee County"
+   ],
+   "mainCounty": "Milwaukee County",
+   "zip": "53226",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Fond du Lac",
+   "slug": "fond-du-lac",
+   "censusName": "Fond du Lac city",
+   "geoid": "5526275",
+   "lat": 43.772182,
+   "lon": -88.440264,
+   "pop2024": 44469,
+   "landSqMi": 19.237,
+   "counties": [
+    "Fond du Lac County"
+   ],
+   "mainCounty": "Fond du Lac County",
+   "zip": "54935",
+   "zipKm": 0.7,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Brookfield",
+   "slug": "brookfield",
+   "censusName": "Brookfield city",
+   "geoid": "5510025",
+   "lat": 43.06432,
+   "lon": -88.117794,
+   "pop2024": 41268,
+   "landSqMi": 27.352,
+   "counties": [
+    "Waukesha County"
+   ],
+   "mainCounty": "Waukesha County",
+   "zip": "53005",
+   "zipKm": 1.5,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Menomonee Falls",
+   "slug": "menomonee-falls",
+   "censusName": "Menomonee Falls village",
+   "geoid": "5551000",
+   "lat": 43.159411,
+   "lon": -88.121548,
+   "pop2024": 40700,
+   "landSqMi": 32.895,
+   "counties": [
+    "Waukesha County"
+   ],
+   "mainCounty": "Waukesha County",
+   "zip": "53051",
+   "zipKm": 0.1,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "New Berlin",
+   "slug": "new-berlin",
+   "censusName": "New Berlin city",
+   "geoid": "5556375",
+   "lat": 42.972,
+   "lon": -88.129168,
+   "pop2024": 40302,
+   "landSqMi": 36.426,
+   "counties": [
+    "Waukesha County"
+   ],
+   "mainCounty": "Waukesha County",
+   "zip": "53146",
+   "zipKm": 2.1,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Wausau",
+   "slug": "wausau",
+   "censusName": "Wausau city",
+   "geoid": "5584475",
+   "lat": 44.961766,
+   "lon": -89.646538,
+   "pop2024": 40262,
+   "landSqMi": 19.228,
+   "counties": [
+    "Marathon County"
+   ],
+   "mainCounty": "Marathon County",
+   "zip": "54401",
+   "zipKm": 4.9,
+   "region": "used"
+  },
+  {
+   "st": "WI",
+   "state": "Wisconsin",
+   "name": "Sun Prairie",
+   "slug": "sun-prairie",
+   "censusName": "Sun Prairie city",
+   "geoid": "5578600",
+   "lat": 43.182622,
+   "lon": -89.237824,
+   "pop2024": 39253,
+   "landSqMi": 13.094,
+   "counties": [
+    "Dane County"
+   ],
+   "mainCounty": "Dane County",
+   "zip": "53590",
+   "zipKm": 3.2,
+   "region": "used"
+  },
+  {
+   "st": "WV",
+   "state": "West Virginia",
+   "name": "Charleston",
+   "slug": "charleston",
+   "censusName": "Charleston city",
+   "geoid": "5414600",
+   "lat": 38.348692,
+   "lon": -81.632324,
+   "pop2024": 46482,
+   "landSqMi": 31.397,
+   "counties": [
+    "Kanawha County"
+   ],
+   "mainCounty": "Kanawha County",
+   "zip": "25301",
+   "zipKm": 0.5,
+   "region": "used"
+  },
+  {
+   "st": "WV",
+   "state": "West Virginia",
+   "name": "Huntington",
+   "slug": "huntington",
+   "censusName": "Huntington city",
+   "geoid": "5439460",
+   "lat": 38.410651,
+   "lon": -82.434689,
+   "pop2024": 44942,
+   "landSqMi": 16.477,
+   "counties": [
+    "Cabell County",
+    "Wayne County"
+   ],
+   "mainCounty": "Cabell County",
+   "zip": "25755",
+   "zipKm": 1.6,
+   "region": "used"
+  },
+  {
+   "st": "WV",
+   "state": "West Virginia",
+   "name": "Morgantown",
+   "slug": "morgantown",
+   "censusName": "Morgantown city",
+   "geoid": "5455756",
+   "lat": 39.637487,
+   "lon": -79.946856,
+   "pop2024": 30490,
+   "landSqMi": 10.181,
+   "counties": [
+    "Monongalia County"
+   ],
+   "mainCounty": "Monongalia County",
+   "zip": "26505",
+   "zipKm": 1.7,
+   "region": "used"
+  },
+  {
+   "st": "WY",
+   "state": "Wyoming",
+   "name": "Cheyenne",
+   "slug": "cheyenne",
+   "censusName": "Cheyenne city",
+   "geoid": "5613900",
+   "lat": 41.128275,
+   "lon": -104.799155,
+   "pop2024": 65704,
+   "landSqMi": 39.818,
+   "counties": [
+    "Laramie County"
+   ],
+   "mainCounty": "Laramie County",
+   "zip": "82005",
+   "zipKm": 6.1,
+   "region": "used"
+  },
+  {
+   "st": "WY",
+   "state": "Wyoming",
+   "name": "Casper",
+   "slug": "casper",
+   "censusName": "Casper city",
+   "geoid": "5613150",
+   "lat": 42.84212,
+   "lon": -106.321282,
+   "pop2024": 58823,
+   "landSqMi": 26.753,
+   "counties": [
+    "Natrona County"
+   ],
+   "mainCounty": "Natrona County",
+   "zip": "82644",
+   "zipKm": 4.3,
+   "region": "used"
+  },
+  {
+   "st": "WY",
+   "state": "Wyoming",
+   "name": "Gillette",
+   "slug": "gillette",
+   "censusName": "Gillette city",
+   "geoid": "5631855",
+   "lat": 44.27258,
+   "lon": -105.498936,
+   "pop2024": 33846,
+   "landSqMi": 23.337,
+   "counties": [
+    "Campbell County"
+   ],
+   "mainCounty": "Campbell County",
+   "zip": "82727",
+   "zipKm": 24.7,
+   "region": "used"
+  }
+ ]
+}

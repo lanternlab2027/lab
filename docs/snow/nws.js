@@ -32,11 +32,14 @@
   }
 
   // ---------- location ----------
+  // ZIP shards live next to this script (docs/snow/z/), so town pages in subfolders find them too.
+  var ZBASE = 'z/';
+  try { var me = document.currentScript; if (me && me.src) ZBASE = new URL('z/', me.src).href; } catch (e) { /* keep relative */ }
   var shardCache = {};
   function zipToPoint(zip) {
     if (!/^\d{5}$/.test(zip)) return Promise.reject(UserError('Enter a 5-digit ZIP code.'));
     var k = zip.slice(0, 2);
-    var p = shardCache[k] || (shardCache[k] = getJSON('z/' + k + '.json').catch(function (e) { delete shardCache[k]; if (e.status === 404) return {}; throw e; }));
+    var p = shardCache[k] || (shardCache[k] = getJSON(ZBASE + k + '.json').catch(function (e) { delete shardCache[k]; if (e.status === 404) return {}; throw e; }));
     return p.then(function (sh) {
       var c = sh[zip.slice(2)];
       if (!c) throw UserError('We couldn\u2019t find ZIP ' + zip + '. Try a nearby ZIP or your town name.');

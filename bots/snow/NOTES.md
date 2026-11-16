@@ -70,7 +70,36 @@ Geolocation runs only on "Use my location". Coordinates go only to NWS, never in
 
 ## Follow-ups
 
-- **Town pages** ("snow day chance Buffalo"): ~300 pre-built pages for the snowiest metros (idea doc), each with a prefilled region and a link into `?zip=`. Skipped for now. Add them to a sitemap when built.
+- Town pages: built (see "Town pages" below). Before Dec 1: spot-check a few in a real browser against live NWS; consider adding `Sitemap: .../sitemap-snow.xml` to `docs/robots.txt` (not done; the sitemap index already lists it).
 - Live verification against real NWS responses (see above), including Safari.
 - Hub card, `docs/apps/` entry, sitemap URL, cross-promo strip (other agent).
 - Screenshots from this build: `/tmp/claude-0/-home-claude/69ef2e03-4772-566e-a19b-2f78e096e5ba/scratchpad/shots/snow/` (not kept in the repo).
+
+## Town pages (built Nov 15, 2026; not committed)
+
+414 static landing pages at `docs/snow/t/<st>/<slug>.html` (e.g. `/snow/t/ny/buffalo.html`), 41 state indexes (`/snow/t/<st>/`), an all-states index (`/snow/t/`), `docs/sitemap-snow.xml` (456 URLs) and one new line in `docs/sitemap-index.xml`. The main page has a "Browse towns" link (`#browse-towns`, above "How we estimate").
+
+| File | What |
+|---|---|
+| `bots/snow/select_towns.js` | Picks the towns from raw Census files -> `bots/snow/towns.json` (checked in). Method in its header. |
+| `bots/snow/towns.json` | 414 towns: name, Census name/GEOID, internal point, 2024 pop, land area, county parts, ZIP, region. |
+| `bots/snow/build_towns.js` | `node bots/snow/build_towns.js`. Deterministic (fixed lastmod `SNOW_TOWNS_DATE`, default 2026-11-15); deletes and rewrites `t/<st>/*.html`. Cuts CSP, CSS, region picker, result card, signup box and footer out of `docs/snow/index.html` each run, so **re-run it after editing index.html**. |
+| `bots/snow/test_towns.js` | `NODE_PATH=/opt/npm-tools/node_modules node bots/snow/test_towns.js <shot dir>` (`--static` skips the browser). Static: unique titles, canonical == sitemap set, JSON-LD parses (WebPage/CollectionPage + BreadcrumbList, no ratings/FAQ), every relative href/src resolves, same CSP as the app, no inline scripts, ASCII, ZIP exists in shards, region preset, disclaimer, promo, footer. Browser: 5 seeded-random towns (`SEED=`) at 390px with NWS routed to `fixtures.js`: odds number renders on load, NWS asked for that ZIP's point, region preset, URL not rewritten, nothing stored, no scroll, promo links resolve, typed ZIP still works, no other hosts, no console errors. |
+
+**Data (census.gov and NOAA blocked from the container, so GitHub mirrors via raw.githubusercontent.com):**
+- Places: Census **2025 Gazetteer, Places**, per-state files, from `jtbourget/Coffeehouse` `ExcelGen/census_cache/2025_gaz_place_NN.txt`.
+- Population: Census **Vintage 2024 sub-county estimates** `sub-est2024_N.csv` from `notpac93/usa-representative-map-2` `data/raw/census-csv/`. Cross-checked byte-identical with independent mirrors for WI (`samuspdf/HackGB`), NY (`LangworthyWatch/ny23-accountability`), MA (`ArlingtonMA/arlingtonma.info`). Georgia was missing; taken from `jborgese/georgia-budget-tracker` `data/raw/census_place_pop_2020s.csv` (a Vintage 2025 file; we read its POPESTIMATE2024 column, so GA numbers are V2025's revised 2024 estimate).
+- ZIPs: the app's own `docs/snow/z/` shards (Census 2026 ZCTA internal points).
+- To rebuild towns.json: download those files into `<dir>/gaz/NN.txt` and `<dir>/pop/N.csv` (N = FIPS without leading zero), then `node bots/snow/select_towns.js <dir>`. Better: rebuild from census.gov directly when reachable.
+
+**Selection:** incorporated places only (the estimates have no CDPs), the N largest per state by 2024 estimate (quotas in `QUOTA`: NY 35, PA 30, OH 30, MI 30, IL 25, WI/MN/MA/NJ 20, CO 15, CT/IN/UT 12, ...; southern "rarely sees snow" states TX 10, NC 8, TN/GA 6, ...), skipping places south of 29.4 N. A few Census names are mapped to everyday names (`NAME_FIX`, e.g. Nashville-Davidson metropolitan government (balance) -> Nashville, New York city -> New York City). Limitation: New England and NJ/PA townships are county subdivisions, not places, so towns like Edison NJ or Greenwich CT are not included; and "big school districts" weren't used because no verifiable district list was reachable.
+**Representative ZIP:** nearest ZCTA internal point to the place's internal point, limited to the state's USPS ZIP3 ranges. Sometimes that is a small unique ZIP (e.g. Cambridge MA 02163, Madison WI 53792); the page says it's the forecast point and invites the visitor to type their own ZIP. 27 towns have a ZIP more than 5 km out (max Gillette WY, 24.7 km); listed when select_towns.js runs.
+**Region:** the app's own first-guess rule (lat < 36.5 = rarely sees snow), stated on each page; switchable.
+**Local context:** only Census facts: kind (city/village/...), county (or "spans N counties", skipped for independent cities and DC), 2024 population, land area. **No snowfall normals:** NOAA (ncei.noaa.gov, the AWS noaa-* buckets) was blocked and no verifiable 1991-2020 mirror was found (only 1981-2010 `ann-snow-normal.txt` copies), so that paragraph is omitted rather than guessed. Worth adding from NCEI `normals-annualseasonal/1991-2020` (`ANN-SNOW-NORMAL`, nearest station with data, cite the station) when reachable.
+
+**App changes for this (small):**
+- `nws.js`: ZIP shards are loaded from `z/` next to the script (`document.currentScript`), so pages in subfolders work.
+- `app.js`: if `#find` has `data-town-zip` / `data-town-region` / `data-town-name`, the page loads that ZIP on open with that region (URL `?r=` / `?zip=` still win; the stored region doesn't apply), shows "Buffalo, NY 14204" as the place, and on that auto-load doesn't store the ZIP, rewrite the URL or scroll. On town pages typed lookups don't rewrite the URL either (keeps the canonical URL clean). Share links still point at the main app.
+- Cross-promo: `docs/apps/more.js` builds `../<app>/` links that only work one folder deep, and docs/apps was off-limits, so town pages load `docs/snow/t/more-fix.js` right after it, which re-resolves those links against `/snow/`. If more.js ever gets a base-path option, drop the shim.
+
+Screenshots: `/tmp/claude-0/-home-claude/69ef2e03-4772-566e-a19b-2f78e096e5ba/scratchpad/shots/snowtowns/` (not in the repo).
