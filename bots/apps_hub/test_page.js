@@ -26,7 +26,8 @@ const APPS = ['wrapped', 'reading', 'netflix', 'sport', 'dating', 'awards', 'san
     pg.on('request', r => { if (!r.url().startsWith(ORIGIN)) external.push(r.url()); });
     await pg.route('https://api.convertkit.com/**', r => { kitBodies.push(r.request().postDataJSON()); r.fulfill({ status: 200, contentType: 'application/json', body: '{"subscription":{}}' }); });
     await pg.goto(ORIGIN + '/apps/', { waitUntil: 'load' });
-    for (const y of [800, 1600, 2400, 3200, 4000, 6000]) { await pg.evaluate(y => window.scrollTo({ top: y, behavior: 'instant' }), y); await pg.waitForTimeout(80); }
+    const H = await pg.evaluate(() => document.documentElement.scrollHeight);
+    for (let y = 0; y <= H; y += 600) { await pg.evaluate(y => window.scrollTo({ top: y, behavior: 'instant' }), y); await pg.waitForTimeout(60); }
     await pg.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
     await pg.waitForFunction(() => [...document.images].every(i => i.complete));
     ok(errors.length === 0, `${w}px: no console/page errors ${errors.join(' | ')}`);
