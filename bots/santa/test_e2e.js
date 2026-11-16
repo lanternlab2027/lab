@@ -179,7 +179,7 @@ const noHScroll = page => page.evaluate(() => document.documentElement.scrollWid
   // Placeholder tag: reminder stays hidden in the real file.
   const ctx = await browser.newContext(); const p = await ctx.newPage();
   await p.goto('file://' + ROOT + '/santa/index.html');
-  check(/"25924128"/.test(await p.content()) && await p.getAttribute('#remind', 'data-disabled') !== '1', 'real Kit tag enables the reminder');
+  check(/"25924128"/.test(require('fs').readFileSync(ROOT + '/santa/kit.js', 'utf8')) && await p.getAttribute('#remind', 'data-disabled') !== '1', 'real Kit tag enables the reminder');
   await browser.close(); server.close();
   console.log(fails ? `\n${fails} FAILED` : '\nALL PASS');
   process.exit(fails ? 1 : 0);
