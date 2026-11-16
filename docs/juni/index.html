@@ -43,6 +43,13 @@
     .letter { box-shadow:none; border-radius:0; }
   }
 </style>
+<script>
+  /* A child's name in ?name= must never reach the page-view counter (it sends the query string).
+     Move it into the #hash, which is never sent anywhere, before count.js loads. */
+  (function(){ try { var u=new URL(location.href), n=u.searchParams.get('name');
+    if(n!==null){ u.searchParams.delete('name'); u.hash='name='+encodeURIComponent(n); history.replaceState(null,'',u.toString()); } } catch(e){} })();
+</script>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -84,7 +91,7 @@
   function clean(s){ return (s||'').replace(/[^A-Za-zÀ-ÿ' -]/g,'').trim().slice(0,24); }
   function apply(n){ if(!n) return; document.querySelectorAll('.cn').forEach(e=>e.textContent=n); }
   function setName(){ const n=clean(document.getElementById('name').value); apply(n); }
-  const q=new URLSearchParams(location.search).get('name'); if(q){ const n=clean(q); document.getElementById('name').value=n; apply(n); }
+  const q=new URLSearchParams(location.search).get('name')||new URLSearchParams(location.hash.slice(1)).get('name'); if(q){ const n=clean(q); document.getElementById('name').value=n; apply(n); }
   document.getElementById('name').addEventListener('keydown',e=>{ if(e.key==='Enter') setName(); });
 </script>
 </body>

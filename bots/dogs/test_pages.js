@@ -28,7 +28,9 @@ for (const rel of files) {
   if (!lds.length) badLd.push(rel + ' (none)');
   for (const m of lds) { try { const j = JSON.parse(m[1]); if (j['@context'] !== 'https://schema.org') badLd.push(rel + ' (context)'); } catch (e) { badLd.push(rel + ' (' + e.message + ')'); } }
   if (rel !== 'index.html') {
-    if ((html.match(/<script(?![^>]*application\/ld\+json)/g) || []).length) scripts.push(rel);
+    // The only executable script allowed is the self-hosted page-view counter, exactly once.
+    const counter = html.match(/<script data-goatcounter="https:\/\/lanternlab\.goatcounter\.com\/count" async src="(\.\.\/)+vendor\/goatcounter\/count\.js"><\/script>/g) || [];
+    if (counter.length !== 1 || (html.match(/<script(?![^>]*application\/ld\+json)/g) || []).length !== 1) scripts.push(rel);
     if (!/<h1[^>]*>[^<]+<\/h1>/.test(html)) h1.push(rel);
     if (!html.includes('Data: NYC Department of Health dog licensing data via NYC Open Data; licensed dogs only, not all dogs.') || !html.includes('Not affiliated with the City of New York.')) badNote.push(rel);
     if (!html.includes('href="../../"') || !html.includes('href="../../apps/"')) badFoot.push(rel);
@@ -48,7 +50,7 @@ check(longTitle.length === 0, 'titles 20-70 chars' + (longTitle.length ? ': ' + 
 check(badDesc.length === 0, 'descriptions 80-200 chars' + (badDesc.length ? ': ' + badDesc.slice(0, 5).join(', ') : ''));
 check(badCanon.length === 0, 'canonical = page URL' + (badCanon.length ? ': ' + badCanon.slice(0, 3).join(', ') : ''));
 check(badLd.length === 0, 'JSON-LD present and parses on every page' + (badLd.length ? ': ' + badLd.slice(0, 3).join(', ') : ''));
-check(scripts.length === 0, 'static pages have no executable scripts');
+check(scripts.length === 0, 'static pages have no executable scripts except the page-view counter' + (scripts.length ? ': ' + scripts.slice(0, 3).join(', ') : ''));
 check(h1.length === 0, 'every static page has an h1');
 check(badNote.length === 0, 'data note + not-affiliated line on every static page' + (badNote.length ? ': ' + badNote.slice(0, 3).join(', ') : ''));
 check(badFoot.length === 0, 'footer links to ../ (lab root) and ../apps/ on every static page');

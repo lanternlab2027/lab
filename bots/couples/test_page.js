@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/couples/test_page.js <screenshot dir>
 // Uses only synthetic fixtures. Kit is routed to a local stub; the real API is never hit.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 
 const ROOT = path.resolve(__dirname, '../../docs');
@@ -55,13 +56,14 @@ const dump = async (page, prefix) => {
       if (!r.url().startsWith(ORIGIN + '/')) { offOrigin.push(r.url()); return route.abort(); }
       return route.continue();
     });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked after the uploads
 
     await page.goto(ORIGIN + '/couples/?ref=tiktok');
     await page.waitForLoadState('networkidle');
     check(offOrigin.length === 0, `page load makes no off-origin requests (${offOrigin.join(', ') || 'none'})`);
     check(/never leaves your device/.test(await page.textContent('#privacy-badge')), 'privacy promise visible');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/connect-src https:\/\/api\.convertkit\.com;/.test(csp) && /script-src 'self'/.test(csp), 'CSP restricts scripts to self and connections to Kit only');
+    check(/connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp) && /script-src 'self'/.test(csp), 'CSP restricts scripts to self and connections to Kit and the page-view counter only');
     check(/couples chat wrapped/i.test(await page.title()) && /our year in texts/i.test(await page.title()), 'SEO title');
     const desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/WhatsApp chat stats for couples/.test(desc) && /our year in texts/i.test(desc), 'meta description has the target phrases');
@@ -72,6 +74,7 @@ const dump = async (page, prefix) => {
     check(await page.isVisible('#notify'), 'Kit box visible with the real tag');
     check(await page.evaluate(() => (document.querySelector('#preview, .peek img') || {}).naturalWidth > 0), 'preview image loads');
     const loadCount = all.length;
+    const gcAtLoad = gc.hits.length;
 
     // Demo
     await page.click('#sample');
@@ -132,6 +135,9 @@ const dump = async (page, prefix) => {
     const afterUpload = all.slice(loadCount);
     const bad = afterUpload.filter((r) => !(r.method === 'GET' && r.url.startsWith(ORIGIN + '/')));
     check(bad.length === 0 && offOrigin.length === 0, `no requests carrying chat data after upload (${afterUpload.length} after load, ${bad.length} non-static)`);
+    // The only other request allowed is the page-view beacon, sent once at load: no hash, no file names or data.
+    GC.checkBeacons(gc, check, { forbid: GC.fixtureNames(FX), expect: { p: '/couples/?ref=tiktok', q: '?ref=tiktok' } });
+    check(gc.hits.length === gcAtLoad, 'no page-view beacon after upload (' + (gc.hits.length - gcAtLoad) + ')');
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));
     check(blocked, 'CSP blocks fetch to a third-party origin');
     const realErrs = errs.filter((e) => !/example\.com\/x/.test(e));

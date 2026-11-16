@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/partybingo/test_page.js <screenshot dir>
 // Kit is routed to a local stub; the real API is never hit. The Kit key is never printed.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
 const C = require('../../docs/partybingo/codec.js');
 
@@ -26,6 +27,7 @@ async function newCtx(browser, width, opts = {}) {
     return route.continue();
   });
   ctx.offOrigin = offOrigin; ctx.kit = kit;
+  ctx.gc = await GC.stubCounter(ctx); ctx.hashes = []; // GoatCounter -> local 204; game data in #hashes must never reach it
   return ctx;
 }
 async function open(ctx, url) {
@@ -33,6 +35,7 @@ async function open(ctx, url) {
   page.errs = [];
   page.on('pageerror', (e) => page.errs.push(String(e)));
   page.on('console', (m) => { if (m.type() === 'error') page.errs.push(m.text()); });
+  if (url.includes('#')) ctx.hashes.push(url.split('#')[1]);
   await page.goto(url);
   await page.waitForSelector('html[data-ready]');
   return page;
@@ -50,7 +53,7 @@ const tap = (p, i) => p.click(`#grid .sq[data-i="${i}"]`);
     const hctx = await newCtx(browser, width);
     const host = await open(hctx, URL0);
     const csp = await host.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP matches the other apps');
+    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp), 'CSP matches the other apps');
     const title = await host.title(), desc = await host.getAttribute('meta[name="description"]', 'content');
     check(/watch-party bingo/i.test(title) && /printable/i.test(title) && /unique card for every guest/i.test(title), `SEO title: ${title}`);
     check(/free printable and phone bingo cards for watch parties/i.test(desc) && /unique card for every guest/i.test(desc), 'meta description has the target phrases');
@@ -247,6 +250,10 @@ const tap = (p, i) => p.click(`#grid .sq[data-i="${i}"]`);
     // ---------------- hygiene
     const all = [hctx, g1ctx, g2ctx, vctx, sctx, kctx, rctx];
     check(all.every((c) => c.offOrigin.length === 0), 'no off-origin requests anywhere (except the stubbed Kit call)');
+    const beacons = { hits: all.flatMap((c) => c.gc.hits), other: all.flatMap((c) => c.gc.other) };
+    const hashes = all.flatMap((c) => c.hashes).flatMap((h) => [h, h.slice(0, 16), decodeURIComponent(h).slice(0, 16)]);
+    check(hashes.length > 0, 'hash links were opened (' + hashes.length / 3 + ')');
+    GC.checkBeacons(beacons, check, { forbid: hashes, expect: { t: 'Watch-Party Bingo: Free Printable and Phone Bingo Cards, a Unique Card for Every Guest' } });
     const errs = [host, g1, g2, v, cg, k, rh, rg].flatMap((p) => p.errs);
     check(errs.length === 0, 'no page errors' + (errs.length ? ': ' + errs.slice(0, 3).join(' | ') : ''));
     for (const c of all) await c.close();

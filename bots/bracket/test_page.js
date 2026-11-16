@@ -3,6 +3,7 @@
 // Covers: SEO/CSP, print (one page, Letter + A4), PDF view, fill, pool create, two players, a tampered link,
 // standings against stubbed results, awards cards, the picks picture and the Kit stub. The Kit key is never printed.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const { PDFDocument } = require('pdf-lib');
 const fs = require('fs'), path = require('path');
 const B = require('../../docs/bracket/bracket.js');
@@ -44,6 +45,7 @@ async function newCtx(browser, width, opts = {}) {
     return route.continue();
   });
   ctx.offOrigin = offOrigin; ctx.kit = kit;
+  ctx.gc = await GC.stubCounter(ctx); ctx.hashes = []; // GoatCounter -> local 204; game data in #hashes must never reach it
   return ctx;
 }
 async function open(ctx, url) {
@@ -51,6 +53,7 @@ async function open(ctx, url) {
   page.errs = [];
   page.on('pageerror', (e) => page.errs.push(String(e)));
   page.on('console', (m) => { if (m.type() === 'error') page.errs.push(m.text()); });
+  if (url.includes('#')) ctx.hashes.push(url.split('#')[1]);
   await page.goto(url);
   await page.waitForSelector('html[data-ready]');
   return page;
@@ -96,7 +99,7 @@ async function fillAsPlayer(page, name, tb, underdogs) {
     const hctx = await newCtx(browser, width);
     const home = await open(hctx, URL0);
     const csp = await home.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self';/.test(csp) && /connect-src 'self' https:\/\/api\.convertkit\.com;/.test(csp), 'strict CSP (self + Kit only)');
+    check(/default-src 'none'/.test(csp) && /script-src 'self';/.test(csp) && /connect-src 'self' https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp), 'strict CSP (self + Kit + page-view counter only)');
     const title = await home.title(), desc = await home.getAttribute('meta[name="description"]', 'content');
     check(/printable 76-team bracket 2027/i.test(title), `SEO title: ${title}`);
     check(/printable 76 team bracket for 2027/i.test(desc) && /bragging rights/i.test(desc), 'meta description has "printable 76 team bracket" + bragging rights');
@@ -198,6 +201,7 @@ async function fillAsPlayer(page, name, tb, underdogs) {
       }
       check(pl.errs.length === 0, `player ${i}: no errors ` + pl.errs.join(' | '));
       check(pctx.offOrigin.length === 0, `player ${i}: no off-site requests`);
+      GC.checkBeacons(pctx.gc, check, { forbid: pctx.hashes.flatMap((h) => [h, h.slice(0, 16)]) }); // pool link hash never reaches the counter
       await pctx.close();
     }
     const d1 = await C.decode(links[0].split('#')[1]), d2 = await C.decode(links[1].split('#')[1]);
@@ -242,6 +246,10 @@ async function fillAsPlayer(page, name, tb, underdogs) {
     fs.writeFileSync(path.join(OUT, `award-card${tag}.png`), awardPng);
     check(st2.errs.length === 0, 'awards: no errors ' + st2.errs.join(' | '));
     check(cctx.offOrigin.length === 0 && hctx.offOrigin.length === 0, 'no off-site requests');
+    const beacons = { hits: [cctx, hctx].flatMap((c) => c.gc.hits), other: [cctx, hctx].flatMap((c) => c.gc.other) };
+    const hashes = [cctx, hctx].flatMap((c) => c.hashes).flatMap((h) => [h, h.slice(0, 16), decodeURIComponent(h).slice(0, 16)]);
+    check(hashes.length > 0, 'hash links were opened (' + hashes.length / 3 + ')');
+    GC.checkBeacons(beacons, check, { forbid: hashes });
 
     // demo preview with the real (empty) results file
     const dctx = await newCtx(browser, width);

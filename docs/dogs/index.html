@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src 'self' https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>NYC Dog Name Report Card: Most Popular Dog Names in NYC</title>
 <meta name="description" content="How many dogs in NYC share your dog's name? Look up any name for its rank, count, top breeds, boroughs and ZIPs, and dog name popularity since 2015, from the city's dog license data. Free share card.">
@@ -36,6 +36,7 @@
  "publisher": { "@type": "Organization", "name": "Lantern Lab", "url": "https://lanternlab2027.github.io/lab/" }
 }
 </script>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <div class="wrap" id="top">
@@ -79,7 +80,7 @@
     <details><summary>How are dogs counted once?</summary><div><p>A dog can appear many times: once for each license, and again in every yearly extract that still lists that license. We count one dog per unique <b>name + birth year + breed + ZIP code</b>. Two different dogs that match on all four are counted once, and a dog that moved ZIP codes or whose breed was typed differently on renewal is counted twice. Placeholder names such as "Unknown", "Name not provided", "N/A" and "None" are dropped.</p></div></details>
     <details><summary>What do the trend and the chart show?</summary><div><p>The chart shows how many dogs per 10,000 licensed that year got a license with this name, by year the license was issued (<span class="y0">2015</span>&ndash;<span class="latest">2025</span>; 2014 starts in September, so it's left out). Using a share, not a raw count, matters because the city's yearly extracts don't capture every year equally.</p><p><b>Rising:</b> the last three years' share is 25%+ above the first three. <b>Fading:</b> 20%+ below. <b>Newcomer:</b> absent from the first three years. Otherwise <b>Steady</b>.</p></div></details>
     <details><summary>Why can't I find my dog's name?</summary><div><p>To protect owners' privacy, a name needs at least 5 licensed dogs to show up, and any breed, borough or ZIP code with fewer than 5 dogs of that name is hidden. Static name pages need 20+ dogs. Names are matched ignoring case, spaces, hyphens and periods ("Jay-Jay" = "Jay Jay").</p></div></details>
-    <details><summary>Does this track me?</summary><div><p>No. No analytics, no cookies, no third-party scripts or fonts. Lookups load small data files from this site.</p></div></details>
+    <details><summary>Does this track me?</summary><div><p>No. We count anonymous page views with GoatCounter (no cookies, no personal data). No ad trackers, no third-party scripts or fonts. Lookups load small data files from this site.</p></div></details>
   </section>
 
   <section id="signup" aria-labelledby="signup-h" hidden>

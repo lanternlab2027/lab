@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Etsy Shop Year in Review: Free Etsy Sales Report and Fees Calculator for Taxes</title>
 <meta name="description" content="A free Etsy shop year in review and Etsy sales report from the CSVs in your Shop Manager: orders, items sold, best seller, busiest month and day, top state and repeat buyers as shareable cards. Plus an Etsy fees calculator for taxes: gross sales, refunds, transaction, processing, listing and ads fees, shipping labels and net by month, with a CSV export. Nothing is uploaded; it runs on your device.">
@@ -157,6 +157,7 @@
   }
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 </style>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <div class="wrap" id="top">
@@ -287,7 +288,7 @@
     <h2 id="hwk-h">Your shop data stays on your device. How we know:</h2>
     <div class="grid2">
       <div class="panel"><h3>There&rsquo;s no server to send it to</h3><p>This page is plain files on GitHub Pages. Your CSVs are read, counted and drawn by JavaScript in this browser tab. Close the tab and they&rsquo;re gone.</p></div>
-      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page&rsquo;s Content-Security-Policy only allows one outside address: the optional email signup, which sends just your email. No analytics, no trackers, no third-party scripts or fonts.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page&rsquo;s Content-Security-Policy only allows two outside addresses: the optional email signup, which sends just your email, and our page-view counter, which never sees your files. We count anonymous page views with GoatCounter (no cookies, no personal data). No ad trackers, no third-party scripts or fonts.</p></div>
       <div class="panel"><h3>Buyers stay anonymous</h3><p>Name, address and email columns are skipped when the file is read, so they are never in memory to show. Places are counted by state or country; repeat buyers are a percentage from scrambled IDs.</p></div>
       <div class="panel"><h3>It&rsquo;s open source</h3><p>Every line is on GitHub: <a href="https://github.com/lanternlab2027/lab/tree/main/docs/etsy" rel="noopener">lanternlab2027/lab &rarr; docs/etsy</a>. The zip writer (JSZip) is copied into the folder, not loaded from a CDN. Try it in airplane mode.</p></div>
     </div>

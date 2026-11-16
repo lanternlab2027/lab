@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/mileage/test_page.js <screenshot dir>
 // Uses only synthetic fixtures. Kit is routed to a stub; the real API is never hit.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const http = require('http'), fs = require('fs'), path = require('path');
 const S = require('../../docs/mileage/stats.js');
 
@@ -68,6 +69,7 @@ function parseCSVRows(text) {
     const errs = []; page.on('pageerror', (e) => errs.push(String(e))); page.on('console', (m) => { if (m.type() === 'error' && !/Content Security Policy|Failed to fetch|ERR_FAILED/.test(m.text())) errs.push(m.text()); });
     const all = [];
     await ctx.route('**/*', (route) => { const r = route.request(); all.push(r.url()); if (!r.url().startsWith(ORIGIN)) return route.abort(); return route.continue(); });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked after the uploads
 
     await page.goto(ORIGIN + '/mileage/?ref=tiktok');
     // ---- static checks
@@ -82,7 +84,7 @@ function parseCSVRows(text) {
     check(/Google Maps Timeline/.test(meta.desc) && /mileage log/.test(meta.desc) && /tracker/.test(meta.desc), 'meta description');
     check(meta.og === 'https://lanternlab2027.github.io/lab/mileage/og.png' && fs.statSync(path.join(ROOT, 'mileage/og.png')).size > 10000, 'og:image exists');
     check(meta.canon === 'https://lanternlab2027.github.io/lab/mileage/', 'canonical');
-    check(/default-src 'none'/.test(meta.csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(meta.csp) && /script-src 'self';/.test(meta.csp), 'strict CSP');
+    check(/default-src 'none'/.test(meta.csp) && /connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(meta.csp) && /script-src 'self';/.test(meta.csp), 'strict CSP');
     check(meta.links.includes('../') && meta.links.includes('../apps/'), 'links to ../ and ../apps/');
     check(meta.links.includes('https://support.google.com/maps/answer/6258979'), 'export guide cites Google help');
     check(meta.links.includes('https://www.irs.gov/publications/p463'), 'cites IRS Pub 463');
@@ -96,6 +98,7 @@ function parseCSVRows(text) {
 
     // ---- Android upload
     const before = all.length;
+    const gcAtLoad = gc.hits.length;
     await upload(page, 'Timeline.json');
     check(/Read 1,319 trips from your Android Timeline export/.test(await page.textContent('#status')), 'android parsed: ' + await page.textContent('#status'));
     check(await page.inputValue('#period') === 'y2026', 'default period is tax year 2026');
@@ -197,6 +200,9 @@ function parseCSVRows(text) {
     check(await expectError(page, 'empty-android.json', /No trips found/), 'empty export error');
 
     check(all.slice(before).length === 0, 'zero network requests after upload (' + all.slice(before).length + ')');
+    // The only other request allowed is the page-view beacon, sent once at load: no hash, no file names or data.
+    GC.checkBeacons(gc, check, { forbid: GC.fixtureNames(FX), expect: { p: '/mileage/?ref=tiktok', q: '?ref=tiktok' } });
+    check(gc.hits.length === gcAtLoad, 'no page-view beacon after upload (' + (gc.hits.length - gcAtLoad) + ')');
 
     // ---- remember (names + tags in localStorage, opt-in)
     await upload(page, 'tiny-android.json');

@@ -93,6 +93,7 @@ ${CSP}
 <meta name="twitter:image" content="${SITE}snow/og.png">
 ${jsonld(o.ld)}
 <link rel="stylesheet" href="${o.up}town.css">
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="${o.up}../../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 `;

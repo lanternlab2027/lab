@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/dating/test_page.js <screenshot dir>
 // Uses only synthetic fixtures. Kit is routed to a stub; the real API is never hit.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const JSZip = require(require('path').resolve(__dirname, '../../docs/dating/vendor/jszip-3.10.1.min.js'));
 const http = require('http'), fs = require('fs'), path = require('path');
 
@@ -60,6 +61,7 @@ const CORE = ['The year in swipes', 'Match rate', 'Peak season', 'Busiest day', 
       if (!r.url().startsWith(ORIGIN + '/')) { offOrigin.push(r.url()); return route.abort(); }
       return route.continue();
     });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked after the uploads
 
     await page.goto(ORIGIN + '/dating/?ref=tiktok');
     await page.waitForLoadState('networkidle');
@@ -68,7 +70,7 @@ const CORE = ['The year in swipes', 'Match rate', 'Peak season', 'Busiest day', 
     check(/Not affiliated with Tinder, Hinge or Match Group/.test(await page.textContent('footer')), 'footer disclaimer present');
     check(await page.locator('footer a[href="../"]').count() === 1, 'footer links to ../');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit only');
+    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp), 'CSP: scripts self-only, connections to Kit and the page-view counter only');
     const title = await page.title(), desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/tinder wrapped/i.test(title) && /hinge wrapped/i.test(title) && /tinder wrapped/i.test(desc) && /hinge wrapped/i.test(desc), 'SEO title + description target "tinder wrapped" / "hinge wrapped"');
     check(/og\.png$/.test(await page.getAttribute('meta[property="og:image"]', 'content')), 'OG image set');
@@ -78,6 +80,7 @@ const CORE = ['The year in swipes', 'Match rate', 'Peak season', 'Busiest day', 
     check(await page.evaluate(() => document.querySelector('.peek img').naturalWidth > 0), 'preview image loads');
     check(!/#fd267a|#ff6036|#fe3c72/i.test(await page.content()), 'no Tinder brand colors in the page');
     const loadCount = all.length;
+    const gcAtLoad = gc.hits.length;
 
     // Tinder zip.
     let cards = await upload(page, 'tinder-export.zip');
@@ -157,6 +160,9 @@ const CORE = ['The year in swipes', 'Match rate', 'Peak season', 'Busiest day', 
     // The static "More free apps" strip (../apps/more.js, more.css, lazy thumbnails) may load after upload; it sends no data.
     const afterUpload = all.slice(loadCount).filter((r) => !(r.method === 'GET' && /^\/apps\/(more\.(js|css)|img\/[a-z-]+\.jpg)$/.test(r.url.replace(ORIGIN, ''))));
     check(afterUpload.length === 0 && offOrigin.length === 0, `zero network requests after upload (${afterUpload.length} made: ${afterUpload.map((r) => r.method + ' ' + r.url).join(', ') || 'none'})`);
+    // The only other request allowed is the page-view beacon, sent once at load: no hash, no file names or data.
+    GC.checkBeacons(gc, check, { forbid: GC.fixtureNames(FX), expect: { p: '/dating/?ref=tiktok', q: '?ref=tiktok' } });
+    check(gc.hits.length === gcAtLoad, 'no page-view beacon after upload (' + (gc.hits.length - gcAtLoad) + ')');
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));
     check(blocked, 'CSP blocks fetch to a third-party origin');
 

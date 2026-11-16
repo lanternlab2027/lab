@@ -1,0 +1,56 @@
+GoatCounter count.js (self-hosted copy)
+=======================================
+
+Source:   https://github.com/arp242/goatcounter/blob/master/public/count.js
+Fetched:  2026-11-16, repository HEAD c031008a8d28c85b36708824f23b28957e7ed262
+SHA-256:  792b7abd26c1fb6ae62906833e09a301251e2641816e69e4f95aba518f3fe3f0
+Changes:  none. The file is byte-for-byte the upstream copy, license header kept.
+
+License
+-------
+count.js carries its own header:
+
+    // GoatCounter: https://www.goatcounter.com
+    // This file is released under the ISC license: https://opensource.org/licenses/ISC
+
+The rest of the GoatCounter repository is licensed under a slightly modified
+European Union Public License (EUPL) 1.2 (see LICENSE in the upstream repo;
+the only difference from EUPL 1.2 is that the "Compatible Licenses" appendix
+removes some licenses). Copyright Martin Tournoij <martin@arp242.net>.
+EUPL 1.2 text: https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+
+ISC license (as referenced by the count.js header):
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+How Lantern Lab uses it
+-----------------------
+Every page includes, with the right relative path:
+
+    <script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
+
+What count.js sends (verified against this copy):
+- p: location.pathname + location.search, or the <link rel="canonical">
+  path when the canonical URL is on the same host. Never location.hash.
+- q: location.search. GoatCounter reads campaigns from it server side
+  (utm_campaign/campaign; source from utm_source, ref, src or source).
+- r: document.referrer (browsers never include the fragment).
+- t: document.title. Pages whose title can be built from link-hash data
+  pin a fixed title with data-goatcounter-settings.
+- s: screen width, b: bot flag, rnd: cache buster.
+It is sent with navigator.sendBeacon (CSP connect-src) and falls back to an
+<img> beacon (CSP img-src), so pages allow https://lanternlab.goatcounter.com
+in both. No cookies are set.
+
+Updating: replace count.js with the upstream file, update the lines above,
+then run node bots/analytics/check.js.

@@ -42,7 +42,7 @@ function pngSize(file) { const b = fs.readFileSync(file); return { w: b.readUInt
     await page.waitForLoadState('networkidle');
     check(offOrigin.length === 0, 'page load makes no off-origin requests');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com;/.test(csp), 'CSP matches the other apps');
+    check(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp), 'CSP matches the other apps');
     const title = await page.title(), desc = await page.getAttribute('meta[name="description"]', 'content');
     check(/goal bingo/i.test(title) && /2027/.test(title) && /resolution bingo card/i.test(title), `SEO title: ${title}`);
     check(/goal bingo card/i.test(desc) && /new year resolution bingo card/i.test(desc), 'meta description targets both phrases');

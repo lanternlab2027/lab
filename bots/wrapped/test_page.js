@@ -2,6 +2,7 @@
 // Run: NODE_PATH=/opt/npm-tools/node_modules node bots/wrapped/test_page.js <screenshot dir>
 // Uses only synthetic fixtures. Kit is routed to a local stub; the real API is never hit.
 const { chromium } = require('playwright');
+const GC = require('../analytics/test_helper.js'); // page-view counter stub + beacon checks
 const JSZip = require(require('path').resolve(__dirname, '../../docs/wrapped/vendor/jszip-3.10.1.min.js'));
 const http = require('http'), fs = require('fs'), path = require('path'), crypto = require('crypto');
 
@@ -55,6 +56,7 @@ async function upload(page, file) {
       if (!r.url().startsWith(ORIGIN + '/')) { offOrigin.push(r.url()); return route.abort(); }
       return route.continue();
     });
+    const gc = await GC.stubCounter(ctx); // GoatCounter -> local 204; checked after the uploads
 
     await page.goto(ORIGIN + '/wrapped/');
     await page.waitForLoadState('networkidle');
@@ -63,8 +65,9 @@ async function upload(page, file) {
     check(await page.locator('a[href="https://github.com/lanternlab2027/lab/tree/main/docs/wrapped"]').count() >= 1, 'GitHub folder link present');
     check(await page.isDisabled('#unlock') && /Coming soon/.test(await page.textContent('#unlock')), 'paid unlock is a disabled "coming soon" stub');
     const csp = await page.getAttribute('meta[http-equiv="Content-Security-Policy"]', 'content');
-    check(/connect-src https:\/\/api\.convertkit\.com;/.test(csp) && /script-src 'self'/.test(csp), 'CSP restricts scripts to self and connections to Kit only');
+    check(/connect-src https:\/\/api\.convertkit\.com https:\/\/lanternlab\.goatcounter\.com;/.test(csp) && /script-src 'self'/.test(csp), 'CSP restricts scripts to self and connections to Kit and the page-view counter only');
     const loadCount = all.length;
+    const gcAtLoad = gc.hits.length;
 
     // WhatsApp .txt
     let cards = await upload(page, 'WhatsApp Chat with Weekend Crew.txt');
@@ -114,6 +117,9 @@ async function upload(page, file) {
     const afterUpload = all.slice(loadCount);
     const bad = afterUpload.filter((r) => !(r.method === 'GET' && r.url.startsWith(ORIGIN + '/')));
     check(bad.length === 0 && offOrigin.length === 0, `no network requests carrying chat data after upload (${afterUpload.length} total after load, ${bad.length} non-static)`);
+    // The only other request allowed is the page-view beacon, sent once at load: no hash, no file names or data.
+    GC.checkBeacons(gc, check, { forbid: GC.fixtureNames(FX), expect: { p: '/wrapped/', q: '' } });
+    check(gc.hits.length === gcAtLoad, 'no page-view beacon after upload (' + (gc.hits.length - gcAtLoad) + ')');
 
     // CSP really blocks an exfiltration attempt from page context.
     const blocked = await page.evaluate(() => fetch('https://example.com/x', { method: 'POST', body: 'test' }).then(() => false, () => true));

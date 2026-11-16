@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://api.convertkit.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Group Chat Wrapped: WhatsApp Group Chat Wrapped, Free &amp; Private</title>
 <meta name="description" content="Your WhatsApp group chat wrapped: top yapper, night owl, ghost, emoji royalty and more as shareable cards. Works with WhatsApp and Telegram exports. Free, and your chat never leaves your device.">
@@ -114,6 +114,7 @@
   footer a { color: var(--ink); font-weight: 700; }
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 </style>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <div class="wrap" id="top">
@@ -223,7 +224,7 @@
     <h2 id="hwk-h">Your chat never leaves your device. How we know:</h2>
     <div class="grid2">
       <div class="panel"><h3>There's no server to send it to</h3><p>This page is plain files on GitHub Pages. Your export is read, counted and drawn into cards by JavaScript running in this browser tab. Close the tab and it's gone.</p></div>
-      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only lets it talk to one outside address: the optional email signup below, which sends just your email. No analytics, no trackers, no third-party scripts, no web fonts.</p></div>
+      <div class="panel"><h3>The browser blocks it anyway</h3><p>The page ships a Content-Security-Policy that only lets it talk to two outside addresses: the optional email signup below, which sends just your email, and our page-view counter, which never sees your file. We count anonymous page views with GoatCounter (no cookies, no personal data). No ad trackers, no third-party scripts, no web fonts.</p></div>
       <div class="panel"><h3>It's open source</h3><p>Every line is on GitHub: <a href="https://github.com/lanternlab2027/lab/tree/main/docs/wrapped" rel="noopener">lanternlab2027/lab &rarr; docs/wrapped</a>. The zip reader (JSZip) is copied into the folder, not loaded from a CDN.</p></div>
       <div class="panel"><h3>Try it offline</h3><p>Load this page, turn on airplane mode, then upload your chat. It still works, because nothing needs the internet.</p></div>
     </div>

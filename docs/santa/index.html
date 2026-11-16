@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.convertkit.com; base-uri 'none'; form-action 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lanternlab.goatcounter.com; connect-src 'self' https://api.convertkit.com https://lanternlab.goatcounter.com; base-uri 'none'; form-action 'none'">
 <title>Secret Santa Generator: No Sign-Up, No Email Needed (Free)</title>
 <meta name="description" content="Free Secret Santa generator with no sign-up and no email addresses. Add names, set couples who can't draw each other, and text everyone a private link. Nothing is stored on a server.">
 <meta name="referrer" content="no-referrer">
@@ -38,6 +38,7 @@
  ]}
 ]}
 </script>
+<script data-goatcounter="https://lanternlab.goatcounter.com/count" async src="../vendor/goatcounter/count.js"></script>
 </head>
 <body>
 <main>
@@ -116,7 +117,7 @@
     <h2 class="serif" style="margin-bottom:8px">Questions</h2>
     <details><summary>Do I need to sign up or collect emails?</summary><p>No. Type first names and you get one private link per person. Send each one by text, WhatsApp, email or carrier pigeon. Nobody makes an account.</p></details>
     <details><summary>Can the organizer peek?</summary><p>This page never shows the matches, and each match is scrambled inside its link, so glancing at a link or a chat preview gives nothing away. But a link is a key: whoever opens it sees what it says. So we're honest about it: if you're organizing, open only your own link. Tick "I'm in the draw too" and we'll point you to yours.</p></details>
-    <details><summary>Is anything stored on a server?</summary><p>No. The draw runs in your browser using its secure random number generator. Each match lives only in the part of the link after the <code>#</code>, which browsers never send to any server. There's no database, no tracking and no ads.</p></details>
+    <details><summary>Is anything stored on a server?</summary><p>No. The draw runs in your browser using its secure random number generator. Each match lives only in the part of the link after the <code>#</code>, which browsers never send to any server. There's no database and no ads. We count anonymous page views with GoatCounter (no cookies, no personal data).</p></details>
     <details><summary>Can couples be kept from drawing each other?</summary><p>Yes. Add them as a pair. If your pairs make a draw impossible (say, 3 people where 2 are a couple), we'll tell you instead of guessing.</p></details>
     <details><summary>What if someone loses their link?</summary><p>Resend it from this page if it's still open, or from the list you copied. If the list is gone, start over and send everyone new links, and ask them to ignore the old ones.</p></details>
     <details><summary>Can people share a wishlist?</summary><p>Yes. On their reveal page, anyone can write a wishlist and get a link to drop in the group chat. Their Santa sees it, and nobody learns who has whom.</p></details>
@@ -126,7 +127,7 @@
   <div id="more-apps" data-from="santa"></div>
   <script src="../apps/more.js" defer></script>
 
-  <footer><a href="../">A Lantern Lab project</a> &middot; free, no ads, no tracking &middot; <a href="../apps/">More free apps &rarr;</a></footer>
+  <footer><a href="../">A Lantern Lab project</a> &middot; free, no ads &middot; We count anonymous page views with GoatCounter (no cookies, no personal data). &middot; <a href="../apps/">More free apps &rarr;</a></footer>
 </main>
 <div id="toast" class="toast" role="status"></div>
 <script src="santa.js"></script>

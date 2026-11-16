@@ -56,7 +56,7 @@ async function open(ctx, url) {
   const html = fs.readFileSync(PAGE, 'utf8');
   for (const f of ['wrapped-season/index.html', 'wrapped-season/hub.js']) ok(/^[\x00-\x7F]*$/.test(fs.readFileSync(path.join(ROOT, f), 'utf8')), `${f}: ASCII only`);
   const csp = (html.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/) || [])[1] || '';
-  ok(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && !/connect-src/.test(csp) && !/<script>(?!\s*$)/.test(html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')), 'strict CSP, no connect-src, no inline scripts');
+  ok(/default-src 'none'/.test(csp) && /script-src 'self'/.test(csp) && /connect-src https:\/\/lanternlab\.goatcounter\.com;/.test(csp) && (csp.match(/connect-src[^;]*/) || [''])[0].split(/\s+/).length === 2 && !/<script>(?!\s*$)/.test(html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')), 'strict CSP, connect-src only the page-view counter, no inline scripts');
   const title = (html.match(/<title>([^<]+)<\/title>/) || [])[1] || '';
   const desc = (html.match(/<meta name="description" content="([^"]+)"/) || [])[1] || '';
   ok(/Wrapped Alternatives 2026/.test(title) && title.length <= 70, `title (${title.length} chars): ${title}`);
